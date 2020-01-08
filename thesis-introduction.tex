@@ -1,1 +1,51 @@
 \chapter{Introduction and Literature Review}
+
+The usual approach
+to investigating the effect of domain shape
+on solutions to a boundary value problem (BVP)
+is simply to solve the BVP in various domains.
+For any given domain shape, one seeks solutions
+to the associated partial differential equation (PDE) in the interior
+which also satisfy the prescribed boundary conditions on the boundary.
+In linear problems possessing sufficient symmetry,
+the superposition principle
+together with separation of variables or integral transforms
+typically allows one to complete this task,
+but in nonlinear problems,
+exact solutions are rare and often only available for simple geometries.
+From a numerical viewpoint
+it can also be computationally expensive
+to consider many different domain shapes,
+since the BVP must be solved from scratch for each new domain.
+
+An alternative strategy is to
+consider the boundary value problem in reverse:
+given a solution to the PDE, are there new boundaries
+which also satisfy the prescribed boundary conditions?
+If so, it is conceivable that these new boundaries may be used
+to construct new domains
+which admit the same solution to the given boundary value problem.
+Such an approach has been employed in an \adhoc{} fashion
+by Anderssen~\etal~\cite{}
+to numerically determine the profile of a growing root
+and by McNabb~\etal~\cite{}
+to estimate finite measures of cooling time in ellipsoids.
+The first systematic investigation of this
+reverse strategy for flux boundary conditions,
+known as \emph{boundary tracing},
+was carried out by Anderson~\etal~\cite{}
+with applications to the Laplace--Young equation of capillarity~\cite{}
+and other PDEs, including the Helmholtz,
+constant mean curvature and
+Poisson equations~\cite{}.
+
+Over a decade has since passed
+with little further work in the area,
+and the aim of this thesis is to
+continue the application of boundary tracing
+to physically significant contexts.
+I explore its use in thermal radiation problems
+and extend the work on capillarity.
+I begin by giving a brief introduction to boundary tracing
+and reviewing the relevant known results
+in thermal radiation and capillarity.
