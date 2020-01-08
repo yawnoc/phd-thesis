@@ -2,6 +2,36 @@
 \title{Applications of boundary tracing in thermal radiation and capillarity}
 \author{Conway}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Mathematical notation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% General symbols ("\;" etc.)
+\usepackage{amsmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Text macros
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Italicised foreign phrases
+\newcommand*{\foreign}[1]{\emph{#1}}
+\newcommand*{\foreignspace}{\;}
+\makeatletter
+  \newcommand*{\adhoc}{\foreign{ad\foreignspace hoc}}
+  \newcommand*{\etalraw}{et\foreignspace al}
+  \newcommand*{\etal}{%
+    \@ifnextchar.{%
+      \foreign{\etalraw}%
+    }{%
+      \foreign{\etalraw.\@}%
+    }%
+  }
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{document}
 
 \mainmatter
