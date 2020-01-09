@@ -49,3 +49,34 @@ and extend the work on capillarity.
 I begin by giving a brief introduction to boundary tracing
 and reviewing the relevant known results
 in thermal radiation and capillarity.
+
+\section{Boundary tracing}
+
+This section provides a quick overview of
+the theory of \emph{boundary tracing},
+which is well-described by Anderson~\etal~\cite{}
+with further details given in the lead Anderson's thesis~\cite{}.
+Consider a BVP, consisting of
+a PDE in some two-dimensional domain~$\Omega$
+along with the boundary condition
+\begin{equation}
+  \normalvec \dotp \del T = F (x, y, T, \norm{\del T})
+  \label{eq:flux-boundary-condition}
+\end{equation}
+on its boundary~$\pd\Omega$,
+where $F$~is a given \emph{flux function}.
+Whereas the usual goal is
+to determine the solution~$T$ for a given domain~$\Omega$,
+the aim of boundary tracing is
+to seek~$\Omega$ for a given~$T$.
+Specifically, one takes any known solution~$T = T (x, y)$ to the PDE
+and seeks \emph{traced boundaries}, which are curves
+along which the flux condition~(\ref{eq:flux-boundary-condition}) holds.
+Once the traced boundaries have been found,
+they may be used to construct new domains
+for which the solution to the BVP is also~$T$.
+Surprisingly, this reverse problem
+of determining boundaries from a known solution
+often has infinitely many answers,
+leading to far more new and interesting domain shapes
+than expected~\cite{}.
