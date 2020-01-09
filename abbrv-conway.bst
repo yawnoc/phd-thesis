@@ -1,3 +1,10 @@
+% Renamed from abbrv.bst to abbrv-conway.bst
+% with modification so that phdthesis prints
+%   "Ph.D. thesis"
+% instead of
+%   "PhD thesis".
+% ABSOLUTELY NO WARRANTY
+
 % BibTeX standard bibliography style `abbrv'
    % Version 0.99b (8-Dec-10 release) for BibTeX versions 0.99a or later.
    % Copyright (C) 1984, 1985, 1988, 2010 Howard Trickey and Oren Patashnik.
@@ -766,7 +773,7 @@ FUNCTION {phdthesis}
   new.block
   format.btitle "title" output.check
   new.block
-  "PhD thesis" format.thesis.type output.nonnull
+  "Ph.D. thesis" format.thesis.type output.nonnull
   school "school" output.check
   address output
   format.date "year" output.check
