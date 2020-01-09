@@ -1,0 +1,5 @@
+thesis.pdf
+
+*.aux
+*.log
+*.synctex.gz
