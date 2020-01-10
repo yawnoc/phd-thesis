@@ -3,7 +3,7 @@
 The usual approach
 to investigating the effect of domain shape
 on solutions to a boundary value problem (BVP)
-is simply to solve the BVP in various domains.
+is simply to solve the BVP for various domains.
 For any given domain shape, one seeks solutions
 to the associated partial differential equation (PDE) in the interior
 which also satisfy the prescribed boundary conditions on the boundary.
@@ -19,12 +19,12 @@ to consider many different domain shapes,
 since the BVP must be solved from scratch for each new domain.
 
 An alternative strategy is to
-consider the boundary value problem in reverse:
+consider the BVP in reverse:
 given a solution to the PDE\@, are there new boundaries
 which also satisfy the prescribed boundary conditions?
 If so, it is conceivable that these new boundaries may be used
 to construct new domains
-which admit the same solution to the given boundary value problem.
+which admit the same solution to the given BVP\@.
 Such an approach has been employed in an \adhoc{} fashion
 by Anderssen~\etal~\cite{anderssen-1969-ion-uptake-growing-roots}
 to numerically determine the profile of a growing root
@@ -68,7 +68,8 @@ along with the boundary condition
   \label{eq:flux-boundary-condition}
 \end{equation}
 on its boundary~$\pd\Omega$,
-where $F$~is a given \emph{flux function}.
+where $\normalvec$~is the outward-pointing unit normal
+and $F$~is a given \emph{flux function}.
 Whereas the usual goal is
 to determine the solution~$T$ for a given domain~$\Omega$,
 the aim of boundary tracing is
@@ -84,3 +85,58 @@ of determining boundaries from a known solution
 often has infinitely many answers,
 leading to far more new and interesting domain shapes
 than expected~\cite{anderson-2007-boundary-tracing-ii-applications}.
+
+The flux condition~(\ref{eq:flux-boundary-condition})
+is best understood as geometric constraint:
+at any point~$(x, y)$ in the domain of~$T$,
+it determines the possible local orientations
+of the normal~$\normalvec$ to the sought-after traced boundaries
+which pass therethrough.
+Writing~$\theta$ for the angle between~$\normalvec$ and~$\del T$,
+the boundary condition~(\ref{eq:flux-boundary-condition}) may be rewritten as
+\begin{equation}
+  \cos\theta = \frac{F}{\norm{\del T}},
+  \label{eq:flux-boundary-condition-cosine}
+\end{equation}
+whence there are three cases
+for the possible local orientations of~$\normalvec$
+(and hence that of the traced boundaries):
+\begin{enumerate}
+  \item
+    If~$\norm{\del T} > \abs{F}$,
+    equation~(\ref{eq:flux-boundary-condition-cosine})
+    has two (distinct) solutions in~$\theta$,
+    one acute and one obtuse,
+    corresponding to two possible local orientations for traced boundaries.
+  \item
+    If~$\norm{\del T} = \abs{F}$,
+    either~$\theta = 0$ or~$\theta = \pi$,
+    corresponding to traced boundaries which are tangential
+    to the local $T$-contour.
+  \item
+    If~$\norm{\del T} < \abs{F}$,
+    then the right hand side of~(\ref{eq:flux-boundary-condition-cosine})
+    exceeds unity in magnitude,
+    and there are no solutions in~$\theta$,
+    i.e.~traced boundaries are not possible at that point.
+\end{enumerate}
+With these observations in mind,
+the domain of the known solution~$T$
+is partitioned into
+\begin{itemize}
+  \item
+    the \emph{viable domain},
+    wherein~$\norm{\del T} \ge \abs{F}$
+    and there are two possible branches of traced boundaries,
+    and
+  \item
+    the \emph{non-viable domain},
+    wherein~$\norm{\del T} < \abs{F}$
+    and traced boundaries cannot exist.
+\end{itemize}
+The border between these two regions is
+\begin{itemize}
+  \item
+    the \emph{terminal curve},
+    along which~$\norm{\del T} = \abs{F}$.
+\end{itemize}
