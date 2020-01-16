@@ -100,3 +100,47 @@ the \emph{differential area element}
   \td V = \scalefac{u} \scalefac{v} \td u \td v.
   \label{eq:differential-area-element}
 \end{equation}
+
+\subsection{Gradient}
+
+Consider a scalar field~$T$.
+By the chain rule, the independent increments~$\td u$ and~$\td v$
+effect the differential change
+\begin{align*}
+  \td T
+  &= \pder{T}{u} \td u + \pder{T}{v} \td v \\
+  &=
+    \roundbr*{\frac{1}{\scalefac{u}} \pder{T}{u}}
+    \roundbr{\scalefac{u} \td u}
+      +
+    \roundbr*{\frac{1}{\scalefac{v}} \pder{T}{v}}
+    \roundbr{\scalefac{v} \td v}.
+    \yesnumber
+    \label{eq:scalar-differential-change}
+\end{align*}
+By the definition of gradient,
+and using~(\ref{eq:differential-displacement-vector}),
+\begin{align*}
+  \td T
+  &= \del T \dotp \td \vec{r} \\
+  &=
+    \del T
+      \dotp
+    \roundbr{
+      \scalefac{u} \td u \basisvec{u}
+        +
+      \scalefac{v} \td v \basisvec{v}
+    }.
+    \yesnumber
+    \label{eq:scalar-differential-change-gradient}
+\end{align*}
+Comparing~(\ref{eq:scalar-differential-change})
+and~(\ref{eq:scalar-differential-change-gradient}),
+it follows that the \emph{gradient} of~$T$ is given by
+\begin{equation}
+  \del T =
+    \frac{1}{\scalefac{u}} \pder{T}{u} \basisvec{u}
+      +
+    \frac{1}{\scalefac{v}} \pder{T}{v} \basisvec{v}.
+  \label{eq:gradient}
+\end{equation}
