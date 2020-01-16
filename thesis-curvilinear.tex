@@ -12,17 +12,40 @@ in an orthogonal curvilinear coordinate system,
 along with the corresponding system of ODEs
 under arc-length parametrisation.
 
-\section{Curvilinear coordinates in 2D}
+\section{Orthogonal curvilinear coordinates in 2D}
 
-Let~$\orthonvec{x}$ and~$\orthonvec{y}$ be the standard basis vectors
+Let~$(\orthonvec{x}, \orthonvec{y})$ be the standard basis vectors
 of the usual Cartesian coordinates~$(x, y)$.
-The position vector is
+The \emph{position vector} is
 \begin{equation}
   \vec{r} = x \orthonvec{x} + y \orthonvec{y},
+  \label{eq:position-vector-cartesian}
 \end{equation}
-and since $\orthonvec{x}$ and~$\orthonvec{y}$ are constant,
-notice how
+and since $\orthonvec{x}$ and~$\orthonvec{y}$ are globally constant,
+observe that
 \begin{align}
-  \orthonvec{x} &= \pder{\vec{r}}{x}, \\
+  \orthonvec{x} &= \pder{\vec{r}}{x},
+    \label{eq:x-basis-vector} \\[\fraclinespace]
   \orthonvec{y} &= \pder{\vec{r}}{y}.
+    \label{eq:y-basis-vector}
 \end{align}
+Now consider the \emph{curvilinear coordinates}~$(u, v)$
+given by the transformation
+\begin{align}
+  x &= x (u, v), \label{eq:curvilinear-x-transformation} \\
+  y &= y (u, v). \label{eq:curvilinear-y-transformation}
+\end{align}
+A \emph{local basis}~$(\orthogvec{u}, \orthogvec{v})$
+arises from the derivatives of position
+in analogy to~(\ref{eq:x-basis-vector}) and~(\ref{eq:y-basis-vector}),
+\begin{align}
+  \orthogvec{u} &
+    = \pder{\vec{r}}{u}
+    = \pder{x}{u} \orthonvec{x} + \pder{y}{u} \orthonvec{y},
+      \label{eq:u-local-basis-vector} \\[\fraclinespace]
+  \orthogvec{v} &
+    = \pder{\vec{r}}{v}
+    = \pder{x}{v} \orthonvec{x} + \pder{y}{v} \orthonvec{y}.
+      \label{eq:v-local-basis-vector}
+\end{align}
+
