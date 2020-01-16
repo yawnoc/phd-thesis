@@ -54,3 +54,20 @@ meaning the local basis vectors are orthogonal to each other:
   \localvec{u} \dotp \localvec{v} = 0.
   \label{eq:local-basis-orthogonal}
 \end{equation}
+The magnitudes of the local basis vectors may not be unity;
+in fact, should either~$u$ or~$v$ not have dimensions of length,
+the corresponding local basis vector will not even be dimensionless.
+Therefore, one defines the \emph{scale factors}
+(or \emph{\lame{} coefficients})
+\begin{align}
+  \scalefac{u} &= \norm{\localvec{u}}, \label{eq:u-scale-factor} \\
+  \scalefac{v} &= \norm{\localvec{v}}, \label{eq:v-scale-factor}
+\end{align}
+and then normalises the local basis
+to obtain the \emph{local orthonormal basis},
+\begin{align}
+  \basisvec{u} &= \frac{\localvec{u}}{\scalefac{u}},
+      \label{eq:u-basis-vector} \\[\fraclinespace]
+  \basisvec{v} &= \frac{\localvec{v}}{\scalefac{v}}.
+      \label{eq:v-basis-vector}
+\end{align}
