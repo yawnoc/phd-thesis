@@ -71,3 +71,31 @@ to obtain the \emph{local orthonormal basis},
   \basisvec{v} &= \frac{\localvec{v}}{\scalefac{v}}.
       \label{eq:v-basis-vector}
 \end{align}
+
+\section{Vector calculus}
+
+\subsection{Differential displacement}
+
+Consider the $u$-contour and the $v$-contour through a point~$(u, v)$.
+Independently incrementing~$u$ by~$\td u$ and~$v$ by~$\td v$
+results in two new contours,
+corresponding to each of the new coordinates.
+Since the coordinate system is orthogonal,
+the four contours (two old and two new)
+shall mark out an infinitesimal rectangle,
+aligned with the local orthonormal basis,
+and, with sides of length~$\scalefac{u} \td u$ and~$\scalefac{v} \td v$.
+Indeed the differential displacement vector is
+\begin{align*}
+  \td \vec{r}
+  &= \pder{\vec{r}}{u} \td u + \pder{\vec{r}}{v} \td v \\[\fraclinespace]
+  &= \localvec{u} \td u + \localvec{v} \td v \\
+  &= \scalefac{u} \td u \basisvec{u} + \scalefac{v} \td v \basisvec{v}.
+    \yesnumber
+    \label{eq:differential-displacement-vector}
+\end{align*}
+The area of the infinitesimal rectangle is the area element
+\begin{equation}
+  \td V = \scalefac{u} \scalefac{v} \td u \td v.
+  \label{eq:differential-area-element}
+\end{equation}
