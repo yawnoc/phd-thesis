@@ -33,10 +33,16 @@
 % Absolute value
 \DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
 
-% Differential operators and derivatives
+% Del operator
 \newcommand*{\del}{\mathopspace\vec{\nabla}}
+
+% Partial differential
 \newcommand*{\pd}{\mathopspace\partial}
+
+% Partial derivative
 \newcommand*{\pder}[2]{\frac{\pd #1}{\pd #2}}
+
+% Total differential
 \newcommand*{\td}{\mathopspace\mathrm{d}}
 
 % Dot product
@@ -45,9 +51,13 @@
 % Norm
 \DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
 
-% Vectors
-\newcommand*{\orthogvec}[1]{\mathopspace\vec{h}_{#1}}
-\newcommand*{\orthonvec}[1]{\mathopspace\vec{a}_{#1}}
+% Local (orthogonal) basis vector
+\newcommand*{\localvec}[1]{\mathopspace\vec{h}_{#1}}
+
+% Orthonormal basis vector
+\newcommand*{\basisvec}[1]{\mathopspace\vec{a}_{#1}}
+
+% Normal vector
 \newcommand*{\normalvec}{\mathopspace\vec{n}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

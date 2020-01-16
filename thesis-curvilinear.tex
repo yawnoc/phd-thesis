@@ -14,19 +14,19 @@ under arc-length parametrisation.
 
 \section{Orthogonal curvilinear coordinates in 2D}
 
-Let~$(\orthonvec{x}, \orthonvec{y})$ be the standard basis vectors
+Let~$(\basisvec{x}, \basisvec{y})$ be the standard basis vectors
 of the usual Cartesian coordinates~$(x, y)$.
 The \emph{position vector} is
 \begin{equation}
-  \vec{r} = x \orthonvec{x} + y \orthonvec{y},
+  \vec{r} = x \basisvec{x} + y \basisvec{y},
   \label{eq:position-vector-cartesian}
 \end{equation}
-and since $\orthonvec{x}$ and~$\orthonvec{y}$ are globally constant,
+and since $\basisvec{x}$ and~$\basisvec{y}$ are globally constant,
 observe that
 \begin{align}
-  \orthonvec{x} &= \pder{\vec{r}}{x},
+  \basisvec{x} &= \pder{\vec{r}}{x},
     \label{eq:x-basis-vector} \\[\fraclinespace]
-  \orthonvec{y} &= \pder{\vec{r}}{y}.
+  \basisvec{y} &= \pder{\vec{r}}{y}.
     \label{eq:y-basis-vector}
 \end{align}
 Now consider the \emph{curvilinear coordinates}~$(u, v)$
@@ -35,17 +35,16 @@ given by the transformation
   x &= x (u, v), \label{eq:curvilinear-x-transformation} \\
   y &= y (u, v). \label{eq:curvilinear-y-transformation}
 \end{align}
-A \emph{local basis}~$(\orthogvec{u}, \orthogvec{v})$
+A \emph{local basis}~$(\localvec{u}, \localvec{v})$
 arises from the derivatives of position
 in analogy to~(\ref{eq:x-basis-vector}) and~(\ref{eq:y-basis-vector}),
 \begin{align}
-  \orthogvec{u} &
+  \localvec{u} &
     = \pder{\vec{r}}{u}
-    = \pder{x}{u} \orthonvec{x} + \pder{y}{u} \orthonvec{y},
+    = \pder{x}{u} \basisvec{x} + \pder{y}{u} \basisvec{y},
       \label{eq:u-local-basis-vector} \\[\fraclinespace]
-  \orthogvec{v} &
+  \localvec{v} &
     = \pder{\vec{r}}{v}
-    = \pder{x}{v} \orthonvec{x} + \pder{y}{v} \orthonvec{y}.
+    = \pder{x}{v} \basisvec{x} + \pder{y}{v} \basisvec{y}.
       \label{eq:v-local-basis-vector}
 \end{align}
-
