@@ -149,3 +149,42 @@ it follows that the \emph{gradient} of~$T$ is given by
     \frac{1}{\scalefac{v}} \pder{T}{v} \basisvec{v}.
   \label{eq:gradient}
 \end{equation}
+
+\subsection{Divergence}
+\label{sec:curvilinear.calculus.divergence}
+
+Consider a vector field~$%
+\vec{F} = \comp{F}{u} \basisvec{u} + \comp{F}{v} \basisvec{v}$,
+and the infinitesimal rectangle
+of Section~\ref{sec:curvilinear.calculus.displacement},
+whose sides are of length~$\scalefac{u} \td u$ and~$\scalefac{v} \td v$.
+
+To first order,
+the net flux across the two edges normal to~$\basisvec{u}$
+(which have length~$\scalefac{v} \td v$) is
+\[
+  \pder{}{u} \roundbr[\Big]{
+    \comp{F}{u} \cdot \scalefac{v} \td v
+  } \cdot \td u,
+\]
+and the net flux across the two edges normal to~$\basisvec{v}$
+(which have length~$\scalefac{u} \td u$) is
+\[
+  \pder{}{v} \roundbr[\Big]{
+    \comp{F}{v} \cdot \scalefac{u} \td u
+  } \cdot \td v.
+\]
+Summing these results in the flux across the perimeter of the rectangle,
+which, divided by its area,
+the area element~(\ref{eq:differential-area-element}),
+yields the \emph{divergence} of~$\vec{F}$,
+\begin{equation}
+  \del \dotp \vec{F} =
+    \frac{1}{\scalefac{u} \scalefac{v}}
+    \squarebr*{
+      \pder{}{u} \roundbr[\Big]{\scalefac{v} \comp{F}{u}}
+        +
+      \pder{}{v} \roundbr[\Big]{\scalefac{u} \comp{F}{v}}
+    }.
+  \label{eq:divergence}
+\end{equation}
