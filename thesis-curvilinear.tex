@@ -70,9 +70,19 @@ to obtain the \emph{local orthonormal basis},
 \begin{align}
   \basisvec{u} &= \frac{\localvec{u}}{\scalefac{u}},
       \label{eq:u-basis-vector} \\[\fraclinespace]
-  \basisvec{v} &= \frac{\localvec{v}}{\scalefac{v}}.
+  \basisvec{v} &= \frac{\localvec{v}}{\scalefac{v}},
       \label{eq:v-basis-vector}
 \end{align}
+for which
+\begin{equation}
+  \basisvec{u} \dotp \basisvec{v} = 0
+  \label{eq:orthonormal-basis-orthogonal}
+\end{equation}
+and
+\begin{equation}
+  \norm{\basisvec{u}} = \norm{\basisvec{v}} = 1.
+  \label{eq:orthonormal-basis-normalised}
+\end{equation}
 
 \section{Vector calculus}
 \label{sec:curvilinear.calculus}
