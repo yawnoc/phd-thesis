@@ -116,10 +116,10 @@ effect the differential change
   &= \pder{T}{u} \td u + \pder{T}{v} \td v \\
   &=
     \roundbr*{\frac{1}{\scalefac{u}} \pder{T}{u}}
-    \roundbr{\scalefac{u} \td u}
+    \roundbr[\big]{\scalefac{u} \td u}
       +
     \roundbr*{\frac{1}{\scalefac{v}} \pder{T}{v}}
-    \roundbr{\scalefac{v} \td v}.
+    \roundbr[\big]{\scalefac{v} \td v}.
     \yesnumber
     \label{eq:scalar-differential-change}
 \end{align*}
@@ -131,7 +131,7 @@ and using~(\ref{eq:differential-displacement-vector}),
   &=
     \del T
       \dotp
-    \roundbr{
+    \roundbr[\big]{
       \scalefac{u} \td u \basisvec{u}
         +
       \scalefac{v} \td v \basisvec{v}
