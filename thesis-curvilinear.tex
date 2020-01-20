@@ -188,3 +188,47 @@ yields the \emph{divergence} of~$\vec{F}$,
     }.
   \label{eq:divergence}
 \end{equation}
+
+\subsection{Boundary normal}
+\label{sec:curvilinear.calculus.normal}
+
+The \emph{tangent vector}~$\tangentvec$ to a curve
+is given by the unit vector of
+the differential displacement~(\ref{eq:differential-displacement-vector}),
+i.e.,
+\begin{equation}
+  \tangentvec =
+    \frac{
+      \scalefac{u} \td u \basisvec{u}
+        +
+      \scalefac{v} \td v \basisvec{v}
+    }{
+      \td s
+    },
+  \label{eq:tangent-vector}
+\end{equation}
+where $\td s$~is the \emph{differential arc length}
+\begin{equation}
+  \td s = \norm{\td \vec{r}} =
+  \sqrt{
+    \roundbr[\big]{\scalefac{u} \td u}^2
+      +
+    \roundbr[\big]{\scalefac{v} \td v}^2
+  }.
+  \label{eq:differential-arc-length}
+\end{equation}
+The normal vector~$\normalvec$ to a curve
+is perpendicular to the tangent~$\tangentvec$;
+therefore
+\begin{equation}
+  \normalvec =
+    \frac{
+      \scalefac{v} \td v \basisvec{u}
+        -
+      \scalefac{u} \td u \basisvec{v}
+    }{
+      \td s
+    },
+  \label{eq:normal-vector}
+\end{equation}
+up to sign.
