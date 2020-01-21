@@ -123,7 +123,7 @@ By the chain rule, the independent increments~$\td u$ and~$\td v$
 effect the differential change
 \begin{align*}
   \td T
-  &= \pder{T}{u} \td u + \pder{T}{v} \td v \\
+  &= \pder{T}{u} \td u + \pder{T}{v} \td v \\[\fraclinespace]
   &=
     \roundbr*{\frac{1}{\scalefac{u}} \pder{T}{u}}
     \roundbr[\big]{\scalefac{u} \td u}
@@ -242,3 +242,65 @@ therefore
   \label{eq:normal-vector}
 \end{equation}
 up to sign.
+
+\subsection{Abbreviations}
+\label{sec:curvilinear.calculus.abbreviations}
+
+Since the scale factors~$\scalefac{u}$ and~$\scalefac{v}$ appear regularly,
+it is helpful to define abbreviations
+before proceeding to derive the boundary tracing equations.
+
+For the components of the differential displacement
+vector~(\ref{eq:differential-displacement-vector}),
+which are the side lengths of the infinitesimal rectangle
+of Section~\ref{sec:curvilinear.calculus.displacement},
+let
+\begin{align}
+  \td \mu &= \scalefac{u} \td u,
+    \label{eq:differential-displacement-u-component} \\
+  \td \nu &= \scalefac{v} \td v,
+    \label{eq:differential-displacement-v-component}
+\end{align}
+so that
+\begin{equation}
+  \td \vec{r} = \td \mu \basisvec{u} + \td \nu \basisvec{v}
+  \label{eq:differential-displacement-vector-abbreviated}
+\end{equation}
+and
+\begin{equation}
+  \td s = \sqrt{{\td \mu}^2 + {\td \nu}^2}.
+  \label{eq:differential-arc-length-abbreviated}
+\end{equation}
+For the components of the gradient vector~(\ref{eq:gradient}),
+write
+\begin{align}
+  P &= \frac{1}{\scalefac{u}} \pder{T}{u},
+    \label{eq:gradient-u-component} \\[\fraclinespace]
+  Q &= \frac{1}{\scalefac{v}} \pder{T}{v},
+    \label{eq:gradient-v-component}
+\end{align}
+so that
+\begin{equation}
+  \del T = P \basisvec{u} + Q \basisvec{v}.
+  \label{eq:gradient-abbreviated}
+\end{equation}
+Finally, for the components of
+the tangent vector~(\ref{eq:tangent-vector}), define
+\begin{align}
+  \alpha &= \tder{\mu}{s} = \frac{\scalefac{u} \td u}{\td s},
+    \label{eq:tangent-u-component} \\[\fraclinespace]
+  \beta &= \tder{\nu}{s} = \frac{\scalefac{v} \td v}{\td s},
+    \label{eq:tangent-v-component}
+\end{align}
+so that
+\begin{align}
+  \tangentvec &= \alpha \basisvec{u} + \beta \basisvec{v},
+    \label{eq:tangent-vector-abbreviated} \\
+  \normalvec &= \beta \basisvec{u} - \alpha \basisvec{v}.
+    \label{eq:normal-vector-abbreviated}
+\end{align}
+Note that
+\begin{align}
+  P^2 + Q^2 &= (\del T)^2, \label{eq:gradient-pythagoras} \\
+  \alpha^2 + \beta^2 &= 1. \label{eq:tangent-pythagoras}
+\end{align}
