@@ -294,9 +294,13 @@ the tangent vector~(\ref{eq:tangent-vector}), define
 \end{align}
 so that
 \begin{align}
-  \tangentvec &= \alpha \basisvec{u} + \beta \basisvec{v},
-    \label{eq:tangent-vector-abbreviated} \\
-  \normalvec &= \beta \basisvec{u} - \alpha \basisvec{v}.
+  \tangentvec
+  &= \frac{\td \mu \basisvec{u} + \td \nu \basisvec{v}}{\td s}
+  = \alpha \basisvec{u} + \beta \basisvec{v},
+    \label{eq:tangent-vector-abbreviated} \\[\fraclinespace]
+  \normalvec
+  &= \frac{\td \nu \basisvec{u} - \td \mu \basisvec{v}}{\td s}
+  = \beta \basisvec{u} - \alpha \basisvec{v}.
     \label{eq:normal-vector-abbreviated}
 \end{align}
 Note that
@@ -304,3 +308,60 @@ Note that
   P^2 + Q^2 &= (\del T)^2, \label{eq:gradient-pythagoras} \\
   \alpha^2 + \beta^2 &= 1. \label{eq:tangent-pythagoras}
 \end{align}
+
+\section{Boundary tracing equations}
+\label{sec:curvilinear.tracing}
+
+In this section the boundary tracing equations are derived,
+i.e.~the flux boundary condition~(\ref{eq:flux-boundary-condition})
+is rewritten as an ODE (or system of ODEs) for the traced boundaries.
+
+For brevity, define the \emph{viability function}
+\begin{equation}
+  \Phi = (\del T)^2 - F^2.
+  \label{eq:viability-function}
+\end{equation}
+Note that
+the viable domain is the region~$\Phi \ge 0$,
+the non-viable domain~$\Phi < 0$,
+and the terminal curve~$\Phi = 0$.
+
+\subsection{Coordinate parametrisation}
+\label{sec:curvilinear.tracing.coordinate}
+
+Suppose the traced boundaries are to be parametrised
+in the form~$v = v (u)$.
+Using~(\ref{eq:normal-vector-abbreviated}),
+(\ref{eq:differential-arc-length-abbreviated})
+and~(\ref{eq:gradient-abbreviated}),
+the boundary equation~(\ref{eq:flux-boundary-condition}) becomes
+\[
+  \frac{
+    \td \nu \basisvec{u} - \td \mu \basisvec{v}
+  }{
+    \sqrt{{\td \mu}^2 + {\td \nu}^2}
+  }
+    \dotp
+  \roundbr[\big]{P \basisvec{u} + Q \basisvec{v}}
+    =
+  F,
+\]
+which expands into the quadratic equation
+\[
+  \roundbr*{P^2 - F^2} \, {\td \nu}^2
+  - 2 P Q \td \nu \td \mu
+  + \roundbr*{Q^2 - F^2} \, {\td \mu}^2
+    =
+  0.
+\]
+Solving this for~$\td \nu / \td \mu$ results in the boundary tracing ODE
+\begin{equation}
+  \tder{\nu}{\mu} = \frac{P Q \pm F \sqrt{\Phi}}{P^2 - F^2}.
+  \label{eq:tracing-ode-coordinate-parametrisation}
+\end{equation}
+Alternatively, for the parametrisation~$u = u (v)$,
+one solves for~$\td \mu / \td \nu$, giving
+\begin{equation}
+  \tder{\mu}{\nu} = \frac{P Q \mp F \sqrt{\Phi}}{Q^2 - F^2}.
+  \label{eq:tracing-ode-coordinate-parametrisation-inverted}
+\end{equation}
