@@ -334,7 +334,7 @@ in the form~$v = v (u)$.
 Using~(\ref{eq:normal-vector-abbreviated}),
 (\ref{eq:differential-arc-length-abbreviated})
 and~(\ref{eq:gradient-abbreviated}),
-the boundary equation~(\ref{eq:flux-boundary-condition}) becomes
+the boundary condition~(\ref{eq:flux-boundary-condition}) becomes
 \[
   \frac{
     \td \nu \basisvec{u} - \td \mu \basisvec{v}
@@ -365,3 +365,43 @@ one solves for~$\td \mu / \td \nu$, giving
   \tder{\mu}{\nu} = \frac{P Q \mp F \sqrt{\Phi}}{Q^2 - F^2}.
   \label{eq:tracing-ode-coordinate-parametrisation-inverted}
 \end{equation}
+
+\subsection{Arc-length parametrisation}
+\label{sec:curvilinear.tracing.arc-length}
+
+In numerical boundary tracing,
+the coordinate parametrisations~$v = v (u)$ and~$u = u (v)$
+will be problematic
+if~$\td v / \td u$ or~$\td u / \td v$ ever become infinite,
+corresponding to traced boundaries
+which are parallel to~$\basisvec{v}$ or~$\basisvec{u}$.
+
+To avoid such singularities in numerical work, one should instead use
+the arc-length parametrisation~$u = u (s)$, $v = v(s)$,
+which puts the two coordinates~$u$ and~$v$ on an equal footing.
+Using~(\ref{eq:normal-vector-abbreviated})
+and~(\ref{eq:gradient-abbreviated}),
+the boundary condition~(\ref{eq:flux-boundary-condition}) becomes
+\[
+  \roundbr[\big]{\beta \basisvec{u} - \alpha \basisvec{v}}
+    \dotp
+  \roundbr[\big]{P \basisvec{u} + Q \basisvec{v}}
+    =
+  F,
+\]
+which, along with the unit-speed condition~(\ref{eq:tangent-pythagoras}),
+forms the system
+\begin{align}
+  P \beta - Q \alpha &= F,
+    \label{eq:tracing-arc-length-parametrisation-flux-boundary-condition} \\
+  \alpha^2 + \beta^2 &= 1.
+    \label{eq:tracing-arc-length-parametrisation-unit-speed}
+\end{align}
+Solving for~$\alpha$ and~$\beta$, one obtains
+the boundary tracing system of ODEs under arc-length parametrisation,
+\begin{align}
+  \tder{\mu}{s} &= \alpha = \frac{-Q F \pm P \sqrt{\Phi}}{(\del T)^2},
+    \label{eq:tracing-ode-arc-length-parametrisation-mu} \\
+  \tder{\nu}{s} &= \beta = \frac{\+P F \pm Q \sqrt{\Phi}}{(\del T)^2}.
+    \label{eq:tracing-ode-arc-length-parametrisation-nu}
+\end{align}
