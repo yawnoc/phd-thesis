@@ -199,6 +199,33 @@ yields the \emph{divergence} of~$\vec{F}$,
   \label{eq:divergence}
 \end{equation}
 
+\subsection{Laplacian}
+\label{sec:curvilinear.calculus.laplacian}
+
+Composing the divergence~(\ref{eq:divergence})
+and the gradient~(\ref{eq:gradient}) (with~$\vec{F} = \del T$),
+it follows that the \emph{Laplacian} of~$T$ is given by
+\begin{equation}
+  \del^2 T \defeq \del \dotp \del T =
+    \frac{1}{\scalefac{u} \scalefac{v}}
+    \squarebr*{
+      \pder{}{u} \roundbr*{\frac{\scalefac{v}}{\scalefac{u}} \pder{T}{u}}
+        +
+      \pder{}{v} \roundbr*{\frac{\scalefac{u}}{\scalefac{v}} \pder{T}{v}}
+    }.
+  \label{eq:laplacian}
+\end{equation}
+In particular,
+if the two scale factors~$\scalefac{u}$ and~$\scalefac{v}$ are equal,
+say~$\scalefac{u} = \scalefac{v} = \scalefac{}$,
+this simplifies to
+\begin{equation}
+  \del^2 T =
+    \frac{1}{\scalefac{}^2}
+    \squarebr*{\frac{\pd^2 T}{{\pd u}^2} + \frac{\pd^2 T}{{\pd v}^2}}.
+  \label{eq:laplacian-scale-factors-equal}
+\end{equation}
+
 \subsection{Boundary normal}
 \label{sec:curvilinear.calculus.normal}
 
