@@ -99,14 +99,14 @@ the four contours (two old and two new)
 shall mark out an infinitesimal rectangle,
 aligned with the local orthonormal basis,
 and, with sides of length~$\scalefac{u} \td u$ and~$\scalefac{v} \td v$.
-Indeed the \emph{differential displacement vector} is
+Indeed the \emph{differential displacement} is
 \begin{align*}
   \td \vec{r}
   &\defeq \pder{\vec{r}}{u} \td u + \pder{\vec{r}}{v} \td v \\[\fraclinespace]
   &= \localvec{u} \td u + \localvec{v} \td v \\
   &= \scalefac{u} \td u \basisvec{u} + \scalefac{v} \td v \basisvec{v}.
     \yesnumber
-    \label{eq:differential-displacement-vector}
+    \label{eq:differential-displacement}
 \end{align*}
 The area of the infinitesimal rectangle is
 the \emph{differential area element}
@@ -134,7 +134,7 @@ effect the differential change
     \label{eq:scalar-differential-change}
 \end{align*}
 By the definition of gradient,
-and using~(\ref{eq:differential-displacement-vector}),
+and using~(\ref{eq:differential-displacement}),
 \begin{align*}
   \td T
   &\defeq \del T \dotp \td \vec{r} \\
@@ -204,7 +204,7 @@ yields the \emph{divergence} of~$\vec{F}$,
 
 The \emph{tangent vector}~$\tangentvec$ to a curve
 is given by the unit vector of
-the differential displacement~(\ref{eq:differential-displacement-vector}),
+the differential displacement~(\ref{eq:differential-displacement}),
 i.e.,
 \begin{equation}
   \tangentvec =
@@ -251,7 +251,7 @@ it is helpful to define abbreviations
 before proceeding to derive the boundary tracing equations.
 
 For the components of the differential displacement
-vector~(\ref{eq:differential-displacement-vector}),
+vector~(\ref{eq:differential-displacement}),
 which are the side lengths of the infinitesimal rectangle
 of Section~\ref{sec:curvilinear.calculus.displacement},
 let
@@ -264,7 +264,7 @@ let
 so that
 \begin{equation}
   \td \vec{r} = \td \mu \basisvec{u} + \td \nu \basisvec{v}
-  \label{eq:differential-displacement-vector-abbreviated}
+  \label{eq:differential-displacement-abbreviated}
 \end{equation}
 and
 \begin{equation}
@@ -431,7 +431,7 @@ By definition, there holds
 \]
 along the contour,
 which, using~(\ref{eq:gradient-abbreviated})
-and~(\ref{eq:differential-displacement-vector-abbreviated}),
+and~(\ref{eq:differential-displacement-abbreviated}),
 becomes
 \[
   P \td \mu + Q \td \nu = 0,
