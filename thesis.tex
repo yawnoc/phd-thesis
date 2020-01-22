@@ -74,7 +74,14 @@
 \newcommand*{\localvec}[1]{\mathopspace\vec{h}_{#1}}
 
 % Scale factor
-\newcommand*{\scalefac}[1]{h_{#1}}
+\newcommand*{\scalefac}[1][]{%
+  h%
+  \ifx\\#1\\%
+    %
+  \else%
+    _{#1}%
+  \fi%
+}
 
 % Orthonormal basis vector
 \newcommand*{\basisvec}[1]{\mathopspace\vec{a}_{#1}}

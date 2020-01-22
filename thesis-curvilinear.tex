@@ -62,15 +62,15 @@ the corresponding local basis vector will not even be dimensionless.
 Therefore, one defines the \emph{scale factors}
 (or \emph{\lame{} coefficients})
 \begin{align}
-  \scalefac{u} &\defeq \norm{\localvec{u}}, \label{eq:u-scale-factor} \\
-  \scalefac{v} &\defeq \norm{\localvec{v}}, \label{eq:v-scale-factor}
+  \scalefac[u] &\defeq \norm{\localvec{u}}, \label{eq:u-scale-factor} \\
+  \scalefac[v] &\defeq \norm{\localvec{v}}, \label{eq:v-scale-factor}
 \end{align}
 and then normalises the local basis
 to obtain the \emph{local orthonormal basis},
 \begin{align}
-  \basisvec{u} &\defeq \frac{\localvec{u}}{\scalefac{u}},
+  \basisvec{u} &\defeq \frac{\localvec{u}}{\scalefac[u]},
       \label{eq:u-basis-vector} \\[\fraclinespace]
-  \basisvec{v} &\defeq \frac{\localvec{v}}{\scalefac{v}},
+  \basisvec{v} &\defeq \frac{\localvec{v}}{\scalefac[v]},
       \label{eq:v-basis-vector}
 \end{align}
 for which
@@ -98,20 +98,20 @@ Since the coordinate system is orthogonal,
 the four contours (two old and two new)
 shall mark out an infinitesimal rectangle,
 aligned with the local orthonormal basis,
-and, with sides of length~$\scalefac{u} \td u$ and~$\scalefac{v} \td v$.
+and, with sides of length~$\scalefac[u] \td u$ and~$\scalefac[v] \td v$.
 Indeed the \emph{differential displacement} is
 \begin{align*}
   \td \vec{r}
   &\defeq \pder{\vec{r}}{u} \td u + \pder{\vec{r}}{v} \td v \\[\fraclinespace]
   &= \localvec{u} \td u + \localvec{v} \td v \\
-  &= \scalefac{u} \td u \basisvec{u} + \scalefac{v} \td v \basisvec{v}.
+  &= \scalefac[u] \td u \basisvec{u} + \scalefac[v] \td v \basisvec{v}.
     \yesnumber
     \label{eq:differential-displacement}
 \end{align*}
 The area of the infinitesimal rectangle is
 the \emph{differential area element}
 \begin{equation}
-  \td V = \scalefac{u} \scalefac{v} \td u \td v.
+  \td V = \scalefac[u] \scalefac[v] \td u \td v.
   \label{eq:differential-area-element}
 \end{equation}
 
@@ -125,11 +125,11 @@ effect the differential change
   \td T
   &= \pder{T}{u} \td u + \pder{T}{v} \td v \\[\fraclinespace]
   &=
-    \roundbr*{\frac{1}{\scalefac{u}} \pder{T}{u}}
-    \roundbr[\big]{\scalefac{u} \td u}
+    \roundbr*{\frac{1}{\scalefac[u]} \pder{T}{u}}
+    \roundbr[\big]{\scalefac[u] \td u}
       +
-    \roundbr*{\frac{1}{\scalefac{v}} \pder{T}{v}}
-    \roundbr[\big]{\scalefac{v} \td v}.
+    \roundbr*{\frac{1}{\scalefac[v]} \pder{T}{v}}
+    \roundbr[\big]{\scalefac[v] \td v}.
     \yesnumber
     \label{eq:scalar-differential-change}
 \end{align*}
@@ -142,9 +142,9 @@ and using~(\ref{eq:differential-displacement}),
     \del T
       \dotp
     \roundbr[\big]{
-      \scalefac{u} \td u \basisvec{u}
+      \scalefac[u] \td u \basisvec{u}
         +
-      \scalefac{v} \td v \basisvec{v}
+      \scalefac[v] \td v \basisvec{v}
     }.
     \yesnumber
     \label{eq:scalar-differential-change-gradient}
@@ -154,9 +154,9 @@ and~(\ref{eq:scalar-differential-change-gradient}),
 it follows that the \emph{gradient} of~$T$ is given by
 \begin{equation}
   \del T =
-    \frac{1}{\scalefac{u}} \pder{T}{u} \basisvec{u}
+    \frac{1}{\scalefac[u]} \pder{T}{u} \basisvec{u}
       +
-    \frac{1}{\scalefac{v}} \pder{T}{v} \basisvec{v}.
+    \frac{1}{\scalefac[v]} \pder{T}{v} \basisvec{v}.
   \label{eq:gradient}
 \end{equation}
 
@@ -167,21 +167,21 @@ Consider a vector field~$%
 \vec{F} = \comp{F}{u} \basisvec{u} + \comp{F}{v} \basisvec{v}$,
 and the infinitesimal rectangle
 of Section~\ref{sec:curvilinear.calculus.displacement},
-whose sides are of length~$\scalefac{u} \td u$ and~$\scalefac{v} \td v$.
+whose sides are of length~$\scalefac[u] \td u$ and~$\scalefac[v] \td v$.
 
 To first order,
 the net flux across the two edges normal to~$\basisvec{u}$
-(which have length~$\scalefac{v} \td v$) is
+(which have length~$\scalefac[v] \td v$) is
 \[
   \pder{}{u} \roundbr[\Big]{
-    \comp{F}{u} \cdot \scalefac{v} \td v
+    \comp{F}{u} \cdot \scalefac[v] \td v
   } \cdot \td u,
 \]
 and the net flux across the two edges normal to~$\basisvec{v}$
-(which have length~$\scalefac{u} \td u$) is
+(which have length~$\scalefac[u] \td u$) is
 \[
   \pder{}{v} \roundbr[\Big]{
-    \comp{F}{v} \cdot \scalefac{u} \td u
+    \comp{F}{v} \cdot \scalefac[u] \td u
   } \cdot \td v.
 \]
 Summing these results in the flux across the perimeter of the rectangle,
@@ -190,11 +190,11 @@ the area element~(\ref{eq:differential-area-element}),
 yields the \emph{divergence} of~$\vec{F}$,
 \begin{equation}
   \del \dotp \vec{F} =
-    \frac{1}{\scalefac{u} \scalefac{v}}
+    \frac{1}{\scalefac[u] \scalefac[v]}
     \squarebr*{
-      \pder{}{u} \roundbr[\Big]{\scalefac{v} \comp{F}{u}}
+      \pder{}{u} \roundbr[\Big]{\scalefac[v] \comp{F}{u}}
         +
-      \pder{}{v} \roundbr[\Big]{\scalefac{u} \comp{F}{v}}
+      \pder{}{v} \roundbr[\Big]{\scalefac[u] \comp{F}{v}}
     }.
   \label{eq:divergence}
 \end{equation}
@@ -207,21 +207,21 @@ and the gradient~(\ref{eq:gradient}) (with~$\vec{F} = \del T$),
 it follows that the \emph{Laplacian} of~$T$ is given by
 \begin{equation}
   \del^2 T \defeq \del \dotp \del T =
-    \frac{1}{\scalefac{u} \scalefac{v}}
+    \frac{1}{\scalefac[u] \scalefac[v]}
     \squarebr*{
-      \pder{}{u} \roundbr*{\frac{\scalefac{v}}{\scalefac{u}} \pder{T}{u}}
+      \pder{}{u} \roundbr*{\frac{\scalefac[v]}{\scalefac[u]} \pder{T}{u}}
         +
-      \pder{}{v} \roundbr*{\frac{\scalefac{u}}{\scalefac{v}} \pder{T}{v}}
+      \pder{}{v} \roundbr*{\frac{\scalefac[u]}{\scalefac[v]} \pder{T}{v}}
     }.
   \label{eq:laplacian}
 \end{equation}
 In particular,
-if the two scale factors~$\scalefac{u}$ and~$\scalefac{v}$ are equal,
-say~$\scalefac{u} = \scalefac{v} = \scalefac{}$,
+if the two scale factors~$\scalefac[u]$ and~$\scalefac[v]$ are equal,
+say~$\scalefac[u] = \scalefac[v] = \scalefac$,
 this simplifies to
 \begin{equation}
   \del^2 T =
-    \frac{1}{\scalefac{}^2}
+    \frac{1}{\scalefac^2}
     \squarebr*{\frac{\pd^2 T}{{\pd u}^2} + \frac{\pd^2 T}{{\pd v}^2}}.
   \label{eq:laplacian-scale-factors-equal}
 \end{equation}
@@ -236,9 +236,9 @@ i.e.,
 \begin{equation}
   \tangentvec =
     \frac{
-      \scalefac{u} \td u \basisvec{u}
+      \scalefac[u] \td u \basisvec{u}
         +
-      \scalefac{v} \td v \basisvec{v}
+      \scalefac[v] \td v \basisvec{v}
     }{
       \td s
     },
@@ -248,9 +248,9 @@ where $\td s$~is the \emph{differential arc length}
 \begin{equation}
   \td s \defeq \norm{\td \vec{r}} =
   \sqrt{
-    \roundbr[\big]{\scalefac{u} \td u}^2
+    \roundbr[\big]{\scalefac[u] \td u}^2
       +
-    \roundbr[\big]{\scalefac{v} \td v}^2
+    \roundbr[\big]{\scalefac[v] \td v}^2
   }.
   \label{eq:differential-arc-length}
 \end{equation}
@@ -260,9 +260,9 @@ therefore
 \begin{equation}
   \normalvec =
     \frac{
-      \scalefac{v} \td v \basisvec{u}
+      \scalefac[v] \td v \basisvec{u}
         -
-      \scalefac{u} \td u \basisvec{v}
+      \scalefac[u] \td u \basisvec{v}
     }{
       \td s
     },
@@ -273,7 +273,7 @@ up to sign.
 \subsection{Abbreviations}
 \label{sec:curvilinear.calculus.abbreviations}
 
-Since the scale factors~$\scalefac{u}$ and~$\scalefac{v}$ appear regularly,
+Since the scale factors~$\scalefac[u]$ and~$\scalefac[v]$ appear regularly,
 it is helpful to define abbreviations
 before proceeding to derive the boundary tracing equations.
 
@@ -283,9 +283,9 @@ which are the side lengths of the infinitesimal rectangle
 of Section~\ref{sec:curvilinear.calculus.displacement},
 let
 \begin{align}
-  \td \mu &\defeq \scalefac{u} \td u,
+  \td \mu &\defeq \scalefac[u] \td u,
     \label{eq:differential-displacement-u-component} \\
-  \td \nu &\defeq \scalefac{v} \td v,
+  \td \nu &\defeq \scalefac[v] \td v,
     \label{eq:differential-displacement-v-component}
 \end{align}
 so that
@@ -301,9 +301,9 @@ and
 For the components of the gradient vector~(\ref{eq:gradient}),
 write
 \begin{align}
-  P &\defeq \frac{1}{\scalefac{u}} \pder{T}{u},
+  P &\defeq \frac{1}{\scalefac[u]} \pder{T}{u},
     \label{eq:gradient-u-component} \\[\fraclinespace]
-  Q &\defeq \frac{1}{\scalefac{v}} \pder{T}{v},
+  Q &\defeq \frac{1}{\scalefac[v]} \pder{T}{v},
     \label{eq:gradient-v-component}
 \end{align}
 so that
@@ -314,9 +314,9 @@ so that
 Finally, for the components of
 the tangent vector~(\ref{eq:tangent-vector}), define
 \begin{align}
-  \alpha &\defeq \tder{\mu}{s} = \frac{\scalefac{u} \td u}{\td s},
+  \alpha &\defeq \tder{\mu}{s} = \frac{\scalefac[u] \td u}{\td s},
     \label{eq:tangent-u-component} \\[\fraclinespace]
-  \beta &\defeq \tder{\nu}{s} = \frac{\scalefac{v} \td v}{\td s},
+  \beta &\defeq \tder{\nu}{s} = \frac{\scalefac[v] \td v}{\td s},
     \label{eq:tangent-v-component}
 \end{align}
 so that
