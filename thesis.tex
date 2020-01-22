@@ -50,7 +50,22 @@
 \newcommand*{\pd}{\mathopspace\partial}
 
 % Partial derivative
-\newcommand*{\pder}[2]{\frac{\pd #1}{\pd #2}}
+\newcommand*{\pder}[3][]{%
+  \frac{%
+    \pd%
+      \ifx\\#1\\%
+      \else%
+        ^{#1}%
+      \fi%
+    #2%
+  }{%
+    {\pd #3}%
+      \ifx\\#1\\%
+      \else%
+        ^{#1}%
+      \fi%
+  }%
+}
 
 % Total differential
 % Style guide:
@@ -77,7 +92,6 @@
 \newcommand*{\scalefac}[1][]{%
   h%
   \ifx\\#1\\%
-    %
   \else%
     _{#1}%
   \fi%
