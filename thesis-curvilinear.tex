@@ -137,7 +137,7 @@ By the definition of gradient,
 and using~(\ref{eq:differential-displacement-vector}),
 \begin{align*}
   \td T
-  &= \del T \dotp \td \vec{r} \\
+  &\defeq \del T \dotp \td \vec{r} \\
   &=
     \del T
       \dotp
@@ -402,10 +402,59 @@ Solving for~$\alpha$ and~$\beta$, one obtains
 the boundary tracing system of ODEs under arc-length parametrisation,
 \begin{align}
   \tder{\mu}{s} &\defeq \alpha = \frac{-Q F \pm P \sqrt{\Phi}}{(\del T)^2},
-    \label{eq:tracing-ode-arc-length-parametrisation-mu} \\
+    \label{eq:tracing-ode-arc-length-parametrisation-mu} \\[\fraclinespace]
   \tder{\nu}{s} &\defeq \beta = \frac{\+P F \pm Q \sqrt{\Phi}}{(\del T)^2}.
     \label{eq:tracing-ode-arc-length-parametrisation-nu}
 \end{align}
+
+\subsection{Arc-length parametrisation for contours}
+\label{sec:curvilinear.tracing.arc-length-contours}
+
+When classifying terminal points as either ordinary or critical
+(and the critical cases thereof as hyperbolic, elliptic or degenerate),
+it is useful to visualise the terminal curve (which is the contour~$\Phi = 0$)
+and the contours of the known solution~$T$,
+because it is the manner of their intersection,
+i.e.~whether they cross or touch,
+which determines this.
+
+For numerical computation of contours,
+arc-length parametrisation is again more robust
+than coordinate parametrisation
+(which is unable to handle singularities
+in~$\td v / \td u$ and~$\td u / \td v$).
+Suppose a $T$-contour is to be parametrised by arc length,
+i.e.~$u = u (s)$, $v = v(s)$.
+By definition, there holds
+\[
+  \td T \defeq \del T \dotp \td \vec{r} = 0
+\]
+along the contour,
+which, using~(\ref{eq:gradient-abbreviated})
+and~(\ref{eq:differential-displacement-vector-abbreviated}),
+becomes
+\[
+  P \td \mu + Q \td \nu = 0,
+\]
+or
+\begin{equation}
+  P \alpha + Q \beta = 0.
+  \label{eq:contour-arc-length-parametrisation-contour}
+\end{equation}
+Combining this with the unit-speed condition~(\ref{eq:tangent-pythagoras}),
+the resulting system in~$\alpha$ and~$\beta$
+solves to give the system of ODEs
+\begin{align}
+  \tder{\mu}{s} &\defeq \alpha = \frac{\pm Q}{\norm{\del T}},
+    \label{eq:contour-ode-arc-length-parametrisation-mu} \\[\fraclinespace]
+  \tder{\nu}{s} &\defeq \beta = \frac{\mp P}{\norm{\del T}}
+    \label{eq:contour-ode-arc-length-parametrisation-nu}
+\end{align}
+for a $T$-contour.
+If a $\Phi$-contour is instead sought
+(such as for the terminal curve~$\Phi = 0$),
+simply replace~$T$ with~$\Phi$,
+including in the gradient components~$P$ and~$Q$.
 
 \section{Summary}
 \label{sec:curvilinear.summary}
