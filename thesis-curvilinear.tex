@@ -20,7 +20,7 @@ Let~$(\basisvec{x}, \basisvec{y})$ be the standard basis vectors
 of the usual Cartesian coordinates~$(x, y)$.
 The \emph{position vector} is
 \begin{equation}
-  \vec{r} = x \basisvec{x} + y \basisvec{y},
+  \vec{r} \defeq x \basisvec{x} + y \basisvec{y},
   \label{eq:position-vector-cartesian}
 \end{equation}
 and since $\basisvec{x}$ and~$\basisvec{y}$ are globally constant,
@@ -42,11 +42,11 @@ arises from the derivatives of position
 in analogy to~(\ref{eq:x-basis-vector}) and~(\ref{eq:y-basis-vector}),
 \begin{align}
   \localvec{u} &
-    = \pder{\vec{r}}{u}
+    \defeq \pder{\vec{r}}{u}
     = \pder{x}{u} \basisvec{x} + \pder{y}{u} \basisvec{y},
       \label{eq:u-local-basis-vector} \\[\fraclinespace]
   \localvec{v} &
-    = \pder{\vec{r}}{v}
+    \defeq \pder{\vec{r}}{v}
     = \pder{x}{v} \basisvec{x} + \pder{y}{v} \basisvec{y}.
       \label{eq:v-local-basis-vector}
 \end{align}
@@ -62,15 +62,15 @@ the corresponding local basis vector will not even be dimensionless.
 Therefore, one defines the \emph{scale factors}
 (or \emph{\lame{} coefficients})
 \begin{align}
-  \scalefac{u} &= \norm{\localvec{u}}, \label{eq:u-scale-factor} \\
-  \scalefac{v} &= \norm{\localvec{v}}, \label{eq:v-scale-factor}
+  \scalefac{u} &\defeq \norm{\localvec{u}}, \label{eq:u-scale-factor} \\
+  \scalefac{v} &\defeq \norm{\localvec{v}}, \label{eq:v-scale-factor}
 \end{align}
 and then normalises the local basis
 to obtain the \emph{local orthonormal basis},
 \begin{align}
-  \basisvec{u} &= \frac{\localvec{u}}{\scalefac{u}},
+  \basisvec{u} &\defeq \frac{\localvec{u}}{\scalefac{u}},
       \label{eq:u-basis-vector} \\[\fraclinespace]
-  \basisvec{v} &= \frac{\localvec{v}}{\scalefac{v}},
+  \basisvec{v} &\defeq \frac{\localvec{v}}{\scalefac{v}},
       \label{eq:v-basis-vector}
 \end{align}
 for which
@@ -102,7 +102,7 @@ and, with sides of length~$\scalefac{u} \td u$ and~$\scalefac{v} \td v$.
 Indeed the \emph{differential displacement vector} is
 \begin{align*}
   \td \vec{r}
-  &= \pder{\vec{r}}{u} \td u + \pder{\vec{r}}{v} \td v \\[\fraclinespace]
+  &\defeq \pder{\vec{r}}{u} \td u + \pder{\vec{r}}{v} \td v \\[\fraclinespace]
   &= \localvec{u} \td u + \localvec{v} \td v \\
   &= \scalefac{u} \td u \basisvec{u} + \scalefac{v} \td v \basisvec{v}.
     \yesnumber
@@ -219,7 +219,7 @@ i.e.,
 \end{equation}
 where $\td s$~is the \emph{differential arc length}
 \begin{equation}
-  \td s = \norm{\td \vec{r}} =
+  \td s \defeq \norm{\td \vec{r}} =
   \sqrt{
     \roundbr[\big]{\scalefac{u} \td u}^2
       +
@@ -256,9 +256,9 @@ which are the side lengths of the infinitesimal rectangle
 of Section~\ref{sec:curvilinear.calculus.displacement},
 let
 \begin{align}
-  \td \mu &= \scalefac{u} \td u,
+  \td \mu &\defeq \scalefac{u} \td u,
     \label{eq:differential-displacement-u-component} \\
-  \td \nu &= \scalefac{v} \td v,
+  \td \nu &\defeq \scalefac{v} \td v,
     \label{eq:differential-displacement-v-component}
 \end{align}
 so that
@@ -274,9 +274,9 @@ and
 For the components of the gradient vector~(\ref{eq:gradient}),
 write
 \begin{align}
-  P &= \frac{1}{\scalefac{u}} \pder{T}{u},
+  P &\defeq \frac{1}{\scalefac{u}} \pder{T}{u},
     \label{eq:gradient-u-component} \\[\fraclinespace]
-  Q &= \frac{1}{\scalefac{v}} \pder{T}{v},
+  Q &\defeq \frac{1}{\scalefac{v}} \pder{T}{v},
     \label{eq:gradient-v-component}
 \end{align}
 so that
@@ -287,9 +287,9 @@ so that
 Finally, for the components of
 the tangent vector~(\ref{eq:tangent-vector}), define
 \begin{align}
-  \alpha &= \tder{\mu}{s} = \frac{\scalefac{u} \td u}{\td s},
+  \alpha &\defeq \tder{\mu}{s} = \frac{\scalefac{u} \td u}{\td s},
     \label{eq:tangent-u-component} \\[\fraclinespace]
-  \beta &= \tder{\nu}{s} = \frac{\scalefac{v} \td v}{\td s},
+  \beta &\defeq \tder{\nu}{s} = \frac{\scalefac{v} \td v}{\td s},
     \label{eq:tangent-v-component}
 \end{align}
 so that
@@ -318,7 +318,7 @@ is rewritten as an ODE (or system of ODEs) for the traced boundaries.
 
 For brevity, define the \emph{viability function}
 \begin{equation}
-  \Phi = (\del T)^2 - F^2.
+  \Phi \defeq (\del T)^2 - F^2.
   \label{eq:viability-function}
 \end{equation}
 Note that
@@ -400,8 +400,8 @@ forms the system
 Solving for~$\alpha$ and~$\beta$, one obtains
 the boundary tracing system of ODEs under arc-length parametrisation,
 \begin{align}
-  \tder{\mu}{s} &= \alpha = \frac{-Q F \pm P \sqrt{\Phi}}{(\del T)^2},
+  \tder{\mu}{s} &\defeq \alpha = \frac{-Q F \pm P \sqrt{\Phi}}{(\del T)^2},
     \label{eq:tracing-ode-arc-length-parametrisation-mu} \\
-  \tder{\nu}{s} &= \beta = \frac{\+P F \pm Q \sqrt{\Phi}}{(\del T)^2}.
+  \tder{\nu}{s} &\defeq \beta = \frac{\+P F \pm Q \sqrt{\Phi}}{(\del T)^2}.
     \label{eq:tracing-ode-arc-length-parametrisation-nu}
 \end{align}
