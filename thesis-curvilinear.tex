@@ -347,13 +347,14 @@ the boundary condition~(\ref{eq:flux-boundary-condition}) becomes
   F,
 \]
 which expands into the quadratic equation
-\[
+\begin{equation}
   \roundbr*{P^2 - F^2} \, {\td \nu}^2
   - 2 P Q \td \nu \td \mu
   + \roundbr*{Q^2 - F^2} \, {\td \mu}^2
     =
   0.
-\]
+  \label{eq:tracing-coordinate-parametrisation-quadratic}
+\end{equation}
 Solving this for~$\td \nu / \td \mu$ results in the boundary tracing ODE
 \begin{equation}
   \tder{\nu}{\mu} = \frac{P Q \pm F \sqrt{\Phi}}{P^2 - F^2}.
