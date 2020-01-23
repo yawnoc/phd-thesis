@@ -12,6 +12,9 @@
 % Paired delimiters ("\abs" etc.)
 \usepackage{mathtools}
 
+% Boxed equation emphasis
+\usepackage{empheq}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Math macros
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -105,6 +108,23 @@
 
 % Tangent vector
 \newcommand*{\tangentvec}{\mathopspace\vec{t}}
+
+% Important equation box
+\newcommand*{\importantpadding}{\hspace{0.7em}}
+\newcommand{\importantbox}[1]{%
+  \fbox{%
+    \importantpadding%
+      #1%
+    \importantpadding%
+  }%
+}
+\newenvironment{important}[1]{%
+  \setkeys{EmphEqEnv}{#1}%
+  \setkeys{EmphEqOpt}{box=\importantbox}%
+  \EmphEqMainEnv%
+}{%
+  \endEmphEqMainEnv%
+}
 
 % Phantom plus sign
 \newcommand*{\+}{\phantom{+}}
