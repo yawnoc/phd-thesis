@@ -384,14 +384,30 @@ which expands into the quadratic equation
 \end{equation}
 Solving this for~$\td \nu / \td \mu$ results in the boundary tracing ODE
 \begin{equation}
-  \tder{\nu}{\mu} = \frac{P Q \pm F \sqrt{\Phi}}{P^2 - F^2}.
+  \tder{\nu}{\mu} = \frac{P Q \pm F \sqrt{\Phi}}{P^2 - F^2},
   \label{eq:tracing-ode-coordinate-parametrisation-nu}
+\end{equation}
+or
+\begin{equation}
+  \tder{v}{u} =
+    \frac{\scalefac[u]}{\scalefac[v]}
+      \cdot
+    \frac{P Q \pm F \sqrt{\Phi}}{P^2 - F^2}.
+  \label{eq:tracing-ode-coordinate-parametrisation-v}
 \end{equation}
 Alternatively, for the parametrisation~$u = u (v)$,
 one solves for~$\td \mu / \td \nu$, giving
 \begin{equation}
-  \tder{\mu}{\nu} = \frac{P Q \mp F \sqrt{\Phi}}{Q^2 - F^2}.
+  \tder{\mu}{\nu} = \frac{P Q \mp F \sqrt{\Phi}}{Q^2 - F^2},
   \label{eq:tracing-ode-coordinate-parametrisation-mu}
+\end{equation}
+or
+\begin{equation}
+  \tder{u}{v} =
+    \frac{\scalefac[v]}{\scalefac[u]}
+      \cdot
+    \frac{P Q \mp F \sqrt{\Phi}}{Q^2 - F^2}.
+  \label{eq:tracing-ode-coordinate-parametrisation-u}
 \end{equation}
 
 \subsection{Arc-length parametrisation}
@@ -430,8 +446,15 @@ the boundary tracing system of ODEs under arc-length parametrisation,
 \begin{align}
   \tder{\mu}{s} &\defeq \alpha = \frac{-Q F \pm P \sqrt{\Phi}}{(\del T)^2},
     \label{eq:tracing-ode-arc-length-parametrisation-mu} \\[\fraclinespace]
-  \tder{\nu}{s} &\defeq \beta = \frac{\+P F \pm Q \sqrt{\Phi}}{(\del T)^2}.
+  \tder{\nu}{s} &\defeq \beta = \frac{\+P F \pm Q \sqrt{\Phi}}{(\del T)^2},
     \label{eq:tracing-ode-arc-length-parametrisation-nu}
+\end{align}
+or
+\begin{align}
+  \tder{u}{s} &= \frac{-Q F \pm P \sqrt{\Phi}}{\scalefac[u] (\del T)^2},
+    \label{eq:tracing-ode-arc-length-parametrisation-u} \\[\fraclinespace]
+  \tder{v}{s} &= \frac{\+P F \pm Q \sqrt{\Phi}}{\scalefac[v] (\del T)^2}.
+    \label{eq:tracing-ode-arc-length-parametrisation-v}
 \end{align}
 
 \subsection{Arc-length parametrisation for contours}
@@ -475,21 +498,17 @@ solves to give the system of ODEs
   \tder{\mu}{s} &\defeq \alpha = \frac{\pm Q}{\norm{\del T}},
     \label{eq:contour-ode-arc-length-parametrisation-mu} \\[\fraclinespace]
   \tder{\nu}{s} &\defeq \beta = \frac{\mp P}{\norm{\del T}}
-    \label{eq:contour-ode-arc-length-parametrisation-nu}
+    \label{eq:contour-ode-arc-length-parametrisation-nu},
+\end{align}
+or
+\begin{align}
+  \tder{u}{s} &= \frac{\pm Q}{\scalefac[u] \norm{\del T}},
+    \label{eq:contour-ode-arc-length-parametrisation-u} \\[\fraclinespace]
+  \tder{v}{s} &= \frac{\mp P}{\scalefac[v] \norm{\del T}}
+    \label{eq:contour-ode-arc-length-parametrisation-v},
 \end{align}
 for a $T$-contour.
 If a $\Phi$-contour is instead sought
 (such as for the terminal curve~$\Phi = 0$),
 simply replace~$T$ with~$\Phi$,
 including in the gradient components~$P$ and~$Q$.
-
-\section{Summary}
-\label{sec:curvilinear.summary}
-
-The boundary tracing ODEs derived in this chapter
-are summarised here for convenient future reference.
-The abbreviatory~$\td \mu$ and~$\td \nu$
-of Section~\ref{sec:curvilinear.tracing},
-having served their purpose,
-are eliminated in favour of the differentials
-of the actual coordinates~$u$ and~$v$:
