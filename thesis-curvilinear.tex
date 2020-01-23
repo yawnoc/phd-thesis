@@ -20,15 +20,15 @@ Let~$(\basisvec{x}, \basisvec{y})$ be the standard basis vectors
 of the usual Cartesian coordinates~$(x, y)$.
 The \emph{position vector} is
 \begin{equation}
-  \vec{r} \defeq x \basisvec{x} + y \basisvec{y},
+  \positionvec \defeq x \basisvec{x} + y \basisvec{y},
   \label{eq:position-vector-cartesian}
 \end{equation}
 and since $\basisvec{x}$ and~$\basisvec{y}$ are globally constant,
 observe that
 \begin{align}
-  \basisvec{x} &= \pder{\vec{r}}{x},
+  \basisvec{x} &= \pder{\positionvec}{x},
     \label{eq:x-basis-vector} \\[\fraclinespace]
-  \basisvec{y} &= \pder{\vec{r}}{y}.
+  \basisvec{y} &= \pder{\positionvec}{y}.
     \label{eq:y-basis-vector}
 \end{align}
 Now consider the \emph{curvilinear coordinates}~$(u, v)$
@@ -42,11 +42,11 @@ arises from the derivatives of position
 in analogy to~(\ref{eq:x-basis-vector}) and~(\ref{eq:y-basis-vector}),
 \begin{align}
   \localvec{u} &
-    \defeq \pder{\vec{r}}{u}
+    \defeq \pder{\positionvec}{u}
     = \pder{x}{u} \basisvec{x} + \pder{y}{u} \basisvec{y},
       \label{eq:u-local-basis-vector} \\[\fraclinespace]
   \localvec{v} &
-    \defeq \pder{\vec{r}}{v}
+    \defeq \pder{\positionvec}{v}
     = \pder{x}{v} \basisvec{x} + \pder{y}{v} \basisvec{y}.
       \label{eq:v-local-basis-vector}
 \end{align}
@@ -101,8 +101,10 @@ aligned with the local orthonormal basis,
 and, with sides of length~$\scalefac[u] \td u$ and~$\scalefac[v] \td v$.
 Indeed the \emph{differential displacement} is
 \begin{align*}
-  \td \vec{r}
-  &\defeq \pder{\vec{r}}{u} \td u + \pder{\vec{r}}{v} \td v \\[\fraclinespace]
+  \td \positionvec
+  &\defeq
+    \pder{\positionvec}{u} \td u + \pder{\positionvec}{v} \td v
+    \\[\fraclinespace]
   &= \localvec{u} \td u + \localvec{v} \td v \\
   &= \scalefac[u] \td u \basisvec{u} + \scalefac[v] \td v \basisvec{v}.
     \yesnumber
@@ -137,7 +139,7 @@ By the definition of gradient,
 and using~(\ref{eq:differential-displacement}),
 \begin{align*}
   \td T
-  &\defeq \del T \dotp \td \vec{r} \\
+  &\defeq \del T \dotp \td \positionvec \\
   &=
     \del T
       \dotp
@@ -246,7 +248,7 @@ i.e.,
 \end{equation}
 where $\td s$~is the \emph{differential arc length}
 \begin{equation}
-  \td s \defeq \norm{\td \vec{r}} =
+  \td s \defeq \norm{\td \positionvec} =
   \sqrt{
     \roundbr[\big]{\scalefac[u] \td u}^2
       +
@@ -290,7 +292,7 @@ let
 \end{align}
 so that
 \begin{equation}
-  \td \vec{r} = \td \mu \basisvec{u} + \td \nu \basisvec{v}
+  \td \positionvec = \td \mu \basisvec{u} + \td \nu \basisvec{v}
   \label{eq:differential-displacement-abbreviated}
 \end{equation}
 and
@@ -477,7 +479,7 @@ Suppose a $T$-contour is to be parametrised by arc length,
 i.e.~$u = u (s)$, $v = v(s)$.
 By definition, there holds
 \[
-  \td T \defeq \del T \dotp \td \vec{r} = 0
+  \td T \defeq \del T \dotp \td \positionvec = 0
 \]
 along the contour,
 which, using~(\ref{eq:gradient-abbreviated})
