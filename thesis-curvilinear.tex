@@ -166,7 +166,7 @@ it follows that the \emph{gradient} of~$T$ is given by
 \label{sec:curvilinear.calculus.divergence}
 
 Consider a vector field~$%
-\vec{F} = \comp{F}{u} \basisvec{u} + \comp{F}{v} \basisvec{v}$,
+\vec{E} = \comp{E}{u} \basisvec{u} + \comp{E}{v} \basisvec{v}$,
 and the infinitesimal rectangle
 of Section~\ref{sec:curvilinear.calculus.displacement},
 whose sides are of length~$\scalefac[u] \td u$ and~$\scalefac[v] \td v$.
@@ -176,27 +176,27 @@ the net flux across the two edges normal to~$\basisvec{u}$
 (which have length~$\scalefac[v] \td v$) is
 \[
   \pder{}{u} \roundbr[\Big]{
-    \comp{F}{u} \cdot \scalefac[v] \td v
+    \comp{E}{u} \cdot \scalefac[v] \td v
   } \cdot \td u,
 \]
 and the net flux across the two edges normal to~$\basisvec{v}$
 (which have length~$\scalefac[u] \td u$) is
 \[
   \pder{}{v} \roundbr[\Big]{
-    \comp{F}{v} \cdot \scalefac[u] \td u
+    \comp{E}{v} \cdot \scalefac[u] \td u
   } \cdot \td v.
 \]
 Summing these results in the flux across the perimeter of the rectangle,
 which, divided by its area,
 the area element~(\ref{eq:differential-area-element}),
-yields the \emph{divergence} of~$\vec{F}$,
+yields the \emph{divergence} of~$\vec{E}$,
 \begin{equation}
-  \del \dotp \vec{F} =
+  \del \dotp \vec{E} =
     \frac{1}{\scalefac[u] \scalefac[v]}
     \squarebr*{
-      \pder{}{u} \roundbr[\Big]{\scalefac[v] \comp{F}{u}}
+      \pder{}{u} \roundbr[\Big]{\scalefac[v] \comp{E}{u}}
         +
-      \pder{}{v} \roundbr[\Big]{\scalefac[u] \comp{F}{v}}
+      \pder{}{v} \roundbr[\Big]{\scalefac[u] \comp{E}{v}}
     }.
   \label{eq:divergence}
 \end{equation}
@@ -205,7 +205,7 @@ yields the \emph{divergence} of~$\vec{F}$,
 \label{sec:curvilinear.calculus.laplacian}
 
 Composing the divergence~(\ref{eq:divergence})
-and the gradient~(\ref{eq:gradient}) (with~$\vec{F} = \del T$),
+and the gradient~(\ref{eq:gradient}) (with~$\vec{E} = \del T$),
 it follows that the \emph{Laplacian} of~$T$ is given by
 \begin{equation}
   \del^2 T \defeq \del \dotp \del T =
