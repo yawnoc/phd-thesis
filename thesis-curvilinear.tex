@@ -348,9 +348,13 @@ is rewritten as an ODE (or system of ODEs) for the traced boundaries.
 
 For brevity, define the \emph{viability function}
 \begin{important}{equation}
-  \Phi \defeq (\del T)^2 - F^2.
+  \Phi \defeq (\del T)^2 - F^2,
   \label{eq:viability-function}
 \end{important}
+where it is recalled that $T$~is a known solution
+to the PDE under consideration
+and $F$~is the prescribed flux function
+on the right hand side of~(\ref{eq:flux-boundary-condition}).
 Note that
 the viable domain is the region~$\Phi \ge 0$,
 the non-viable domain~$\Phi < 0$,
