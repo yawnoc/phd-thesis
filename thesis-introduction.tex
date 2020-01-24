@@ -89,30 +89,33 @@ leading to far more new and interesting domain shapes
 than expected~\cite{anderson-2007-boundary-tracing-ii-applications}.
 
 The flux condition~(\ref{eq:flux-boundary-condition})
-is best understood as geometric constraint:
+is best understood as a geometric constraint:
 at any point~$(x, y)$ in the domain of~$T$,
-it determines the possible local orientations
-of the normal~$\normalvec$ to the sought-after traced boundaries
-which pass therethrough.
+it determines the possible local orientations for~$\normalvec$,
+and therefore, the possible local orientations
+of the sought-after traced boundaries
+(which have normal~$\normalvec$).
 With $\theta$ denoting the angle between~$\normalvec$ and~$\del T$,
 the boundary condition~(\ref{eq:flux-boundary-condition}) may be rewritten as
 \begin{equation}
   \cos\theta = \frac{F}{\norm{\del T}},
   \label{eq:flux-boundary-condition-cosine}
 \end{equation}
-whence there are three cases
-for the number of possible local orientations for~$\normalvec$,
-and hence, for the traced boundaries:
+and there are three cases at any given point:
 \begin{enumerate}
   \item
     If~$\norm{\del T} > \abs{F}$,
-    equation~(\ref{eq:flux-boundary-condition-cosine})
-    has two (distinct) solutions in~$\theta$,
-    one acute and one obtuse,
-    corresponding to two possible local orientations for traced boundaries.
+    then~(\ref{eq:flux-boundary-condition-cosine})
+    has a conjugate pair of solutions in~$\theta$,
+    and there are two choices for~$\normalvec$,
+    symmetric about~$\del T$,
+    corresponding to two possible local orientations
+    for the traced boundaries,
+    which cross the local $T$-contour at an angle.
   \item
     If~$\norm{\del T} = \abs{F}$,
-    either~$\theta = 0$ or~$\theta = \pi$,
+    then $\normalvec$~is either parallel~($\theta = 0$)
+    or antiparallel~($\theta = \pi$) to~$\del T$,
     corresponding to traced boundaries which are tangential
     to the local $T$-contour.
   \item
@@ -120,7 +123,7 @@ and hence, for the traced boundaries:
     then the right hand side of~(\ref{eq:flux-boundary-condition-cosine})
     exceeds unity in magnitude,
     and there are no solutions in~$\theta$,
-    i.e.~traced boundaries are not possible at that point.
+    i.e.~traced boundaries do not exist.
 \end{enumerate}
 With these observations in mind,
 the domain of the known solution~$T$
