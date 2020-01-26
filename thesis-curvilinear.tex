@@ -344,27 +344,28 @@ Note that
   \alpha^2 + \beta^2 &= 1. \label{eq:tangent-pythagoras}
 \end{align}
 
-\section{Boundary tracing equations}
+\section{Boundary tracing ODE}
 \label{sec:curvilinear.tracing}
 
-In this section the boundary tracing equations are derived,
-i.e.~the flux boundary condition~(\ref{eq:flux-boundary-condition})
-is rewritten as a first-order ODE (or system of ODEs)
-for the traced boundaries.
+With the workings of orthogonal curvilinear coordinates now established,
+I derive in this section
+the boundary tracing ODE for coordinate parametrisation,
+along with the corresponding system of ODEs for arc-length parametrisation.
+Recall that the sought-after traced boundaries are to satisfy
+the boundary condition~(\ref{eq:flux-boundary-condition}),
+in which $T$~is the chosen known solution (to the PDE under consideration)
+and $F$~is the prescribed flux function.
 
-For brevity, define the \emph{viability function}
+It is convenient to define the \emph{viability function}
 \begin{important}{equation}
-  \Phi \defeq (\del T)^2 - F^2,
+  \Phi \defeq (\del T)^2 - F^2.
   \label{eq:viability-function}
 \end{important}
-where it is recalled that $T$~is a known solution
-to the PDE under consideration
-and $F$~is the prescribed flux function
-on the right hand side of~(\ref{eq:flux-boundary-condition}).
-Note that
+This is not only algebriacally useful,
+but also physically meaningful;
 the viable domain is the region~$\Phi \ge 0$,
-the non-viable domain~$\Phi < 0$,
-and the terminal curve~$\Phi = 0$.
+the non-viable domain, $\Phi < 0$,
+and the terminal curve, $\Phi = 0$.
 
 \subsection{Coordinate parametrisation}
 \label{sec:curvilinear.tracing.coordinate}
