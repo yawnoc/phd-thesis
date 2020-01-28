@@ -6,12 +6,24 @@ recasting the flux boundary condition~(\ref{eq:flux-boundary-condition})
 as a first-order ODE (or system of ODEs) for the traced boundaries.
 In practice, the appropriate coordinate system and parametrisation
 will depend on the geometry of the specific problem at hand.
+
+Whilst Anderson~\etal~\cite{%
+  anderson-2007-boundary-tracing-i-theory,%
+  anderson-2007-boundary-tracing-ii-applications%
+}
+did not restrict themselves to Cartesian coordinates in analytical work,
+the boundary tracing ODE was separately derived
+for each new coordinate system encountered;
+no generalised version was given.
+As for numerical boundary tracing using arc-length parametrisation,
+Anderson~\cite{anderson-2002-thesis-boundary-tracing-pdes}
+only considered Cartesian coordinates.
+
 In preparation for the various coordinate systems
 which will be used in this thesis,
 I derive in this chapter the boundary tracing ODE
-as applicable to any orthogonal curvilinear coordinate system,
-along with the corresponding system of ODEs
-under arc-length parametrisation.
+and the corresponding system of ODEs for arc-length parametrisation,
+with both applicable in any orthogonal curvilinear coordinate system.
 
 \section{Orthogonal curvilinear coordinates in 2D}
 \label{sec:curvilinear.orthogonal}
