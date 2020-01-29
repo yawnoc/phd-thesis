@@ -466,23 +466,25 @@ the boundary condition~(\ref{eq:flux-boundary-condition}) becomes
   F,
 \]
 which, along with the unit-speed condition~(\ref{eq:tangent-pythagoras}),
-forms the system
+forms the system%
+\footnote{
+  This system is also given
+  in Anderson's thesis~\cite{anderson-2002-thesis-boundary-tracing-pdes},
+  but only in Cartesian coordinates.
+  Moreover, Anderson passes the system directly to a numerical integrator
+  without first solving for~$\alpha$ and~$\beta$,
+  so that at every step of the integration,
+  a numerical comparison with the previous root
+  is required to select the correct root among the two possible.
+  This ought not be done,
+  given that the two branches may be separated analytically.
+}
 \begin{align}
   P \beta - Q \alpha &= F,
     \label{eq:tracing-arc-length-parametrisation-flux-boundary-condition} \\
   \alpha^2 + \beta^2 &= 1.
     \label{eq:tracing-arc-length-parametrisation-unit-speed}
 \end{align}
-This system is also given
-in Anderson's thesis~\cite{anderson-2002-thesis-boundary-tracing-pdes},
-but only in Cartesian coordinates.
-Moreover, Anderson passes the system directly to a numerical integrator,
-so that at every step of the integration,
-a numerical comparison with the previous root
-is required to select the correct root among the two possible.
-
-A better approach is to separate the two branches analytically
-before any numerical work.
 Solving~(\ref{eq:tracing-arc-length-parametrisation-flux-boundary-condition})
 and~(\ref{eq:tracing-arc-length-parametrisation-unit-speed})
 for~$\alpha$ and~$\beta$, one obtains
