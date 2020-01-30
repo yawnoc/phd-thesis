@@ -263,6 +263,32 @@ with $\conduc$~being the conductivity of the object,
 $\emiss$~the emissivity of its surface
 and $\stefan$~the \stefanboltz{} constant.
 
+This boundary value problem is not straightforward
+due to the nonlinearity of
+the radiation condition~(\ref{eq:radiation-boundary-condition}).
+The usual treatment in the literature has been to consider thin geometries
+for which the problem is effectively one-dimensional,
+so that conduction~(\ref{eq:laplace-steady-conduction})
+and radiation~(\ref{eq:radiation-boundary-condition})
+may be lumped into a single ODE of the form
+\begin{equation}
+  \textq{derivatives of~$T$} - c T^4 = 0,
+  \label{eq:conduction-radiation-lumped}
+\end{equation}
+both in analytical investigations
+and in numerical work.
+While such a simplification is a most appropriate choice
+for the study of thin, heat-rejecting fins on spacecraft
+(where weight minimisation and thinness are desirable),
+it has arguably also been a necessity
+for making the BVP~(\ref{eq:laplace-steady-conduction})
+and~(\ref{eq:radiation-boundary-condition}) tractable;
+I have not yet come across any treatment of thermal radiation
+in which the nonlinear term appears as a proper boundary term
+in a flux condition such as~(\ref{eq:radiation-boundary-condition}),
+rather than as a volumetric term in an ODE or PDE
+of the form~(\ref{eq:conduction-radiation-lumped}).
+
 \section{Capillary wedges}
 
 \section{Thesis overview}
