@@ -232,6 +232,28 @@ to do the subsequent integration,
 the underlying theory is exact.
 
 \section{Thermal radiation}
+\label{sec:introduction.radiation}
+
+In outer space,
+thermal radiation is the primary means of disposing of waste heat.
+An archetypal steady-state problem consists of
+determining the temperature profile~$T$ of a conducting object~$\Omega$,
+with heat generated internally or towards one end
+and expelled into vacuum via radiation from its surface.
+
+Assuming that the object is homogeneous and isotropic,
+the steady conduction within~$\Omega$
+is simply described by Laplace's equation
+\begin{equation}
+  \del^2 T = 0,
+  \label{eq:laplace-steady-conduction}
+\end{equation}
+but on the portion of its surface~$\pd \Omega$ where radiation occurs,
+the \stefanboltz{} law implies that
+\begin{equation}
+  \normalvec \dotp \del T = - c T^4,
+  \label{eq:radiation-boundary-condition}
+\end{equation}
 
 \section{Capillary wedges}
 
