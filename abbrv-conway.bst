@@ -1,8 +1,6 @@
-% Renamed from abbrv.bst to abbrv-conway.bst
-% with modification so that phdthesis prints
-%   "Ph.D. thesis"
-% instead of
-%   "PhD thesis".
+% Renamed from abbrv.bst to abbrv-conway.bst, with these modifications:
+%   1. phdthesis prints "Ph.D. thesis" instead of "PhD thesis".
+%   2. Non-breaking space inserted between colon and page range.
 % ABSOLUTELY NO WARRANTY
 
 % BibTeX standard bibliography style `abbrv'
@@ -397,7 +395,7 @@ FUNCTION {format.vol.num.pages}
     'skip$
     { duplicate$ empty$
         { pop$ format.pages }
-        { ":" * pages n.dashify * }
+        { ":~" * pages n.dashify * }
       if$
     }
   if$
