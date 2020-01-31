@@ -1,6 +1,9 @@
 % Renamed from abbrv.bst to abbrv-conway.bst, with these modifications:
 %   1. phdthesis prints "Ph.D. thesis" instead of "PhD thesis".
 %   2. Non-breaking space inserted between colon and page range.
+%   3. Created new entry type, technote, based on techreport, but printing
+%      "Technical Note" instead of "Technical Report", and with title styled
+%      as a book title (i.e. italicised).
 % ABSOLUTELY NO WARRANTY
 
 % BibTeX standard bibliography style `abbrv'
@@ -447,6 +450,17 @@ FUNCTION {format.thesis.type}
   if$
 }
 
+FUNCTION {format.tn.number}
+{ type empty$
+    { "Technical Note" }
+    'type
+  if$
+  number empty$
+    { "t" change.case$ }
+    { number tie.or.space.connect }
+  if$
+}
+
 FUNCTION {format.tr.number}
 { type empty$
     { "Technical Report" }
@@ -810,6 +824,21 @@ FUNCTION {proceedings}
       publisher output
     }
   if$
+  new.block
+  note output
+  fin.entry
+}
+
+FUNCTION {technote}
+{ output.bibitem
+  format.authors "author" output.check
+  new.block
+  format.btitle "title" output.check
+  new.block
+  format.tn.number output.nonnull
+  institution "institution" output.check
+  address output
+  format.date "year" output.check
   new.block
   note output
   fin.entry
