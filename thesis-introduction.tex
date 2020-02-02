@@ -291,7 +291,7 @@ Lieblein~\cite{lieblein-1959-radiant-fin-constant-thickness},
 Bartas \&~Sellers~\cite{bartas-1960-radiation-fin-effectiveness},
 and
 Keller \&~Holdredge~\cite{keller-1970-radiation-annular-fins-trapezoidal}.
-While such a simplification is a most appropriate choice
+While such a simplification is an appropriate choice
 for the study of thin, heat-rejecting fins on spacecraft
 (where weight minimisation and thinness are desirable),
 it has arguably been a necessity
@@ -303,6 +303,17 @@ in which the nonlinearity appears as a proper boundary term
 in the flux condition~(\ref{eq:radiation-boundary-condition}),
 rather than as a volumetric term in an ODE
 of the form~(\ref{eq:conduction-radiation-lumped}).
+
+Given the relative abundance of known solutions
+to Laplace's equation~(\ref{eq:laplace-steady-conduction}),
+and the limited amount of progress which can be made
+using conventional techniques
+for the nonlinear boundary condition~(\ref{eq:radiation-boundary-condition}),
+boundary tracing is a most suitable method
+for tackling the BVP~(\ref{eq:laplace-steady-conduction})
+and~(\ref{eq:radiation-boundary-condition}),
+being an analytical approach
+which does not require reducing the problem to one dimension.
 
 \section{Capillary wedges}
 
