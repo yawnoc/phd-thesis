@@ -28,6 +28,44 @@ the temperature~$T$ is to be reckoned on an absolute scale;
 therefore, the region~$x < 0$ is unphysical and to be ignored,
 as the temperature therein is negative.
 
+\subsection{Scaling}
+\label{sec:cartesian.slab.scaling}
+
+While the known solution~(\ref{eq:laplace-solution-slab}) is, by itself,
+scale-invariant with respect to both temperature and length,
+its coupling with
+the radiation boundary condition~(\ref{eq:radiation-boundary-condition})
+will lead to a characteristic temperature scale~$\tau$
+and length scale~$\lambda$.
+
+Defining
+\begin{align}
+  \scaled{T} = T / \tau, \label{eq:slab-scaled-temperature} \\
+  \scaled{x} = x / \lambda, \label{eq:slab-scaled-x} \\
+  \scaled{y} = y / \lambda, \label{eq:slab-scaled-y}
+\end{align}
+and noting that
+\begin{equation}
+  \scaleddel = \lambda \del,
+  \label{eq:slab-scaled-del}
+\end{equation}
+the radiation boundary condition~(\ref{eq:radiation-boundary-condition})
+and the known solution~(\ref{eq:laplace-solution-slab})
+become
+\begin{align}
+  \normalvec \dotp \scaleddel \scaled{T}
+    &= -\squarebr*{c \lambda \tau^3} \scaled{T}^4, \\
+  \scaled{T}
+    &= \squarebr*{\frac{h_0 \lambda}{\tau}} \scaled{x}.
+\end{align}
+The two dimensionless groups are eliminated by choosing the scales
+\begin{align}
+  \tau &= \roundbr*{\frac{h_0}{c}}^{1/4},
+    \label{eq:slab-temperature-scale} \\
+  \lambda &= \roundbr*{\frac{1}{c {h_0}^3}}^{1/4}.
+    \label{eq:slab-length-scale}
+\end{align}
+
 \section{Others}
 
 \tbd. Both of the following if time permits:
