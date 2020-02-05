@@ -54,9 +54,11 @@ and the known solution~(\ref{eq:laplace-solution-slab})
 become
 \begin{align}
   \normalvec \dotp \scaleddel \scaled{T}
-    &= -\squarebr*{c \lambda \tau^3} \scaled{T}^4, \\
+    &= -\squarebr*{c \lambda \tau^3} \scaled{T}^4,
+    \label{eq:radiation-boundary-condition-slab-scaled-with-groups} \\
   \scaled{T}
     &= \squarebr*{\frac{h_0 \lambda}{\tau}} \scaled{x}.
+    \label{eq:laplace-solution-slab-scaled-with-groups}
 \end{align}
 Setting the two dimensionless groups to unity
 results in the temperature and length scales
@@ -77,6 +79,28 @@ is $h_0$~everywhere,
 there must hold~$h_0 = c T^4$ along this boundary,
 and the scales~(\ref{eq:slab-temperature-scale})
 and~(\ref{eq:slab-length-scale}) follow immediately.
+
+Of course the straight-line boundary~$x = \lambda$
+(or equivalently, $\scaled{x} = 1$)
+is rather boring,
+and it is through boundary tracing
+that more interesting boundaries may be generated,
+as will be shown in the next section.
+
+\subsection{Boundary tracing}
+\label{sec:cartesian.slab.tracing}
+
+For brevity, drop all \scalingaccents,
+so that the scaled boundary condition~%
+  (\ref{eq:radiation-boundary-condition-slab-scaled-with-groups})
+and known solution~(\ref{eq:laplace-solution-slab-scaled-with-groups})
+become
+\begin{align}
+  \normalvec \dotp \del T &= -T^4,
+    \label{eq:radiation-boundary-condition-slab-scaled} \\
+  T &= x.
+    \label{eq:laplace-solution-slab-scaled}
+\end{align}
 
 \section{Others}
 
