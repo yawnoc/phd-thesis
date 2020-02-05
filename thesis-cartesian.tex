@@ -19,7 +19,7 @@ to Laplace's equation~(\ref{eq:laplace-steady-conduction})
 is
 \begin{equation}
   T = h_0 x,
-  \label{eq:laplace-solution-slab}
+  \label{eq:slab-laplace-solution}
 \end{equation}
 corresponding to one-dimensional steady conduction
 with constant temperature gradient~$h_0$.
@@ -31,7 +31,7 @@ as the temperature therein is negative.
 \subsection{Scaling}
 \label{sec:cartesian.slab.scaling}
 
-While the known solution~(\ref{eq:laplace-solution-slab}) is, by itself,
+While the known solution~(\ref{eq:slab-laplace-solution}) is, by itself,
 scale-invariant with respect to both temperature and length,
 its coupling with
 the radiation boundary condition~(\ref{eq:radiation-boundary-condition})
@@ -50,15 +50,15 @@ and noting that
   \label{eq:slab-scaled-del}
 \end{equation}
 the radiation boundary condition~(\ref{eq:radiation-boundary-condition})
-and the known solution~(\ref{eq:laplace-solution-slab})
+and the known solution~(\ref{eq:slab-laplace-solution})
 become
 \begin{align}
   \normalvec \dotp \scaleddel \scaled{T}
     &= -\squarebr*{c \lambda \tau^3} \scaled{T}^4,
-    \label{eq:radiation-boundary-condition-slab-scaled-with-groups} \\
+    \label{eq:slab-scaled-radiation-boundary-condition-with-groups} \\
   \scaled{T}
     &= \squarebr*{\frac{h_0 \lambda}{\tau}} \scaled{x}.
-    \label{eq:laplace-solution-slab-scaled-with-groups}
+    \label{eq:slab-scaled-laplace-solution-with-groups}
 \end{align}
 Setting the two dimensionless groups to unity
 results in the temperature and length scales
@@ -74,7 +74,7 @@ and its corresponding temperature~$T = \const$
 along which the radiation condition~(\ref{eq:radiation-boundary-condition})
 is satisfied.
 Since the temperature gradient
-for the known solution~(\ref{eq:laplace-solution-slab})
+for the known solution~(\ref{eq:slab-laplace-solution})
 is $h_0$~everywhere,
 there must hold~$h_0 = c T^4$ along this boundary,
 and the scales~(\ref{eq:slab-temperature-scale})
@@ -92,14 +92,14 @@ as will be shown in the next section.
 
 For brevity, drop all \scalingaccents,
 so that the scaled boundary condition~%
-  (\ref{eq:radiation-boundary-condition-slab-scaled-with-groups})
-and known solution~(\ref{eq:laplace-solution-slab-scaled-with-groups})
+  (\ref{eq:slab-scaled-radiation-boundary-condition-with-groups})
+and known solution~(\ref{eq:slab-scaled-laplace-solution-with-groups})
 become
 \begin{align}
   \normalvec \dotp \del T &= -T^4,
-    \label{eq:radiation-boundary-condition-slab-scaled} \\
+    \label{eq:slab-scaled-radiation-boundary-condition} \\
   T &= x.
-    \label{eq:laplace-solution-slab-scaled}
+    \label{eq:slab-scaled-laplace-solution}
 \end{align}
 
 \section{Others}
