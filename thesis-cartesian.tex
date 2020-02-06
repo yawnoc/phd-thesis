@@ -116,6 +116,31 @@ from Section~\ref{sec:curvilinear.calculus.abbreviations}:
   Q &= \pder{T}{y} = 0.
     \label{eq:slab-gradient-v-component}
 \end{align}
+Comparing the radiation boundary condition~%
+  (\ref{eq:slab-scaled-radiation-boundary-condition})
+to the generic one~(\ref{eq:flux-boundary-condition}),
+the flux function is
+\begin{align*}
+  F
+  &= - T^4 \\
+  &= -x^4,
+    \yesnumber
+    \label{eq:slab-flux-function}
+\end{align*}
+and it follows that the viability function is
+\begin{align*}
+  \Phi
+  &= (\del T)^2 - F^2 \\
+  &= 1 - x^8.
+    \yesnumber
+    \label{eq:slab-viability-function}
+\end{align*}
+The viable domain~$\Phi \ge 0$ (excluding the unphysical region~$x < 0$)
+is therefore given by
+\begin{equation}
+  0 \le x \le 1.
+  \label{eq:slab-viable-domain}
+\end{equation}
 
 \section{Others}
 
