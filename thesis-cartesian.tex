@@ -141,6 +141,30 @@ is therefore given by the infinite strip
   0 \le x \le 1.
   \label{eq:slab-viable-domain}
 \end{equation}
+The terminal curve~$\Phi = 0$ is also the $T$-contour~$x = 1$
+(the boring traced boundary
+mentioned in Section~\ref{sec:cartesian.slab.scaling}).
+Using the terminology of Section~\ref{sec:introduction.tracing},
+$x = 1$~is a critical terminal curve,
+and other traced boundaries will attach to it smoothly.
+
+The boundary tracing ODE~(\ref{eq:tracing-ode-coordinate-parametrisation-v})
+becomes
+\begin{important}{equation}
+  \tder{y}{x} = \mp \frac{x^4}{\sqrt{1 - x^8}},
+  \label{eq:slab-tracing-ode-coordinate-parametrisation-y}
+\end{important}
+which integrates to give traced boundaries of the form
+\begin{important}{equation}
+  y =
+  \const
+    \mp
+  \frac{x^5}{5}
+    \cdot
+  \hypergeo \roundbr*{\frac{1}{2}, \frac{5}{8}; \frac{13}{8}; x^8},
+\end{important}
+where $\hypergeo$~is the hypergeometric function
+(see~\tbd).
 
 \section{Others}
 
