@@ -173,6 +173,33 @@ a local analysis near~$x = 1$ reveals the asymptotic relationship
   y = \const \pm \sqrt{\frac{1 - x}{2}} + \order (1 - x)^{3/2}.
   \label{eq:slab-traced-boundary-x-near-1}
 \end{equation}
+Near~$x = 0$ there holds
+\begin{equation}
+  y = \const \mp \frac{x^5}{5} + \order \roundbr*{x^{13}},
+  \label{eq:slab-traced-boundary-x-near-0}
+\end{equation}
+and for each choice of integration constant
+the corresponding pair of traced boundaries
+will form a very thin spike (Figure~\tbd),
+with half-width
+\begin{equation}
+  \frac{1}{5}
+    \cdot
+  \hypergeo \roundbr*{\frac{1}{2}, \frac{5}{8}; \frac{13}{8}; 1}
+  = \frac{\sqrt{\pi} \gamm (13/8)}{5 \gamm (9/8)}
+  = 0.3375.
+  \label{eq:slab-traced-boundary-spike-half-width}
+\end{equation}
+By piecing together several of these spikes at various separation distances,
+a broad variety of boundaries may be produced;
+some examples are shown in Figure~\tbd.
+Moreover, each and every one of these boundaries marks out a domain
+admitting the same exact solution~(\ref{eq:slab-laplace-solution}),
+to the BVP consisting of steady conduction in the interior,
+fixed temperature~$T = T_\bath$ along the vertical line~$x = x_\bath$
+with~$T_\bath = x_\bath$,
+and thermal radiation~(\ref{eq:slab-scaled-radiation-boundary-condition})
+into vacuum along the remainder of the boundary.
 
 \section{Others}
 
