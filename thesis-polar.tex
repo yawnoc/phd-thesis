@@ -117,3 +117,40 @@ become
   T &= -\log r.
     \label{eq:line-scaled-laplace-solution}
 \end{important}
+
+\section{Viable domain}
+\label{sec:polar.viable}
+
+Comparing the radiation condition~%
+  (\ref{eq:line-scaled-radiation-boundary-condition})
+to the generic flux condition~(\ref{eq:flux-boundary-condition}),
+it follows that the flux function is
+\begin{align*}
+  F
+  &= -\frac{T^4}{A} \\[\fraclinespace]
+  &= -\frac{\log^4 r}{A}.
+    \yesnumber
+    \label{eq:line-flux-function}
+\end{align*}
+The radial and azimuthal components of the gradient~$\del T$ are
+\begin{align}
+  P &= \pder{T}{r} = -\frac{1}{r},
+    \label{eq:line-gradient-u-component} \\[\fraclinespace]
+  Q &= \frac{\pd T}{r \pd\phi} = 0,
+    \label{eq:line-gradient-v-component}
+\end{align}
+and so the viability function is given by
+\begin{align*}
+  \Phi
+  &= (\del T)^2 - F^2 \\[\fraclinespace]
+  &= \frac{1}{r^2} - \frac{\log^8 r}{A^2} \\[\fraclinespace]
+  &= \frac{A^2 - r^2 \log^8 r}{A^2 r^2} \\[\fraclinespace]
+  &= \frac{A^2 - \psi^2}{A^2 r^2},
+    \yesnumber
+    \label{eq:line-viability-function}
+\end{align*}
+where $\psi$~is the auxiliary function
+\begin{equation}
+  \psi \defeq r \log^4 r.
+  \label{eq:line-auxiliary-function}
+\end{equation}
