@@ -57,3 +57,63 @@ and the local orthonormal basis vectors,
   \basisvec{\phi} &= -\sin\phi \basisvec{x} + \cos\phi \basisvec{y}.
     \label{eq:phi-basis-vector}
 \end{align}
+
+\section{Scaling}
+\label{sec:polar.scaling}
+
+While the known solution~(\ref{eq:line-laplace-solution})
+already has intrinsic temperature and length scales $T_0$ and~$r_0$,
+the final scaling should also account for
+the radiation boundary condition~(\ref{eq:radiation-boundary-condition}).
+
+Let
+\begin{align}
+  \scaled{T} &= T / \tau, \label{eq:line-scaled-temperature} \\
+  \scaled{r} &= r / \varrho, \label{eq:line-scaled-r}
+\end{align}
+with~$\tau$ and~$\varrho$ to be chosen later.
+Noting that
+\begin{equation}
+  \scaleddel = \varrho \del,
+  \label{eq:line-scaled-del}
+\end{equation}
+the radiation boundary condition~(\ref{eq:radiation-boundary-condition})
+and the known solution~(\ref{eq:line-laplace-solution})
+become
+\begin{align}
+  \normalvec \dotp \scaleddel \scaled{T}
+    &= -\squarebr*{c \varrho \tau^3} \scaled{T}^4,
+    \label{eq:line-scaled-radiation-boundary-condition-with-groups}
+    \\[\fraclinespace]
+  \scaled{T}
+    &=
+      \squarebr*{\frac{T_0}{\tau}}
+      \log \roundbr*{\frac{\squarebr{r_0 / \varrho}}{\scaled{r}}}.
+    \label{eq:line-scaled-laplace-solution-with-groups}
+\end{align}
+There are three dimensionless groups
+but only two free scales~$\tau$ and~$\varrho$,
+so one of the groups cannot be eliminated.
+To keep the logarithmic as simple as possible,
+put
+\begin{align}
+  \tau &= T_0,
+    \label{eq:line-temperature-scale} \\
+  \varrho &= r_0,
+    \label{eq:line-length-scale}
+\end{align}
+and define the dimensionless group
+\begin{equation}
+  A = \frac{1}{c r_0 {T_0}^3}.
+  \label{eq:line-dimensionless-group}
+\end{equation}
+Dropping \scalingaccents, the scaled boundary condition~%
+  (\ref{eq:line-scaled-radiation-boundary-condition-with-groups})
+and known solution~(\ref{eq:line-scaled-laplace-solution-with-groups})
+become
+\begin{important}{align}
+  \normalvec \dotp \del T &= -\frac{T^4}{A},
+    \label{eq:line-scaled-radiation-boundary-condition} \\[\fraclinespace]
+  T &= -\log r.
+    \label{eq:line-scaled-laplace-solution}
+\end{important}
