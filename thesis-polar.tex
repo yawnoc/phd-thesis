@@ -5,3 +5,19 @@ In this chapter, I apply boundary tracing to the thermal radiation problem,
 using the fundamental line source solution
 as the known solution to
 Laplace's equation~(\ref{eq:laplace-steady-conduction}).
+
+\section{Line source solution}
+\label{sec:polar.line}
+
+Consider the line source solution
+to Laplace's equation~(\ref{eq:laplace-steady-conduction}),
+which is logarithmic in the cylindrical radius~$r = \sqrt{x^2 + y^2}$.
+In the context of steady conduction,
+the only dimensionally consistent form for this is
+\begin{important}{equation}
+  T = T_0 \log \frac{r_0}{r}
+  \label{eq:line-laplace-solution}
+\end{important}
+for some temperature~$T_0$ and radius~$r_0$.
+Note that the region~$r > r_0$ is unphysical,
+since~$T < 0$ therein.
