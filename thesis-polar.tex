@@ -173,16 +173,55 @@ changes sign from positive to negative
 as $r$~increases through~$\ee^{-4}$,
 it follows that $\psi$~has a single maximum on~$0 \le r \le 1$ at
 \begin{equation}
-  r = r_\natural \defeq \ee^{-4} = 0.01832,
+  r = r_\nat \defeq \ee^{-4} = 0.01832,
   \label{eq:line-r-natural}
 \end{equation}
 where it takes the maximal value
 \begin{equation}
   \psi
-  = A_\natural
-  \defeq \psi (r_\natural)
-  = \roundbr*{\frac{4}{\ee}}^4
+  = A_\nat
+  \defeq \psi (r_\nat)
+  = (4 / \ee)^4
   = 4.6888.
   \label{eq:line-a-natural}
 \end{equation}
 This is shown in Figure~\tbd.
+
+\subsection{Three regimes}
+\label{sec:polar.viable.regimes}
+
+The topology of the viable domain~$\psi (r) \le A$ will depend
+on whether the dimensionless group~$A$ is
+greater than, equal to or less than
+the critical value~(\ref{eq:line-a-natural}),
+as this decides the number of roots of the equation~$\psi (r) = A$:
+\begin{enumerate}
+  \item
+    \emph{Cold regime}, $A > A_\nat$ (Figure~\tbd):
+    $\psi (r)$~is never equal to~$A$.
+    The entire space~$0 \le r \le 1$ is viable,
+    and there is no terminal curve.
+  \item
+    \emph{Transition}, $A = A_\nat$ (Figure~\tbd):
+    $\psi (r)$~is equal to~$A$ at~$r = r_\nat$ only.
+    The entire space is still viable,
+    but now the terminal curve~$r = r_\nat$ has appeared.
+    The terminal curve~$r = r_\nat$ is in fact a critical terminal curve,
+    since it is a contour of the known solution~%
+      (\ref{eq:line-scaled-laplace-solution}).
+  \item
+    \emph{Hot regime}, $A < A_\nat$ (Figure~\tbd):
+    $\psi (r)$~is equal to~$A$ at~$r = r_\flat$
+    and at~$r = r_\sharp$,
+    both dependent on~$A$,
+    with~$0 <  r_\flat < r_\nat < r_\sharp < 1$.
+    The critical terminal curve now consists of
+    the two circles~$r = r_\flat$ and~$r = r_\sharp$.
+    A non-viable moat~$r_\flat < r < r_\sharp$
+    separates an inner viable island~$0 \le r \le r_\flat$
+    from an outer viable mainland~$r \ge r_\sharp$.
+\end{enumerate}
+Figure~\tbd{}
+shows the regimes displayed in the style of a bifurcation diagram,
+with state space on the vertical axis
+and the parameter~$A$ on the horizontal axis.
