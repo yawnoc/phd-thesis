@@ -246,3 +246,28 @@ so that the traced boundaries are given by
 \end{important}
 This integral is not elementary,
 and the traced boundaries must be determined numerically.
+
+At this point one should keep in mind the end goal,
+which is to construct interesting domains
+for which the radiation condition~%
+  (\ref{eq:line-scaled-radiation-boundary-condition})
+is satisfied along the boundary,
+given steady conduction of the form~(\ref{eq:line-scaled-laplace-solution}).
+Since the nature of the line-source singularity at~$r = 0$
+is to supply heat radially at a constant power per length,
+the only sensible configuration is for the domain to
+completely surround the singularity~$r = 0$ without touching it,
+with the power supplied by the singularity balanced
+by that lost along the outer boundary by radiation.
+Therefore, one seeks closed curves~$r = r (\phi)$
+which surround the origin,
+and which are made by patching together the traced boundaries~%
+  (\ref{eq:line-traced-boundary-integral}).
+
+Moreover, it was already seen in Section~\ref{sec:cartesian.slab.tracing}
+that only convex domains are acceptable,
+lest there be self-incident radiation which is not accounted for
+by the simple radiation condition~%
+  (\ref{eq:line-scaled-radiation-boundary-condition}).
+The patching together of traced boundaries to form closed curves
+must therefore be done carefully.
