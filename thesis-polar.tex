@@ -225,3 +225,24 @@ Figure~\tbd{}
 shows the regimes displayed in the style of a bifurcation diagram,
 with state space on the vertical axis
 and the parameter~$A$ on the horizontal axis.
+
+\section{Boundary tracing}
+\label{sec:polar.tracing}
+
+Using~(\ref{eq:r-scale-factor}) and~(\ref{eq:phi-scale-factor})
+(which are unchanged by the scaling)
+along with~(\ref{eq:line-flux-function})
+through~(\ref{eq:line-viability-function}),
+the boundary tracing ODE~(\ref{eq:tracing-ode-coordinate-parametrisation-u})
+becomes
+\begin{important}{equation}
+  \tder{r}{\phi} = \mp \frac{\sqrt{A^2 - \psi^2}}{\log^4 r},
+  \label{eq:line-tracing-ode-coordinate-parametrisation-r}
+\end{important}
+so that the traced boundaries are given by
+\begin{important}{equation}
+  \phi = \mp \int \frac{\log^4 r \td r}{\sqrt{A^2 - \psi^2}}.
+  \label{eq:line-traced-boundary-integral}
+\end{important}
+This integral is not elementary,
+and the traced boundaries must be determined numerically.
