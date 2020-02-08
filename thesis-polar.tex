@@ -271,3 +271,44 @@ by the simple radiation condition~%
   (\ref{eq:line-scaled-radiation-boundary-condition}).
 The patching together of traced boundaries to form closed curves
 must therefore be done carefully.
+
+\subsection{Cold regime}
+\label{sec:polar.tracing.cold}
+
+Since the sought-after closed curve must surround the origin
+and mark out a convex domain,
+it may be parametrised in the form~$r = r (\phi)$,
+a single-valued function.
+Travelling once around the closed curve,
+the azimuthal angle~$\phi$ will run through a full turn,
+so $r (\phi)$~must also be $2 \pi$-periodic.
+
+Now in the cold regime ($A > A_\nat$),
+recall that $\psi (r)$~is always strictly less than~$A$.
+It follows that for the two branches of traced boundaries,
+corresponding to the two choices of sign in the boundary tracing ODE~%
+  (\ref{eq:line-tracing-ode-coordinate-parametrisation-r}),
+the upper branch always has $\td r / \td\phi$~negative,
+and the lower branch always has $\td r / \td\phi$~positive.%
+\footnote{
+  For both of the symbols~$\pm$ and~$\mp$,
+  the terms \emph{upper} and \emph{lower}
+  shall always refer to the choice of sign with that corresponding position.
+}
+For the sought-after closed curve,
+this means that $r (\phi)$~will be strictly decreasing
+along the sections which originate from the upper branch,
+and strictly increasing along the sections from the lower branch.
+
+Since $r (\phi)$~must be periodic,
+the closed curve must therefore consist of both
+upper-branch and lower-branch sections.
+Travelling in the direction of increasing~$\phi$,
+there must eventually be a switching
+from the upper branch to the lower branch,
+and hence a jump discontinuity in~$\td r / \td\phi$
+from negative to positive.
+But this corresponds to a non-convex corner
+(Figure~\tbd),
+so no convex domains can be constructed from traced boundaries
+in the cold regime.
