@@ -283,7 +283,7 @@ Travelling once around the closed curve,
 the azimuthal angle~$\phi$ will run through a full turn,
 so $r (\phi)$~must also be $2 \pi$-periodic.
 
-Now in the cold regime ($A > A_\nat$),
+Now in the cold regime~$A > A_\nat$,
 recall that $\psi (r)$~is always strictly less than~$A$.
 It follows that for the two branches of traced boundaries,
 corresponding to the two choices of sign in the boundary tracing ODE~%
@@ -297,12 +297,12 @@ and the lower branch always has $\td r / \td\phi$~positive.%
 }
 For the sought-after closed curve,
 this means that $r (\phi)$~will be strictly decreasing
-along the sections which originate from the upper branch,
-and strictly increasing along the sections from the lower branch.
+along the portions which originate from the upper branch,
+and strictly increasing along the portions from the lower branch.
 
 Since $r (\phi)$~must be periodic,
 the closed curve must therefore consist of both
-upper-branch and lower-branch sections.
+upper-branch and lower-branch portions.
 Travelling in the direction of increasing~$\phi$,
 there must eventually be a switching
 from the upper branch to the lower branch,
@@ -312,3 +312,23 @@ But this corresponds to a non-convex corner
 (Figure~\tbd),
 so no convex domains can be constructed from traced boundaries
 in the cold regime.
+
+\subsection{Transition}
+\label{sec:polar.tracing.transition}
+
+For the transition case~$A = A_\nat$,
+the two branches of the boundary tracing ODE~%
+  (\ref{eq:line-tracing-ode-coordinate-parametrisation-r})
+are again segregated by the sign of~$\td r / \td\phi$,
+with the exception of the critical terminal curve~$r = r_\nat$,
+itself a traced boundary belonging to both branches,
+along which~$\psi (r) = A$ and~$\td r / \td\phi = 0$.
+
+Any other closed curve made from traced boundaries
+will again consist of portions where $r (\phi)$~is strictly increasing
+and other portions where it is strictly decreasing.
+To avoid the non-convex corner of Section~\ref{sec:polar.tracing.cold},
+any switching from the upper branch to the lower
+must occur along~$r = r_\nat$,
+so that $\td r / \td\phi$~remains zero across the switch
+(thus avoiding the jump from negative to positive).
