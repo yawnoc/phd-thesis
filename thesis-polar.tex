@@ -155,3 +155,34 @@ where $\psi$~is the auxiliary function
   \label{eq:line-auxiliary-function}
 \end{equation}
 The viable domain is therefore the region~$\psi (r) \le A$.
+
+\subsection{Auxiliary function properties}
+\label{sec:polar.viable.psi}
+
+Since the region~$r > 1$ is unphysical
+(corresponding to negative temperature),
+it is only necessary to consider~$0 \le r \le 1$.
+On this interval, $\psi$~is positive
+except at the endpoints~$r = 0$ and~$r = 1$, where it vanishes.
+Observing that the slope
+\begin{equation}
+  \tder{\psi}{r} = (4 + \log r) \log^3 r
+  \label{eq:line-psi-derivative}
+\end{equation}
+changes sign from positive to negative
+as $r$~increases through~$\ee^{-4}$,
+it follows that $\psi$~has a single maximum on~$0 \le r \le 1$ at
+\begin{equation}
+  r = r_\natural \defeq \ee^{-4} = 0.01832,
+  \label{eq:line-r-natural}
+\end{equation}
+where it takes the maximal value
+\begin{equation}
+  \psi
+  = A_\natural
+  \defeq \psi (r_\natural)
+  = \roundbr*{\frac{4}{\ee}}^4
+  = 4.6888.
+  \label{eq:line-a-natural}
+\end{equation}
+This is shown in Figure~\tbd.
