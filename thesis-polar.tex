@@ -215,8 +215,8 @@ as this decides the number of roots of the equation~$\psi (r) = A$:
     and at~$r = r_\sharp$,
     both dependent on~$A$,
     with~$0 <  r_\flat < r_\nat < r_\sharp < 1$.
-    The critical terminal curve now consists of
-    the two circles~$r = r_\flat$ and~$r = r_\sharp$.
+    The critical terminal curve now consists of two circles:
+    inner, $r = r_\flat$, and outer, $r = r_\sharp$.
     A non-viable moat~$r_\flat < r < r_\sharp$
     separates an inner viable island~$0 \le r \le r_\flat$
     from an outer viable mainland~$r \ge r_\sharp$.
@@ -413,7 +413,7 @@ is the (boring) critical terminal curve~$r = r_\nat$.
 
 In the hot regime~$A < A_\nat$
 the critical terminal curve now consists of two circles,
-$r = r_\flat$ and~$r = r_\sharp$,
+$r = r_\flat$ (inner) and~$r = r_\sharp$ (outer),
 both of which are themselves traced boundaries of both branches,
 along which~$\psi (r) = A$ and~$\td r / \td\phi = 0$.
 Unlike the transition case,
@@ -437,8 +437,8 @@ from negative to positive.
 
 For traced boundaries in the inner viable island~$0 \le r \le r_\flat$,
 this restriction is most severe.
-Any closed curve (containing the origin~$r = 0$)
-which is not simply the circle~$r = r_\flat$
+Any closed curve containing the origin~$r = 0$,
+which is not simply the inner critical terminal curve~$r = r_\flat$,
 must contain a portion taken from the upper branch
 in the region~$r < r_\flat$,
 i.e.~with $r (\phi)$~strictly decreasing.
@@ -470,13 +470,12 @@ On the outer viable mainland~$r \ge r_\sharp$
 of the hot regime~$A < A_\nat$,
 such non-convex corners can be avoided
 by performing all upper-to-lower switching
-along the circle~$r = r_\sharp$,
+along the outer terminal curve~$r = r_\sharp$,
 itself a traced boundary of both branches,
 along which~$\td r / \td\phi = 0$.
 However, this is not sufficient to rule out
 \emph{smooth} non-convexity at the switch,
 caused instead by $\td^2 r / {\td\phi}^2$~being too large.
-
 Consider a small perturbation~$r = r_\sharp + \xi$,
 with $\xi$~positive.
 Observing that
@@ -548,8 +547,10 @@ Note that both~$(4 + \log r_\sharp)$ and~$(-\log r_\sharp)$ are positive,
 since~$1 > r_\sharp > r_\nat \defeq \ee^{-4}$.
 While the asymptotic result~(\ref{eq:line-traced-boundary-hot-xi-near-r-sharp})
 confirms that the traced boundaries of the outer viable mainland
-do indeed attach smoothly onto the boundary~$r = r_\sharp$ within finite time,
-without forming a non-convex corner,
+do indeed attach smoothly
+onto the outer critical terminal curve~$r = r_\sharp$
+within finite time,
+even without forming a non-convex corner,
 it is not sufficient to rule out smooth non-convexity.
 From Figure~\tbd,
 the equation of a tangent line to the circle~$r = r_\sharp$
@@ -586,7 +587,7 @@ which simplifies to
 \end{equation}
 Remembering that~$r_\sharp > r_\nat \defeq \ee^{-4}$,
 the total range over which convexity is possible
-(at least at the point of tangency~$r = r_\sharp$)
+(at least at the point of tangency on~$r = r_\sharp$)
 is
 \begin{equation}
   \ee^{-4} < r_\sharp \le \ee^{-2},
