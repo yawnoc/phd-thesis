@@ -453,18 +453,30 @@ the only convex domain is the trivial disk
 whose boundary is the circle~$r = r_\flat$.
 
 Only on the outer viable mainland~$r \ge r_\sharp$
-can non-trivial closed curves be constructed
-which correspond to convex domains.
-Non-convex corners
-caused by a negative-to-positive jump discontinuity in~$\td r / \td\phi$
-(inevitable in the hot regime and the transition case)
-can be avoided
+can one construct non-trivial closed curves
+which correspond to convex domains,
+an analysis which I have allocated its own section:
+
+\section{Convex domains in the hot regime}
+\label{sec:line.convex}
+
+In the cold regime~$A > A_\nat$, the transition case~$A = A_\nat$
+and in the inner viable island~$r \le r_\flat$
+of the hot regime~$A < A_\nat$,
+there was the inevitable appearance of non-convex corners,
+caused by a negative-to-positive jump discontinuity in~$\td r / \td\phi$.
+
+On the outer viable mainland~$r \ge r_\sharp$
+of the hot regime~$A < A_\nat$,
+such non-convex corners can be avoided
 by performing all upper-to-lower switching
 along the circle~$r = r_\sharp$,
 itself a traced boundary of both branches,
 along which~$\td r / \td\phi = 0$.
-However, this is not sufficient to rule out non-convexity at the switch
-caused by $\td^2 r / {\td\phi}^2$~being too large.
+However, this is not sufficient to rule out
+\emph{smooth} non-convexity at the switch,
+caused instead by $\td^2 r / {\td\phi}^2$~being too large.
+
 Consider a small perturbation~$r = r_\sharp + \xi$,
 with $\xi$~positive.
 Observing that
@@ -518,12 +530,12 @@ which integrates to give
     \sqrt{\frac{2 A}{-\psi' (r_\sharp)}}
       \cdot
     \sqrt{\xi}
-    + \order \roundbr*{\xi^{3/2}} \\
+    + \order \roundbr*{\xi^{3/2}} \\[\fraclinespace]
   &=
     \sqrt{\frac{2 (-\log r_\sharp)}{r_\sharp (4 + \log r_\sharp)}}
       \cdot
     \sqrt{\xi}
-    + \order \roundbr*{\xi^{3/2}},
+    + \order \roundbr*{\xi^{3/2}}
 \end{align*}
 up to a constant,
 whence to first order, there holds
@@ -532,3 +544,79 @@ whence to first order, there holds
   \frac{r_\sharp (4 + \log r_\sharp)}{2 (-\log r_\sharp)} \cdot \phi^2.
   \label{eq:line-traced-boundary-hot-xi-near-r-sharp}
 \end{equation}
+Note that both~$(4 + \log r_\sharp)$ and~$(-\log r_\sharp)$ are positive,
+since~$1 > r_\sharp > r_\nat \defeq \ee^{-4}$.
+While the asymptotic result~(\ref{eq:line-traced-boundary-hot-xi-near-r-sharp})
+confirms that the traced boundaries of the outer viable mainland
+do indeed attach smoothly onto the boundary~$r = r_\sharp$ within finite time,
+without forming a non-convex corner,
+it is not sufficient to rule out smooth non-convexity.
+From Figure~\tbd,
+the equation of a tangent line to the circle~$r = r_\sharp$
+(up to a constant in~$\phi$)
+is
+\begin{equation}
+  r_\sharp = (r_\sharp + \xi) \cos\phi
+  \label{eq:circle-tangent-line}
+\end{equation}
+or
+\begin{align*}
+  \xi
+  &= r_\sharp (\sec\phi - 1) \\[\fraclinespace]
+  &= \frac{r_\sharp}{2} \cdot \phi^2 + \order \roundbr*{\phi^4}.
+    \yesnumber
+    \label{eq:circle-tangent-line-xi-near-r-sharp}
+\end{align*}
+Comparing coefficients of~$\phi^2$
+in~(\ref{eq:line-traced-boundary-hot-xi-near-r-sharp})
+for a traced boundary touching the circle~$r = r_\sharp$
+and~(\ref{eq:circle-tangent-line-xi-near-r-sharp}) for a tangent line,
+it follows that the traced boundary will only be convex
+at the point of tangency
+if
+\[
+  \frac{r_\sharp (4 + \log r_\sharp)}{2 (-\log r_\sharp)}
+    \le
+  \frac{r_\sharp}{2},
+\]
+which simplifies to
+\begin{equation}
+  r_\sharp \le \ee^{-2}.
+  \label{eq:line-traced-boundary-hot-convex-r-sharp-upper-bound}
+\end{equation}
+Remembering that~$r_\sharp > r_\nat \defeq \ee^{-4}$,
+the total range over which convexity is possible
+(at least at the point of tangency~$r = r_\sharp$)
+is
+\begin{equation}
+  \ee^{-4} < r_\sharp \le \ee^{-2},
+  \label{eq:line-traced-boundary-hot-convex-r-sharp-interval}
+\end{equation}
+and since $A = \psi (r_\sharp)$ is a decreasing function of~$r_\sharp$
+over this interval,
+the corresponding interval for~$A$ is
+\[
+  \psi \roundbr*{\ee^{-2}} \le A < \psi \roundbr*{\ee^{-4}},
+\]
+or
+\begin{equation}
+  2.1654 = (4 / \ee)^2 \le A < (4 / \ee)^4 = 4.6888.
+  \label{eq:line-traced-boundary-hot-convex-a-interval}
+\end{equation}
+If the dimensionless group~$A$ lies outside of this interval,
+then the traced boundaries on the outer viable mainland
+will assuredly correspond to concave domains.
+But it is important to realise that
+the restriction~(\ref{eq:line-traced-boundary-hot-convex-a-interval})
+only guarantees convexity at~$r = r_\sharp$;
+the condition is not sufficient to ensure convexity for all~$r \ge r_\sharp$.
+In fact eventual concavity is inevitable
+as one travels outward along the lower branch towards~$r = 1$,
+since the traced boundaries will form thin, concave spikes of the form
+\begin{equation}
+  \phi \asy \const \mp \frac{(1 - r)^5}{5 A}
+  \label{eq:line-traced-boundary-r-near-1}
+\end{equation}
+near~$r = 1$,
+similar to the thin spikes~(\ref{eq:slab-traced-boundary-x-near-0})
+of the slab solution (Section~\ref{sec:cartesian.slab.tracing}).
