@@ -342,3 +342,66 @@ within finite time.%
     (\ref{eq:line-tracing-ode-coordinate-parametrisation-r})
   viewed as a dynamical system in~$r$-space.
 }
+To see this,
+consider the small perturbation~$r \defeq r_\nat + \xi$,
+and let primes denote $r$-differentiation.
+Since $\psi (r)$~is maximised at~$r = r_\nat$,
+there holds~$\psi' (r_\nat) = 0$, whence
+\begin{align*}
+  \psi (r_\nat + \xi)
+  &=
+    \psi (r_\nat) + \frac{1}{2!} \psi'' (r_\nat) \cdot \xi^2
+    + \order \roundbr*{\xi^3}
+      \\[\fraclinespace]
+  &=
+    A_\nat + \frac{1}{2} \psi'' (r_\nat) \cdot \xi^2
+    + \order \roundbr*{\xi^3}
+\end{align*}
+and
+\[
+  \psi^2 (r_\nat + \xi) =
+  {A_\nat}^2 + A_\nat \psi'' (r_\nat) \cdot \xi^2 + \order \roundbr*{\xi^3}.
+\]
+The boundary tracing ODE~%
+  (\ref{eq:line-tracing-ode-coordinate-parametrisation-r}),
+inverted,
+becomes
+\begin{align*}
+  \mp \tder{\phi}{\xi} = \mp \tder{\phi}{r}
+  &=
+    \frac{
+      \psi (r_\nat + \xi)
+    }{
+      (r_\nat + \xi) \sqrt{{A_\nat}^2 - \psi^2 (r_\nat + \xi)}
+    }
+    \\[\fraclinespace]
+  &=
+    \frac{
+      A_\nat + \order \roundbr*{\xi^2}
+    }{
+      (r_\nat + \xi)
+      \sqrt{
+        -A_\nat \psi'' (r_\nat) \cdot \xi^2 + \order \roundbr*{\xi^3}
+      }
+    }
+    \\[\fraclinespace]
+  &=
+    \frac{\sqrt{A_\nat}}{r_\nat \sqrt{-\psi'' (r_\nat)}}
+      \cdot
+    \frac{1}{\xi}
+    + \order (1)
+    \\[\fraclinespace]
+  &=
+    \frac{2}{\xi} + \order (1).
+\end{align*}
+Integrating gives
+\[
+  \log \xi \asy \const \mp \frac{\phi}{2},
+\]
+or
+\begin{equation}
+  r \asy r_\nat + \const \cdot \ee^{\mp \phi / 2}.
+\end{equation}
+Thus~$r = r_\nat$ is a limit cycle as claimed,
+and the only possible closed curve corresponding to a convex domain
+is the (boring) critical terminal curve~$r = r_\nat$.
