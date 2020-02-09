@@ -406,3 +406,128 @@ Thus~$r = r_\nat$ is a limit cycle as claimed,
 and the only possible closed curve corresponding to a convex domain
 in the transition case
 is the (boring) critical terminal curve~$r = r_\nat$.
+
+\subsection{Hot regime}
+\label{sec:polar.tracing.hot}
+
+In the hot regime~$A < A_\nat$
+the critical terminal curve now consists of two circles,
+$r = r_\flat$ and~$r = r_\sharp$,
+both of which are themselves traced boundaries of both branches,
+along which~$\psi (r) = A$ and~$\td r / \td\phi = 0$.
+Unlike the transition case,
+neither of these are limit cycles,
+so that other traced boundaries will smoothly attach onto them
+within finite time.
+Elsewhere the two branches are once again segregated
+by the sign of~$\td r / \td\phi$ in the boundary tracing ODE~%
+  (\ref{eq:line-tracing-ode-coordinate-parametrisation-r}).
+(Note that there are no traced boundaries
+in the non-viable annulus~$r_\flat < r < r_\sharp$.)
+
+As before, when travelling in the direction of increasing~$\phi$,
+any switching from the upper branch (for which $r (\phi)$~is decreasing)
+to the lower branch (for which $r (\phi)$~is increasing)
+must take place along either~$r = r_\flat$ or~$r = r_\sharp$,
+where $\td r / \td\phi$~vanishes,
+otherwise a non-convex corner will be formed
+by the jump discontinuity in~$\td r / \td\phi$
+from negative to positive.
+
+For traced boundaries in the inner viable island~$0 \le r \le r_\flat$,
+this restriction is most severe.
+Any closed curve (containing the origin~$r = 0$)
+which is not simply the circle~$r = r_\flat$
+must contain a portion taken from the upper branch
+in the region~$r < r_\flat$,
+i.e.~with $r (\phi)$~strictly decreasing.
+To prevent this portion from spiralling in forever
+towards the singularity~$r = 0$,
+one must eventually switch back to the lower branch,
+but since this upper-to-lower switching takes place at~$r < r_\flat$,
+a non-convex corner will be formed
+(Figure~\tbd).
+Thus, on the inner viable island~$0 \le r \le r_\flat$,
+the only convex domain is the trivial disk
+whose boundary is the circle~$r = r_\flat$.
+
+Only on the outer viable mainland~$r \ge r_\sharp$
+can non-trivial closed curves be constructed
+which correspond to convex domains.
+Non-convex corners
+caused by a negative-to-positive jump discontinuity in~$\td r / \td\phi$
+(inevitable in the hot regime and the transition case)
+can be avoided
+by performing all upper-to-lower switching
+along the circle~$r = r_\sharp$,
+itself a traced boundary of both branches,
+along which~$\td r / \td\phi = 0$.
+However, this is not sufficient to rule out non-convexity at the switch
+caused by $\td^2 r / {\td\phi}^2$~being too large.
+Consider a small perturbation~$r = r_\sharp + \xi$,
+with $\xi$~positive.
+Observing that
+\begin{align*}
+  \psi (r_\sharp + \xi)
+  &=
+    \psi (r_\sharp) + \psi' (r_\sharp) \cdot \xi
+    + \order \roundbr*{\xi^2}
+      \\
+  &=
+    A + \psi' (r_\sharp) \cdot \xi
+    + \order \roundbr*{\xi^2}
+\end{align*}
+and
+\[
+  \psi^2 (r_\sharp + \xi) =
+  A^2 + 2 A \psi' (r_\sharp) \cdot \xi + \order \roundbr*{\xi^2},
+\]
+the inverted version of the boundary tracing ODE~%
+  (\ref{eq:line-tracing-ode-coordinate-parametrisation-r})
+becomes
+\begin{align*}
+  \mp \tder{\phi}{\xi} = \mp \tder{\phi}{r}
+  &=
+    \frac{
+      \psi (r_\sharp + \xi)
+    }{
+      (r_\sharp + \xi) \sqrt{A^2 - \psi^2 (r_\sharp + \xi)}
+    }
+    \\[\fraclinespace]
+  &=
+    \frac{
+      A + \order (\xi)
+    }{
+      (r_\sharp + \xi)
+      \sqrt{-2 A \psi' (r_\sharp) \cdot \xi + \order (\xi)}
+    }
+    \\[\fraclinespace]
+  &=
+    \frac{1}{r_\sharp}
+    \sqrt{\frac{2 A}{-\psi' (r_\sharp)}}
+      \cdot
+    \frac{1}{2 \sqrt{\xi}}
+    + \order \roundbr*{\sqrt{\xi}},
+\end{align*}
+which integrates to give
+\begin{align*}
+  \mp \phi
+  &=
+    \frac{1}{r_\sharp}
+    \sqrt{\frac{2 A}{-\psi' (r_\sharp)}}
+      \cdot
+    \sqrt{\xi}
+    + \order \roundbr*{\xi^{3/2}} \\
+  &=
+    \sqrt{\frac{2 (-\log r_\sharp)}{r_\sharp (4 + \log r_\sharp)}}
+      \cdot
+    \sqrt{\xi}
+    + \order \roundbr*{\xi^{3/2}},
+\end{align*}
+up to a constant,
+whence to first order, there holds
+\begin{equation}
+  \xi \asy
+  \frac{r_\sharp (4 + \log r_\sharp)}{2 (-\log r_\sharp)} \cdot \phi^2.
+  \label{eq:line-traced-boundary-xi-near-r-sharp}
+\end{equation}
