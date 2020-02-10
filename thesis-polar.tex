@@ -655,3 +655,42 @@ of the slab solution (Section~\ref{sec:cartesian.slab.tracing}).
 A global curvature analysis is required
 to determine where the traced boundaries inflect
 and become concave.
+
+\subsection{Convexity beyond the outer terminal curve}
+\label{sec:line.convex.beyond}
+
+Since the known solution~(\ref{eq:line-scaled-laplace-solution})
+is radially symmetric,
+there will exist a radius of inflection,
+beyond which the traced boundaries are unable to form convex domains.
+To determine this radius,
+I compute the curvature of the traced boundaries
+as a function of~$r$.
+
+First consider any curve parametrised in the form~$\phi = \phi (r)$.
+With primes denoting $r$-differentiation as before,
+observe that the orthonormal basis vectors~%
+  (\ref{eq:r-basis-vector}) and~(\ref{eq:phi-basis-vector})
+will change, along this curve, according to
+\begin{align}
+  (\basisvec{r})'
+  &= -\sin\phi \cdot \phi' \basisvec{x} + \cos\phi \cdot \phi' \basisvec{y}
+  = \+\phi' \basisvec{\phi},
+    \label{eq:r-basis-vector-derivative} \\
+  (\basisvec{\phi})'
+  &= -\cos\phi \cdot \phi' \basisvec{x} - \sin\phi \cdot \phi' \basisvec{y}
+  = -\phi' \basisvec{r}.
+    \label{eq:phi-basis-vector-derivative}
+\end{align}
+Using the scale factors~%
+  (\ref{eq:r-scale-factor}) and~(\ref{eq:phi-scale-factor}),
+the differential displacement~(\ref{eq:differential-displacement})
+becomes
+\[
+  \td\vec{r} = \td r \basisvec{r} + r \td\phi \basisvec{\phi},
+\]
+which, divided by~$\td r$, yields the velocity vector
+\[
+  \vec{r}' \defeq \tder{\vec{r}}{r}
+  = \basisvec{r} + r \phi' \basisvec{\phi}.
+\]
