@@ -87,7 +87,22 @@
 \newcommand*{\td}{\mathopspace\mathrm{d}}
 
 % Total derivative
-\newcommand*{\tder}[2]{\frac{\td #1}{\td #2}}
+\newcommand*{\tder}[3][]{%
+  \frac{%
+    \td%
+      \ifx\\#1\\%
+      \else%
+        ^{#1}%
+      \fi%
+    #2%
+  }{%
+    {\td #3}%
+      \ifx\\#1\\%
+      \else%
+        ^{#1}%
+      \fi%
+  }%
+}
 
 % Component of a vector
 \newcommand*{\comp}[2]{#1_{#2}}
