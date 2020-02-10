@@ -703,9 +703,29 @@ becomes
   \td\vec{r} = \td r \basisvec{r} + r \td\phi \basisvec{\phi},
   \label{eq:differential-displacement-polar}
 \end{equation}
-which, divided by~$\td r$, yields the velocity vector
+which, divided by~$\td r$, yields the velocity
 \begin{equation}
-  \vec{r}' \defeq \tder{\vec{r}}{r}
-  = \basisvec{r} + r \phi' \basisvec{\phi}.
+  \vec{r}' \defeq \tder{\vec{r}}{r} =
+  \basisvec{r} + r \phi' \basisvec{\phi}.
   \label{eq:velocity-vector-polar-by-r}
 \end{equation}
+A second $r$-derivative
+(with simplification via~(\ref{eq:r-basis-vector-r-derivative})
+and~(\ref{eq:phi-basis-vector-r-derivative}))
+yields the acceleration
+\begin{equation}
+  \vec{r}'' \defeq \tder[2]{\vec{r}}{r} =
+  -r {\phi'}^2 \basisvec{r}
+    +
+  \roundbr*{r \phi'' + 2 \phi'} \basisvec{\phi},
+  \label{eq:acceleration-vector-polar-by-r}
+\end{equation}
+and the curvature of the curve~$\phi = \phi (r)$
+will have the same sign as the quantity
+given by the cross-product component
+\begin{equation}
+  \basisvec{z} \dotp \vec{r}' \crossp \vec{r}'' =
+  r \phi'' + 2 \phi' + r^2 {\phi'}^3.
+  \label{eq:curvature-polar-by-r}
+\end{equation}
+For brevity, this shall simply be referred to as curvature.
