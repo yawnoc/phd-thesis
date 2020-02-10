@@ -730,7 +730,47 @@ the quantity
   \kappa \defeq
   \basisvec{z} \dotp \vec{r}' \crossp \vec{r}'' =
   r \phi'' + 2 \phi' + r^2 {\phi'}^3
-  \label{eq:curvature-polar-by-r}
+  \label{eq:kappa-polar-by-r}
 \end{equation}
 is obtained,
 which has the same sign changes as the curvature.
+
+The next step is to evaluate~(\ref{eq:kappa-polar-by-r})
+for the traced boundaries.
+For brevity, define
+\begin{equation}
+  L \defeq \log r.
+  \label{eq:line-abbreviation-l}
+\end{equation}
+The boundary tracing ODE~%
+  (\ref{eq:line-tracing-ode-coordinate-parametrisation-r})
+inverts to give
+\begin{equation}
+  \phi' \defeq \tder{\phi}{r} = \mp \frac{L^4}{\sqrt{A^2 - r^2 L^8}},
+  \label{eq:line-traced-boundary-phi-r-derivative}
+\end{equation}
+from which
+\begin{equation}
+  \phi'' =
+  \mp \frac{L^3 \roundbr*{4 A^2 + r^2 L^9}}{r \roundbr*{A^2 - r^2 L^8}^{3/2}}.
+  \label{eq:line-traced-boundary-phi-r-second-derivative}
+\end{equation}
+Substituting these into~(\ref{eq:kappa-polar-by-r}),
+one obtains
+\begin{equation}
+  \kappa =
+  \mp \frac{2 A^2 L^3 (L + 2)}{\roundbr*{A^2 - r^2 L^8}^{3/2}},
+  \label{eq:line-traced-boundary-kappa-polar-by-r}
+\end{equation}
+which only changes sign at~$L + 2 \defeq \log r + 2 = 0$.
+Therefore, inflection occurs at
+\begin{equation}
+  r = r_\infl \defeq \ee^{-2},
+  \label{eq:line-r-inflection}
+\end{equation}
+i.e.~traced boundaries on the outer viable island~$r \ge r_\sharp$
+are only able to form convex domains
+in the region~$r_\sharp \le r \le r_\infl \defeq \ee^{-2}$.
+Note that this is consistent with the upper bound~%
+  (\ref{eq:line-traced-boundary-hot-convex-r-sharp-upper-bound})
+for~$r_\sharp$ obtained earlier.
