@@ -9,9 +9,14 @@ Laplace's equation~(\ref{eq:laplace-steady-conduction}).
 \section{Line-source solution}
 \label{sec:polar.line}
 
-Consider the line-source solution
-to Laplace's equation~(\ref{eq:laplace-steady-conduction}),
-which is logarithmic in the cylindrical radius~$r = \sqrt{x^2 + y^2}$.
+First I establish the known solution, the polar coordinate system
+and the appropriate scaling.
+
+The line-source solution
+to Laplace's equation~(\ref{eq:laplace-steady-conduction})
+is usually encountered in electrostatics,
+where it represents the potential of a line charge,
+logarithmic in the cylindrical radius~$r = \sqrt{x^2 + y^2}$.
 In the context of steady conduction,
 the only dimensionally consistent form for this is
 \begin{important}{equation}
@@ -27,6 +32,9 @@ for some temperature~$T_0$ and radius~$r_0$.%
 }
 Note that the region~$r > r_0$ is unphysical,
 since~$T < 0$ therein.
+
+\subsection{Coordinate system}
+\label{sec:polar.line.coordinate}
 
 The analysis to follow shall be performed
 in the usual polar coordinates~$(r, \phi)$
@@ -58,8 +66,8 @@ and the local orthonormal basis vectors,
     \label{eq:phi-basis-vector}
 \end{align}
 
-\section{Scaling}
-\label{sec:polar.scaling}
+\subsection{Scaling}
+\label{sec:polar.line.scaling}
 
 While the known solution~(\ref{eq:line-laplace-solution})
 already has intrinsic temperature and length scales $T_0$ and~$r_0$,
