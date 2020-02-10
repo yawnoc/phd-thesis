@@ -677,7 +677,7 @@ is radially symmetric,
 there will exist a radius of inflection,
 beyond which the traced boundaries are unable to form convex domains.
 The determination of this radius requires
-computing the curvature of the traced boundaries
+computing the (signed) curvature of the traced boundaries
 (or a quantity with the same sign changes)
 as a function of~$r$.
 
@@ -701,31 +701,36 @@ Using the scale factors~%
 the differential displacement~(\ref{eq:differential-displacement})
 becomes
 \begin{equation}
-  \td\vec{r} = \td r \basisvec{r} + r \td\phi \basisvec{\phi},
+  \td\vec{r} = \td r \basisvec{r} + r \td\phi \basisvec{\phi}.
   \label{eq:differential-displacement-polar}
 \end{equation}
-which, divided by~$\td r$, yields the velocity
+Division by~$\td r$ yields the velocity
 \begin{equation}
   \vec{r}' \defeq \tder{\vec{r}}{r} =
-  \basisvec{r} + r \phi' \basisvec{\phi}.
+  \basisvec{r} + r \phi' \basisvec{\phi},
   \label{eq:velocity-vector-polar-by-r}
 \end{equation}
-A second $r$-derivative
+and taking another $r$-derivative
 (with simplification via~(\ref{eq:r-basis-vector-r-derivative})
 and~(\ref{eq:phi-basis-vector-r-derivative}))
-yields the acceleration
+results in the acceleration
 \begin{equation}
   \vec{r}'' \defeq \tder[2]{\vec{r}}{r} =
   -r {\phi'}^2 \basisvec{r}
     +
-  \roundbr*{r \phi'' + 2 \phi'} \basisvec{\phi},
+  \roundbr*{r \phi'' + 2 \phi'} \basisvec{\phi}.
   \label{eq:acceleration-vector-polar-by-r}
 \end{equation}
-and the curvature of the curve~$\phi = \phi (r)$
-will have the same sign as the quantity
+Forming the cross product of
+the velocity~(\ref{eq:velocity-vector-polar-by-r})
+with the acceleration~(\ref{eq:acceleration-vector-polar-by-r})
+and extracting the $z$-component,
+the quantity
 \begin{equation}
+  \kappa \defeq
   \basisvec{z} \dotp \vec{r}' \crossp \vec{r}'' =
-  r \phi'' + 2 \phi' + r^2 {\phi'}^3,
+  r \phi'' + 2 \phi' + r^2 {\phi'}^3
   \label{eq:curvature-polar-by-r}
 \end{equation}
-which shall simply be referred to as the curvature.
+is obtained,
+which has the same sign changes as the curvature.
