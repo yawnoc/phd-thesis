@@ -4,6 +4,7 @@
 %   3. Created new entry type, technote, based on techreport, but printing
 %      "Technical Note" instead of "Technical Report", and with title styled
 %      as a book title (i.e. italicised).
+%   4. Ampersand used instead of "and" in lists of names.
 % ABSOLUTELY NO WARRANTY
 
 % BibTeX standard bibliography style `abbrv'
@@ -206,7 +207,7 @@ FUNCTION {format.names}
               if$
               t "others" =
                 { " et~al." * }
-                { " and " * t * }
+                { " \& " * t * }
               if$
             }
           if$
@@ -496,7 +497,7 @@ FUNCTION {format.crossref.editor}
         'skip$
         { editor #2 "{ff }{vv }{ll}{ jj}" format.name$ "others" =
             { " et~al." * }
-            { " and " * editor #2 "{vv~}{ll}" format.name$ * }
+            { " \& " * editor #2 "{vv~}{ll}" format.name$ * }
           if$
         }
       if$
