@@ -826,3 +826,43 @@ where
   T_\bath = -\log r_\bath.
   \label{eq:line-equivalent-dirichlet-relation}
 \end{equation}
+
+\subsection{Numerical verification}
+\label{sec:line.convex.verification}
+
+The validity of the constructed domains may be verified
+by numerically solving the conduction--radiation BVP
+and comparing the resulting solutions
+to the exact solution~(\ref{eq:line-scaled-laplace-solution})
+which is supposed to be admitted.
+To this end, I use \lang{Mathematica~12},
+whose finite-elements package~\code{NDSolve\`{}FEM\`{}}
+has built-in capabilities for solving nonlinear BVPs.
+
+Figure~\tbd{} shows the finite element meshes generated
+for the two chosen cases:
+the square-like domain of Figure~\tbd{}
+and the asymmetric domain of Figure~\tbd.
+An interior circular boundary is placed at~$r = r_\bath = r_\sharp / 2$,
+along which the Dirichlet condition~$T = T_\bath$
+according to~(\ref{eq:line-equivalent-dirichlet-relation})
+shall be used
+in place of the singularity at~$r = 0$.
+Both meshes are unstructured
+and consist of around \tbd~triangular elements.
+
+Laplace's equation is then solved over the meshes,
+with the aforementioned Dirichlet condition on the inner boundary
+and the radiation condition~%
+  (\ref{eq:line-scaled-radiation-boundary-condition})
+along the outer boundary.
+The resulting numerical solutions are shown in Figure~\tbd.
+
+Comparing these with the exact line-source solution~%
+  (\ref{eq:line-scaled-laplace-solution}),
+the agreement is excellent.
+The discrepancy between numerical and exact solutions
+(Figure~\tbd)
+is no more than~\tbd\% in both cases;
+thus, one can be confident in the results obtained
+using the boundary tracing method.
