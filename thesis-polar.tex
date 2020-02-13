@@ -221,6 +221,7 @@ as this decides the number of roots of the equation~$\psi (r) = A$:
     since it is a contour of the known solution~%
       (\ref{eq:line-scaled-laplace-solution}).
   \item
+  \label{itm:polar.viable.regimes.hot}
     \emph{Hot regime}, $A < A_\nat$ (Figure~\tbd):
     $\psi (r)$~is equal to~$A$ at~$r = r_\flat$
     and at~$r = r_\sharp$,
@@ -824,7 +825,7 @@ along some circle~$r = r_\bath < r_\sharp$,
 where
 \begin{equation}
   T_\bath = -\log r_\bath.
-  \label{eq:line-equivalent-dirichlet-relation}
+  \label{eq:line-scaled-equivalent-dirichlet-relation}
 \end{equation}
 
 \subsection{Numerical verification}
@@ -845,7 +846,7 @@ the square-like domain of Figure~\tbd{}
 and the asymmetric domain of Figure~\tbd.
 An interior circular boundary is placed at~$r = r_\bath = r_\sharp / 2$,
 along which the Dirichlet condition~$T = T_\bath$
-according to~(\ref{eq:line-equivalent-dirichlet-relation})
+according to~(\ref{eq:line-scaled-equivalent-dirichlet-relation})
 shall be used
 in place of the singularity at~$r = 0$.
 Both meshes are unstructured
@@ -888,3 +889,113 @@ recall that these were dropped for brevity
 from every occurrence of~$\scaled{T}$, $\scaled{r}$, and~$\scaleddel$,
 starting from~(\ref{eq:line-scaled-radiation-boundary-condition})
 near the end of Section~\ref{sec:polar.line.scaling}.
+
+\subsection{Temperature}
+\label{sec:line.physical.temperature}
+
+In a practical situation
+one is probably only interested in objects of a given size.
+Fix~$r_\sharp$, the physical inradius of any convex domain
+constructed in Section~\ref{sec:line.convex.construction},
+and also the physical radius of the outer critical terminal curve.
+Given the restriction~(\ref{eq:line-traced-boundary-hot-convex-a-interval})
+on the possible values of the dimensionless group~$A$,
+one would expect a corresponding interval
+which restricts the possible values of temperature
+\begin{equation}
+  T_\sharp = T_0 \log \roundbr*{\frac{r_0}{r_\sharp}}
+  \label{eq:line-t-sharp}
+\end{equation}
+along the incircle~$r = r_\sharp$.
+
+First observe that
+\begin{equation}
+  r_0 = \frac{r_\sharp}{\scaled{r}_\sharp},
+  \label{eq:line-length-scale-in-terms-of-r-sharp}
+\end{equation}
+and recall that
+\begin{equation}
+  A
+  = \psi (\scaled{r}_\sharp)
+  = \scaled{r}_\sharp \log^4 \scaled{r}_\sharp
+  \label{eq:line-dimensionless-group-in-terms-of-r-sharp}
+\end{equation}
+from the definition of~$\scaled{r}_\sharp$
+(see Item~\ref{itm:polar.viable.regimes.hot}
+in Section~\ref{sec:polar.viable.regimes}).
+Rearranging~(\ref{eq:line-dimensionless-group})
+to give~$T_0$ in terms of~$r_0$ and~$A$,
+then substituting~(\ref{eq:line-length-scale-in-terms-of-r-sharp})
+and~(\ref{eq:line-dimensionless-group-in-terms-of-r-sharp}),
+one obtains
+\begin{equation}
+  T_0 = \roundbr*{\frac{1}{c r_\sharp \log^4 \scaled{r}_\sharp}}^{1/3}.
+  \label{eq:line-temperature-scale-in-terms-of-r-sharp}
+\end{equation}
+Using this along with~(\ref{eq:line-length-scale-in-terms-of-r-sharp}),
+the physical temperature~(\ref{eq:line-t-sharp})
+along the incircle~$r = r_\sharp$ becomes
+\begin{align*}
+  T_\sharp
+  &=
+    \roundbr*{\frac{1}{c r_\sharp \log^4 \scaled{r}_\sharp}}^{1/3}
+    \log \roundbr*{\frac{1}{\scaled{r}_\sharp}}
+      \\
+  &=
+    \roundbr*{\frac{1}{c r_\sharp \log (1 / \scaled{r}_\sharp)}}^{1/3}.
+      \yesnumber
+      \label{eq:line-t-sharp-in-terms-of-r-sharp}
+\end{align*}
+Now the interval~(\ref{eq:line-traced-boundary-hot-convex-a-interval}) in~$A$
+corresponds to the interval~%
+  (\ref{eq:line-traced-boundary-hot-convex-r-sharp-interval})
+in~$\scaled{r}_\sharp$,
+equivalent to
+\begin{equation}
+  \frac{1}{4} < \frac{1}{\log (1 / \scaled{r}_\sharp)} \le \frac{1}{2}.
+  \label{eq:line-traced-boundary-hot-convex-log-r-sharp-interval}
+\end{equation}
+Therefore, the physical temperature interval for~$T_\sharp$,
+in which convex domains of inradius~$r_\sharp$ can be constructed,
+is
+\[
+  \roundbr*{\frac{1}{4 c r_\sharp}}^{1/3}
+    <
+  T_\sharp
+    \le
+  \roundbr*{\frac{1}{2 c r_\sharp}}^{1/3},
+\]
+or
+\begin{equation}
+  \roundbr*{\frac{\conduc}{4 \emiss \stefan r_\sharp}}^{1/3}
+    <
+  T_\sharp
+    \le
+  \roundbr*{\frac{\conduc}{2 \emiss \stefan r_\sharp}}^{1/3}.
+  \label{eq:line-traced-boundary-hot-convex-t-sharp-interval}
+\end{equation}
+Note that it is the lower bound which is ultimately important,
+since the line-source singularity at~$r = 0$
+can be replaced by a constant-temperature input~$T = T_\bath > T_\sharp$
+along some interior circular boundary~$r = r_\bath < r_\sharp$
+(see Figure~\tbd),
+where
+\begin{equation}
+  T_\bath = T_0 \log \roundbr*{\frac{r_0}{r_\bath}}.
+  \label{eq:line-equivalent-dirichlet-relation}
+\end{equation}
+For a contrived example,
+consider a polyvinyl chloride (PVC) coating
+in the shape of a constructed convex domain,
+of inradius~$r_\sharp = \SI{3}{\centi\metre}$,
+covering a rod~$r < r_\bath$
+which is held at some constant temperature~$T = T_\bath$
+(Figure~\tbd).
+Using emissivity~$\emiss = 0.9$
+and conductivity~$\conduc = \SI{0.15}{\watt \per\metre \per\kelvin}$
+for PVC (taken from~\tbd),
+the temperature range~%
+  (\ref{eq:line-traced-boundary-hot-convex-t-sharp-interval})
+evaluates to $\SI{290}{\kelvin} < T_\sharp \le \SI{366}{\kelvin}$,
+or~$\SI{17}{\degreeCelsius} < T_\sharp \le \SI{93}{\degreeCelsius}$,
+a reasonable interval.
