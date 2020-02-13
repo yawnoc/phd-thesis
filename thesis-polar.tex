@@ -999,3 +999,64 @@ the temperature range~%
 evaluates to $\SI{290}{\kelvin} < T_\sharp \le \SI{366}{\kelvin}$,
 or~$\SI{17}{\degreeCelsius} < T_\sharp \le \SI{93}{\degreeCelsius}$,
 a reasonable interval.
+
+\subsection{Power per unit length}
+\label{sec:line.physical.power}
+
+Although the internal heat generation can be specified
+along \emph{any} circle~$r = r_\bath < r_\sharp$,
+provided the fixed temperature~$T = T_\bath$
+satisfies the condition~(\ref{eq:line-t-sharp}),
+the corresponding power per unit length
+for all of these choices will be the same,
+with the value determined by the strength
+of the known line-source solution~(\ref{eq:line-laplace-solution}).
+Since the parameters~$T_0$ and~$r_0$ thereof are linked
+through the dimensionless constant~$A$,
+and since $A$~must lie in the interval~%
+  (\ref{eq:line-traced-boundary-hot-convex-a-interval}),
+there must be a corresponding interval for the possible values of
+power per unit length dissipated.
+
+The line-source solution~(\ref{eq:line-laplace-solution})
+has the radial heat flux
+\begin{equation}
+  -k \del T = \frac{k T_0}{r} \basisvec{r},
+  \label{eq:line-heat-flux}
+\end{equation}
+so that the power per unit length dissipated via conduction
+through any closed curve~$r = r (\phi)$
+is given by
+\begin{equation}
+  p =
+    \int_{0}^{2 \pi}
+      \normalvec \dotp \roundbr[\big]{-k \del T}
+      \cdot r (\phi)
+    \td\phi,
+  \label{eq:line-power-per-length-closed-curve}
+\end{equation}
+where $\normalvec$~is the outward unit normal.
+Since the only source is the singularity at~$r = 0$ (there are no sinks),
+the result of this integral will be the same
+along any closed curve containing the origin.
+Choosing the interior circular boundary~$r = r_\bath$
+for its radial symmetry ($\normalvec = \basisvec{r}$),
+one obtains
+\begin{align*}
+  p
+  &=
+    \int_{0}^{2 \pi}
+      \basisvec{r} \dotp \frac{k T_0}{r_\bath} \basisvec{r}
+      \cdot r_\bath
+    \td\phi
+      \\[\fraclinespace]
+  &=
+    2 \pi k T_0
+      \\[\fraclinespace]
+  &=
+    2 \pi k
+    \roundbr*{\frac{1}{c r_\sharp \log^4 \scaled{r}_\sharp}}^{1/3}
+      \yesnumber
+      \label{eq:line-power-per-length}
+\end{align*}
+by~(\ref{eq:line-temperature-scale-in-terms-of-r-sharp}).
