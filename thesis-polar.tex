@@ -1041,7 +1041,7 @@ the result of this integral will be the same
 along any closed curve containing the origin.
 Choosing the interior circular boundary~$r = r_\bath$
 for its radial symmetry ($\normalvec = \basisvec{r}$),
-one obtains
+this becomes
 \begin{align*}
   p
   &=
@@ -1060,3 +1060,26 @@ one obtains
       \label{eq:line-power-per-length}
 \end{align*}
 by~(\ref{eq:line-temperature-scale-in-terms-of-r-sharp}).
+Reusing the result~%
+  (\ref{eq:line-traced-boundary-hot-convex-log-r-sharp-interval}),
+one obtains the interval in power per length
+corresponding to convex domains of inradius~$r_\sharp$:
+\[
+  2 \pi k \roundbr*{\frac{1}{c r_\sharp} \cdot \frac{1}{4^4}}^{1/3}
+    <
+  p
+    \le
+  2 \pi k \roundbr*{\frac{1}{c r_\sharp} \cdot \frac{1}{2^4}}^{1/3},
+\]
+or
+\begin{equation}
+  \frac{\pi k^{4/3}}{(32 \emiss \stefan r_\sharp)^{1/3}}
+    <
+  p
+    \le
+  \frac{\pi k^{4/3}}{(2 \emiss \stefan r_\sharp)^{1/3}}.
+  \label{eq:line-traced-boundary-hot-convex-power-per-length-interval}
+\end{equation}
+Note that by conservation of energy,
+$p$~is also the total power per unit length
+lost along the outer boundary by radiation.
