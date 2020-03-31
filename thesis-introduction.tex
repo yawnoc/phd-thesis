@@ -89,6 +89,29 @@ often has infinitely many answers,
 leading to far more new and interesting domain shapes
 than expected~\cite{anderson-2007-boundary-tracing-ii-applications}.
 
+\begin{figure}
+  \newcommand*{\subfigurewidth}{0.32\textwidth}
+  \begin{subfigure}{\subfigurewidth}
+    \centredfigurecontent{terminal-ordinary}{Ordinary}
+  \end{subfigure}
+    \hfill
+  \begin{subfigure}{\subfigurewidth}
+    \centredfigurecontent{terminal-critical_hyperbolic}{Critical: hyperbolic}
+  \end{subfigure}
+    \hfill
+  \begin{subfigure}{\subfigurewidth}
+    \centredfigurecontent{terminal-critical_elliptic}{Critical: elliptic}
+  \end{subfigure}
+  \caption{
+    Terminal curve~(dashed),
+    local $T$-contour~(dotted),
+    and traced boundaries~(solid)
+    through a terminal point of the specified type,
+    along with the non-viable domain (shaded).
+  }
+  \label{fig:terminal}
+\end{figure}
+
 The flux condition~(\ref{eq:flux-boundary-condition})
 is best understood as a geometric constraint:
 at any point~$(x, y)$ in the domain of~$T$,
@@ -151,7 +174,8 @@ A point along the terminal curve is called a \emph{terminal point},
 and is one of the following:
 \begin{enumerate}
   \item
-    An \emph{ordinary} terminal point (Figure~\tbd):
+    An \emph{ordinary} terminal point
+    (Figure~\ref{fig:terminal-ordinary}):
     the local $T$-contour crosses the terminal curve at a non-zero angle.
     The traced boundaries (which are tangential to the local $T$-contour)
     terminate in a cusp at the terminal point,
@@ -162,14 +186,16 @@ and is one of the following:
     This results in one of the following:
     \begin{enumerate}
       \item
-        The \emph{hyperbolic} case (Figure~\tbd):
+        The \emph{hyperbolic} case
+        (Figure~\ref{fig:terminal-critical_hyperbolic}):
         the $T$-contour lies toward the viable side of the terminal curve.
         Two smooth traced boundaries pass through the terminal point,
         at which the traced boundaries,
         the local $T$-contour and the terminal curve
         all touch.
       \item
-        The \emph{elliptic} case (Figure~\tbd):
+        The \emph{elliptic} case
+        (Figure~\ref{fig:terminal-critical_elliptic}):
         the $T$-contour lies toward the non-viable side of the terminal curve,
         and no smooth traced boundaries pass through the terminal point.
       \item
