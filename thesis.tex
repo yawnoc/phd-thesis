@@ -29,6 +29,27 @@
 \usepackage{siunitx}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Figures
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% External graphics
+\usepackage{graphicx}
+
+% Folder of figures
+\graphicspath{{figures/}}
+
+% Subfigures with captions
+\usepackage{subcaption}
+
+% Centred figure content (with same label as file name)
+\newcommand{\centredfigurecontent}[2]{%
+  \centering
+  \includegraphics[width=\textwidth]{#1}
+  \caption{#2}
+  \label{fig:#1}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Math macros
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
