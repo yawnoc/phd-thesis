@@ -10,15 +10,15 @@ and seeking new boundaries along which
 the radiation condition~(\ref{eq:radiation-boundary-condition})
 is satisfied.
 
-\section{Slab solution}
-\label{sec:cartesian.slab}
+\section{Plane-source solution}
+\label{sec:cartesian.plane}
 
 First I consider the simplest non-constant solution
 to Laplace's equation~(\ref{eq:laplace-steady-conduction})
 in Cartesian coordinates,
 \begin{important}{equation}
   T = h_0 x,
-  \label{eq:slab-laplace-solution}
+  \label{eq:plane-laplace-solution}
 \end{important}
 corresponding to one-dimensional steady conduction
 with constant temperature gradient~$h_0$.
@@ -28,9 +28,9 @@ therefore, the region~$x < 0$ is unphysical and to be ignored,
 as the temperature therein is negative.
 
 \subsection{Scaling}
-\label{sec:cartesian.slab.scaling}
+\label{sec:cartesian.plane.scaling}
 
-While the known solution~(\ref{eq:slab-laplace-solution}) is, by itself,
+While the known solution~(\ref{eq:plane-laplace-solution}) is, by itself,
 scale-invariant with respect to both temperature and length,
 its coupling with
 the radiation boundary condition~(\ref{eq:radiation-boundary-condition})
@@ -39,34 +39,34 @@ and length scale~$\lambda$.
 
 Defining
 \begin{align}
-  \scaled{T} &= T / \tau, \label{eq:slab-scaled-temperature} \\
-  \scaled{x} &= x / \lambda, \label{eq:slab-scaled-x} \\
-  \scaled{y} &= y / \lambda, \label{eq:slab-scaled-y}
+  \scaled{T} &= T / \tau, \label{eq:plane-scaled-temperature} \\
+  \scaled{x} &= x / \lambda, \label{eq:plane-scaled-x} \\
+  \scaled{y} &= y / \lambda, \label{eq:plane-scaled-y}
 \end{align}
 and noting that
 \begin{equation}
   \scaleddel = \lambda \del,
-  \label{eq:slab-scaled-del}
+  \label{eq:plane-scaled-del}
 \end{equation}
 the radiation boundary condition~(\ref{eq:radiation-boundary-condition})
-and the known solution~(\ref{eq:slab-laplace-solution})
+and the known solution~(\ref{eq:plane-laplace-solution})
 become
 \begin{align}
   \normalvec \dotp \scaleddel \scaled{T}
     &= -\squarebr*{c \lambda \tau^3} \scaled{T}^4,
-    \label{eq:slab-scaled-radiation-boundary-condition-with-groups}
+    \label{eq:plane-scaled-radiation-boundary-condition-with-groups}
     \\[\fraclinespace]
   \scaled{T}
     &= \squarebr*{\frac{h_0 \lambda}{\tau}} \scaled{x}.
-    \label{eq:slab-scaled-laplace-solution-with-groups}
+    \label{eq:plane-scaled-laplace-solution-with-groups}
 \end{align}
 Setting the two dimensionless groups to unity
 results in the temperature and length scales
 \begin{align}
   \tau &= \roundbr*{\frac{h_0}{c}}^{1/4},
-    \label{eq:slab-temperature-scale} \\[\fraclinespace]
+    \label{eq:plane-temperature-scale} \\[\fraclinespace]
   \lambda &= \roundbr*{\frac{1}{c {h_0}^3}}^{1/4}.
-    \label{eq:slab-length-scale}
+    \label{eq:plane-length-scale}
 \end{align}
 These scales may also be arrived at
 by seeking the straight-line boundary~$x = \const$
@@ -74,11 +74,11 @@ and its corresponding temperature~$T = \const$
 along which the radiation condition~(\ref{eq:radiation-boundary-condition})
 is satisfied.
 Since the temperature gradient
-for the known solution~(\ref{eq:slab-laplace-solution})
+for the known solution~(\ref{eq:plane-laplace-solution})
 is $h_0$~everywhere,
 there must hold~$h_0 = c T^4$ along this boundary,
-and the scales~(\ref{eq:slab-temperature-scale})
-and~(\ref{eq:slab-length-scale}) follow immediately.
+and the scales~(\ref{eq:plane-temperature-scale})
+and~(\ref{eq:plane-length-scale}) follow immediately.
 
 Of course the straight-line boundary~$x = \lambda$
 (or equivalently, $\scaled{x} = 1$)
@@ -88,18 +88,18 @@ that more interesting boundaries may be generated,
 as will be shown in the next section.
 
 \subsection{Boundary tracing}
-\label{sec:cartesian.slab.tracing}
+\label{sec:cartesian.plane.tracing}
 
 For brevity, \strong{drop all \scalingaccents},
 so that the scaled boundary condition~%
-  (\ref{eq:slab-scaled-radiation-boundary-condition-with-groups})
-and known solution~(\ref{eq:slab-scaled-laplace-solution-with-groups})
+  (\ref{eq:plane-scaled-radiation-boundary-condition-with-groups})
+and known solution~(\ref{eq:plane-scaled-laplace-solution-with-groups})
 become
 \begin{important}{align}
   \normalvec \dotp \del T &= -T^4,
-    \label{eq:slab-scaled-radiation-boundary-condition} \\
+    \label{eq:plane-scaled-radiation-boundary-condition} \\
   T &= x.
-    \label{eq:slab-scaled-laplace-solution}
+    \label{eq:plane-scaled-laplace-solution}
 \end{important}
 The scale factors for Cartesian coordinates are trivial
 ($\scalefac[x] = \scalefac[y] = 1$),
@@ -107,12 +107,12 @@ leading to the following abbreviatory quantities
 from Section~\ref{sec:curvilinear.calculus.abbreviations}:
 \begin{align}
   P &= \pder{T}{x} = 1,
-    \label{eq:slab-gradient-u-component} \\[\fraclinespace]
+    \label{eq:plane-gradient-u-component} \\[\fraclinespace]
   Q &= \pder{T}{y} = 0.
-    \label{eq:slab-gradient-v-component}
+    \label{eq:plane-gradient-v-component}
 \end{align}
 Comparing the radiation boundary condition~%
-  (\ref{eq:slab-scaled-radiation-boundary-condition})
+  (\ref{eq:plane-scaled-radiation-boundary-condition})
 to the generic one~(\ref{eq:flux-boundary-condition}),
 the flux function is
 \begin{align*}
@@ -120,7 +120,7 @@ the flux function is
   &= - T^4 \\
   &= -x^4,
     \yesnumber
-    \label{eq:slab-flux-function}
+    \label{eq:plane-flux-function}
 \end{align*}
 and it follows that the viability function is
 \begin{align*}
@@ -128,17 +128,17 @@ and it follows that the viability function is
   &= (\del T)^2 - F^2 \\
   &= 1 - x^8.
     \yesnumber
-    \label{eq:slab-viability-function}
+    \label{eq:plane-viability-function}
 \end{align*}
 The viable domain~$\Phi \ge 0$ (excluding the unphysical region~$x < 0$)
 is therefore given by the infinite strip
 \begin{equation}
   0 \le x \le 1.
-  \label{eq:slab-viable-domain}
+  \label{eq:plane-viable-domain}
 \end{equation}
 The terminal curve~$\Phi = 0$ is also the $T$-contour~$x = 1$
 (the boring traced boundary
-mentioned in Section~\ref{sec:cartesian.slab.scaling}).
+mentioned in Section~\ref{sec:cartesian.plane.scaling}).
 Using the terminology of Section~\ref{sec:introduction.tracing},
 $x = 1$~is a critical terminal curve,
 and other traced boundaries will attach to it smoothly.
@@ -147,7 +147,7 @@ The boundary tracing ODE~(\ref{eq:tracing-ode-coordinate-parametrisation-v})
 becomes
 \begin{important}{equation}
   \tder{y}{x} = \mp \frac{x^4}{\sqrt{1 - x^8}},
-  \label{eq:slab-tracing-ode-coordinate-parametrisation-y}
+  \label{eq:plane-tracing-ode-coordinate-parametrisation-y}
 \end{important}
 which integrates to give traced boundaries of the form
 \begin{important}{equation}
@@ -157,7 +157,7 @@ which integrates to give traced boundaries of the form
   \frac{x^5}{5}
     \cdot
   \hypergeo \roundbr*{\frac{1}{2}, \frac{5}{8}; \frac{13}{8}; x^8},
-  \label{eq:slab-traced-boundary}
+  \label{eq:plane-traced-boundary}
 \end{important}
 where $\hypergeo$~is the hypergeometric function
 (see~(TODO: cite someone)).
@@ -166,12 +166,12 @@ onto the critical terminal curve~$x = 1$;
 a local analysis near~$x = 1$ reveals the asymptotic relationship
 \begin{equation}
   y = \const \pm \sqrt{\frac{1 - x}{2}} + \order (1 - x)^{3/2}.
-  \label{eq:slab-traced-boundary-x-near-1}
+  \label{eq:plane-traced-boundary-x-near-1}
 \end{equation}
 Near~$x = 0$ there holds
 \begin{equation}
   y = \const \mp \frac{x^5}{5} + \order \roundbr*{x^{13}},
-  \label{eq:slab-traced-boundary-x-near-0}
+  \label{eq:plane-traced-boundary-x-near-0}
 \end{equation}
 and for each choice of integration constant
 the corresponding pair of traced boundaries
@@ -183,17 +183,17 @@ with half-width
   \hypergeo \roundbr*{\frac{1}{2}, \frac{5}{8}; \frac{13}{8}; 1}
   = \frac{\sqrt{\pi} \gamm (13/8)}{5 \gamm (9/8)}
   = 0.3375.
-  \label{eq:slab-traced-boundary-spike-half-width}
+  \label{eq:plane-traced-boundary-spike-half-width}
 \end{equation}
 By piecing together several of these spikes at various separation distances,
 a broad variety of boundaries may be produced;
 some examples are shown in Figure~TODO.
 Moreover, each and every one of these boundaries marks out a domain
-admitting the same exact solution~(\ref{eq:slab-scaled-laplace-solution}),
+admitting the same exact solution~(\ref{eq:plane-scaled-laplace-solution}),
 to the BVP consisting of steady conduction in the interior,
 fixed temperature~$T = T_\bath$ along the vertical line~$x = x_\bath$
 with~$T_\bath = x_\bath$,
-and thermal radiation~(\ref{eq:slab-scaled-radiation-boundary-condition})
+and thermal radiation~(\ref{eq:plane-scaled-radiation-boundary-condition})
 into vacuum along the remainder of the boundary.
 
 Unfortunately,
@@ -203,7 +203,7 @@ some of the outgoing radiation travels not to infinity,
 but strikes another part of the boundary,
 where it might be partially or fully absorbed.
 Since the simple radiation boundary condition~%
-  (\ref{eq:slab-scaled-radiation-boundary-condition})
+  (\ref{eq:plane-scaled-radiation-boundary-condition})
 does not account for this,
 the results of this section,
 while mathematically sound,
