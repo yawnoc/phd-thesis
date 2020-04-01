@@ -38,7 +38,7 @@ since~$T < 0$ therein.
 
 The analysis to follow shall be performed
 in the usual polar coordinates~$(r, \phi)$
-(see Figure~\tbd),
+(see Figure~TODO),
 given by the transformation
 \begin{align}
   x &= r \cos\phi, \label{eq:x-transformation-polar} \\
@@ -196,7 +196,7 @@ where it takes the maximal value
   = 4.6888.
   \label{eq:line-a-natural}
 \end{equation}
-This is shown in Figure~\tbd.
+This is shown in Figure~TODO.
 
 \subsection{Three regimes}
 \label{sec:polar.viable.regimes}
@@ -208,12 +208,12 @@ the critical value~(\ref{eq:line-a-natural}),
 as this decides the number of roots of the equation~$\psi (r) = A$:
 \begin{enumerate}
   \item
-    \emph{Cold regime}, $A > A_\nat$ (Figure~\tbd):
+    \emph{Cold regime}, $A > A_\nat$ (Figure~TODO):
     $\psi (r)$~is never equal to~$A$.
     The entire space~$0 \le r \le 1$ is viable,
     and there is no terminal curve.
   \item
-    \emph{Transition}, $A = A_\nat$ (Figure~\tbd):
+    \emph{Transition}, $A = A_\nat$ (Figure~TODO):
     $\psi (r)$~is equal to~$A$ at~$r = r_\nat$ only.
     The entire space is still viable,
     but now the terminal curve~$r = r_\nat$ has appeared.
@@ -222,7 +222,7 @@ as this decides the number of roots of the equation~$\psi (r) = A$:
       (\ref{eq:line-scaled-laplace-solution}).
   \item
   \label{itm:polar.viable.regimes.hot}
-    \emph{Hot regime}, $A < A_\nat$ (Figure~\tbd):
+    \emph{Hot regime}, $A < A_\nat$ (Figure~TODO):
     $\psi (r)$~is equal to~$A$ at~$r = r_\flat$
     and at~$r = r_\sharp$,
     both dependent on~$A$,
@@ -234,7 +234,7 @@ as this decides the number of roots of the equation~$\psi (r) = A$:
     separates an inner viable island~$0 \le r \le r_\flat$
     from an outer viable mainland~$r \ge r_\sharp$.
 \end{enumerate}
-Figure~\tbd{}
+Figure~TODO{}
 shows the regimes displayed in the style of a bifurcation diagram,
 with state space on the vertical axis
 and the parameter~$A$ on the horizontal axis.
@@ -264,7 +264,7 @@ so that the traced boundaries are given by
 \end{important}
 This integral is not elementary,
 and the traced boundaries must be determined numerically,
-the results of which are displayed in Figure~\tbd.
+the results of which are displayed in Figure~TODO.
 
 At this point it is important to keep in mind the end goal,
 which is to construct interesting domains
@@ -328,7 +328,7 @@ from the upper branch to the lower branch,
 and hence a jump discontinuity in~$\td r / \td\phi$
 from negative to positive.
 But this corresponds to a non-convex corner
-(Figure~\tbd),
+(Figure~TODO),
 so no convex domains can be constructed from traced boundaries
 in the cold regime.
 
@@ -472,7 +472,7 @@ towards the singularity~$r = 0$,
 one must eventually switch back to the lower branch.
 Since this upper-to-lower switching will take place at some~$r < r_\flat$,
 a non-convex corner will be formed
-(Figure~\tbd).
+(Figure~TODO).
 Thus, on the inner viable island~$0 \le r \le r_\flat$,
 the only convex domain is the trivial disk
 whose boundary is the circle~$r = r_\flat$.
@@ -598,7 +598,7 @@ onto the outer critical terminal curve~$r = r_\sharp$
 within finite time,
 even without forming a non-convex corner,
 it is not sufficient to rule out smooth non-convexity.
-From Figure~\tbd,
+From Figure~TODO,
 the equation of a tangent line to the circle~$r = r_\sharp$
 (up to a constant in~$\phi$)
 is
@@ -791,7 +791,7 @@ along the critical terminal curve~$r = r_\sharp$,
 the class of convex domains which can be constructed
 from the traced boundaries
 will consist of wedge-like protrusions from the disk~$r \le r_\sharp$.
-Each protrusion is as follows (see Figure~\tbd):
+Each protrusion is as follows (see Figure~TODO):
 \begin{enumerate}
   \item
     Start at some point along~$r = r_\sharp$.
@@ -810,9 +810,9 @@ is that they fit without colliding.
 A large variety of domains can be constructed,
 all of which effectively have the inradius~$r_\sharp$.
 These range from domains shaped like regular polygons
-(Figure~\tbd)
+(Figure~TODO)
 to highly asymmetric regions
-(Figure~\tbd).
+(Figure~TODO).
 It is fascinating that \emph{all} of these,
 even the highly asymmetric domains,
 will admit the same
@@ -840,31 +840,31 @@ To this end, I use \lang{Mathematica~12},
 whose finite-elements package~\code{NDSolve\`{}FEM\`{}}
 has built-in capabilities for solving nonlinear BVPs.
 
-Figure~\tbd{} shows the finite element meshes generated
+Figure~TODO{} shows the finite element meshes generated
 for the two chosen cases:
-the square-like domain of Figure~\tbd{}
-and the asymmetric domain of Figure~\tbd.
+the square-like domain of Figure~TODO{}
+and the asymmetric domain of Figure~TODO.
 An interior circular boundary is placed at~$r = r_\bath = r_\sharp / 2$,
 along which the Dirichlet condition~$T = T_\bath$
 according to~(\ref{eq:line-scaled-equivalent-dirichlet-relation})
 shall be used
 in place of the singularity at~$r = 0$.
 Both meshes are unstructured
-and consist of around \tbd~triangular elements.
+and consist of around TODO~triangular elements.
 
 Laplace's equation is then solved over the meshes,
 with the aforementioned Dirichlet condition on the inner boundary
 and the radiation condition~%
   (\ref{eq:line-scaled-radiation-boundary-condition})
 along the outer boundary.
-The resulting numerical solutions are shown in Figure~\tbd.
+The resulting numerical solutions are shown in Figure~TODO.
 
 Comparing these with the exact line-source solution~%
   (\ref{eq:line-scaled-laplace-solution}),
 the agreement is excellent.
 The discrepancy between numerical and exact solutions
-(Figure~\tbd)
-is no more than~\tbd\% in both cases;
+(Figure~TODO)
+is no more than~TODO\% in both cases;
 thus, one can be confident in the results obtained
 using the boundary tracing method.
 
@@ -979,7 +979,7 @@ Note that it is the lower bound which is ultimately important,
 since the line-source singularity at~$r = 0$
 can be replaced by a constant-temperature input~$T = T_\bath > T_\sharp$
 along some interior circular boundary~$r = r_\bath < r_\sharp$
-(see Figure~\tbd),
+(see Figure~TODO),
 where
 \begin{equation}
   T_\bath = T_0 \log \roundbr*{\frac{r_0}{r_\bath}}.
@@ -991,10 +991,10 @@ in the shape of a constructed convex domain
 of inradius~$r_\sharp = \SI{3}{\centi\metre}$,
 covering a rod~$r \le r_\bath$
 which is held at some constant temperature~$T = T_\bath$
-(Figure~\tbd).
+(Figure~TODO).
 Using emissivity~$\emiss = 0.9$
 and conductivity~$\conduc = \SI{0.15}{\watt \per\metre \per\kelvin}$
-for PVC (taken from~\tbd),
+for PVC (taken from~(TODO: cite someone)),
 the temperature range~%
   (\ref{eq:line-traced-boundary-hot-convex-t-sharp-interval})
 evaluates to $\SI{290}{\kelvin} < T_\sharp \le \SI{366}{\kelvin}$,
