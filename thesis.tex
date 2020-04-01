@@ -42,11 +42,11 @@
 \usepackage{subcaption}
 
 % Centred figure content (with same label as file name)
-\newcommand{\centredfigurecontent}[2]{%
+\newcommand{\centredfigurecontent}[3][width=\textwidth]{%
   \centering
-  \includegraphics[width=\textwidth]{#1}
-  \caption{#2}
-  \label{fig:#1}
+  \includegraphics[#1]{#2}
+  \caption{#3}
+  \label{fig:#2}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
