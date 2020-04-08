@@ -32,7 +32,7 @@ First I go through some standard definitions and terminology.
 
 Let~$(\basisvec{x}, \basisvec{y})$ be the standard basis vectors
 of the usual Cartesian coordinates~$(x, y)$.
-The \emph{position vector} is
+The \defin{position vector} is
 \begin{equation}
   \positionvec \defeq x \basisvec{x} + y \basisvec{y},
   \label{eq:position-vector-cartesian}
@@ -45,13 +45,13 @@ observe that
   \basisvec{y} &= \pder{\positionvec}{y}.
     \label{eq:y-basis-vector}
 \end{align}
-Now consider the \emph{curvilinear coordinates}~$(u, v)$
+Now consider the \defin{curvilinear coordinates}~$(u, v)$
 given by the transformation
 \begin{align}
   x &= x (u, v), \label{eq:x-transformation-curvilinear} \\
   y &= y (u, v). \label{eq:y-transformation-curvilinear}
 \end{align}
-A \emph{local basis}~$(\localvec{u}, \localvec{v})$
+A \defin{local basis}~$(\localvec{u}, \localvec{v})$
 arises from the derivatives of position
 in analogy to~(\ref{eq:x-basis-vector}) and~(\ref{eq:y-basis-vector}),
 \begin{align}
@@ -64,7 +64,7 @@ in analogy to~(\ref{eq:x-basis-vector}) and~(\ref{eq:y-basis-vector}),
     = \pder{x}{v} \basisvec{x} + \pder{y}{v} \basisvec{y}.
       \label{eq:v-local-basis-vector}
 \end{align}
-It is assumed that the curvilinear coordinates~$(u, v)$ are \emph{orthogonal},
+It is assumed that the curvilinear coordinates~$(u, v)$ are \defin{orthogonal},
 meaning the local basis vectors are orthogonal to each other:
 \begin{equation}
   \localvec{u} \dotp \localvec{v} = 0.
@@ -73,14 +73,14 @@ meaning the local basis vectors are orthogonal to each other:
 The magnitudes of the local basis vectors may not be unity;
 in fact, should either~$u$ or~$v$ not have the dimensions of length,
 the corresponding local basis vector will not even be dimensionless.
-Therefore, one defines the \emph{scale factors}
-(or \emph{\lame{} coefficients})
+Therefore, one defines the \defin{scale factors}
+(or \defin{\lame{} coefficients})
 \begin{align}
   \scalefac[u] &\defeq \norm{\localvec{u}}, \label{eq:u-scale-factor} \\
   \scalefac[v] &\defeq \norm{\localvec{v}}, \label{eq:v-scale-factor}
 \end{align}
 and then normalises the local basis
-to obtain the \emph{local orthonormal basis},
+to obtain the \defin{local orthonormal basis},
 \begin{align}
   \basisvec{u} &\defeq \frac{\localvec{u}}{\scalefac[u]},
       \label{eq:u-basis-vector} \\[\fraclinespace]
@@ -116,7 +116,7 @@ the four contours (two old and two new)
 shall mark out an infinitesimal rectangle,
 aligned with the local orthonormal basis
 and with sides of length~$\scalefac[u] \td u$ and~$\scalefac[v] \td v$.
-Indeed the \emph{differential displacement} is
+Indeed the \defin{differential displacement} is
 \begin{align*}
   \td \positionvec
   &\defeq
@@ -128,7 +128,7 @@ Indeed the \emph{differential displacement} is
     \label{eq:differential-displacement}
 \end{align*}
 The area of the infinitesimal rectangle is
-the \emph{differential area element}
+the \defin{differential area element}
 \begin{equation}
   \td V = \scalefac[u] \scalefac[v] \td u \td v.
   \label{eq:differential-area-element}
@@ -171,7 +171,7 @@ and using~(\ref{eq:differential-displacement}),
 \end{align*}
 Comparing~(\ref{eq:scalar-differential-change})
 and~(\ref{eq:scalar-differential-change-gradient}),
-it follows that the \emph{gradient} of~$T$ is given by
+it follows that the \defin{gradient} of~$T$ is given by
 \begin{equation}
   \del T =
     \frac{1}{\scalefac[u]} \pder{T}{u} \basisvec{u}
@@ -207,7 +207,7 @@ and the net flux across the two edges normal to~$\basisvec{v}$
 Summing these results in the flux across the entire perimeter of the rectangle,
 which, divided by its area,
 the area element~(\ref{eq:differential-area-element}),
-yields the \emph{divergence} of~$\vec{E}$,
+yields the \defin{divergence} of~$\vec{E}$,
 \begin{equation}
   \del \dotp \vec{E} =
     \frac{1}{\scalefac[u] \scalefac[v]}
@@ -224,7 +224,7 @@ yields the \emph{divergence} of~$\vec{E}$,
 
 Composing the divergence~(\ref{eq:divergence})
 and the gradient~(\ref{eq:gradient}) (with~$\vec{E} = \del T$),
-it follows that the \emph{Laplacian} of~$T$ is given by
+it follows that the \defin{Laplacian} of~$T$ is given by
 \begin{equation}
   \del^2 T \defeq \del \dotp \del T =
     \frac{1}{\scalefac[u] \scalefac[v]}
@@ -249,7 +249,7 @@ this simplifies to
 \subsection{Boundary normal}
 \label{sec:curvilinear.calculus.normal}
 
-The \emph{tangent vector}~$\tangentvec$ to a curve
+The \defin{tangent vector}~$\tangentvec$ to a curve
 is given by the unit vector of
 the differential displacement~(\ref{eq:differential-displacement}),
 i.e.\@
@@ -264,7 +264,7 @@ i.e.\@
     },
   \label{eq:tangent-vector}
 \end{equation}
-where $\td s$~is the \emph{differential arc length}
+where $\td s$~is the \defin{differential arc length}
 \begin{equation}
   \td s \defeq \norm{\td \positionvec} =
   \sqrt{
@@ -368,7 +368,7 @@ the boundary condition~(\ref{eq:flux-boundary-condition}),
 in which $T$~is the chosen known solution (to the PDE under consideration)
 and $F$~is the prescribed flux function.
 
-It is convenient to define the \emph{viability function}
+It is convenient to define the \defin{viability function}
 \begin{important}{equation}
   \Phi \defeq (\del T)^2 - F^2.
   \label{eq:viability-function}
