@@ -12,8 +12,8 @@
   bindingoffset=2cm,
   inner=2cm,
   outer=2.5cm,
-  top=3.5cm,
-  bottom=3cm,
+  top=3cm,
+  bottom=2.7cm,
 ]{geometry}
 
 % Slightly-more-than-one spacing
@@ -25,6 +25,15 @@
 %   See <https://tex.stackexchange.com/a/13803>.
 \usepackage{setspace}
 \setstretch{1.13}
+
+% Denser chapter headings
+\usepackage{titlesec}
+\titleformat{\chapter}[display]%
+  {\setstretch{1}\normalfont\huge\filright\bfseries}%
+  {\chaptertitlename~\thechapter}%
+  {0em}%
+  {}
+\titlespacing*{\chapter}{0em}{0em}{3.3em}
 
 % Citations ordered by number with whitespace stripped for keys
 \usepackage{cite}
@@ -293,8 +302,6 @@
 \linenumbers
 
 % TODO list
-% + Margins, line spacing, etc.
-% + Title formatting
 % + Coerce figures to be on the same page turn if possible
 %   i.e. [even-page | odd-page]
 % + Hyperlinking (clickable links)
