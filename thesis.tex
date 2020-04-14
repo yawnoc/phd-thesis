@@ -16,6 +16,16 @@
   bottom=3cm,
 ]{geometry}
 
+% Slightly-more-than-one spacing
+%   NOTE: for 11pt font, \onehalfspacing is defined as \setstretch{1.213}.
+%   See <https://github.com/rf-latex/setspace/blob/02cf9e0/setspace.sty#L350>.
+%   The general consensus is that
+%   (1) nobody knows what one-and-a-half and double spacing mean, and
+%   (2) large line spacing is ugly.
+%   See <https://tex.stackexchange.com/a/13803>.
+\usepackage{setspace}
+\setstretch{1.13}
+
 % Citations ordered by number with whitespace stripped for keys
 \usepackage{cite}
 
