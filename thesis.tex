@@ -26,10 +26,17 @@
 \usepackage{setspace}
 \setstretch{1.13}
 
-% Denser chapter headings
+% Heading styles
+%   Larger part headings label
+%   Smaller chapter headings
 \usepackage{titlesec}
+\titleformat{\part}[display]%
+  {\setstretch{1.5}\normalfont\Huge\bfseries\filcenter}%
+  {\partname~\thepart}%
+  {0em}%
+  {}
 \titleformat{\chapter}[display]%
-  {\setstretch{1}\normalfont\huge\filright\bfseries}%
+  {\setstretch{1}\normalfont\huge\bfseries\filright}%
   {\chaptertitlename~\thechapter}%
   {0em}%
   {}
