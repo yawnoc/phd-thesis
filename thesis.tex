@@ -241,17 +241,17 @@
 \newcommand*{\importantpadding}{\hspace{0.7em}}
 \newcommand{\importantbox}[1]{%
   \fbox{%
-    \importantpadding%
+    \importantpadding
       #1%
-    \importantpadding%
+    \importantpadding
   }%
 }
 \newenvironment{important}[1]{%
   \setkeys{EmphEqEnv}{#1}%
   \setkeys{EmphEqOpt}{box=\importantbox}%
-  \EmphEqMainEnv%
+  \EmphEqMainEnv
 }{%
-  \endEmphEqMainEnv%
+  \endEmphEqMainEnv
 }
 
 % Phantom plus sign
