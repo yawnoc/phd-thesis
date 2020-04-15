@@ -78,6 +78,9 @@
 \usepackage{subcaption}
 
 % Centred figure content (with same label as file name)
+%   #1  [\includegraphics options] default "width=\textwidth"
+%   #2  {file name}
+%   #3  {caption}
 \newcommand{\centredfigurecontent}[3][width=\textwidth]{%
   \centering
   \includegraphics[#1]{#2}
@@ -89,13 +92,15 @@
 % Math macros
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Optional superscript and subscript
+% Optional superscript
 \newcommand*{\optionalsup}[1]{%
   \ifx \relax #1\relax
   \else
     ^{#1}%
   \fi
 }
+
+% Optional subscript
 \newcommand*{\optionalsub}[1]{%
   \ifx \relax #1\relax
   \else
@@ -137,9 +142,9 @@
 \newcommand*{\pd}{\mathopspace\partial}
 
 % Partial derivative
-%   #1 order n (optional)
-%   #2 dependent variable T
-%   #3 independent variable u
+%   #1  [order] default ""
+%   #2  {dependent variable}
+%   #3  {independent variable}
 \newcommand*{\pder}[3][]{
   \frac{\pd\optionalsup{#1}#2}{{\pd #3}\optionalsup{#1}}
 }
@@ -151,10 +156,9 @@
 \newcommand*{\td}{\mathopspace\mathrm{d}}
 
 % Total derivative
-% Arguments:
-%   #1 order n (optional)
-%   #2 dependent variable T
-%   #3 independent variable u
+%   #1  [order] default ""
+%   #2  {dependent variable}
+%   #3  {independent variable}
 \newcommand*{\tder}[3][]{
   \frac{\td\optionalsup{#1}#2}{{\td #3}\optionalsup{#1}}
 }
