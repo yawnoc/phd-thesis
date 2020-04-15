@@ -89,6 +89,14 @@
 % Math macros
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% Optional superscript and subscript
+\newcommand*{\optionalsup}[1]{%
+  \ifx \relax #1\relax
+  \else
+    ^{#1}%
+  \fi
+}
+
 % Opposite of \nonumber
 \newcommand*{\yesnumber}{\addtocounter{equation}{1}\tag{\theequation}}
 
@@ -123,21 +131,11 @@
 \newcommand*{\pd}{\mathopspace\partial}
 
 % Partial derivative
-\newcommand*{\pder}[3][]{%
-  \frac{%
-    \pd%
-      \ifx\\#1\\%
-      \else%
-        ^{#1}%
-      \fi%
-    #2%
-  }{%
-    {\pd #3}%
-      \ifx\\#1\\%
-      \else%
-        ^{#1}%
-      \fi%
-  }%
+%   #1 order n (optional)
+%   #2 dependent variable T
+%   #3 independent variable u
+\newcommand*{\pder}[3][]{
+  \frac{\pd\optionalsup{#1}#2}{{\pd #3}\optionalsup{#1}}
 }
 
 % Total differential
@@ -147,21 +145,12 @@
 \newcommand*{\td}{\mathopspace\mathrm{d}}
 
 % Total derivative
-\newcommand*{\tder}[3][]{%
-  \frac{%
-    \td%
-      \ifx\\#1\\%
-      \else%
-        ^{#1}%
-      \fi%
-    #2%
-  }{%
-    {\td #3}%
-      \ifx\\#1\\%
-      \else%
-        ^{#1}%
-      \fi%
-  }%
+% Arguments:
+%   #1 order n (optional)
+%   #2 dependent variable T
+%   #3 independent variable u
+\newcommand*{\tder}[3][]{
+  \frac{\td\optionalsup{#1}#2}{{\td #3}\optionalsup{#1}}
 }
 
 % Component of a vector
