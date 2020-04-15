@@ -140,7 +140,7 @@ The terminal curve~$\Phi = 0$ is also the $T$-contour~$x = 1$
 (the boring traced boundary
 mentioned in Section~\ref{sec:cartesian.plane.scaling}).
 Using the terminology of Section~\ref{sec:introduction.tracing},
-$x = 1$~is a critical terminal curve,
+$x = 1$~is therefore a critical terminal curve,
 and other traced boundaries will attach to it smoothly.
 
 \begin{figure}
@@ -171,22 +171,25 @@ which integrates to give traced boundaries of the form
 \end{important}
 where $\hypergeo$~is the hypergeometric function
 (see~(TODO: cite someone)).
-These curves indeed attach smoothly
-onto the critical terminal curve~$x = 1$;
-a local analysis near~$x = 1$ reveals the asymptotic relationship
+For each choice of integration constant
+the corresponding pair of traced boundaries makes a spike
+(Figure~\ref{fig:plane-traced-boundary-spike}),
+and each spike forms a cusp
 \begin{equation}
-  y = \const \pm \sqrt{\frac{1 - x}{2}} + \order (1 - x)^{3/2}.
-  \label{eq:plane-traced-boundary-x-near-1}
-\end{equation}
-Near~$x = 0$ there holds
-\begin{equation}
-  y = \const \mp \frac{x^5}{5} + \order \roundbr*{x^{13}},
+  y = \const \mp \frac{x^5}{5} + \order \roundbr*{x^{13}}
   \label{eq:plane-traced-boundary-x-near-0}
 \end{equation}
-and for each choice of integration constant
-the corresponding pair of traced boundaries
-will form a very thin spike (Figure~\ref{fig:plane-traced-boundary-spike}),
-with half-width (in the $y$-direction)
+at~$x = 0$.
+Near~$x = 1$ there holds
+\begin{equation}
+  y = \const \pm \sqrt{\frac{1 - x}{2}} + \order (1 - x)^{3/2},
+  \label{eq:plane-traced-boundary-x-near-1}
+\end{equation}
+and the curves do indeed attach smoothly
+onto the critical terminal curve~$x = 1$ as expected.
+
+The half-width of the spike in Figure~\ref{fig:plane-traced-boundary-spike}
+(along~$x = 1$) is
 \begin{equation}
   \frac{1}{5}
     \cdot
@@ -195,6 +198,8 @@ with half-width (in the $y$-direction)
   = 0.3375.
   \label{eq:plane-traced-boundary-spike-half-width}
 \end{equation}
+(TODO: probably need to have a plot with a bunch of traced boundaries.)
+
 By piecing together several of these spikes at various separation distances,
 a broad variety of boundaries may be produced;
 some examples are shown in Figure~TODO.
