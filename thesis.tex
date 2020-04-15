@@ -96,6 +96,12 @@
     ^{#1}%
   \fi
 }
+\newcommand*{\optionalsub}[1]{%
+  \ifx \relax #1\relax
+  \else
+    _{#1}%
+  \fi
+}
 
 % Opposite of \nonumber
 \newcommand*{\yesnumber}{\addtocounter{equation}{1}\tag{\theequation}}
@@ -175,13 +181,7 @@
 \newcommand*{\localvec}[1]{\mathopspace\vec{h}_{#1}}
 
 % Scale factor
-\newcommand*{\scalefac}[1][]{%
-  h%
-  \ifx\\#1\\%
-  \else%
-    _{#1}%
-  \fi%
-}
+\newcommand*{\scalefac}[1][]{h\optionalsub{#1}}
 
 % Orthonormal basis vector
 \newcommand*{\basisvec}[1]{\mathopspace\vec{a}_{#1}}
