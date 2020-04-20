@@ -169,47 +169,54 @@ which integrates to give traced boundaries of the form
   \hypergeo \roundbr*{\frac{1}{2}, \frac{5}{8}; \frac{13}{8}; x^8},
   \label{eq:plane-traced-boundary}
 \end{important}
+shown in Figure~TODO,
 where $\hypergeo$~is the hypergeometric function~%
 \cite{olver-2010-nist-handbook-mathematical-functions}.
-For each choice of integration constant
-the corresponding pair of traced boundaries makes a spike
-(Figure~\ref{fig:plane-traced-boundary-spike}),
-and each spike forms a cusp
-\begin{equation}
-  y = \const \mp \frac{x^5}{5} + \order \roundbr*{x^{13}}
-  \label{eq:plane-traced-boundary-x-near-0}
-\end{equation}
-at~$x = 0$.
-Near~$x = 1$ there holds
+A local analysis near~$x = 1$ shows that
 \begin{equation}
   y = \const \pm \sqrt{\frac{1 - x}{2}} + \order (1 - x)^{3/2},
   \label{eq:plane-traced-boundary-x-near-1}
 \end{equation}
-and the curves do indeed attach smoothly
-onto the critical terminal curve~$x = 1$ as expected.
-
-The half-width (along~$x = 1$)
-of the spike in Figure~\ref{fig:plane-traced-boundary-spike} is
+so that the traced boundaries do indeed attach smoothly
+onto the critical terminal curve~$x = 1$, as expected.
+Near~$x = 0$ each pair of traced boundaries forms a thin cusp of the form
 \begin{equation}
-  \frac{1}{5}
-    \cdot
-  \hypergeo \roundbr*{\frac{1}{2}, \frac{5}{8}; \frac{13}{8}; 1}
-  = \frac{\sqrt{\pi} \gamm (13/8)}{5 \gamm (9/8)}
-  = 0.3375.
-  \label{eq:plane-traced-boundary-spike-half-width}
+  y = \const \mp \frac{x^5}{5} + \order \roundbr*{x^{13}}.
+  \label{eq:plane-traced-boundary-x-near-0}
 \end{equation}
-(TODO: probably need to have a plot with a bunch of traced boundaries.)
+Now each of the traced boundaries is a curve along which
+the radiation boundary condition~%
+  (\ref{eq:plane-scaled-radiation-boundary-condition})
+is satisfied.
+More complicated boundaries can be constructed
+by patching together several of these curves, or portions thereof,
+and the only requirement is that there be consistent orientation.
+This requirement is satisfied by indentifying as the interior
+the side on which $T$ (which equals~$x$) is greater,
+i.e.~the side to the right of each curve.
+Figure~TODO shows a sample of the broad variety of radiation boundaries
+which can be produced in this manner.
 
-By piecing together several of these spikes at various separation distances,
-a broad variety of boundaries may be produced;
-some examples are shown in Figure~TODO.
-Moreover, each and every one of these boundaries marks out a domain
-admitting the same exact solution~(\ref{eq:plane-scaled-laplace-solution}),
-to the BVP consisting of steady conduction in the interior,
-fixed temperature~$T = T_\bath$ along the vertical line~$x = x_\bath$
-with~$T_\bath = x_\bath$,
-and thermal radiation~(\ref{eq:plane-scaled-radiation-boundary-condition})
-into vacuum along the remainder of the boundary.
+Since the constructed radiation boundaries only dissipate heat,
+a domain for the steady conduction--radiation BVP
+will not be completely specified
+until there is also a boundary to supply it.
+The simplest boundary condition which can supply heat
+is the Dirichlet condition~$T = \const$,
+and given the form of the known solution~%
+  (\ref{eq:plane-scaled-laplace-solution}),
+these boundaries are simply vertical lines~$x = \const$.
+
+An infinite number of conduction--radiation domains
+may therefore be marked out
+by joining a constructed radiation boundary
+with an appropriate Dirichlet boundary~$x = \const$,
+as in Figure~TODO.
+Each of these domains corresponds to steady conduction in the interior,
+constant temperature along the right hand side
+and thermal radiation into vacuum to the left.
+Most surprising is that \emph{all} of these domains
+admit the \emph{same} exact solution~(\ref{eq:plane-scaled-laplace-solution}).
 
 Unfortunately,
 the domains produced here by boundary tracing are not convex,
