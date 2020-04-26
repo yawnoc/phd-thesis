@@ -427,7 +427,7 @@ which expands into the quadratic equation
   0.
   \label{eq:tracing-coordinate-parametrisation-quadratic}
 \end{equation}
-Solving this for~$\td \nu / \td \mu$ results in the boundary tracing ODE
+Solving this for~$\td \nu / {\td \mu}$ results in the boundary tracing ODE
 \begin{equation}
   \tder{\nu}{\mu} = \frac{P Q \pm F \sqrt{\Phi}}{P^2 - F^2},
   \label{eq:tracing-ode-coordinate-parametrisation-nu}
@@ -441,7 +441,7 @@ or
   \label{eq:tracing-ode-coordinate-parametrisation-v}
 \end{important}
 Alternatively, for the parametrisation~$u = u (v)$,
-one solves for~$\td \mu / \td \nu$, giving
+one solves for~$\td \mu / {\td \nu}$, giving
 \begin{equation}
   \tder{\mu}{\nu} = \frac{P Q \mp F \sqrt{\Phi}}{Q^2 - F^2},
   \label{eq:tracing-ode-coordinate-parametrisation-mu}
@@ -475,7 +475,7 @@ while the lower branch corresponds to choosing the plus sign).
 In numerical boundary tracing,
 the coordinate parametrisations~$v = v (u)$ and~$u = u (v)$
 will be problematic
-if~$\td v / \td u$ or~$\td u / \td v$ ever become infinite,
+if~$\td v / {\td u}$ or~$\td u / {\td v}$ ever become infinite,
 corresponding to traced boundaries
 which are parallel to~$\basisvec{v}$ or~$\basisvec{u}$.
 
@@ -554,7 +554,7 @@ For numerical computation of contours,
 arc-length parametrisation is again more robust
 than coordinate parametrisation
 (which is unable to handle singularities
-in~$\td v / \td u$ and~$\td u / \td v$).
+in~$\td v / {\td u}$ and~$\td u / {\td v}$).
 Suppose a $T$-contour is to be parametrised by arc length,
 i.e.~$u = u (s)$, $v = v(s)$.
 By definition, there holds

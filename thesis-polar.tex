@@ -307,8 +307,8 @@ recall that $\psi (r)$~is always strictly less than~$A$.
 It follows that for the two branches of traced boundaries,
 corresponding to the two choices of sign in the boundary tracing ODE~%
   (\ref{eq:line-tracing-ode-coordinate-parametrisation-r}),
-the upper branch always has $\td r / \td\phi$~negative,
-and the lower branch always has $\td r / \td\phi$~positive.
+the upper branch always has $\td r / {\td\phi}$~negative,
+and the lower branch always has $\td r / {\td\phi}$~positive.
 For the sought-after closed curve,
 this means that $r (\phi)$~will be strictly decreasing
 along the portions which originate from the upper branch,
@@ -320,7 +320,7 @@ upper-branch and lower-branch portions.
 Travelling in the direction of increasing~$\phi$,
 there must eventually be a switching
 from the upper branch to the lower branch,
-and hence a jump discontinuity in~$\td r / \td\phi$
+and hence a jump discontinuity in~$\td r / {\td\phi}$
 from negative to positive.
 But this corresponds to a non-convex corner
 (Figure~TODO),
@@ -333,10 +333,10 @@ in the cold regime.
 For the transition case~$A = A_\nat$,
 the two branches of the boundary tracing ODE~%
   (\ref{eq:line-tracing-ode-coordinate-parametrisation-r})
-are again segregated by the sign of~$\td r / \td\phi$,
+are again segregated by the sign of~$\td r / {\td\phi}$,
 with the exception of the critical terminal curve~$r = r_\nat$,
 itself a traced boundary belonging to both branches,
-along which~$\psi (r) = A$ and~$\td r / \td\phi = 0$.
+along which~$\psi (r) = A$ and~$\td r / {\td\phi} = 0$.
 
 Any other closed curve made from traced boundaries
 will again consist of portions where $r (\phi)$~is strictly increasing
@@ -344,7 +344,7 @@ and other portions where it is strictly decreasing.
 To avoid the non-convex corner of Section~\ref{sec:polar.tracing.cold},
 any switching from the upper branch to the lower
 must occur along~$r = r_\nat$,
-so that $\td r / \td\phi$~remains zero across the switch
+so that $\td r / {\td\phi}$~remains zero across the switch
 (thus avoiding the jump from negative to positive).
 However, this turns out to be impossible;
 $r = r_\nat$~is in fact a limit cycle,
@@ -435,13 +435,13 @@ In the hot regime~$A < A_\nat$
 the critical terminal curve now consists of two circles,
 $r = r_\flat$ (inner) and~$r = r_\sharp$ (outer),
 both of which are themselves traced boundaries of both branches,
-along which~$\psi (r) = A$ and~$\td r / \td\phi = 0$.
+along which~$\psi (r) = A$ and~$\td r / {\td\phi} = 0$.
 Unlike the transition case,
 neither of these are limit cycles,
 so that other traced boundaries will smoothly attach onto them
 within finite time.
 Elsewhere the two branches are once again segregated
-by the sign of~$\td r / \td\phi$ in the boundary tracing ODE~%
+by the sign of~$\td r / {\td\phi}$ in the boundary tracing ODE~%
   (\ref{eq:line-tracing-ode-coordinate-parametrisation-r}).
 (Note that there are no traced boundaries
 in the non-viable annulus~$r_\flat < r < r_\sharp$.)
@@ -450,9 +450,9 @@ As before, when travelling in the direction of increasing~$\phi$,
 any switching from the upper branch (for which $r (\phi)$~is decreasing)
 to the lower branch (for which $r (\phi)$~is increasing)
 must take place along either~$r = r_\flat$ or~$r = r_\sharp$,
-where $\td r / \td\phi$~vanishes,
+where $\td r / {\td\phi}$~vanishes,
 otherwise a non-convex corner will be formed
-by the jump discontinuity in~$\td r / \td\phi$
+by the jump discontinuity in~$\td r / {\td\phi}$
 from negative to positive.
 
 For traced boundaries in the inner viable island~$0 \le r \le r_\flat$,
@@ -493,7 +493,7 @@ In the cold regime~$A > A_\nat$, the transition case~$A = A_\nat$
 and in the inner viable island~$r \le r_\flat$
 of the hot regime~$A < A_\nat$,
 there was the inevitable appearance of non-convex corners,
-caused by a negative-to-positive jump discontinuity in~$\td r / \td\phi$.
+caused by a negative-to-positive jump discontinuity in~$\td r / {\td\phi}$.
 
 On the outer viable mainland~$r \ge r_\sharp$
 of the hot regime~$A < A_\nat$,
@@ -501,13 +501,13 @@ such non-convex corners can be avoided
 by performing all upper-to-lower switching
 along the outer critical terminal curve~$r = r_\sharp$,
 itself a traced boundary of both branches,
-along which~$\td r / \td\phi = 0$.
+along which~$\td r / {\td\phi} = 0$.
 However, this is not sufficient to rule out
 \emph{smooth} non-convexity at the switch,
 caused instead by $\td^2 r / {\td\phi}^2$~being \emph{finite} but too large.%
 \footnote{
   It is helpful to think of the non-convex \emph{corner} case
-  (with a negative-to-positive jump discontinuity in~$\td r / \td\phi$)
+  (with a negative-to-positive jump discontinuity in~$\td r / {\td\phi}$)
   as having \emph{infinite}~$\td^2 r / {\td\phi}^2$, which is too large.
 }
 Consider a small perturbation~$r = r_\sharp + \xi$,
