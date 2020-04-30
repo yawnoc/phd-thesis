@@ -230,6 +230,9 @@ which can be produced in this manner.
   }
 \end{figure}
 
+\subsection{Domain construction}
+\label{sec:cartesian.plane.domain}
+
 Since the constructed radiation boundaries only dissipate heat,
 a domain for the steady conduction--radiation BVP
 will not be completely specified
@@ -266,3 +269,27 @@ are not physically valid.
 
 \section{Cosinusoidal solution}
 \label{sec:cartesian.cosine}
+
+While boundary tracing as performed on
+the plane-source solution~(\ref{eq:plane-laplace-solution})
+did not yield convex conduction--radiation domains,
+one might expect more favourable outcomes
+by starting from solutions to Laplace's equation
+which are not one-dimensional.
+A simple class of such solutions consists of functions which are the product
+of a trigonometric function in~$x$ and an hyperbolic function in~$y$.
+
+As seen in Section~\ref{sec:cartesian.plane.domain}
+one eventually requires a boundary to supply the heat being radiated away,
+and from a practical point of view it is
+straight-line, constant-temperature boundaries which are of interest.
+Therefore, in this section I consider known solutions of the form
+\begin{important}{equation}
+  T = T_0 \roundbr*{1 - B \cos\frac{x}{L_0} \cosh\frac{y}{L_0}},
+  \label{eq:plane-cosine-solution}
+\end{important}
+where $T_0$~is a temperature, $L_0$~is a length scale,
+and $B$~is a dimensionless constant.
+The temperature is constant at~$T = T_0$
+along the straight line~$x = \pi/2 \cdot L_0$,
+which shall ultimately serve as the heat-supplying boundary.
