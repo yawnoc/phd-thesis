@@ -286,10 +286,64 @@ straight-line, constant-temperature boundaries which are of interest.
 Therefore, in this section I consider known solutions of the form
 \begin{important}{equation}
   T = T_0 \roundbr*{1 - B \cos\frac{x}{L_0} \cosh\frac{y}{L_0}},
-  \label{eq:plane-cosine-solution}
+  \label{eq:cosine-laplace-solution}
 \end{important}
 where $T_0$~is a temperature, $L_0$~is a length scale,
 and $B$~is a dimensionless constant.
 The temperature is constant at~$T = T_0$
 along the straight line~$x = \pi/2 \cdot L_0$,
 which shall ultimately serve as the heat-supplying boundary.
+
+\subsection{Scaling}
+\label{sec:cartesian.cosine.scaling}
+
+First the physical parameters are scaled out to the extent possible.
+Using the same scalings as Section~\ref{sec:cartesian.plane.scaling},
+i.e.~(\ref{eq:plane-scaled-temperature}) through~(\ref{eq:plane-scaled-del}),
+the radiation boundary condition~(\ref{eq:radiation-boundary-condition})
+and the known solution~(\ref{eq:cosine-laplace-solution})
+become
+\begin{align}
+  \normalvec \dotp \scaleddel \scaled{T}
+    &= -\group{c \lambda \tau^3} \scaled{T}^4,
+    \label{eq:cosine-scaled-radiation-boundary-condition-with-groups}
+    \\[\fraclinespace]
+  \scaled{T}
+    &=
+      \group{\frac{T_0}{\tau}}
+      \roundbr*{
+        1 -
+          B
+          \cos \roundbr*{\group{\frac{\lambda}{L_0}} \scaled{x}}
+          \cosh \roundbr*{\group{\frac{\lambda}{L_0}} \scaled{y}}
+      },
+    \label{eq:cosine-scaled-laplace-solution-with-groups}
+\end{align}
+where there are two free scales, $\tau$~(temperature) and $\lambda$~(length).
+Since there are three unique dimensionless groups,
+one of the groups cannot be eliminated,
+and to keep the cosinusoidal terms as simple as possible,
+the obvious scales
+\begin{align}
+  \tau &= T_0,
+    \label{eq:cosine-temperature-scale} \\
+  \lambda &= L_0,
+    \label{eq:cosine-length-scale}
+\end{align}
+are chosen.
+Defining the dimensionless group
+\begin{equation}
+  A = \frac{1}{c L_0 {T_0}^3}.
+  \label{eq:cosine-dimensionless-group}
+\end{equation}
+and \atten{dropping \scalingaccents},
+the scaled boundary condition~%
+  (\ref{eq:cosine-scaled-radiation-boundary-condition-with-groups})
+and known solution~(\ref{eq:cosine-scaled-laplace-solution-with-groups})
+become
+\begin{important}{align}
+  \normalvec \dotp \del T &= -\frac{T^4}{A},
+    \label{eq:plane-scaled-radiation-boundary-condition} \\[\fraclinespace]
+  T &= 1 - B \cos x \cosh y.
+    \label{eq:plane-scaled-laplace-solution}
+\end{important}
