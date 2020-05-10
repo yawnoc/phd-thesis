@@ -50,7 +50,7 @@ and since $\basisvec{x}$ and~$\basisvec{y}$ are globally constant,
 observe that
 \begin{align}
   \basisvec{x} &= \pder{\positionvec}{x},
-    \label{eq:x-basis-vector} \\[\fraclinespace]
+    \label{eq:x-basis-vector} \\[\tallspace]
   \basisvec{y} &= \pder{\positionvec}{y}.
     \label{eq:y-basis-vector}
 \end{align}
@@ -67,7 +67,7 @@ in analogy to~(\ref{eq:x-basis-vector}) and~(\ref{eq:y-basis-vector}),
   \localvec{u} &
     \defeq \pder{\positionvec}{u}
     = \pder{x}{u} \basisvec{x} + \pder{y}{u} \basisvec{y},
-      \label{eq:u-local-basis-vector} \\[\fraclinespace]
+      \label{eq:u-local-basis-vector} \\[\tallspace]
   \localvec{v} &
     \defeq \pder{\positionvec}{v}
     = \pder{x}{v} \basisvec{x} + \pder{y}{v} \basisvec{y}.
@@ -92,7 +92,7 @@ and then normalises the local basis
 to obtain the \defin{local orthonormal basis},
 \begin{align}
   \basisvec{u} &\defeq \frac{\localvec{u}}{\scalefac[u]},
-      \label{eq:u-basis-vector} \\[\fraclinespace]
+      \label{eq:u-basis-vector} \\[\tallspace]
   \basisvec{v} &\defeq \frac{\localvec{v}}{\scalefac[v]},
       \label{eq:v-basis-vector}
 \end{align}
@@ -140,7 +140,7 @@ Indeed the \defin{differential displacement} is
   \td \positionvec
   &\defeq
     \pder{\positionvec}{u} \td u + \pder{\positionvec}{v} \td v
-    \\[\fraclinespace]
+    \\[\tallspace]
   &= \localvec{u} \td u + \localvec{v} \td v \\
   &= \scalefac[u] \td u \basisvec{u} + \scalefac[v] \td v \basisvec{v}.
     \yesnumber
@@ -162,7 +162,7 @@ By the chain rule, the independent increments~$\td u$ and~$\td v$
 effect the differential change
 \begin{align*}
   \td T
-  &= \pder{T}{u} \td u + \pder{T}{v} \td v \\[\fraclinespace]
+  &= \pder{T}{u} \td u + \pder{T}{v} \td v \\[\tallspace]
   &=
     \roundbr*{\frac{1}{\scalefac[u]} \pder{T}{u}}
     \roundbr[\big]{\scalefac[u] \td u}
@@ -341,7 +341,7 @@ For the components of the gradient vector~(\ref{eq:gradient}),
 write
 \begin{align}
   P &\defeq \frac{1}{\scalefac[u]} \pder{T}{u},
-    \label{eq:gradient-u-component} \\[\fraclinespace]
+    \label{eq:gradient-u-component} \\[\tallspace]
   Q &\defeq \frac{1}{\scalefac[v]} \pder{T}{v},
     \label{eq:gradient-v-component}
 \end{align}
@@ -354,7 +354,7 @@ Finally, for the components of
 the tangent vector~(\ref{eq:tangent-vector}), define
 \begin{align}
   \alpha &\defeq \tder{\mu}{s} = \frac{\scalefac[u] \td u}{\td s},
-    \label{eq:tangent-u-component} \\[\fraclinespace]
+    \label{eq:tangent-u-component} \\[\tallspace]
   \beta &\defeq \tder{\nu}{s} = \frac{\scalefac[v] \td v}{\td s},
     \label{eq:tangent-v-component}
 \end{align}
@@ -363,7 +363,7 @@ so that
   \tangentvec
   &= \frac{\td \mu \basisvec{u} + \td \nu \basisvec{v}}{\td s}
   = \alpha \basisvec{u} + \beta \basisvec{v},
-    \label{eq:tangent-vector-abbreviated} \\[\fraclinespace]
+    \label{eq:tangent-vector-abbreviated} \\[\tallspace]
   \normalvec
   &= \frac{\td \nu \basisvec{u} - \td \mu \basisvec{v}}{\td s}
   = \beta \basisvec{u} - \alpha \basisvec{v}.
@@ -520,14 +520,14 @@ for~$\alpha$ and~$\beta$, one obtains
 the boundary tracing system of ODEs under arc-length parametrisation,
 \begin{align}
   \tder{\mu}{s} &\defeq \alpha = \frac{-Q F \pm P \sqrt{\Phi}}{(\del T)^2},
-    \label{eq:tracing-ode-arc-length-parametrisation-mu} \\[\fraclinespace]
+    \label{eq:tracing-ode-arc-length-parametrisation-mu} \\[\tallspace]
   \tder{\nu}{s} &\defeq \beta = \frac{\+P F \pm Q \sqrt{\Phi}}{(\del T)^2},
     \label{eq:tracing-ode-arc-length-parametrisation-nu}
 \end{align}
 or
 \begin{important}{align}
   \tder{u}{s} &= \frac{-Q F \pm P \sqrt{\Phi}}{\scalefac[u] (\del T)^2},
-    \label{eq:tracing-ode-arc-length-parametrisation-u} \\[\fraclinespace]
+    \label{eq:tracing-ode-arc-length-parametrisation-u} \\[\tallspace]
   \tder{v}{s} &= \frac{\+P F \pm Q \sqrt{\Phi}}{\scalefac[v] (\del T)^2}.
     \label{eq:tracing-ode-arc-length-parametrisation-v}
 \end{important}
@@ -578,14 +578,14 @@ the resulting system in~$\alpha$ and~$\beta$
 solves to give the system of ODEs
 \begin{align}
   \tder{\mu}{s} &\defeq \alpha = \frac{\pm Q}{\norm{\del T}},
-    \label{eq:contour-ode-arc-length-parametrisation-mu} \\[\fraclinespace]
+    \label{eq:contour-ode-arc-length-parametrisation-mu} \\[\tallspace]
   \tder{\nu}{s} &\defeq \beta = \frac{\mp P}{\norm{\del T}}
     \label{eq:contour-ode-arc-length-parametrisation-nu},
 \end{align}
 or
 \begin{important}{align}
   \tder{u}{s} &= \frac{\pm Q}{\scalefac[u] \norm{\del T}},
-    \label{eq:contour-ode-arc-length-parametrisation-u} \\[\fraclinespace]
+    \label{eq:contour-ode-arc-length-parametrisation-u} \\[\tallspace]
   \tder{v}{s} &= \frac{\mp P}{\scalefac[v] \norm{\del T}}
     \label{eq:contour-ode-arc-length-parametrisation-v},
 \end{important}

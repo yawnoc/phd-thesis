@@ -92,7 +92,7 @@ become
   \normalvec \dotp \scaleddel \scaled{T}
     &= -\group{c \varrho \tau^3} \scaled{T}^4,
     \label{eq:line-scaled-radiation-boundary-condition-with-groups}
-    \\[\fraclinespace]
+    \\[\tallspace]
   \scaled{T}
     &=
       \group{\frac{T_0}{\tau}}
@@ -121,7 +121,7 @@ and known solution~(\ref{eq:line-scaled-laplace-solution-with-groups})
 become
 \begin{important}{align}
   \normalvec \dotp \del T &= -\frac{T^4}{A},
-    \label{eq:line-scaled-radiation-boundary-condition} \\[\fraclinespace]
+    \label{eq:line-scaled-radiation-boundary-condition} \\[\tallspace]
   T &= -\log r.
     \label{eq:line-scaled-laplace-solution}
 \end{important}
@@ -138,7 +138,7 @@ to the generic flux condition~(\ref{eq:flux-boundary-condition}),
 it follows that the flux function is
 \begin{align*}
   F
-  &= -\frac{T^4}{A} \\[\fraclinespace]
+  &= -\frac{T^4}{A} \\[\tallspace]
   &= -\frac{\log^4 r}{A}.
     \yesnumber
     \label{eq:line-flux-function}
@@ -146,16 +146,16 @@ it follows that the flux function is
 The radial and azimuthal components of the gradient~$\del T$ are
 \begin{align}
   P &= \pder{T}{r} = -\frac{1}{r},
-    \label{eq:line-gradient-u-component} \\[\fraclinespace]
+    \label{eq:line-gradient-u-component} \\[\tallspace]
   Q &= \frac{\pd T}{r \pd\phi} = 0,
     \label{eq:line-gradient-v-component}
 \end{align}
 and so the viability function is given by
 \begin{align*}
   \Phi
-  &= (\del T)^2 - F^2 \\[\fraclinespace]
-  &= \frac{1}{r^2} - \frac{\log^8 r}{A^2} \\[\fraclinespace]
-  &= \frac{A^2 - r^2 \log^8 r}{A^2 r^2} \\[\fraclinespace]
+  &= (\del T)^2 - F^2 \\[\tallspace]
+  &= \frac{1}{r^2} - \frac{\log^8 r}{A^2} \\[\tallspace]
+  &= \frac{A^2 - r^2 \log^8 r}{A^2 r^2} \\[\tallspace]
   &= \frac{A^2 - \psi^2}{A^2 r^2},
     \yesnumber
     \label{eq:line-viability-function}
@@ -366,7 +366,7 @@ there holds~$\psi' (r_\nat) = 0$, whence
   &=
     \psi (r_\nat) + \frac{1}{2!} \psi'' (r_\nat) \cdot \xi^2
     + \order \roundbr*{\xi^3}
-      \\[\fraclinespace]
+      \\[\tallspace]
   &=
     A_\nat + \frac{1}{2} \psi'' (r_\nat) \cdot \xi^2
     + \order \roundbr*{\xi^3}
@@ -391,7 +391,7 @@ becomes
     }{
       (r_\nat + \xi) \sqrt{{A_\nat}^2 - \psi^2 (r_\nat + \xi)}
     }
-    \\[\fraclinespace]
+    \\[\tallspace]
   &=
     \frac{
       A_\nat + \order \roundbr*{\xi^2}
@@ -401,13 +401,13 @@ becomes
         -A_\nat \psi'' (r_\nat) \cdot \xi^2 + \order \roundbr*{\xi^3}
       }
     }
-    \\[\fraclinespace]
+    \\[\tallspace]
   &=
     \frac{\sqrt{A_\nat}}{r_\nat \sqrt{-\psi'' (r_\nat)}}
       \cdot
     \frac{1}{\xi}
     + \order (1)
-    \\[\fraclinespace]
+    \\[\tallspace]
   &=
     \frac{2}{\xi} + \order (1).
       \yesnumber
@@ -542,7 +542,7 @@ becomes
     }{
       (r_\sharp + \xi) \sqrt{A^2 - \psi^2 (r_\sharp + \xi)}
     }
-    \\[\fraclinespace]
+    \\[\tallspace]
   &=
     \frac{
       A + \order (\xi)
@@ -550,7 +550,7 @@ becomes
       (r_\sharp + \xi)
       \sqrt{-2 A \psi' (r_\sharp) \cdot \xi + \order \roundbr*{\xi^2}}
     }
-    \\[\fraclinespace]
+    \\[\tallspace]
   &=
     \frac{1}{r_\sharp}
     \sqrt{\frac{2 A}{-\psi' (r_\sharp)}}
@@ -568,7 +568,7 @@ which integrates to give
     \sqrt{\frac{2 A}{-\psi' (r_\sharp)}}
       \cdot
     \sqrt{\xi}
-    + \order \roundbr*{\xi^{3/2}} \\[\fraclinespace]
+    + \order \roundbr*{\xi^{3/2}} \\[\tallspace]
   &=
     \sqrt{\frac{2 (-\log r_\sharp)}{r_\sharp (4 + \log r_\sharp)}}
       \cdot
@@ -604,7 +604,7 @@ is
 or
 \begin{align*}
   \xi
-  &= r_\sharp (\sec\phi - 1) \\[\fraclinespace]
+  &= r_\sharp (\sec\phi - 1) \\[\tallspace]
   &= \frac{r_\sharp}{2} \cdot \phi^2 + \order \roundbr*{\phi^4}.
     \yesnumber
     \label{eq:circle-tangent-line-xi-near-r-sharp}
@@ -1045,10 +1045,10 @@ this becomes
       \basisvec{r} \dotp \frac{k T_0}{r_\bath} \basisvec{r}
       \cdot r_\bath
     \td\phi
-      \\[\fraclinespace]
+      \\[\tallspace]
   &=
     2 \pi k T_0
-      \\[\fraclinespace]
+      \\[\tallspace]
   &=
     2 \pi k
     \roundbr*{\frac{1}{c r_\sharp \log^4 \scaled{r}_\sharp}}^{1/3}
