@@ -347,3 +347,26 @@ become
   T &= 1 - B \cos x \cosh y.
     \label{eq:cosine-scaled-laplace-solution}
 \end{important}
+
+\subsection{Physical domain}
+\label{sec:cartesian.cosine.physical}
+
+Since it is the straight-line boundary~$x = \pi/2$
+which ultimately shall, in the form of a Dirichlet condition~$T = 1$,
+supply the heat to be conducted and radiated away,
+only the side on which~$T \le 1$ is relevant,
+namely the side~$x \le \pi/2$.
+Given that the known solution~(\ref{eq:cosine-scaled-laplace-solution})
+is an even function of~$x$,
+it also suffices to consider~$x \ge 0$ only.
+
+Thus the region of interest
+is the vertical strip~$0 \le x \le \pi/2$.
+Not all of this strip is physical
+as only positive temperatures are admissible
+in thermal radiation problems,
+and since the known solution~(\ref{eq:cosine-scaled-laplace-solution})
+vanishes along~$\cos x \cosh y = 1 / B$,
+the geometry of the physical domain
+depends on the value of the dimensionless constant~$B$
+(Figure~TODO).
