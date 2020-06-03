@@ -380,6 +380,44 @@ as only positive temperatures are admissible
 in thermal radiation problems,
 and since the known solution~(\ref{eq:cosine-scaled-laplace-solution})
 vanishes along~$\cos x \cosh y = 1 / B$,
-the geometry of the physical domain
+the geometry of the physical domain~$T \ge 0$
 depends on the value of the dimensionless constant~$B$
 (Figure~\ref{fig:cosine_simple-physical}).
+
+\subsection{Boundary tracing equations}
+\label{sec:cartesian.cosine.tracing}
+
+In addition to only considering the physical domain~$T \ge 0$,
+traced boundaries will only exist within the viable domain.
+For the boundary condition~%
+  (\ref{eq:cosine-scaled-radiation-boundary-condition})
+and known solution~(\ref{eq:cosine-scaled-laplace-solution}) at hand,
+one obtains the derivatives
+\begin{align}
+  P &= \pder{T}{x} = \+B \sin x \cosh y,
+    \label{eq:cosine-gradient-u-component} \\[\tallspace]
+  Q &= \pder{T}{y} = -B \cos x \sinh y,
+    \label{eq:cosine-gradient-v-component}
+\end{align}
+the flux function
+\begin{equation}
+  F = -\frac{(1 - B \cos x \cosh y) ^ 4}{A},
+  \label{eq:cosine-flux-function}
+\end{equation}
+and the viability function
+\begin{align*}
+  \Phi
+  &= (\del T)^2 - F^2 \\
+  &= B^2 (\sin^2 x + \sinh^2 y) - \frac{(1 - B \cos x \cosh y) ^ 8}{A^2}.
+    \yesnumber
+    \label{eq:cosine-viability-function}
+\end{align*}
+The geometry of the viable domain~$\Phi \ge 0$
+therefore depends on both of the dimensionless parameters~$A$ and~$B$,
+as does the boundary tracing ODE~%
+  (\ref{eq:tracing-ode-coordinate-parametrisation-u}),
+which becomes
+\begin{important}{equation}
+  \tder{x}{y} = \frac{P Q \mp F \sqrt{\Phi}}{Q^2 - F^2}.
+  \label{eq:cosine-tracing-ode-coordinate-parametrisation-x}
+\end{important}
