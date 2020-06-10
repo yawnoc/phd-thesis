@@ -455,7 +455,7 @@ with its boundary (the physical portion of the terminal curve)
 passing through the vertical line~$x = \pi/2$ when~$A = 1$.
 Radiation boundaries as produced by boundary tracing will only be found
 in the white region of Figure~\ref{fig:cosine_simple-physical-viable},
-which is both viable~($\Phi \ge 0$) and physical~($T \ge 0$).
+which is both physical~($T \ge 0$) and viable~($\Phi \ge 0$).
 
 \begin{figure}
   \centredfigurecontent[width=\textwidth]{%
@@ -471,6 +471,35 @@ which is both viable~($\Phi \ge 0$) and physical~($T \ge 0$).
     The central plot corresponds to~$A = 1$.
   }
 \end{figure}
+
+\subsubsection{Boundary tracing}
+\label{sec:cartesian.cosine.simple.tracing}
+
+Two branches of traced boundaries are obtained
+by integrating the boundary tracing ODE~%
+  (\ref{eq:cosine-tracing-ode-coordinate-parametrisation-x})
+forward from starting points within the region both physical and viable.
+The resulting curves (Figure~TODO)
+are boundaries along which the radiation boundary condition~%
+  (\ref{eq:cosine-scaled-radiation-boundary-condition})
+is satisfied.
+For the correct boundary orientation,
+note that the temperature~$T$ is an increasing function of~$x$;
+it follows that the interior lies on the right of each boundary curve,
+with heat being lost by radiation to the left.
+
+TODO:
+\begin{itemize}
+  \item Patch traced boundaries to make radiation boundaries
+  \item Join radiation boundaries with a portion of the line~$x = \pi/2$
+        to make conduction--radiation domains
+  \item Rule out almost all tracings since they are self-viewing
+  \item Must pass through critical terminal point~$(x_0, 0)$
+        in order to avoid non-convex spike
+\end{itemize}
+
+\subsubsection{Convexity}
+\label{sec:cartesian.cosine.simple.convexity}
 
 \subsection{General case (\texorpdfstring{$B$~arbitrary}{B arbitrary})}
 \label{sec:cartesian.cosine.general}
