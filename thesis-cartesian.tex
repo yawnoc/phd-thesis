@@ -475,10 +475,25 @@ which is both physical~($T \ge 0$) and viable~($\Phi \ge 0$).
 \subsubsection{Boundary tracing}
 \label{sec:cartesian.cosine.simple.tracing}
 
-Two branches of traced boundaries are obtained
-by integrating the boundary tracing ODE~%
+The tracing ODE~%
   (\ref{eq:cosine-tracing-ode-coordinate-parametrisation-x})
-forward from starting points within the region both physical and viable.
+cannot be integrated analytically,
+so the traced boundaries are determined numerically.
+In doing so, the parametrisation~$x = x (y)$
+is unable to handle traced boundaries which are locally horizontal;
+such difficulty is avoided by instead using the arc-length parametrisation~%
+  (\ref{eq:tracing-ode-arc-length-parametrisation-u})
+and~(\ref{eq:tracing-ode-arc-length-parametrisation-v}),
+which for Cartesian coordinates reduces to
+\begin{align}
+  \tder{x}{s} &= \frac{-Q F \pm P \sqrt{\Phi}}{(\del T)^2},
+    \label{eq:cosine-tracing-ode-arc-length-parametrisation-x} \\[\tallspace]
+  \tder{y}{s} &= \frac{\+P F \pm Q \sqrt{\Phi}}{(\del T)^2}.
+    \label{eq:cosine-tracing-ode-arc-length-parametrisation-y}
+\end{align}
+Two branches of traced boundaries are obtained
+by integrating forward
+from starting points within the region both physical and viable.
 The resulting curves (Figure~TODO)
 are boundaries along which the radiation boundary condition~%
   (\ref{eq:cosine-scaled-radiation-boundary-condition})
