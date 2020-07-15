@@ -515,12 +515,19 @@ with heat being lost by radiation to the left.
   }
 \end{figure}
 
+By patching together the traced boundaries,
+an unlimited number of radiation boundaries may be constructed.
+However, almost all such constructions are non-convex
+(see Figure~TODO),
+and as noted already in Section~\ref{sec:cartesian.plane.domain}
+self-viewing radiation is not accounted for
+by the simple radiation boundary condition~%
+  (\ref{eq:cosine-scaled-radiation-boundary-condition}).
+
 TODO:
 \begin{itemize}
-  \item Patch traced boundaries to make radiation boundaries
   \item Join radiation boundaries with a portion of the line~$x = \pi/2$
         to make conduction--radiation domains
-  \item Rule out almost all tracings since they are self-viewing
   \item Must pass through critical terminal point~$(x_0, 0)$
         in order to avoid non-convex spike
 \end{itemize}
