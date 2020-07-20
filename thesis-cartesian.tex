@@ -518,17 +518,23 @@ with heat being lost by radiation to the left.
 By patching together the traced boundaries,
 an unlimited number of radiation boundaries may be constructed.
 However, almost all such constructions are non-convex
-(see Figure~\ref{fig:cosine_simple-traced-boundaries-patched-spiky}),
-and as noted already in Section~\ref{sec:cartesian.plane.domain},
+(see Figure~\ref{fig:cosine_simple-traced-boundaries-patched-spiky}).
+At any point strictly within the viable domain,
+(i.e.~in the viable domain but not along its boundary the terminal curve),
+two traced boundaries cross at a non-zero angle,
+and patching these two boundaries together
+inevitably results in a spike made of non-convex curves.
+As noted already in Section~\ref{sec:cartesian.plane.domain},
 self-viewing radiation is not accounted for
 by the simple radiation boundary condition~%
-  (\ref{eq:cosine-scaled-radiation-boundary-condition}).
+  (\ref{eq:cosine-scaled-radiation-boundary-condition}),
+and so the non-convex constructions are all invalid.
 
 \begin{figure}
   \newcommand*{\subfigurewidth}{0.48\textwidth}
   \begin{subfigure}{\subfigurewidth}
     \centredfigurecontent{cosine_simple-traced-boundaries-patched-spiky}{%
-      Spiky boundary with non-convex grooves
+      Spiky non-convex boundary
     }
   \end{subfigure}
     \hfill
@@ -543,6 +549,16 @@ by the simple radiation boundary condition~%
   }
   \label{fig:cosine_simple-traced-boundaries-patched}
 \end{figure}
+
+To avoid the non-convex spikes caused
+by patching traced boundaries which cross at an angle,
+the join must occur at a point along the terminal curve.
+Furthermore this point must not be an ordinary terminal point,
+since the two traced boundaries being patched
+would form a cusp which has inconsistent boundary orientation.
+Only the join must occur at a critical terminal point,
+which, recall, is a point along the terminal curve
+for which the local $T$-contour touches the terminal curve tangentially.
 
 TODO:
 \begin{itemize}
