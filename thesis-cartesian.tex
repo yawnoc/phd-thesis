@@ -520,7 +520,7 @@ an unlimited number of radiation boundaries may be constructed.
 However, almost all such constructions are non-convex
 (see Figure~\ref{fig:cosine_simple-traced-boundaries-patched-spiky}).
 At any point strictly within the viable domain,
-(i.e.~in the viable domain but not along its boundary the terminal curve),
+(i.e.~in the viable domain but not along its boundary the terminal curve,)
 two traced boundaries cross at a non-zero angle,
 and patching these two boundaries together
 inevitably results in a spike made of non-convex curves.
@@ -559,22 +559,34 @@ and so the non-convex constructions are all invalid.
   }
 \end{figure}
 
-To avoid the non-convex spikes caused
-by patching traced boundaries which cross at an angle,
+To avoid the non-convex spikes,
 the join must occur at a point along the terminal curve.
-Furthermore this point must not be an ordinary terminal point,
-since the two traced boundaries being patched
-would form a cusp which has inconsistent boundary orientation.
-Only the join must occur at a critical terminal point,
+Moreover this point must not be an ordinary terminal point,
+at which the two traced boundaries being patched
+would form a cusp which has inconsistent boundary orientation
+(see Section~{\ref{sec:introduction.tracing}).
+Instead the join must occur at a critical terminal point,
 which, recall, is a point along the terminal curve
 for which the local $T$-contour touches the terminal curve tangentially.
+
+Figure~\ref{fig:cosine_simple-terminal-points} shows that in the present case,
+all points along the terminal curve are ordinary
+except for a single critical terminal point~$(x_0, 0)$
+at the intersection between the terminal curve
+and the horizontal axis~$y = 0$.
+Furthermore, the local $T$-contour
+lies on the viable side of the terminal curve;
+therefore the critical terminal point~$(x_0, 0)$ is of hyperbolic type,
+with two traced boundaries passing through it smoothly.
+By patching together the portions which lie to the right of~$(x_0, 0)$,
+a single spike-free radiation boundary can be constructed
+as shown in Figure~\ref{fig:cosine_simple-traced-boundaries-patched-smooth};
+call this boundary the \defin{candidate boundary}.
 
 TODO:
 \begin{itemize}
   \item Join radiation boundaries with a portion of the line~$x = \pi/2$
         to make conduction--radiation domains
-  \item Must pass through critical terminal point~$(x_0, 0)$
-        in order to avoid non-convex spike
 \end{itemize}
 
 \subsubsection{Convexity}
