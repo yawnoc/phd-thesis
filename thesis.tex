@@ -17,18 +17,20 @@
 ]{geometry}
 
 % Slightly-more-than-one spacing
-%   NOTE: for 11pt font, \onehalfspacing is defined as \setstretch{1.213}.
-%   See <https://github.com/rf-latex/setspace/blob/02cf9e0/setspace.sty#L350>.
-%   The general consensus is that
-%   (1) nobody knows what one-and-a-half and double spacing mean, and
-%   (2) large line spacing is ugly.
-%   See <https://tex.stackexchange.com/a/13803>.
+% --------
+% NOTE: for 11pt font, \onehalfspacing is defined as \setstretch{1.213}.
+% See <https://github.com/rf-latex/setspace/blob/02cf9e0/setspace.sty#L350>.
+% The general consensus is that
+% (1) nobody knows what one-and-a-half and double spacing mean, and
+% (2) large line spacing is ugly.
+% See <https://tex.stackexchange.com/a/13803>.
 \usepackage{setspace}
 \setstretch{1.13}
 
 % Heading styles
-%   Larger part headings label
-%   Smaller chapter headings
+% --------
+% Larger part headings label
+% Smaller chapter headings
 \usepackage{titlesec}
 \titleformat{\part}[display]%
   {\setstretch{1.5}\normalfont\Huge\bfseries\filcenter}%
@@ -133,8 +135,9 @@
 \renewcommand*{\vec}[1]{\boldsymbol{\mathbf{#1}}}
 
 % Bracketing
-% Style guide for optional size argument:
-%   *       for fraction-height, radical-height or superscript-height content
+% --------
+% Style guide for optional sizing argument:
+%   *       for fraction-height, radical-height, or superscript-height content
 %   [\big]  for text-height content which is bulky
 %   [\Big]  for text-height content which a derivative (\pder) is acting upon
 \DeclarePairedDelimiter{\curlybr}{\{}{\}}
@@ -142,7 +145,8 @@
 \DeclarePairedDelimiter{\squarebr}{[}{]}
 
 % Evaluation
-% Style guide for size argument (do not omit since left delimiter is "."):
+% --------
+% Style guide for sizing argument (do not omit since left delimiter is "."):
 %   *       for fraction-height or radical-height content
 %   [\big]  for text-height or superscript-height content
 \DeclarePairedDelimiter{\eval}{.}{\rvert}
@@ -154,6 +158,7 @@
 \newcommand*{\pd}{\mathopspace\partial}
 
 % Partial derivative
+% --------
 %   #1  [order] default ""
 %   #2  {dependent variable}
 %   #3  {independent variable}
@@ -162,6 +167,7 @@
 }
 
 % Total differential
+% --------
 % Style guide:
 %   {\td x}   for the denominator of a derivative after "/"
 %             (see <https://tex.stackexchange.com/a/68303>)
@@ -170,6 +176,7 @@
 \newcommand*{\td}{\mathopspace\mathrm{d}}
 
 % Total derivative
+% --------
 %   #1  [order] default ""
 %   #2  {dependent variable}
 %   #3  {independent variable}
