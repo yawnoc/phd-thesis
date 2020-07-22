@@ -249,7 +249,7 @@ by joining a constructed radiation boundary
 with an appropriate Dirichlet boundary~$x = \const$,
 as in Figure~\ref{fig:plane-domains}.
 Each of these domains corresponds to steady conduction in the interior,
-constant temperature along the right hand side
+constant temperature along the right hand side,
 and thermal radiation into vacuum to the left.
 Most surprising is that \emph{all} of these domains
 admit the \emph{same} exact solution~(\ref{eq:plane-scaled-laplace-solution}).
@@ -598,14 +598,30 @@ the candidate boundary and the terminal curve are virtually indistinguishable;
 despite only touching each other at the critical terminal point~$(x_0, 0)$,
 the former asymptotically approaches the latter travelling away from~$y = 0$.
 
-TODO:
-\begin{itemize}
-  \item Join radiation boundaries with a portion of the line~$x = \pi/2$
-        to make conduction--radiation domains
-\end{itemize}
-
 \subsubsection{Convexity}
 \label{sec:cartesian.cosine.simple.convexity}
+
+The choice of the candidate boundary over all other boundary patchings
+is a necessary but not sufficient condition for convexity.
+While the candidate boundary is convex at~$(x_0, 0)$,
+it eventually inflects at some~$y = \pm y_\infl$ depending on~$A$,
+and becomes concave.
+
+Recalling the goal of constructing domains
+corresponding to a conduction--radiation BVP\@,
+a \defin{candidate domain} is marked out by using
+the candidate boundary (the radiation boundary)
+and the straight line~$x = 1$ (the heat-supplying boundary)
+for demarcation.
+The continuum of candidate domains (for~$0 < A < 1$)\footnote{
+  At~$A = 1$ the candidate boundary touches the line~$x = 1$
+  and the candidate domain shrinks to a point.
+}
+is shown in Figure~TODO;
+each domain is shaped like a thin lens,
+corresponding to steady conduction in its interior,
+thermal radiation along the curved part to the left,
+and constant temperature~$T = 1$ along the straight boundary on the right.
 
 \subsection{General case (\texorpdfstring{$B$~arbitrary}{B arbitrary})}
 \label{sec:cartesian.cosine.general}
