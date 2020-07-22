@@ -635,6 +635,25 @@ is that for which the first inflection occurs at precisely~$x_\infl = \pi/2$.
 Given that the candidate boundary is never horizontal,
 $A_\infl$~is best sought using the coordinate parametrisation~$x = x (y)$
 for the candidate boundary.
+In Cartesian coordinates
+the boundary curvature is simply the second derivative,
+or, using primes for $y$-differentiation, $x''$.
+Differentiating the first derivative~%
+  (\ref{eq:cosine-tracing-ode-coordinate-parametrisation-x})
+gives
+\begin{equation}
+  x'' = \tder{}{y} \roundbr*{\frac{P Q \mp F \sqrt{\Phi}}{Q^2 - F^2}},
+  \label{eq:curvature-cartesian-by-y}
+\end{equation}
+whose right hand side may be reduced to a function purely of~$x$ and~$y$
+by applying~(\ref{eq:cosine-tracing-ode-coordinate-parametrisation-x})
+once more to eliminate the first derivatives.
+Substituting~$x = x_\infl = \pi/2$, this becomes
+\begin{equation}
+  \eval[\big]{x''}_{x=\pi/2} =
+    % TODO
+  \label{eq:cosine-traced-boundary-curvature-cartesian-by-y-x-at-pi-on-2}
+\end{equation}
 
 \subsection{General case (\texorpdfstring{$B$~arbitrary}{B arbitrary})}
 \label{sec:cartesian.cosine.general}
