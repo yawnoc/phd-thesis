@@ -651,9 +651,13 @@ once more to eliminate the first derivatives.
 Substituting~$x = x_\infl = \pi/2$, this becomes
 \begin{equation}
   \eval[\big]{x''}_{x=\pi/2} =
-    % TODO
+    \frac{A^2 C}{\sqrt{A^2 C^2 - 1}}
+    \squarebr*{
+      2 S - (1 + S^2) \roundbr*{A^2 S + 4 \sqrt{A^2 (1 + S^2) - 1}}
+    },
   \label{eq:cosine-traced-boundary-curvature-cartesian-by-y-x-at-half-pi}
 \end{equation}
+where~$C = \cosh y$ and~$S = \sinh y$.
 
 \subsection{General case (\texorpdfstring{$B$~arbitrary}{B arbitrary})}
 \label{sec:cartesian.cosine.general}
