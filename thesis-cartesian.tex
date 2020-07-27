@@ -643,7 +643,7 @@ Differentiating the first derivative~%
 gives
 \begin{equation}
   x'' = \tder{}{y} \roundbr*{\frac{P Q \mp F \sqrt{\Phi}}{Q^2 - F^2}},
-  \label{eq:acceleration-cartesian-by-y}
+  \label{eq:acceleration-traced-boundary-cartesian-by-y}
 \end{equation}
 whose right hand side may be reduced to a function purely of~$x$ and~$y$
 by applying~(\ref{eq:cosine-tracing-ode-coordinate-parametrisation-x})
@@ -655,9 +655,38 @@ Substituting~$x = x_\infl = \pi/2$, this becomes
     \squarebr*{
       2 S - (1 + S^2) \roundbr*{A^2 S + 4 \sqrt{A^2 (1 + S^2) - 1}}
     },
-  \label{eq:cosine-traced-boundary-acceleration-cartesian-by-y-x-at-half-pi}
+  \label{eq:%
+    cosine-simple-traced-boundary-acceleration-cartesian-by-y-inflection%
+  }
 \end{equation}
-where~$C = \cosh y$ and~$S = \sinh y$.
+where~$C \defeq \cosh y$ and~$S \defeq \sinh y$.
+Only the square-bracketed factor can change sign,
+and an analysis shows that for~$0 < A < 1$,
+this factor has a unique zero-crossing~$S = S_\infl (A)$.
+The would-be $y$-coordinate of inflection for a given~$A$ is therefore
+\begin{equation}
+  y = y_\infl (A) = \sinh^{-1} (S_\infl (A)).
+  \label{eq:cosine-simple-traced-boundary-y-would-be-inflection}
+\end{equation}
+Since the inflection is supposed to occur at~$x_\infl = \pi/2$,
+the critical value~$A = A_\infl$ is the solution to
+\begin{equation}
+  x (y_\infl (A)) = \pi/2,
+  \label{eq:cosine-simple-traced-boundary-a-inflection-equation}
+\end{equation}
+whose left hand side is the coordinate parametrisation~$x = x (y)$
+evaluated at the would-be $y$-coordinate~%
+  (\ref{eq:cosine-simple-traced-boundary-y-would-be-inflection}).
+The bisection algorithm yields
+\begin{equation}
+  A_\infl = 0.79718,
+  \label{eq:cosine-simple-traced-boundary-a-inflection}
+\end{equation}
+and therefore the lens-like candidate domain is convex if and only if
+\begin{equation}
+  A_\infl \le A < 1.
+  \label{eq:cosine-simple-traced-boundary-convex-a-interval}
+\end{equation}
 
 \subsection{General case (\texorpdfstring{$B$~arbitrary}{B arbitrary})}
 \label{sec:cartesian.cosine.general}
