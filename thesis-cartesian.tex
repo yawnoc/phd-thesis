@@ -17,7 +17,7 @@ First I consider the simplest non-constant solution
 to Laplace's equation~(\ref{eq:laplace-steady-conduction})
 in Cartesian coordinates,
 \begin{important}{equation}
-  T = h_0 x,
+  T \ideq h_0 x,
   \label{eq:plane-laplace-solution}
 \end{important}
 corresponding to one-dimensional steady conduction
@@ -48,13 +48,13 @@ and reduce the problem to its simplest form.
 
 Defining
 \begin{align}
-  \scaled{T} &= T / \tau, \label{eq:plane-scaled-temperature} \\
-  \scaled{x} &= x / \lambda, \label{eq:plane-scaled-x} \\
-  \scaled{y} &= y / \lambda, \label{eq:plane-scaled-y}
+  \scaled{T} &\defeq T / \tau, \label{eq:plane-scaled-temperature} \\
+  \scaled{x} &\defeq x / \lambda, \label{eq:plane-scaled-x} \\
+  \scaled{y} &\defeq y / \lambda, \label{eq:plane-scaled-y}
 \end{align}
 and noting that
 \begin{equation}
-  \scaleddel = \lambda \del,
+  \scaleddel \ideq \lambda \del,
   \label{eq:plane-scaled-del}
 \end{equation}
 the radiation boundary condition~(\ref{eq:radiation-boundary-condition})
@@ -66,7 +66,7 @@ become
     \label{eq:plane-scaled-radiation-boundary-condition-with-groups}
     \\[\tallspace]
   \scaled{T}
-    &= \group{\frac{h_0 \lambda}{\tau}} \scaled{x}.
+    &\ideq \group{\frac{h_0 \lambda}{\tau}} \scaled{x}.
     \label{eq:plane-scaled-laplace-solution-with-groups}
 \end{align}
 Setting the two dimensionless groups to unity
@@ -107,17 +107,17 @@ become
 \begin{important}{align}
   \normalvec \dotp \del T &= -T^4,
     \label{eq:plane-scaled-radiation-boundary-condition} \\
-  T &= x.
+  T &\ideq x.
     \label{eq:plane-scaled-laplace-solution}
 \end{important}
 The scale factors for Cartesian coordinates are trivial
-($\scalefac[x] = \scalefac[y] = 1$),
+($\scalefac[x] \ideq \scalefac[y] \ideq 1$),
 leading to the following abbreviatory quantities
 from Section~\ref{sec:curvilinear.calculus.abbreviations}:
 \begin{align}
-  P &= \pder{T}{x} = 1,
+  P &\ideq \pder{T}{x} \ideq 1,
     \label{eq:plane-gradient-u-component} \\[\tallspace]
-  Q &= \pder{T}{y} = 0.
+  Q &\ideq \pder{T}{y} \ideq 0.
     \label{eq:plane-gradient-v-component}
 \end{align}
 Comparing the radiation boundary condition~%
@@ -126,16 +126,16 @@ to the generic one~(\ref{eq:flux-boundary-condition}),
 the flux function is
 \begin{align*}
   F
-  &= - T^4 \\
-  &= -x^4,
+  &\ideq - T^4 \\
+  &\ideq -x^4,
     \yesnumber
     \label{eq:plane-flux-function}
 \end{align*}
 and it follows that the viability function is
 \begin{align*}
   \Phi
-  &= (\del T)^2 - F^2 \\
-  &= 1 - x^8.
+  &\ideq (\del T)^2 - F^2 \\
+  &\ideq 1 - x^8.
     \yesnumber
     \label{eq:plane-viability-function}
 \end{align*}
@@ -285,7 +285,7 @@ and from a practical point of view it is
 straight-line, constant-temperature boundaries which are of interest.
 Therefore, in this section I consider known solutions of the form
 \begin{important}{equation}
-  T = T_0 \roundbr*{1 - B \cos\frac{x}{L_0} \cosh\frac{y}{L_0}},
+  T \ideq T_0 \roundbr*{1 - B \cos\frac{x}{L_0} \cosh\frac{y}{L_0}},
   \label{eq:cosine-laplace-solution}
 \end{important}
 where $T_0$~is a temperature, $L_0$~is a length scale,
@@ -309,7 +309,7 @@ become
     \label{eq:cosine-scaled-radiation-boundary-condition-with-groups}
     \\[\tallspace]
   \scaled{T}
-    &=
+    &\ideq
       \group{\frac{T_0}{\tau}}
       \roundbr*{
         1 -
@@ -333,7 +333,7 @@ the obvious scales
 are chosen.
 Defining the dimensionless group
 \begin{equation}
-  A = \frac{1}{c L_0 {T_0}^3}.
+  A \defeq \frac{1}{c L_0 {T_0}^3}.
   \label{eq:cosine-dimensionless-group}
 \end{equation}
 and \atten{dropping \scalingaccents},
@@ -344,7 +344,7 @@ become
 \begin{important}{align}
   \normalvec \dotp \del T &= -\frac{T^4}{A},
     \label{eq:cosine-scaled-radiation-boundary-condition} \\[\tallspace]
-  T &= 1 - B \cos x \cosh y.
+  T &\ideq 1 - B \cos x \cosh y.
     \label{eq:cosine-scaled-laplace-solution}
 \end{important}
 
@@ -394,21 +394,21 @@ For the boundary condition~%
 and known solution~(\ref{eq:cosine-scaled-laplace-solution}) at hand,
 one obtains the derivatives
 \begin{align}
-  P &= \pder{T}{x} = \+B \sin x \cosh y,
+  P &\ideq \pder{T}{x} \ideq \+B \sin x \cosh y,
     \label{eq:cosine-gradient-u-component} \\[\tallspace]
-  Q &= \pder{T}{y} = -B \cos x \sinh y,
+  Q &\ideq \pder{T}{y} \ideq -B \cos x \sinh y,
     \label{eq:cosine-gradient-v-component}
 \end{align}
 the flux function
 \begin{equation}
-  F = -\frac{(1 - B \cos x \cosh y) ^ 4}{A},
+  F \ideq -\frac{(1 - B \cos x \cosh y) ^ 4}{A},
   \label{eq:cosine-flux-function}
 \end{equation}
 and the viability function
 \begin{align*}
   \Phi
-  &= (\del T)^2 - F^2 \\
-  &=
+  &\ideq (\del T)^2 - F^2 \\
+  &\ideq
     B^2 \roundbr*{\sin^2 x + \sinh^2 y}
       -
     \frac{(1 - B \cos x \cosh y) ^ 8}{A^2}.
@@ -436,12 +436,12 @@ I consider~$B = 1$ before examining the general case.
 In the $B = 1$~case,
 the known solution~(\ref{eq:cosine-scaled-laplace-solution}) simplifies to
 \begin{equation}
-  T = 1 - \cos x \cosh y
+  T \ideq 1 - \cos x \cosh y
   \label{eq:cosine-simple-laplace-solution}
 \end{equation}
 and the viability function~(\ref{eq:cosine-viability-function}) reduces to
 \begin{equation}
-  \Phi = \sin^2 x + \sinh^2 y - \frac{(1 - \cos x \cosh y) ^ 8}{A^2}.
+  \Phi \ideq \sin^2 x + \sinh^2 y - \frac{(1 - \cos x \cosh y) ^ 8}{A^2}.
   \label{eq:cosine-simple-viability-function}
 \end{equation}
 Figure~\ref{fig:cosine_simple-physical-viable} shows
@@ -595,7 +595,7 @@ Algebraically, $x_0$~is the positive%
 solution to
 \begin{equation}
   \eval[\big]{\Phi}_{y=0}
-  = \roundbr*{1 - \cos^2 x} - \frac{(1 - \cos x)^8}{A^2}
+  \ideq \roundbr*{1 - \cos^2 x} - \frac{(1 - \cos x)^8}{A^2}
   = 0,
   \label{eq:cosine-simple-critical-terminal-point-x}
 \end{equation}
@@ -739,7 +739,7 @@ for they locate the critical terminal points.%
 Algebraically they are given by the roots of
 \begin{equation}
   \eval[\big]{\Phi}_{y=0}
-  = B^2 \sin^2 x - \frac{(1 - B \cos x)^8}{A^2}
+  \ideq B^2 \sin^2 x - \frac{(1 - B \cos x)^8}{A^2}
   = 0,
   \label{eq:cosine-general-critical-terminal-point-x}
 \end{equation}

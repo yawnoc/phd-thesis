@@ -16,11 +16,11 @@ The line-source solution
 to Laplace's equation~(\ref{eq:laplace-steady-conduction})
 is usually encountered in electrostatics,
 where it represents the potential of a line charge,
-logarithmic in the cylindrical radius~$r = \sqrt{x^2 + y^2}$.
+logarithmic in the cylindrical radius~$r \ideq \sqrt{x^2 + y^2}$.
 In the context of steady conduction,
 the only dimensionally consistent form for this is
 \begin{important}{equation}
-  T = T_0 \log \roundbr*{\frac{r_0}{r}}
+  T \ideq T_0 \log \roundbr*{\frac{r_0}{r}}
   \label{eq:line-laplace-solution}
 \end{important}
 for some temperature~$T_0$ and radius~$r_0$.%
@@ -46,23 +46,23 @@ given by the transformation
 \end{align}
 The local basis vectors are
 \begin{align}
-  \localvec{r} &=
+  \localvec{r} &\ideq
     \cos\phi \basisvec{x} + \sin\phi \basisvec{y},
     \label{eq:r-local-basis-vector} \\
-  \localvec{\phi} &=
+  \localvec{\phi} &\ideq
     r \roundbr[\big]{-\sin\phi \basisvec{x} + \cos\phi \basisvec{y}},
     \label{eq:phi-local-basis-vector}
 \end{align}
 the scale factors,
 \begin{align}
-  \scalefac[r] &= 1, \label{eq:r-scale-factor} \\
-  \scalefac[\phi] &= r, \label{eq:phi-scale-factor}
+  \scalefac[r] &\ideq 1, \label{eq:r-scale-factor} \\
+  \scalefac[\phi] &\ideq r, \label{eq:phi-scale-factor}
 \end{align}
 and the local orthonormal basis vectors,
 \begin{align}
-  \basisvec{r} &= \cos\phi \basisvec{x} + \sin\phi \basisvec{y},
+  \basisvec{r} &\ideq \cos\phi \basisvec{x} + \sin\phi \basisvec{y},
     \label{eq:r-basis-vector} \\
-  \basisvec{\phi} &= -\sin\phi \basisvec{x} + \cos\phi \basisvec{y}.
+  \basisvec{\phi} &\ideq -\sin\phi \basisvec{x} + \cos\phi \basisvec{y}.
     \label{eq:phi-basis-vector}
 \end{align}
 
@@ -76,13 +76,13 @@ the radiation boundary condition~(\ref{eq:radiation-boundary-condition}).
 
 Let
 \begin{align}
-  \scaled{T} &= T / \tau, \label{eq:line-scaled-temperature} \\
-  \scaled{r} &= r / \varrho, \label{eq:line-scaled-r}
+  \scaled{T} &\defeq T / \tau, \label{eq:line-scaled-temperature} \\
+  \scaled{r} &\defeq r / \varrho, \label{eq:line-scaled-r}
 \end{align}
 with~$\tau$ and~$\varrho$ to be chosen later.
 Noting that
 \begin{equation}
-  \scaleddel = \varrho \del,
+  \scaleddel \ideq \varrho \del,
   \label{eq:line-scaled-del}
 \end{equation}
 the radiation boundary condition~(\ref{eq:radiation-boundary-condition})
@@ -94,7 +94,7 @@ become
     \label{eq:line-scaled-radiation-boundary-condition-with-groups}
     \\[\tallspace]
   \scaled{T}
-    &=
+    &\ideq
       \group{\frac{T_0}{\tau}}
       \log \roundbr*{\frac{\group{r_0 / \varrho}}{\scaled{r}}}.
     \label{eq:line-scaled-laplace-solution-with-groups}
@@ -112,7 +112,7 @@ put
 \end{align}
 and define the dimensionless group
 \begin{equation}
-  A = \frac{1}{c r_0 {T_0}^3}.
+  A \defeq \frac{1}{c r_0 {T_0}^3}.
   \label{eq:line-dimensionless-group}
 \end{equation}
 \atten{Dropping \scalingaccents}, the scaled boundary condition~%
@@ -122,7 +122,7 @@ become
 \begin{important}{align}
   \normalvec \dotp \del T &= -\frac{T^4}{A},
     \label{eq:line-scaled-radiation-boundary-condition} \\[\tallspace]
-  T &= -\log r.
+  T &\ideq -\log r.
     \label{eq:line-scaled-laplace-solution}
 \end{important}
 
@@ -138,25 +138,25 @@ to the generic flux condition~(\ref{eq:flux-boundary-condition}),
 it follows that the flux function is
 \begin{align*}
   F
-  &= -\frac{T^4}{A} \\[\tallspace]
-  &= -\frac{\log^4 r}{A}.
+  &\ideq -\frac{T^4}{A} \\[\tallspace]
+  &\ideq -\frac{\log^4 r}{A}.
     \yesnumber
     \label{eq:line-flux-function}
 \end{align*}
 The radial and azimuthal components of the gradient~$\del T$ are
 \begin{align}
-  P &= \pder{T}{r} = -\frac{1}{r},
+  P &\ideq \pder{T}{r} \ideq -\frac{1}{r},
     \label{eq:line-gradient-u-component} \\[\tallspace]
-  Q &= \frac{\pd T}{r \pd\phi} = 0,
+  Q &\ideq \frac{\pd T}{r \pd\phi} \ideq 0,
     \label{eq:line-gradient-v-component}
 \end{align}
 and so the viability function is given by
 \begin{align*}
   \Phi
-  &= (\del T)^2 - F^2 \\[\tallspace]
-  &= \frac{1}{r^2} - \frac{\log^8 r}{A^2} \\[\tallspace]
-  &= \frac{A^2 - r^2 \log^8 r}{A^2 r^2} \\[\tallspace]
-  &= \frac{A^2 - \psi^2}{A^2 r^2},
+  &\ideq (\del T)^2 - F^2 \\[\tallspace]
+  &\ideq \frac{1}{r^2} - \frac{\log^8 r}{A^2} \\[\tallspace]
+  &\ideq \frac{A^2 - r^2 \log^8 r}{A^2 r^2} \\[\tallspace]
+  &\ideq \frac{A^2 - \psi^2}{A^2 r^2},
     \yesnumber
     \label{eq:line-viability-function}
 \end{align*}
@@ -177,7 +177,7 @@ On this interval, $\psi$~is positive
 except at the endpoints~$r = 0$ and~$r = 1$, where it vanishes.
 Observing that the slope
 \begin{equation}
-  \tder{\psi}{r} = (4 + \log r) \log^3 r
+  \tder{\psi}{r} \ideq (4 + \log r) \log^3 r
   \label{eq:line-psi-r-derivative}
 \end{equation}
 changes sign from positive to negative
@@ -685,12 +685,12 @@ observe that the orthonormal basis vectors~%
 will change, along this curve, according to
 \begin{align}
   (\basisvec{r})'
-  &= -\sin\phi \cdot \phi' \basisvec{x} + \cos\phi \cdot \phi' \basisvec{y}
-  = \+\phi' \basisvec{\phi},
+  &\ideq -\sin\phi \cdot \phi' \basisvec{x} + \cos\phi \cdot \phi' \basisvec{y}
+  \ideq \+\phi' \basisvec{\phi},
     \label{eq:r-basis-vector-r-derivative} \\
   (\basisvec{\phi})'
-  &= -\cos\phi \cdot \phi' \basisvec{x} - \sin\phi \cdot \phi' \basisvec{y}
-  = -\phi' \basisvec{r}.
+  &\ideq -\cos\phi \cdot \phi' \basisvec{x} - \sin\phi \cdot \phi' \basisvec{y}
+  \ideq -\phi' \basisvec{r}.
     \label{eq:phi-basis-vector-r-derivative}
 \end{align}
 Using the scale factors~%
@@ -698,12 +698,12 @@ Using the scale factors~%
 the differential displacement~(\ref{eq:differential-displacement})
 becomes
 \begin{equation}
-  \td\vec{r} = \td r \basisvec{r} + r \td\phi \basisvec{\phi}.
+  \td\vec{r} \ideq \td r \basisvec{r} + r \td\phi \basisvec{\phi}.
   \label{eq:differential-displacement-polar}
 \end{equation}
 Division by~$\td r$ yields the velocity
 \begin{equation}
-  \vec{r}' \defeq \tder{\vec{r}}{r} =
+  \vec{r}' \ideq \tder{\vec{r}}{r} \ideq
   \basisvec{r} + r \phi' \basisvec{\phi},
   \label{eq:velocity-vector-polar-by-r}
 \end{equation}
@@ -712,7 +712,7 @@ and taking another $r$-derivative
 and~(\ref{eq:phi-basis-vector-r-derivative}))
 results in the acceleration
 \begin{equation}
-  \vec{r}'' \defeq \tder[2]{\vec{r}}{r} =
+  \vec{r}'' \ideq \tder[2]{\vec{r}}{r} \ideq
   -r {\phi'}^2 \basisvec{r}
     +
   \roundbr*{r \phi'' + 2 \phi'} \basisvec{\phi}.
@@ -725,7 +725,7 @@ and extracting the $z$-component,
 the quantity
 \begin{equation}
   \kappa \defeq
-  \basisvec{z} \dotp \vec{r}' \crossp \vec{r}'' =
+  \basisvec{z} \dotp \vec{r}' \crossp \vec{r}'' \ideq
   r \phi'' + 2 \phi' + r^2 {\phi'}^3
   \label{eq:kappa-polar-by-r}
 \end{equation}
@@ -743,7 +743,7 @@ The boundary tracing ODE~%
   (\ref{eq:line-tracing-ode-coordinate-parametrisation-r})
 inverts to give
 \begin{equation}
-  \phi' \defeq \tder{\phi}{r} = \mp \frac{L^4}{\sqrt{A^2 - r^2 L^8}},
+  \phi' \ideq \tder{\phi}{r} = \mp \frac{L^4}{\sqrt{A^2 - r^2 L^8}},
   \label{eq:line-traced-boundary-phi-r-derivative}
 \end{equation}
 from which
@@ -759,7 +759,7 @@ one obtains
   \mp \frac{2 A^2 L^3 (L + 2)}{\roundbr*{A^2 - r^2 L^8}^{3/2}},
   \label{eq:line-traced-boundary-kappa-polar-by-r}
 \end{equation}
-which only changes sign at~$L + 2 \defeq \log r + 2 = 0$.
+which only changes sign at~$L + 2 \ideq \log r + 2 = 0$.
 Therefore, inflection occurs at
 \begin{equation}
   r = r_\infl \defeq \ee^{-2},
@@ -905,7 +905,7 @@ along the incircle~$r = r_\sharp$.
 
 First observe that
 \begin{equation}
-  r_0 = \frac{r_\sharp}{\scaled{r}_\sharp},
+  r_0 \ideq \frac{r_\sharp}{\scaled{r}_\sharp},
   \label{eq:line-length-scale-in-terms-of-r-sharp}
 \end{equation}
 and recall that

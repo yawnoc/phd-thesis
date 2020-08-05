@@ -49,9 +49,9 @@ The \defin{position vector} is
 and since $\basisvec{x}$ and~$\basisvec{y}$ are globally constant,
 observe that
 \begin{align}
-  \basisvec{x} &= \pder{\positionvec}{x},
+  \basisvec{x} &\ideq \pder{\positionvec}{x},
     \label{eq:x-basis-vector} \\[\tallspace]
-  \basisvec{y} &= \pder{\positionvec}{y}.
+  \basisvec{y} &\ideq \pder{\positionvec}{y}.
     \label{eq:y-basis-vector}
 \end{align}
 Now consider the \defin{curvilinear coordinates}~$(u, v)$
@@ -66,17 +66,17 @@ in analogy to~(\ref{eq:x-basis-vector}) and~(\ref{eq:y-basis-vector}),
 \begin{align}
   \localvec{u} &
     \defeq \pder{\positionvec}{u}
-    = \pder{x}{u} \basisvec{x} + \pder{y}{u} \basisvec{y},
+    \ideq \pder{x}{u} \basisvec{x} + \pder{y}{u} \basisvec{y},
       \label{eq:u-local-basis-vector} \\[\tallspace]
   \localvec{v} &
     \defeq \pder{\positionvec}{v}
-    = \pder{x}{v} \basisvec{x} + \pder{y}{v} \basisvec{y}.
+    \ideq \pder{x}{v} \basisvec{x} + \pder{y}{v} \basisvec{y}.
       \label{eq:v-local-basis-vector}
 \end{align}
 It is assumed that the curvilinear coordinates~$(u, v)$ are \defin{orthogonal},
 meaning the local basis vectors are orthogonal to each other:
 \begin{equation}
-  \localvec{u} \dotp \localvec{v} = 0.
+  \localvec{u} \dotp \localvec{v} \ideq 0.
   \label{eq:local-basis-orthogonal}
 \end{equation}
 The magnitudes of the local basis vectors may not be unity;
@@ -98,12 +98,12 @@ to obtain the \defin{local orthonormal basis},
 \end{align}
 for which
 \begin{equation}
-  \basisvec{u} \dotp \basisvec{v} = 0
+  \basisvec{u} \dotp \basisvec{v} \ideq 0
   \label{eq:orthonormal-basis-orthogonal}
 \end{equation}
 and
 \begin{equation}
-  \norm{\basisvec{u}} = \norm{\basisvec{v}} = 1.
+  \norm{\basisvec{u}} \ideq \norm{\basisvec{v}} \ideq 1.
   \label{eq:orthonormal-basis-normalised}
 \end{equation}
 
@@ -138,18 +138,18 @@ and with sides of length~$\scalefac[u] \td u$ and~$\scalefac[v] \td v$
 Indeed the \defin{differential displacement} is
 \begin{align*}
   \td \positionvec
-  &\defeq
+  &\ideq
     \pder{\positionvec}{u} \td u + \pder{\positionvec}{v} \td v
     \\[\tallspace]
-  &= \localvec{u} \td u + \localvec{v} \td v \\
-  &= \scalefac[u] \td u \basisvec{u} + \scalefac[v] \td v \basisvec{v}.
+  &\ideq \localvec{u} \td u + \localvec{v} \td v \\
+  &\ideq \scalefac[u] \td u \basisvec{u} + \scalefac[v] \td v \basisvec{v}.
     \yesnumber
     \label{eq:differential-displacement}
 \end{align*}
 The area of the infinitesimal rectangle is
 the \defin{differential area element}
 \begin{equation}
-  \td V = \scalefac[u] \scalefac[v] \td u \td v.
+  \td V \ideq \scalefac[u] \scalefac[v] \td u \td v.
   \label{eq:differential-area-element}
 \end{equation}
 
@@ -162,8 +162,8 @@ By the chain rule, the independent increments~$\td u$ and~$\td v$
 effect the differential change
 \begin{align*}
   \td T
-  &= \pder{T}{u} \td u + \pder{T}{v} \td v \\[\tallspace]
-  &=
+  &\ideq \pder{T}{u} \td u + \pder{T}{v} \td v \\[\tallspace]
+  &\ideq
     \roundbr*{\frac{1}{\scalefac[u]} \pder{T}{u}}
     \roundbr[\big]{\scalefac[u] \td u}
       +
@@ -176,8 +176,8 @@ By the definition of gradient,
 and using~(\ref{eq:differential-displacement}),
 \begin{align*}
   \td T
-  &\defeq \del T \dotp \td \positionvec \\
-  &=
+  &\ideq \del T \dotp \td \positionvec \\
+  &\ideq
     \del T
       \dotp
     \roundbr[\big]{
@@ -192,7 +192,7 @@ Comparing~(\ref{eq:scalar-differential-change})
 and~(\ref{eq:scalar-differential-change-gradient}),
 it follows that the \defin{gradient} of~$T$ is given by
 \begin{equation}
-  \del T =
+  \del T \ideq
     \frac{1}{\scalefac[u]} \pder{T}{u} \basisvec{u}
       +
     \frac{1}{\scalefac[v]} \pder{T}{v} \basisvec{v}.
@@ -203,7 +203,7 @@ it follows that the \defin{gradient} of~$T$ is given by
 \label{sec:curvilinear.calculus.divergence}
 
 Consider a vector field~$%
-\vec{E} = \comp{E}{u} \basisvec{u} + \comp{E}{v} \basisvec{v}$,
+\vec{E} \defeq \comp{E}{u} \basisvec{u} + \comp{E}{v} \basisvec{v}$,
 and the infinitesimal rectangle
 of Figure~\ref{fig:orthogonal-curvilinear-coordinates},
 whose sides are of length~$\scalefac[u] \td u$ and~$\scalefac[v] \td v$.
@@ -228,7 +228,7 @@ which, divided by its area,
 the area element~(\ref{eq:differential-area-element}),
 yields the \defin{divergence} of~$\vec{E}$,
 \begin{equation}
-  \del \dotp \vec{E} =
+  \del \dotp \vec{E} \ideq
     \frac{1}{\scalefac[u] \scalefac[v]}
     \squarebr*{
       \pder{}{u} \roundbr[\Big]{\scalefac[v] \comp{E}{u}}
@@ -245,7 +245,7 @@ Composing the divergence~(\ref{eq:divergence})
 and the gradient~(\ref{eq:gradient}) (with~$\vec{E} = \del T$),
 it follows that the \defin{Laplacian} of~$T$ is given by
 \begin{equation}
-  \del^2 T \defeq \del \dotp \del T =
+  \del^2 T \defeq \del \dotp \del T \ideq
     \frac{1}{\scalefac[u] \scalefac[v]}
     \squarebr*{
       \pder{}{u} \roundbr*{\frac{\scalefac[v]}{\scalefac[u]} \pder{T}{u}}
@@ -256,10 +256,10 @@ it follows that the \defin{Laplacian} of~$T$ is given by
 \end{equation}
 In particular,
 if the two scale factors~$\scalefac[u]$ and~$\scalefac[v]$ are equal,
-say~$\scalefac[u] = \scalefac[v] = \scalefac$,
+say~$\scalefac[u] \ideq \scalefac[v] \ideq \scalefac$,
 this simplifies to
 \begin{equation}
-  \del^2 T =
+  \del^2 T \ideq
     \frac{1}{\scalefac^2}
     \squarebr*{\pder[2]{T}{u} + \pder[2]{T}{v}}.
   \label{eq:laplacian-scale-factors-equal}
@@ -273,7 +273,7 @@ is given by the unit vector of
 the differential displacement~(\ref{eq:differential-displacement}),
 i.e.\@
 \begin{equation}
-  \tangentvec =
+  \tangentvec \ideq
     \frac{
       \scalefac[u] \td u \basisvec{u}
         +
@@ -285,7 +285,7 @@ i.e.\@
 \end{equation}
 where $\td s$~is the \defin{differential arc length}
 \begin{equation}
-  \td s \defeq \norm{\td \positionvec} =
+  \td s \defeq \norm{\td \positionvec} \ideq
   \sqrt{
     \roundbr[\big]{\scalefac[u] \td u}^2
       +
@@ -297,7 +297,7 @@ The normal vector~$\normalvec$ to a curve
 is perpendicular to the tangent~$\tangentvec$;
 therefore
 \begin{equation}
-  \normalvec =
+  \normalvec \ideq
     \frac{
       \scalefac[v] \td v \basisvec{u}
         -
@@ -329,12 +329,12 @@ let
 \end{align}
 so that
 \begin{equation}
-  \td \positionvec = \td \mu \basisvec{u} + \td \nu \basisvec{v}
+  \td \positionvec \ideq \td \mu \basisvec{u} + \td \nu \basisvec{v}
   \label{eq:differential-displacement-abbreviated}
 \end{equation}
 and
 \begin{equation}
-  \td s = \sqrt{{\td \mu}^2 + {\td \nu}^2}.
+  \td s \ideq \sqrt{{\td \mu}^2 + {\td \nu}^2}.
   \label{eq:differential-arc-length-abbreviated}
 \end{equation}
 For the components of the gradient vector~(\ref{eq:gradient}),
@@ -347,32 +347,32 @@ write
 \end{align}
 so that
 \begin{equation}
-  \del T = P \basisvec{u} + Q \basisvec{v}.
+  \del T \ideq P \basisvec{u} + Q \basisvec{v}.
   \label{eq:gradient-abbreviated}
 \end{equation}
 Finally, for the components of
 the tangent vector~(\ref{eq:tangent-vector}), define
 \begin{align}
-  \alpha &\defeq \tder{\mu}{s} = \frac{\scalefac[u] \td u}{\td s},
+  \alpha &\defeq \tder{\mu}{s} \ideq \frac{\scalefac[u] \td u}{\td s},
     \label{eq:tangent-u-component} \\[\tallspace]
-  \beta &\defeq \tder{\nu}{s} = \frac{\scalefac[v] \td v}{\td s},
+  \beta &\defeq \tder{\nu}{s} \ideq \frac{\scalefac[v] \td v}{\td s},
     \label{eq:tangent-v-component}
 \end{align}
 so that
 \begin{align}
   \tangentvec
-  &= \frac{\td \mu \basisvec{u} + \td \nu \basisvec{v}}{\td s}
-  = \alpha \basisvec{u} + \beta \basisvec{v},
+  &\ideq \frac{\td \mu \basisvec{u} + \td \nu \basisvec{v}}{\td s}
+  \ideq \alpha \basisvec{u} + \beta \basisvec{v},
     \label{eq:tangent-vector-abbreviated} \\[\tallspace]
   \normalvec
-  &= \frac{\td \nu \basisvec{u} - \td \mu \basisvec{v}}{\td s}
-  = \beta \basisvec{u} - \alpha \basisvec{v}.
+  &\ideq \frac{\td \nu \basisvec{u} - \td \mu \basisvec{v}}{\td s}
+  \ideq \beta \basisvec{u} - \alpha \basisvec{v}.
     \label{eq:normal-vector-abbreviated}
 \end{align}
 Note that
 \begin{align}
-  P^2 + Q^2 &= (\del T)^2, \label{eq:gradient-pythagoras} \\
-  \alpha^2 + \beta^2 &= 1. \label{eq:tangent-pythagoras}
+  P^2 + Q^2 &\ideq (\del T)^2, \label{eq:gradient-pythagoras} \\
+  \alpha^2 + \beta^2 &\ideq 1. \label{eq:tangent-pythagoras}
 \end{align}
 
 \section{Boundary tracing ODE}
@@ -519,9 +519,9 @@ and~(\ref{eq:tracing-arc-length-parametrisation-unit-speed})
 for~$\alpha$ and~$\beta$, one obtains
 the boundary tracing system of ODEs under arc-length parametrisation,
 \begin{align}
-  \tder{\mu}{s} &\defeq \alpha = \frac{-Q F \pm P \sqrt{\Phi}}{(\del T)^2},
+  \tder{\mu}{s} &\ideq \alpha = \frac{-Q F \pm P \sqrt{\Phi}}{(\del T)^2},
     \label{eq:tracing-ode-arc-length-parametrisation-mu} \\[\tallspace]
-  \tder{\nu}{s} &\defeq \beta = \frac{\+P F \pm Q \sqrt{\Phi}}{(\del T)^2},
+  \tder{\nu}{s} &\ideq \beta = \frac{\+P F \pm Q \sqrt{\Phi}}{(\del T)^2},
     \label{eq:tracing-ode-arc-length-parametrisation-nu}
 \end{align}
 or
@@ -559,7 +559,7 @@ Suppose a $T$-contour is to be parametrised by arc length,
 i.e.~$u = u (s)$, $v = v(s)$.
 By definition, there holds
 \[
-  \td T \defeq \del T \dotp \td \positionvec = 0
+  \td T \ideq \del T \dotp \td \positionvec = 0
 \]
 along the contour,
 which, using~(\ref{eq:gradient-abbreviated})
@@ -577,9 +577,9 @@ Combining this with the unit-speed condition~(\ref{eq:tangent-pythagoras}),
 the resulting system in~$\alpha$ and~$\beta$
 solves to give the system of ODEs
 \begin{align}
-  \tder{\mu}{s} &\defeq \alpha = \frac{\pm Q}{\norm{\del T}},
+  \tder{\mu}{s} &\ideq \alpha = \frac{\pm Q}{\norm{\del T}},
     \label{eq:contour-ode-arc-length-parametrisation-mu} \\[\tallspace]
-  \tder{\nu}{s} &\defeq \beta = \frac{\mp P}{\norm{\del T}}
+  \tder{\nu}{s} &\ideq \beta = \frac{\mp P}{\norm{\del T}}
     \label{eq:contour-ode-arc-length-parametrisation-nu},
 \end{align}
 or
