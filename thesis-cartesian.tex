@@ -724,7 +724,8 @@ Two degrees of freedom is too many to manage,
 and the behaviour of the viable domain is best understood
 by fixing~$A$ and varying~$B$
 (which is the slope~$\pd T / \pd x$ evaluated at~$(x, y) = (\pi/2, 0)$).
-Qualitatively there are five cases to consider:
+Qualitatively there are five cases to consider
+(Figure~\ref{fig:cosine_general-physical-viable}):
 \begin{enumerate}
   \item
     \defin{Gentle regime}, $B < B_\nat (A)$:
@@ -743,7 +744,7 @@ Qualitatively there are five cases to consider:
     by a growing viable tract along the $x$-axis,
     with $(x_\nat, 0)$~splitting into the two
     hyperbolic critical terminal points~$(x_\flat, 0)$ and~$(x_\sharp, 0)$
-    (both dependent on~$A$, with~$x_\flat < x_\sharp$).
+    (both dependent on~$A$ and~$B$, with~$x_\flat < x_\sharp$).
   \item
     \defin{Fair-to-steep transition}, $B = 1$:
     This is the simple case
@@ -762,3 +763,16 @@ Qualitatively there are five cases to consider:
     The terminal point~$(x_\flat, 0)$ is therefore irrelevant,
     leaving a single hyperbolic critical terminal point~$(x_\sharp, 0)$.
 \end{enumerate}
+
+\begin{figure}
+  \centredfigurecontent[width=\textwidth]{%
+    cosine_general-physical-viable%
+  }{
+    Unphysical region (black shaded),
+    terminal curve (black dashed),
+    and non-viable domain (grey shaded)
+    for the known solution~(\ref{eq:cosine-scaled-laplace-solution})
+    and viability function~(\ref{eq:cosine-viability-function}).
+    In each plot, the left edge is~$x = 0$ and the right edge is~$x = 2$.
+  }
+\end{figure}
