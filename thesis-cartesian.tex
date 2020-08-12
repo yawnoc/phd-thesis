@@ -452,6 +452,7 @@ Non-viable regions within the unphysical region~$T < 0$
 have been omitted because they are irrelevant,
 leaving a single non-viable region of interest to the right.%
 \footnote{
+  \label{ftn:cosine_simple-origin-terminal}
   Not evident from Figure~\ref{fig:cosine_simple-physical-viable}
   is that the boundary of this single non-viable region
   only constitutes \emph{almost all} of the terminal curve.
@@ -531,9 +532,9 @@ By patching together the traced boundaries,
 an unlimited number of radiation boundaries may be constructed.
 However, almost all such constructions are non-convex
 (see Figure~\ref{fig:cosine_simple-traced-boundaries-patched-spiky}).
-At any point strictly within the viable domain,
-(i.e.~in the viable domain but not along its boundary the terminal curve,)
-two traced boundaries cross at a non-zero angle,
+At any point \emph{strictly} within the viable domain,
+i.e.~$\Phi > 0$,
+the two traced boundaries through it cross at a non-zero angle,
 and patching these two boundaries together
 inevitably results in a spike made of non-convex curves.
 As noted already in Section~\ref{sec:cartesian.plane.domain},
@@ -579,14 +580,15 @@ and so the non-convex constructions are all invalid.
 \end{figure}
 
 To avoid the non-convex spikes,
-the join must occur at a point along the terminal curve.
+the join must occur at a point along the terminal curve~$\Phi = 0$.
 Moreover this point must not be an ordinary terminal point,
 at which the two traced boundaries being patched
 would form a cusp which has inconsistent boundary orientation
 (see Section~\ref{sec:introduction.tracing}).
 Instead the join must occur at a critical terminal point,
 which, recall, is a point along the terminal curve
-for which the local $T$-contour touches the terminal curve tangentially.
+for which the local $T$-contour touches the terminal curve~$\Phi = 0$
+tangentially.
 
 Figure~\ref{fig:cosine_simple-terminal-points} shows that in the present case,
 all points along the terminal curve are ordinary
@@ -597,15 +599,17 @@ Algebraically, $x_0$~is the positive%
 \footnote{
   The trivial solution~$x = 0$
   to (\ref{eq:cosine-simple-critical-terminal-point-x})
-  corresponds to a most peculiar situation:
-  the origin is both a single-point terminal ``curve''
-  (an isolated root of the equation~$\Phi (x, y) = 0$)
-  and the location of a corner in the local $T$-contour ($T = 0$).
-  Whether this makes the terminal curve
-  \emph{tangential} to the local $T$-contour
-  (and the terminal point at the origin \emph{critical})
-  is a philosophical matter, and in any case
-  the pair of traced boundaries through the origin
+  corresponds to the isolated terminal point at the origin
+  (see footnote~p.~\pageref{ftn:cosine_simple-origin-terminal}).
+  This peculiar instance is made more remarkable by the local $T$-contour,
+  which looks locally like~$y = \pm x$ (whose tangent is indeterminate).
+  One therefore wonders:
+    are the local $T$-contour and the local portion of the terminal curve
+    (which is just a point) \emph{tangential},
+    and therefore, is the origin a \emph{critical} terminal point?
+  The answer is yes, on account of there being two traced boundaries
+  passing through the origin as if $y = 0$~were the common tangent.
+  However, this pair of traced boundaries
   forms a non-convex spike (Figure~\ref{fig:cosine_simple-traced-boundaries}).
 }
 solution to
