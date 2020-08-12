@@ -389,7 +389,7 @@ depends on the value of the dimensionless constant~$B$
 \label{sec:cartesian.cosine.tracing}
 
 In addition to only considering the physical region~$T \ge 0$,
-traced boundaries will only exist within the viable domain.
+traced boundaries will only exist within the viable domain~$\Phi \ge 0$.
 For the boundary condition~%
   (\ref{eq:cosine-scaled-radiation-boundary-condition})
 and known solution~(\ref{eq:cosine-scaled-laplace-solution}) at hand,
@@ -445,17 +445,23 @@ and the viability function~(\ref{eq:cosine-viability-function}) reduces to
   \Phi \ideq \sin^2 x + \sinh^2 y - \frac{(1 - \cos x \cosh y) ^ 8}{A^2}.
   \label{eq:cosine-simple-viability-function}
 \end{equation}
-Figure~\ref{fig:cosine_simple-physical-viable} shows
-the dependence of the non-viable domain%
+The dependence of the non-viable domain~$\Phi < 0$
+on the dimensionless group~$A$
+is shown in Figure~\ref{fig:cosine_simple-physical-viable}.
+Non-viable regions within the unphysical region~$T < 0$
+have been omitted because they are irrelevant,
+leaving a single non-viable region of interest to the right.%
 \footnote{
-  There are also non-viable regions within the unphysical region,
-  but these are omitted from Figure~\ref{fig:cosine_simple-physical-viable}
-  and the remainder of the analysis because they are irrelevant.
+  Not evident from Figure~\ref{fig:cosine_simple-physical-viable}
+  is that the boundary of this single non-viable region
+  only constitutes \emph{almost all} of the terminal curve.
+  Since $(x, y) = (0, 0)$~is an isolated root of~$\Phi = 0$,
+  the origin is in fact single-point subset of the terminal curve.
+  In other words, the origin is a terminal point,
+  though most peculiarly disconnected from the rest of the terminal curve.
 }
-on the dimensionless group~$A$.
-As $A$~increases, the non-viable domain recedes towards the right,
-with its boundary the terminal curve
-passing through the vertical line~$x = \pi/2$ when~$A = 1$.
+As $A$~increases, this non-viable region recedes towards the right,
+completely passing over the vertical line~$x = \pi/2$ when~$A = 1$.
 Radiation boundaries as produced by boundary tracing will only be found
 in the white region of Figure~\ref{fig:cosine_simple-physical-viable},
 which is both physical~($T \ge 0$) and viable~($\Phi \ge 0$).
@@ -498,7 +504,8 @@ which for Cartesian coordinates reduces to
 \end{align}
 Two branches of traced boundaries are obtained
 by integrating forward
-from starting points within the region both physical and viable.
+from starting points within the region
+both physical~($T \ge 0$) and viable~($\Phi \ge 0$).
 The resulting curves (Figure~\ref{fig:cosine_simple-traced-boundaries})
 are boundaries along which the radiation boundary condition~%
   (\ref{eq:cosine-scaled-radiation-boundary-condition})
