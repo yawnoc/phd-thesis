@@ -352,11 +352,12 @@ become
   \centredfigurecontent[width=\textwidth]{%
     cosine-physical%
   }{
-    Unphysical region (black shaded) and contours (thin grey)
+    Unphysical region~$T < 0$ (black shaded)
     for the known solution~(\ref{eq:cosine-scaled-laplace-solution}),
-    with $B$~increasing.
+    as $B$~increases.
+    Also shown are the $T$-contours (thin grey).
     In each plot, the left edge is~$x = 0$
-    and the vertical line (grey) is~$x = \pi/2$,
+    and the vertical line (thicker grey) is~$x = \pi/2$,
     which is also the contour~$T = 1$.
   }
 \end{figure}
@@ -463,13 +464,15 @@ which is both physical~($T \ge 0$) and viable~($\Phi \ge 0$).
   \centredfigurecontent[width=\textwidth]{%
     cosine_simple-physical-viable%
   }{
-    Unphysical region (black shaded), contours (thin grey),
-    terminal curve (black dashed), and non-viable domain (grey shaded)
+    Non-viable domain~$\Phi < 0$ (grey shaded)
     for the known solution~(\ref{eq:cosine-simple-laplace-solution})
     and viability function~(\ref{eq:cosine-simple-viability-function}),
-    with $A$~increasing and $B = 1$.
+    as $A$~increases (with~$B = 1$).
+    Also shown are the unphysical region~$T < 0$ (black shaded),
+    the $T$-contours (thin grey),
+    and the terminal curve~$\Phi = 0$ (black dashed).
     In each plot, the left edge is~$x = 0$
-    and the vertical line (grey) is~$x = \pi/2$,
+    and the vertical line (thicker grey) is~$x = \pi/2$,
     which is also the contour~$T = 1$.
   }
 \end{figure}
@@ -512,6 +515,8 @@ with heat being lost by radiation to the left.
     Traced boundaries (black) for~$A = 0.5$, obtained by integrating
     (\ref{eq:cosine-tracing-ode-arc-length-parametrisation-x})
     and~(\ref{eq:cosine-tracing-ode-arc-length-parametrisation-y}).
+    Also shown are the unphysical region~$T < 0$ (black shaded)
+    and the non-viable domain~$\Phi < 0$ (grey shaded).
   }
 \end{figure}
 
@@ -549,16 +554,20 @@ and so the non-convex constructions are all invalid.
   \caption{
     Radiation boundaries (black) patched together
     using traced boundaries (grey).
+    Also shown are the unphysical region~$T < 0$ (black shaded)
+    and the non-viable domain~$\Phi < 0$ (grey shaded).
   }
   \label{fig:cosine_simple-traced-boundaries-patched}
 \end{figure}
 
 \begin{figure}
-  \centredfigurecontent[width=0.36\textwidth]{%
+  \centredfigurecontent[width=0.35\textwidth]{%
     cosine_simple-terminal-points%
   }{
-    Contours (thin grey) which intersect the terminal curve (black dashed).
-    (Horizontal scale is exaggerated.)
+    $T$-contours (thin grey) which intersect
+    the terminal curve~$\Phi = 0$ (black dashed),
+    which is the border of the non-viable domain~$\Phi < 0$ (grey shaded).
+    The horizontal scale is exaggerated.
   }
 \end{figure}
 
@@ -650,7 +659,7 @@ occurs at abscissa~$x_\infl \ge \pi/2$.
   }{
     Candidate domains marked out by a radiation boundary (black solid)
     and a constant-temperature boundary (black dotted),
-    with $A$~increasing and $B = 1$.
+    as $A$~increases (with~$B = 1$).
     Points of inflection are shown for reference.
   }
 \end{figure}
@@ -796,7 +805,7 @@ In terms of the viable domain, this translates to five cases
   \centredfigurecontent[width=0.7\textwidth]{%
     cosine_general-critical%
   }{
-    Terminal points along the $x$-axis, with $A$~fixed and $B$~increasing.
+    Terminal points along the $x$-axis, as $B$~increases with $A$~fixed.
   }
 \end{figure}
 
@@ -804,12 +813,12 @@ In terms of the viable domain, this translates to five cases
   \centredfigurecontent[width=\textwidth]{%
     cosine_general-physical-viable%
   }{
-    Unphysical region (black shaded),
-    terminal curve (black dashed),
-    and non-viable domain (grey shaded)
+    Non-viable domain~$\Phi < 0$ (grey shaded)
     for the known solution~(\ref{eq:cosine-scaled-laplace-solution})
     and viability function~(\ref{eq:cosine-viability-function}),
-    with $A$~fixed and $B$~increasing.
+    as $B$~increases with $A$~fixed.
+    Also shown are the unphysical region~$T < 0$ (black shaded)
+    and the terminal curve~$\Phi = 0$ (black dashed).
     In each plot, the left edge is~$x = 0$ and the right edge is~$x = 2$.
   }
 \end{figure}
