@@ -378,12 +378,14 @@ Thus the region of interest
 is the vertical strip~$0 \le x \le \pi/2$.
 Not all of this strip is physical
 as only positive temperatures are admissible
-in thermal radiation problems,
-and since the known solution~(\ref{eq:cosine-scaled-laplace-solution})
+in thermal radiation problems.
+Since the known solution~(\ref{eq:cosine-scaled-laplace-solution})
 vanishes along~$\cos x \cosh y = 1 / B$,
 the geometry of the physical region~$T \ge 0$
-depends on the value of the dimensionless constant~$B$
+shall depend on the value of the dimensionless constant~$B$
 (Figure~\ref{fig:cosine-physical}).
+The unphysical region~$T < 0$ is omitted from the remainder of the analysis,
+as physically meaningful radiation boundaries cannot be found there.
 
 \subsection{Boundary tracing equations}
 \label{sec:cartesian.cosine.tracing}
@@ -448,24 +450,27 @@ and the viability function~(\ref{eq:cosine-viability-function}) reduces to
 The dependence of the non-viable domain~$\Phi < 0$
 on the dimensionless group~$A$
 is shown in Figure~\ref{fig:cosine_simple-physical-viable}.
-Non-viable regions within the unphysical region~$T < 0$
-have been omitted because they are irrelevant,
-leaving a single non-viable region of interest to the right.%
-\footnote{
-  \label{ftn:cosine_simple-origin-terminal}
-  Not evident from Figure~\ref{fig:cosine_simple-physical-viable}
-  is that the boundary of this single non-viable region
-  only constitutes \emph{almost all} of the terminal curve.
-  Since $(x, y) = (0, 0)$~is an isolated root of~$\Phi = 0$,
-  the origin is in fact single-point subset of the terminal curve.
-  In other words, the origin is a terminal point,
-  though most peculiarly disconnected from the rest of the terminal curve.
-}
-As $A$~increases, this non-viable region recedes towards the right,
-completely passing over the vertical line~$x = \pi/2$ when~$A = 1$.
-Radiation boundaries as produced by boundary tracing will only be found
-in the white region of Figure~\ref{fig:cosine_simple-physical-viable},
+Radiation boundaries as produced by boundary tracing
+will only be found in the white region,
 which is both physical~($T \ge 0$) and viable~($\Phi \ge 0$).
+
+The non-viable domain consists of a single%
+\footnote{
+  There also exist non-viable regions
+  (not shown in Figure~\ref{fig:cosine_simple-physical-viable})
+  which lie within the unphysical region~$T < 0$,
+  but recall that the unphysical region has been omitted from the analysis
+  due to physical irrelevance.
+}
+non-viable region which recedes towards the right as $A$~increases.
+Not obvious from Figure~\ref{fig:cosine_simple-physical-viable} however
+is that the boundary of this single non-viable region,
+henceforth called the \term{proper} terminal curve,
+only constitutes \emph{almost all} of the terminal curve.
+The full terminal curve consists of the proper terminal curve
+together with the origin~$(x, y) = (0, 0)$,
+which is a terminal point
+by virtue of being an isolated root of the equation~$\Phi = 0$.
 
 \begin{figure}
   \centredfigurecontent[width=\textwidth]{%
@@ -477,7 +482,7 @@ which is both physical~($T \ge 0$) and viable~($\Phi \ge 0$).
     as $A$~increases.
     Also shown are the unphysical region~$T < 0$ (black shaded),
     the $T$-contours (thin grey),
-    and the terminal curve~$\Phi = 0$ (black dashed).
+    and the (proper) terminal curve~$\Phi = 0$ (black dashed).
     In each plot, the left edge is~$x = 0$
     and the vertical line (thicker grey) is~$x = \pi/2$,
     which is also the contour~$T = 1$.
@@ -579,6 +584,7 @@ and so the non-convex constructions are all invalid.
   }
 \end{figure}
 
+% TODO: rewrite from here onward using "proper" terminal curve terminology
 To avoid the non-convex spikes,
 the join must occur at a point along the terminal curve~$\Phi = 0$.
 Moreover this point must not be an ordinary terminal point,
