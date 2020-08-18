@@ -291,7 +291,7 @@ Therefore, in this section I consider known solutions of the form
 \end{important}
 where $T_0$~is a temperature, $L_0$~is a length scale,
 and $B$~is a dimensionless constant.
-The temperature is constant at~$T = T_0$
+The temperature is constant (taking the value~$T = T_0$)
 along the straight line~$x = \pi/2 \cdot L_0$,
 which shall ultimately serve as the heat-supplying boundary.
 
@@ -384,7 +384,7 @@ Since the known solution~(\ref{eq:cosine-scaled-laplace-solution})
 vanishes along~$\cos x \cosh y = 1 / B$,
 the geometry of the physical region~$T \ge 0$
 shall depend on the value of the dimensionless constant~$B$
-(Figure~\ref{fig:cosine-physical}).
+(see Figure~\ref{fig:cosine-physical}).
 The unphysical region~$T < 0$ is omitted from the remainder of the analysis,
 as physically meaningful radiation boundaries cannot be found there.
 
@@ -519,7 +519,7 @@ are boundaries along which the radiation boundary condition~%
 is satisfied.
 For the correct boundary orientation,
 note that the temperature~$T$ is an increasing function of~$x$;
-it follows that the interior lies on the right of each boundary curve,
+it follows that the interior lies to the right of each boundary curve,
 with heat being lost by radiation to the left.
 
 \begin{figure}
@@ -541,7 +541,7 @@ However, almost all such constructions are non-convex
 (see Figure~\ref{fig:cosine_simple-traced-boundaries-patched-spiky}).
 At any point \emph{strictly} within the viable domain,
 i.e.~$\Phi > 0$,
-the two traced boundaries through it cross at a non-zero angle,
+the two traced boundaries through it will cross at a non-zero angle,
 and patching these two boundaries together
 inevitably results in a spike made of non-convex curves.
 As noted already in Section~\ref{sec:cartesian.plane.domain},
@@ -580,46 +580,60 @@ and so the non-convex constructions are all invalid.
     cosine_simple-terminal-points%
   }{
     $T$-contours~\figurestyle{thin grey} which intersect
-    the terminal curve~$\Phi = 0$~\figurestyle{black dashed},
+    the proper terminal curve~$\Phi = 0$~\figurestyle{black dashed},
     which is the border of
     the non-viable domain~$\Phi < 0$~\figurestyle{grey shaded}.
     The horizontal scale is exaggerated.
   }
 \end{figure}
 
-% TODO: rewrite from here onward using "proper" terminal curve terminology
 To avoid the non-convex spikes,
 the join must occur at a point along the terminal curve~$\Phi = 0$.
-Moreover this point must not be an ordinary terminal point,
+Specifically this point must not be an ordinary terminal point,
 at which the two traced boundaries being patched
-would form a cusp which has inconsistent boundary orientation
+would form a cusp with inconsistent boundary orientation
 (see Section~\ref{sec:introduction.tracing}).
-Instead the join must occur at a critical terminal point,
-which, recall, is a point along the terminal curve
+Instead the join must occur at a critical terminal point;
+recall that this is a point along the terminal curve
 for which the local $T$-contour touches the terminal curve~$\Phi = 0$
-tangentially.
+tangentially (rather than crossing at a non-zero angle).
 
+Now in the present situation,
+the full terminal curve consists of
+an isolated terminal point at the origin
+in union with the proper terminal curve
+(which is the boundary of the non-viable region
+visible in Figure~\ref{fig:cosine_simple-physical-viable}).
+The terminal point at the origin is already notable due to its isolation,
+but even more remarkable is that the local $T$-contour~($T = 0$)
+looks like~$y = \pm x$.
+One therefore wonders:
+  are the local $T$-contour (whose tangent is indeterminate)
+  and the local portion of the terminal curve (which is just a point)
+  \emph{tangential}, and therefore,
+  is the origin a \emph{critical} terminal point?
+While the tangentiality is debatable,
+the answer to the criticality question ought to be yes
+on account of the actual behaviour:
+two traced boundaries pass through the origin
+(see Figure~\ref{fig:cosine_simple-traced-boundaries})
+as if it were an hyperbolic critical terminal point,
+with $y = 0$~as the common tangent.
+Unfortunately the pair of traced boundaries forms a non-convex spike,
+which is of no use here.
+
+With the origin ruled out,
+it remains to consider the proper terminal curve.
 Figure~\ref{fig:cosine_simple-terminal-points} shows that in the present case,
-all points along the terminal curve are ordinary
+all points along the proper terminal curve are ordinary
 except for a single critical terminal point~$(x, y) = (x_0, 0)$
-at the intersection between the terminal curve
+at the intersection of the proper terminal curve
 and the horizontal axis~$y = 0$.
 Algebraically, $x_0$~is the positive%
 \footnote{
   The trivial solution~$x = 0$
-  to (\ref{eq:cosine-simple-critical-terminal-point-x})
-  corresponds to the isolated terminal point at the origin
-  (see footnote~p.~\pageref{ftn:cosine_simple-origin-terminal}).
-  This peculiar instance is made more remarkable by the local $T$-contour,
-  which looks locally like~$y = \pm x$ (whose tangent is indeterminate).
-  One therefore wonders:
-    are the local $T$-contour and the local portion of the terminal curve
-    (which is just a point) \emph{tangential},
-    and therefore, is the origin a \emph{critical} terminal point?
-  The answer is yes, on account of there being two traced boundaries
-  passing through the origin as if $y = 0$~were the common tangent.
-  However, this pair of traced boundaries
-  forms a non-convex spike (Figure~\ref{fig:cosine_simple-traced-boundaries}).
+  corresponds to the isolated terminal point at the origin,
+  which has already been dismissed.
 }
 solution to
 \begin{equation}
@@ -630,7 +644,7 @@ solution to
 \end{equation}
 a polynomial equation in~$\cos x$.
 Furthermore, the local $T$-contour through~$(x_0, 0)$
-lies on the viable side of the terminal curve;
+lies on the viable side of the proper terminal curve;
 therefore the critical terminal point~$(x_0, 0)$ is of hyperbolic type,
 with two traced boundaries passing through it smoothly.
 By patching together the portions which lie to the right of~$(x_0, 0)$,
@@ -638,7 +652,8 @@ a single spike-free radiation boundary can be constructed
 as shown in Figure~\ref{fig:cosine_simple-traced-boundaries-patched-smooth};
 this boundary shall be referred to as the \term{candidate boundary}.
 It is interesting to note that
-the candidate boundary and the terminal curve are virtually indistinguishable;
+the candidate boundary and the proper terminal curve
+are virtually indistinguishable;
 despite only touching each other at the critical terminal point~$(x_0, 0)$,
 the former asymptotically approaches the latter travelling away from~$y = 0$.
 
@@ -654,12 +669,12 @@ and becomes concave.
 
 Recalling the goal of constructing domains
 corresponding to a conduction--radiation BVP\@,
-a \term{candidate domain} is marked out by using
-the candidate boundary (the radiation boundary)
-and the straight line~$x = \pi/2$ (the heat-supplying boundary)
-for demarcation.
+a \term{candidate domain} is demarcated by using
+the candidate boundary as the radiation boundary
+and the straight line~$x = \pi/2$
+as a constant-temperature heat-supplying boundary.
 The continuum of candidate domains (for~$0 < A < 1$)\footnote{
-  At~$A = 1$ the candidate boundary touches the line~$x = \pi/2$
+  At~$A = 1$ the candidate boundary touches the line~$x = \pi/2$,
   and the candidate domain shrinks to a point.
 }
 is shown in Figure~\ref{fig:cosine_simple-candidate-domains};
@@ -744,6 +759,8 @@ if and only if
   A_\infl \le A < 1.
   \label{eq:cosine-simple-traced-boundary-convex-a-interval}
 \end{equation}
+
+% TODO: rewrite from here onward using "proper" terminal curve terminology
 
 \subsection{General case (\texorpdfstring{$B$~arbitrary}{B arbitrary})}
 \label{sec:cartesian.cosine.general}
