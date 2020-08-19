@@ -760,30 +760,25 @@ if and only if
   \label{eq:cosine-simple-traced-boundary-convex-a-interval}
 \end{equation}
 
-% TODO: rewrite from here onward using "proper" terminal curve terminology
-
 \subsection{General case (\texorpdfstring{$B$~arbitrary}{B arbitrary})}
 \label{sec:cartesian.cosine.general}
 
 \subsubsection{Viable domain}
 \label{sec:cartesian.cosine.general.viable}
 
-In the general case, the dimensionless group~$B$ may also be varied,
+In the general case the dimensionless group~$B$ may also be varied,
 and altogether the parameter space~$(A, B)$ is two-dimensional.
 Two degrees of freedom is too many to manage,
 and the behaviour of the viable domain is best understood
-by fixing~$A$ and varying~$B$
-(which is the slope~$\pd T / \pd x$ evaluated at~$(x, y) = (\pi/2, 0)$).
+by fixing~$A$ and varying~$B$.
 
-Of particular interest are the terminal points along the (positive) $x$-axis
-for they locate the critical terminal points.%
-\footnote{
-  At a terminal point along the $x$-axis,
-  the local $T$-contour and the terminal curve~$\Phi = 0$
-  will be parallel (unless either has a corner)
-  since $T$ and~$\Phi$ are both even functions of~$y$.
-}
-Algebraically they are given by the roots of
+Of particular interest are the terminal points along the $x$-axis;
+these are necessarily critical terminal points
+because the local $T$-contour and the terminal curve~$\Phi = 0$
+both cross the $x$-axis vertically
+(as $T$ and~$\Phi$ are both even functions of~$y$),
+and are therefore tangential.
+Algebraically these terminal points are given by the roots of
 \begin{equation}
   \eval[\big]{\Phi}_{y=0}
   \ideq B^2 \sin^2 x - \frac{(1 - B \cos x)^8}{A^2}
@@ -795,18 +790,20 @@ For sufficiently small~$B$,
 there are no roots and the entire $x$-axis is non-viable,
 until a single root~$x = x_\nat (A)$ appears at~$B = B_\nat (A)$.
 As $B$~increases past this transitional value,
-the root splits into two roots, $x_\flat$ and~$x_\sharp$
-(both dependent on both~$A$ and $B$).
-At~$B = 1$, the smaller root~$x_\flat$ vanishes,
-before becoming positive again for~$B > 1$.
+the root splits into two roots, $x = x_\flat (A, B)$ and~$x = x_\sharp (A, B)$.
+At~$B = 1$, the lesser root~$x_\flat$ vanishes,
+before becoming positive again but unphysical for~$B > 1$.
 In terms of the viable domain, this translates to five cases
 (Figure~\ref{fig:cosine_general-physical-viable}):
+% TODO
+% * Note indeterminate tangent for the local Phi-contour at x_nat
+%   for the gentle-to-fair transition
+% * Mention critical terminal points along the y-axis, (0, \pm y_0)
 \begin{enumerate}
   \item
     \term{Gentle regime}, $B < B_\nat (A)$:
     The non-viable domain completely envelopes the $x$-axis,
     dividing the viable domain into two halves.
-    There are no critical terminal points.
   \item
     \term{Gentle-to-fair transition}, $B = B_\nat (A)$:
     The two viable regions pinch together at~$(x, y) = (x_\nat, 0)$,
@@ -826,15 +823,15 @@ In terms of the viable domain, this translates to five cases
     the hyperbolic critical terminal point~$(x_\sharp, 0)$
     is what was formerly called~$(x_0, 0)$.
     The other terminal point~$(x_\flat, 0)$ has receded to the origin,
-    which is a single-point terminal ``curve''
-    (a peculiarity caused by the smaller non-viable region
-    having shrunk to nothingness).
+    which one recalls is a terminal point
+    isolated from the rest of the terminal curve,
+    a peculiarity caused by the smaller non-viable region of the fair regime
+    having shrunk to nothingness.
   \item
     \term{Steep regime}, $B > 1$:
     The smaller non-viable region
-    (which shrunk to nothingness at the fair-to-steep transition)
-    reappears but is overtaken by the growing unphysical region.
-    The terminal point~$(x_\flat, 0)$ thus lies in the unphysical region
+    reappears but is overrun by the growing unphysical region.
+    The terminal point~$(x_\flat, 0)$ lies in the unphysical region
     and is therefore irrelevant,
     leaving a single hyperbolic critical terminal point~$(x_\sharp, 0)$.
 \end{enumerate}
@@ -844,6 +841,8 @@ In terms of the viable domain, this translates to five cases
     cosine_general-critical%
   }{
     Terminal points along the $x$-axis, as $B$~increases with $A$~fixed.
+    The non-viable portion~\figurestyle{grey shaded} of the $x$-axis
+    is shown for reference.
   }
 \end{figure}
 
