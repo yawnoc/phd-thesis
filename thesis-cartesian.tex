@@ -772,6 +772,16 @@ Two degrees of freedom is too many to manage,
 and the behaviour of the viable domain is best understood
 by fixing~$A$ and varying~$B$.
 
+\begin{figure}
+  \centredfigurecontent[width=0.7\textwidth]{%
+    cosine_general-critical%
+  }{
+    Terminal points along the $x$-axis, as $B$~increases with $A$~fixed.
+    The non-viable portion~\figurestyle{grey shaded} of the $x$-axis
+    is shown for reference.
+  }
+\end{figure}
+
 Of particular interest are the terminal points along the $x$-axis;
 these are necessarily critical terminal points
 because the local $T$-contour and the terminal curve~$\Phi = 0$
@@ -797,12 +807,14 @@ In terms of the viable domain, this translates into five cases
 (Figure~\ref{fig:cosine_general-physical-viable}):
 \begin{enumerate}
   \item
+    \label{itm:cartesian.cosine.general.regimes.gentle}
     \term{Gentle regime}, $B < B_\nat (A)$:
     The non-viable domain completely envelopes the $x$-axis,
     dividing the viable domain into two halves.
     Two hyperbolic critical terminal points exist along the $y$-axis
     at~$(x, y) = (0, \pm y_0)$.
   \item
+    \label{itm:cartesian.cosine.general.regimes.gentle-to-fair}
     \term{Gentle-to-fair transition}, $B = B_\nat (A)$:
     The two viable regions pinch together at~$(x, y) = (x_\nat, 0)$,
     a critical terminal point of hyperbolic type.%
@@ -816,12 +828,14 @@ In terms of the viable domain, this translates into five cases
     }
     The non-viable domain now consists of two disjoint regions.
   \item
+    \label{itm:cartesian.cosine.general.regimes.fair}
     \term{Fair regime}, $B_\nat (A) < B < 1$:
     The two non-viable regions are sundered further apart
     by a growing viable tract along the $x$-axis,
     with $(x_\nat, 0)$~splitting into the two
     hyperbolic critical terminal points~$(x_\flat, 0)$ and~$(x_\sharp, 0)$.
   \item
+    \label{itm:cartesian.cosine.general.regimes.fair-to-steep}
     \term{Fair-to-steep transition}, $B = 1$:
     This is the simple case
     of Section~\ref{sec:cartesian.cosine.general.viable};
@@ -833,6 +847,7 @@ In terms of the viable domain, this translates into five cases
     have merged together
     to form an isolated critical terminal point at the origin.
   \item
+    \label{itm:cartesian.cosine.general.regimes.steep}
     \term{Steep regime}, $B > 1$:
     The smaller non-viable region
     reappears but is overrun by the growing unphysical region.
@@ -841,16 +856,11 @@ In terms of the viable domain, this translates into five cases
     and are therefore irrelevant,
     leaving a single hyperbolic critical terminal point~$(x_\sharp, 0)$.
 \end{enumerate}
-
-\begin{figure}
-  \centredfigurecontent[width=0.7\textwidth]{%
-    cosine_general-critical%
-  }{
-    Terminal points along the $x$-axis, as $B$~increases with $A$~fixed.
-    The non-viable portion~\figurestyle{grey shaded} of the $x$-axis
-    is shown for reference.
-  }
-\end{figure}
+An exhaustive treatment cannot be given here
+due to the complex dependence
+of the known solution~$T$ and the viability function~$\Phi$
+on both~$A$ and~$B$.
+Nevertheless, broad statements can be made.
 
 \begin{figure}
   \centredfigurecontent[width=\textwidth]{%
@@ -865,3 +875,31 @@ In terms of the viable domain, this translates into five cases
     In each plot, the left edge is~$x = 0$ and the right edge is~$x = 2$.
   }
 \end{figure}
+
+In Case~\ref{itm:cartesian.cosine.general.regimes.gentle} (gentle regime)
+only non-convex spikes can be formed
+by patching together traced boundaries,
+even at the critical terminal points~$(0, \pm y_0)$ along the $y$-axis.
+Case~\ref{itm:cartesian.cosine.general.regimes.fair-to-steep}
+  (fair-to-steep transition)
+is the simple $B = 1$~case
+which has been analysed in Section~\ref{sec:cartesian.cosine.general.viable};
+recall that a conduction--radiation domain in the shape of a convex lens
+can be produced for each~$A$ in the interval~%
+  (\ref{eq:cosine-simple-traced-boundary-convex-a-interval})
+by patching together the traced boundaries through~$(x_\sharp, 0)$.
+The situation in
+Case~\ref{itm:cartesian.cosine.general.regimes.steep} (steep regime)
+is very similar,
+but the convex lens shapes which can be produced
+are even thinner than those of
+Case~\ref{itm:cartesian.cosine.general.regimes.fair-to-steep}.
+
+Relatively interesting behaviour only occurs in
+Case~\ref{itm:cartesian.cosine.general.regimes.gentle-to-fair}
+  (gentle-to-fair transition)
+and in
+Case~\ref{itm:cartesian.cosine.general.regimes.fair} (fair regime),
+the former of which need not be treated separately
+since it is effectively a degenerate version of the latter
+(with~$x_\flat = x_\sharp$).
