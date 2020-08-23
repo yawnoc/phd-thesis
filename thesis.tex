@@ -79,16 +79,14 @@
 % Subfigures with captions
 \usepackage{subcaption}
 
-% Centred figure content (with same label as \includegraphics file name)
+% Centred figure content (with same label as file name)
 %   #1  [\includegraphics options] default "width=\textwidth"
 %   #2  {\includegraphics file name}
-%   #3  {extra content}
-%   #4  {caption}
-\newcommand{\centredfigurecontent}[4][width=\textwidth]{%
+%   #3  {caption}
+\newcommand{\centredfigurecontent}[3][width=\textwidth]{%
   \centering
   \includegraphics[#1]{#2}
-  #3
-  \caption{#4}
+  \caption{#3}
   \label{fig:#2}
 }
 
