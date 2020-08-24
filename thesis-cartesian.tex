@@ -545,7 +545,7 @@ and so the non-convex constructions are all invalid.
 \begin{figure}
   \newcommand*{\subfigurewidth}{0.36\textwidth}
   \centering
-    \hspace*{\fill}
+  \hspace*{\fill}
   \begin{subfigure}[t]{\subfigurewidth}
     \centredfigurecontent{cosine_simple-traced-boundaries-patched-spiky}{%
       Spiky non-convex boundary
@@ -557,7 +557,7 @@ and so the non-convex constructions are all invalid.
       Smooth candidate boundary
     }
   \end{subfigure}
-    \hspace*{\fill}
+  \hspace*{\fill}
   \caption{
     Radiation boundaries~\figurestyle{black} patched together
     using traced boundaries~\figurestyle{grey}.
@@ -926,7 +926,9 @@ shown in Figure~\ref{fig:cosine_general-traced-boundaries-convex}.
 \begin{figure}
   \newcommand*{\subfigurewidth}{0.45\textwidth}
   \centering
-    \hspace*{\fill}
+  \includegraphics[width=\textwidth]%
+    {cosine_general-asymmetric-construction-legend}
+  \hspace*{\fill}
   \begin{subfigure}[t]{\subfigurewidth}
     \centredfigurecontent{cosine_general-traced-boundaries-convex}{%
       Convex portions of the two branches of traced boundaries
@@ -934,14 +936,14 @@ shown in Figure~\ref{fig:cosine_general-traced-boundaries-convex}.
       and the $x$-axis.
     }
   \end{subfigure}
-    \hfill
+  \hfill
   \begin{subfigure}[t]{\subfigurewidth}
     \centredfigurecontent{cosine_general-asymmetric_domain}{%
       An asymmetric domain marked out by a radiation boundary
       and the constant-temperature boundary~$x = \pi/2$.
     }
   \end{subfigure}
-    \hspace*{\fill}
+  \hspace*{\fill}
   \caption{
     Constructing an asymmetric conduction--radiation domain
     for~$(A, B) = (12, 0.0825)$ (fair regime).
