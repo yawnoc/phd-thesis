@@ -899,3 +899,68 @@ Much more interesting however is the existence
 in Case~\ref{itm:cartesian.cosine.general.regimes.fair} (fair regime)
 of convex conduction--radiation domains
 which are \emph{not} shaped as lenses.
+I cannot give a general analysis here
+due to the complex dependence of the curvature on~$A$ and~$B$,
+so I merely provide the illustrative example~$(A, B) = (12, 0.0825)$.
+Figure~\ref{fig:cosine_general-traced-boundaries-convex}
+shows (among other features) the frontiers of inflection
+for the two branches of traced boundaries,
+obtained by computing the zero-contours of the second derivative~%
+  (\ref{eq:acceleration-traced-boundary-cartesian-by-y})
+using numerical integration.
+Only the portions of traced boundary which lie
+convex side of the inflection frontiers
+will be valid as radiation boundaries.
+Since the end is to construct a domain
+with the straight line contour~$x = \pi/2$
+serving as the constant-temperature boundary,
+one may immediately discard any convex portion of traced boundary
+which does not reach~$x = \pi/2$.
+Of the remaining convex portions,
+those which do not reach the $x$-axis~($y = 0$)
+are unable to join up with a convex portion of the opposite branch
+(which is necessary to form a complete domain boundary);
+discarding these also leaves the convex portions of traced boundary
+shown in Figure~\ref{fig:cosine_general-traced-boundaries-convex}.
+
+\begin{figure}
+  \newcommand*{\subfigurewidth}{0.45\textwidth}
+  \centering
+    \hspace*{\fill}
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent{cosine_general-traced-boundaries-convex}{%
+      Convex portions of the two branches of traced boundaries
+      which reach both the constant-temperature boundary~$x = \pi/2$
+      and the $x$-axis.
+    }
+  \end{subfigure}
+    \hfill
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent{cosine_general-asymmetric_domain}{%
+      An asymmetric domain marked out by a radiation boundary
+      and the constant-temperature boundary~$x = \pi/2$.
+    }
+  \end{subfigure}
+    \hspace*{\fill}
+  \caption{
+    Constructing an asymmetric conduction--radiation domain
+    for~$(A, B) = (12, 0.0825)$ (fair regime).
+  }
+  \label{fig:cosine_general-asymmetric-construction}
+\end{figure}
+
+The smooth traced boundary through the critical terminal point~$(x_\sharp, 0)$
+may be used to construct the familiar lens-shaped domain.
+The remaining convex portions of traced boundary
+shown in Figure~\ref{fig:cosine_general-traced-boundaries-convex}
+can be used to construct conduction--radiation domains
+which are not lens-shaped, including asymmetric domains
+(Figure~\ref{fig:cosine_general-asymmetric_domain});
+simply take two intersecting traced boundaries
+(one from the lower branch and one from the upper)
+and trim them where they intersect with each other
+and with the constant-temperature boundary~$x = \pi/2$.
+It is most remarkable that
+\emph{any} conduction--radiation domain constructed in this manner
+will admit the very same exact solution~%
+  (\ref{eq:cosine-scaled-laplace-solution}).
