@@ -290,7 +290,7 @@ Therefore, in this section I consider known solutions of the form
 where $T_0$~is a temperature, $L_0$~is a length scale,
 and $B$~is a dimensionless constant.
 The temperature is constant (taking the value~$T = T_0$)
-along the straight line~$x = \pi/2 \cdot L_0$,
+along the straight line~$x = \pi L_0/2$,
 which shall ultimately serve as the heat-supplying boundary.
 
 \subsection{Scaling}
@@ -996,7 +996,7 @@ Figure~\ref{fig:cosine-verification-domain-meshes}
 shows the two selected test domains:
 for the simple case~($B = 1$),
 this is the lens-shaped domain with~$A = 0.8$,
-and for the general case~($B$ arbitrary),
+and for the general case~($B$~arbitrary),
 the asymmetric domain constructed
 in Figure~\ref{fig:cosine_general-asymmetric_domain}.
 Each domain is discretised into an unstructured triangular mesh
@@ -1013,3 +1013,40 @@ and the exact solution~(\ref{eq:cosine-scaled-laplace-solution})
 is excellent;
 in both cases the relative error is strictly less than~$\SI{0.06}{\percent}$
 throughout all vertices of the mesh.
+
+\section{Summary}
+\label{sec:cartesian.summary}
+
+In this chapter I have applied the method of boundary tracing
+for the thermal radiation problem in Cartesian coordinates.
+Starting from the simplest possible solution,
+namely the one-dimensional solution~(\ref{eq:plane-laplace-solution}),
+a family of hypergeometric traced boundaries
+with translational symmetry in~$y$ is produced.
+By construction
+the radiation condition~(\ref{eq:radiation-boundary-condition})
+holds along these boundaries,
+and they may be patched together
+to form a broad variety of radiation boundaries.
+Unfortunately these boundaries are physically invalid
+because they are not convex;
+the boundary condition~(\ref{eq:radiation-boundary-condition})
+does not account for self-viewing radiation.
+
+A more favourable outcome might be expected
+by starting from a solution to Laplace's equation
+which is not one-dimensional.
+The conduction--radiation problem requires a heat source,
+and since it is straight-line, constant-temperature boundaries
+which are of the most physical interest,
+I have chosen the cosinusoidal solution~(\ref{eq:cosine-laplace-solution}),
+which has the straight-line contour~$x = \pi L_0/2$.
+In the simple case~($B = 1$)
+I have shown that a lens-shaped domain can be produced
+which is convex for certain values of the dimensionless group~$A$,
+while for the more complicated general case~($B$~arbitrary)
+I have demonstrated the construction of an asymmetric domain
+from convex portions of traced boundary.
+Finally I have confirmed the validity of the domains produced
+by comparing numerical solutions to the conduction--radiation BVP
+with the exact cosinusoidal solution~(\ref{eq:cosine-laplace-solution}).
