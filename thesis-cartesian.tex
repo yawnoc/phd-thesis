@@ -970,3 +970,46 @@ It is most remarkable that
 \emph{any} conduction--radiation domain constructed in this manner
 will admit the very same exact solution~%
   (\ref{eq:cosine-scaled-laplace-solution}).
+
+\subsection{Numerical verification}
+\label{sec:cartesian.cosine.verification}
+
+The validity of any convex domain constructed
+in Sections~\ref{sec:cartesian.cosine.simple}
+and~\ref{sec:cartesian.cosine.general}
+may be tested by numerically solving the conduction--radiation BVP
+in that domain and comparing the result
+to the exact solution~(\ref{eq:cosine-scaled-laplace-solution}).
+To do this I use \lang{Mathematica~12},
+whose finite elements package~\code{NDSolve\`{}FEM\`{}}
+has built-in capabilities for mesh generation and for solving nonlinear BVPs.
+
+\begin{figure}
+  \centredfigurecontent[width=\textwidth]{%
+    cosine-verification-domain-meshes%
+  }{
+    Selected domains and finite element meshes for numerical verification.
+  }
+\end{figure}
+
+Figure~\ref{fig:cosine-verification-domain-meshes}
+shows the two selected test domains:
+for the simple case~($B = 1$),
+this is the lens-shaped domain with~$A = 0.8$,
+and for the general case~($B$ arbitrary),
+the asymmetric domain constructed
+in Figure~\ref{fig:cosine_general-asymmetric_domain}.
+Each domain is discretised into an unstructured triangular mesh
+with around 500~elements.
+
+Laplace's equation~(\ref{eq:laplace-steady-conduction}) is then solved,
+with the radiation condition~%
+  (\ref{eq:cosine-scaled-radiation-boundary-condition})
+applied along the radiation boundary
+and the Dirichlet condition~$T = 1$ applied
+along the constant-temperature boundary~$x = \pi/2$.
+The agreement between the resulting numerical solutions
+and the exact solution~(\ref{eq:cosine-scaled-laplace-solution})
+is excellent;
+in both cases the relative error is strictly less than~$\SI{0.06}{\percent}$
+throughout all vertices of the mesh.
