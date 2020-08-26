@@ -2,13 +2,18 @@
 \label{ch:cartesian}
 
 In this chapter,
-I apply boundary tracing for the conduction--radiation problem
-by taking known solutions
+I apply boundary tracing to the conduction--radiation problem
+starting from known solutions
 to Laplace's equation~(\ref{eq:laplace-steady-conduction})
-in Cartesian coordinates
-and seeking new boundaries along which
+in Cartesian coordinates.
+Traced boundaries are determined along which
 the radiation condition~(\ref{eq:radiation-boundary-condition})
-is satisfied.
+is satisfied;
+these are then used to construct conduction--radiation domains
+which also admit the known solution.
+Two known solutions are analysed here:
+the plane-source solution in Section~\ref{sec:cartesian.plane}
+and a cosinusoidal solution in Section~\ref{sec:cartesian.cosine}.
 
 \section{Plane-source solution}
 \label{sec:cartesian.plane}
@@ -24,14 +29,14 @@ corresponding to one-dimensional steady conduction
 with constant temperature gradient~$h_0$.
 Such would be the equilibrium temperature profile in a slab
 with one face held at a fixed temperature
-and the other radiating into vacuum,
-and the aim of boundary tracing
-is to look for other (more interesting) radiation boundaries
-which correspond to this same solution.
+and the other radiating into vacuum.
+The aim of boundary tracing is to look for radiation boundaries
+which are more interesting than a flat face
+but which still correspond to the solution~(\ref{eq:plane-laplace-solution}).
 
 In the context of thermal radiation,
 the temperature~$T$ is to be reckoned on an absolute scale;
-therefore, the region~$x < 0$ is unphysical and to be ignored,
+therefore, the region~$x < 0$ is unphysical and ignored,
 as the temperature therein is negative.
 
 \subsection{Scaling}
