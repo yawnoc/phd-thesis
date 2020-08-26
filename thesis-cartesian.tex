@@ -294,7 +294,7 @@ Therefore, in this section I consider known solutions of the form
 \end{important}
 where $T_0$~is a temperature, $L_0$~is a length scale,
 and $B$~is a dimensionless constant.
-The temperature is constant (taking the value~$T = T_0$)
+The temperature is constant and takes the value~$T = T_0$
 along the straight line~$x = \pi L_0/2$,
 which shall ultimately serve as the heat-supplying boundary.
 
@@ -626,7 +626,7 @@ Algebraically, $x_0$~is the positive%
 \footnote{
   The trivial solution~$x = 0$
   corresponds to the isolated terminal point at the origin,
-  which has already been dismissed.
+  which has just been dismissed.
 }
 solution to
 \begin{equation}
@@ -676,7 +676,7 @@ corresponding to steady conduction in its interior,
 thermal radiation along the curved boundary to the left,
 and constant temperature~$T = 1$ along the straight boundary on the right.
 The domain will be valid if the curved boundary
-(a portion of the corresponding candidate boundary)
+(which is a portion of the corresponding candidate boundary)
 is convex, or equivalently,
 if the first inflection of the corresponding candidate boundary
 occurs at abscissa~$x_\infl \ge \pi/2$.
@@ -698,8 +698,8 @@ is that for which the first inflection occurs at precisely~$x_\infl = \pi/2$.
 Given that the candidate boundary is never horizontal,
 $A_\infl$~is best sought using the coordinate parametrisation~$x = x (y)$
 for the candidate boundary.
-In Cartesian coordinates, points of inflection coincide with
-zero-crossings in the second derivative,
+In Cartesian coordinates, points of inflection
+are simply given by zero-crossings in the second derivative,
 or, using primes for $y$-differentiation, $x''$.
 Differentiating the first derivative~%
   (\ref{eq:cosine-tracing-ode-coordinate-parametrisation-x})
@@ -740,7 +740,7 @@ the critical value~$A = A_\infl$ is the solution to
 whose left hand side is the coordinate parametrisation~$x = x (y)$
 evaluated at the would-be $y$-coordinate~%
   (\ref{eq:cosine-simple-traced-boundary-y-would-be-inflection}).
-The bisection algorithm yields
+The bisection algorithm yields the root
 \begin{equation}
   A_\infl = 0.79718,
   \label{eq:cosine-simple-traced-boundary-a-inflection}
@@ -879,7 +879,7 @@ which has been analysed in Section~\ref{sec:cartesian.cosine.general.viable};
 recall that a conduction--radiation domain in the shape of a convex lens
 can be produced for each~$A$ in the interval~%
   (\ref{eq:cosine-simple-traced-boundary-convex-a-interval})
-by patching together the traced boundaries through~$(x_\sharp, 0)$.
+by using the traced boundaries which pass through~$(x_\sharp, 0)$.
 The situation in
 Case~\ref{itm:cartesian.cosine.general.regimes.steep} (steep regime)
 is very similar,
@@ -969,8 +969,9 @@ which are not lens-shaped, including asymmetric domains
 (Figure~\ref{fig:cosine_general-asymmetric_domain});
 simply take two intersecting traced boundaries
 (one from the lower branch and one from the upper)
-and trim them where they intersect with each other
-and with the constant-temperature boundary~$x = \pi/2$.
+which are not reflections of each other,
+and trim them at their intersection
+and where they meet the constant-temperature boundary~$x = \pi/2$.
 It is most remarkable that
 \emph{any} conduction--radiation domain constructed in this manner
 will admit the very same exact solution~%
@@ -1027,15 +1028,15 @@ for the conduction--radiation problem in Cartesian coordinates.
 Starting from the simplest possible solution,
 namely the one-dimensional solution~(\ref{eq:plane-laplace-solution}),
 a family of hypergeometric traced boundaries
-with translational symmetry in~$y$ is produced.
+with translational symmetry in~$y$ has been produced.
 By construction
 the radiation condition~(\ref{eq:radiation-boundary-condition})
 holds along these boundaries,
 and they may be patched together
 to form a broad variety of radiation boundaries.
 Unfortunately these boundaries are physically invalid
-because they are not convex;
-the boundary condition~(\ref{eq:radiation-boundary-condition})
+because they are not convex,
+and the boundary condition~(\ref{eq:radiation-boundary-condition})
 does not account for self-viewing radiation.
 
 A more favourable outcome might be expected
@@ -1043,7 +1044,7 @@ by starting from a solution to Laplace's equation
 which is not one-dimensional.
 The conduction--radiation problem requires a heat source,
 and since it is straight-line, constant-temperature boundaries
-which are of the most physical interest,
+which are of physical interest,
 I have chosen the cosinusoidal solution~(\ref{eq:cosine-laplace-solution}),
 which has the straight-line contour~$x = \pi L_0/2$.
 In the simple case~($B = 1$)
@@ -1052,7 +1053,7 @@ which is convex for certain values of the dimensionless group~$A$,
 while for the more complicated general case~($B$~arbitrary)
 I have demonstrated the construction of an asymmetric domain
 from convex portions of the traced boundaries.
-Finally I have confirmed the validity of the domains produced
+Finally I have confirmed the validity of the domains produced,
 by comparing numerical solutions to the conduction--radiation BVP
 with the exact cosinusoidal solution
-to which boundary tracing was applied.
+unto which boundary tracing was applied.
