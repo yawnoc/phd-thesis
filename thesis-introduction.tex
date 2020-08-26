@@ -47,13 +47,11 @@ with little further work in the area,
 and the aim of this thesis is to
 continue the application of boundary tracing
 to physically significant contexts.
-I explore its use in thermal radiation problems
+I explore its use in a thermal radiation problem
 and extend the work on capillarity.
-I begin by giving a brief introduction
-to boundary tracing (Section~\ref{sec:introduction.tracing})
+I begin by giving a brief introduction to boundary tracing
 and reviewing the relevant known results
-in thermal radiation (Section~\ref{sec:introduction.radiation})
-and capillarity (Section~\ref{sec:introduction.capillarity}).
+in thermal radiation and capillarity.
 
 \section{Boundary tracing}
 \label{sec:introduction.tracing}
@@ -67,7 +65,7 @@ Anderson's thesis~\cite{anderson-2002-thesis-boundary-tracing-pdes}.
 
 Consider a BVP\@, consisting of
 a PDE in some two-dimensional domain~$\Omega$
-along with the boundary condition
+together with the boundary condition
 \begin{important}{equation}
   \normalvec \dotp \del T = F \roundbr[\big]{x, y, T, \norm{\del T}}
   \label{eq:flux-boundary-condition}
@@ -131,9 +129,9 @@ and there are three cases at any given point:
   \item
     If~$\norm{\del T} > \abs{F}$,
     then~(\ref{eq:flux-boundary-condition-cosine})
-    has a conjugate pair of solutions in~$\theta$,
-    and there are two choices for~$\normalvec$,
-    symmetric about~$\del T$,
+    has a conjugate pair of solutions in~$\theta$.
+    There are two choices for~$\normalvec$
+    (symmetric about~$\del T$)
     corresponding to two possible local orientations
     for the traced boundaries,
     which cross the local $T$-contour at an angle.
@@ -295,8 +293,8 @@ due to the nonlinearity of
 the radiation condition~(\ref{eq:radiation-boundary-condition}).
 The usual treatment in the literature has been to consider thin geometries
 for which the problem is effectively one-dimensional,
-so that conduction~(\ref{eq:laplace-steady-conduction})
-and radiation~(\ref{eq:radiation-boundary-condition})
+so that the conduction~(\ref{eq:laplace-steady-conduction})
+and the radiation~(\ref{eq:radiation-boundary-condition})
 may be lumped into a single ODE of the form
 \begin{equation}
   \textq{derivatives of~$T$} - c T^4 = 0.
@@ -321,7 +319,7 @@ Keller \&~Holdredge~\cite{keller-1970-radiation-annular-fins-trapezoidal}.
 While such a simplification is an appropriate choice
 for the study of thin, heat-rejecting fins on spacecraft
 (where thinness and minimisation of weight are desirable),
-it has arguably also been a necessity
+it has also arguably been a necessity
 for making the BVP~(\ref{eq:laplace-steady-conduction})
 and~(\ref{eq:radiation-boundary-condition}) analytically tractable;
 I have not come across any analytical treatment
