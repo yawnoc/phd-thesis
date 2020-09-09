@@ -157,7 +157,7 @@ Note that
 \section{Boundary tracing ODE}
 \label{sec:curvilinear.tracing}
 
-Having obtained the expressions
+Having obtained expressions
 for the normal~$\normalvec$ and gradient~$\del T$
 which appear in the flux boundary condition~(\ref{eq:flux-boundary-condition}),
 I derive in this section
@@ -196,7 +196,7 @@ the boundary condition~(\ref{eq:flux-boundary-condition}) becomes
     =
   F,
 \]
-which expands into the quadratic equation
+which yields the quadratic equation
 \begin{equation}
   \roundbr*{P^2 - F^2} \, {\td \nu}^2
   - 2 P Q \td \nu \td \mu
@@ -219,12 +219,7 @@ or
   \label{eq:tracing-ode-coordinate-parametrisation-v}
 \end{important}
 Alternatively, for the parametrisation~$u = u (v)$,
-one solves for~$\td \mu / {\td \nu}$, giving
-\begin{equation}
-  \tder{\mu}{\nu} = \frac{P Q \mp F \sqrt{\Phi}}{Q^2 - F^2},
-  \label{eq:tracing-ode-coordinate-parametrisation-mu}
-\end{equation}
-or
+one instead solves for~$\td \mu / {\td \nu}$ and obtains
 \begin{important}{equation}
   \tder{u}{v} =
     \frac{\scalefac[v]}{\scalefac[u]}
