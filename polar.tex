@@ -34,39 +34,6 @@ for some temperature~$T_0$ and radius~$r_0$.%
 Note that the region~$r > r_0$ is unphysical,
 since~$T < 0$ therein.
 
-\subsection{Coordinate system}
-\label{sec:polar.line.coordinate}
-
-The analysis to follow shall be performed
-in the usual polar coordinates~$(r, \phi)$
-(see Figure~X), % TODO
-given by the transformation
-\begin{align}
-  x &= r \cos\phi, \label{eq:x-transformation-polar} \\
-  y &= r \sin\phi. \label{eq:y-transformation-polar}
-\end{align}
-The local basis vectors are
-\begin{align}
-  \localvec{r} &\ideq
-    \cos\phi \basisvec{x} + \sin\phi \basisvec{y},
-    \label{eq:r-local-basis-vector} \\
-  \localvec{\phi} &\ideq
-    r \roundbr[\big]{-\sin\phi \basisvec{x} + \cos\phi \basisvec{y}},
-    \label{eq:phi-local-basis-vector}
-\end{align}
-the scale factors,
-\begin{align}
-  \scalefac[r] &\ideq 1, \label{eq:r-scale-factor} \\
-  \scalefac[\phi] &\ideq r, \label{eq:phi-scale-factor}
-\end{align}
-and the local orthonormal basis vectors,
-\begin{align}
-  \basisvec{r} &\ideq \cos\phi \basisvec{x} + \sin\phi \basisvec{y},
-    \label{eq:r-basis-vector} \\
-  \basisvec{\phi} &\ideq -\sin\phi \basisvec{x} + \cos\phi \basisvec{y}.
-    \label{eq:phi-basis-vector}
-\end{align}
-
 \subsection{Scaling}
 \label{sec:polar.line.scaling}
 
@@ -248,7 +215,7 @@ and show that the construction of convex domains
 is only possible in the hot regime~$A < A_\nat$,
 on the outer viable mainland~$r \ge r_\nat$.
 
-Using~(\ref{eq:r-scale-factor}) and~(\ref{eq:phi-scale-factor})
+Using the scale factors~$\scalefac[r] \ideq 1$ and~$\scalefac[\phi] \ideq r$
 (which are unchanged by the scaling)
 along with~(\ref{eq:line-flux-function})
 through~(\ref{eq:line-viability-function}),
@@ -681,8 +648,13 @@ as a function of~$r$.
 
 First consider any curve parametrised in the form~$\phi = \phi (r)$.
 With primes denoting $r$-differentiation as before,
-observe that the orthonormal basis vectors~%
-  (\ref{eq:r-basis-vector}) and~(\ref{eq:phi-basis-vector})
+observe that the orthonormal basis vectors
+\begin{align}
+  \basisvec{r} &\ideq \cos\phi \basisvec{x} + \sin\phi \basisvec{y},
+    \label{eq:r-basis-vector} \\
+  \basisvec{\phi} &\ideq -\sin\phi \basisvec{x} + \cos\phi \basisvec{y}
+    \label{eq:phi-basis-vector}
+\end{align}
 will change, along this curve, according to
 \begin{align}
   (\basisvec{r})'
@@ -694,10 +666,9 @@ will change, along this curve, according to
   \ideq -\phi' \basisvec{r}.
     \label{eq:phi-basis-vector-r-derivative}
 \end{align}
-Using the scale factors~%
-  (\ref{eq:r-scale-factor}) and~(\ref{eq:phi-scale-factor}),
-the differential displacement~(\ref{eq:differential-displacement})
-becomes
+Since the scale factors are~%
+  $\scalefac[r] \ideq 1$ and~$\scalefac[\phi] \ideq r$,
+the differential displacement is given by
 \begin{equation}
   \td\vec{r} \ideq \td r \basisvec{r} + r \td\phi \basisvec{\phi}.
   \label{eq:differential-displacement-polar}
