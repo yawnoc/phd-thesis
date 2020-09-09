@@ -27,86 +27,16 @@ the boundary tracing ODE for coordinate parametrisation
 and also the corresponding system of ODEs for arc-length parametrisation,
 with both applicable in any two-dimensional orthogonal coordinate system.
 
-In the interest of keeping this thesis \emph{wholly self-contained},
-I first go through the foundational definitions of
-orthogonal curvilinear coordinates and vector calculus
-in Sections~\ref{sec:curvilinear.orthogonal}
-and~\ref{sec:curvilinear.calculus},
-before proceeding to the derivations of the boundary tracing ODEs
-in Section~\ref{sec:curvilinear.tracing}.
+\section{Normal derivative}
+\label{sec:curvilinear.derivative}
 
-\section{Orthogonal curvilinear coordinates}
-\label{sec:curvilinear.orthogonal}
+To perform boundary tracing in a specific coordinate system,
+the flux boundary condition~(\ref{eq:flux-boundary-condition}),
+in particular the normal derivative on the left hand side,
+must be written in that coordinate system.
 
-First I run through some standard definitions and terminology.
-
-Let~$(\basisvec{x}, \basisvec{y})$ be the standard basis vectors
-of the usual Cartesian coordinates~$(x, y)$.
-The \term{position vector} is
-\begin{equation}
-  \positionvec \defeq x \basisvec{x} + y \basisvec{y},
-  \label{eq:position-vector-cartesian}
-\end{equation}
-and since $\basisvec{x}$ and~$\basisvec{y}$ are globally constant,
-observe that
-\begin{align}
-  \basisvec{x} &\ideq \pder{\positionvec}{x},
-    \label{eq:x-basis-vector} \\[\tallspace]
-  \basisvec{y} &\ideq \pder{\positionvec}{y}.
-    \label{eq:y-basis-vector}
-\end{align}
-Now consider the \term{curvilinear coordinates}~$(u, v)$
-given by the transformation
-\begin{align}
-  x &= x (u, v), \label{eq:x-transformation-curvilinear} \\
-  y &= y (u, v). \label{eq:y-transformation-curvilinear}
-\end{align}
-A \term{local basis}~$(\localvec{u}, \localvec{v})$
-arises from the derivatives of position
-in analogy to~(\ref{eq:x-basis-vector}) and~(\ref{eq:y-basis-vector}),
-\begin{align}
-  \localvec{u} &
-    \defeq \pder{\positionvec}{u}
-    \ideq \pder{x}{u} \basisvec{x} + \pder{y}{u} \basisvec{y},
-      \label{eq:u-local-basis-vector} \\[\tallspace]
-  \localvec{v} &
-    \defeq \pder{\positionvec}{v}
-    \ideq \pder{x}{v} \basisvec{x} + \pder{y}{v} \basisvec{y}.
-      \label{eq:v-local-basis-vector}
-\end{align}
-It is assumed that the curvilinear coordinates~$(u, v)$ are \term{orthogonal},
-meaning the local basis vectors are orthogonal to each other:
-\begin{equation}
-  \localvec{u} \dotp \localvec{v} \ideq 0.
-  \label{eq:local-basis-orthogonal}
-\end{equation}
-The magnitudes of the local basis vectors may not be unity;
-in fact, should either~$u$ or~$v$ not have the dimensions of length,
-the corresponding local basis vector will not even be dimensionless.
-Therefore, one defines the \term{scale factors}
-(or \term{\lame{} coefficients})
-\begin{align}
-  \scalefac[u] &\defeq \norm{\localvec{u}}, \label{eq:u-scale-factor} \\
-  \scalefac[v] &\defeq \norm{\localvec{v}}, \label{eq:v-scale-factor}
-\end{align}
-and then normalises the local basis
-to obtain the \term{local orthonormal basis},
-\begin{align}
-  \basisvec{u} &\defeq \frac{\localvec{u}}{\scalefac[u]},
-      \label{eq:u-basis-vector} \\[\tallspace]
-  \basisvec{v} &\defeq \frac{\localvec{v}}{\scalefac[v]},
-      \label{eq:v-basis-vector}
-\end{align}
-for which
-\begin{equation}
-  \basisvec{u} \dotp \basisvec{v} \ideq 0
-  \label{eq:orthonormal-basis-orthogonal}
-\end{equation}
-and
-\begin{equation}
-  \norm{\basisvec{u}} \ideq \norm{\basisvec{v}} \ideq 1.
-  \label{eq:orthonormal-basis-normalised}
-\end{equation}
+\subsection{Orthogonal curvilinear coordinates}
+\label{sec:curvilinear.derivative.orthogonal}
 
 \begin{figure}
   \centredfigurecontent[width=0.4\textwidth]{%
@@ -117,176 +47,51 @@ and
   }
 \end{figure}
 
-\section{Vector calculus}
-\label{sec:curvilinear.calculus}
-
-Next, I go through the standard mathematical machinery required
-to do calculus in an orthogonal coordinate system.
-
-\subsection{Differential displacement}
-\label{sec:curvilinear.calculus.displacement}
-
-Consider the $u$-contour and the $v$-contour through a point~$(u, v)$.
-Independently incrementing~$u$ by~$\td u$ and~$v$ by~$\td v$
-results in two new contours,
-corresponding to each of the new coordinates.
-Since the coordinate system is orthogonal,
-the four contours (two old and two new)
-shall mark out an infinitesimal rectangle,
-aligned with the local orthonormal basis
-and with sides of length~$\scalefac[u] \td u$ and~$\scalefac[v] \td v$
-(Figure~\ref{fig:orthogonal-curvilinear-coordinates}).
-Indeed the \term{differential displacement} is
-\begin{align*}
-  \td \positionvec
-  &\ideq
-    \pder{\positionvec}{u} \td u + \pder{\positionvec}{v} \td v
+Consider an orthogonal coordinate system~$(u, v)$.
+By definition the $u$-contours and $v$-contours
+cross everywhere at right angles;
+therefore if the coordinates are independently incremented
+by~$\td u$ and~$\td v$,
+an infinitesimal rectangle is formed,
+as in Figure~\ref{fig:orthogonal-curvilinear-coordinates},
+having sides~$\scalefac[u] \td u \basisvec{u}$
+and~$\scalefac[v] \td v \basisvec{v}$,
+where $\scalefac[u]$ and~$\scalefac[v]$~are the \term{scale factors}%
+\footnote{
+  Also called \term{\lame{} coefficients}.
+  From the position vector~%
+    $\positionvec \ideq x \basisvec{x} + y \basisvec{y}$
+  are obtained the local basis vectors~%
+    $\localvec{u} \ideq \pd\positionvec / {\pd u}$
+  and~%
+    $\localvec{v} \ideq \pd\positionvec / {\pd v}$,
+  and hence the scale factors~$\scalefac[u] \ideq \norm{\localvec{u}}$
+  and~$\scalefac[v] \ideq \norm{\localvec{v}}$.
+}
+and $(\basisvec{u}, \basisvec{v})$~is the \term{local orthonormal basis}%
+\footnote{
+  Obtained by normalising the local basis vectors,
+  i.e.~$\basisvec{u} \ideq \localvec{u} / \scalefac[u]$
+  and~$\basisvec{v} \ideq \localvec{v} / \scalefac[v]$.
+}.
+It can be shown that the normal vector~$\normalvec$ (up to sign)
+and the gradient vector~$\del T$ are given by
+\begin{align}
+  \normalvec &\ideq
+    \scalefac[v] \tder{v}{s} \basisvec{u}
+      -
+    \scalefac[u] \tder{u}{s} \basisvec{v},
+    \label{eq:normal-vector}
     \\[\tallspace]
-  &\ideq \localvec{u} \td u + \localvec{v} \td v \\
-  &\ideq \scalefac[u] \td u \basisvec{u} + \scalefac[v] \td v \basisvec{v}.
-    \yesnumber
-    \label{eq:differential-displacement}
-\end{align*}
-The area of the infinitesimal rectangle is
-the \term{differential area element}
-\begin{equation}
-  \td V \ideq \scalefac[u] \scalefac[v] \td u \td v.
-  \label{eq:differential-area-element}
-\end{equation}
-
-\subsection{Gradient}
-\label{sec:curvilinear.calculus.gradient}
-
-Consider a scalar field~$T$
-(which, in the context of boundary tracing, shall be the known solution).
-By the chain rule, the independent increments~$\td u$ and~$\td v$
-effect the differential change
-\begin{align*}
-  \td T
-  &\ideq \pder{T}{u} \td u + \pder{T}{v} \td v \\[\tallspace]
-  &\ideq
-    \roundbr*{\frac{1}{\scalefac[u]} \pder{T}{u}}
-    \roundbr[\big]{\scalefac[u] \td u}
-      +
-    \roundbr*{\frac{1}{\scalefac[v]} \pder{T}{v}}
-    \roundbr[\big]{\scalefac[v] \td v}.
-    \yesnumber
-    \label{eq:scalar-differential-change}
-\end{align*}
-By the definition of gradient,
-and using~(\ref{eq:differential-displacement}),
-\begin{align*}
-  \td T
-  &\ideq \del T \dotp \td \positionvec \\
-  &\ideq
-    \del T
-      \dotp
-    \roundbr[\big]{
-      \scalefac[u] \td u \basisvec{u}
-        +
-      \scalefac[v] \td v \basisvec{v}
-    }.
-    \yesnumber
-    \label{eq:scalar-differential-change-gradient}
-\end{align*}
-Comparing~(\ref{eq:scalar-differential-change})
-and~(\ref{eq:scalar-differential-change-gradient}),
-it follows that the \term{gradient} of~$T$ is given by
-\begin{equation}
-  \del T \ideq
+  \del T &\ideq
     \frac{1}{\scalefac[u]} \pder{T}{u} \basisvec{u}
       +
-    \frac{1}{\scalefac[v]} \pder{T}{v} \basisvec{v}.
-  \label{eq:gradient}
-\end{equation}
-
-\subsection{Divergence}
-\label{sec:curvilinear.calculus.divergence}
-
-Consider a vector field~$%
-\vec{E} \defeq \comp{E}{u} \basisvec{u} + \comp{E}{v} \basisvec{v}$,
-and the infinitesimal rectangle
-of Figure~\ref{fig:orthogonal-curvilinear-coordinates},
-whose sides are of length~$\scalefac[u] \td u$ and~$\scalefac[v] \td v$.
-
-To first order,
-the net flux across the two edges normal to~$\basisvec{u}$
-(which have length~$\scalefac[v] \td v$) is
-\[
-  \pder{}{u} \roundbr[\Big]{
-    \comp{E}{u} \cdot \scalefac[v] \td v
-  } \cdot \td u,
-\]
-and the net flux across the two edges normal to~$\basisvec{v}$
-(which have length~$\scalefac[u] \td u$) is
-\[
-  \pder{}{v} \roundbr[\Big]{
-    \comp{E}{v} \cdot \scalefac[u] \td u
-  } \cdot \td v.
-\]
-Summing these results in the flux across the entire perimeter of the rectangle,
-which, divided by its area,
-the area element~(\ref{eq:differential-area-element}),
-yields the \term{divergence} of~$\vec{E}$,
+    \frac{1}{\scalefac[v]} \pder{T}{v} \basisvec{v},
+    \label{eq:gradient}
+\end{align}
+where $\td s$~is the differential arc length
 \begin{equation}
-  \del \dotp \vec{E} \ideq
-    \frac{1}{\scalefac[u] \scalefac[v]}
-    \squarebr*{
-      \pder{}{u} \roundbr[\Big]{\scalefac[v] \comp{E}{u}}
-        +
-      \pder{}{v} \roundbr[\Big]{\scalefac[u] \comp{E}{v}}
-    }.
-  \label{eq:divergence}
-\end{equation}
-
-\subsection{Laplacian}
-\label{sec:curvilinear.calculus.laplacian}
-
-Composing the divergence~(\ref{eq:divergence})
-and the gradient~(\ref{eq:gradient}) (with~$\vec{E} = \del T$),
-it follows that the \term{Laplacian} of~$T$ is given by
-\begin{equation}
-  \del^2 T \defeq \del \dotp \del T \ideq
-    \frac{1}{\scalefac[u] \scalefac[v]}
-    \squarebr*{
-      \pder{}{u} \roundbr*{\frac{\scalefac[v]}{\scalefac[u]} \pder{T}{u}}
-        +
-      \pder{}{v} \roundbr*{\frac{\scalefac[u]}{\scalefac[v]} \pder{T}{v}}
-    }.
-  \label{eq:laplacian}
-\end{equation}
-In particular,
-if the two scale factors~$\scalefac[u]$ and~$\scalefac[v]$ are equal,
-say~$\scalefac[u] \ideq \scalefac[v] \ideq \scalefac$,
-this simplifies to
-\begin{equation}
-  \del^2 T \ideq
-    \frac{1}{\scalefac^2}
-    \squarebr*{\pder[2]{T}{u} + \pder[2]{T}{v}}.
-  \label{eq:laplacian-scale-factors-equal}
-\end{equation}
-
-\subsection{Boundary normal}
-\label{sec:curvilinear.calculus.normal}
-
-The \term{tangent vector}~$\tangentvec$ to a curve
-is given by the unit vector of
-the differential displacement~(\ref{eq:differential-displacement}),
-i.e.\@
-\begin{equation}
-  \tangentvec \ideq
-    \frac{
-      \scalefac[u] \td u \basisvec{u}
-        +
-      \scalefac[v] \td v \basisvec{v}
-    }{
-      \td s
-    },
-  \label{eq:tangent-vector}
-\end{equation}
-where $\td s$~is the \term{differential arc length}
-\begin{equation}
-  \td s \defeq \norm{\td \positionvec} \ideq
+  \td s \ideq
   \sqrt{
     \roundbr[\big]{\scalefac[u] \td u}^2
       +
@@ -294,56 +99,48 @@ where $\td s$~is the \term{differential arc length}
   }.
   \label{eq:differential-arc-length}
 \end{equation}
-The normal vector~$\normalvec$ to a curve
-is perpendicular to the tangent~$\tangentvec$;
-therefore
-\begin{equation}
-  \normalvec \ideq
-    \frac{
-      \scalefac[v] \td v \basisvec{u}
-        -
-      \scalefac[u] \td u \basisvec{v}
-    }{
-      \td s
-    },
-  \label{eq:normal-vector}
-\end{equation}
-up to sign.
-
-\subsection{Abbreviations}
-\label{sec:curvilinear.calculus.abbreviations}
-
 Since the scale factors~$\scalefac[u]$ and~$\scalefac[v]$ appear regularly,
 it is helpful to define abbreviations
 before proceeding any further.
 
-For the components of the differential displacement
-vector~(\ref{eq:differential-displacement}),
-which are the side lengths of the infinitesimal rectangle
+\subsection{Abbreviations}
+\label{sec:curvilinear.derivative.abbreviations}
+
+For the side lengths of the infinitesimal rectangle
 of Figure~\ref{fig:orthogonal-curvilinear-coordinates},
-let
+define the auxiliary differentials
 \begin{align}
-  \td \mu &\defeq \scalefac[u] \td u,
+  \td \mu &\ideq \scalefac[u] \td u,
     \label{eq:differential-displacement-u-component} \\
-  \td \nu &\defeq \scalefac[v] \td v,
+  \td \nu &\ideq \scalefac[v] \td v,
     \label{eq:differential-displacement-v-component}
 \end{align}
 so that
 \begin{equation}
-  \td \positionvec \ideq \td \mu \basisvec{u} + \td \nu \basisvec{v}
-  \label{eq:differential-displacement-abbreviated}
-\end{equation}
-and
-\begin{equation}
   \td s \ideq \sqrt{{\td \mu}^2 + {\td \nu}^2}.
   \label{eq:differential-arc-length-abbreviated}
 \end{equation}
-For the components of the gradient vector~(\ref{eq:gradient}),
+For the components of the normal vector~(\ref{eq:normal-vector}),
 write
 \begin{align}
-  P &\defeq \frac{1}{\scalefac[u]} \pder{T}{u},
+  \alpha &\ideq \tder{\mu}{s} \ideq \frac{\scalefac[u] \td u}{\td s},
+    \label{eq:tangent-u-component} \\[\tallspace]
+  \beta &\ideq \tder{\nu}{s} \ideq \frac{\scalefac[v] \td v}{\td s},
+    \label{eq:tangent-v-component}
+\end{align}
+so that
+\begin{equation}
+  \normalvec
+    \ideq \tder{\nu}{s} \basisvec{u} - \tder{\mu}{s} \basisvec{v}
+    \ideq \beta \basisvec{u} - \alpha \basisvec{v}.
+  \label{eq:normal-vector-abbreviated}
+\end{equation}
+Finally, for the components of the gradient vector~(\ref{eq:gradient}),
+define
+\begin{align}
+  P &\ideq \frac{1}{\scalefac[u]} \pder{T}{u},
     \label{eq:gradient-u-component} \\[\tallspace]
-  Q &\defeq \frac{1}{\scalefac[v]} \pder{T}{v},
+  Q &\ideq \frac{1}{\scalefac[v]} \pder{T}{v},
     \label{eq:gradient-v-component}
 \end{align}
 so that
@@ -351,25 +148,6 @@ so that
   \del T \ideq P \basisvec{u} + Q \basisvec{v}.
   \label{eq:gradient-abbreviated}
 \end{equation}
-Finally, for the components of
-the tangent vector~(\ref{eq:tangent-vector}), define
-\begin{align}
-  \alpha &\defeq \tder{\mu}{s} \ideq \frac{\scalefac[u] \td u}{\td s},
-    \label{eq:tangent-u-component} \\[\tallspace]
-  \beta &\defeq \tder{\nu}{s} \ideq \frac{\scalefac[v] \td v}{\td s},
-    \label{eq:tangent-v-component}
-\end{align}
-so that
-\begin{align}
-  \tangentvec
-  &\ideq \frac{\td \mu \basisvec{u} + \td \nu \basisvec{v}}{\td s}
-  \ideq \alpha \basisvec{u} + \beta \basisvec{v},
-    \label{eq:tangent-vector-abbreviated} \\[\tallspace]
-  \normalvec
-  &\ideq \frac{\td \nu \basisvec{u} - \td \mu \basisvec{v}}{\td s}
-  \ideq \beta \basisvec{u} - \alpha \basisvec{v}.
-    \label{eq:normal-vector-abbreviated}
-\end{align}
 Note that
 \begin{align}
   P^2 + Q^2 &\ideq (\del T)^2, \label{eq:gradient-pythagoras} \\
@@ -379,14 +157,12 @@ Note that
 \section{Boundary tracing ODE}
 \label{sec:curvilinear.tracing}
 
-With the workings of orthogonal curvilinear coordinates now established,
+Having obtained the expressions
+for the normal~$\normalvec$ and gradient~$\del T$
+which appear in the flux boundary condition~(\ref{eq:flux-boundary-condition}),
 I derive in this section
 the boundary tracing ODE for coordinate parametrisation
 and the corresponding system of ODEs for arc-length parametrisation.
-Recall that the sought-after traced boundaries are to satisfy
-the boundary condition~(\ref{eq:flux-boundary-condition}),
-in which $T$~is the chosen known solution (to the PDE under consideration)
-and $F$~is the prescribed flux function.
 
 Following Anderson~\etal~\cite{anderson-2007-boundary-tracing-i-theory}
 it is convenient to define the \term{viability function}
