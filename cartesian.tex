@@ -47,13 +47,13 @@ scale-invariant with respect to both temperature and length,
 its coupling with
 the radiation boundary condition~(\ref{eq:radiation-boundary-condition})
 will determine characteristic temperature and length scales
-$\tau$ and~$\lambda$.
+$\Theta$ and~$\lambda$.
 Here, scaling is used to remove these parameters
 and reduce the problem to its simplest form.
 
 Defining
 \begin{align}
-  \scaled{T} &\defeq T / \tau, \label{eq:plane-scaled-temperature} \\
+  \scaled{T} &\defeq T / \Theta, \label{eq:plane-scaled-temperature} \\
   \scaled{x} &\defeq x / \lambda, \label{eq:plane-scaled-x} \\
   \scaled{y} &\defeq y / \lambda, \label{eq:plane-scaled-y}
 \end{align}
@@ -67,17 +67,17 @@ and the known solution~(\ref{eq:plane-laplace-solution})
 become
 \begin{align}
   \normalvec \dotp \scaleddel \scaled{T}
-    &= -\group{c \lambda \tau^3} \scaled{T}^4,
+    &= -\group{c \lambda \Theta^3} \scaled{T}^4,
     \label{eq:plane-scaled-radiation-boundary-condition-with-groups}
     \\[\tallspace]
   \scaled{T}
-    &\ideq \group{\frac{h_0 \lambda}{\tau}} \scaled{x}.
+    &\ideq \group{\frac{h_0 \lambda}{\Theta}} \scaled{x}.
     \label{eq:plane-scaled-laplace-solution-with-groups}
 \end{align}
 Setting the two dimensionless groups to unity
 results in the temperature and length scales
 \begin{align}
-  \tau &= \roundbr*{\frac{h_0}{c}}^{1/4},
+  \Theta &= \roundbr*{\frac{h_0}{c}}^{1/4},
     \label{eq:plane-temperature-scale} \\[\tallspace]
   \lambda &= \roundbr*{\frac{1}{c {h_0}^3}}^{1/4}.
     \label{eq:plane-length-scale}
@@ -309,12 +309,12 @@ and the known solution~(\ref{eq:cosine-laplace-solution})
 become
 \begin{align}
   \normalvec \dotp \scaleddel \scaled{T}
-    &= -\group{c \lambda \tau^3} \scaled{T}^4,
+    &= -\group{c \lambda \Theta^3} \scaled{T}^4,
     \label{eq:cosine-scaled-radiation-boundary-condition-with-groups}
     \\[\tallspace]
   \scaled{T}
     &\ideq
-      \group{\frac{T_0}{\tau}}
+      \group{\frac{T_0}{\Theta}}
       \roundbr*{
         1 -
           B
@@ -323,13 +323,13 @@ become
       },
     \label{eq:cosine-scaled-laplace-solution-with-groups}
 \end{align}
-where there are two free scales, $\tau$~(temperature) and $\lambda$~(length).
+where there are two free scales, $\Theta$~(temperature) and $\lambda$~(length).
 Since there are three unique dimensionless groups,
 one of the groups cannot be eliminated,
 and to keep the cosinusoidal terms as simple as possible,
 the obvious scales
 \begin{align}
-  \tau &= T_0,
+  \Theta &= T_0,
     \label{eq:cosine-temperature-scale} \\
   \lambda &= L_0,
     \label{eq:cosine-length-scale}

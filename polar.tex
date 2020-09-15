@@ -55,10 +55,10 @@ the radiation boundary condition~(\ref{eq:radiation-boundary-condition}).
 
 Let
 \begin{align}
-  \scaled{T} &\defeq T / \tau, \label{eq:line-scaled-temperature} \\
+  \scaled{T} &\defeq T / \Theta, \label{eq:line-scaled-temperature} \\
   \scaled{r} &\defeq r / \varrho, \label{eq:line-scaled-r}
 \end{align}
-with~$\tau$ and~$\varrho$ to be chosen later.
+with~$\Theta$ and~$\varrho$ to be chosen later.
 Noting that
 \begin{equation}
   \scaleddel \ideq \varrho \del,
@@ -69,22 +69,22 @@ and the known solution~(\ref{eq:line-laplace-solution})
 become
 \begin{align}
   \normalvec \dotp \scaleddel \scaled{T}
-    &= -\group{c \varrho \tau^3} \scaled{T}^4,
+    &= -\group{c \varrho \Theta^3} \scaled{T}^4,
     \label{eq:line-scaled-radiation-boundary-condition-with-groups}
     \\[\tallspace]
   \scaled{T}
     &\ideq
-      \group{\frac{T_0}{\tau}}
+      \group{\frac{T_0}{\Theta}}
       \log \roundbr*{\frac{\group{r_0 / \varrho}}{\scaled{r}}}.
     \label{eq:line-scaled-laplace-solution-with-groups}
 \end{align}
 There are three dimensionless groups
-but only two free scales~$\tau$ and~$\varrho$,
+but only two free scales~$\Theta$ and~$\varrho$,
 so one of the groups cannot be eliminated.
 To keep the logarithm as simple as possible,
 put
 \begin{align}
-  \tau &= T_0,
+  \Theta &= T_0,
     \label{eq:line-temperature-scale} \\
   \varrho &= r_0,
     \label{eq:line-length-scale}
