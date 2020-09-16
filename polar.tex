@@ -41,8 +41,8 @@ given by the transformation
 \end{align}
 for which the scale factors are
 \begin{align}
-  \scalefac[r] &\ideq 1, \label{eq:r-scale-factor} \\
-  \scalefac[\phi] &\ideq r. \label{eq:phi-scale-factor}
+  \scalefac[r] &\ideq 1, \label{eq:r-scale-factor-polar} \\
+  \scalefac[\phi] &\ideq r. \label{eq:phi-scale-factor-polar}
 \end{align}
 
 \subsection{Scaling}
@@ -104,6 +104,9 @@ become
   T &\ideq -\log r.
     \label{eq:line-scaled-laplace-solution}
 \end{important}
+Note that the scale factors~%
+  (\ref{eq:r-scale-factor-polar}) and~(\ref{eq:phi-scale-factor-polar})
+are unchanged in form by the scaling.
 
 \section{Viable domain}
 \label{sec:polar.viable}
@@ -226,9 +229,7 @@ and show that the construction of convex domains
 is only possible in the hot regime~$A < A_\nat$,
 on the outer viable mainland~$r \ge r_\nat$.
 
-Using the scale factors~$\scalefac[r] \ideq 1$ and~$\scalefac[\phi] \ideq r$
-(which are unchanged by the scaling)
-along with~(\ref{eq:line-flux-function})
+Using~(\ref{eq:line-flux-function})
 through~(\ref{eq:line-viability-function}),
 the boundary tracing ODE~(\ref{eq:tracing-ode-coordinate-parametrisation-u})
 becomes
@@ -677,9 +678,9 @@ will change, along this curve, according to
   \ideq -\phi' \basisvec{r}.
     \label{eq:phi-basis-vector-r-derivative}
 \end{align}
-Since the scale factors are~%
-  $\scalefac[r] \ideq 1$ and~$\scalefac[\phi] \ideq r$,
-the differential displacement is given by
+From the scale factors~%
+  (\ref{eq:r-scale-factor-polar}) and~(\ref{eq:phi-scale-factor-polar}),
+it follows that the differential displacement is given by
 \begin{equation}
   \td\vec{r} \ideq \td r \basisvec{r} + r \td\phi \basisvec{\phi}.
   \label{eq:differential-displacement-polar}
