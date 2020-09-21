@@ -203,37 +203,38 @@ This is shown in Figure~\ref{fig:line-auxiliary-function}.
 
 The topology of the viable domain~$\psi (r) \le A$ will depend
 on whether the dimensionless group~$A$ is
-greater than, equal to, or less than
-the critical value~(\ref{eq:line-a-natural}),
+less than, equal to, or greater than
+the critical value~$A_\nat$ of~(\ref{eq:line-a-natural}),
 as this decides the number of roots of the equation~$\psi (r) = A$
 (Figure~\ref{fig:line-viable}):
 \begin{enumerate}
   \item
-    \term{Cold regime}, $A > A_\nat$:
-    $\psi (r)$~is never equal to~$A$.
-    The entire space~$0 \le r \le 1$ is viable,
-    and there is no terminal curve.
-  \item
-    \term{Transition}, $A = A_\nat$:
-    $\psi (r)$~is equal to~$A$ at~$r = r_\nat$ only.
-    The entire space is still viable,
-    but now the terminal curve~$r = r_\nat$ has appeared.
-    The terminal curve~$r = r_\nat$ is in fact a critical terminal curve,
-    since it is a contour of the known solution~%
-      (\ref{eq:line-scaled-laplace-solution}).
-  \item
   \label{itm:polar.regimes.hot}
     \term{Hot regime}, $A < A_\nat$:
-    $\psi (r)$~is equal to~$A$ at~$r = r_\flat$
-    and at~$r = r_\sharp$,
-    both dependent on~$A$,
+    $\psi (r)$~is equal to~$A$ at~$r = r_\flat$ and~$r = r_\sharp$
+    (both dependent on~$A$),
     with~$0 <  r_\flat < r_\nat < r_\sharp < 1$.
-    The critical terminal curve now consists of two circles:
-    inner, $r = r_\flat$, and outer, $r = r_\sharp$.
-    A non-viable moat~$r_\flat < r < r_\sharp$,
-    devoid of traced boundaries,
+    The terminal curve consists of two circles,
+    inner~$r = r_\flat$ and outer~$r = r_\sharp$,
+    and since these are contours of the known solution~%
+      (\ref{eq:line-scaled-laplace-solution}),
+    the terminal curve is in fact a critical terminal curve.
+    A non-viable moat~$r_\flat < r < r_\sharp$
     separates an inner viable island~$0 \le r \le r_\flat$
     from an outer viable mainland~$r \ge r_\sharp$.
+  \item
+    \term{Transition}, $A = A_\nat$:
+    $\psi (r)$~is equal to~$A$ at~$r = r_\nat$ only,
+    the two roots~$r_\flat$ and~$r_\sharp$ having merged together.
+    The entire space~$0 \le r \le 1$ is now viable
+    as the non-viable moat has shrunken to nothingness,
+    the critical terminal curve~$r = r_\nat$
+    being the only evidence of its former existence.
+  \item
+    \term{Cold regime}, $A > A_\nat$:
+    $\psi (r)$~is never equal to~$A$.
+    The entire space remains viable,
+    but there is no longer any terminal curve.
 \end{enumerate}
 Figure~X % TODO
 shows the regimes displayed in the style of a bifurcation diagram,
