@@ -190,19 +190,31 @@ This is shown in Figure~\ref{fig:line-auxiliary-function}.
 \subsection{Three regimes}
 \label{sec:polar.viable.regimes}
 
+\begin{figure}
+  \centredfigurecontent[width=0.8\textwidth]{%
+    line-viable%
+  }{
+    Non-viable domain~$\Phi < 0$
+    for the known solution~(\ref{eq:line-scaled-laplace-solution})
+    and viability function~(\ref{eq:line-viability-function}),
+    as $A$~increases.
+  }
+\end{figure}
+
 The topology of the viable domain~$\psi (r) \le A$ will depend
 on whether the dimensionless group~$A$ is
 greater than, equal to, or less than
 the critical value~(\ref{eq:line-a-natural}),
-as this decides the number of roots of the equation~$\psi (r) = A$:
+as this decides the number of roots of the equation~$\psi (r) = A$
+(Figure~\ref{fig:line-viable}):
 \begin{enumerate}
   \item
-    \term{Cold regime}, $A > A_\nat$ (Figure~X): % TODO
+    \term{Cold regime}, $A > A_\nat$:
     $\psi (r)$~is never equal to~$A$.
     The entire space~$0 \le r \le 1$ is viable,
     and there is no terminal curve.
   \item
-    \term{Transition}, $A = A_\nat$ (Figure~X): % TODO
+    \term{Transition}, $A = A_\nat$:
     $\psi (r)$~is equal to~$A$ at~$r = r_\nat$ only.
     The entire space is still viable,
     but now the terminal curve~$r = r_\nat$ has appeared.
@@ -211,7 +223,7 @@ as this decides the number of roots of the equation~$\psi (r) = A$:
       (\ref{eq:line-scaled-laplace-solution}).
   \item
   \label{itm:polar.regimes.hot}
-    \term{Hot regime}, $A < A_\nat$ (Figure~X): % TODO
+    \term{Hot regime}, $A < A_\nat$:
     $\psi (r)$~is equal to~$A$ at~$r = r_\flat$
     and at~$r = r_\sharp$,
     both dependent on~$A$,
