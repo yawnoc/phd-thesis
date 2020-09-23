@@ -272,7 +272,28 @@ so that the traced boundaries are given by
 \end{important}
 This integral is not elementary,
 and the traced boundaries must be determined numerically,
-the results of which are displayed in Figure~X. % TODO
+the results of which are displayed in Figure~\ref{fig:line-traced-boundaries}.
+
+\begin{figure}
+  \newcommand*{\subfigurewidth}{0.325\textwidth}
+  \centering
+  \begin{subfigure}{\subfigurewidth}
+    \centredfigurecontent{line-traced-boundaries-hot}{Hot regime}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{\subfigurewidth}
+    \centredfigurecontent{line-traced-boundaries-cold_hot}{Transition}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{\subfigurewidth}
+    \centredfigurecontent{line-traced-boundaries-cold}{Cold regime}
+  \end{subfigure}
+  \caption{
+    Traced boundaries
+    obtained by integrating~(\ref{eq:line-traced-boundary-integral}).
+  }
+  \label{fig:line-traced-boundaries}
+\end{figure}
 
 At this point it is important to keep in mind the end goal,
 which is to construct interesting domains
