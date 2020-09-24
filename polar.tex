@@ -1038,14 +1038,15 @@ or
 The ratio between the two endpoints is~$\sqrt[3]{2} = 1.2599$.
 Note that it is the lower bound which is ultimately important,
 since the line-source singularity at~$r = 0$
-can be replaced by a constant-temperature input~$T = T_\dir > T_\sharp$
-along some interior circular boundary~$r = r_\dir < r_\sharp$
-(see Figure~X), % TODO
-where
+can always be replaced by a constant-temperature input~$T = T_\dir > T_\sharp$
+along some interior circular boundary~$r = r_\dir < r_\sharp$,
+where $T_\dir$ and~$r_\dir$ satisfy
 \begin{equation}
-  T_\dir = T_0 \log \roundbr*{\frac{r_0}{r_\dir}}.
+  T_\dir = T_0 \log \roundbr*{\frac{r_0}{r_\dir}},
   \label{eq:line-equivalent-dirichlet-relation}
 \end{equation}
+which is the unscaled form
+of~(\ref{eq:line-scaled-equivalent-dirichlet-relation}).
 For a contrived example,
 consider a polyvinyl chloride (PVC) coating
 in the shape of a constructed convex domain
