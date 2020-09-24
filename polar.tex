@@ -877,11 +877,11 @@ all effectively having the inradius~$r_\sharp$,
 ranging from regular-polygon-like to highly asymmetric
 (Figure~X). % TODO
 The unrealistic singularity at~$r = 0$
-may be replaced by an equivalent Dirichlet condition~$T = T_\bath$
-along some circle~$r = r_\bath < r_\sharp$,
+may be replaced by an equivalent Dirichlet condition~$T = T_\dir$
+along some circle~$r = r_\dir < r_\sharp$,
 where
 \begin{equation}
-  T_\bath = -\log r_\bath.
+  T_\dir = -\log r_\dir.
   \label{eq:line-scaled-equivalent-dirichlet-relation}
 \end{equation}
 Most fascinating is how an infinite number of constructed domains,
@@ -907,8 +907,8 @@ Figure~X shows the finite element meshes generated % TODO
 for the two chosen cases:
 the square-like domain of Figure~X % TODO
 and the asymmetric domain of Figure~X. % TODO
-An interior circular boundary is placed at~$r = r_\bath = r_\sharp / 2$,
-along which the Dirichlet condition~$T = T_\bath$
+An interior circular boundary is placed at~$r = r_\dir = r_\sharp / 2$,
+along which the Dirichlet condition~$T = T_\dir$
 according to~(\ref{eq:line-scaled-equivalent-dirichlet-relation})
 shall be used
 in place of the singularity at~$r = 0$.
@@ -1039,20 +1039,20 @@ or
 The ratio between the two endpoints is~$\sqrt[3]{2} = 1.2599$.
 Note that it is the lower bound which is ultimately important,
 since the line-source singularity at~$r = 0$
-can be replaced by a constant-temperature input~$T = T_\bath > T_\sharp$
-along some interior circular boundary~$r = r_\bath < r_\sharp$
+can be replaced by a constant-temperature input~$T = T_\dir > T_\sharp$
+along some interior circular boundary~$r = r_\dir < r_\sharp$
 (see Figure~X), % TODO
 where
 \begin{equation}
-  T_\bath = T_0 \log \roundbr*{\frac{r_0}{r_\bath}}.
+  T_\dir = T_0 \log \roundbr*{\frac{r_0}{r_\dir}}.
   \label{eq:line-equivalent-dirichlet-relation}
 \end{equation}
 For a contrived example,
 consider a polyvinyl chloride (PVC) coating
 in the shape of a constructed convex domain
 of inradius~$r_\sharp = \SI{3}{\centi\metre}$,
-covering a rod~$r \le r_\bath$
-which is held at some constant temperature~$T = T_\bath$
+covering a rod~$r \le r_\dir$
+which is held at some constant temperature~$T = T_\dir$
 (Figure~X). % TODO
 Using emissivity~$\emiss = 0.9$
 and conductivity~$\conduc = \SI{0.15}{\watt \per\metre \per\kelvin}$
@@ -1067,8 +1067,8 @@ a reasonable interval.
 \label{sec:line.physical.power}
 
 Although the internal heat generation can be specified
-along \emph{any} circle~$r = r_\bath < r_\sharp$,
-provided the fixed temperature~$T = T_\bath$
+along \emph{any} circle~$r = r_\dir < r_\sharp$,
+provided the fixed temperature~$T = T_\dir$
 satisfies the condition~(\ref{eq:line-t-sharp}),
 the corresponding power per unit length
 for all of these choices will be the same,
@@ -1102,15 +1102,15 @@ where $\normalvec$~is the outward unit normal.
 Since the only source is the singularity at~$r = 0$ (there are no sinks),
 the result of this integral will be the same
 along any closed curve containing the origin.
-Choosing the interior circular boundary~$r = r_\bath$
+Choosing the interior circular boundary~$r = r_\dir$
 for its radial symmetry ($\normalvec = \basisvec{r}$),
 this becomes
 \begin{align*}
   p
   &=
     \int_{0}^{2 \pi}
-      \basisvec{r} \dotp \frac{k T_0}{r_\bath} \basisvec{r}
-      \cdot r_\bath
+      \basisvec{r} \dotp \frac{k T_0}{r_\dir} \basisvec{r}
+      \cdot r_\dir
     \td\phi
       \\[\tallspace]
   &=
