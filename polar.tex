@@ -914,13 +914,17 @@ In place of the singularity at~$r = 0$,
 I use the Dirichlet condition~$T = T_\dir$
 along the interior circle~$r = r_\dir = r_\sharp / 2$
 according to~(\ref{eq:line-scaled-equivalent-dirichlet-relation}).
+Figure~\ref{fig:line-verification-domain-mesh}
+shows the \lang{Mathematica}-generated finite element mesh,
+which consists of some X~triangular elements. % TODO
 
-Figure~X shows the finite element meshes generated % TODO
-for the two chosen cases:
-the square-like domain of Figure~X % TODO
-and the asymmetric domain of Figure~X. % TODO
-Both meshes are unstructured
-and consist of around X~triangular elements. % TODO
+\begin{figure}
+  \centredfigurecontent[width=0.8\textwidth]{%
+    line-verification-domain-mesh%
+  }{
+    Selected domain and finite element mesh for numerical verification.
+  }
+\end{figure}
 
 Laplace's equation is then solved over the meshes,
 with the aforementioned Dirichlet condition on the inner boundary
