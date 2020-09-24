@@ -917,6 +917,9 @@ according to~(\ref{eq:line-scaled-equivalent-dirichlet-relation}).
 Figure~\ref{fig:line-verification-domain-mesh}
 shows the \lang{Mathematica}-generated finite element mesh,
 which consists of some 400~triangular elements.
+The relative discrepancy between the resulting numerical solution
+and the exact solution~(\ref{eq:line-scaled-laplace-solution})
+is less than~$\SI{0.3}{\percent}$ throughout the mesh.
 
 \begin{figure}
   \centredfigurecontent[width=0.8\textwidth]{%
@@ -925,21 +928,6 @@ which consists of some 400~triangular elements.
     Selected domain and finite element mesh for numerical verification.
   }
 \end{figure}
-
-Laplace's equation is then solved over the meshes,
-with the aforementioned Dirichlet condition on the inner boundary
-and the radiation condition~%
-  (\ref{eq:line-scaled-radiation-boundary-condition})
-along the outer boundary.
-
-Comparing these with the exact line-source solution~%
-  (\ref{eq:line-scaled-laplace-solution}),
-the agreement is excellent.
-The discrepancy between numerical and exact solutions
-(Figure~X) % TODO
-is no more than~X\% in both cases; % TODO
-thus, one can be confident in the results obtained
-using the boundary tracing method.
 
 \section{Physical range}
 \label{sec:line.physical}
