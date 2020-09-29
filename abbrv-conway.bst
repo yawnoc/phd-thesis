@@ -5,6 +5,7 @@
 %      "Technical Note" instead of "Technical Report", and with title styled
 %      as a book title (i.e. italicised).
 %   4. Ampersand used instead of "and" in lists of names.
+%   5. Non-breaking space used before "edition"
 % ABSOLUTELY NO WARRANTY
 
 % BibTeX standard bibliography style `abbrv'
@@ -344,8 +345,8 @@ FUNCTION {format.edition}
 { edition empty$
     { "" }
     { output.state mid.sentence =
-        { edition "l" change.case$ " edition" * }
-        { edition "t" change.case$ " edition" * }
+        { edition "l" change.case$ "~edition" * }
+        { edition "t" change.case$ "~edition" * }
       if$
     }
   if$
