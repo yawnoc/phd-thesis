@@ -14,7 +14,7 @@
 %%   except printing "Technical Note" instead of "Technical Report"
 %% - Made DOI override URL
 %% - Formatted DOI according to \doi
-%% - Changed space between volume & number to thin and non-breaking
+%% - Changed space between volume & number to non-breaking thin
 %%
 %% The following two newlines mark the end of this inserted preamble:
 
