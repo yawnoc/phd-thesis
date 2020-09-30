@@ -1,3 +1,20 @@
+%% # conway.bst #
+%%
+%% This be the Bibliography Style for Conway's Ph.D. Thesis,
+%% modified from `conway.bst` created using `latex makebst`
+%% in the commit 1d46efbcf0 in the repository yawnoc/phd-thesis,
+%% and licensed under the LaTeX Project Public License, version 1.3c.
+%% <https://www.latex-project.org/lppl/>
+%%
+%% The following modifications have been made:
+%% - Inserted this preamble
+%% - Added space between author initials
+%% - Removed new-block between title and edition for @book
+%% - Added new entry type @technote identical to @techreport
+%%   except printing "Technical Note" instead of "Technical Report"
+%%
+%% The following two newlines mark the end of this inserted preamble:
+
 %%
 %% This is file `conway.bst',
 %% generated with the docstrip utility.
@@ -249,6 +266,9 @@ FUNCTION {bbl.page}
 FUNCTION {bbl.chapter}
 { "chapter" }
 
+FUNCTION {bbl.technote}
+{ "Technical Note" }
+
 FUNCTION {bbl.techrep}
 { "Technical Report" }
 
@@ -386,7 +406,7 @@ FUNCTION {format.names}
   numnames 'namesleft :=
     { namesleft #0 > }
     { s nameptr
-      "{vv~}{ll}{ jj}{ f{.}.}"
+      "{vv~}{ll}{ jj}{ f.}"
       format.name$
       bibinfo bibinfo.check
       't :=
@@ -783,6 +803,18 @@ FUNCTION {format.thesis.type}
     }
   if$
 }
+FUNCTION {format.tn.number}
+{ number "number" bibinfo.check
+  type duplicate$ empty$
+    { pop$ bbl.technote }
+    'skip$
+  if$
+  "type" bibinfo.check
+  swap$ duplicate$ empty$
+    { pop$ "t" change.case$ }
+    { tie.or.space.prefix * * }
+  if$
+}
 FUNCTION {format.tr.number}
 { number "number" bibinfo.check
   type duplicate$ empty$
@@ -959,7 +991,6 @@ FUNCTION {book}
   format.btitle "title" output.check
   crossref missing$
     { format.bvolume output
-      new.block
       format.number.series output
       format.edition output
       new.sentence
@@ -1209,6 +1240,24 @@ FUNCTION {proceedings}
       if$
      }
   if$
+  new.block
+  format.url output
+  new.block
+  format.note output
+  fin.entry
+}
+
+FUNCTION {technote}
+{ output.bibitem
+  format.authors "author" output.check
+  format.date "year" output.check
+  date.block
+  format.title
+  "title" output.check
+  new.block
+  format.tn.number emphasize output.nonnull
+  institution "institution" bibinfo.warn output
+  address "address" bibinfo.check output
   new.block
   format.url output
   new.block
