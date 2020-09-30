@@ -12,6 +12,8 @@
 %% - Removed new-block between title and edition for @book
 %% - Added new entry type @technote identical to @techreport
 %%   except printing "Technical Note" instead of "Technical Report"
+%% - Made DOI override URL
+%% - Formatted DOI according to \doi
 %%
 %% The following two newlines mark the end of this inserted preamble:
 
@@ -382,12 +384,19 @@ FUNCTION {bibinfo.warn}
 FUNCTION {format.url}
 {
   doi empty$
-    { url }
-    { "http://dx.doi.org/" doi * }
-  if$
-  duplicate$ empty$
-    { pop$ "" }
-    { "\urlprefix\url{" swap$ * "}" * }
+    {
+      url empty$
+        { "" }
+        {
+          new.block
+          "\url{" url * "}" *
+        }
+      if$
+    }
+    {
+      new.block
+      "\doi{" doi * "}" *
+    }
   if$
 }
 
