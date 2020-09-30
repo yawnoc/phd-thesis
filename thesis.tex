@@ -102,9 +102,15 @@
 % Hyperlinks
 \usepackage[hidelinks,bookmarksopen=true]{hyperref}
 
+% URLs
+\let\bareurl\url
+\newcommand*{\urlopen}{\textless}
+\newcommand*{\urlclose}{\textgreater}
+\renewcommand*{\url}[1]{\urlopen\bareurl{#1}\urlclose}
+
 % DOIs
-\newcommand{\doidomain}{https://doi.org/}
-\newcommand{\doi}[1]{\url{\doidomain#1}}
+\newcommand*{\doidomain}{https://doi.org/}
+\newcommand*{\doi}[1]{\url{\doidomain #1}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Math macros
