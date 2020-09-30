@@ -7,7 +7,7 @@
 %% <https://www.latex-project.org/lppl/>
 %%
 %% The following modifications have been made:
-%% - This preamble has been inserted.
+%% - Inserted this preamble
 %% - Added space between author initials
 %%
 %% The following two newlines mark the end of this inserted preamble:
