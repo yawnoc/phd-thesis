@@ -14,6 +14,7 @@
 %%   except printing "Technical Note" instead of "Technical Report"
 %% - Made DOI override URL
 %% - Formatted DOI according to \doi
+%% - Changed space between volume & number to thin and non-breaking
 %%
 %% The following two newlines mark the end of this inserted preamble:
 
@@ -746,7 +747,7 @@ FUNCTION {format.vol.num.pages}
         'skip$
       if$
       swap$
-      "~(" swap$ * ")" *
+      "\nolinebreak\,(" swap$ * ")" *
     }
   if$ *
   eid empty$
