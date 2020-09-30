@@ -10,6 +10,8 @@
 %% - Inserted this preamble
 %% - Added space between author initials
 %% - Removed new-block between title and edition for @book
+%% - Added new entry type @technote identical to @techreport
+%%   except printing "Technical Note" instead of "Technical Report"
 %%
 %% The following two newlines mark the end of this inserted preamble:
 
@@ -262,6 +264,9 @@ FUNCTION {bbl.page}
 
 FUNCTION {bbl.chapter}
 { "chapter" }
+
+FUNCTION {bbl.technote}
+{ "Technical Note" }
 
 FUNCTION {bbl.techrep}
 { "Technical Report" }
@@ -794,6 +799,18 @@ FUNCTION {format.thesis.type}
     }
   if$
 }
+FUNCTION {format.tn.number}
+{ number "number" bibinfo.check
+  type duplicate$ empty$
+    { pop$ bbl.technote }
+    'skip$
+  if$
+  "type" bibinfo.check
+  swap$ duplicate$ empty$
+    { pop$ "t" change.case$ }
+    { tie.or.space.prefix * * }
+  if$
+}
 FUNCTION {format.tr.number}
 { number "number" bibinfo.check
   type duplicate$ empty$
@@ -1209,6 +1226,23 @@ FUNCTION {proceedings}
       if$
      }
   if$
+  format.doi output
+  new.block
+  format.note output
+  fin.entry
+}
+
+FUNCTION {technote}
+{ output.bibitem
+  format.authors "author" output.check
+  format.date "year" output.check
+  date.block
+  format.title
+  "title" output.check
+  new.block
+  format.tn.number emphasize output.nonnull
+  institution "institution" bibinfo.warn output
+  address "address" bibinfo.check output
   format.doi output
   new.block
   format.note output
