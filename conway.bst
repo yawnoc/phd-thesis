@@ -1,3 +1,16 @@
+%% # conway.bst #
+%%
+%% This be the Bibliography Style for Conway's Ph.D. Thesis,
+%% modified from `conway.bst` created using `latex makebst`
+%% in the commit f69e3e5527 in the repository yawnoc/phd-thesis,
+%% and licensed under the LaTeX Project Public License, version 1.3c.
+%% <https://www.latex-project.org/lppl/>
+%%
+%% The following modifications have been made:
+%% - This preamble has been inserted.
+%%
+%% The following two newlines mark the end of this inserted preamble:
+
 %%
 %% This is file `conway.bst',
 %% generated with the docstrip utility.
