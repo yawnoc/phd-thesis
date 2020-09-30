@@ -2,7 +2,7 @@
 %%
 %% This be the Bibliography Style for Conway's Ph.D. Thesis,
 %% modified from `conway.bst` created using `latex makebst`
-%% in the commit f69e3e5527 in the repository yawnoc/phd-thesis,
+%% in the commit 1d46efbcf0 in the repository yawnoc/phd-thesis,
 %% and licensed under the LaTeX Project Public License, version 1.3c.
 %% <https://www.latex-project.org/lppl/>
 %%
@@ -21,7 +21,7 @@
 %%
 %% The original source files were:
 %%
-%% merlin.mbs  (with options: `nm-rvv,dt-beg,yr-par,xmth,trnum-it,vnum-sp,volp-com,num-xser,bkpg-x,pre-edn,url-doi,edparxc,xedn,jabr,amper,etal-it,em-it,nfss,')
+%% merlin.mbs  (with options: `nm-rvv,dt-beg,yr-par,xmth,trnum-it,vnum-sp,volp-com,num-xser,bkpg-x,pre-edn,url-doi,edparxc,xedn,jabr,amper,etal-it,url,url-blk,em-it,nfss,')
 %% ----------------------------------------
 %% *** Bibliography Style for Conway's Ph.D. Thesis ***
 %% 
@@ -75,6 +75,7 @@ ENTRY
     series
     title
     type
+    url
     volume
     year
   }
@@ -378,6 +379,18 @@ FUNCTION {bibinfo.warn}
     }
   if$
 }
+FUNCTION {format.url}
+{
+  doi empty$
+    { url }
+    { "http://dx.doi.org/" doi * }
+  if$
+  duplicate$ empty$
+    { pop$ "" }
+    { "\urlprefix\url{" swap$ * "}" * }
+  if$
+}
+
 INTEGERS { nameptr namesleft numnames }
 
 
@@ -492,15 +505,6 @@ FUNCTION {format.editors}
       get.bbl.editor
    "(" swap$ * ")" *
       *
-    }
-  if$
-}
-FUNCTION {format.doi}
-{ doi empty$
-    { "" }
-    {
-      new.block
-      "\doi{" doi * "}" *
     }
   if$
 }
@@ -963,7 +967,8 @@ FUNCTION {article}
       format.pages output
     }
   if$
-  format.doi output
+  new.block
+  format.url output
   new.block
   format.note output
   fin.entry
@@ -996,7 +1001,8 @@ FUNCTION {book}
       format.book.crossref output.nonnull
     }
   if$
-  format.doi output
+  new.block
+  format.url output
   new.block
   format.note output
   fin.entry
@@ -1010,7 +1016,8 @@ FUNCTION {booklet}
   new.block
   howpublished "howpublished" bibinfo.check output
   address "address" bibinfo.check output
-  format.doi output
+  new.block
+  format.url output
   new.block
   format.note output
   fin.entry
@@ -1047,7 +1054,8 @@ FUNCTION {inbook}
       format.book.crossref output.nonnull
     }
   if$
-  format.doi output
+  new.block
+  format.url output
   new.block
   format.note output
   fin.entry
@@ -1073,7 +1081,8 @@ FUNCTION {incollection}
       format.chapter.pages output
     }
   if$
-  format.doi output
+  new.block
+  format.url output
   new.block
   format.note output
   fin.entry
@@ -1102,7 +1111,8 @@ FUNCTION {inproceedings}
       format.pages output
     }
   if$
-  format.doi output
+  new.block
+  format.url output
   new.block
   format.note output
   fin.entry
@@ -1139,7 +1149,8 @@ FUNCTION {manual}
     }
   if$
   format.edition output
-  format.doi output
+  new.block
+  format.url output
   new.block
   format.note output
   fin.entry
@@ -1156,7 +1167,8 @@ FUNCTION {mastersthesis}
   bbl.mthesis format.thesis.type output.nonnull
   school "school" bibinfo.warn output
   address "address" bibinfo.check output
-  format.doi output
+  new.block
+  format.url output
   new.block
   format.note output
   fin.entry
@@ -1170,7 +1182,8 @@ FUNCTION {misc}
   format.title output
   howpublished new.block.checka
   howpublished "howpublished" bibinfo.check output
-  format.doi output
+  new.block
+  format.url output
   new.block
   format.note output
   fin.entry
@@ -1187,7 +1200,8 @@ FUNCTION {phdthesis}
   bbl.phdthesis format.thesis.type output.nonnull
   school "school" bibinfo.warn output
   address "address" bibinfo.check output
-  format.doi output
+  new.block
+  format.url output
   new.block
   format.note output
   fin.entry
@@ -1226,7 +1240,8 @@ FUNCTION {proceedings}
       if$
      }
   if$
-  format.doi output
+  new.block
+  format.url output
   new.block
   format.note output
   fin.entry
@@ -1243,7 +1258,8 @@ FUNCTION {technote}
   format.tn.number emphasize output.nonnull
   institution "institution" bibinfo.warn output
   address "address" bibinfo.check output
-  format.doi output
+  new.block
+  format.url output
   new.block
   format.note output
   fin.entry
@@ -1260,7 +1276,8 @@ FUNCTION {techreport}
   format.tr.number emphasize output.nonnull
   institution "institution" bibinfo.warn output
   address "address" bibinfo.check output
-  format.doi output
+  new.block
+  format.url output
   new.block
   format.note output
   fin.entry
@@ -1272,7 +1289,8 @@ FUNCTION {unpublished}
   format.date output
   date.block
   format.title "title" output.check
-  format.doi output
+  new.block
+  format.url output
   new.block
   format.note "note" output.check
   fin.entry
@@ -1444,6 +1462,10 @@ FUNCTION {begin.bib}
     { preamble$ write$ newline$ }
   if$
   "\begin{thebibliography}{"  longest.label  * "}" *
+  write$ newline$
+  "\providecommand{\url}[1]{\texttt{#1}}"
+  write$ newline$
+  "\providecommand{\urlprefix}{URL }"
   write$ newline$
 }
 EXECUTE {begin.bib}
