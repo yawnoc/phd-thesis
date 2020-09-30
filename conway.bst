@@ -8,7 +8,7 @@
 %%
 %% The following modifications have been made:
 %% - Inserted this preamble
-%% - Added space between author initials
+%% - Added non-breaking thin space between author initials
 %% - Removed new-block between title and edition for @book
 %% - Added new entry type @technote identical to @techreport
 %%   except printing "Technical Note" instead of "Technical Report"
@@ -416,7 +416,7 @@ FUNCTION {format.names}
   numnames 'namesleft :=
     { namesleft #0 > }
     { s nameptr
-      "{vv~}{ll}{ jj}{ f.}"
+      "{vv~}{ll}{ jj}{ f{.\nolinebreak\,}.}"
       format.name$
       bibinfo bibinfo.check
       't :=
