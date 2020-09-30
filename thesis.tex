@@ -104,8 +104,8 @@
 
 % URLs
 \let\bareurl\url
-\newcommand*{\urlopen}{\textless}
-\newcommand*{\urlclose}{\textgreater}
+\newcommand*{\urlopen}{\nolinkurl{<}}
+\newcommand*{\urlclose}{\nolinkurl{>}}
 \renewcommand*{\url}[1]{\urlopen\bareurl{#1}\urlclose}
 
 % DOIs
