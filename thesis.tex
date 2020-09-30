@@ -96,10 +96,21 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Hyperlinks
+% Referencing
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% Hyperlinks
 \usepackage[hidelinks,bookmarksopen=true]{hyperref}
+
+% URLs
+\let\bareurl\url
+\newcommand*{\urlopen}{\nolinkurl{<}}
+\newcommand*{\urlclose}{\nolinkurl{>}}
+\renewcommand*{\url}[1]{\urlopen\bareurl{#1}\urlclose}
+
+% DOIs
+\newcommand*{\doidomain}{https://doi.org/}
+\newcommand*{\doi}[1]{\url{\doidomain #1}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Math macros
@@ -315,7 +326,7 @@
 
 % Italicised foreign phrases
 \newcommand*{\foreign}[1]{\textit{#1}}
-\newcommand*{\foreignspace}{\;}
+\newcommand*{\foreignspace}{\nolinebreak[3]\ }
 \makeatletter
   \newcommand*{\adhoc}{\foreign{ad\foreignspace hoc}}
   \newcommand*{\etalraw}{et\foreignspace al}
@@ -391,7 +402,7 @@
 
 \backmatter
 
-\bibliographystyle{abbrv-conway}
+\bibliographystyle{conway}
 \bibliography{bibliography}
 
 \end{document}
