@@ -633,8 +633,8 @@ End of customized bst file
 %------\ans=*(==)-------
 %>>E-PRINT DATA FIELD: (without REVTeX fields)
 %<<URL ADDRESS: (without REVTeX fields)
-    %: (def) No URL for electronic (Internet) documents
-% url,url-blk,%: Include URL as regular item block
+%   %: (def) No URL for electronic (Internet) documents
+  url,url-blk,%: Include URL as regular item block
 % url,url-nt,%: URL as note 
 % url,url-nl,%: URL on new line after rest of reference
 %------\ans=*(==)-------
