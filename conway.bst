@@ -9,6 +9,7 @@
 %% The following modifications have been made:
 %% - Inserted this preamble
 %% - Added space between author initials
+%% - Removed new-block between title and edition for @book
 %%
 %% The following two newlines mark the end of this inserted preamble:
 
@@ -968,7 +969,6 @@ FUNCTION {book}
   format.btitle "title" output.check
   crossref missing$
     { format.bvolume output
-      new.block
       format.number.series output
       format.edition output
       new.sentence
