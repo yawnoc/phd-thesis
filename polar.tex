@@ -526,7 +526,7 @@ which correspond to convex domains,
 an analysis which I have deemed worthy of its own section.
 
 \section{Convex domains in the hot regime}
-\label{sec:line.convex}
+\label{sec:polar.convex}
 
 In this section,
 I determine the class of possible convex domains
@@ -535,7 +535,7 @@ on the outer viable mainland~$r \ge r_\sharp$
 of the hot regime.
 
 \subsection{Convexity along the outer terminal curve}
-\label{sec:line.convex.terminal}
+\label{sec:polar.convex.terminal}
 
 In the cold regime~$A > A_\nat$, the transition case~$A = A_\nat$,
 and on the inner viable island~$r \le r_\flat$
@@ -722,7 +722,7 @@ to determine where the traced boundaries inflect
 and become concave.
 
 \subsection{Convexity beyond the outer terminal curve}
-\label{sec:line.convex.beyond}
+\label{sec:polar.convex.beyond}
 
 Since the known solution~(\ref{eq:line-scaled-laplace-solution})
 is radially symmetric,
@@ -832,7 +832,7 @@ Note that this is consistent with the upper bound~%
 for~$r_\sharp$ obtained earlier.
 
 \subsection{Convex domain construction}
-\label{sec:line.convex.construction}
+\label{sec:polar.convex.construction}
 
 To recap, non-trivial convex domains can only be constructed
 in the subinterval of the hot regime
@@ -902,7 +902,7 @@ for steady conduction coupled with the radiation condition~%
   (\ref{eq:line-scaled-radiation-boundary-condition}).
 
 \subsection{Numerical verification}
-\label{sec:line.convex.verification}
+\label{sec:polar.convex.verification}
 
 As in Section~\ref{sec:cartesian.cosine.verification},
 any domain constructed using boundary tracing can be verified
@@ -931,9 +931,9 @@ is less than~$\SI{0.3}{\percent}$ throughout the mesh.
 \end{figure}
 
 \section{Physical range}
-\label{sec:line.physical}
+\label{sec:polar.physical}
 
-While it was shown in Section~\ref{sec:line.convex} that
+While it was shown in Section~\ref{sec:polar.convex} that
 convex domains can only be constructed
 when the dimensionless group~$A$ lies in the interval~%
   (\ref{eq:line-traced-boundary-hot-convex-a-interval}),
@@ -953,12 +953,12 @@ starting from~(\ref{eq:line-scaled-radiation-boundary-condition})
 near the end of Section~\ref{sec:polar.line.scaling}.
 
 \subsection{Temperature}
-\label{sec:line.physical.temperature}
+\label{sec:polar.physical.temperature}
 
 In a practical situation
 one is probably only interested in objects of a given size.
 Fix~$r_\sharp$, the physical inradius of any convex domain
-constructed in Section~\ref{sec:line.convex.construction},
+constructed in Section~\ref{sec:polar.convex.construction},
 and also the physical radius of the outer critical terminal curve.
 Given the restriction~(\ref{eq:line-traced-boundary-hot-convex-a-interval})
 on the possible values of the dimensionless group~$A$,
@@ -1068,7 +1068,7 @@ or~$\SI{17}{\degreeCelsius} < T_\sharp \le \SI{93}{\degreeCelsius}$,
 a reasonable interval.
 
 \subsection{Power per unit length}
-\label{sec:line.physical.power}
+\label{sec:polar.physical.power}
 
 Although the internal heat generation can be specified
 along \emph{any} circle~$r = r_\dir < r_\sharp$,
@@ -1153,7 +1153,7 @@ $p$~is also the total power per unit length
 lost through the outer boundary via radiation.
 
 Using the parameter values from the PVC example
-of Section~\ref{sec:line.physical.temperature},
+of Section~\ref{sec:polar.physical.temperature},
 the power-per-length interval~%
   (\ref{eq:line-traced-boundary-hot-convex-power-per-length-interval})
 evaluates to $\SI{68}{\watt \per\metre} < p \le \SI{172}{\watt \per\metre}$.
