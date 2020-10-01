@@ -15,6 +15,7 @@
 %% - Made DOI override URL
 %% - Formatted DOI according to \doi
 %% - Changed space between volume & number to non-breaking thin
+%% - Made institution print in @misc
 %%
 %% The following two newlines mark the end of this inserted preamble:
 
@@ -1192,6 +1193,8 @@ FUNCTION {misc}
   format.title output
   howpublished new.block.checka
   howpublished "howpublished" bibinfo.check output
+  new.block
+  institution "institution" bibinfo.warn output
   new.block
   format.url output
   new.block
