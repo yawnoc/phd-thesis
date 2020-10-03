@@ -173,9 +173,11 @@
 % Evaluation
 % --------
 % Style guide for sizing argument (do not omit since left delimiter is "."):
-%   *       for fraction-height or radical-height content
-%   [\big]  for text-height or superscript-height content
+%   [\textsize]   for text-height or superscript-height content
+%   *             for everything else
 \DeclarePairedDelimiter{\eval}{.}{\rvert}
+\newcommand{\textsizel}{\bigl}
+\newcommand{\textsizer}{\bigr}
 
 % Del operator
 \newcommand*{\del}{\mathopspace\vec{\nabla}}
