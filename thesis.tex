@@ -156,12 +156,19 @@
 % Bracketing
 % --------
 % Style guide for optional sizing argument:
-%   *       for fraction-height, radical-height, or superscript-height content
-%   [\big]  for text-height content which is bulky
-%   [\Big]  for text-height content which a derivative (\pder) is acting upon
+%   NOTHING       for text-height content (or just use ordinary brackets)
+%   [\bulkysize]  for text-height content which is bulky or long
+%   [\dersize]    for text-height content which a fraction-height derivative
+%                     (\tder, \pder, etc.) is acting upon
+%   *             for everything else (including superscript-height content)
+% See <https://tex.stackexchange.com/a/565199>.
 \DeclarePairedDelimiter{\curlybr}{\{}{\}}
 \DeclarePairedDelimiter{\roundbr}{(}{)}
 \DeclarePairedDelimiter{\squarebr}{[}{]}
+\newcommand{\bulkysizel}{\bigl}
+\newcommand{\bulkysizer}{\bigr}
+\newcommand{\dersizel}{\Bigl}
+\newcommand{\dersizer}{\Bigr}
 
 % Evaluation
 % --------
