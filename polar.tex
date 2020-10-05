@@ -55,8 +55,8 @@ the radiation boundary condition~(\ref{eq:radiation-boundary-condition}).
 
 Let
 \begin{align}
-  \scaled{T} &\defeq T / \Theta, \label{eq:line-scaled-temperature} \\
-  \scaled{r} &\defeq r / \varrho, \label{eq:line-scaled-r}
+  \scaled{T} &\ideq T / \Theta, \label{eq:line-scaled-temperature} \\
+  \scaled{r} &\ideq r / \varrho, \label{eq:line-scaled-r}
 \end{align}
 with~$\Theta$ and~$\varrho$ to be chosen later.
 Noting that
@@ -91,7 +91,7 @@ put
 \end{align}
 and define the dimensionless group
 \begin{equation}
-  A \defeq \frac{1}{c r_0 {T_0}^3}.
+  A = \frac{1}{c r_0 {T_0}^3}.
   \label{eq:line-dimensionless-group}
 \end{equation}
 \atten{Dropping \scalingmarks}, the scaled boundary condition~%
@@ -143,7 +143,7 @@ and so the viability function is given by
 \end{align*}
 where $\psi$~is the auxiliary function
 \begin{equation}
-  \psi (r) \defeq r \log^4 r.
+  \psi (r) \ideq r \log^4 r.
   \label{eq:line-auxiliary-function}
 \end{equation}
 The viable domain is therefore the region~$\psi (r) \le A$.
@@ -173,14 +173,14 @@ changes sign from positive to negative
 as $r$~increases through~$\ee^{-4}$,
 it follows that $\psi$~has a single maximum on~$0 \le r \le 1$ at
 \begin{equation}
-  r = r_\nat \defeq \ee^{-4} = 0.01832,
+  r = r_\nat = \ee^{-4} = 0.01832,
   \label{eq:line-r-natural}
 \end{equation}
 where it takes the maximal value
 \begin{equation}
   \psi
   = A_\nat
-  \defeq \psi (r_\nat)
+  = \psi (r_\nat)
   = (4 / \ee)^4
   = 4.6888.
   \label{eq:line-a-natural}
@@ -633,7 +633,7 @@ whence to first order, there holds
   \label{eq:line-traced-boundary-hot-xi-near-r-sharp}
 \end{equation}
 Note that both~$(4 + \log r_\sharp)$ and~$(-\log r_\sharp)$ are positive,
-since~$1 > r_\sharp > r_\nat \defeq \ee^{-4}$.
+since~$1 > r_\sharp > r_\nat = \ee^{-4}$.
 While the asymptotic result~(\ref{eq:line-traced-boundary-hot-xi-near-r-sharp})
 confirms that the traced boundaries of the outer viable mainland
 do indeed attach smoothly
@@ -681,7 +681,7 @@ which simplifies to
   r_\sharp \le \ee^{-2}.
   \label{eq:line-traced-boundary-hot-convex-r-sharp-upper-bound}
 \end{equation}
-Remembering that~$r_\sharp > r_\nat \defeq \ee^{-4}$,
+Remembering that~$r_\sharp > r_\nat = \ee^{-4}$,
 the total range over which convexity is possible
 (at least at the point of tangency on~$r = r_\sharp$)
 is
@@ -783,7 +783,7 @@ with the acceleration~(\ref{eq:acceleration-vector-polar-by-r})
 and extracting the $z$-component,
 the quantity
 \begin{equation}
-  \kappa \defeq
+  \kappa \ideq
   \basisvec{z} \dotp \vec{r}' \crossp \vec{r}'' \ideq
   r \phi'' + 2 \phi' + r^2 {\phi'}^3
   \label{eq:kappa-polar-by-r}
@@ -795,7 +795,7 @@ The next step is to evaluate~(\ref{eq:kappa-polar-by-r})
 for the traced boundaries.
 For brevity, define
 \begin{equation}
-  L \defeq \log r.
+  L \ideq \log r.
   \label{eq:line-abbreviation-l}
 \end{equation}
 The boundary tracing ODE~%
@@ -821,12 +821,12 @@ one obtains
 which only changes sign at~$L + 2 \ideq \log r + 2 = 0$.
 Therefore, inflection occurs at
 \begin{equation}
-  r = r_\infl \defeq \ee^{-2},
+  r = r_\infl = \ee^{-2},
   \label{eq:line-r-inflection}
 \end{equation}
 i.e.~traced boundaries on the outer viable mainland~$r \ge r_\sharp$
 are only able to form convex domains
-in the region~$r_\sharp \le r \le r_\infl \defeq \ee^{-2}$.
+in the region~$r_\sharp \le r \le r_\infl = \ee^{-2}$.
 Note that this is consistent with the upper bound~%
   (\ref{eq:line-traced-boundary-hot-convex-r-sharp-upper-bound})
 for~$r_\sharp$ obtained earlier.
@@ -874,7 +874,7 @@ Each protrusion is made as follows
     Head outward along the lower ($r (\phi)$~increasing) branch.
   \item
     Stop at some radius~$r$ which does not exceed
-    the radius of inflection~$r_\infl \defeq \ee^{-2}$.
+    the radius of inflection~$r_\infl = \ee^{-2}$.
   \item
     Return inward along the upper ($r (\phi)$~decreasing) branch
     and join back onto~$r = r_\sharp$.

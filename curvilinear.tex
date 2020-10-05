@@ -110,9 +110,9 @@ For the side lengths of the infinitesimal rectangle
 of Figure~\ref{fig:orthogonal-curvilinear-coordinates},
 define the auxiliary differentials
 \begin{align}
-  \td \mu &\defeq \scalefac[u] \td u,
+  \td \mu &\ideq \scalefac[u] \td u,
     \label{eq:differential-displacement-u-component} \\
-  \td \nu &\defeq \scalefac[v] \td v,
+  \td \nu &\ideq \scalefac[v] \td v,
     \label{eq:differential-displacement-v-component}
 \end{align}
 so that
@@ -121,11 +121,11 @@ so that
   \label{eq:differential-arc-length-abbreviated}
 \end{equation}
 For the components of the normal vector~(\ref{eq:normal-vector}),
-write
+define
 \begin{align}
-  \alpha &\defeq \tder{\mu}{s} \ideq \frac{\scalefac[u] \td u}{\td s},
+  \alpha &\ideq \tder{\mu}{s},
     \label{eq:tangent-u-component} \\[\tallspace]
-  \beta &\defeq \tder{\nu}{s} \ideq \frac{\scalefac[v] \td v}{\td s},
+  \beta &\ideq \tder{\nu}{s},
     \label{eq:tangent-v-component}
 \end{align}
 so that
@@ -138,9 +138,9 @@ so that
 Finally, for the components of the gradient vector~(\ref{eq:gradient}),
 define
 \begin{align}
-  P &\defeq \frac{1}{\scalefac[u]} \pder{T}{u},
+  P &\ideq \frac{1}{\scalefac[u]} \pder{T}{u},
     \label{eq:gradient-u-component} \\[\tallspace]
-  Q &\defeq \frac{1}{\scalefac[v]} \pder{T}{v},
+  Q &\ideq \frac{1}{\scalefac[v]} \pder{T}{v},
     \label{eq:gradient-v-component}
 \end{align}
 so that
@@ -167,7 +167,7 @@ and the corresponding system of ODEs for arc-length parametrisation.
 Following Anderson~\etal~\cite{anderson-2007-boundary-tracing-i-theory}
 it is convenient to define the \term{viability function}
 \begin{important}{equation}
-  \Phi \defeq (\del T)^2 - F^2.
+  \Phi \ideq (\del T)^2 - F^2.
   \label{eq:viability-function}
 \end{important}
 This is not only algebriacally useful,
