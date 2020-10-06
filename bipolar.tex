@@ -19,4 +19,42 @@ While it would be well to introduce bipolar coordinates
 before writing down the known solution,
 a better understanding of the physics is obtained
 by first writing down the known solution
-and then observing how bipolar coordinates arise as a result.
+and then observing how bipolar coordinates arise.
+
+Suppose that the equal and opposite line sources
+are of the same strength as the line source~(\ref{eq:line-laplace-solution})
+but located at~$(x, y) = (\pm a, 0)$.
+Since the distance to each source is
+\begin{equation}
+  r_\pm = \sqrt{(x \mp a)^2 + y^2},
+  \label{eq:bipolar-source-distances}
+\end{equation}
+the known solution is given by
+\begin{equation}
+  T \ideq
+    T_0 \log \roundbr*{\frac{r_0}{r_+}}
+      -
+    T_0 \log \roundbr*{\frac{r_0}{r_-}},
+  \label{eq:bipolar-laplace-solution-terms}
+\end{equation}
+which reduces%
+\footnote{
+  The remarkable cancellation of the reference length~$r_0$
+  occurs only for equal and opposite line sources.
+}
+to
+\begin{important}{equation}
+  T \ideq T_0 \log \roundbr*{\frac{r_-}{r_+}}.
+  \label{eq:bipolar-laplace-solution-source-distances}
+\end{important}
+This can be rewritten as
+\begin{equation}
+  T \ideq T_0 \tanh^{-1} \roundbr*{\frac{2 a x}{x^2 + y^2 + a^2}},
+  \label{eq:bipolar-laplace-solution-inverse-tanh}
+\end{equation}
+and one sees
+(by rearranging and completing the square)
+that the $T$-contours are circles.
+These are not just any circles,
+but are in fact the curves marked out
+by the second bipolar coordinate~$v$.
