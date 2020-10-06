@@ -14,15 +14,15 @@ and use the convex portions to construct conduction--radiation domains.
 \section{Known solution}
 \label{sec:bipolar.known}
 
-The problem at hand is best tackled using the bipolar coordinate system.
-While it would be well to introduce bipolar coordinates
+The problem at hand is best tackled using bipolar coordinates.
+While it would be well to introduce the bipolar coordinate system
 before writing down the known solution,
 a better understanding of the physics is obtained
 by first writing down the known solution
-and then observing how bipolar coordinates arise.
+and then observing how bipolar coordinates arise as a result.
 
 Suppose that the equal and opposite line sources
-are of the same strength as the line source~(\ref{eq:line-laplace-solution})
+are the same strength as the line source~(\ref{eq:line-laplace-solution})
 but located at~$(x, y) = (\pm a, 0)$.
 Since the distance to each source is
 \begin{equation}
@@ -54,7 +54,27 @@ This can be rewritten as
 \end{equation}
 and one sees
 (by rearranging and completing the square)
-that the $T$-contours are circles.
-These are not just any circles,
-but are in fact the curves marked out
-by the second bipolar coordinate~$v$.
+that the $T$-contours are simply circles.
+The bipolar coordinate system~$(u, v)$ arises
+from simply using the dimensionless quantity~$T / T_0$
+as the second coordinate,
+\begin{equation}
+  v \ideq \tanh^{-1} \roundbr*{\frac{2 a x}{x^2 + y^2 + a^2}}.
+  \label{eq:v-transformation-bipolar}
+\end{equation}
+so that the $T$-contours coincide with the $v$-contours
+and the known solution is simply given by
+\begin{important}{equation}
+  T \ideq T_0 \cdot v.
+  \label{eq:bipolar-laplace-solution}
+\end{important}
+Desiring an orthogonal coordinate system,
+and knowing that a potential and its corresponding stream function
+cross everywhere at right angles,
+the other coordinate~$u$ is determined by computing
+the harmonic conjugate of~$v$,
+yielding the coordinate
+\begin{equation}
+  u \ideq \tan^{-1} \roundbr*{\frac{2 a y}{x^2 + y^2 - a^2}}.
+  \label{eq:u-transformation-bipolar}
+\end{equation}
