@@ -388,12 +388,52 @@ the values of~$A$ for the two transitions are determined to be
 \section{Boundary tracing}
 \label{sec:bipolar.tracing}
 
-% TODO
+In this section, I write down the boundary tracing ODE
+and determine the class of convex domains which can be constructed.
 
 \subsection{A candidate boundary}
 \label{sec:bipolar.tracing.candidate}
 
-% TODO
+Using~(\ref{eq:bipolar-gradient-u-component})
+through~(\ref{eq:bipolar-viability-function}),
+the boundary tracing ODE~(\ref{eq:tracing-ode-coordinate-parametrisation-v})
+becomes
+\begin{important}{equation}
+  \tder{v}{u} =
+    \pm
+    \frac{A}{v^4}
+    \sqrt{
+      \roundbr[\bulkysize]{\cosh v - \cos u}^2 - \frac{v^8}{A^2}
+    },
+  \label{eq:bipolar-tracing-ode-coordinate-parametrisation-v}
+\end{important}
+which cannot be integrated analytically.
+Traced boundaries determined by numerical integration
+from starting points in the viable domain
+are shown in Figure~X. % TODO
+
+Like the line-source case of Section~\ref{sec:polar.tracing},
+the two branches of traced boundaries are segregated
+by the sign of~$\td v / {\td u}$,
+with the upper branch spiralling inwards
+and the lower branch spiralling outwards
+as one travels anticlockwise
+around the singularity~$v = +\infty$.
+Again, any physically sensible radiation--conduction domain
+must completely surround the heat-supplying singularity without touching it,
+and therefore one seeks closed curves surrounding the singularity,
+made from patching together the traced boundaries
+given by~(\ref{eq:bipolar-tracing-ode-coordinate-parametrisation-v}).
+
+Using similar arguments to those in Section~\ref{sec:polar.tracing},
+one concludes that a necessary condition
+for the convexity of the sought-after closed curve
+is for it to have an upper-to-lower branch switch
+at a hyperbolic critical terminal curve.
+Now, of the up to four critical terminal points which exist,
+the ones which lie along the segment~$u = \pi$
+are of elliptic type and may be discarded.
+\{TO BE CONTINUED\}
 
 \subsection{Convexity of the candidate boundary}
 \label{sec:bipolar.tracing.convex}
