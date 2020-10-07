@@ -226,8 +226,42 @@ and therefore the viability function is given by
     \yesnumber
     \label{eq:bipolar-viability-function}
 \end{align*}
-Thus the viable domain~$\Phi \ge 0$ is given by the inequality
+Thus the viable domain~$\Phi \ge 0$ is the region
 \begin{equation}
   \cosh v - \cos u \ge \frac{v^4}{A}.
   \label{eq:bipolar-viable-domain}
 \end{equation}
+
+\subsection{Critical terminal points}
+\label{sec:bipolar.viable.critical}
+
+The inequality~(\ref{eq:bipolar-viable-domain}) is complicated,
+and the shape of the viable domain cannot be seen easily.
+There is, however, sufficient symmetry
+to identify (by hand) all of the critical terminal points,
+which will be useful later on when constructing convex radiation boundaries,
+and whose number shall determine the geometry of the viable domain.
+
+Recall that a terminal point is critical
+if the local $T$-contour touches
+the local portion of the terminal curve~$\Phi = 0$ tangentially.
+Now, the terminal curve is given by
+\begin{equation}
+  \cosh v - \cos u = \frac{v^4}{A},
+  \label{eq:bipolar-terminal-curve}
+\end{equation}
+and implicit differentiation yields the equation
+\begin{equation}
+  \roundbr*{\sinh v - \frac{4 v^3}{A}} \tder{v}{u} + \sin u = 0
+  \label{eq:bipolar-terminal-curve-implicit-derivative}
+\end{equation}
+for the (bipolar) slope~$\td v / {\td u}$
+along the terminal curve.
+Since the $T$-contours
+of the known solution~(\ref{eq:bipolar-scaled-laplace-solution})
+are simply~$v = \const$,
+a $T$-contour will only touch the terminal curve tangentially
+where $\td v / {\td u} = 0$
+in~(\ref{eq:bipolar-terminal-curve-implicit-derivative}).
+Therefore the critical terminal points are necessarily located
+at~$u = 0$ or~$u = \pi$ along the terminal curve.
