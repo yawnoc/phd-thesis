@@ -186,3 +186,48 @@ along with the dimensionless scale factor
   \scalefac \ideq \frac{1}{\cosh v - \cos u}.
   \label{eq:dimensionless-scale-factor-bipolar}
 \end{equation}
+
+\section{Viable domain}
+\label{sec:bipolar.viable}
+
+With the bipolar coordinate system,
+the known solution,
+and the scaling
+all established,
+I now determine the geometry of the viable domain.
+Note that the half-plane~$x < 0$ is excluded from the analysis
+since~$v < 0$ and hence~$T < 0$ in that region,
+which is unphysical in the context of thermal radiation.
+
+The bipolar components of the temperature gradient~$\del T$ are
+\begin{align}
+  P &\ideq \frac{1}{h} \pder{T}{u} \ideq 0,
+    \label{eq:bipolar-gradient-u-component} \\[\tallspace]
+  Q &\ideq \frac{1}{h} \pder{T}{v} \ideq \frac{1}{h}.
+    \label{eq:bipolar-gradient-v-component}
+\end{align}
+Comparing the radiation condition~%
+  (\ref{eq:bipolar-scaled-radiation-boundary-condition})
+to the generic~(\ref{eq:flux-boundary-condition}),
+it follows that the flux function is
+\begin{align*}
+  F
+  &\ideq -\frac{T^4}{A} \\[\tallspace]
+  &\ideq -\frac{v^4}{A},
+    \yesnumber
+    \label{eq:bipolar-flux-function}
+\end{align*}
+and therefore the viability function is given by
+\begin{align*}
+  \Phi
+  &\ideq (\del T)^2 - F^2 \\[\tallspace]
+  &\ideq \frac{1}{h^2} - \frac{v^8}{A^2} \\[\tallspace]
+  &\ideq \roundbr[\bulkysize]{\cosh v - \cos u}^2 - \frac{v^8}{A^2}.
+    \yesnumber
+    \label{eq:bipolar-viability-function}
+\end{align*}
+Thus the viable domain~$\Phi \ge 0$ is given by the inequality
+\begin{equation}
+  \cosh v - \cos u \ge \frac{v^4}{A}.
+  \label{eq:bipolar-viable-domain}
+\end{equation}
