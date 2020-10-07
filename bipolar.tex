@@ -125,5 +125,64 @@ and $u > \SI{180}{\degree}$~for arcs below it.
 Note that $u$~increases anticlockwise around the positive singularity
 and clockwise around the negative singularity.
 
-% TODO
-% Scaling
+\subsection{Scaling}
+\label{sec:bipolar.known.scaling}
+
+Since the length scale has already been fixed at~$a$,
+define
+\begin{align}
+  \scaled{x} &\ideq x / a, \label{eq:bipolar-scaled-x} \\
+  \scaled{y} &\ideq y / a, \label{eq:bipolar-scaled-y}
+\end{align}
+so that
+\begin{equation}
+  \scaleddel \ideq a \del.
+  \label{eq:bipolar-scaled-del}
+\end{equation}
+For the bipolar scale factor~$\scalefac$ it is sensible to put
+\begin{equation}
+  \scaled{\scalefac} \ideq \scalefac / a.
+  \label{eq:bipolar-scaled-scale-factor}
+\end{equation}
+Also putting
+\begin{equation}
+  \scaled{T} \ideq T / \Theta,
+  \label{eq:bipolar-scaled-temperature}
+\end{equation}
+the radiation boundary condition~(\ref{eq:radiation-boundary-condition})
+and the known solution~(\ref{eq:bipolar-laplace-solution})
+become
+\begin{align}
+  \normalvec \dotp \scaleddel \scaled{T}
+    &= -\group{c a \Theta^3} \scaled{T}^4,
+    \label{eq:bipolar-scaled-radiation-boundary-condition-with-groups}
+    \\[\tallspace]
+  \scaled{T} &\ideq \group{\frac{T_0}{\Theta}} v.
+    \label{eq:bipolar-scaled-laplace-solution-with-groups}
+\end{align}
+Given two dimensionless groups but only one free scale~$\Theta$,
+only one group can be set to unity,
+and as in the polar case (Section~\ref{sec:polar.line.scaling})
+I choose
+\begin{equation}
+  \Theta = T_0
+    \label{eq:bipolar-temperature-scale}
+\end{equation}
+and define the dimensionless group
+\begin{equation}
+  A = \frac{1}{c a {T_0}^3}.
+  \label{eq:bipolar-dimensionless-group}
+\end{equation}
+\atten{Dropping \scalingmarks},
+one has boundary condition and known solution
+\begin{important}{align}
+  \normalvec \dotp \del T &= -\frac{T^4}{A},
+    \label{eq:bipolar-scaled-radiation-boundary-condition} \\
+  T &\ideq v,
+    \label{eq:bipolar-scaled-laplace-solution}
+\end{important}
+along with the dimensionless scale factor
+\begin{equation}
+  \scalefac \ideq \frac{1}{\cosh v - \cos u}.
+  \label{eq:dimensionless-scale-factor-bipolar}
+\end{equation}
