@@ -87,9 +87,31 @@ yielding the angular coordinate%
 \subsection{Bipolar coordinates}
 \label{sec:bipolar.known.coordinates}
 
+Of course it is the forward transformation which is more useful,
+and upon inverting~(\ref{eq:u-transformation-bipolar})
+and~(\ref{eq:v-transformation-bipolar})
+one obtains
+\begin{align}
+  x &\ideq \frac{a \sinh v}{\cosh v - \cos u},
+    \label{eq:x-transformation-bipolar}
+    \\[\tallspace]
+  y &\ideq \frac{a \sin u}{\cosh v - \cos u}.
+    \label{eq:y-transformation-bipolar}
+\end{align}
+The length scale~$a$ is intrinsic to the coordinate system,
+as it encodes the locations of the singularities~$(x, y) = (\pm a, 0)$.
+
+Figure~X shows the contour lines % TODO
+of each bipolar coordinate.
+The $v$-contours are non-intersecting circles
+which enclose the nearest singularity.
+The limiting case~$v = -\infty$ corresponds to the negative singularity,
+and as $v$~increases the circular contour grows until~$v = 0$
+where it coincides with the $y$-axis.
+As $v$~waxes positive the circular contour shrinks
+until it becomes the positive singularity at~$v = +\infty$.
+
 % TODO
-% Physically describe v-contours (circles as seen above)
-% Figure
 % Describe u-contours as arcs (NOT circles)
 % Emphasise u < pi VS u > pi (?)
 % Scale factor (same for both coordinates)
