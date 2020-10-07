@@ -299,7 +299,61 @@ and~(\ref{eq:bipolar-critical-terminal-point-pi})
 has zero to two roots
 (ignoring~$v = 0$ for~(\ref{eq:bipolar-critical-terminal-point-0}))
 depending on the size of the dimensionless group~$A$,
-leading to five cases altogether:
+leading to five cases for the number of critical terminal points
+and the geometry of the viable domain
+(Figure~X): % TODO
 
 \subsection{Five regimes}
 \label{sec:bipolar.viable.regimes}
+
+\begin{enumerate}
+  \item
+    \term{Hot regime}, $A < A_{\nat \pi}$:
+    Both equations have two roots:
+    $v_{\flat 0}$ and~$v_{\sharp 0}$
+    for~(\ref{eq:bipolar-critical-terminal-point-0})
+    and
+    $v_{\flat \pi}$ and~$v_{\sharp \pi}$
+    for~(\ref{eq:bipolar-critical-terminal-point-pi}),
+    with~$v_{\flat 0} < v_{\flat \pi} < v_{\sharp \pi} < v_{\sharp 0}$.
+    Thus there are four critical terminal points,
+    having bipolar coordinates~$(0, v_{\flat 0})$, $(\pi, v_{\flat \pi})$,
+    $(\pi, v_{\sharp \pi})$, and~$(0, v_{\sharp 0})$.
+    The non-viable domain forms an avocado-like moat
+    which surrounds an inner viable island
+    (containing the singularity~$v = +\infty$)
+    and is surrounded by an outer viable mainland.
+  \item
+    \term{Hot-to-warm transition}, $A = A_{\nat \pi}$:
+    The two roots of~(\ref{eq:bipolar-critical-terminal-point-pi})
+    merge together
+    and the non-viable moat is pincered along~$u = \pi$,
+    leaving the three critical terminal points~$(0, v_{\flat 0})$,
+    $(\pi, v_{\nat \pi})$, and~$(0, v_{\sharp 0})$.
+    The inner viable island and the outer viable mainland
+    touch at the second of these.
+  \item
+    \term{Warm regime}, $A_{\nat \pi} < A < A_{\nat 0}$:
+    The remaining root of~(\ref{eq:bipolar-critical-terminal-point-pi})
+    has disappeared
+    and the inner viable island is now robustly connected
+    to the outer viable mainland.
+    Equation~(\ref{eq:bipolar-critical-terminal-point-0}) still has two roots,
+    corresponding to the two critical terminal points~%
+      $(0, v_{\flat 0})$ and~$(0, v_{\sharp 0})$.
+    The non-viable domain is now a crescent-shaped lake.
+  \item
+    \term{Warm-to-cold transition}, $A = A_{\nat 0}$:
+    The two roots of~(\ref{eq:bipolar-critical-terminal-point-0})
+    merge together
+    and the non-viable lake dries up completely.
+    The entire plane is viable,
+    though a single (isolated) critical terminal point still exists
+    at~$(0, v_{\nat 0})$.
+  \item
+    \term{Cold regime}, $A > A_{\nat 0}$:
+    The last remaining root of~(\ref{eq:bipolar-critical-terminal-point-0})
+    disappears.
+    The entire plane is viable,
+    and there are no critical terminal points left.
+\end{enumerate}
