@@ -107,6 +107,9 @@
 % Hyperlinks
 \usepackage[hidelinks,bookmarksopen=true,bookmarksopenlevel=0]{hyperref}
 
+% Top-level backmatter bookmarks
+\usepackage{bookmark}
+
 % URLs
 \let\bareurl\url
 \newcommand*{\urlopen}{\nolinkurl{<}}
@@ -415,6 +418,7 @@
 \label{pt:capillarity}
 
 \backmatter
+\bookmarksetup{startatroot}
 
 \bibliographystyle{conway}
 \bibliography{bibliography}
