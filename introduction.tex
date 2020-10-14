@@ -56,7 +56,7 @@ in thermal radiation and capillarity.
 \section{Boundary tracing}
 \label{sec:introduction.tracing}
 
-In this section, I provide a quick overview of
+This section provides a quick overview of
 the theory of \term{boundary tracing},
 which is well described by
 Anderson~\etal~\cite{anderson-2007-boundary-tracing-i-theory}
@@ -77,17 +77,18 @@ Whereas the usual goal is
 to determine the solution~$T$ for a given domain~$\Omega$,
 the aim of boundary tracing is
 to seek~$\Omega$ for a given~$T$.
-Specifically, one takes any known solution~$T = T (x, y)$ to the PDE
-and seeks \term{traced boundaries}, which are curves
+Specifically, we take any known solution~$T = T (x, y)$ to the PDE
+and seek \term{traced boundaries}, which are curves
 along which the flux condition~(\ref{eq:flux-boundary-condition}) holds.
 Once the traced boundaries have been found,
-they may be used to construct new domains
+we may use them to construct new domains
 for which the solution to the BVP is also~$T$.
 Surprisingly, this reverse problem
 of determining boundaries from a known solution
 often has infinitely many answers,
 leading to far more new and interesting domain shapes
-than expected~\cite{anderson-2007-boundary-tracing-ii-applications}.
+than we would initially expect~%
+  \cite{anderson-2007-boundary-tracing-ii-applications}.
 
 \begin{figure}
   \newcommand*{\subfigurewidth}{0.325\textwidth}
@@ -201,7 +202,7 @@ and is one of the following:
     note that they have not encountered any case
     where a non-discrete proper subset of the terminal curve
     coincides with a $T$-contour;
-    neither have I encountered such a case.
+    neither will we encounter such a case in this thesis.
 \end{enumerate}
 
 To determine the sought-after traced boundaries,
@@ -210,7 +211,7 @@ rewrite the flux condition~(\ref{eq:flux-boundary-condition})
 as an ordinary differential equation (ODE) for the traced boundaries,
 and integrate.
 By patching together the traced boundaries which result,
-new domains may be constructed
+we may construct new domains
 which also admit the solution~$T$ to the given BVP\@.
 The only restriction on the manner of patching
 is that the boundary normal~$\normalvec$ have consistent orientation
@@ -218,7 +219,7 @@ with respect to the flux condition~(\ref{eq:flux-boundary-condition}),
 and it is here that
 the distinction between ordinary and critical terminal points
 becomes important.
-Generally speaking one must avoid ordinary terminal points;
+Generally speaking we must avoid ordinary terminal points;
 the cusp formed by the two traced boundaries
 will not have consistent boundary orientation,
 except possibly for vanishing or discontinuous~$F$.
