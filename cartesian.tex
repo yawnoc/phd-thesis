@@ -296,6 +296,15 @@ and $B$~is a dimensionless constant.
 The temperature is constant and takes the value~$T = T_0$
 along the straight line~$x = \pi L_0/2$,
 which shall ultimately serve as the heat-supplying boundary.
+Physically, the constant~$B$ determines
+the minimum temperature gradient along this boundary;
+indeed
+\begin{equation}
+  \eval*{\pder{T}{x}}_{x = \pi L_0/2} = \frac{B T_0}{L_0} \cosh\frac{y}{L_0}
+  \label{eq:cosine-laplace-solution-dirichlet-slope}
+\end{equation}
+with minimal value~$B T_0 / L_0$ at~$y = 0$,
+so that solutions with a greater value of~$B$ are steeper.
 
 \subsection{Scaling}
 \label{sec:cartesian.cosine.scaling}
