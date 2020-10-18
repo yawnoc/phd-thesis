@@ -1,8 +1,8 @@
 \chapter{Cartesian coordinates}
 \label{ch:cartesian}
 
-In this chapter,
-I apply boundary tracing to the conduction--radiation problem
+In this chapter
+we apply boundary tracing to the conduction--radiation problem
 starting from known solutions
 to Laplace's equation~(\ref{eq:laplace-steady-conduction})
 in Cartesian coordinates.
@@ -18,7 +18,7 @@ and a cosinusoidal solution in Section~\ref{sec:cartesian.cosine}.
 \section{Plane-source solution}
 \label{sec:cartesian.plane}
 
-First I consider the simplest non-constant solution
+First we consider the simplest non-constant solution
 to Laplace's equation~(\ref{eq:laplace-steady-conduction})
 in Cartesian coordinates,
 \begin{important}{equation}
@@ -104,7 +104,7 @@ as will be shown in the next section.
 \subsection{Boundary tracing}
 \label{sec:cartesian.plane.tracing}
 
-For brevity, drop all \scalingmarks{}
+For brevity we drop all \scalingmarks{}
 so that the scaled boundary condition~%
   (\ref{eq:plane-scaled-radiation-boundary-condition-with-groups})
 and known solution~(\ref{eq:plane-scaled-laplace-solution-with-groups})
@@ -276,17 +276,17 @@ are not physically valid.
 While boundary tracing as performed on
 the plane-source solution~(\ref{eq:plane-laplace-solution})
 did not yield convex conduction--radiation domains,
-one might expect more favourable outcomes
+we might expect more favourable outcomes
 by starting from solutions to Laplace's equation
 which are not one-dimensional.
 A simple class of such solutions consists of functions which are the product
 of a trigonometric function in~$x$ and an hyperbolic function in~$y$.
 
 As seen in Section~\ref{sec:cartesian.plane.domain}
-one eventually requires a boundary to supply the heat being radiated away,
+we will eventually require a boundary to supply the heat being radiated away,
 and from a practical point of view it is
 straight-line, constant-temperature boundaries which are of interest.
-Therefore, in this section I consider known solutions of the form
+Therefore in this section we consider known solutions of the form
 \begin{important}{equation}
   T \ideq T_0 \roundbr*{1 - B \cos\frac{x}{L_0} \cosh\frac{y}{L_0}},
   \label{eq:cosine-laplace-solution}
@@ -295,7 +295,7 @@ where $T_0$~is a temperature, $L_0$~is a length scale,
 and $B$~is a dimensionless constant.
 The temperature is constant and takes the value~$T = T_0$
 along the straight line~$x = \pi L_0/2$,
-which shall ultimately serve as the heat-supplying boundary.
+which shall ultimately serve as our heat-supplying boundary.
 Physically, the constant~$B$ determines
 the minimum temperature gradient along this boundary;
 indeed
@@ -393,7 +393,7 @@ in thermal radiation problems.
 Since the known solution~(\ref{eq:cosine-scaled-laplace-solution})
 vanishes along~$\cos x \cosh y = 1 / B$,
 the geometry of the physical region~$T \ge 0$
-shall depend on the value of the dimensionless constant~$B$
+will depend on the value of the dimensionless constant~$B$
 (see Figure~\ref{fig:cosine-physical}).
 The unphysical region~$T < 0$ is omitted from the remainder of the analysis,
 as physically meaningful radiation boundaries cannot be found there.
@@ -406,7 +406,7 @@ traced boundaries will only exist within the viable domain~$\Phi \ge 0$.
 For the boundary condition~%
   (\ref{eq:cosine-scaled-radiation-boundary-condition})
 and known solution~(\ref{eq:cosine-scaled-laplace-solution}) at hand,
-one obtains the derivatives
+we obtain the derivatives
 \begin{align}
   P &\ideq \pder{T}{x} \ideq \+B \sin x \cosh y,
     \label{eq:cosine-gradient-u-component} \\[\tallspace]
@@ -439,7 +439,7 @@ which becomes
   \label{eq:cosine-tracing-ode-coordinate-parametrisation-x}
 \end{important}
 Given the complexity of managing more than one parameter,
-I consider~$B = 1$ before examining the general case.
+we consider~$B = 1$ before examining the general case.
 
 \subsection{Simple case (\texorpdfstring{$B = 1$}{B = 1})}
 \label{sec:cartesian.cosine.simple}
@@ -595,7 +595,7 @@ at which the two traced boundaries being patched
 would form a cusp with inconsistent boundary orientation
 (see Section~\ref{sec:introduction.tracing}).
 Instead the join must occur at a critical terminal point;
-recall that this is a point along the terminal curve
+we recall that this is a point along the terminal curve
 for which the local $T$-contour touches the terminal curve~$\Phi = 0$
 tangentially (rather than crossing at a non-zero angle).
 
@@ -634,7 +634,7 @@ Algebraically, $x_0$~is the positive%
 \footnote{
   The trivial solution~$x = 0$
   corresponds to the isolated terminal point at the origin,
-  which has just been dismissed.
+  which we have just dismissed.
 }
 solution to
 \begin{equation}
@@ -664,9 +664,9 @@ the former asymptotically approaches the latter travelling away from~$y = 0$.
 The choice of the candidate boundary over all other boundary patchings
 is a necessary but not sufficient condition for convexity.
 While the candidate boundary is convex at~$(x_0, 0)$,
-it eventually inflects
+it will eventually inflect
 at some~$(x, y) = (x_\infl, \pm y_\infl)$ depending on~$A$,
-and becomes concave.
+and become concave.
 
 Recalling the goal of constructing domains
 corresponding to a conduction--radiation BVP\@,
@@ -748,7 +748,7 @@ the critical value~$A = A_\infl$ is the solution to
 whose left hand side is the coordinate parametrisation~$x = x (y)$
 evaluated at the would-be $y$-coordinate~%
   (\ref{eq:cosine-simple-traced-boundary-y-would-be-inflection}).
-The bisection algorithm yields the root
+Using the bisection algorithm we obtain the root
 \begin{equation}
   A_\infl = 0.79718,
   \label{eq:cosine-simple-traced-boundary-a-inflection}
@@ -882,8 +882,8 @@ by patching together traced boundaries,
 even at the critical terminal points~$(0, \pm y_0)$ along the $y$-axis.
 Case~\ref{itm:cartesian.cosine.general.regimes.fair-to-steep}
   (fair-to-steep transition)
-is the simple $B = 1$~case
-which has been analysed in Section~\ref{sec:cartesian.cosine.general.viable};
+is the simple $B = 1$~case which we have already analysed
+in Section~\ref{sec:cartesian.cosine.general.viable};
 recall that a conduction--radiation domain in the shape of a convex lens
 can be produced for each~$A$ in the interval~%
   (\ref{eq:cosine-simple-traced-boundary-convex-a-interval})
@@ -910,20 +910,20 @@ in Section~\ref{sec:cartesian.cosine.general.viable},
 so may candidate boundaries be constructed
 through the hyperbolic critical terminal points~%
   $(x_\flat, 0)$ and~$(x_\sharp, 0)$.
-Again one can form lens-shaped candidate domains,
+Again we can form lens-shaped candidate domains,
 and these will be convex for sufficiently well-chosen~$A$ and~$B$.
 
 Much more interesting however is the existence
 in Case~\ref{itm:cartesian.cosine.general.regimes.fair} (fair regime)
 of convex conduction--radiation domains
 which are \emph{not} shaped as lenses.
-I cannot give a general analysis here
+We cannot perform a general analysis here
 due to the complex dependence of the curvature on~$A$ and~$B$,
-so I merely provide the illustrative example~$(A, B) = (12, 0.082506)$.
+so we look at the illustrative example~$(A, B) = (12, 0.082506)$.
 Figure~\ref{fig:cosine_general-traced-boundaries-convex}
 shows (among other features) the frontiers of inflection
 for the two branches of traced boundaries,
-obtained by computing the zero-contours of the second derivative~%
+which we obtain by computing the zero-contours of the second derivative~%
   (\ref{eq:acceleration-traced-boundary-cartesian-by-y})
 using numerical integration.
 Only the portions of traced boundary which lie
@@ -932,13 +932,13 @@ will be valid as radiation boundaries.
 Since the end is to construct a domain
 with the straight line contour~$x = \pi/2$
 serving as the constant-temperature boundary,
-one may immediately discard any convex portion of traced boundary
+we immediately discard any convex portion of traced boundary
 which does not reach~$x = \pi/2$.
 Of the remaining convex portions,
 those which do not reach the $x$-axis~($y = 0$)
 are unable to join up with a convex portion of the opposite branch
 (which is necessary to form a complete domain boundary);
-discarding these also leaves the convex portions of traced boundary
+discarding those also leaves the convex portions of traced boundary
 shown in Figure~\ref{fig:cosine_general-traced-boundaries-convex}.
 
 \begin{figure}
@@ -995,7 +995,7 @@ and~\ref{sec:cartesian.cosine.general.tracing}
 may be tested by numerically solving the conduction--radiation BVP
 in that domain and comparing the result
 to the exact solution~(\ref{eq:cosine-scaled-laplace-solution}).
-To do this I use \lang{Mathematica~12},
+To do this we use \lang{Mathematica~12},
 whose finite elements package~\code{NDSolve\`{}FEM\`{}}
 has built-in capabilities for mesh generation and for solving nonlinear BVPs.
 
@@ -1028,18 +1028,19 @@ and the exact solution~(\ref{eq:cosine-scaled-laplace-solution})
 is excellent;
 in both cases the relative error is strictly less than~$\SI{0.06}{\percent}$
 throughout all vertices of the mesh,
-and one can be completely confident
+and we can therefore be completely confident
 in the validity of the boundary tracing procedure.
 
 \section{Summary}
 \label{sec:cartesian.summary}
 
-In this chapter I have applied the method of boundary tracing
+In this chapter we have applied the method of boundary tracing
 for the conduction--radiation problem in Cartesian coordinates.
 Starting from the simplest possible solution,
 namely the one-dimensional solution~(\ref{eq:plane-laplace-solution}),
+we have produced
 a family of hypergeometric traced boundaries
-with translational symmetry in~$y$ has been produced.
+with translational symmetry in~$y$.
 By construction
 the radiation condition~(\ref{eq:radiation-boundary-condition})
 holds exactly along these boundaries,
@@ -1056,15 +1057,15 @@ which is not one-dimensional.
 The conduction--radiation problem requires a heat source,
 and since it is straight-line, constant-temperature boundaries
 which are of physical interest,
-I have chosen the cosinusoidal solution~(\ref{eq:cosine-laplace-solution}),
+we have chosen the cosinusoidal solution~(\ref{eq:cosine-laplace-solution}),
 which has the straight-line contour~$x = \pi L_0/2$.
 In the simple case~($B = 1$)
-I have shown that a lens-shaped domain can be produced
+we have seen that a lens-shaped domain can be produced
 which is convex for certain values of the dimensionless group~$A$,
 while for the more complicated general case~($B$~arbitrary)
-I have demonstrated the construction of an asymmetric domain
+we have demonstrated the construction of an asymmetric domain
 from convex portions of the traced boundaries.
-Finally I have confirmed the validity of the domains produced,
+Finally the validity of the domains produced has been confirmed,
 by comparing numerical solutions to the conduction--radiation BVP
 with the exact cosinusoidal solution
 unto which boundary tracing was applied.
