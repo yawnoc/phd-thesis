@@ -1,13 +1,13 @@
 \chapter{Bipolar coordinates}
 \label{ch:bipolar}
 
-In this chapter,
-I apply boundary tracing to the conduction--radiation problem
+In this chapter
+we apply boundary tracing to the conduction--radiation problem
 starting from the known solution
 to Laplace's equation~(\ref{eq:laplace-steady-conduction})
 for equal and opposite line sources.
 As before,
-I determine traced boundaries along which
+we determine traced boundaries along which
 the radiation condition~(\ref{eq:radiation-boundary-condition}) holds
 and use the convex portions to construct conduction--radiation domains.
 
@@ -52,9 +52,8 @@ This can be rewritten as
   T \ideq T_0 \tanh^{-1} \roundbr*{\frac{2 a x}{x^2 + y^2 + a^2}},
   \label{eq:bipolar-laplace-solution-inverse-tanh}
 \end{equation}
-and one sees
-(by rearranging and completing the square)
-that the $T$-contours are simply circles.
+and by rearranging and completing the square,
+we see that the $T$-contours are simply circles.
 The bipolar coordinate system~$(u, v)$ arises
 from simply using the dimensionless quantity~$T / T_0$
 as the second coordinate,
@@ -90,7 +89,7 @@ yielding the angular coordinate%
 Of course it is the forward transformation which is more useful,
 and upon inverting~(\ref{eq:u-transformation-bipolar})
 and~(\ref{eq:v-transformation-bipolar})
-one obtains
+we have
 \begin{align}
   x &\ideq \frac{a \sinh v}{\cosh v - \cos u},
     \label{eq:x-transformation-bipolar}
@@ -129,7 +128,7 @@ and clockwise around the negative singularity.
 \label{sec:bipolar.known.scaling}
 
 Since the length scale has already been fixed at~$a$,
-define
+we define
 \begin{align}
   \scaled{x} &\ideq x / a, \label{eq:bipolar-scaled-x} \\
   \scaled{y} &\ideq y / a, \label{eq:bipolar-scaled-y}
@@ -163,7 +162,7 @@ become
 Given two dimensionless groups but only one free scale~$\Theta$,
 only one group can be set to unity,
 and as in the polar case (Section~\ref{sec:polar.line.scaling})
-I choose
+we choose
 \begin{equation}
   \Theta = T_0
     \label{eq:bipolar-temperature-scale}
@@ -174,7 +173,7 @@ and define the dimensionless group
   \label{eq:bipolar-dimensionless-group}
 \end{equation}
 Dropping \scalingmarks,
-one has boundary condition and known solution
+we have boundary condition and known solution
 \begin{important}{align}
   \normalvec \dotp \del T &= -\frac{T^4}{A},
     \label{eq:bipolar-scaled-radiation-boundary-condition} \\
@@ -194,7 +193,7 @@ With the bipolar coordinate system,
 the known solution,
 and the scaling
 all established,
-I now determine the geometry of the viable domain.
+we now determine the geometry of the viable domain.
 Note that the half-plane~$x < 0$ is excluded from the analysis
 since~$v < 0$ and hence~$T < 0$ in that region,
 which is unphysical in the context of thermal radiation.
@@ -289,7 +288,7 @@ in union with a \term{proper} terminal curve
 whose points are not isolated,
 a situation already encountered
 in Section~\ref{sec:cartesian.cosine.simple.viable}.
-Again one finds that the two traced boundaries through the origin
+Again we find that the two traced boundaries through the origin
 form a (useless) non-convex spike,
 so for the remainder of this analysis
 the origin is ignored as a critical terminal point.
@@ -388,7 +387,7 @@ the values of~$A$ for the two transitions are determined to be
 \section{Boundary tracing}
 \label{sec:bipolar.tracing}
 
-In this section, I write down the boundary tracing ODE
+In this section we write down the boundary tracing ODE
 and determine the class of convex domains which can be constructed.
 
 \subsection{A candidate boundary}
@@ -421,12 +420,12 @@ as one travels anticlockwise
 around the singularity~$v = +\infty$.
 Again, any physically sensible radiation--conduction domain
 must completely surround the heat-supplying singularity without touching it,
-and therefore one seeks closed curves surrounding the singularity,
+and therefore we seek closed curves surrounding the singularity,
 made from patching together the traced boundaries
 given by~(\ref{eq:bipolar-tracing-ode-coordinate-parametrisation-v}).
 
 Using similar arguments to those in Section~\ref{sec:polar.tracing},
-one concludes that a necessary condition
+we conclude that a necessary condition
 for the convexity of the sought-after closed curve
 is for it to have an upper-to-lower branch switch
 at a hyperbolic critical terminal curve.

@@ -22,7 +22,7 @@ only considered Cartesian coordinates.
 A generalised version of the boundary tracing ODE is much desired,
 and will be most useful given the various coordinate systems
 which shall be used in the remainder of this thesis.
-I therefore derive in this chapter
+We therefore derive in this chapter
 the boundary tracing ODE for coordinate parametrisation
 and also the corresponding system of ODEs for arc-length parametrisation,
 with both applicable in any two-dimensional orthogonal coordinate system.
@@ -108,7 +108,7 @@ before proceeding any further:
 
 For the side lengths of the infinitesimal rectangle
 of Figure~\ref{fig:orthogonal-curvilinear-coordinates},
-define the auxiliary differentials
+we define the auxiliary differentials
 \begin{align}
   \td \mu &\ideq \scalefac[u] \td u,
     \label{eq:differential-displacement-u-component} \\
@@ -121,7 +121,7 @@ so that
   \label{eq:differential-arc-length-abbreviated}
 \end{equation}
 For the components of the normal vector~(\ref{eq:normal-vector}),
-define
+we define
 \begin{align}
   \alpha &\ideq \tder{\mu}{s} \ideq \scalefac[u] \tder{u}{s},
     \label{eq:tangent-u-component} \\[\tallspace]
@@ -136,7 +136,7 @@ so that
   \label{eq:normal-vector-abbreviated}
 \end{equation}
 Finally, for the components of the gradient vector~(\ref{eq:gradient}),
-define
+we define
 \begin{align}
   P &\ideq \frac{1}{\scalefac[u]} \pder{T}{u},
     \label{eq:gradient-u-component} \\[\tallspace]
@@ -165,8 +165,7 @@ and
 Having obtained expressions
 for the normal~$\normalvec$ and gradient~$\del T$
 which appear in the flux boundary condition~(\ref{eq:flux-boundary-condition}),
-I derive in this section
-the boundary tracing ODE for coordinate parametrisation
+we now derive the boundary tracing ODE for coordinate parametrisation
 and the corresponding system of ODEs for arc-length parametrisation.
 
 Following Anderson~\etal~\cite{anderson-2007-boundary-tracing-i-theory}
@@ -224,7 +223,7 @@ or
   \label{eq:tracing-ode-coordinate-parametrisation-v}
 \end{important}
 Alternatively, for the parametrisation~$u = u (v)$,
-one instead solves for~$\td \mu / {\td \nu}$ and obtains
+we instead solve for~$\td \mu / {\td \nu}$, obtaining
 \begin{important}{equation}
   \tder{u}{v} =
     \frac{\scalefac[v]}{\scalefac[u]}
@@ -257,7 +256,7 @@ if~$\td v / {\td u}$ or~$\td u / {\td v}$ ever become infinite,
 corresponding to traced boundaries
 which are parallel to~$\basisvec{v}$ or~$\basisvec{u}$.
 
-To avoid such singularities in numerical work, one should instead use
+To avoid such singularities in numerical work, we should instead use
 the arc-length parametrisation~$u = u (s)$, $v = v(s)$
 to put the two coordinates~$u$ and~$v$ on an equal footing.
 Using~(\ref{eq:normal-vector-abbreviated})
@@ -283,7 +282,7 @@ forms the system%
   is required to select the correct root among the two possible.
   A better approach is to separate the two branches analytically
   before undertaking any numerical procedures,
-  as I have done here
+  as we have done here
   in~(\ref{eq:tracing-ode-arc-length-parametrisation-mu})
   and~(\ref{eq:tracing-ode-arc-length-parametrisation-nu}).
 }
@@ -295,7 +294,7 @@ forms the system%
 \end{align}
 Solving~(\ref{eq:tracing-arc-length-parametrisation-flux-boundary-condition})
 and~(\ref{eq:tracing-arc-length-parametrisation-unit-speed})
-for~$\alpha$ and~$\beta$, one obtains
+for~$\alpha$ and~$\beta$, we obtain
 the boundary tracing system of ODEs under arc-length parametrisation,
 \begin{align}
   \tder{\mu}{s} &\ideq \alpha = \frac{-Q F \pm P \sqrt{\Phi}}{(\del T)^2},
@@ -312,7 +311,7 @@ or
 \end{important}
 As was the case for coordinate parametrisation
 (Section~\ref{sec:curvilinear.tracing.coordinate}),
-notice the two possible choices of sign
+we note the two possible choices of sign
 (which correspond to the two branches of traced boundaries)
 and the occurrences of the term~$\sqrt{\Phi}$
 (which correspond to the absence of traced boundaries
@@ -332,7 +331,7 @@ in specific non-Cartesian coordinate systems.
 A generalised version is desirable,
 and in anticipation of the coordinate systems
 which shall be used in the chapters to follow,
-I have derived in this chapter
+we have derived in this chapter
 the boundary tracing ODE for coordinate parametrisation
 and the corresponding system of ODEs for arc-length parametrisation.
 Both are applicable in any two-dimensional orthogonal coordinate system,

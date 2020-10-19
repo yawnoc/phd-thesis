@@ -2,7 +2,7 @@
 \label{ch:polar}
 
 In this chapter,
-I apply boundary tracing to the conduction--radiation problem
+we apply boundary tracing to the conduction--radiation problem
 using the fundamental line-source solution
 as the known solution to
 Laplace's equation~(\ref{eq:laplace-steady-conduction}).
@@ -17,7 +17,7 @@ which admit the same line-source solution.
 \section{Line-source solution}
 \label{sec:polar.line}
 
-First I establish the known solution and the appropriate scaling.
+First we establish the known solution and the appropriate scaling.
 
 The line-source solution
 to Laplace's equation~(\ref{eq:laplace-steady-conduction})
@@ -46,7 +46,7 @@ given by the transformation
   x &\ideq r \cos\phi, \label{eq:x-transformation-polar} \\
   y &\ideq r \sin\phi, \label{eq:y-transformation-polar}
 \end{align}
-for which the scale factors are
+with scale factors
 \begin{align}
   \scalefac[r] &\ideq 1, \label{eq:r-scale-factor-polar} \\
   \scalefac[\phi] &\ideq r. \label{eq:phi-scale-factor-polar}
@@ -89,7 +89,7 @@ There are three dimensionless groups
 but only two free scales~$\Theta$ and~$\varrho$,
 so one of the groups cannot be eliminated.
 To keep the logarithm as simple as possible,
-put
+we put
 \begin{align}
   \Theta &= T_0,
     \label{eq:line-temperature-scale} \\
@@ -118,7 +118,7 @@ are unchanged in form by the scaling.
 \section{Viable domain}
 \label{sec:polar.viable}
 
-Next, I determine the geometry of the viable domain,
+Next we determine the geometry of the viable domain,
 the region in which traced boundaries exist.
 
 Comparing the radiation condition~%
@@ -259,7 +259,7 @@ There are three cases:
 \section{Boundary tracing}
 \label{sec:polar.tracing}
 
-In this section, I write down the boundary tracing ODE
+In this section, we write down the boundary tracing ODE
 and show that the construction of convex domains
 is only possible in the hot regime~$A < A_\nat$,
 on the outer viable mainland~$r \ge r_\sharp$.
@@ -278,8 +278,9 @@ so that the traced boundaries are given by
   \label{eq:line-traced-boundary-integral}
 \end{important}
 This integral is not elementary,
-and the traced boundaries must be determined numerically,
-the results of which are displayed in Figure~\ref{fig:line-traced-boundaries}.
+and the traced boundaries must be determined numerically.
+Integrating forward from various points within the viable domain,
+we obtain the traced boundaries in Figure~\ref{fig:line-traced-boundaries}.
 
 \begin{figure}
   \newcommand*{\subfigurewidth}{0.325\textwidth}
@@ -314,11 +315,11 @@ the only sensible configuration is for the constructed domain to
 completely surround the singularity~$r = 0$ without touching it,
 with the power supplied by the singularity balanced
 by that lost along the outer boundary by radiation.
-Therefore one seeks closed curves surrounding the origin,
+Therefore we seek closed curves surrounding the origin,
 made by patching together the traced boundaries~%
   (\ref{eq:line-traced-boundary-integral}).
 
-Moreover, it was already seen in Section~\ref{sec:cartesian.plane.domain}
+Moreover we already saw in Section~\ref{sec:cartesian.plane.domain}
 that only convex domains are acceptable,
 lest there be self-incident radiation which is not accounted for
 by the simple radiation condition~%
@@ -331,7 +332,7 @@ must therefore be done diligently.
 
 Since the sought-after closed curve must surround the origin
 and mark out a convex domain,
-it may be parametrised in the form~$r = r (\phi)$,
+we may parametrise it in the form~$r = r (\phi)$,
 a single-valued function.
 Travelling once around the closed curve,
 the azimuthal angle~$\phi$ will run through a full turn,
@@ -458,9 +459,9 @@ becomes
       \yesnumber
       \label{eq:line-tracing-ode-transition-perturbation-near-r-natural}
 \end{align*}
-Integrating gives
+Integrating, we have
 \begin{equation}
-  \log \xi \asy \const \mp \frac{\phi}{2},
+  \log \xi \asy \const \mp \frac{\phi}{2}
   \label{eq:line-traced-boundary-transition-log-xi-near-r-natural}
 \end{equation}
 or
@@ -528,15 +529,15 @@ the only convex domain is the trivial disk
 whose boundary is the circle~$r = r_\flat$.
 
 Only on the outer viable mainland~$r \ge r_\sharp$
-can one construct non-trivial closed curves
+can we construct non-trivial closed curves
 which correspond to convex domains,
-an analysis which I have deemed worthy of its own section.
+and the entire next section is devoted to this analysis.
 
 \section{Convex domains in the hot regime}
 \label{sec:polar.convex}
 
 In this section,
-I determine the class of possible convex domains
+we determine the class of possible convex domains
 which can only be constructed
 on the outer viable mainland~$r \ge r_\sharp$
 of the hot regime.
@@ -611,11 +612,11 @@ becomes
     \sqrt{\frac{2 A}{-\psi' (r_\sharp)}}
       \cdot
     \frac{1}{2 \sqrt{\xi}}
-    + \order \roundbr*{\sqrt{\xi}},
+    + \order \roundbr*{\sqrt{\xi}}.
       \yesnumber
       \label{eq:line-tracing-ode-hot-perturbation-near-r-sharp}
 \end{align*}
-which integrates to give
+Integrating, we obtain
 \begin{align*}
   \mp \phi
   &=
@@ -633,7 +634,7 @@ which integrates to give
       \label{eq:line-traced-boundary-hot-phi-near-r-sharp}
 \end{align*}
 up to a constant,
-whence to first order, there holds
+and to first order we have
 \begin{equation}
   \xi \asy
   \frac{r_\sharp (4 + \log r_\sharp)}{2 (-\log r_\sharp)} \cdot \phi^2.
@@ -649,7 +650,7 @@ within finite time,
 even without forming a non-convex corner,
 it is not sufficient to rule out smooth non-convexity.
 From Figure~\ref{fig:line-hot-outer-tangent-line},
-the equation of a tangent line to the circle~$r = r_\sharp$
+we see that the equation of a tangent line to the circle~$r = r_\sharp$
 (up to a constant in~$\phi$)
 is
 \begin{equation}
@@ -724,8 +725,8 @@ since the traced boundaries will form thin, concave spikes of the form
 near~$r = 1$,
 similar to the thin spikes~(\ref{eq:plane-traced-boundary-x-near-0})
 of the plane-source solution (Section~\ref{sec:cartesian.plane.tracing}).
-A global curvature analysis is required
-to determine where the traced boundaries inflect
+In the next section we perform a global curvature analysis
+to determine precisely where the traced boundaries inflect
 and become concave.
 
 \subsection{Convexity beyond the outer terminal curve}
@@ -776,7 +777,7 @@ Division by~$\td r$ yields the velocity
 and taking another $r$-derivative
 (with simplification via~(\ref{eq:r-basis-vector-r-derivative})
 and~(\ref{eq:phi-basis-vector-r-derivative}))
-results in the acceleration
+we obtain the acceleration
 \begin{equation}
   \vec{r}'' \ideq \tder[2]{\vec{r}}{r} \ideq
   -r {\phi'}^2 \basisvec{r}
@@ -788,14 +789,13 @@ Forming the cross product of
 the velocity~(\ref{eq:velocity-vector-polar-by-r})
 with the acceleration~(\ref{eq:acceleration-vector-polar-by-r})
 and extracting the $z$-component,
-the quantity
+we obtain the quantity
 \begin{equation}
   \kappa \ideq
   \basisvec{z} \dotp \vec{r}' \crossp \vec{r}'' \ideq
-  r \phi'' + 2 \phi' + r^2 {\phi'}^3
+  r \phi'' + 2 \phi' + r^2 {\phi'}^3,
   \label{eq:kappa-polar-by-r}
 \end{equation}
-is obtained,
 which has the same sign changes as the curvature.
 
 The next step is to evaluate~(\ref{eq:kappa-polar-by-r})
@@ -812,14 +812,14 @@ inverts to give
   \phi' \ideq \tder{\phi}{r} = \mp \frac{L^4}{\sqrt{A^2 - r^2 L^8}},
   \label{eq:line-traced-boundary-phi-r-derivative}
 \end{equation}
-and hence
+and after some algebra we get
 \begin{equation}
   \phi'' =
   \mp \frac{L^3 \roundbr*{4 A^2 + r^2 L^9}}{r \roundbr*{A^2 - r^2 L^8}^{3/2}}.
   \label{eq:line-traced-boundary-phi-r-second-derivative}
 \end{equation}
 Substituting these into~(\ref{eq:kappa-polar-by-r}),
-one obtains
+we obtain
 \begin{equation}
   \kappa =
   \mp \frac{2 A^2 L^3 (L + 2)}{\roundbr*{A^2 - r^2 L^8}^{3/2}},
@@ -916,16 +916,17 @@ any domain constructed using boundary tracing can be verified
 by computing a numerical solution to the conduction--radiation BVP
 and comparing with the exact solution~(\ref{eq:line-scaled-laplace-solution}).
 
-For a specific example I choose here
+For a specific example we choose here
 the irregular domain rightmost in Figure~\ref{fig:line-domains}.
 In place of the singularity at~$r = 0$,
-I use the Dirichlet condition~$T = T_\dir$
+we use the Dirichlet condition~$T = T_\dir$
 along the interior circle~$r = r_\dir = r_\sharp / 2$
 according to~(\ref{eq:line-scaled-equivalent-dirichlet-relation}).
 Figure~\ref{fig:line-verification-domain-mesh}
 shows the \lang{Mathematica}-generated finite element mesh,
 which consists of some 400~triangular elements.
-The relative discrepancy between the resulting numerical solution
+We find that the relative discrepancy
+between the resulting numerical solution
 and the exact solution~(\ref{eq:line-scaled-laplace-solution})
 is less than~$\SI{0.3}{\percent}$ throughout the mesh.
 
@@ -949,7 +950,7 @@ the physical lengths and temperatures which this translates to.
 The results obtained for convex domains
 will not be applicable for arbitrary choices
 of length and temperature scales,
-and in this section I determine the physical range of applicability
+and in this section we determine the physical range of applicability
 corresponding to
 the interval~(\ref{eq:line-traced-boundary-hot-convex-a-interval}) in~$A$.
 
@@ -963,12 +964,12 @@ starting from~(\ref{eq:line-scaled-radiation-boundary-condition}).
 
 In a practical situation
 one is probably only interested in objects of a given size.
-Fix~$r_\sharp$, the physical inradius of any convex domain
+We fix~$r_\sharp$, which is both the physical inradius of any convex domain
 constructed in Section~\ref{sec:polar.convex.construction},
-and also the physical radius of the outer critical terminal curve.
+and the physical radius of the outer critical terminal curve.
 Given the restriction~(\ref{eq:line-traced-boundary-hot-convex-a-interval})
 on the possible values of the dimensionless group~$A$,
-one would expect a corresponding interval
+we would expect a corresponding interval
 which restricts the possible values of temperature
 \begin{equation}
   T_\sharp = T_0 \log \roundbr*{\frac{r_0}{r_\sharp}}
@@ -976,12 +977,12 @@ which restricts the possible values of temperature
 \end{equation}
 along the incircle~$r = r_\sharp$.
 
-First observe that
+First we observe that
 \begin{equation}
   r_0 \ideq \frac{r_\sharp}{\scaled{r}_\sharp},
   \label{eq:line-length-scale-in-terms-of-r-sharp}
 \end{equation}
-and recall that
+and we recall that
 \begin{equation}
   A
   = \psi (\scaled{r}_\sharp)
@@ -995,7 +996,7 @@ Rearranging~(\ref{eq:line-dimensionless-group})
 to give~$T_0$ in terms of~$r_0$ and~$A$,
 then substituting~(\ref{eq:line-length-scale-in-terms-of-r-sharp})
 and~(\ref{eq:line-dimensionless-group-in-terms-of-r-sharp}),
-one obtains
+we obtain
 \begin{equation}
   T_0 = \roundbr*{\frac{1}{c r_\sharp \log^4 \scaled{r}_\sharp}}^{1/3}.
   \label{eq:line-temperature-scale-in-terms-of-r-sharp}
@@ -1114,7 +1115,7 @@ the result of this integral will be the same
 along any closed curve containing the origin.
 Choosing the interior circular boundary~$r = r_\dir$
 for its radial symmetry ($\normalvec = \basisvec{r}$),
-this becomes
+we have
 \begin{align*}
   p
   &=
@@ -1135,7 +1136,7 @@ this becomes
 by~(\ref{eq:line-temperature-scale-in-terms-of-r-sharp}).
 Reusing the result~%
   (\ref{eq:line-traced-boundary-hot-convex-log-r-sharp-interval}),
-one obtains the interval in power per unit length
+we obtain the desired interval in power per unit length
 corresponding to convex domains of inradius~$r_\sharp$:
 \[
   2 \pi k \roundbr*{\frac{1}{c r_\sharp} \cdot \frac{1}{4^4}}^{1/3}
