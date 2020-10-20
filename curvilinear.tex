@@ -273,15 +273,17 @@ which, together with the unit-speed condition~(\ref{eq:tangent-pythagoras}),
 forms the system%
 \footnote{
   This system is also given
-  in Anderson's thesis~\cite{anderson-2002-thesis-boundary-tracing-pdes},
-  but only in Cartesian coordinates.
-  Moreover, the system is passed directly to a numerical integrator
+  in Anderson's thesis~\cite{anderson-2002-thesis-boundary-tracing-pdes}
+  (equations (A.1) and~(A.2)),
+  but only in Cartesian coordinates
+  and with~$\pm F$ in place of~$F$.
+  Moreover the system is passed directly to a numerical integrator
   without first solving for~$\alpha$ and~$\beta$,
   so that at every step of the integration,
   a numerical comparison with the previous root
-  is required to select the correct root among the two possible.
+  is required to select the correct root among the four possible.
   A better approach is to separate the two branches analytically
-  before undertaking any numerical procedures,
+  before performing any numerical procedures,
   as we have done here
   in~(\ref{eq:tracing-ode-arc-length-parametrisation-mu})
   and~(\ref{eq:tracing-ode-arc-length-parametrisation-nu}).
