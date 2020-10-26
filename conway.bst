@@ -16,6 +16,7 @@
 %% - Formatted DOI according to \doi
 %% - Changed space between volume & number to non-breaking thin
 %% - Made institution print in @misc
+%% - Capitalised "volume" for @book
 %%
 %% The following two newlines mark the end of this inserted preamble:
 
@@ -247,7 +248,7 @@ FUNCTION {bbl.edition}
 { "edition" }
 
 FUNCTION {bbl.volume}
-{ "volume" }
+{ "Volume" }
 
 FUNCTION {bbl.of}
 { "of" }
