@@ -36,7 +36,7 @@ reverse strategy for flux boundary conditions,
 known as \term{boundary tracing},
 was carried out by
 Anderson~\etal~\cite{anderson-2007-boundary-tracing-i-theory}
-with applications to the \laplaceyoung{} equation
+with applications to the Laplace--Young equation
 of capillarity~\cite{anderson-2006-exact-solutions-laplace-young}
 and other PDEs, including the Helmholtz,
 constant mean curvature, and
@@ -266,7 +266,7 @@ is simply described by Laplace's equation
 \end{equation}
 but on the portion of its surface~$\pd \Omega$
 (assumed grey and diffuse) where radiation occurs,
-the \stefanboltz{} law implies that
+the Stefan--Boltzmann law implies that
 \begin{equation}
   \normalvec \dotp \del T = - c T^4,
   \label{eq:radiation-boundary-condition}
@@ -279,7 +279,7 @@ where
 with $\conduc$~being the conductivity of the object,
 $\emiss$~the emissivity of its surface,
 and $\stefan = \SI{5.67e-8}{\watt \per\metre\squared \per\kelvin\tothe{4}}$~%
-the \stefanboltz{} constant~%
+the Stefan--Boltzmann constant~%
 \cite{tiesinga-2019-2018-codata-recommended-constants}.
 
 This boundary value problem is not straightforward
@@ -403,7 +403,7 @@ The constant~$\lambda$ is determined by a volume constraint
 and may be removed by applying the offset~%
   $T \ideq \offset{T} - \lambda / \capill$
 and dropping \offsetmarks.
-Thus we obtain the \laplaceyoung{} equation
+Thus we obtain the Laplace--Young equation
 \begin{equation}
   \del \dotp \frac{\del T}{\sqrt{1 + (\del T)^2}} = \capill T,
   \label{eq:laplace-young}
@@ -536,6 +536,6 @@ Whilst the solution to the linearised problem is non-singular
 and locally planar for any~$\alpha$,
 we must remember that the small-slope assumption~$(\del T)^2 \ll 1$
 does not hold good
-in the highly nonlinear regimes of the \laplaceyoung{} equation.
+in the highly nonlinear regimes of the Laplace--Young equation.
 
 \section{Thesis overview}
