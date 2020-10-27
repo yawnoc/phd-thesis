@@ -410,5 +410,20 @@ Thus we obtain the \laplaceyoung{} equation
 a physical statement which says that
 the mean curvature of the liquid surface
 is proportional to the height above the reference level~$T = 0$.
+The boundary condition to be satisfied along the walls~$\pd\Omega$
+of the cylindrical container is
+\begin{equation}
+  \normalvec \dotp \frac{\del T}{\sqrt{1 + (\del T)^2}} = \cos\contact,
+  \label{eq:contact-boundary-condition}
+\end{equation}
+which says that the liquid surface must meet the container walls
+at a contact angle of~$\contact$
+(Figure~X). % TODO
+Assuming $\contact$~is constant,
+it suffices to consider~$\contact < \pi/2$;
+if~$\contact = \pi/2$ we simply have the solution~$T \ideq 0$,
+and if~$\pi/2 < \contact \le \pi$
+we have an equivalent problem in~$-T$
+with an acute contact angle of~$\pi - \contact$.
 
 \section{Thesis overview}
