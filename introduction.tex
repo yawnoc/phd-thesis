@@ -374,19 +374,23 @@ satisfies the capillary equation%
   in Chapter~1 of Finn~\cite{finn-1986-equilibrium-capillary-surfaces}.
 }
 \begin{equation}
-  \del \dotp \frac{\del T}{\sqrt{1 + (\del T)^2}} =
-    \roundbr*{\frac{\densit \gravit}{\surften}} T + \lambda,
+  \del \dotp \frac{\del T}{\sqrt{1 + (\del T)^2}} = \capill T + \lambda.
   \label{eq:capillary}
+\end{equation}
+Here $\capill$~is the capillarity constant,
+\begin{equation}
+  \capill = \frac{\densit \gravit}{\surften},
+  \label{eq:capillarity-constant}
 \end{equation}
 where $\densit$~is the difference in density
 between the liquid and the surrounding air,
 $\gravit$~is gravitational acceleration,
 and $\surften$~is the surface tension of the liquid.
-Here we only consider the case of downward gravity,
-i.e.~$\densit \gravit / \surften > 0$.%
+We will only consider the case of downward gravity,
+i.e.~$\capill > 0$.%
 \footnote{
   For comprehensive surveys of capillarity phenomena including the cases of
-  zero and inverted gravity ($\densit \gravit / \surften \le 0$),
+  zero and inverted gravity ($\capill \le 0$),
   see the many reviews of Finn~\cite{
     finn-1974-capillarity-phenomena,
     finn-2002-eight-properties-capillary-surfaces,
@@ -396,7 +400,8 @@ i.e.~$\densit \gravit / \surften > 0$.%
 The constant~$\lambda$ is determined by a volume constraint
 (or by the height at infinity when the volume of liquid is infinite),
 and may be removed by applying the offset~%
-  $T \ideq \offset{T} - \lambda \surften / (\densit \gravit)$
+  $T \ideq \offset{T} - \lambda / \capill$
 and dropping \offsetmarks.
+
 
 \section{Thesis overview}
