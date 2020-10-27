@@ -447,4 +447,35 @@ under some rather technical conditions on the shape of the domain~$\Omega$;
 here it suffices to know that these conditions are satisifed
 by all of the domains considered in this thesis.
 
+While exact solutions are not known in domains with sharp corners,
+the asymptotic behaviour is well-understood.
+If a local portion of the domain~$\Omega$
+is a straight wedge with an interior angle of~$2 \alpha$
+(where~$0 < \alpha < \pi$),
+the corner behaviour is known to depend drastically
+on the sizes of the half-angle~$\alpha$ and the contact angle~$\gamma$:
+\begin{enumerate}
+  \item
+    \term{Small wedge}, $0 < \alpha < \pi/2 - \gamma$:
+    the height rise in the corner is in fact infinite.
+    Concus \&~Finn~\cite{concus-1970-class-capillary-surfaces}
+    have obtained the asymptotic result
+    \begin{equation}
+      T \asy \frac{\cos\phi - \sqrt{k^2 - \sin^2 \phi}}{k \capill r},
+      \label{eq:small-wedge-asymptotic-solution}
+    \end{equation}
+    where
+    \begin{equation}
+      k = \frac{\sin\alpha}{\cos\gamma}
+      \label{eq:wedge-constant-k}
+    \end{equation}
+    and $(r, \phi)$~are polar coordinates with origin at the corner,
+    such that the wedge interior is given by~$-\alpha < \phi < \alpha$.
+    Miersemann~\cite{miersemann-1993-asymptotic-corner-capillary-singular}
+    has shown that the leading term~(\ref{eq:small-wedge-asymptotic-solution})
+    is correct to~$\order \roundbr*{r^3}$,
+    and extended the result to an asymptotic expansion
+    where the radial powers increase in steps of~$4$.
+\end{enumerate}
+
 \section{Thesis overview}
