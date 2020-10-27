@@ -375,7 +375,7 @@ satisfies the capillary equation%
 }
 \begin{equation}
   \del \dotp \frac{\del T}{\sqrt{1 + (\del T)^2}} =
-    \roundbr*{\frac{\densit \gravit}{\surften}} T + \const,
+    \roundbr*{\frac{\densit \gravit}{\surften}} T + \lambda,
   \label{eq:capillary}
 \end{equation}
 where $\densit$~is the difference in density
@@ -393,9 +393,10 @@ i.e.~$\densit \gravit / \surften > 0$.%
     finn-2002-some-properties-capillary-surfaces
   }.
 }
-The constant in~(\ref{eq:capillary}) is determined by a volume constraint
+The constant~$\lambda$ is determined by a volume constraint
 (or by the height at infinity when the volume of liquid is infinite),
-and may be removed by applying a suitable offset to~$T$.
-
+and may be removed by applying the offset~%
+  $T \ideq \offset{T} - \lambda \surften / (\densit \gravit)$
+and dropping \offsetmarks.
 
 \section{Thesis overview}
