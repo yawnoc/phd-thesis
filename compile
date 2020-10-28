@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Recompile from scratch
+
+git clean -Xf
+
+pdflatex thesis
+bibtex thesis
+pdflatex thesis
+pdflatex thesis
