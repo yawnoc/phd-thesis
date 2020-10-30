@@ -9,6 +9,7 @@
 %% The following modifications have been made:
 %% - Inserted this preamble
 %% - Added non-breaking thin space between author initials
+%% - Added newline before URL
 %% - Removed period after URL
 %% - Removed period after howpublished for @misc
 %% - Removed new-block between title and edition for @book
@@ -419,13 +420,13 @@ FUNCTION {format.url}
         { "" }
         {
           new.block
-          "\url{" url * "}" *
+          "\newline \url{" url * "}" *
         }
       if$
     }
     {
       new.block
-      "\doi{" doi * "}" *
+      "\newline \doi{" doi * "}" *
     }
   if$
 }
