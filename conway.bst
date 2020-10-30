@@ -10,6 +10,7 @@
 %% - Inserted this preamble
 %% - Added non-breaking thin space between author initials
 %% - Removed period after URL
+%% - Removed period after howpublished for @misc
 %% - Removed new-block between title and edition for @book
 %% - Added new entry type @technote identical to @techreport
 %%   except printing "Technical Note" instead of "Technical Report"
@@ -1220,7 +1221,7 @@ FUNCTION {misc}
   format.title output
   howpublished new.block.checka
   howpublished "howpublished" bibinfo.check output
-  new.block
+  new.blocknoperiod
   institution "institution" bibinfo.warn output
   new.block
   format.url output
