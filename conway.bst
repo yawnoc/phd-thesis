@@ -86,6 +86,21 @@ ENTRY
   }
   {}
   { label }
+FUNCTION {not}
+{   { #0 }
+    { #1 }
+  if$
+}
+FUNCTION {and}
+{   'skip$
+    { pop$ #0 }
+  if$
+}
+FUNCTION {or}
+{   { pop$ #1 }
+    'skip$
+  if$
+}
 INTEGERS {
   output.state
   before.all
@@ -164,21 +179,6 @@ FUNCTION {date.block}
   new.block
 }
 
-FUNCTION {not}
-{   { #0 }
-    { #1 }
-  if$
-}
-FUNCTION {and}
-{   'skip$
-    { pop$ #0 }
-  if$
-}
-FUNCTION {or}
-{   { pop$ #1 }
-    'skip$
-  if$
-}
 FUNCTION {new.block.checka}
 { empty$
     'skip$
