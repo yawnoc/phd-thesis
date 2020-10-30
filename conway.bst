@@ -9,6 +9,7 @@
 %% The following modifications have been made:
 %% - Inserted this preamble
 %% - Added non-breaking thin space between author initials
+%% - Removed period after URL
 %% - Removed new-block between title and edition for @book
 %% - Added new entry type @technote identical to @techreport
 %%   except printing "Technical Note" instead of "Technical Report"
@@ -107,12 +108,14 @@ INTEGERS {
   mid.sentence
   after.sentence
   after.block
+  after.blocknoperiod
 }
 FUNCTION {init.state.consts}
 { #0 'before.all :=
   #1 'mid.sentence :=
   #2 'after.sentence :=
   #3 'after.block :=
+  #4 'after.blocknoperiod :=
 }
 STRINGS { s t}
 FUNCTION {output.nonnull}
@@ -120,7 +123,14 @@ FUNCTION {output.nonnull}
   output.state mid.sentence =
     { ", " * write$ }
     { output.state after.block =
-        { add.period$ write$
+      output.state after.blocknoperiod =
+      or
+        {
+          output.state after.blocknoperiod =
+            'skip$
+            { add.period$ }
+          if$
+          write$
           newline$
           "\newblock " write$
         }
@@ -149,7 +159,11 @@ FUNCTION {output.check}
   if$
 }
 FUNCTION {fin.entry}
-{ add.period$
+{
+  output.state after.blocknoperiod =
+    'skip$
+    { add.period$ }
+  if$
   write$
   newline$
 }
@@ -158,6 +172,12 @@ FUNCTION {new.block}
 { output.state before.all =
     'skip$
     { after.block 'output.state := }
+  if$
+}
+FUNCTION {new.blocknoperiod}
+{ output.state before.all =
+    'skip$
+    { after.blocknoperiod 'output.state := }
   if$
 }
 FUNCTION {new.sentence}
@@ -987,7 +1007,7 @@ FUNCTION {article}
   if$
   new.block
   format.url output
-  new.block
+  new.blocknoperiod
   format.note output
   fin.entry
 }
@@ -1021,7 +1041,7 @@ FUNCTION {book}
   if$
   new.block
   format.url output
-  new.block
+  new.blocknoperiod
   format.note output
   fin.entry
 }
@@ -1036,7 +1056,7 @@ FUNCTION {booklet}
   address "address" bibinfo.check output
   new.block
   format.url output
-  new.block
+  new.blocknoperiod
   format.note output
   fin.entry
 }
@@ -1074,7 +1094,7 @@ FUNCTION {inbook}
   if$
   new.block
   format.url output
-  new.block
+  new.blocknoperiod
   format.note output
   fin.entry
 }
@@ -1101,7 +1121,7 @@ FUNCTION {incollection}
   if$
   new.block
   format.url output
-  new.block
+  new.blocknoperiod
   format.note output
   fin.entry
 }
@@ -1131,7 +1151,7 @@ FUNCTION {inproceedings}
   if$
   new.block
   format.url output
-  new.block
+  new.blocknoperiod
   format.note output
   fin.entry
 }
@@ -1169,7 +1189,7 @@ FUNCTION {manual}
   format.edition output
   new.block
   format.url output
-  new.block
+  new.blocknoperiod
   format.note output
   fin.entry
 }
@@ -1187,7 +1207,7 @@ FUNCTION {mastersthesis}
   address "address" bibinfo.check output
   new.block
   format.url output
-  new.block
+  new.blocknoperiod
   format.note output
   fin.entry
 }
@@ -1204,7 +1224,7 @@ FUNCTION {misc}
   institution "institution" bibinfo.warn output
   new.block
   format.url output
-  new.block
+  new.blocknoperiod
   format.note output
   fin.entry
   empty.misc.check
@@ -1222,7 +1242,7 @@ FUNCTION {phdthesis}
   address "address" bibinfo.check output
   new.block
   format.url output
-  new.block
+  new.blocknoperiod
   format.note output
   fin.entry
 }
@@ -1262,7 +1282,7 @@ FUNCTION {proceedings}
   if$
   new.block
   format.url output
-  new.block
+  new.blocknoperiod
   format.note output
   fin.entry
 }
@@ -1280,7 +1300,7 @@ FUNCTION {technote}
   address "address" bibinfo.check output
   new.block
   format.url output
-  new.block
+  new.blocknoperiod
   format.note output
   fin.entry
 }
@@ -1298,7 +1318,7 @@ FUNCTION {techreport}
   address "address" bibinfo.check output
   new.block
   format.url output
-  new.block
+  new.blocknoperiod
   format.note output
   fin.entry
 }
@@ -1311,7 +1331,7 @@ FUNCTION {unpublished}
   format.title "title" output.check
   new.block
   format.url output
-  new.block
+  new.blocknoperiod
   format.note "note" output.check
   fin.entry
 }
