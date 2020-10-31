@@ -15,6 +15,8 @@
 %% - Removed new-block between title and edition for @book
 %% - Added new entry type @technote identical to @techreport
 %%   but printing "Technical Note" instead of "Technical Report"
+%% - Added new entry type @honoursthesis identical to @phdthesis
+%%   but printing "Honours thesis" instead of "Ph.D. thesis"
 %% - Made DOI override URL
 %% - Formatted DOI according to \doi
 %% - Changed space between volume & number to non-breaking thin
@@ -311,6 +313,9 @@ FUNCTION {bbl.mthesis}
 
 FUNCTION {bbl.phdthesis}
 { "Ph.D. thesis" }
+
+FUNCTION {bbl.honsthesis}
+{ "Honours thesis" }
 
 MACRO {jan} {"January"}
 
@@ -1247,6 +1252,23 @@ FUNCTION {phdthesis}
   "title" output.check
   new.block
   bbl.phdthesis format.thesis.type output.nonnull
+  school "school" bibinfo.warn output
+  address "address" bibinfo.check output
+  new.block
+  format.url output
+  new.block
+  format.note output
+  fin.entry
+}
+FUNCTION {honoursthesis}
+{ output.bibitem
+  format.authors "author" output.check
+  format.date "year" output.check
+  date.block
+  format.btitle
+  "title" output.check
+  new.block
+  bbl.honsthesis format.thesis.type output.nonnull
   school "school" bibinfo.warn output
   address "address" bibinfo.check output
   new.block
