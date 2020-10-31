@@ -11,6 +11,7 @@
 %% - Added non-breaking thin space between author initials
 %% - Added newline before URL
 %% - Suppressed period after URL
+%% - Suppressed period after howpublished for @misc
 %% - Removed new-block between title and edition for @book
 %% - Added new entry type @technote identical to @techreport
 %%   except printing "Technical Note" instead of "Technical Report"
@@ -1224,6 +1225,10 @@ FUNCTION {misc}
   format.title output
   howpublished new.block.checka
   howpublished "howpublished" bibinfo.check output
+  howpublished missing$
+    'skip$
+    { #1 'suppress.current.period := }
+  if$
   new.block
   institution "institution" bibinfo.warn output
   new.block
