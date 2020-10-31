@@ -9,6 +9,7 @@
 %% The following modifications have been made:
 %% - Inserted this preamble
 %% - Added non-breaking thin space between author initials
+%% - Suppressed period after URL
 %% - Removed new-block between title and edition for @book
 %% - Added new entry type @technote identical to @techreport
 %%   except printing "Technical Note" instead of "Technical Report"
@@ -92,12 +93,16 @@ INTEGERS {
   mid.sentence
   after.sentence
   after.block
+  suppress.current.period
+  suppress.next.period
 }
 FUNCTION {init.state.consts}
 { #0 'before.all :=
   #1 'mid.sentence :=
   #2 'after.sentence :=
   #3 'after.block :=
+  #0 'suppress.current.period :=
+  #0 'suppress.next.period :=
 }
 STRINGS { s t}
 FUNCTION {output.nonnull}
@@ -105,9 +110,21 @@ FUNCTION {output.nonnull}
   output.state mid.sentence =
     { ", " * write$ }
     { output.state after.block =
-        { add.period$ write$
+        {
+          suppress.current.period
+            { #0 'suppress.current.period := }
+            { add.period$ }
+          if$
+          write$
           newline$
           "\newblock " write$
+          suppress.next.period
+            {
+              #1 'suppress.current.period :=
+              #0 'suppress.next.period :=
+            }
+            'skip$
+          if$
         }
         { output.state before.all =
             'write$
@@ -134,7 +151,11 @@ FUNCTION {output.check}
   if$
 }
 FUNCTION {fin.entry}
-{ add.period$
+{
+  suppress.current.period
+    { #0 'suppress.current.period := }
+    { add.period$ }
+  if$
   write$
   newline$
 }
@@ -399,12 +420,14 @@ FUNCTION {format.url}
         {
           new.block
           "\url{" url * "}" *
+          #1 'suppress.next.period :=
         }
       if$
     }
     {
       new.block
       "\doi{" doi * "}" *
+      #1 'suppress.next.period :=
     }
   if$
 }
