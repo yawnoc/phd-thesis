@@ -14,7 +14,7 @@
 %% - Suppressed period after howpublished for @misc
 %% - Removed new-block between title and edition for @book
 %% - Added new entry type @technote identical to @techreport
-%%   except printing "Technical Note" instead of "Technical Report"
+%%   but printing "Technical Note" instead of "Technical Report"
 %% - Made DOI override URL
 %% - Formatted DOI according to \doi
 %% - Changed space between volume & number to non-breaking thin
