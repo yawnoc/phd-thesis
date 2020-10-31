@@ -9,6 +9,7 @@
 %% The following modifications have been made:
 %% - Inserted this preamble
 %% - Added non-breaking thin space between author initials
+%% - Added newline before URL
 %% - Suppressed period after URL
 %% - Removed new-block between title and edition for @book
 %% - Added new entry type @technote identical to @techreport
@@ -419,14 +420,14 @@ FUNCTION {format.url}
         { "" }
         {
           new.block
-          "\url{" url * "}" *
+          "\newline \url{" url * "}" *
           #1 'suppress.next.period :=
         }
       if$
     }
     {
       new.block
-      "\doi{" doi * "}" *
+      "\newline \doi{" doi * "}" *
       #1 'suppress.next.period :=
     }
   if$
