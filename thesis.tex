@@ -68,8 +68,28 @@
 % Citations ordered by number with whitespace stripped for keys
 \usepackage{cite}
 
+% Suppress indentation after specific constructs
+\usepackage{noindentafter}
+
 % Symbols for footnotes
 \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+
+% Thematic break
+% --------
+% See <https://tex.stackexchange.com/a/204380>.
+\newcommand{\thematicbreak}{
+  {
+    \par
+    \addvspace{\baselineskip}
+    \centering
+    \textasteriskcentered{}
+    \textasteriskcentered{}
+    \textasteriskcentered{}
+    \par
+    \vspace{\baselineskip}
+  }
+  \NoIndentAfterThis
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Mathematical notation
