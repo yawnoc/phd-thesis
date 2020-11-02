@@ -2,10 +2,29 @@
 \label{ch:moderate}
 
 In this chapter
-we apply numerical boundary tracing to the capillary problem
-in a moderate convex wedge,
+we apply numerical boundary tracing to analyse corner rounding
+in a moderate convex capillary wedge,
 for which the wedge half-angle~$\alpha$ and the contact angle~$\gamma$
 satisfy the inequality~$\pi/2 - \gamma < \alpha < \pi/2$.
+Specifically, we take a numerical solution
+to the Laplace--Young equation~(\ref{eq:laplace-young}) in such a wedge
+and seek rounded corners along which
+the contact condition~(\ref{eq:contact-boundary-condition})
+remains satisfied.
+
+At this point an objection will rightfully be raised:
+given that a numerical solver is needed
+to generate the numerical wedge solution in the first place,
+why bother with boundary tracing at all?
+Indeed if boundary tracing can only produce
+one corner rounding per numerical wedge solution,
+we would be better off
+directly applying the numerical solver to a rounded wedge!
+This objection is addressed
+in Section~X, %TODO
+where a novel observation is made
+which enables multiple corner roundings to be produced by boundary tracing
+per numerical wedge solution.
 
 \thematicbreak
 
