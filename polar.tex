@@ -62,14 +62,14 @@ the radiation boundary condition~(\ref{eq:radiation-boundary-condition}).
 
 Let
 \begin{align}
-  \scaled{T} &\ideq T / \Theta, \label{eq:line-scaled-temperature} \\
-  \scaled{r} &\ideq r / \varrho, \label{eq:line-scaled-r}
+  T &\ideq \Theta \scaled{T}, \label{eq:line-temperature-scaling} \\
+  r &\ideq \varrho \scaled{r}, \label{eq:line-r-scaling}
 \end{align}
 with~$\Theta$ and~$\varrho$ to be chosen later.
 Noting that
 \begin{equation}
-  \scaleddel \ideq \varrho \del,
-  \label{eq:line-scaled-del}
+  \del \ideq \scaleddel / \varrho,
+  \label{eq:line-del-scaling}
 \end{equation}
 the radiation boundary condition~(\ref{eq:radiation-boundary-condition})
 and the known solution~(\ref{eq:line-laplace-solution})

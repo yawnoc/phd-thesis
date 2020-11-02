@@ -51,16 +51,16 @@ $\Theta$ and~$\lambda$.
 Here, scaling is used to remove these parameters
 and reduce the problem to its simplest form.
 
-Defining
+Let
 \begin{align}
-  \scaled{T} &\ideq T / \Theta, \label{eq:plane-scaled-temperature} \\
-  \scaled{x} &\ideq x / \lambda, \label{eq:plane-scaled-x} \\
-  \scaled{y} &\ideq y / \lambda, \label{eq:plane-scaled-y}
+  T &\ideq \Theta \scaled{T}, \label{eq:plane-temperature-scaling} \\
+  x &\ideq \lambda \scaled{x}, \label{eq:plane-x-scaling} \\
+  y &\ideq \lambda \scaled{y}. \label{eq:plane-y-scaling}
 \end{align}
-and noting that
+Noting that
 \begin{equation}
-  \scaleddel \ideq \lambda \del,
-  \label{eq:plane-scaled-del}
+  \del \ideq \scaleddel / \lambda,
+  \label{eq:plane-del-scaling}
 \end{equation}
 the radiation boundary condition~(\ref{eq:radiation-boundary-condition})
 and the known solution~(\ref{eq:plane-laplace-solution})
@@ -311,7 +311,7 @@ so that solutions with a greater value of~$B$ are steeper.
 
 First the physical parameters are scaled out to the extent possible.
 Using the same scalings as Section~\ref{sec:cartesian.plane.scaling},
-i.e.~(\ref{eq:plane-scaled-temperature}) through~(\ref{eq:plane-scaled-del}),
+i.e.~(\ref{eq:plane-temperature-scaling}) through~(\ref{eq:plane-del-scaling}),
 the radiation boundary condition~(\ref{eq:radiation-boundary-condition})
 and the known solution~(\ref{eq:cosine-laplace-solution})
 become
@@ -334,15 +334,14 @@ become
 where there are two free scales, $\Theta$~(temperature) and $\lambda$~(length).
 Since there are three unique dimensionless groups,
 one of the groups cannot be eliminated,
-and to keep the cosinusoidal terms as simple as possible,
-the obvious scales
+and to keep the cosinusoidal terms as simple as possible
+we choose the obvious scales
 \begin{align}
   \Theta &= T_0,
     \label{eq:cosine-temperature-scale} \\
-  \lambda &= L_0,
+  \lambda &= L_0.
     \label{eq:cosine-length-scale}
 \end{align}
-are chosen.
 Defining the dimensionless group
 \begin{equation}
   A = \frac{1}{c L_0 {T_0}^3}.

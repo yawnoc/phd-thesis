@@ -128,25 +128,25 @@ and clockwise around the negative singularity.
 \label{sec:bipolar.known.scaling}
 
 Since the length scale has already been fixed at~$a$,
-we define
+we let
 \begin{align}
-  \scaled{x} &\ideq x / a, \label{eq:bipolar-scaled-x} \\
-  \scaled{y} &\ideq y / a, \label{eq:bipolar-scaled-y}
+  x &\ideq a \scaled{x}, \label{eq:bipolar-x-scaling} \\
+  y &\ideq a \scaled{y}, \label{eq:bipolar-y-scaling}
 \end{align}
 so that
 \begin{equation}
-  \scaleddel \ideq a \del.
-  \label{eq:bipolar-scaled-del}
+  \del \ideq \scaleddel / a.
+  \label{eq:bipolar-del-scaling}
 \end{equation}
 For the bipolar scale factor~$\scalefac$ it is sensible to put
 \begin{equation}
-  \scaled{\scalefac} \ideq \scalefac / a.
-  \label{eq:bipolar-scaled-scale-factor}
+  \scalefac \ideq a \scaled{\scalefac}.
+  \label{eq:bipolar-scale-factor-scaling}
 \end{equation}
 Also putting
 \begin{equation}
-  \scaled{T} \ideq T / \Theta,
-  \label{eq:bipolar-scaled-temperature}
+  T \ideq \Theta \scaled{T},
+  \label{eq:bipolar-temperature-scaling}
 \end{equation}
 the radiation boundary condition~(\ref{eq:radiation-boundary-condition})
 and the known solution~(\ref{eq:bipolar-laplace-solution})
