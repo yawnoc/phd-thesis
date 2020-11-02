@@ -1,2 +1,44 @@
 \chapter{Moderate convex wedges}
 \label{ch:moderate}
+
+In this chapter
+we apply numerical boundary tracing to the capillary problem
+in a moderate convex wedge,
+for which the wedge half-angle~$\alpha$ and the contact angle~$\gamma$
+satisfy the inequality~$\pi/2 - \gamma < \alpha < \pi/2$.
+
+For simplicity we take the wedge to be of infinite extent.
+The only physical parameter which appears
+in the Laplace--Young equation~(\ref{eq:laplace-young})
+and in the boundary condition~(\ref{eq:contact-boundary-condition})
+is the capillary constant~$\capill$,
+which has the dimensions of reciprocal area;
+thus the sole length scale of the problem
+is the capillary length
+\begin{equation}
+  L_0 = \frac{1}{\sqrt{\kappa}}.
+  \label{eq:capillary-length}
+\end{equation}
+We therefore put
+\begin{align}
+  T &\ideq L_0 \scaled{T},  \label{eq:capillary-height-scaling} \\
+  x &\ideq L_0 \scaled{x}, \label{eq:capillary-x-scaling} \\
+  y &\ideq L_0 \scaled{y}, \label{eq:capillary-y-scaling}
+\end{align}
+noting that the derivative will transform according to
+\begin{equation}
+  \del \ideq \scaleddel / L_0.
+  \label{eq:capillary-del-scaling}
+\end{equation}
+Substituting and dropping \scalingmarks,
+we obtain the dimensionless Laplace--Young equation
+\begin{equation}
+  \del \dotp \frac{\del T}{\sqrt{1 + (\del T)^2}} =  T
+  \label{eq:scaled-laplace-young}
+\end{equation}
+within the scaled wedge,
+whilst on the boundary we obtain the dimensionless contact condition
+\begin{equation}
+  \normalvec \dotp \frac{\del T}{\sqrt{1 + (\del T)^2}} = \cos\gamma.
+  \label{eq:scaled-contact-boundary-condition}
+\end{equation}
