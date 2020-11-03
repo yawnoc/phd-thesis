@@ -82,8 +82,8 @@ the author's Honours thesis~\cite{li-2017-thesis-rounding-capillary-wedge};
 there the analysis was conducted in polar coordinates
 rather than the Cartesian coordinates used here.
 
-\subsection{Helmholtz BVP}
-\label{sec:moderate.linearised.helmholtz}
+\subsection{Known solution}
+\label{sec:moderate.linearised.known}
 
 In the problem under consideration
 the wedge is convex and right-angled, i.e.~$\alpha = \pi/4$,
@@ -105,11 +105,29 @@ the Helmholtz equation
 \end{equation}
 in the interior
 together with the constant-flux condition
-\begin{equation}
+\begin{important}{equation}
   \normalvec \dotp \del U = 1
   \label{eq:scaled-contact-linearised}
-\end{equation}
+\end{important}
 on the boundary.
+
+Whereas Anderson~\etal~\cite{anderson-2007-boundary-tracing-ii-applications}
+used Cartesian coordinates aligned with the wedge walls,
+here we align the positive $x$-axis so that it bisects the wedge
+(for a logical extension to arbitrary wedge angles).
+Thus the domain is the region~$\abs{y} < x$,
+while the boundary consists of the wedge walls~$y = \pm x$ (with~$x \ge 0$),
+as shown in Figure~X. % TODO
+
+As observed by Fowkes \&~Hood~\cite[equation~(16)]{
+  fowkes-1998-surface-tension-effects-wedge
+},
+the known solution to the Helmholtz BVP in this wedge is given by
+\begin{important}{equation}
+  U \ideq \exp \frac{-x+y}{\sqrt{2}} + \exp \frac{-x-y}{\sqrt{2}},
+  \label{eq:scaled-helmholtz-solution}
+\end{important}
+a superposition of capillary layers contributed by each wall.
 
 \section{Rounding of a corner}
 \label{sec:moderate.rounding}
