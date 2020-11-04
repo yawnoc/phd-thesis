@@ -183,6 +183,31 @@ with the non-viable domain~$\Phi < 0$ lying strictly to its right
 Note how the terminal curve approaches the wedge walls~$y = \pm x$
 as one moves away from the line of symmetry~$y = 0$.
 
+The known solution~(\ref{eq:scaled-helmholtz-solution})
+is insufficiently simple in form
+for the boundary tracing ODE to be analytically solvable
+under the coordinate parametrisations~$y = y (x)$ and~$x = x (y)$.
+We therefore use the system~(\ref{eq:tracing-ode-arc-length-parametrisation-u})
+and~(\ref{eq:tracing-ode-arc-length-parametrisation-v})
+for arc-length parametrisation,
+which in the present case reduces to
+\begin{important}{align}
+  \tder{x}{s} &= \frac{-Q \pm P \sqrt{\Phi}}{(\del U)^2},
+    \label{eq:helmholtz-tracing-ode-arc-length-parametrisation-x}
+    \\[\tallspace]
+  \tder{y}{s} &= \frac{+P \pm Q \sqrt{\Phi}}{(\del U)^2}.
+    \label{eq:helmholtz-tracing-ode-arc-length-parametrisation-y}
+\end{important}
+Figure~X % TODO
+shows the two branches of traced boundaries obtained
+by integrating forward from various points
+within the viable domain~(\ref{eq:helmholtz-viable-domain}).
+The upper and lower branches have positive and negative slopes respectively.
+As expected,
+boundary tracing recovers the original boundaries of the Helmholtz BVP\@;
+indeed the upper wedge wall~$y = +x$ is a traced boundary of the upper branch,
+while the lower wedge wall~$y = -x$ is one of the lower branch.
+
 \section{Rounding of a corner}
 \label{sec:moderate.rounding}
 
