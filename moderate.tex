@@ -228,6 +228,32 @@ which also admits the solution~(\ref{eq:scaled-helmholtz-solution})
 to the Helmholtz BVP~(\ref{eq:scaled-helmholtz})
 and~(\ref{eq:scaled-contact-linearised}).
 
+\subsection{Corner rounding}
+\label{sec:moderate.linearised.rounding}
+
+While the domains produced in Figure~X
+are most interesting,
+their boundaries contain sharp corners,
+incompatible with our goal of constructing a rounded corner.
+Recall that at any point \emph{strictly} within the viable domain,
+two traced boundaries will cross at a non-zero angle,
+forming a sharp corner if they are patched together.
+To avoid corners we must therefore only perform patching
+along the terminal curve, i.e.~at a terminal point.
+Moreover, patching must only be performed at a critical terminal point,
+for at an ordinary terminal point,
+the two local traced boundaries form a cusp with inconsistent boundary normal
+(see Section~\ref{sec:introduction.tracing}).
+From Figure~X
+we see that there is only one critical terminal point,
+located at the intersection between
+the terminal curve~(\ref{eq:helmholtz-terminal-curve})
+and the line of symmetry~$y = 0$,
+\begin{equation}
+  (x_0, y_0) = \roundbr*{\frac{\log 2}{\sqrt{2}}, \, 0}.
+  \label{eq:helmholtz-critical-terminal-point}
+\end{equation}
+
 \section{Nonlinear corner rounding}
 \label{sec:moderate.rounding}
 
