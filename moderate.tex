@@ -293,5 +293,19 @@ a different method is needed to produce multiple roundings of a corner.
 \section{Nonlinear corner rounding}
 \label{sec:moderate.rounding}
 
+Having seen linearised corner rounding
+for wedge half-angle~$\alpha = \pi/4$
+and contact angle~$\gamma \approx \pi/2$,
+we now consider the fully nonlinear Laplace--Young equation
+over the moderate-wedge interval~$\pi/2 - \gamma \le \alpha < \pi/2$,
+corresponding to convex capillary wedges whose corner height is bounded.
+Since there are no exact solutions to work with,
+the process consists of two parts:
+first computing a numerical solution
+to the BVP~(\ref{eq:scaled-laplace-young})
+\&~(\ref{eq:scaled-contact-boundary-condition})
+in a sharp-cornered wedge,
+then applying boundary tracing to seek a rounded corner.
+
 \section{Multiple roundings of a corner}
 \label{sec:moderate.multiple}
