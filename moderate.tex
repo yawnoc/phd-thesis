@@ -347,7 +347,17 @@ and in the case of~(\ref{eq:laplace-young-diffusion})
 the nonlinearity can be handled
 by simply setting the \code{"DiffusionCoefficients"} property
 to~$-K (\del T) \idenmat[2]$,
-where $\idenmat[2]$~is the $2 \times 2$ identity matrix.
+where $\idenmat[2]$~is the $2 \times 2$ identity matrix.%
+\footnote{
+  In~\cite{li-2017-thesis-rounding-capillary-wedge},
+  an older version of \software{Mathematica} was used
+  which could only solve linear BVPs.
+  The nonlinearity was instead handled
+  by a simple (but very slow) fixed-point iteration,
+  which linearised~(\ref{eq:laplace-young-diffusion})
+  \&~(\ref{eq:contact-boundary-condition-diffusion})
+  by using $K (\del T)$~evaluated from the previous step.
+}
 
 \section{Multiple roundings of a corner}
 \label{sec:moderate.multiple}
