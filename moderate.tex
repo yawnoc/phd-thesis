@@ -319,7 +319,7 @@ to assess the accuracy of asymptotic corner roundings
 here, corner rounding with a numerical solution
 is performed for its own sake.
 
-\subsection{Numerical wedge solution}
+\subsection{Numerical BVP solver}
 \label{sec:moderate.nonlinear.numerical}
 
 Numerical wedge solutions are computed
@@ -358,6 +358,81 @@ where $\idenmat[2]$~is the $2 \times 2$ identity matrix.%
   \&~(\ref{eq:contact-boundary-condition-diffusion})
   by using $K (\del T)$~evaluated from the previous step.
 }
+
+\subsubsection{Half-plane benchmarking}
+\label{sec:moderate.nonlinear.numerical.half-plane}
+
+Before computing wedge solutions,
+we benchmark the numerical solver
+against the known solution
+for liquid against a single wall
+(Figure~X). % TODO
+In this problem,
+the Laplace--Young equation~(\ref{eq:scaled-laplace-young})
+is to be satisfied in the region~$x > 0$ occupied by the liquid,
+while the contact condition~(\ref{eq:scaled-contact-boundary-condition})
+is to be satisifed along the wall~$x = 0$.
+The known solution,
+called the \term{half-plane solution}~%
+  \cite{anderson-2006-exact-solutions-laplace-young},
+takes on the implicit form
+\begin{equation}
+  x (T) \ideq
+    \cosh^{-1} \roundbr*{\frac{2}{T}} - \sqrt{4 - T^2}
+    - \cosh^{-1} \roundbr*{\frac{2}{h}} + \sqrt{4 - h^2},
+  \label{eq:half-plane-solution}
+\end{equation}
+where
+\begin{equation}
+  h = \sqrt{2 (1 - \sin\gamma)}
+  \label{eq:half-plane-height}
+\end{equation}
+is the height rise at the wall~$x = 0$.
+
+Following Scott~\etal~\cite{scott-2005-computation-capillary-laplace-young},
+we test the numerical solver in a $10 \times 1$~rectangle,
+namely $0 < x < 10$, $-1/2 < y < 1/2$.
+The contact condition~(\ref{eq:contact-boundary-condition-diffusion})
+is applied along the wall-edge~$x = 0$,
+while the natural Neumann condition
+\begin{equation}
+  \normalvec \dotp \squarebr[\bulkysize]{K (\del T) \del T} = 0
+  \label{eq:natural-boundary-condition-diffusion}
+\end{equation}
+(corresponding to a non-wetting contact angle of~$\pi/2$)
+is applied on the other three edges
+so that the resulting numerical solution will both be $y$-independent
+and vanish at infinity (approximated by~$x = 10$).
+
+The rectangle is to be discretised into an unstructured triangular mesh,
+and we use this opportunity to determine
+a suitable level of mesh refinement to use
+near the wall~$x = 0$, where the nonlinearity is significant.
+Rather than specify an explicit refinement
+(e.g.~a maximum cell area which increases with distance from the wall),
+we use a minimalistic refinement strategy with only one rule:
+the mesh vertices along~$x = 0$ must be spaced apart
+by no more than~$\ell$, a chosen fine length scale.
+Away from~$x = 0$ we simply let \software{Mathematica}'s
+default meshing algorithm do its job,
+resulting in a finite element mesh
+that changes rapidly from fine to coarse
+as one moves away from~$x = 0$
+(Figure~X). % TODO
+
+Smaller contact angles are more computationally demanding
+(as the slope near the wall is greater),
+so we use~$\gamma = \SI{1}{\degree}$ for our benchmarking test.
+For each chosen value of fine length scale~$\ell$,
+a numerical solution is computed in the corresponding mesh,
+with a computed wall height then obtained
+by evaluating at~$(x, y) = (0, 0)$.
+Table~X % TODO
+compares the computed heights
+with the theoretical height~(\ref{eq:half-plane-height})
+(which for~$\gamma = \SI{1}{\degree}$ evaluates to~$h = 1.4018$);
+to obtain an error of less than~$\SI{1}{\percent}$
+it suffices to use~$\ell = 0.005$.
 
 \section{Multiple roundings of a corner}
 \label{sec:moderate.multiple}
