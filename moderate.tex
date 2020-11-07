@@ -319,5 +319,35 @@ to assess the accuracy of asymptotic corner roundings
 here, corner rounding with a numerical solution
 is performed for its own sake.
 
+\subsection{Numerical wedge solution}
+\label{sec:moderate.nonlinear.numerical}
+
+Numerical wedge solutions are computed
+via finite elements in \software{Mathematica}.
+The capillary BVP~(\ref{eq:scaled-laplace-young})
+\&~(\ref{eq:scaled-contact-boundary-condition})
+may be viewed as the steady-state diffusion problem
+\begin{align}
+  \del \dotp \squarebr[\bulkysize]{K (\del T) \del T} &= T,
+    \label{eq:laplace-young-diffusion}
+    \\[\tallspace]
+  \normalvec \dotp \squarebr[\bulkysize]{K (\del T) \del T} &= \cos\gamma,
+  \label{eq:contact-boundary-condition-diffusion}
+\end{align}
+with interior sink~$T$, boundary supply~$\cos\gamma$,
+and nonlinear diffusion coefficient
+\begin{equation}
+  K (\del T) = \frac{1}{\sqrt{1 + (\del T)^2}}.
+  \label{eq:laplace-young-diffusion-coefficient}
+\end{equation}
+\software{Mathematica~12}'s \code{NDSolve\`{}FEM\`{}} package
+has built-in support for nonlinear BVPs,
+and in the case of~(\ref{eq:laplace-young-diffusion})
+\&~(\ref{eq:contact-boundary-condition-diffusion}),
+the nonlinearity can be handled
+by simply setting the \code{"DiffusionCoefficients"} property
+to~$-K (\del T) \idenmat[2]$,
+where $\idenmat[2]$~is the $2 \times 2$ identity matrix.
+
 \section{Multiple roundings of a corner}
 \label{sec:moderate.multiple}
