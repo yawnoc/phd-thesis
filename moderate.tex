@@ -465,6 +465,17 @@ with the theoretical height~(\ref{eq:half-plane-height})
 (which for~$\gamma = \SI{1}{\degree}$ evaluates to~$h = 1.4018$);
 to obtain an error of less than~$\SI{1}{\percent}$
 it suffices to use~$\ell = 0.005$.
+For this choice of fine length scale,
+our mesh consists of only 1769~elements.
+This is a full order of magnitude lower than
+Scott~\etal~\cite{scott-2005-computation-capillary-laplace-young}'s
+mesh of 18000~elements, refined adaptively
+with mesh-element density proportional to the solution slope,
+but which nevertheless only achieves an error of~$\SI{1.7}{\percent}$
+in the computed wall height.
+Clearly our minimalistic refinement strategy
+provides a much more economical discretisation,
+restricting the refinement to only where it is needed.
 
 \section{Multiple roundings of a corner}
 \label{sec:moderate.multiple}
