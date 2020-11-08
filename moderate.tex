@@ -486,5 +486,39 @@ with increasing~$x$;
 further small-scale refinement away from the wall~$x = 0$
 is both unnecessary and wasteful.
 
+\subsubsection{Wedge solutions}
+\label{sec:moderate.nonlinear.numerical.wedge}
+
+We now proceed to compute numerical solutions
+in a wedge with interior angle~$2 \alpha$.
+To approximate an infinite wedge,
+the domain is taken to be the sector
+$0 < r < 10$, $-\alpha < \phi < \alpha$
+in polar coordinates.
+The contact condition~(\ref{eq:contact-boundary-condition-diffusion})
+is only applied along the two wedge walls~$\phi = \pm \alpha$.
+To approximate a vanishing height rise at infinity,
+the non-wetting zero-flux condition~%
+  (\ref{eq:natural-boundary-condition-diffusion})
+is applied instead along the far arc~$r = 10$.
+
+Again the domain is discretised into an unstructured triangular mesh.
+Since the aim is to use the resulting numerical wedge solutions
+for boundary tracing,
+we need to be able to evaluate first derivatives accurately;
+therefore we require all mesh elements to have no more area than
+the equilateral triangle of side length~$0.2$.
+The minimalistic refinement strategy
+of Section~\ref{sec:moderate.nonlinear.numerical.half-plane}
+is applied along the two wedge walls~$\phi = \pm \alpha$.
+Since these walls are of length~$10$
+(much greater than the length~$1$
+of the refined wall for the half-plane benchmarking test),
+we choose a more frugal fine length scale~$\ell = 0.01$
+to avoid an excessive number of mesh elements.
+For an $\alpha = \SI{40}{\degree}$ wedge,
+the resulting mesh contains around~17000 elements
+(Figure~X).
+
 \section{Multiple roundings of a corner}
 \label{sec:moderate.multiple}
