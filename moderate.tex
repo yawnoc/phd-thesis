@@ -528,6 +528,70 @@ For an $\alpha = \SI{40}{\degree}$ wedge,
 the resulting mesh contains around~17000 elements
 (Figure~X).
 
+\begin{table}
+  \centering
+  \begin{tabular}{
+    S
+    S
+    S
+    S
+    S
+    S
+  }
+    \toprule
+      {$\gamma$}  &
+      {\makecell{Theoretical \\ height}}  &
+      {\makecell{Computed \\ height}}  &
+      {\makecell{Theoretical \\ slope}}  &
+      {\makecell{Computed \\ slope}}  &
+      {\makecell{Relative \\ error}} \\
+    \midrule
+      30 \si{\degree}  &
+        {$\infty$}  &  424.13   &
+        {$\infty$}  &  106911   &  {N/A} \\
+      35 \si{\degree}  &
+        {$\infty$}  &  335.814  &
+        {$\infty$}  &  84821.8  &  {N/A} \\
+      40 \si{\degree}  &
+        {$\infty$}  &  235.331  &
+        {$\infty$}  &  59586.4  &  {N/A} \\
+      45 \si{\degree}  &
+        {$\infty$}  &  106.041  &
+        {$\infty$}  &  26716.3  &  {N/A} \\
+      50 \si{\degree}  &
+        {finite}    &  2.03278  &
+        {$\infty$}  &  16.3441  &  {N/A} \\
+      55 \si{\degree}  &
+        {finite}    &  1.52879  &
+        1.97684     &  1.97583  &  -0.000509473 \\
+      60 \si{\degree}  &
+        {finite}    &  1.25476  &
+        1.23778     &  1.2376   &  -0.000145694 \\
+      65 \si{\degree}  &
+        {finite}    &  1.0199   &
+        0.872594    &  0.872555 &  -0.0000453895 \\
+      70 \si{\degree}  &
+        {finite}    &  0.80299  &
+        0.628435    &  0.628421 &  -0.0000225007 \\
+      75 \si{\degree}  &
+        {finite}    &  0.595947 &
+        0.439886    &  0.43988  &  -0.000012508 \\
+      80 \si{\degree}  &
+        {finite}    &  0.394646 &
+        0.280581    &  0.280579 &  -7.90934e-6 \\
+      85 \si{\degree}  &
+        {finite}    &  0.196587 &
+        0.136854    &  0.136853 &  -6.38643e-6 \\
+    \bottomrule
+  \end{tabular}
+  \caption{
+    Numerical results for corner height and corner slope
+    in an $\alpha = \SI{40}{\degree}$ wedge,
+    for various contact angles~$\gamma$.
+  }
+  \label{tab:convex-wedge-height-slope}
+\end{table}
+
 Numerical solutions may now be computed in the generated meshes
 for various choices of wedge half-angle~$\alpha$ and contact angle~$\gamma$.
 We recall that the height in the corner will be unbounded
@@ -538,7 +602,7 @@ Evidently infinite heights and slopes cannot be handled numerically,
 but nevertheless if we apply our numerical solver in such cases,
 we find that the singularities do manifest themselves
 in the form of large quantities.
-Table~X % TODO
+Table~\ref{tab:convex-wedge-height-slope}
 shows the computed corner height and corner slope
 in an $\alpha = \SI{40}{\degree}$ wedge;
 indeed large heights and slopes are observed
