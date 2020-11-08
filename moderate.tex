@@ -528,5 +528,23 @@ For an $\alpha = \SI{40}{\degree}$ wedge,
 the resulting mesh contains around~17000 elements
 (Figure~X).
 
+Numerical solutions may now be computed in the generated meshes
+for various choices of wedge half-angle~$\alpha$ and contact angle~$\gamma$.
+We recall that the height in the corner will be unbounded
+if and only if~$\alpha < \pi/2 - \gamma$ (the small wedge regime),
+and that the slope will be unbounded
+if and only if~$\alpha \le \pi/2 - \gamma$.
+Evidently infinite heights and slopes cannot be handled numerically,
+but nevertheless if we apply our numerical solver in such cases,
+we find that the singularities do manifest themselves
+in the form of large quantities.
+Table~X % TODO
+shows the computed corner height and corner slope
+in an $\alpha = \SI{40}{\degree}$ wedge;
+indeed large heights and slopes are observed
+as the contact angle~$\gamma$
+decreases past the critical angle~$\pi/2 - \alpha = \SI{50}{\degree}$.
+% TODO: remark about theoretical vs computed slopes
+
 \section{Multiple roundings of a corner}
 \label{sec:moderate.multiple}
