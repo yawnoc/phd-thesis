@@ -236,7 +236,7 @@ to the Helmholtz BVP~(\ref{eq:scaled-helmholtz})
 While the domains produced in Figure~X
 are most interesting,
 their boundaries contain sharp corners,
-incompatible with our goal of constructing a rounded corner.
+incompatible with our goal of constructing a rounding of the wedge.
 Recall that at any point \emph{strictly} within the viable domain,
 two traced boundaries will cross at a non-zero angle,
 forming a sharp corner if they are patched together.
@@ -679,13 +679,50 @@ for an analytical description of the wedge,
 the numerical wedge solutions are Cartesian-based.
 Staying in Cartesian coordinates,
 the components of the gradient vector
-are the derivatives
+are the first derivatives
 \begin{align}
   P &\ideq \pder{T}{x},
     \label{eq:moderate-gradient-x-component} \\[\tallspace]
-  Q &\ideq \pder{T}{y}.
+  Q &\ideq \pder{T}{y},
     \label{eq:moderate-gradient-y-component}
 \end{align}
+which may easily be evaluated from our finite element solutions.
+Since the work hereafter is purely numerical,
+we use the arc-length parametrisation%
+\footnote{
+  In~\cite{li-2017-thesis-rounding-capillary-wedge},
+  boundary tracing was performed in the coordinate parametrisation~$x = x (y)$.
+  While the traced boundaries for the current problem
+  indeed turn out to never be horizontal,
+  we follow best practice here
+  by making use of the arc-length parametrisation
+  derived in Section~\ref{sec:curvilinear.tracing.arc-length}.
+}~%
+  (\ref{eq:tracing-ode-arc-length-parametrisation-u})
+and~%
+  (\ref{eq:tracing-ode-arc-length-parametrisation-v}),
+which in Cartesian coordinates reduces to
+\begin{important}{align}
+  \tder{x}{s} &= \frac{-Q F \pm P \sqrt{\Phi}}{(\del T)^2},
+    \label{eq:moderate-tracing-ode-arc-length-parametrisation-x} \\[\tallspace]
+  \tder{y}{s} &= \frac{+P F \pm Q \sqrt{\Phi}}{(\del T)^2}.
+    \label{eq:moderate-tracing-ode-arc-length-parametrisation-y}
+\end{important}
+By numerically integrating forward from starting points
+within the viable domain~(\ref{eq:contact-viable-domain}),
+we obtain the traced boundaries shown
+in Figure~X. % TODO
+Qualititavely the situation is identical
+to the linearised case
+(compare Figure~X); % TODO
+there are two branches of traced boundaries
+forming a curvilinear grid which fills the viable domain,
+and the original wedge walls~$y = \pm x \tan\alpha$
+are themselves traced boundaries.
+As before, we can construct arbitrarily complicated domains
+by patching the curves together,
+ensuring consistent boundary orientation
+by identifying the left side of each curve as the exterior.
 
 \section{Multiple roundings of a corner}
 \label{sec:moderate.multiple}
