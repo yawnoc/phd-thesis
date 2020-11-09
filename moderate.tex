@@ -952,3 +952,63 @@ approaches the wall~$\xi = 0$.
 
 \section{Multiple corner roundings}
 \label{sec:moderate.multiple}
+
+We are now in the situation anticipated at the start of this chapter,
+where boundary tracing can only produce one rounding of the corner
+per numerical wedge solution.
+Unless we can conjure up multiple roundings of the corner
+from the same numerical solution,
+the objection raised earlier will yet stand:
+Why bother will boundary tracing at all?
+
+In contrast to the linear Helmholtz problem considered by
+Anderson~\etal~\cite{anderson-2007-boundary-tracing-ii-applications},
+the BVP~(\ref{eq:scaled-laplace-young})
+\&~(\ref{eq:scaled-contact-boundary-condition})
+is nonlinear,
+so we cannot employ the method of superposition.
+Indeed it appears quite impossible
+to obtain multiple roundings of the corner,
+until we make a rather novel observation:
+
+\subsection{Different contact angle}
+\label{sec:moderate.multiple.angle}
+
+Let us reinspect the contact condition~%
+  (\ref{eq:scaled-contact-boundary-condition}),
+which may be written as
+\begin{equation}
+  \normalvec \dotp \del T = \cos\gamma \sqrt{1 + (\del T)^2}.
+  \label{eq:scaled-contact-flux-boundary-condition-re}
+\end{equation}
+For the purposes of boundary tracing,
+we have hitherto taken~$T$ to be the known solution
+to the capillary BVP~(\ref{eq:scaled-laplace-young})
+\&~(\ref{eq:scaled-contact-boundary-condition}),
+in a wedge of half-angle~$\alpha$
+and contact angle~$\gamma$.
+Including the parameter dependence explicitly,
+the boundary condition is
+\begin{equation}
+  \normalvec \dotp \del T (x, y; \alpha, \gamma) =
+    \cos\gamma
+    \sqrt{1 + \squarebr[\bulkysize]{\del T (x, y; \alpha, \gamma)}^2}.
+  \label{eq:scaled-contact-flux-boundary-condition-with-parameters}
+\end{equation}
+However, we observe that the theory of boundary tracing
+only requires $T$~to be a known solution
+to the PDE~(\ref{eq:scaled-laplace-young});
+it does \emph{not} require $T$~to be a known solution to the full BVP\@,
+which is the PDE~(\ref{eq:scaled-laplace-young}) in conjuction with
+the boundary condition~(\ref{eq:scaled-contact-boundary-condition}).
+Therefore,
+given a known solution~$T (x, y; \alpha, \gamma)$,
+we may in fact apply boundary tracing
+using a \emph{different} contact angle~$\tr{\gamma}$
+in the boundary condition:
+\begin{important}{equation}
+  \normalvec \dotp \del T (x, y; \alpha, \gamma) =
+    \cos\tr{\gamma}
+    \sqrt{1 + \squarebr[\bulkysize]{\del T (x, y; \alpha, \gamma)}^2}.
+  \label{eq:scaled-contact-flux-boundary-condition-different-angle}
+\end{important}
