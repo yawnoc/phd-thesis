@@ -752,5 +752,203 @@ but the portions to the right form a \term{candidate boundary}
 which appears to round the corner
 (Figure~X). % TODO
 
+In~\cite{li-2017-thesis-rounding-capillary-wedge},
+it was shown (using a perturbation argument in polar coordinates)
+that this candidate boundary
+indeed approaches the original wedge walls asymptotically,
+making it the unique rounding of the corner.
+Here we extend this result by computing a rough estimate
+for the rate of approach.
+
+Due to symmetry in the $y$-direction,
+it suffices to consider the upper branch
+near the top wall~$y = +x \tan\alpha$.
+We introduce \term{wall coordinates}~$(\xi, \eta)$,
+where $\xi$~is the perpendicular distance from the top wall
+and $\eta$~increases parallel to it (away from the wedge corner),
+as shown in Figure~X. % TODO
+Since wall coordinates may be obtained
+by a rotation of the standard Cartesian coordinates,
+the scale factors for~$\xi$ and~$\eta$ are both unity.
+The upper branch of the boundary tracing ODE~%
+  (\ref{eq:tracing-ode-coordinate-parametrisation-v})
+becomes
+\begin{important}{equation}
+  \tder{\eta}{\xi} = \frac{P Q + F \sqrt{P^2 + Q^2 - F^2}}{P^2 - F^2},
+  \label{eq:moderate-tracing-ode-coordinate-parametrisation-eta}
+\end{important}
+where the components~$P$ and~$Q$ of the gradient vector are simply
+\begin{align}
+  P &\ideq \pder{T}{\xi},
+    \label{eq:moderate-gradient-xi-component} \\[\tallspace]
+  Q &\ideq \pder{T}{\eta}.
+    \label{eq:moderate-gradient-eta-component}
+\end{align}
+Since the top wall~$\xi = 0$ satisfies the contact condition~%
+  (\ref{eq:scaled-contact-flux-boundary-condition}),
+we have
+\begin{align*}
+  \eval[\textsize]{P}_{\xi=0}
+    &= \eval*{\pder{T}{\xi}}_{\xi=0} \\[\tallspace]
+    &= \eval[\textsize]{-\normalvec \dotp \del T}_{\xi=0} \\
+    &= \eval[\textsize]{-F}_{\xi=0}.
+      \yesnumber
+      \label{eq:moderate-gradient-xi-component-at-wall}
+\end{align*}
+For the tangential derivative
+\begin{equation}
+  \eval[\textsize]{Q}_{\xi=0} = \eval*{\pder{T}{\eta}}_{\xi=0}
+\end{equation}
+we have no equivalent statement;
+however all computations indicate that this quantity is negative
+(i.e.~the height rise along the wall decreases
+with distance from the wedge corner).
+
+To estimate the rate
+at which the rounding curve approaches the top wall~$\xi = 0$,
+we consider a small perturbation~$\xi = \vd\xi$ off the wall.
+For the numerator of the right hand side of~%
+  (\ref{eq:moderate-tracing-ode-coordinate-parametrisation-eta})
+we have
+\begin{align*}
+  \squarebr*{P Q + F \sqrt{P^2 + Q^2 - F^2}}_{\xi=\vd\xi}
+    &=
+      \squarebr[\bulkysize]{-FQ + F \abs{Q}}_{\xi=0}
+      + \order\roundbr*{\vd\xi}
+        \\[\tallspace]
+    &=
+      \squarebr[\bulkysize]{2 F \abs{Q}}_{\xi=0}
+      + \order\roundbr*{\vd\xi},
+      \yesnumber
+      \label{eq:moderate-numerator-perturbation-near-wall}
+\end{align*}
+and for the denominator we have
+\begin{align*}
+  \squarebr*{P^2 - F^2}_{\xi=\vd\xi}
+    &=
+      \squarebr*{\pder{}{\xi} \roundbr[\dersize]{P^2 - F^2}}_{\xi=0}
+        \cdot
+      \vd\xi
+      + \order\roundbr*{\vd\xi^2}
+        \\[\tallspace]
+    &=
+      \squarebr*{
+        \pder{}{\xi} \roundbr*{
+          P^2 - \cos^2\gamma \squarebr[\bulkysize]{1 + P^2 + Q^2}
+        }
+      }_{\xi=0}
+        \cdot
+      \vd\xi
+      + \order\roundbr*{\vd\xi^2}
+        \\[\tallspace]
+    &=
+      \squarebr*{
+        \sin^2\gamma \cdot \pder{(P^2)}{\xi}
+          -
+        \cos^2\gamma \cdot \pder{(Q^2)}{\xi}
+      }_{\xi=0}
+        \cdot
+      \vd\xi
+      + \order\roundbr*{\vd\xi^2}
+        \\[\tallspace]
+    &=
+      \squarebr*{
+        2 \sin^2\gamma \cdot P \cdot \pder{P}{\xi}
+          -
+        2 \cos^2\gamma \cdot Q \cdot \pder{Q}{\xi}
+      }_{\xi=0}
+        \cdot
+      \vd\xi
+      + \order\roundbr*{\vd\xi^2}.
+      \yesnumber
+      \label{eq:moderate-denominator-perturbation-near-wall}
+\end{align*}
+Now Fowkes \&~Hood~\cite{fowkes-1998-surface-tension-effects-wedge} have shown
+that far from the corner but near the wall,
+i.e.~for large~$\eta$ but finite~$\xi$,
+the wedge solution~$T$ behaves
+like the half-plane solution~(\ref{eq:half-plane-solution})
+with $x$~replaced by~$\xi$,
+i.e.
+\begin{equation}
+  \xi (T) \asy
+    \cosh^{-1} \roundbr*{\frac{2}{T}} - \sqrt{4 - T^2}
+    - \cosh^{-1} \roundbr*{\frac{2}{h}} + \sqrt{4 - h^2},
+    \label{eq:moderate-half-plane-solution-near-wall}
+\end{equation}
+where we recall that
+$h$~is the half-plane wall height~(\ref{eq:half-plane-height}).
+Expanding about~$T = h$, we obtain
+\begin{equation}
+  \xi (T) \asy
+    \frac{(T - h)}{-\cot\gamma}
+    + \frac{h (T - h)^2}{2 \cos^3\gamma}
+    + \order (T - h)^3,
+    \label{eq:moderate-half-plane-solution-near-wall-expansion}
+\end{equation}
+which inverts to give
+\begin{equation}
+  T (\xi) \asy
+    h - \cot\gamma \cdot \xi + \frac{h}{\sin^3\gamma} \cdot \frac{\xi^2}{2!}
+    + \order \roundbr*{\xi^3}.
+    \label{eq:moderate-half-plane-solution-near-wall-expansion-inverted}
+\end{equation}
+Reading off the coefficients, we have
+\begin{align}
+  \eval[\textsize]{-F}_{\xi=0}
+    = \eval[\textsize]{P}_{\xi=0}
+    = \eval*{\pder{T}{\xi}}_{\xi=0}
+    &\asy -\cot\gamma,
+      \label{eq:moderate-half-plane-solution-xi-derivative}
+      \\[\tallspace]
+  \eval*{\pder{P}{\xi}}_{\xi=0}
+    = \eval*{\pder[2]{T}{\xi}}_{\xi=0}
+    &\asy \frac{h}{\sin^3\gamma},
+      \label{eq:moderate-half-plane-solution-xi-second-derivative}
+      \\[\tallspace]
+  \eval[\textsize]{Q}_{\xi=0}
+    = \eval*{\pder{T}{\eta}}_{\xi=0}
+    &\asy 0,
+      \label{eq:moderate-half-plane-solution-eta-derivative}
+      \\[\tallspace]
+  \eval*{\pder{Q}{\xi}}_{\xi=0}
+    = \eval*{\frac{\pd^2 T}{\pd\xi \pd\eta}}_{\xi=0}
+    &\asy 0,
+      \label{eq:moderate-half-plane-solution-mixed-derivative}
+\end{align}
+and to first order,
+(\ref{eq:moderate-numerator-perturbation-near-wall})
+and~(\ref{eq:moderate-denominator-perturbation-near-wall})
+reduce to
+\begin{align}
+  \squarebr*{P Q + F \sqrt{P^2 + Q^2 - F^2}}_{\xi=\vd\xi} &\asy
+    \squarebr*{2 \cot\gamma \cdot \abs*{\pder{T}{\eta}}}_{\xi=0}
+    + \order\roundbr*{\vd\xi},
+    \label{eq:moderate-numerator-perturbation-near-wall-reduced}
+    \\[\tallspace]
+  \squarebr*{P^2 - F^2}_{\xi=\vd\xi} &\asy
+    -2 \cot\gamma \cdot \frac{h}{\sin\gamma} \cdot \vd\xi
+    + \order\roundbr*{\vd\xi^2}.
+    \label{eq:moderate-denominator-perturbation-near-wall-reduced}
+\end{align}
+Therefore
+(\ref{eq:moderate-tracing-ode-coordinate-parametrisation-eta})~becomes
+\begin{equation}
+  \eval*{\tder{\eta}{\xi}}_{\xi=\vd\xi} \asy
+    \squarebr*{
+      -\frac{\sin\gamma}{h} \cdot \abs*{\pder{T}{\eta}}
+    }_{\xi=0}
+      \cdot \vd\xi
+    + \order\roundbr*{\vd\xi^2}
+    \label{eq:moderate-fraction-perturbation-near-wall-reduced}
+\end{equation}
+and we obtain the crude estimate
+\begin{equation}
+  \tder{\vd\xi}{\eta} \asy
+    -\frac{h}{\sin\gamma} \cdot \abs*{\pder{T}{\eta}}^{-1} \cdot \vd\xi
+\end{equation}
+for the rate at which the rounding curve
+approaches the wall~$\xi = 0$.
+
 \section{Multiple roundings of a corner}
 \label{sec:moderate.multiple}
