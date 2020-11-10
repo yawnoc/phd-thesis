@@ -1277,7 +1277,8 @@ A useful observation is that
 each of the non-bulging rounding curves is well approximated
 by the unique circular arc
 that both touches the wedge~$y = \pm \offset{x} \tan\alpha$
-and passes through the critical terminal point~$(\offset{x}_0, 0)$,
+and passes through the critical terminal point~%
+  $(\offset{x}, y) = (\offset{x}_0, 0)$,
 which is where the rounding curve meets the $\offset{x}$-axis.
 Explicitly, this well-approximating circular arc is given by
 \begin{equation}
@@ -1289,3 +1290,12 @@ whose radius~$R$ is given by
   R = \frac{\offset{x}_0 \sin\alpha}{1 - \sin\alpha}.
   \label{eq:moderate-well-approximating-rounding-radius}
 \end{equation}
+Thus, given any pair of parameters~$(\alpha, \tr{\gamma})$
+(for which there is no bulging),
+the multiple corner roundings corresponding to different values of~$\gamma$
+may be used to construct a table of rounding radii
+and their resultant height rises,
+with the latter obtained by simply
+evaluating the relevant known solution~$T (x, y; \alpha, \gamma)$
+at the corresponding critical terminal point~$(x, y) = (x_0, 0)$.
+An example is given in Table~X. % TODO
