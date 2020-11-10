@@ -1191,3 +1191,33 @@ would require solving $N$~separate BVPs
 (each consisting of a PDE plus boundary conditions),
 here we have solved $1$~BVP (in the original wedge)
 and $N$~ODEs (boundary tracing).
+
+\subsection{Effect of corner rounding on height rise}
+\label{sec:moderate.multiple.effect}
+
+While we have established that
+each numerical wedge solution~$T (x, y; \alpha, \gamma)$
+gives rise to a family of candidate boundaries
+for a tracing contact angle of~$\tr{\gamma} \ge \gamma$,
+it remains to be seen whether they are of practical use.
+
+Since physical applications fix~$\tr{\gamma}$ rather than~$\gamma$,
+we begin by grouping the generated candidate boundaries
+according to~$\tr{\gamma}$
+(Figure~X) % TODO
+rather than~$\gamma$
+(Figure~X). % TODO
+Despite the new grouping,
+the candidate boundaries still approach wedges
+with distinct perpendicular offsets~(\ref{eq:moderate-offset-distance}).
+Applying the horizontal offset
+\begin{equation}
+  \offset{x} = x - \frac{d (\gamma, \tr{\gamma})}{\sin\alpha}
+  \label{eq:moderate-offset-horizontal}
+\end{equation}
+to each candidate boundary
+ensures that they all approach
+the same wedge~$y = \pm \offset{x} \tan\alpha$,
+so that they may be compared as different roundings
+of the same corner
+(Figure~X). % TODO
