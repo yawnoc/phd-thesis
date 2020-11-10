@@ -1012,3 +1012,47 @@ in the boundary condition:
     \sqrt{1 + \squarebr[\bulkysize]{\del T (x, y; \alpha, \gamma)}^2}.
   \label{eq:scaled-contact-flux-boundary-condition-different-angle}
 \end{important}
+The resulting traced boundaries will be curves along which
+the contact condition is satisfied
+for the \term{tracing contact angle}~$\tr{\gamma}$,
+rather than the original contact angle~$\gamma$.
+
+The procedure is the same
+as that of Section~\ref{sec:moderate.nonlinear.tracing},
+only now we have flux function
+\begin{equation}
+  F \ideq
+    \cos\tr{\gamma}
+    \sqrt{1 + \squarebr[\bulkysize]{\del T (x, y; \alpha, \gamma)}^2},
+  \label{eq:contact-flux-function-different-angle}
+\end{equation}
+and viability function
+\begin{equation}
+  \Phi \ideq
+    \sin^2\tr{\gamma} \squarebr[\bulkysize]{\del T (x, y; \alpha, \gamma)}^2
+    - \cos^2\tr{\gamma}.
+    \label{eq:contact-viability-function-different-angle}
+\end{equation}
+With these modifications,
+the boundary tracing system of ODEs maintains the same form~%
+  (\ref{eq:moderate-tracing-ode-arc-length-parametrisation-x})
+\&~(\ref{eq:moderate-tracing-ode-arc-length-parametrisation-y})
+as before.
+Figure~X % TODO
+shows the traced boundaries obtained by numerical integration
+from starting points within the new viable domain
+\begin{equation}
+  \norm[\bulkysize]{\del T (x, y; \alpha, \gamma)} \ge \cot\tr{\gamma}.
+  \label{eq:contact-viable-domain-different-angle}
+\end{equation}
+In the $\tr{\gamma} < \gamma$~case,
+the viable domain does not extend to infinity,
+and roundings of the corner cannot be produced.
+Indeed away from the corner but near a wall,
+the known solution behaves like the half-plane solution
+with the original contact angle~$\gamma$;
+this solution does not have the steepness required
+for a tracing contact angle of~$\tr{\gamma}$,
+as asserted by~(\ref{eq:contact-viable-domain-different-angle}).
+
+Thus we restrict attention to the $\tr{\gamma} > \gamma$~case.
