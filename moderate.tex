@@ -1122,3 +1122,47 @@ Again the portions to the left are of no use
 for the purposes of corner rounding,
 but the portions to the right form a \term{candidate boundary}
 which extends to infinity.
+
+In contrast to the $\tr{\gamma} = \gamma$ case,
+the candidate boundary asymptotes
+not to the original wedge~$y = \pm x \tan\alpha$,
+but to a wedge offset from the original
+(Figure~X). % TODO
+To determine the offset distance,
+recall that away from the corner but near a wall,
+we have the half-plane approximation~%
+  (\ref{eq:moderate-half-plane-solution-near-wall}),
+which we repeat here:
+\begin{equation}
+  \xi (T) \asy
+    \cosh^{-1} \roundbr*{\frac{2}{T}} - \sqrt{4 - T^2}
+    - \cosh^{-1} \roundbr*{\frac{2}{h}} + \sqrt{4 - h^2}.
+    \label{eq:moderate-half-plane-solution-near-wall-repeat}
+\end{equation}
+Here, $\xi$~is the perpendicular distance from the wall ($\xi = 0$),
+and $h$~is the height rise~(\ref{eq:half-plane-height}) at the wall,
+i.e.
+\begin{equation}
+  h = \sqrt{2 (1 - \sin\gamma)},
+  \label{eq:half-plane-height-repeat}
+\end{equation}
+corresponding to the original contact angle~$\gamma$.
+For the tracing contact angle~$\tr{\gamma}$,
+we instead have the wall height
+\begin{equation}
+  \tr{h} = \sqrt{2 (1 - \sin\tr{\gamma})},
+  \label{eq:half-plane-height-different-angle}
+\end{equation}
+and we see that the candidate boundary approaches the offset wedge
+\begin{equation}
+  \xi = d (\gamma, \tr{\gamma}),
+  \label{eq:moderate-offset-wedge}
+\end{equation}
+where
+\begin{equation}
+  d (\gamma, \tr{\gamma}) \ideq
+    \cosh^{-1} \roundbr*{\frac{2}{\tr{h}}} - \sqrt{4 - {\tr{h}}^2}
+    - \cosh^{-1} \roundbr*{\frac{2}{h}} + \sqrt{4 - h^2}
+  \label{eq:moderate-offset-distance}
+\end{equation}
+is the offset distance.
