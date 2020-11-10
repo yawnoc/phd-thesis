@@ -1272,3 +1272,20 @@ Immediately we notice the following:
     and there is a much-welcomed improvement
     in the spread of the rounding curves.
 \end{enumerate}
+
+A useful observation is that
+each of the non-bulging rounding curves is well approximated
+by the unique circular arc
+that both touches the wedge~$y = \pm \offset{x} \tan\alpha$
+and passes through the critical terminal point~$(\offset{x}_0, 0)$,
+which is where the rounding curve meets the $\offset{x}$-axis.
+Explicitly, this well-approximating circular arc is given by
+\begin{equation}
+  \roundbr*{\offset{x} - \frac{R}{\sin\alpha}}^2 + y^2 = R^2,
+  \label{eq:moderate-well-approximating-rounding-circle}
+\end{equation}
+whose radius~$R$ is given by
+\begin{equation}
+  R = \frac{\offset{x}_0 \sin\alpha}{1 - \sin\alpha}.
+  \label{eq:moderate-well-approximating-rounding-radius}
+\end{equation}
