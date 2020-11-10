@@ -1166,3 +1166,27 @@ where
   \label{eq:moderate-offset-distance}
 \end{equation}
 is the offset distance.
+
+Thus, given a single numerical wedge solution~$T (x, y; \alpha, \gamma)$,
+boundary tracing may be used to generate a one-parameter family
+of smooth candidate boundaries,
+for corner rounding
+with a tracing contact angle of~$\tr{\gamma} \ge \gamma$
+(Figure~X).
+Admittedly, in a physical application
+it is the angle~$\tr{\gamma}$ which is prescribed
+(e.g.~for a given choice of wall material and liquid)
+rather than~$\gamma$;
+therefore one would still need to compute wedge solutions
+for multiple~$\gamma$
+in order to obtain multiple candidate boundaries
+for the given~$\tr{\gamma}$.
+However, since we are interested in
+all possible values of~$\tr{\gamma}$ simultaneously,
+the numerical boundary tracing procedure
+still has merit in terms of overall efficiency.
+Whereas a conventional analysis of $N$~corner roundings
+would require solving $N$~separate BVPs
+(each consisting of a PDE plus boundary conditions),
+here we have solved $1$~BVP (in the original wedge)
+and $N - 1$ first-order ODEs (boundary tracing).
