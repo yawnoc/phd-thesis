@@ -1055,4 +1055,56 @@ this solution does not have the steepness required
 for a tracing contact angle of~$\tr{\gamma}$,
 as asserted by~(\ref{eq:contact-viable-domain-different-angle}).
 
-Thus we restrict attention to the $\tr{\gamma} > \gamma$~case.
+Thus we restrict attention to the $\tr{\gamma} > \gamma$~case
+(Figure~X). % TODO
+Unlike the $\tr{\gamma} = \gamma$~case,
+the original wedge walls are not traced boundaries,
+since the original contact angle~$\gamma$
+(along the walls)
+differs from the tracing contact angle~$\tr{\gamma}$
+(along the traced boundaries).
+Briefly ignoring the borderline case~$\alpha = \pi/2 - \gamma$,
+the known solution near the corner takes on
+the locally planar form~(\ref{eq:moderate-wedge-asymptotic-solution}),
+or
+\begin{equation}
+  T \asy T_0 - \frac{x}{\sqrt{k^2 - 1}},
+  \label{eq:moderate-asymptotic-solution}
+\end{equation}
+where $k$~is given by~(\ref{eq:wedge-constant-k}),
+repeated here for convenience:
+\begin{equation}
+  k = \frac{\sin\alpha}{\cos\gamma}.
+  \label{eq:moderate-wedge-constant-k}
+\end{equation}
+Using the asymptotic form~(\ref{eq:moderate-asymptotic-solution}),
+the tracing ODE~(\ref{eq:tracing-ode-coordinate-parametrisation-v})
+reduces to
+\begin{equation}
+  \tder{y}{x} \asy
+    \pm \tan\squarebr*{
+      \sin^{-1}\roundbr*{
+        \frac{\cos\tr{\gamma}}{\cos\gamma} \sin\alpha
+      }
+    },
+  \label{eq:moderate-asymptotic-tracing-ode-different-angle}
+\end{equation}
+and therefore the two traced boundaries through the corner
+will form a curved wedge with \term{reduced half-angle}
+\begin{equation}
+  \tr{\alpha} =
+    \sin^{-1}\roundbr*{
+      \frac{\cos\tr{\gamma}}{\cos\gamma} \sin\alpha
+    }.
+  \label{eq:wedge-reduced-half-angle}
+\end{equation}
+Another way to see this is by observing that
+the slope of the planar form~(\ref{eq:moderate-asymptotic-solution})
+depends only on the parameter~$k$, (\ref{eq:moderate-wedge-constant-k}).
+For the original wedge and the traced (curved) wedge
+to admit the same locally planar solution~$T$,
+we must therefore have
+\begin{equation}
+  \frac{\sin\tr{\alpha}}{\cos\tr{\gamma}} = k = \frac{\sin\alpha}{\cos\gamma}.
+  \label{eq:moderate-wedge-constant-k-different-angle}
+\end{equation}
