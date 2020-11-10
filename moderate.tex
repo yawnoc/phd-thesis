@@ -1302,7 +1302,7 @@ An example is given in Table~X. % TODO
 By evaluating the relevant known solution
 along the entire length of each rounding curve,
 we may obtain a collection of height-rise profiles;
-in the case of Figure~X
+in the case of Figure~X % TODO
 we find that the amount of arching is roughly halved.
 Evidently the range of rounding radii
 which can be accounted for in this manner
@@ -1313,3 +1313,20 @@ one cannot predetermine the shape of the resulting traced boundaries.
 % TODO
 % For Conclusion, write something like "the very nature of boundary tracing
 % is that the shape of the resulting traced boundaries is the unknown".
+
+Finally, the results for rounding radius versus height rise
+can of course be compared
+to results obtained using a conventional approach,
+i.e.~by numerically solving the capillary BVP~%
+  (\ref{eq:laplace-young-diffusion})
+\&~(\ref{eq:contact-boundary-condition-diffusion})
+in circularly rounded wedges of varying rounding radii.
+Figure~X % TODO
+displays such a comparison
+for~$(\alpha, \tr{\gamma}) = (\SI{60}{\degree}, \SI{75}{\degree})$.
+The two approaches do not give exactly the same height rises
+because the corner roundings produced by boundary tracing
+are not perfectly circular.
+Nevertheless, boundary tracing is able to capture
+the overall trend in an infinite wedge:
+a greater rounding radius results in a smaller height rise.
