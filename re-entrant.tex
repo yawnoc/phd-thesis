@@ -4,6 +4,10 @@
 In this chapter
 boundary tracing is applied to re-entrant capillary wedges,
 i.e.~wedges with half-angle~$\alpha > \pi/2$.
+For simplicity we only consider infinite wedge domains;
+this rules out the asymmetric situations observed by
+Korevaar~\cite{korevaar-1980-capillary-re-entrant-corner}
+and by King~\etal~\cite{king-1999-laplace-young-near-corner}.
 We take a numerical solution to
 the scaled capillary BVP~(\ref{eq:scaled-laplace-young})
 \&~(\ref{eq:scaled-contact-boundary-condition})
@@ -40,6 +44,28 @@ Figure~X % TODO
 shows the resultant mesh of X~elements
   % TODO (and perhaps a footnote about elements increasing with alpha)
 for an $\alpha = \SI{135}{\degree}$~wedge.
+
+As before, we obtain numerical solutions in \software{Mathematica}
+by specifying the capillary BVP
+as the steady-state diffusion problem~(\ref{eq:laplace-young-diffusion})
+\&~(\ref{eq:contact-boundary-condition-diffusion}),
+with the non-wetting contact condition~%
+  (\ref{eq:natural-boundary-condition-diffusion})
+applied on the outer arc~$r = 10$
+to approximate a vanishing height rise at infinity.
+
+Having precluded asymmetry,
+the solution in the moderate re-entrant case~$\pi/2 < \alpha < \pi/2 + \gamma$
+has the locally planar form~%
+  (\ref{eq:moderate-wedge-asymptotic-solution}),
+and we can compare the theoretical and computed values
+for the slope in the corner,
+as in Table~X. % TODO
+The excellent agreement
+and strongly validates our numerical solver.
+% TODO
+% For \alpha = \pi/2 + \gamma, check against King et al. (46).
+% For \alpha > \pi/2 + \gamma, (43) (but note that A is undetermined).
 
 \section{Corner rounding}
 \label{sec:re-entrant.rounding}
