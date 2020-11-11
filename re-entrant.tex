@@ -24,6 +24,23 @@ for the sake of constructing smooth corner roundings.
 \section{Numerical wedge solutions}
 \label{sec:re-entrant.numerical}
 
+In this section we obtain numerical wedge solutions
+to the capillary BVP~(\ref{eq:scaled-laplace-young})
+\&~(\ref{eq:scaled-contact-boundary-condition}).
+Finite element meshes are constructed in an identical manner
+to Section~\ref{sec:moderate.nonlinear.numerical.wedge};
+the domain is taken to be a sector of radius~$10$,
+all mesh elements are required to have no more area
+than an equilateral triangle of side length~$0.2$,
+and we apply the minimalistic refinement strategy
+of Section~\ref{sec:moderate.nonlinear.numerical.half-plane}
+along the two wedge walls,
+using a fine length scale of~$0.01$.
+Figure~X % TODO
+shows the resultant mesh of X~elements
+  % TODO (and perhaps a footnote about elements increasing with alpha)
+for an $\alpha = \SI{135}{\degree}$~wedge.
+
 \section{Corner rounding}
 \label{sec:re-entrant.rounding}
 
