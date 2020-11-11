@@ -610,12 +610,34 @@ in an $\alpha = \SI{40}{\degree}$ wedge;
 indeed large heights and slopes are observed
 as the contact angle~$\gamma$
 decreases past the critical angle~$\pi/2 - \alpha = \SI{50}{\degree}$.
-In the cases where the corner slope is finite,
-the computed value is in good agreement with the theoretical value
+In the cases where both corner height and corner slope are finite,
+the computed value of slope is in good agreement with the theoretical value
 (given by the coefficient of~$r \cos\phi$
 in the asymptotic form~(\ref{eq:moderate-wedge-asymptotic-solution})),
 and we can be confident that the numerical solution
 accurately represents the true solution in an infinite wedge.
+
+In the borderline case~$\alpha = \pi/2 - \gamma$,
+where the corner height is finite but the slope is infinite,
+reservations about the validity of the numerical solutions near the corner
+are allayed by a comparison with the asymptotic result
+\begin{equation}
+  T \asy
+    T_0 - 2 \sqrt{\frac{x}{T_0}} + \frac{y^2}{4} \sqrt{\frac{T_0}{x}}
+  \label{eq:borderline-wedge-asymptotic-solution}
+\end{equation}
+obtained by King~\etal~\cite{king-1999-laplace-young-near-corner};
+indeed a good match is observed
+as in Figure~X. % TODO
+
+Thus, for the remainder of this chapter,
+we may confidently use the numerical solutions
+over the full interval~$\pi/2 - \gamma \le \alpha < \pi/2$
+of convex wedges with a bounded corner height.
+The small wedge case~$0 < \alpha < \pi/2 - \gamma$
+we defer to Chapter~X; % TODO
+in that case both the corner height and corner slope are unbounded,
+and a separate numerical treatment is required.
 
 \subsection{Boundary tracing}
 \label{sec:moderate.nonlinear.tracing}
@@ -623,15 +645,6 @@ accurately represents the true solution in an infinite wedge.
 Having obtained numerical solutions in sharp-cornered wedges,
 we now proceed to the boundary tracing part
 of the nonlinear corner rounding problem.
-Here we consider the full interval of wedges with a bounded corner height,
-$\pi/2 - \gamma \le \alpha < \pi/2$;
-this includes the borderline case~$\alpha = \pi/2 - \gamma$,
-which has an unbounded corner slope.
-The small wedge case~$0 < \alpha < \pi/2 - \gamma$
-(which has an unbounded corner height)
-requires a separate numerical treatment,
-and is deferred to Chapter~X. % TODO
-
 New boundaries are sought
 along which the constant-contact-angle condition~%
   (\ref{eq:scaled-contact-boundary-condition})
