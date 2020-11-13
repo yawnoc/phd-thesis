@@ -118,6 +118,30 @@ therefore the terminal curve
   \label{eq:contact-terminal curve-repeat_re-entrant}
 \end{equation}
 asymptotes to the wedges walls as one travels away from the wedge corner.
+The viable domain lies to the left of the terminal curve
+and hugs the wedge walls.
+
+Working in Cartesian coordinates as before,
+we have the derivatives
+\begin{align}
+  P &\ideq \pder{T}{x},
+    \label{eq:re-entrant-gradient-x-component} \\[\tallspace]
+  Q &\ideq \pder{T}{y}.
+    \label{eq:re-entrant-gradient-y-component}
+\end{align}
+Again the boundary tracing system of ODEs for arc-length parametrisation
+reduces to
+\begin{important}{align}
+  \tder{x}{s} &= \frac{-Q F \pm P \sqrt{\Phi}}{(\del T)^2},
+    \label{eq:re-entrant-tracing-ode-arc-length-parametrisation-x}
+    \\[\tallspace]
+  \tder{y}{s} &= \frac{+P F \pm Q \sqrt{\Phi}}{(\del T)^2},
+    \label{eq:re-entrant-tracing-ode-arc-length-parametrisation-y}
+\end{important}
+and we obtain traced boundaries
+(Figure~X) % TODO
+by numerical integration
+from starting points within the viable domain.
 
 \subsection{Different contact angle}
 \label{sec:re-entrant.rounding.angle}
