@@ -142,6 +142,37 @@ as in Figure~X % TODO
 by performing numerical integration
 from starting points within the viable domain.
 
+As in the convex-wedge case,
+the original wedge walls~$\phi = \pm\alpha$
+are themselves traced boundaries,
+but here a swapping of the two branches has occurred;
+the top wall~$\phi = +\alpha$ now belongs to the lower branch
+of~(\ref{eq:re-entrant-tracing-ode-arc-length-parametrisation-x})
+\&~(\ref{eq:re-entrant-tracing-ode-arc-length-parametrisation-y}),
+rather than the upper branch.
+The swapping of branches at~$\alpha = \pi/2$ may be seen
+by substituting the locally planar form~%
+  (\ref{eq:moderate-asymptotic-solution});
+without assuming either a convex or a re-entrant wedge,
+the boundary tracing system of ODEs reduces to
+\begin{align}
+  \tder{x}{s} &\asy \mp \abs{\cos\alpha},
+    \label{eq:planar-asymptotic-tracing-ode-arc-length-parametrisation-x}
+    \\[\tallspace]
+  \tder{y}{s} &= -\sin\alpha,
+    \label{eq:planar-asymptotic-tracing-ode-arc-length-parametrisation-y}
+\end{align}
+so that
+\begin{equation}
+  \tder{y}{x} \asy \frac{\pm\sin\alpha}{\abs{\cos\alpha}} =
+    \begin{cases}
+      \pm\tan\alpha, &\text{$\alpha < \pi/2$ (convex)} \\
+      \mp\tan\alpha, &\text{$\alpha > \pi/2$ (re-entrant)}
+    \end{cases}
+  \label{eq:planar-asymptotic-tracing-ode-coordinate-parametrisation-y}
+\end{equation}
+for traced boundaries near the corner.
+
 \subsection{Different contact angle}
 \label{sec:re-entrant.rounding.angle}
 
