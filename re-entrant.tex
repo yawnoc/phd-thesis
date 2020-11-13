@@ -83,6 +83,31 @@ where the contact angle for boundary tracing
 is the same as the contact angle~$\gamma$
 for the known numerical solution~$T$.
 
+Proceeding as in Section~\ref{sec:moderate.nonlinear.tracing},
+the contact condition~(\ref{eq:scaled-contact-boundary-condition})
+is rewritten as
+\begin{important}{equation}
+  \normalvec \dotp \del T = \cos\gamma \sqrt{1 + (\del T)^2},
+  \label{eq:scaled-contact-flux-boundary-condition-repeat_re-entrant}
+\end{important}
+and we again have flux function
+\begin{equation}
+  F \ideq \cos\gamma \sqrt{1 + (\del T)^2},
+  \label{eq:contact-flux-function-repeat_re-entrant}
+\end{equation}
+viability function
+\begin{equation}
+  \Phi \ideq \sin^2\gamma \, (\del T)^2 - \cos^2\gamma,
+  \label{eq:contact-viability-function-repeat_re-entrant}
+\end{equation}
+and viable domain
+\begin{equation}
+  \norm{\del T} \ge \cot\gamma.
+  \label{eq:contact-viable-domain-repeat_re-entrant}
+\end{equation}
+The non-viable domain is shown
+in Figure~X. % TODO
+
 \subsection{Different contact angle}
 \label{sec:re-entrant.rounding.angle}
 
