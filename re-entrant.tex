@@ -87,22 +87,22 @@ the contact condition~(\ref{eq:scaled-contact-boundary-condition})
 is rewritten as
 \begin{important}{equation}
   \normalvec \dotp \del T = \cos\gamma \sqrt{1 + (\del T)^2},
-  \label{eq:scaled-contact-flux-boundary-condition-repeat_re-entrant}
+  \label{eq:re-entrant-flux-boundary-condition}
 \end{important}
 and we again have flux function
 \begin{equation}
   F \ideq \cos\gamma \sqrt{1 + (\del T)^2},
-  \label{eq:contact-flux-function-repeat_re-entrant}
+  \label{eq:re-entrant-flux-function}
 \end{equation}
 viability function
 \begin{equation}
   \Phi \ideq \sin^2\gamma \, (\del T)^2 - \cos^2\gamma,
-  \label{eq:contact-viability-function-repeat_re-entrant}
+  \label{eq:re-entrant-viability-function}
 \end{equation}
 and viable domain
 \begin{equation}
   \norm{\del T} \ge \cot\gamma.
-  \label{eq:contact-viable-domain-repeat_re-entrant}
+  \label{eq:re-entrant-viable-domain}
 \end{equation}
 The non-viable domain is shown
 in Figure~X. % TODO
@@ -114,7 +114,7 @@ along the wall;
 therefore the terminal curve
 \begin{equation}
   \norm{\del T} = \cot\gamma
-  \label{eq:contact-terminal-curve-repeat_re-entrant}
+  \label{eq:re-entrant-terminal-curve}
 \end{equation}
 asymptotes to the wedges walls as one travels away from the wedge corner.
 The viable domain lies to the left of the terminal curve
@@ -180,7 +180,7 @@ by patching together the traced boundaries.
 As in Section~\ref{sec:moderate.nonlinear.tracing},
 corners are inevitably formed \emph{strictly} within the viable domain;
 therefore any smooth patching together must necessarily occur
-along the terminal curve~(\ref{eq:contact-terminal-curve-repeat_re-entrant}).
+along the terminal curve~(\ref{eq:re-entrant-terminal-curve}).
 Inspecting Figure~X, % TODO
 we see that almost all points along the terminal curve are ordinary,
 for which the two local traced boundaries form a cusp
@@ -246,22 +246,19 @@ The bleak outlook persists
 even when a different tracing contact angle~$\tr{\gamma}$ is used
 to the contact angle~$\gamma$ of the known solution.
 As in Section~\ref{sec:moderate.multiple.different},
-we replace the contact condition~%
-  (\ref{eq:scaled-contact-flux-boundary-condition-repeat_re-entrant})
+we replace the contact condition~(\ref{eq:re-entrant-flux-boundary-condition})
 with the more general~%
-  (\ref{eq:scaled-contact-flux-boundary-condition-different-angle}),
+  (\ref{eq:moderate-flux-boundary-condition-different-angle}),
 i.e.
 \begin{important}{equation}
   \normalvec \dotp \del T (x, y; \alpha, \gamma) =
     \cos\tr{\gamma}
     \sqrt{1 + \squarebr[\bulkysize]{\del T (x, y; \alpha, \gamma)}^2},
-  \label{eq:scaled-contact-flux-boundary-condition-different-angle%
-    -repeat_re-entrant
-  }
+  \label{eq:re-entrant-flux-boundary-condition-different-angle}
 \end{important}
-leading to flux function~(\ref{eq:contact-flux-function-different-angle}),
-viability function~(\ref{eq:contact-viability-function-different-angle}),
-and viable domain~(\ref{eq:contact-viable-domain-different-angle}).
+leading to flux function~(\ref{eq:moderate-flux-function-different-angle}),
+viability function~(\ref{eq:moderate-viability-function-different-angle}),
+and viable domain~(\ref{eq:moderate-viable-domain-different-angle}).
 
 For~$\tr{\gamma} < \gamma$
 (Figure~X), % TODO

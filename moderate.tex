@@ -655,14 +655,14 @@ holds.
 Rewriting this condition as
 \begin{important}{equation}
   \normalvec \dotp \del T = \cos\gamma \sqrt{1 + (\del T)^2}
-  \label{eq:scaled-contact-flux-boundary-condition}
+  \label{eq:moderate-flux-boundary-condition}
 \end{important}
 and comparing it to the generic boundary condition~%
   (\ref{eq:flux-boundary-condition}),
 it follows that the flux function is given by
 \begin{equation}
   F \ideq \cos\gamma \sqrt{1 + (\del T)^2}.
-  \label{eq:contact-flux-function}
+  \label{eq:moderate-flux-function}
 \end{equation}
 The viability function is therefore
 \begin{align*}
@@ -670,12 +670,12 @@ The viability function is therefore
   &\ideq (\del T)^2 - F^2 \\
   &\ideq \sin^2\gamma \, (\del T)^2 - \cos^2\gamma,
     \yesnumber
-    \label{eq:contact-viability-function}
+    \label{eq:moderate-viability-function}
 \end{align*}
 and the viable domain~$\Phi \ge 0$ can be written simply as
 \begin{equation}
   \norm{\del T} \ge \cot\gamma.
-  \label{eq:contact-viable-domain}
+  \label{eq:moderate-viable-domain}
 \end{equation}
 As a physical statement,
 this asserts that the sought-after traced boundaries
@@ -686,7 +686,7 @@ which meets a vertical wall with contact angle~$\gamma$.
 The terminal curve~$\Phi = 0$, or
 \begin{equation}
   \norm{\del T} = \cot\gamma,
-  \label{eq:contact-terminal-curve}
+  \label{eq:moderate-terminal-curve}
 \end{equation}
 is the curve along which the known solution has
 precisely the requisite steepness.
@@ -726,7 +726,7 @@ which in Cartesian coordinates reduces to
     \label{eq:moderate-tracing-ode-arc-length-parametrisation-y}
 \end{important}
 By numerically integrating forward from starting points
-within the viable domain~(\ref{eq:contact-viable-domain}),
+within the viable domain~(\ref{eq:moderate-viable-domain}),
 we obtain the traced boundaries shown
 in Figure~X. % TODO
 Qualititavely the situation is identical
@@ -752,7 +752,7 @@ for which~$y \ne 0$
 are ordinary as before.
 Only one critical terminal point~$(x, y) = (x_0, 0)$ exists,
 located at the intersection
-between the terminal curve~(\ref{eq:contact-terminal-curve})
+between the terminal curve~(\ref{eq:moderate-terminal-curve})
 and the line of symmetry~$y = 0$.
 Explicitly, $x = x_0$~is the unique solution to
 \begin{equation}
@@ -801,7 +801,7 @@ where the components~$P$ and~$Q$ of the gradient vector are simply
     \label{eq:moderate-gradient-eta-component}
 \end{align}
 Since the top wall~$\xi = 0$ satisfies the contact condition~%
-  (\ref{eq:scaled-contact-flux-boundary-condition}),
+  (\ref{eq:moderate-flux-boundary-condition}),
 we have
 \begin{align*}
   \eval[\textsize]{P}_{\xi=0}
@@ -987,7 +987,7 @@ Let us reinspect the contact condition~%
 which may be written as
 \begin{equation}
   \normalvec \dotp \del T = \cos\gamma \sqrt{1 + (\del T)^2}.
-  \label{eq:scaled-contact-flux-boundary-condition-re}
+  \label{eq:moderate-flux-boundary-condition-reinspect}
 \end{equation}
 For the purposes of boundary tracing,
 we have hitherto taken~$T$ to be the known solution
@@ -1001,7 +1001,7 @@ the boundary condition is
   \normalvec \dotp \del T (x, y; \alpha, \gamma) =
     \cos\gamma
     \sqrt{1 + \squarebr[\bulkysize]{\del T (x, y; \alpha, \gamma)}^2}.
-  \label{eq:scaled-contact-flux-boundary-condition-with-parameters}
+  \label{eq:moderate-flux-boundary-condition-with-parameters}
 \end{equation}
 However, we observe that the theory of boundary tracing
 only requires $T$~to be a known solution
@@ -1018,7 +1018,7 @@ in the boundary condition:
   \normalvec \dotp \del T (x, y; \alpha, \gamma) =
     \cos\tr{\gamma}
     \sqrt{1 + \squarebr[\bulkysize]{\del T (x, y; \alpha, \gamma)}^2}.
-  \label{eq:scaled-contact-flux-boundary-condition-different-angle}
+  \label{eq:moderate-flux-boundary-condition-different-angle}
 \end{important}
 The resulting traced boundaries will be curves along which
 the contact condition is satisfied
@@ -1032,14 +1032,14 @@ only now we have flux function
   F \ideq
     \cos\tr{\gamma}
     \sqrt{1 + \squarebr[\bulkysize]{\del T (x, y; \alpha, \gamma)}^2},
-  \label{eq:contact-flux-function-different-angle}
+  \label{eq:moderate-flux-function-different-angle}
 \end{equation}
 and viability function
 \begin{equation}
   \Phi \ideq
     \sin^2\tr{\gamma} \squarebr[\bulkysize]{\del T (x, y; \alpha, \gamma)}^2
     - \cos^2\tr{\gamma}.
-    \label{eq:contact-viability-function-different-angle}
+    \label{eq:moderate-viability-function-different-angle}
 \end{equation}
 With these modifications,
 the boundary tracing system of ODEs maintains the same form~%
@@ -1051,7 +1051,7 @@ shows the traced boundaries obtained by numerical integration
 from starting points within the new viable domain
 \begin{equation}
   \norm[\bulkysize]{\del T (x, y; \alpha, \gamma)} \ge \cot\tr{\gamma}.
-  \label{eq:contact-viable-domain-different-angle}
+  \label{eq:moderate-viable-domain-different-angle}
 \end{equation}
 In the $\tr{\gamma} < \gamma$~case,
 the viable domain does not extend to infinity,
@@ -1061,7 +1061,7 @@ the known solution behaves like the half-plane solution
 with the original contact angle~$\gamma$;
 this solution does not have the steepness required
 for a tracing contact angle of~$\tr{\gamma}$,
-as asserted by~(\ref{eq:contact-viable-domain-different-angle}).
+as asserted by~(\ref{eq:moderate-viable-domain-different-angle}).
 
 Thus we restrict attention to the $\tr{\gamma} > \gamma$~case
 (Figure~X). % TODO
@@ -1106,7 +1106,7 @@ will form a curved wedge with \term{reduced half-angle}
     \sin^{-1}\roundbr*{
       \frac{\cos\tr{\gamma}}{\cos\gamma} \sin\alpha
     }.
-  \label{eq:wedge-reduced-half-angle}
+  \label{eq:moderate-reduced-half-angle}
 \end{equation}
 Another way to see this is by observing that
 the slope of the planar form~(\ref{eq:moderate-asymptotic-solution})
@@ -1116,7 +1116,7 @@ to admit the same locally planar solution~$T$,
 we must therefore have
 \begin{equation}
   \frac{\sin\tr{\alpha}}{\cos\tr{\gamma}} = k = \frac{\sin\alpha}{\cos\gamma}.
-  \label{eq:moderate-wedge-constant-k-different-angle}
+  \label{eq:moderate-constant-k-different-angle}
 \end{equation}
 
 As in Section~\ref{sec:moderate.nonlinear.tracing},
