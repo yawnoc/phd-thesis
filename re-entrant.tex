@@ -240,7 +240,52 @@ are the original wedge walls themselves,
 and no new domains can be constructed.
 
 \subsection{Different contact angle}
-\label{sec:re-entrant.rounding.angle}
+\label{sec:re-entrant.rounding.different}
+
+The bleak outlook persists
+even when a different tracing contact angle~$\tr{\gamma}$ is used
+to the contact angle~$\gamma$ of the known solution.
+As in Section~\ref{sec:moderate.multiple.different},
+we replace the contact condition~%
+  (\ref{eq:scaled-contact-flux-boundary-condition-repeat_re-entrant})
+with the more general~%
+  (\ref{eq:scaled-contact-flux-boundary-condition-different-angle}),
+i.e.
+\begin{important}{equation}
+  \normalvec \dotp \del T (x, y; \alpha, \gamma) =
+    \cos\tr{\gamma}
+    \sqrt{1 + \squarebr[\bulkysize]{\del T (x, y; \alpha, \gamma)}^2},
+  \label{eq:scaled-contact-flux-boundary-condition-different-angle%
+    -repeat_re-entrant
+  }
+\end{important}
+leading to flux function~(\ref{eq:contact-flux-function-different-angle}),
+viability function~(\ref{eq:contact-viability-function-different-angle}),
+and viable domain~(\ref{eq:contact-viable-domain-different-angle}).
+
+For~$\tr{\gamma} < \gamma$
+(Figure~X), % TODO
+we again have a viable domain
+that does not extend to infinity,
+and a rounding of the corner cannot be produced
+from the traced boundaries.
+
+For~$\tr{\gamma} > \gamma$
+(Figure~X), % TODO
+as in Section~\ref{sec:moderate.multiple.different},
+the avoidance of corners leads us to
+a lone critical terminal point~$(x_0, 0)$
+at the intersection between the terminal curve
+and the line of symmetry~$y = 0$,
+with $x = x_0$~being the unique solution to
+\begin{equation}
+  \eval*{-\pder{T}{x}}_{y=0} = \cot\tr{\gamma}.
+  \label{eq:re-entrant-critical-terminal-point-different-angle}
+\end{equation}
+Unfortunately $(x_0, 0)$~is of elliptic type,
+as the local $T$-contour lies toward the non-viable side
+of the terminal curve (Figure~X),
+so we cannot construct a rounding of the corner.
 
 \section{Dip-coating}
 \label{sec:re-entrant.dip-coating}
