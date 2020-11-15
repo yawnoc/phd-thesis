@@ -592,6 +592,44 @@ and to avoid the infinite height rise of the small wedge regime
 and the infinite corner slope of the borderline case,
 we need~$\pi/2 - \varphi < \pi/2 - \tr{\gamma}$.
 
+Figure~X % TODO
+shows an example of a groove distribution
+which achieves the roughness profile~(\ref{eq:roughness-required}).
+The groove spacing is smaller (and the density higher) near the centre
+where more roughness is required.
+
+Our proposed method of grooves can be verified numerically.
+The region occupied by the liquid is discretised
+as in Figure~X % TODO
+using the minimalistic refinement strategy
+of Section~\ref{sec:moderate.nonlinear.numerical.half-plane},
+with fine length scale~$\ell = \sigma / 5$ % TODO
+along the grooved boundary
+to ensure that there is sufficient refinement near the grooves
+(which have width~$\sigma$).
+The capillary BVP~(\ref{eq:laplace-young-diffusion})
+\&~(\ref{eq:contact-boundary-condition-diffusion})
+(with contact angle~$\tr{\gamma}$ rather than~$\gamma$)
+is then solved.
+The resulting height-rise profiles are shown
+in Figure~X. % TODO
+Indeed the profiles are flat with height~(\ref{eq:re-entrant-tracing-contour})
+except at the grooves themselves;
+this is because each groove itself is a moderate wedge
+admitting a locally planar height rise.
+Therefore the height-rise profiles deviate from complete levelness
+in the form of spikes with height of order~$\sigma$ (the groove width).
+At this point is is only a matter of how small the grooves can be made.
+If infinitesimal grooves were possible
+then the deviations from the level height~(\ref{eq:re-entrant-tracing-contour})
+would be vanishingly small,
+but in practice the groove width is always non-zero,
+resulting in spikes with height rise of the same order.
+Yet also in practice,
+the wedge corner of an etched groove will not be perfectly sharp;
+thus in reality, the observed spikes would be strictly shorter
+than those in Figure~X. % TODO
+
 \section{Summary}
 \label{sec:re-entrant.summary}
 
