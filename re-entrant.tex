@@ -579,6 +579,18 @@ therefore the grooves should separated by the distance
   \lambda = \roundbr*{\frac{1 / {\cos\varphi} - \rho}{\rho - 1}} \sigma.
   \label{eq:regular-groove-spacing}
 \end{equation}
+Note that the groove angle~$\varphi$ cannot be arbitrarily small or large.
+Let $\rho_0$~be the maximum value
+of the required roughness~(\ref{eq:roughness-required})
+along the $T$-contour.
+At the lower end we require~$\varphi \ge \cos^{-1} (1 / \rho_0)$;
+we must (at the very least) be able to achieve the maximum required roughness
+if the grooves are packed at full density (i.e.~zero spacing, $\lambda = 0$).
+At the upper end we ought to have~$\varphi < \tr{\gamma}$;
+each groove is a wedge with half-angle~$\pi/2 - \varphi$,
+and to avoid the infinite height rise of the small wedge regime
+and the infinite corner slope of the borderline case,
+we need~$\pi/2 - \varphi < \pi/2 - \tr{\gamma}$.
 
 \section{Summary}
 \label{sec:re-entrant.summary}
