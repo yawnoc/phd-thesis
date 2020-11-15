@@ -439,6 +439,70 @@ obtained Wenzel's cosine result independently%
 and provided some numerical verification
 in the case of sinusoidal indentations.
 
+We repeat here the derivation of
+Anderson~\cite[Section~6.4.2]{anderson-2002-thesis-boundary-tracing-pdes},
+but adapted to the current context,
+in which we are approximating
+the~$T$-contour~(\ref{eq:re-entrant-tracing-contour})
+with a serrated path of traced boundaries
+as in Figure~X. % TODO
+Suppose the serrations are small enough
+that the $T$-contour and the serrations themselves
+may be regarded as straight
+(Figure~X). % TODO
+Since the serrated path is constructed from traced boundaries
+with a tracing contact angle of~$\tr{\gamma}$,
+we have
+\begin{equation}
+  \normalvec \dotp \frac{\del T}{\sqrt{1 + (\del T)^2}} = \cos\tr{\gamma}
+  \label{eq:re-entrant-contact-boundary-condition-serrated}
+\end{equation}
+along the serrated path.
+Now suppose that the known solution~$T$ can also be realised
+by replacing the serrated path with the $T$-contour
+and applying an effective contact angle of~$\gamma_\eff$.
+Writing~$\normalvec_\eff$ for the normal to the $T$-contour,
+we have
+\begin{equation}
+  \normalvec_\eff \dotp \frac{\del T}{\sqrt{1 + (\del T)^2}} = \cos\gamma_\eff
+  \label{eq:re-entrant-contact-boundary-condition-contour}
+\end{equation}
+along the $T$-contour.
+With $\theta$~denoting the angle between~$\normalvec$ and~$\del T$,%
+\footnote{
+  See the geometric interpretation~(\ref{eq:flux-boundary-condition-cosine})
+  of the generic flux boundary condition~(\ref{eq:flux-boundary-condition}).
+}
+(\ref{eq:re-entrant-contact-boundary-condition-serrated}) becomes
+\begin{equation}
+  \frac{\norm{\del T} \cos\theta}{\sqrt{1 + (\del T)^2}} = \cos\tr{\gamma},
+  \label{eq:re-entrant-contact-boundary-condition-serrated-simplified}
+\end{equation}
+and since $\normalvec_\eff$~is parallel to~$\del T$,
+(\ref{eq:re-entrant-contact-boundary-condition-contour}) becomes
+\begin{equation}
+  \frac{\norm{\del T}}{\sqrt{1 + (\del T)^2}} = \cos\gamma_\eff.
+  \label{eq:re-entrant-contact-boundary-condition-contour-simplified}
+\end{equation}
+Now from the geometry of Figure~X, we see that
+\begin{equation}
+  \frac{\textq{serrated path length}}{\textq{contour path length}}
+   = \frac{1}{\cos\theta},
+\end{equation}
+and since both boundaries represent vertical walls,
+this ratio is precisely Wenzel's roughness factor~(\ref{eq:wenzel-roughness}).
+Denoting the roughness factor by~$\rho$,
+and using~(\ref{eq:re-entrant-contact-boundary-condition-serrated-simplified})
+and~(\ref{eq:re-entrant-contact-boundary-condition-contour-simplified}),
+we therefore have
+\begin{important}{equation}
+  \rho = \frac{1}{\cos\theta} = \frac{\cos\gamma_\eff}{\cos\tr{\gamma}}
+\end{important}
+relating the roughness factor~$\rho$,
+the true contact angle~$\tr{\gamma}$ along the serrated boundary,
+and the effective contact angle~$\gamma_\eff$
+along the $T$-contour~(\ref{eq:re-entrant-tracing-contour}).
+
 \subsection{Indentations}
 \label{sec:re-entrant.dip-coating.indentations}
 
