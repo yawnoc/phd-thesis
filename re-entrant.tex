@@ -519,6 +519,67 @@ roughness reduces the effective value of contact angle to
 \subsection{Indentations}
 \label{sec:re-entrant.dip-coating.indentations}
 
+We have just seen that a $T$-contour can be approximated by a serrated path
+(patched together from portions of traced boundary),
+and that the small serrations thereof can be thought of as roughness.
+These theoretical results can now be applied to the dip-coating problem;
+we see that the desired flat coating profile can be achieved
+as follows:
+\begin{enumerate}
+  \item
+    Round the corner of the dipped object
+    in the shape of the $T$-contour~(\ref{eq:re-entrant-tracing-contour}).
+  \item
+  \label{itm:re-entrant.dip-coating.indentations.roughness}
+    Apply roughness consistent with a serrated path
+    constructed from traced boundaries.
+    From~(\ref{eq:re-entrant-contact-boundary-condition-serrated-simplified})
+    and the first equality in~(\ref{eq:roughness-cosine-ratio}),
+    we see that the required amount of roughness along the $T$-contour is
+    \begin{equation}
+      \rho = \frac{\norm{\del T}}{\cos\tr{\gamma} \sqrt{1 + (\del T)^2}}.
+      \label{eq:roughness-required}
+    \end{equation}
+    This is a function of position
+    (Figure~X); % TODO
+    greater roughness is required near the centre
+    to counteract the natural dip in the height-rise profile
+    for a rounded re-entrant corner.
+\end{enumerate}
+If, in Step~\ref{itm:re-entrant.dip-coating.indentations.roughness},
+roughness is applied \emph{precisely} according to the serrations
+mandated by boundary tracing,
+then the theory guarantees that
+the resulting height-rise profile will be \emph{exactly}
+that of the known solution~$T = T (x, y; \alpha, \gamma)$.
+
+In practice, irregular serrations are difficult and expensive to produce.
+The theory of Wenzel~\cite{wenzel-1936-resistance-solid-surfaces-wetting}
+and the computational work of Anderson~\cite[Section~6.4.5]%
+  {anderson-2002-thesis-boundary-tracing-pdes}
+suggest that the exact shape of the serrations does not matter
+as long as the resulting path has the same roughness factor.
+Therefore, a more practical way of achieving a flat coating profile
+is to etch regular grooves,
+with the spacing varied such that
+the resulting boundary has roughness profile~(\ref{eq:roughness-required}).
+For example, consider triangular grooves of constant width~$\sigma$
+making a constant angle~$\varphi$ with the $T$-contour,
+spaced apart by the variable length~$\lambda$
+as in Figure~X. % TODO
+The local ratio
+between the etched path length and the smooth path length
+is
+\begin{equation}
+  \rho = \frac{\sigma / \cos\varphi + \lambda}{\sigma + \lambda};
+  \label{eq:regular-groove-roughness}
+\end{equation}
+therefore the grooves should separated by the distance
+\begin{equation}
+  \lambda = \frac{1 / \cos\varphi - \rho}{\rho - 1}.
+  \label{eq:regular-groove-spacing}
+\end{equation}
+
 \section{Summary}
 \label{sec:re-entrant.summary}
 
