@@ -350,6 +350,28 @@ The physical effect is that of surface tension,
 a balance between the forces of cohesion (liquid--liquid attraction),
 adhesion (liquid--wall attraction), and gravity.
 
+\begin{figure}
+  \newcommand*{\subfigurewidth}{5cm}
+  \centering
+  \hspace*{\fill}
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent{dip_coating-ideal}{%
+      Ideal coating profile
+    }
+  \end{subfigure}
+    \hfill
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent{dip_coating-actual}{%
+      Actual coating profile
+    }
+  \end{subfigure}
+  \hspace*{\fill}
+  \caption{
+    Dip-coating a prism~\figurestyle{dark} in a liquid~\figurestyle{light}.
+  }
+  \label{fig:dip_coating}
+\end{figure}
+
 One practical application
 where surface tension plays an important role
 is industrial dip-coating.
@@ -360,7 +382,7 @@ King~\etal~\cite{king-1999-laplace-young-near-corner},
 a rectangular prism is dipped into a liquid to coat its bottom half;
 the end result is a coating layer
 that exhibits undesirable arching near the corners of the prism
-(Figure~X). % TODO
+(Figure~\ref{fig:dip_coating}).
 Fowkes \&~Hood~\cite{fowkes-1998-surface-tension-effects-wedge}
 have suggested corner rounding as a practical means of reducing arching,
 but note that numerical methods are likely required
@@ -592,7 +614,7 @@ for one wedge angle, various contact angles, and several rounding radii.
 We note that none of these works
 have analysed corner rounding for a re-entrant wedge
 (in particular $\alpha = 3\pi/2$ pertinent to the dip-coating scenario
-of Figure~X). % TODO
+of Figure~\ref{fig:dip_coating}).
 
 As for boundary tracing,
 Anderson~\etal~\cite{anderson-2007-boundary-tracing-ii-applications}
