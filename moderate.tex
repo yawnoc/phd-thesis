@@ -114,13 +114,29 @@ together with the constant-flux condition
 \end{important}
 on the boundary.
 
+\begin{figure}
+  \newcommand*{\solutionfigurewidth}{8cm}
+  \begin{minipage}[t]{0.95\textwidth - \solutionfigurewidth}
+    \centredfigurecontent[width=0.8\textwidth]{helmholtz-wedge-domain}{
+      Right-angled wedge domain.
+    }
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{\solutionfigurewidth}
+    \centredfigurecontent{helmholtz-wedge-solution}{
+      Known Helmholtz solution~(\ref{eq:scaled-helmholtz-solution})
+      in a right-angled wedge.
+    }
+  \end{minipage}
+\end{figure}
+
 Whereas Anderson~\etal~\cite{anderson-2007-boundary-tracing-ii-applications}
 used Cartesian coordinates aligned with the wedge walls,
 here we align the positive $x$-axis so that it bisects the wedge
 (for a logical extension to arbitrary wedge angles).
 Thus the domain is the region~$\abs{y} < x$,
 while the boundary consists of the wedge walls~$y = \pm x$ (with~$x \ge 0$),
-as shown in Figure~X. % TODO
+as shown in Figure~\ref{fig:helmholtz-wedge-domain}.
 
 As observed by Fowkes \&~Hood~\cite{fowkes-1998-surface-tension-effects-wedge},
 the known solution to the Helmholtz BVP in this wedge is given by
@@ -129,7 +145,7 @@ the known solution to the Helmholtz BVP in this wedge is given by
   \label{eq:scaled-helmholtz-solution}
 \end{important}
 a superposition of capillary layers contributed by each wall
-(Figure~X). % TODO
+(Figure~\ref{fig:helmholtz-wedge-solution})
 
 \subsection{Boundary tracing}
 \label{sec:moderate.linearised.tracing}
