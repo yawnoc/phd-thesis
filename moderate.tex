@@ -243,12 +243,21 @@ boundary tracing recovers the original boundaries of the Helmholtz BVP\@;
 indeed the upper wedge wall~$y = +x$ is a traced boundary of the upper branch,
 while the lower wedge wall~$y = -x$ is one of the lower branch.
 
+\begin{figure}
+  \centredfigurecontent[width=\textwidth]{%
+    helmholtz-traced-boundaries-patched%
+  }{
+    Domain boundaries~\figurestyle{thick black}
+    patched together using traced boundaries~\figurestyle{grey}.
+  }
+\end{figure}
+
 More interesting of course are the new boundaries obtained;
 by construction, these also are curves
 along which the boundary condition~(\ref{eq:scaled-contact-linearised}) holds.
 More complicated boundaries can be constructed
 by patching these curves together in almost arbitrary fashion
-(Figure~X); % TODO
+(Figure~\ref{fig:helmholtz-traced-boundaries-patched});
 the only restriction is that the boundary normal
 have consistent orientation.
 Since the flux in~(\ref{eq:scaled-contact-linearised}) is positive,
@@ -267,7 +276,7 @@ to the Helmholtz BVP~(\ref{eq:scaled-helmholtz})
 \label{sec:moderate.linearised.rounding}
 
 While the domains produced in
-Figure~X % TODO
+Figure~\ref{fig:helmholtz-traced-boundaries-patched}
 are most interesting,
 their boundaries contain sharp corners,
 incompatible with our goal of constructing a rounding of the wedge.
