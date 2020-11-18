@@ -196,9 +196,26 @@ is therefore given by
     \label{eq:helmholtz-terminal-curve}
 \end{equation}
 with the non-viable domain~$\Phi < 0$ lying strictly to its right
-(Figure~X). % TODO
+(Figure~\ref{fig:helmholtz-viable}).
 Note how the terminal curve approaches the wedge walls~$y = \pm x$
 as one moves away from the line of symmetry~$y = 0$.
+
+\begin{figure}
+  \begin{minipage}[t]{0.5\textwidth}
+    \centredfigurecontent[width=0.9\textwidth]{helmholtz-viable}{
+      Non-viable domain~$\Phi < 0$.
+    }
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.5\textwidth}
+    \centredfigurecontent[width=0.9\textwidth]{helmholtz-traced-boundaries}{
+      Traced boundaries obtained by integrating~%
+        (\ref{eq:helmholtz-tracing-ode-arc-length-parametrisation-x})
+      \&~%
+        (\ref{eq:helmholtz-tracing-ode-arc-length-parametrisation-y}).
+    }
+  \end{minipage}
+\end{figure}
 
 The known solution~(\ref{eq:scaled-helmholtz-solution})
 is insufficiently simple in form
@@ -215,7 +232,7 @@ which in the present case reduces to
   \tder{y}{s} &= \frac{+P \pm Q \sqrt{\Phi}}{(\del U)^2}.
     \label{eq:helmholtz-tracing-ode-arc-length-parametrisation-y}
 \end{important}
-Figure~X % TODO
+Figure~\ref{fig:helmholtz-traced-boundaries}
 shows the two branches of traced boundaries obtained
 by integrating forward from various points
 within the viable domain~(\ref{eq:helmholtz-viable-domain}).
