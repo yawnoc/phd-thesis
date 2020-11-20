@@ -301,14 +301,14 @@ and the line of symmetry~$y = 0$,
 The local $U$-contour lies on the viable side of the terminal curve;
 therefore the critical terminal point is of hyperbolic type,
 and two smooth traced boundaries pass through it
-(Figure~X). % TODO
+(Figure~\ref{fig:helmholtz-traced-boundaries-hyperbolic-both}).
 The portions to the left of the critical terminal point
 eventually collide (at a non-zero angle) with the wedge walls,
 so they do not form an acceptable rounding of the corner.
 However, the portions to the right
 can be shown to asymptotically approach the wedge walls;
-patching them together gives the unique corner rounding
-for this problem (Figure~X). % TODO
+patching them together gives the unique corner rounding for this problem
+(Figure~\ref{fig:helmholtz-traced-boundaries-hyperbolic-rounding}).
 We have therefore constructed a rounded-corner domain
 which also admits the known solution~(\ref{eq:scaled-helmholtz-solution})
 to the BVP~(\ref{eq:scaled-helmholtz})
@@ -327,6 +327,28 @@ Figure~X. % TODO
   }{
     $T$-contours which intersect the terminal curve~$\Phi = 0$.
   }
+\end{figure}
+
+\begin{figure}
+  \newcommand*{\subfigurewidth}{0.33\textwidth}
+  \centering
+  \hspace*{\fill}
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent{helmholtz-traced-boundaries-hyperbolic-both}{%
+      Two smooth boundaries
+    }
+  \end{subfigure}
+    \hfill
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent{helmholtz-traced-boundaries-hyperbolic-rounding}{%
+      Unique corner rounding
+    }
+  \end{subfigure}
+  \hspace*{\fill}
+  \caption{
+    Traced boundaries through the critical terminal point~$(x_0, 0)$.
+  }
+  \label{fig:helmholtz-traced-boundaries-hyperbolic}
 \end{figure}
 
 Of course the discovery of a single rounded corner
