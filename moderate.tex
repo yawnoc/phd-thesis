@@ -510,7 +510,26 @@ default meshing algorithm do its job,
 resulting in a finite element mesh
 that changes rapidly from fine to coarse
 as one moves away from~$x = 0$
-(Figure~X). % TODO
+(Figure~\ref{fig:half_plane-mesh}).
+
+\begin{figure}
+  \centering
+  \begin{subfigure}{0.5\textwidth}
+    \centredfigurecontent{half_plane-mesh-halves}{%
+      Full mesh
+    }
+  \end{subfigure}
+    \hfill
+  \begin{subfigure}{0.4\textwidth}
+    \centredfigurecontent{half_plane-mesh-detail}{%
+      Close-up of refinement
+    }
+  \end{subfigure}
+  \caption{
+    Half-plane finite element mesh with fine length scale~$\ell = 0.005$.
+  }
+  \label{fig:half_plane-mesh}
+\end{figure}
 
 \begin{table}
   \centering
