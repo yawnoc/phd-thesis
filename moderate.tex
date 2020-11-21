@@ -587,7 +587,7 @@ in the computed wall height.
 Clearly our minimalistic refinement strategy
 offers a much more economical discretisation
 by using a finer but much more localised refinement.
-Figure~X % TODO
+Figure~\ref{fig:half-plane-relative-error}
 shows that the relative error
 \begin{equation}
   \abs*{\frac{\textq{computed~$T$}}{\textq{exact~$T$}} - 1}
@@ -597,6 +597,15 @@ for our numerical solution already decreases very rapidly
 with increasing~$x$;
 further small-scale refinement away from the wall~$x = 0$
 is both unnecessary and wasteful.
+
+\begin{figure}
+  \centredfigurecontent[width=0.6\textwidth]{%
+    half-plane-relative-error%
+  }{
+    Relative error for the numerical half-plane solution,
+    computed in the mesh with fine length scale~$\ell = 0.005$.
+  }
+\end{figure}
 
 \subsubsection{Wedge solutions}
 \label{sec:moderate.nonlinear.numerical.wedge}
