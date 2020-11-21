@@ -98,6 +98,9 @@
 % General symbols ("\;" etc.)
 \usepackage{amsmath}
 
+% Blackboard bold (for matrices)
+\usepackage{bbm}
+
 % Paired delimiters ("\abs" etc.)
 \usepackage{mathtools}
 
@@ -224,7 +227,7 @@
 \renewcommand*{\vec}[1]{\boldsymbol{\mathbf{#1}}}
 
 % Matrices
-\newcommand*{\mat}[1]{\boldsymbol{\mathcal{#1}}}
+\newcommand*{\mat}[1]{\boldsymbol{\mathbbm{#1}}}
 
 % Bracketing
 % --------
@@ -456,7 +459,6 @@
 %   -> Domains
 
 % TODO list
-% + Choose a nice font for matrices
 % + Check acronym/abbreviation spacings: abbr.\@ ABC\@.
 % + Check display equation punctuation and enforce consistency
 % + Reduce spacing between figure content and caption
