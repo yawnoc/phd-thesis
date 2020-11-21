@@ -449,7 +449,7 @@ Before computing wedge solutions,
 we benchmark the numerical solver
 against the known solution
 for liquid against a single wall
-(Figure~X). % TODO
+(Figure~\ref{fig:half_plane-solution}).
 In this problem,
 the Laplace--Young equation~(\ref{eq:scaled-laplace-young})
 is to be satisfied in the region~$x > 0$ occupied by the liquid,
@@ -471,6 +471,15 @@ where
   \label{eq:half-plane-height}
 \end{equation}
 is the height rise at the wall~$x = 0$.
+
+\begin{figure}
+  \centredfigurecontent[width=0.63\textwidth]{%
+    half_plane-solution%
+  }{
+    Known exact half-plane solution~(\ref{eq:half-plane-solution})
+    for~$\gamma = \SI{30}{\degree}$.
+  }
+\end{figure}
 
 Following Scott~\etal~\cite{scott-2005-computation-capillary-laplace-young},
 we test our numerical solver in a $10 \times 1$~rectangle,
