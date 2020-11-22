@@ -769,7 +769,37 @@ obtained by King~\etal~\cite{king-1999-laplace-young-near-corner};
 here the corner height~$T_0$ is undetermined by the local analysis,
 but when the numerically computed corner height is used,
 indeed a good match is observed
-as in Figure~X. % TODO
+as in Figure~\ref{fig:wedge_acute-borderline-asymptotic-comparison}.
+
+\begin{figure}
+  \newcommand*{\subfigurewidth}{0.45\textwidth}
+  \centering
+  \hspace*{\fill}
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent{%
+      wedge_acute-borderline-asymptotic-comparison-symmetry%
+    }{%
+      Along line of symmetry~$y = 0$
+    }
+  \end{subfigure}
+    \hfill
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent{%
+      wedge_acute-borderline-asymptotic-comparison-wall%
+    }{%
+      Along wedge wall~$y = x \tan\alpha$
+    }
+  \end{subfigure}
+  \hspace*{\fill}
+  \caption{
+    Comparison between the numerical solution~\figurestyle{solid}
+    and the asymptotic result~%
+      (\ref{eq:borderline-wedge-asymptotic-solution})~\figurestyle{dashed},
+    for the borderline wedge~%
+      $(\alpha, \gamma) = (\SI{40}{\degree}, \SI{50}{\degree})$.
+  }
+  \label{fig:wedge_acute-borderline-asymptotic-comparison}
+\end{figure}
 
 Thus, for the remainder of this chapter,
 we may confidently use the numerical solutions
