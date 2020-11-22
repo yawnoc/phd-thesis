@@ -648,7 +648,26 @@ we choose a more frugal fine length scale~$\ell = 0.01$
 to avoid an excessive number of mesh elements.
 For an $\alpha = \SI{40}{\degree}$ wedge,
 the resulting mesh contains around~17000 elements
-(Figure~X). % TODO
+(Figure~\ref{fig:wedge_acute-mesh}).
+
+\begin{figure}
+  \centering
+  \begin{subfigure}[t]{0.67\textwidth}
+    \centredfigurecontent{wedge_acute-mesh-full}{%
+      Full mesh
+    }
+  \end{subfigure}
+    \hfill
+  \begin{subfigure}[t]{0.27\textwidth}
+    \centredfigurecontent{wedge_acute-mesh-detail}{%
+      Close-up of refinement
+    }
+  \end{subfigure}
+  \caption{
+    Finite element mesh for an $\alpha = \SI{40}{\degree}$ wedge.
+  }
+  \label{fig:wedge_acute-mesh}
+\end{figure}
 
 \begin{table}
   \centering
