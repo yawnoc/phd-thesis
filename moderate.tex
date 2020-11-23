@@ -924,10 +924,10 @@ which in Cartesian coordinates reduces to
 By numerically integrating forward from starting points
 within the viable domain~(\ref{eq:moderate-viable-domain}),
 we obtain the traced boundaries shown
-in Figure~X. % TODO
+in Figure~\ref{fig:wedge_acute-traced-boundaries}.
 Qualitatively the situation is identical
 to the linearised Helmholtz case
-(compare Figure~X); % TODO
+(compare Figure~\ref{fig:helmholtz-traced-boundaries});
 there are two branches of traced boundaries
 forming a curvilinear grid which fills the viable domain,
 and the original wedge walls~$y = \pm x \tan\alpha$
@@ -936,6 +936,19 @@ As before, we can construct arbitrarily complicated domains
 by patching the curves together,
 ensuring consistent boundary orientation
 by identifying the left side of each curve as the exterior.
+
+\begin{figure}
+  \centredfigurecontent[width=0.8\textwidth]{%
+    wedge_acute-traced-boundaries%
+  }{
+    Traced boundaries for~%
+      $(\alpha, \gamma) = (\SI{40}{\degree}, \SI{60}{\degree})$,
+    obtained by integrating~%
+      (\ref{eq:moderate-tracing-ode-arc-length-parametrisation-x})
+    \&~%
+      (\ref{eq:moderate-tracing-ode-arc-length-parametrisation-y}).
+  }
+\end{figure}
 
 A corner is formed by the two traced boundaries
 that pass through any point \emph{strictly} within the viable domain,
