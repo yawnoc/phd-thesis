@@ -698,14 +698,23 @@ if the first inflection of the corresponding candidate boundary
 occurs at abscissa~$x_\infl \ge \pi/2$.
 
 \begin{figure}
-  \centredfigurecontent[width=\textwidth]{%
-    cosine_simple-candidate-domains%
-  }{
+  \newcommand*{\legendtrimwidth}{1.5cm}
+  \centering
+  \begin{minipage}{0.6\textwidth}
+    \includegraphics[width=\textwidth]{cosine_simple-candidate-domains}
+  \end{minipage}
+  \begin{minipage}{0.4\textwidth-\legendtrimwidth}
+    \includegraphics[
+      width=\textwidth, trim={\legendtrimwidth} -50 0 0,
+    ]{cosine_simple-candidate-domains-legend}
+  \end{minipage}
+  \caption{
     Candidate domains marked out by a radiation boundary
     and the constant-temperature boundary~$x = \pi/2$,
     as $A$~increases.
     Points of inflection are shown for reference.
   }
+  \label{fig:cosine_simple-candidate-domains}
 \end{figure}
 
 The critical value~$A = A_\infl$
