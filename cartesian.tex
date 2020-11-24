@@ -1024,11 +1024,24 @@ whose finite elements package~\code{NDSolve\`{}FEM\`{}}
 has built-in capabilities for mesh generation and for solving nonlinear BVPs.
 
 \begin{figure}
-  \centredfigurecontent[width=\textwidth]{%
-    cosine-verification-domain-meshes%
-  }{
+  \newcommand*{\legendoffsetheight}{0.1\textwidth}
+  \centering
+  \includegraphics[height=0.6\textwidth]{cosine-verification-lens-domain}
+  \includegraphics[
+    width=0.16\textwidth,
+    trim=0 {-\legendoffsetheight} 0 0,
+  ]{cosine-verification-lens-mesh}
+  \hfill
+  \includegraphics[height=0.6\textwidth]{cosine-verification-asymmetric-domain}
+  \includegraphics[
+    width=0.11\textwidth,
+    trim=0 {-\legendoffsetheight} 0 0,
+  ]{cosine-verification-asymmetric-mesh}
+  \includegraphics[width=\textwidth]{cosine-verification-legend}
+  \caption{
     Selected domains and finite element meshes for numerical verification.
   }
+  \label{fig:cosine-verification-domain-meshes}
 \end{figure}
 
 Figure~\ref{fig:cosine-verification-domain-meshes}
