@@ -225,13 +225,15 @@ which can be produced in this manner.
 \end{figure}
 
 \begin{figure}
-  \centredfigurecontent[width=\textwidth]{%
-    plane-domains%
-  }{
+  \centering
+  \includegraphics[width=\textwidth]{plane-domains}
+  \includegraphics[width=\textwidth]{plane-domains-legend}
+  \caption{
     Five domains marked out by a radiation boundary
     and a constant-temperature boundary.
     The critical terminal curve~$x = 1$ is shown for reference.
   }
+  \label{fig:plane-domains}
 \end{figure}
 
 \subsection{Domain construction}
@@ -361,9 +363,11 @@ become
 \end{important}
 
 \begin{figure}
-  \centredfigurecontent[width=\textwidth]{%
-    cosine-physical%
-  }{
+  \centering
+  \includegraphics[width=\textwidth]{cosine-physical}
+  \includegraphics[width=\textwidth]{cosine-physical-arrow}
+  \includegraphics[width=\textwidth]{cosine-physical-legend}
+  \caption{
     Unphysical region~$T < 0$
     for the known solution~(\ref{eq:cosine-scaled-laplace-solution}),
     as $B$~increases.
@@ -371,6 +375,7 @@ become
     and the thick vertical line is~$x = \pi/2$,
     which is also the contour~$T = 1$.
   }
+  \label{fig:cosine-physical}
 \end{figure}
 
 \subsection{Physical region}
@@ -484,9 +489,11 @@ which is a terminal point
 by virtue of being an isolated root of the equation~$\Phi = 0$.
 
 \begin{figure}
-  \centredfigurecontent[width=\textwidth]{%
-    cosine_simple-physical-viable%
-  }{
+  \centering
+  \includegraphics[width=\textwidth]{cosine_simple-physical-viable}
+  \includegraphics[width=\textwidth]{cosine_simple-physical-viable-arrow}
+  \includegraphics[width=\textwidth]{cosine_simple-physical-viable-legend}
+  \caption{
     Non-viable domain~$\Phi < 0$
     for the known solution~(\ref{eq:cosine-simple-laplace-solution})
     and viability function~(\ref{eq:cosine-simple-viability-function}),
@@ -495,6 +502,7 @@ by virtue of being an isolated root of the equation~$\Phi = 0$.
     and the thick vertical line is~$x = \pi/2$,
     which is also the contour~$T = 1$.
   }
+  \label{fig:cosine_simple-physical-viable}
 \end{figure}
 
 \subsubsection{Boundary tracing}
@@ -530,7 +538,7 @@ it follows that the interior lies to the right of each boundary curve,
 with heat being lost by radiation to the left.
 
 \begin{figure}
-  \centredfigurecontent[width=0.45\textwidth]{%
+  \centredfigurecontent[width=0.42\textwidth]{%
     cosine_simple-traced-boundaries%
   }{
     Traced boundaries for~$A = 0.5$,
@@ -690,14 +698,21 @@ if the first inflection of the corresponding candidate boundary
 occurs at abscissa~$x_\infl \ge \pi/2$.
 
 \begin{figure}
-  \centredfigurecontent[width=\textwidth]{%
-    cosine_simple-candidate-domains%
-  }{
+  \newcommand*{\legendtrimwidth}{0.1\textwidth}
+  \newcommand*{\legendoffsetheight}{0.36\textwidth}
+  \centering
+  \includegraphics[width=0.6\textwidth]{cosine_simple-candidate-domains}
+  \includegraphics[
+    width={0.4\textwidth-\legendtrimwidth},
+    trim={\legendtrimwidth} {-\legendoffsetheight} 0 0,
+  ]{cosine_simple-candidate-domains-legend}
+  \caption{
     Candidate domains marked out by a radiation boundary
     and the constant-temperature boundary~$x = \pi/2$,
     as $A$~increases.
     Points of inflection are shown for reference.
   }
+  \label{fig:cosine_simple-candidate-domains}
 \end{figure}
 
 The critical value~$A = A_\infl$
@@ -773,11 +788,17 @@ and the behaviour of the viable domain is best understood
 by fixing~$A$ and varying~$B$.
 
 \begin{figure}
-  \centredfigurecontent[width=0.7\textwidth]{%
-    cosine_general-critical%
-  }{
+  \newcommand*{\legendoffsetheight}{0.1\textwidth}
+  \centering
+  \includegraphics[width=0.45\textwidth]{cosine_general-critical}
+  \includegraphics[
+    width=0.2\textwidth,
+    trim=0 {-\legendoffsetheight} 0 0,
+  ]{cosine_general-critical-legend}
+  \caption{
     Terminal points along the $x$-axis, as $B$~increases with $A$~fixed.
   }
+  \label{fig:cosine_general-critical}
 \end{figure}
 
 Of particular interest are the terminal points along the $x$-axis;
@@ -865,15 +886,18 @@ on both~$A$ and~$B$.
 Nevertheless, broad statements can be made.
 
 \begin{figure}
-  \centredfigurecontent[width=\textwidth]{%
-    cosine_general-physical-viable%
-  }{
+  \centering
+  \includegraphics[width=\textwidth]{cosine_general-physical-viable}
+  \includegraphics[width=\textwidth]{cosine_general-physical-viable-arrow}
+  \includegraphics[width=\textwidth]{cosine_general-physical-viable-legend}
+  \caption{
     Non-viable domain~$\Phi < 0$ and critical terminal points
     for the known solution~(\ref{eq:cosine-scaled-laplace-solution})
     and viability function~(\ref{eq:cosine-viability-function}),
     as $B$~increases with $A$~fixed.
     In each plot, the left edge is~$x = 0$ and the right edge is~$x = 2$.
   }
+  \label{fig:cosine_general-physical-viable}
 \end{figure}
 
 In Case~\ref{itm:cartesian.cosine.general.regimes.gentle} (gentle regime)
@@ -1000,11 +1024,24 @@ whose finite elements package~\code{NDSolve\`{}FEM\`{}}
 has built-in capabilities for mesh generation and for solving nonlinear BVPs.
 
 \begin{figure}
-  \centredfigurecontent[width=\textwidth]{%
-    cosine-verification-domain-meshes%
-  }{
+  \newcommand*{\legendoffsetheight}{0.1\textwidth}
+  \centering
+  \includegraphics[height=0.6\textwidth]{cosine-verification-lens-domain}
+  \includegraphics[
+    width=0.16\textwidth,
+    trim=0 {-\legendoffsetheight} 0 0,
+  ]{cosine-verification-lens-mesh}
+  \hfill
+  \includegraphics[height=0.6\textwidth]{cosine-verification-asymmetric-domain}
+  \includegraphics[
+    width=0.11\textwidth,
+    trim=0 {-\legendoffsetheight} 0 0,
+  ]{cosine-verification-asymmetric-mesh}
+  \includegraphics[width=\textwidth]{cosine-verification-legend}
+  \caption{
     Selected domains and finite element meshes for numerical verification.
   }
+  \label{fig:cosine-verification-domain-meshes}
 \end{figure}
 
 Figure~\ref{fig:cosine-verification-domain-meshes}

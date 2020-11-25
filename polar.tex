@@ -198,14 +198,18 @@ This is shown in Figure~\ref{fig:line-auxiliary-function}.
 \label{sec:polar.viable.regimes}
 
 \begin{figure}
-  \centredfigurecontent[width=0.8\textwidth]{%
-    line-viable%
-  }{
+  \newcommand*{\figurewidth}{0.85\textwidth}
+  \centering
+  \includegraphics[width=\figurewidth]{line-viable}
+  \includegraphics[width=\figurewidth]{line-viable-arrow}
+  \includegraphics[width=\textwidth]{line-viable-legend}
+  \caption{
     Non-viable domain~$\Phi < 0$
     for the known solution~(\ref{eq:line-scaled-laplace-solution})
     and viability function~(\ref{eq:line-viability-function}),
     as $A$~increases.
   }
+  \label{fig:line-viable}
 \end{figure}
 
 The topology of the viable domain~$\psi (r) \le A$
@@ -248,12 +252,18 @@ There are three cases:
 \end{enumerate}
 
 \begin{figure}
-  \centredfigurecontent[width=0.7\textwidth]{%
-    line-critical%
-  }{
+  \newcommand*{\legendoffsetheight}{0.2\textwidth}
+  \centering
+  \includegraphics[width=0.5\textwidth]{line-critical}
+  \includegraphics[
+    width=0.2\textwidth,
+    trim=0 {-\legendoffsetheight} 0 0
+  ]{line-critical-legend}
+  \caption{
     Terminal radii (roots of~$\psi (r) = A$),
     as $A$~increases.
   }
+  \label{fig:line-critical}
 \end{figure}
 
 \section{Boundary tracing}
@@ -931,11 +941,13 @@ and the exact solution~(\ref{eq:line-scaled-laplace-solution})
 is less than~$\SI{0.3}{\percent}$ throughout the mesh.
 
 \begin{figure}
-  \centredfigurecontent[width=0.8\textwidth]{%
-    line-verification-domain-mesh%
-  }{
+  \centering
+  \includegraphics[width=0.8\textwidth]{line-verification-domain-mesh}
+  \includegraphics[width=\textwidth]{line-verification-domain-mesh-legend}
+  \caption{
     Selected domain and finite element mesh for numerical verification.
   }
+  \label{fig:line-verification-domain-mesh}
 \end{figure}
 
 \section{Physical range}

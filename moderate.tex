@@ -115,14 +115,13 @@ together with the constant-flux condition
 on the boundary.
 
 \begin{figure}
-  \newcommand*{\solutionfigurewidth}{8cm}
-  \begin{minipage}[t]{0.95\textwidth - \solutionfigurewidth}
+  \begin{minipage}[t]{0.4\textwidth}
     \centredfigurecontent[width=0.8\textwidth]{helmholtz-wedge-domain}{
       Right-angled wedge domain.
     }
   \end{minipage}
   \hfill
-  \begin{minipage}[t]{\solutionfigurewidth}
+  \begin{minipage}[t]{0.55\textwidth}
     \centredfigurecontent{helmholtz-wedge-solution}{
       Known Helmholtz solution~(\ref{eq:scaled-helmholtz-solution})
       in a right-angled wedge.
@@ -322,7 +321,7 @@ the resulting height-rise profiles are shown in
 Figure~\ref{fig:helmholtz-height-rise-profiles}.
 
 \begin{figure}
-  \centredfigurecontent[width=0.6\textwidth]{%
+  \centredfigurecontent[width=0.63\textwidth]{%
     helmholtz-terminal-points%
   }{
     $T$-contours which intersect the terminal curve~$\Phi = 0$.
@@ -330,11 +329,12 @@ Figure~\ref{fig:helmholtz-height-rise-profiles}.
 \end{figure}
 
 \begin{figure}
-  \newcommand*{\subfigurewidth}{0.4\textwidth}
+  \newcommand*{\subfigurewidth}{0.45\textwidth}
+  \newcommand*{\subfiguregraphicswidth}{0.6\textwidth}
   \centering
   \hspace*{\fill}
   \begin{subfigure}[t]{\subfigurewidth}
-    \centredfigurecontent[width=0.65\textwidth]{%
+    \centredfigurecontent[width=\subfiguregraphicswidth]{%
       helmholtz-traced-boundaries-hyperbolic-both%
     }{%
       Two smooth boundaries
@@ -342,7 +342,7 @@ Figure~\ref{fig:helmholtz-height-rise-profiles}.
   \end{subfigure}
     \hfill
   \begin{subfigure}[t]{\subfigurewidth}
-    \centredfigurecontent[width=0.65\textwidth]{%
+    \centredfigurecontent[width=\subfiguregraphicswidth]{%
       helmholtz-traced-boundaries-hyperbolic-rounding%
     }{%
       Unique corner rounding
@@ -518,14 +518,20 @@ as one moves away from~$x = 0$
 
 \begin{figure}
   \centering
-  \begin{subfigure}[t]{0.53\textwidth}
-    \centredfigurecontent{half_plane-mesh-halves}{%
+  \begin{subfigure}[t]{0.58\textwidth}
+    \centredfigurecontent[
+      width=\textwidth,
+      trim=0 8 0 0,
+    ]{half_plane-mesh-halves}{%
       Full mesh
     }
   \end{subfigure}
     \hfill
-  \begin{subfigure}[t]{0.4\textwidth}
-    \centredfigurecontent{half_plane-mesh-detail}{%
+  \begin{subfigure}[t]{0.38\textwidth}
+    \centredfigurecontent[
+      width=\textwidth,
+      trim=0 3 0 0,
+    ]{half_plane-mesh-detail}{%
       Close-up of refinement
     }
   \end{subfigure}
@@ -663,7 +669,10 @@ the resulting mesh contains around~17000 elements
   \end{subfigure}
     \hfill
   \begin{subfigure}[t]{0.27\textwidth}
-    \centredfigurecontent{wedge_acute-mesh-detail}{%
+    \centredfigurecontent[
+      width=\textwidth,
+      trim=0 {-0.6\textwidth} 0 0
+    ]{wedge_acute-mesh-detail}{%
       Close-up of refinement
     }
   \end{subfigure}
@@ -806,7 +815,7 @@ as in Figure~\ref{fig:wedge_acute-borderline-asymptotic-comparison}.
 \end{figure}
 
 \begin{figure}
-  \newcommand*{\subfigurewidth}{6.5cm}
+  \newcommand*{\subfigurewidth}{0.45\textwidth}
   \centering
   \hspace*{\fill}
   \begin{subfigure}[t]{\subfigurewidth}
@@ -943,9 +952,14 @@ by identifying the left side of each curve as the exterior
 (Figure~\ref{fig:wedge_acute-traced-boundaries-patched}).
 
 \begin{figure}
-  \centredfigurecontent[width=0.75\textwidth]{%
-    wedge_acute-traced-boundaries%
-  }{
+  \newcommand*{\legendoffsetheight}{0.34\textwidth}
+  \centering
+  \includegraphics[width=0.45\textwidth]{wedge_acute-traced-boundaries}
+  \includegraphics[
+    width=0.3\textwidth,
+    trim=0 {-\legendoffsetheight} 0 0,
+  ]{wedge_acute-traced-boundaries-legend}
+  \caption{
     Traced boundaries for~%
       $(\alpha, \gamma) = (\SI{40}{\degree}, \SI{60}{\degree})$,
     obtained by integrating~%
@@ -953,6 +967,7 @@ by identifying the left side of each curve as the exterior
     \&~%
       (\ref{eq:moderate-tracing-ode-arc-length-parametrisation-y}).
   }
+  \label{fig:wedge_acute-traced-boundaries}
 \end{figure}
 
 \begin{figure}
