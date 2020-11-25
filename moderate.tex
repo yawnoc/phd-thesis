@@ -952,9 +952,14 @@ by identifying the left side of each curve as the exterior
 (Figure~\ref{fig:wedge_acute-traced-boundaries-patched}).
 
 \begin{figure}
-  \centredfigurecontent[width=0.75\textwidth]{%
-    wedge_acute-traced-boundaries%
-  }{
+  \newcommand*{\legendoffsetheight}{0.34\textwidth}
+  \centering
+  \includegraphics[width=0.45\textwidth]{wedge_acute-traced-boundaries}
+  \includegraphics[
+    width=0.3\textwidth,
+    trim=0 {-\legendoffsetheight} 0 0,
+  ]{wedge_acute-traced-boundaries-legend}
+  \caption{
     Traced boundaries for~%
       $(\alpha, \gamma) = (\SI{40}{\degree}, \SI{60}{\degree})$,
     obtained by integrating~%
@@ -962,6 +967,7 @@ by identifying the left side of each curve as the exterior
     \&~%
       (\ref{eq:moderate-tracing-ode-arc-length-parametrisation-y}).
   }
+  \label{fig:wedge_acute-traced-boundaries}
 \end{figure}
 
 \begin{figure}
