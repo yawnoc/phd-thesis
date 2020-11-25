@@ -252,12 +252,18 @@ There are three cases:
 \end{enumerate}
 
 \begin{figure}
-  \centredfigurecontent[width=0.7\textwidth]{%
-    line-critical%
-  }{
+  \newcommand*{\legendoffsetheight}{0.2\textwidth}
+  \centering
+  \includegraphics[width=0.5\textwidth]{line-critical}
+  \includegraphics[
+    width=0.2\textwidth,
+    trim=0 {-\legendoffsetheight} 0 0
+  ]{line-critical-legend}
+  \caption{
     Terminal radii (roots of~$\psi (r) = A$),
     as $A$~increases.
   }
+  \label{fig:line-critical}
 \end{figure}
 
 \section{Boundary tracing}
