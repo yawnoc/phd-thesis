@@ -1327,7 +1327,7 @@ the boundary tracing system of ODEs maintains the same form~%
   (\ref{eq:moderate-tracing-ode-arc-length-parametrisation-x})
 \&~(\ref{eq:moderate-tracing-ode-arc-length-parametrisation-y})
 as before.
-Figure~X % TODO
+Figure~\ref{fig:wedge_acute-traced-boundaries-different-angle}
 shows the traced boundaries obtained by numerical integration
 from starting points within the new viable domain
 \begin{equation}
@@ -1344,8 +1344,39 @@ this solution does not have the steepness required
 for a tracing contact angle of~$\tr{\gamma}$,
 as asserted by~(\ref{eq:moderate-viable-domain-different-angle}).
 
+\begin{figure}
+  \newcommand*{\subfigurewidth}{0.45\textwidth}
+  \centering
+  \hspace*{\fill}
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent[width=\textwidth, trim=0 -2 0 0]{%
+      wedge_acute-traced-boundaries-different-angle-less%
+    }{%
+      $\tr{\gamma} = \SI{50}{\degree} < \gamma$
+    }
+  \end{subfigure}
+    \hfill
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent{%
+      wedge_acute-traced-boundaries-different-angle-more%
+    }{%
+      $\tr{\gamma} = \SI{70}{\degree} > \gamma$
+    }
+  \end{subfigure}
+  \hspace*{\fill}
+  \caption{
+    Traced boundaries for~$\alpha = \SI{40}{\degree}$,
+    $\gamma = \SI{60}{\degree}$, and~$\tr{\gamma} \ne \gamma$,
+    obtained by integrating~%
+      (\ref{eq:moderate-tracing-ode-arc-length-parametrisation-x})
+    \&~%
+      (\ref{eq:moderate-tracing-ode-arc-length-parametrisation-y}).
+  }
+  \label{fig:wedge_acute-traced-boundaries-different-angle}
+\end{figure}
+
 Thus we restrict attention to the $\tr{\gamma} > \gamma$~case
-(Figure~X). % TODO
+(Figure~\ref{fig:wedge_acute-traced-boundaries-different-angle-more}).
 Unlike the $\tr{\gamma} = \gamma$~case,
 the original wedge walls are not traced boundaries,
 since the original contact angle~$\gamma$
