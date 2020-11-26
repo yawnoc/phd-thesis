@@ -1479,11 +1479,30 @@ which extends to infinity.
   \end{minipage}
 \end{figure}
 
+\begin{figure}
+  \begin{minipage}[t]{0.5\textwidth}
+    \centredfigurecontent[width=0.8\textwidth]{%
+      wedge_acute-different-angle-offset-top%
+    }{%
+      Top view of the candidate boundary approaching an offset wedge
+      for~$\tr{\gamma} > \gamma$.
+    }
+  \end{minipage}
+  \begin{minipage}[t]{0.5\textwidth}
+    \centredfigurecontent{wedge_acute-different-angle-offset-side}{%
+      Side view of the half-plane approximation~%
+        (\ref{eq:moderate-half-plane-solution-near-wall-repeat})
+      showing the heights and offset
+      corresponding to~$\gamma$ and~$\tr{\gamma}$.
+    }
+  \end{minipage}
+\end{figure}
+
 In contrast to the $\tr{\gamma} = \gamma$ case,
 the candidate boundary asymptotes
 not to the original wedge~$y = \pm x \tan\alpha$,
 but to a wedge offset from the original
-(Figure~X). % TODO
+(Figure~\ref{fig:wedge_acute-different-angle-offset-top}).
 To determine the offset distance,
 recall that away from the corner but near a wall,
 we have the half-plane approximation~%
@@ -1521,7 +1540,8 @@ where
     - \cosh^{-1} \roundbr*{\frac{2}{h}} + \sqrt{4 - h^2}
   \label{eq:moderate-offset-distance}
 \end{equation}
-is the offset distance.
+is the offset distance
+(Figure~\ref{fig:wedge_acute-different-angle-offset-side}).
 
 Thus, given a single numerical wedge solution~$T (x, y; \alpha, \gamma)$,
 boundary tracing may be used to generate a one-parameter family
