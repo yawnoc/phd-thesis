@@ -1753,7 +1753,7 @@ and their resultant height rises,
 with the latter obtained by simply
 evaluating the relevant known solution~$T (x, y; \alpha, \gamma)$
 at the corresponding critical terminal point~$(x, y) = (x_0, 0)$.
-An example is given in Table~X. % TODO
+An example is given in Table~\ref{tab:convex-wedge-well-approximating}.
 By evaluating the relevant known solution
 along the entire length of each rounding curve,
 we may obtain a collection of height-rise profiles;
@@ -1768,6 +1768,39 @@ one cannot predetermine the shape of the resulting traced boundaries.
 % TODO
 % For Conclusion, write something like "the very nature of boundary tracing
 % is that the shape of the resulting traced boundaries is the unknown".
+
+\begin{table}
+  \centering
+  \begin{tabular}{
+    S[table-format=2, table-space-text-post=\si{\degree}]
+    S[table-format=1.3, round-mode=places, round-precision=3]
+    S[table-format=1.4, round-mode=places, round-precision=4]
+  }
+    \toprule
+      {$\gamma$}  &  {Radius}  &  {Height} \\
+    \midrule
+      30 \si{\degree}  &  2.26977  &  0.31756  \\
+      35 \si{\degree}  &  2.25117  &  0.318001 \\
+      40 \si{\degree}  &  2.23422  &  0.318138 \\
+      45 \si{\degree}  &  2.20381  &  0.318556 \\
+      50 \si{\degree}  &  2.15249  &  0.319478 \\
+      55 \si{\degree}  &  2.0888   &  0.320448 \\
+      60 \si{\degree}  &  1.9998   &  0.321827 \\
+      65 \si{\degree}  &  1.87787  &  0.32361  \\
+      70 \si{\degree}  &  1.6893   &  0.326587 \\
+      75 \si{\degree}  &  1.33555  &  0.33337  \\
+    \bottomrule
+  \end{tabular}
+  \caption{
+    Well-approximating rounding radius~%
+      (\ref{eq:moderate-well-approximating-rounding-radius})
+    and the resulting height rise in the rounded corner,
+    all corresponding to the physically prescribed angles~%
+    $\alpha = \SI{60}{\degree}$ and~$\tr{\gamma} = \SI{75}{\degree}$.
+    The original contact angle~$\gamma$ is shown for reference.
+  }
+  \label{tab:convex-wedge-well-approximating}
+\end{table}
 
 Finally, the results for rounding radius versus height rise
 can of course be compared
