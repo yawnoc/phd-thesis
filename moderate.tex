@@ -1600,6 +1600,49 @@ it remains to be seen whether they are of practical use.
   }
 \end{figure}
 
+\begin{figure}
+  \newcommand*{\subfigurewidth}{0.31\textwidth}
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent{%
+      wedge_acute-candidates-offset-alpha-30_degree%
+    }{%
+      $\alpha = \SI{30}{\degree}$.
+      From left to right:
+      $\gamma = \ang{60}, \ang{65}, \ang{70}, \ang{75}$.
+      Note the bulging of the boundaries outside of the wedge (see inset).
+    }
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent{%
+      wedge_acute-candidates-offset-alpha-45_degree%
+    }{%
+      $\alpha = \SI{45}{\degree}$.
+      From left to right: $\gamma = \ang{45}, \ang{75}$.
+      Boundaries for intermediate~$\gamma$ have been omitted.
+      Note the lack of spread.
+    }
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent{%
+      wedge_acute-candidates-offset-alpha-60_degree%
+    }{%
+      $\alpha = \SI{60}{\degree}$.
+      From right to left:
+      $\gamma = \ang{30}, \ang{60}, \ang{70}, \ang{75}$.
+      Note the reversal in the direction of increasing~$\gamma$.
+    }
+  \end{subfigure}
+  \caption{
+    Candidate boundaries for~$\pi/2 - \alpha \le \gamma \le \tr{\gamma}$
+    in $(\offset{x}, y)$~coordinates,
+    all corresponding to the physically prescribed contact angle~%
+    $\tr{\gamma} = \SI{75}{\degree}$.
+  }
+  \label{fig:wedge_acute-candidates-offset}
+\end{figure}
+
 Since physical applications fix~$\tr{\gamma}$ rather than~$\gamma$,
 we begin by grouping the generated candidate boundaries
 according to~$\tr{\gamma}$
@@ -1619,12 +1662,12 @@ ensures that all of them approach
 the same wedge~$y = \pm \offset{x} \tan\alpha$,
 so that they may be compared as different roundings
 of the same corner
-(Figure~X). % TODO
+(Figure~\ref{fig:wedge_acute-candidates-offset}).
 Immediately we notice the following:
 \begin{enumerate}
   \item
     For $\alpha$~less than about~$\SI{45}{\degree}$
-    (Figure~X), % TODO
+    (Figure~\ref{fig:wedge_acute-candidates-offset-alpha-30_degree}),
     the candidate boundaries for~$\tr{\gamma} > \gamma$
     actually bulge outside of the wedge~$y = \pm \offset{x} \tan\alpha$.
     Only for~$\tr{\gamma} = \gamma$ is there no bulge.
@@ -1640,7 +1683,7 @@ Immediately we notice the following:
     then bulging is not an issue.
   \item
     For $\alpha \approx \SI{45}{\degree}$
-    (Figure~X) % TODO
+    (Figure~\ref{fig:wedge_acute-candidates-offset-alpha-45_degree})
     bulging no longer occurs,
     and the candidate boundaries can be regarded
     as proper roundings of the corner.
@@ -1666,7 +1709,7 @@ Immediately we notice the following:
     of the originals.
   \item
     For $\alpha$~greater than about~$\SI{45}{\degree}$
-    (Figure~X)
+    (Figure~\ref{fig:wedge_acute-candidates-offset-alpha-60_degree})
     bulging likewise does not occur,
     and there is a much-welcomed improvement
     in the spread of the rounding curves.
