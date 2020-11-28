@@ -1756,8 +1756,8 @@ An example is given in Table~\ref{tab:convex-wedge-well-approximating}.
 By evaluating the relevant known solution
 along the entire length of each rounding curve,
 we may obtain a collection of height-rise profiles;
-in the case of Figure~X % TODO
-we find that the amount of arching is roughly halved.
+in the case of Figure~\ref{fig:wedge_acute-height-rise-profiles}
+we see that the amount of arching is roughly halved.
 Evidently the range of rounding radii
 which can be accounted for in this manner
 is directly related to the spread of the corner roundings,
@@ -1800,6 +1800,23 @@ one cannot predetermine the shape of the resulting traced boundaries.
   }
   \label{tab:convex-wedge-well-approximating}
 \end{table}
+
+\begin{figure}
+  \centredfigurecontent[width=0.6\textwidth]{%
+    wedge_acute-height-rise-profiles%
+  }{
+    Height-rise profiles (parametrised by arc length)
+    for~$\alpha = \SI{60}{\degree}$ and~$\tr{\gamma} = \SI{75}{\degree}$,
+    along the original wedge~\figurestyle{grey},
+    and along the constructed roundings of the corner
+    for~$\gamma = \SI{75}{\degree}, \SI{30}{\degree}$~%
+      \figurestyle{solid black, top to bottom}.
+    Profiles for intermediate~$\gamma$ lie between, and have been omitted.
+    The wall height~(\ref{eq:half-plane-height-different-angle})
+    is shown for reference~\figurestyle{dotted}.
+    Note the exaggerated vertical scale.
+  }
+\end{figure}
 
 Finally, the results for rounding radius versus height rise
 can of course be compared
