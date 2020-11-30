@@ -242,7 +242,7 @@ indeed the upper wedge wall~$y = +x$ is a traced boundary of the upper branch,
 while the lower wedge wall~$y = -x$ is one of the lower branch.
 
 \begin{figure}
-  \centredfigurecontent[width=\textwidth]{%
+  \centredfigurecontent{%
     helmholtz-traced-boundaries-patched%
   }{
     Domain boundaries~\figurestyle{thick black}
@@ -517,19 +517,13 @@ as one moves away from~$x = 0$
 \begin{figure}
   \centering
   \begin{subfigure}[t]{0.58\textwidth}
-    \centredfigurecontent[
-      width=\textwidth,
-      trim=0 8 0 0,
-    ]{half_plane-mesh-halves}{%
+    \centredfigurecontent[trim=0 8 0 0]{half_plane-mesh-halves}{%
       Full mesh
     }
   \end{subfigure}
     \hfill
   \begin{subfigure}[t]{0.38\textwidth}
-    \centredfigurecontent[
-      width=\textwidth,
-      trim=0 3 0 0,
-    ]{half_plane-mesh-detail}{%
+    \centredfigurecontent[trim=0 3 0 0]{half_plane-mesh-detail}{%
       Close-up of refinement
     }
   \end{subfigure}
@@ -667,10 +661,9 @@ the resulting mesh contains around~17000 elements
   \end{subfigure}
     \hfill
   \begin{subfigure}[t]{0.27\textwidth}
-    \centredfigurecontent[
-      width=\textwidth,
-      trim=0 {-0.6\textwidth} 0 0
-    ]{wedge_acute-mesh-detail}{%
+    \centredfigurecontent[trim=0 {-0.6\textwidth} 0 0]{%
+      wedge_acute-mesh-detail%
+    }{%
       Close-up of refinement
     }
   \end{subfigure}
@@ -969,7 +962,7 @@ by identifying the left side of each curve as the exterior
 \end{figure}
 
 \begin{figure}
-  \centredfigurecontent[width=\textwidth]{%
+  \centredfigurecontent{%
     wedge_acute-traced-boundaries-patched%
   }{
     Domain boundaries~\figurestyle{thick black}
@@ -1350,7 +1343,7 @@ as asserted by~(\ref{eq:moderate-viable-domain-different-angle}).
   }
   \hspace*{\fill}
   \begin{subfigure}[t]{\subfigurewidth}
-    \centredfigurecontent[width=\textwidth, trim=0 -3 0 0]{%
+    \centredfigurecontent[trim=0 -3 0 0]{%
       wedge_acute-traced-boundaries-different-angle-less%
     }{%
       $\tr{\gamma} = \SI{50}{\degree} < \gamma$
