@@ -136,12 +136,12 @@
 \usepackage{subcaption}
 
 % Centred figure content (with same label as file name)
-%   #1  [\includegraphics options] default "width=\textwidth"
+%   #1  [\includegraphics options] default effectively "width=\textwidth"
 %   #2  {\includegraphics file name}
 %   #3  {caption}
-\newcommand{\centredfigurecontent}[3][width=\textwidth]{%
+\newcommand{\centredfigurecontent}[3][]{%
   \centering
-  \includegraphics[#1]{#2}
+  \includegraphics[width=\textwidth,#1]{#2}
   \caption{#3}
   \label{fig:#2}
 }
