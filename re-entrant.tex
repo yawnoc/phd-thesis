@@ -28,18 +28,39 @@ In this section we obtain numerical wedge solutions
 to the capillary BVP~(\ref{eq:scaled-laplace-young})
 \&~(\ref{eq:scaled-contact-boundary-condition}).
 Finite element meshes are constructed in an identical manner
-to Section~\ref{sec:moderate.nonlinear.numerical.wedge};
-we take the domain to be the sector $0 < r < 10$, $-\alpha < \phi < \alpha$,
-we require all mesh elements to have no more area
+to Section~\ref{sec:moderate.nonlinear.numerical.wedge}.
+The domain is taken to be the sector $0 < r < 10$, $-\alpha < \phi < \alpha$
+(Figure~\ref{fig:wedge_obtuse-numerical-domain}).
+All mesh elements are required to have no more area
 than an equilateral triangle of side length~$0.2$,
 and we apply the minimalistic refinement strategy
 of Section~\ref{sec:moderate.nonlinear.numerical.half-plane}
-along the two wedge walls,
+along the two wedge walls
 using a fine length scale of~$0.01$.
-Figure~X % TODO
-shows the resultant mesh of X~elements
-  % TODO (and perhaps a footnote about elements increasing with alpha)
-for an $\alpha = \SI{135}{\degree}$~wedge.
+For an $\alpha = \SI{135}{\degree}$~wedge,
+the resulting mesh consists of around 32000~elements.
+The refinement detail near the corner
+is shown in Figure~\ref{fig:wedge_obtuse-mesh-detail}.
+The full mesh is too large to display here,
+but it is very similar to the mesh of Figure~\ref{fig:wedge_acute-mesh-full}.
+
+\begin{figure}
+  \begin{minipage}[t]{0.48\textwidth}
+    \centredfigurecontent{wedge_obtuse-numerical-domain}{
+      Domain for numerical wedge solutions.
+    }
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.48\textwidth}
+    \centredfigurecontent[
+      width=0.85\textwidth,
+      trim=0 {-0.115\textwidth} 0 0,
+    ]{wedge_obtuse-mesh-detail}{
+      Close-up of finite element mesh
+      for an $\alpha = \SI{135}{\degree}$~wedge.
+    }
+  \end{minipage}
+\end{figure}
 
 As before, we obtain numerical solutions in \software{Mathematica}
 by specifying the capillary BVP
