@@ -55,7 +55,9 @@ but it is very similar to the mesh of Figure~\ref{fig:wedge_acute-mesh-full}.
     \centredfigurecontent[
       width=0.85\textwidth,
       trim=0 {-0.115\textwidth} 0 0,
-    ]{wedge_obtuse-mesh-detail}{
+    ]{%
+      wedge_obtuse-mesh-detail%
+    }{
       Close-up of finite element mesh
       for an $\alpha = \SI{135}{\degree}$~wedge.
     }
@@ -88,8 +90,8 @@ for the large wedge case~$\alpha \ge \pi/2 + \gamma$,
 the corner slope should be unbounded
 (with the height remaining bounded).
 Table~\ref{tab:re-entrant-wedge-slope}
-compares the theoretical and computed values
-for the slope in the corner.
+compares theoretical and computed values of corner slope
+for an $\alpha = \SI{135}{\degree}$~wedge.
 Unlike the convex wedge case (Table~\ref{tab:convex-wedge-height-slope})
 where excellent agreement was observed,
 the discrepancy here is rather large,
@@ -140,13 +142,40 @@ the critical angle~$\gamma = \SI{45}{\degree}$.
   \label{tab:re-entrant-wedge-slope}
 \end{table}
 
-% - Further investigation, sensitivity to refinement, etc.
-% - Concerning since boundary tracing relies on first derivatives
-% - Away from the corner, slopes are consistent (assuring)
-% - Solutions are OK for tracing, just need to interpret with caution
-%   near the corner
-% - Height is not sensitive to refinement
-% - Perhaps check residual of boundary condition near the corner
+Since boundary tracing relies on
+the ability to accurately compute first derivatives
+of the wedge solution,
+the relatively poor results for the corner slope
+are a cause for concern.
+Further investigation shows that the computed value of corner slope
+is rather sensitive to the level of mesh refinement.
+We consider~$(\alpha, \gamma) = (\SI{135}{\degree}, \SI{60}{\degree})$
+and apply localised additional refinement,
+using an ultra-fine length scale of~$\ell_\ultra$
+in the neighbourhood~$r < 0.01$.
+Note that $\ell_\ultra = 0.01$~corresponds to the existing level of refinement
+(Figure~\ref{fig:wedge_obtuse-mesh-detail}),
+while $\ell_\ultra < 0.01$~introduces further refinement near the corner
+(Figure~X). % TODO
+Although decreasing~$\ell_\ultra$
+brings the computed corner slope closer
+to the the theoretical value of unity
+(Table~X), % TODO
+even an impractically large number of mesh elements
+achieves an accuracy of just~$\SI{6}{\percent}$.
+From Figure~X % TODO
+we see that the dependence of the solution slope on the refinement
+is restricted only to the immediate vicinity of the corner, $r < 0.003$;
+the computed slope outside this tiny neighbourhood
+is indeed consistent across all levels of additional refinement.
+Therefore, provided we interpret near-corner results with caution,
+the numerical wedge solutions obtained
+using the existing level of mesh refinement
+will be adequate for the purposes of boundary tracing.
+We are also reassured by the fact that,
+unlike corner slope,
+the same corner height is consistently obtained
+with or without additional refinement.
 
 \section{Corner rounding}
 \label{sec:re-entrant.rounding}
