@@ -81,14 +81,56 @@ in Figure~\ref{fig:wedge_obtuse-solution}.
 \end{figure}
 
 Having precluded asymmetry about~$y = 0$,
-the wedge solution should take on
+the wedge solutions should take on
 the locally planar form~(\ref{eq:moderate-wedge-asymptotic-solution})
 in the moderate wedge case~$\pi/2 < \alpha < \pi/2 + \gamma$;
 for the large wedge case~$\alpha \ge \pi/2 + \gamma$,
 the corner slope should be unbounded.
-Table~X
+(Note that the corner \emph{height} in a re-entrant wedge is always bounded.)
+Table~\ref{tab:re-entrant-wedge-slope}
 compares the theoretical and computed values
 for the slope in the corner.
+
+\begin{table}
+  \centering
+  \begin{tabular}{
+    S[table-format=2, table-space-text-post=\si{\degree}]
+    S[table-format=1.3, round-mode=places, round-precision=3]
+    S[table-format=2.3, round-mode=places, round-precision=3]
+    S[table-format=+1.2, round-mode=places, round-precision=2]
+  }
+    \toprule
+      {$\gamma$}  &
+      {\makecell{Theoretical \\ slope}}  &
+      {\makecell{Computed \\ slope}}  &
+      {\makecell{Relative \\ error}} \\
+    \midrule
+       5 \si{\degree}  &  {$\infty$}  &  12.9705    &  {N/A} \\
+      10 \si{\degree}  &  {$\infty$}  &  11.0911    &  {N/A} \\
+      15 \si{\degree}  &  {$\infty$}  &   8.76412   &  {N/A} \\
+      20 \si{\degree}  &  {$\infty$}  &   6.56039   &  {N/A} \\
+      25 \si{\degree}  &  {$\infty$}  &   4.79592   &  {N/A} \\
+      30 \si{\degree}  &  {$\infty$}  &   3.5182    &  {N/A} \\
+      35 \si{\degree}  &  {$\infty$}  &   2.63209   &  {N/A} \\
+      40 \si{\degree}  &  {$\infty$}  &   2.01713   &  {N/A} \\
+      45 \si{\degree}  &  {$\infty$}  &   1.57863   &  {N/A} \\
+      50 \si{\degree}  &   2.18146    &   1.25345   &  -0.42541 \\
+      55 \si{\degree}  &   1.38701    &   1.00181   &  -0.277718 \\
+      60 \si{\degree}  &   1.         &   0.798982  &  -0.201018 \\
+      65 \si{\degree}  &   0.745469   &   0.629068  &  -0.156144 \\
+      70 \si{\degree}  &   0.552637   &   0.4817    &  -0.12836 \\
+      75 \si{\degree}  &   0.39332    &   0.349724  &  -0.110841 \\
+      80 \si{\degree}  &   0.253333   &   0.227979  &  -0.110841 \\
+      85 \si{\degree}  &   0.124204   &   0.1125    &  -0.0942277 \\
+    \bottomrule
+  \end{tabular}
+  \caption{
+    Numerical results for corner slope
+    in an $\alpha = \SI{135}{\degree}$~wedge,
+    for various contact angles~$\gamma$.
+  }
+  \label{tab:re-entrant-wedge-slope}
+\end{table}
 
 % - Further investigation, sensitivity to refinement, etc.
 % - Concerning since boundary tracing relies on first derivatives
