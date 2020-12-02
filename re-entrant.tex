@@ -158,16 +158,17 @@ We consider~$(\alpha, \gamma) = (\SI{135}{\degree}, \SI{60}{\degree})$
 and apply localised additional refinement,
 using an ultra-fine length scale of~$\ell_\ultra$
 in the neighbourhood~$r < 0.01$.
-Note that $\ell_\ultra = 0.01$~corresponds to the existing level of refinement
+Note that $\ell_\ultra = 0.01$~corresponds roughly
+to the existing level of refinement
 (Figure~\ref{fig:wedge_obtuse-mesh-detail}),
 while $\ell_\ultra < 0.01$~introduces further refinement near the corner
 (Figure~\ref{fig:wedge_obtuse-mesh-detail-additional-refinement}).
 Although decreasing~$\ell_\ultra$
 brings the computed corner slope closer
 to the the theoretical value of unity
-(Table~X), % TODO
+(Table~\ref{tab:re-entrant-wedge-slope-additional-refinement}),
 even an impractically large number of mesh elements
-achieves an accuracy of just~$\SI{6}{\percent}$.
+achieves only an accuracy of~$\SI{6}{\percent}$.
 From Figure~X % TODO
 we see that the dependence of the solution slope on the refinement
 is restricted only to the immediate vicinity of the corner, $r < 0.003$;
@@ -181,6 +182,37 @@ We are also reassured by the fact that,
 unlike corner slope,
 the same corner height is consistently obtained
 with or without additional refinement.
+
+\begin{table}
+  \centering
+  \begin{tabular}{
+    S[table-format=1.4]
+    S[table-format=6]
+    S[table-format=1.4, round-mode=places, round-precision=4]
+    S[table-format=+1.2, round-mode=places, round-precision=2]
+  }
+    \toprule
+      {$\ell_\ultra$}  &
+      {\makecell{Mesh \\ elements}}  &
+      {\makecell{Computed \\ slope}}  &
+      {\makecell{Relative \\ error}} \\
+    \midrule
+      0.01    &   32230  &  0.823078  &  -0.176922 \\
+      0.001   &   33361  &  0.899529  &  -0.100471 \\
+      0.0005  &   36147  &  0.915463  &  -0.0845373 \\
+      0.0002  &   55171  &  0.930714  &  -0.0692859 \\
+      0.0001  &  121071  &  0.941074  &  -0.058926 \\
+    \bottomrule
+  \end{tabular}
+  \caption{
+    Numerical results for corner slope
+    in an $(\alpha, \gamma) = (\SI{135}{\degree}, \SI{60}{\degree})$~wedge,
+    with additional refinement
+    at various ultra-fine length scales~$\ell_\ultra$
+    in the neighbourhood~$r < 0.01$.
+  }
+  \label{tab:re-entrant-wedge-slope-additional-refinement}
+\end{table}
 
 \section{Corner rounding}
 \label{sec:re-entrant.rounding}
