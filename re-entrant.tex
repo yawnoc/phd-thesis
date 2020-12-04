@@ -169,11 +169,11 @@ to the the theoretical value of unity
 (Table~\ref{tab:re-entrant-wedge-slope-additional-refinement}),
 even an impractically large number of mesh elements
 achieves only an accuracy of~$\SI{6}{\percent}$.
-From Figure~X % TODO
-we see that the dependence of the solution slope on the refinement
-is restricted only to the immediate vicinity of the corner, $r < 0.003$;
-the computed slope outside this tiny neighbourhood
-is indeed consistent across all levels of additional refinement.
+However, from Figure~\ref{fig:wedge_obtuse-slope-additional-refinement}
+we see that the solution slope only depends significantly on~$\ell_\ultra$
+in the immediate vicinity of the corner, $r < 0.003$;
+outside this tiny neighbourhood
+the computed slope is indeed consistent.
 Therefore, provided we interpret near-corner results with caution,
 the numerical wedge solutions obtained
 using the existing level of mesh refinement
@@ -213,6 +213,40 @@ with or without additional refinement.
   }
   \label{tab:re-entrant-wedge-slope-additional-refinement}
 \end{table}
+
+\begin{figure}
+  \newcommand*{\subfigurewidth}{0.45\textwidth}
+  \centering
+  $\ell_\ultra$
+  \includegraphics[width=\textwidth, trim=0 10 0 10]{%
+    wedge_obtuse-slope-additional-refinement-legend%
+  }
+  \hspace*{\fill}
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent{%
+      wedge_obtuse-slope-additional-refinement-symmetry%
+    }{%
+      Along line of symmetry~$\phi = 0$
+    }
+  \end{subfigure}
+    \hfill
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent{%
+      wedge_obtuse-slope-additional-refinement-wall%
+    }{%
+      Along wedge wall~$\phi = \alpha$
+    }
+  \end{subfigure}
+  \hspace*{\fill}
+  \caption{
+    Computed slope near the corner
+    in an $(\alpha, \gamma) = (\SI{135}{\degree}, \SI{60}{\degree})$~wedge,
+    with additional refinement
+    at various ultra-fine length scales~$\ell_\ultra$
+    in the neighbourhood~$r < 0.01$.
+  }
+  \label{fig:wedge_obtuse-slope-additional-refinement}
+\end{figure}
 
 \section{Corner rounding}
 \label{sec:re-entrant.rounding}
