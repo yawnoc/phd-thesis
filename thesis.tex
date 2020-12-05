@@ -282,9 +282,6 @@
 %             with thin space "\," before or after as necessary
 \newcommand*{\td}{\mathopspace\mathrm{d}}
 
-% Variational delta
-\newcommand*{\vd}{\mathopspace\text{\textdelta}}
-
 % Total derivative
 % --------
 %   #1  [order] default ""
@@ -293,6 +290,9 @@
 \newcommand*{\tder}[3][]{
   \frac{\td\optionalsup{#1}#2}{{\td #3}\optionalsup{#1}}
 }
+
+% Variational delta
+\newcommand*{\vd}{\mathopspace\text{\textdelta}}
 
 % Component of a vector
 \newcommand*{\comp}[2]{#1_{#2}}
