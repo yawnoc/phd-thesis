@@ -288,7 +288,7 @@ and viable domain
   \label{eq:re-entrant-viable-domain}
 \end{equation}
 The non-viable domain is shown
-in Figure~X. % TODO
+in Figure~\ref{fig:wedge_obtuse-viable}.
 Away from the corner but near the walls,
 the wedge solution may be approximated by the half-plane solution
 with contact angle~$\gamma$
@@ -302,6 +302,29 @@ therefore the terminal curve
 asymptotes to the wedges walls as one travels away from the wedge corner.
 The viable domain lies to the left of the terminal curve
 and hugs the wedge walls.
+
+\begin{figure}
+  \begin{minipage}[t]{0.5\textwidth}
+    \centredfigurecontent[width=0.8\textwidth]{%
+      wedge_obtuse-viable%
+    }{
+      Non-viable domain~$\Phi < 0$
+      for~$\alpha = \SI{135}{\degree}$ and~$\gamma = \SI{60}{\degree}$.
+    }
+  \end{minipage}
+  \begin{minipage}[t]{0.5\textwidth}
+    \centredfigurecontent[width=0.8\textwidth]{%
+      wedge_obtuse-traced-boundaries%
+    }{
+      Traced boundaries
+      for~$\alpha = \SI{135}{\degree}$ and~$\gamma = \SI{60}{\degree}$,
+      obtained by integrating~%
+        (\ref{eq:re-entrant-tracing-ode-arc-length-parametrisation-x})
+      \&~%
+        (\ref{eq:re-entrant-tracing-ode-arc-length-parametrisation-y}).
+    }
+  \end{minipage}
+\end{figure}
 
 Working in Cartesian coordinates as before,
 we have the derivatives
@@ -321,7 +344,7 @@ reduces to
     \label{eq:re-entrant-tracing-ode-arc-length-parametrisation-y}
 \end{important}
 and we obtain traced boundaries
-as in Figure~X % TODO
+as in Figure~\ref{fig:wedge_obtuse-traced-boundaries}
 by performing numerical integration
 from starting points within the viable domain.
 
