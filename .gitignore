@@ -5,6 +5,7 @@
 thesis.pdf
 
 *.aux
+*.lof
 *.log
 *.out
 *.synctex.gz
