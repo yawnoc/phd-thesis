@@ -1041,6 +1041,33 @@ Here we extend this result by computing a rough estimate
 for the rate of approach.
 
 \begin{figure}
+  \newcommand*{\subfigurewidth}{0.45\textwidth}
+  \newcommand*{\subfiguregraphicswidth}{0.7\textwidth}
+  \centering
+  \hspace*{\fill}
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent[width=\subfiguregraphicswidth]{%
+      wedge_acute-traced-boundaries-upper-branch%
+    }{%
+      Upper branch
+    }
+  \end{subfigure}
+    \hfill
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent[width=\subfiguregraphicswidth]{%
+      wedge_acute-traced-boundaries-lower-branch%
+    }{%
+      Lower branch
+    }
+  \end{subfigure}
+  \hspace*{\fill}
+  \caption{
+    Traced boundaries segregated by branch.
+  }
+  \label{fig:wedge_acute-traced-boundaries-branches}
+\end{figure}
+
+\begin{figure}
   \centredfigurecontent[width=0.3\textwidth]{%
     wedge_acute-wall-coordinates%
   }{
@@ -1048,7 +1075,8 @@ for the rate of approach.
   }
 \end{figure}
 
-Due to symmetry in the $y$-direction,
+Due to symmetry in the $y$-direction
+(Figure~\ref{fig:wedge_acute-traced-boundaries-branches}),
 it suffices to consider the upper branch
 near the top wall~$y = +x \tan\alpha$.
 We introduce \term{wall coordinates}~$(\xi, \eta)$,
