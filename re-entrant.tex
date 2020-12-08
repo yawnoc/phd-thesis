@@ -519,16 +519,52 @@ leading to flux function~(\ref{eq:moderate-flux-function-different-angle}),
 viability function~(\ref{eq:moderate-viability-function-different-angle}),
 and viable domain~(\ref{eq:moderate-viable-domain-different-angle}).
 
+\begin{figure}
+  \newcommand*{\subfigurewidth}{0.45\textwidth}
+  \newcommand*{\subfiguregraphicsheight}{1.4\textwidth}
+  \centering
+  \includegraphics[width=\textwidth, trim=0 -5 0 0]{%
+    wedge_acute-traced-boundaries-different-angle-legend%
+  }
+  \hspace*{\fill}
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent[width=!, height=\subfiguregraphicsheight]{%
+      wedge_obtuse-traced-boundaries-different-angle-less%
+    }{%
+      $\tr{\gamma} = \SI{58}{\degree} < \gamma$
+    }
+  \end{subfigure}
+    \hfill
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent[width=!, height=\subfiguregraphicsheight]{%
+      wedge_obtuse-traced-boundaries-different-angle-more%
+    }{%
+      $\tr{\gamma} = \SI{70}{\degree} > \gamma$
+    }
+  \end{subfigure}
+  \hspace*{\fill}
+  \caption{
+    Traced boundaries for~$\alpha = \SI{135}{\degree}$,
+    $\gamma = \SI{60}{\degree}$, and~$\tr{\gamma} \ne \gamma$,
+    obtained by integrating~%
+      (\ref{eq:re-entrant-tracing-ode-arc-length-parametrisation-x})
+    \&~%
+      (\ref{eq:re-entrant-tracing-ode-arc-length-parametrisation-y}).
+  }
+  \label{fig:wedge_obtuse-traced-boundaries-different-angle}
+\end{figure}
+
 For~$\tr{\gamma} < \gamma$
-(Figure~X), % TODO
+(Figure~\ref{fig:wedge_obtuse-traced-boundaries-different-angle-less}),
 we again have a viable domain
 that does not extend to infinity,
 and a rounding of the corner cannot be produced
 from the traced boundaries.
 
 For~$\tr{\gamma} > \gamma$
-(Figure~X), % TODO
-as in Section~\ref{sec:moderate.multiple.different},
+(Figure~\ref{fig:wedge_obtuse-traced-boundaries-different-angle-more}),
+the viable domain does extend to infinity,
+and as in Section~\ref{sec:moderate.multiple.different},
 the avoidance of corners leads us to
 a lone critical terminal point~$(x_0, 0)$
 at the intersection between the terminal curve
