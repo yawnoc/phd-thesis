@@ -631,11 +631,12 @@ and~(\ref{eq:moderate-offset-distance}).
 In practice, the two manifolds are computed
 by travelling in the opposite direction,
 i.e.~towards the line of symmetry~$y = 0$
-(Figure~X),
+(Figure~\ref{fig:wedge_obtuse-pseudo-rounding-construction-direction}),
 so that we have stability rather than instability.
 The two trajectories eventually intersect,
 and by symmetry this occurs at a point~$(x_\corn, 0)$.
-By trimming the excess and patching the two boundaries together,
+By trimming the excess and patching the two boundaries together
+(Figure~\ref{fig:wedge_obtuse-pseudo-rounding-construction-corner}),
 we obtain a curve which we shall call a \emph{pseudo-rounding} of the corner;
 while it is not a perfect rounding
 due to the corner formed at~$(x_\corn, 0)$,
@@ -643,6 +644,36 @@ the corner angle deviates in most cases
 by only a few degrees from a straight angle,
 and for practical purposes
 the corner may be regarded as a rounded one.
+
+\begin{figure}
+  \newcommand*{\subfigurewidth}{0.45\textwidth}
+  \newcommand*{\subfiguregraphicsheight}{1.15\textwidth}
+  \centering
+  \hspace*{\fill}
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent[width=!, height=\subfiguregraphicsheight]{%
+      wedge_obtuse-pseudo-rounding-construction-direction%
+    }{%
+      Start far from the corner
+      at the offset distance~$\xi = d (\gamma, \tr{\gamma})$
+      from the wall, and integrate towards the corner
+    }
+  \end{subfigure}
+    \hfill
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent[width=!, height=\subfiguregraphicsheight]{%
+      wedge_obtuse-pseudo-rounding-construction-corner%
+    }{%
+      Patch the traced boundaries together
+      by trimming and joining at~$(x_\corn, 0)$
+    }
+  \end{subfigure}
+  \hspace*{\fill}
+  \caption{
+    Construction of a pseudo-rounding for~$\tr{\gamma} > \gamma$.
+  }
+  \label{fig:wedge_obtuse-pseudo-rounding-construction}
+\end{figure}
 
 Thus, given a single numerical wedge solution~$T (x, y; \alpha, \gamma)$
 in a re-entrant wedge,
