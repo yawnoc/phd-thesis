@@ -1312,17 +1312,17 @@ the boundary condition~(\ref{eq:scaled-contact-boundary-condition}).
 Therefore,
 given a known solution~$T (x, y; \alpha, \gamma)$,
 we may in fact apply boundary tracing
-using a \emph{different} contact angle~$\tr{\gamma}$
+using a \emph{different} contact angle~$\gamma_\tr$
 in the boundary condition:
 \begin{important}{equation}
   \normalvec \dotp \del T (x, y; \alpha, \gamma) =
-    \cos\tr{\gamma}
+    \cos\gamma_\tr
     \sqrt{1 + \squarebr[\bulkysize]{\del T (x, y; \alpha, \gamma)}^2}.
   \label{eq:moderate-flux-boundary-condition-different-angle}
 \end{important}
 The resulting traced boundaries will be curves along which
 the contact condition is satisfied
-for the \term{tracing contact angle}~$\tr{\gamma}$,
+for the \term{tracing contact angle}~$\gamma_\tr$,
 rather than the original contact angle~$\gamma$.
 
 The procedure is the same
@@ -1330,15 +1330,15 @@ as that of Section~\ref{sec:moderate.nonlinear.tracing},
 only now we have flux function
 \begin{equation}
   F \ideq
-    \cos\tr{\gamma}
+    \cos\gamma_\tr
     \sqrt{1 + \squarebr[\bulkysize]{\del T (x, y; \alpha, \gamma)}^2},
   \label{eq:moderate-flux-function-different-angle}
 \end{equation}
 and viability function
 \begin{equation}
   \Phi \ideq
-    \sin^2\tr{\gamma} \squarebr[\bulkysize]{\del T (x, y; \alpha, \gamma)}^2
-    - \cos^2\tr{\gamma}.
+    \sin^2\gamma_\tr \squarebr[\bulkysize]{\del T (x, y; \alpha, \gamma)}^2
+    - \cos^2\gamma_\tr.
     \label{eq:moderate-viability-function-different-angle}
 \end{equation}
 With these modifications,
@@ -1350,17 +1350,17 @@ Figure~\ref{fig:wedge_acute-traced-boundaries-different-angle}
 shows the traced boundaries obtained by numerical integration
 from starting points within the new viable domain
 \begin{equation}
-  \norm[\bulkysize]{\del T (x, y; \alpha, \gamma)} \ge \cot\tr{\gamma}.
+  \norm[\bulkysize]{\del T (x, y; \alpha, \gamma)} \ge \cot\gamma_\tr.
   \label{eq:moderate-viable-domain-different-angle}
 \end{equation}
-In the $\tr{\gamma} < \gamma$~case,
+In the $\gamma_\tr < \gamma$~case,
 the viable domain does not extend to infinity,
 and roundings of the corner cannot be produced.
 Indeed away from the corner but near a wall,
 the known solution behaves like the half-plane solution
 with the original contact angle~$\gamma$;
 this solution does not have the steepness required
-for a tracing contact angle of~$\tr{\gamma}$,
+for a tracing contact angle of~$\gamma_\tr$,
 as asserted by~(\ref{eq:moderate-viable-domain-different-angle}).
 
 \begin{figure}
@@ -1374,7 +1374,7 @@ as asserted by~(\ref{eq:moderate-viable-domain-different-angle}).
     \centredfigurecontent[trim=0 -3 0 0]{%
       wedge_acute-traced-boundaries-different-angle-less%
     }{%
-      $\tr{\gamma} = \SI{50}{\degree} < \gamma$
+      $\gamma_\tr = \SI{50}{\degree} < \gamma$
     }
   \end{subfigure}
     \hfill
@@ -1382,13 +1382,13 @@ as asserted by~(\ref{eq:moderate-viable-domain-different-angle}).
     \centredfigurecontent{%
       wedge_acute-traced-boundaries-different-angle-more%
     }{%
-      $\tr{\gamma} = \SI{70}{\degree} > \gamma$
+      $\gamma_\tr = \SI{70}{\degree} > \gamma$
     }
   \end{subfigure}
   \hspace*{\fill}
   \caption{
     Traced boundaries for~$\alpha = \SI{40}{\degree}$,
-    $\gamma = \SI{60}{\degree}$, and~$\tr{\gamma} \ne \gamma$,
+    $\gamma = \SI{60}{\degree}$, and~$\gamma_\tr \ne \gamma$,
     obtained by integrating~%
       (\ref{eq:moderate-tracing-ode-arc-length-parametrisation-x})
     \&~%
@@ -1397,13 +1397,13 @@ as asserted by~(\ref{eq:moderate-viable-domain-different-angle}).
   \label{fig:wedge_acute-traced-boundaries-different-angle}
 \end{figure}
 
-Thus we restrict attention to the $\tr{\gamma} > \gamma$~case
+Thus we restrict attention to the $\gamma_\tr > \gamma$~case
 (Figure~\ref{fig:wedge_acute-traced-boundaries-different-angle-more}).
-Unlike the $\tr{\gamma} = \gamma$~case,
+Unlike the $\gamma_\tr = \gamma$~case,
 the original wedge walls are not traced boundaries,
 since the original contact angle~$\gamma$
 (along the walls)
-differs from the tracing contact angle~$\tr{\gamma}$
+differs from the tracing contact angle~$\gamma_\tr$
 (along the traced boundaries).
 The known solution near the corner takes on
 the locally planar%
@@ -1428,7 +1428,7 @@ reduces to
   \tder{y}{x} \asy
     \pm \tan\squarebr*{
       \sin^{-1}\roundbr*{
-        \frac{\cos\tr{\gamma}}{\cos\gamma} \sin\alpha
+        \frac{\cos\gamma_\tr}{\cos\gamma} \sin\alpha
       }
     },
   \label{eq:moderate-asymptotic-tracing-ode-different-angle}
@@ -1436,9 +1436,9 @@ reduces to
 and therefore the two traced boundaries through the corner
 will form a curved wedge with \term{reduced half-angle}
 \begin{equation}
-  \tr{\alpha} =
+  \alpha_\tr =
     \sin^{-1}\roundbr*{
-      \frac{\cos\tr{\gamma}}{\cos\gamma} \sin\alpha
+      \frac{\cos\gamma_\tr}{\cos\gamma} \sin\alpha
     }.
   \label{eq:moderate-reduced-half-angle}
 \end{equation}
@@ -1449,7 +1449,7 @@ For the original wedge and the traced (curved) wedge
 to admit the same locally planar solution~$T$,
 we must therefore have
 \begin{equation}
-  \frac{\sin\tr{\alpha}}{\cos\tr{\gamma}} = k = \frac{\sin\alpha}{\cos\gamma}.
+  \frac{\sin\alpha_\tr}{\cos\gamma_\tr} = k = \frac{\sin\alpha}{\cos\gamma}.
   \label{eq:moderate-constant-k-different-angle}
 \end{equation}
 
@@ -1462,7 +1462,7 @@ the intersection~$(x_0, 0)$ between the
 terminal curve and the $x$-axis.
 Here $x = x_0$~is the solution to
 \begin{equation}
-  \eval*{-\pder{T}{x}}_{y=0} = \cot\tr{\gamma}
+  \eval*{-\pder{T}{x}}_{y=0} = \cot\gamma_\tr
   \label{eq:moderate-critical-terminal-point-different-angle}
 \end{equation}
 rather than~(\ref{eq:moderate-critical-terminal-point}).
@@ -1486,7 +1486,7 @@ which extends to infinity.
       wedge_acute-terminal-points-different-angle%
     }{
       $T$-contours which intersect the terminal curve~$\Phi = 0$
-      for~$\tr{\gamma} > \gamma$.
+      for~$\gamma_\tr > \gamma$.
     }
   \end{minipage}
   \begin{minipage}[t]{\minipagewidth}
@@ -1494,7 +1494,7 @@ which extends to infinity.
       wedge_acute-traced-boundaries-hyperbolic-different-angle%
     }{
       Traced boundaries through the critical terminal point~$(x_0, 0)$
-      for~$\tr{\gamma} > \gamma$.
+      for~$\gamma_\tr > \gamma$.
     }
   \end{minipage}
 \end{figure}
@@ -1505,7 +1505,7 @@ which extends to infinity.
       wedge_acute-different-angle-offset-top%
     }{%
       Top view of the candidate boundary approaching an offset wedge
-      for~$\tr{\gamma} > \gamma$.
+      for~$\gamma_\tr > \gamma$.
     }
   \end{minipage}
   \begin{minipage}[t]{0.5\textwidth}
@@ -1513,12 +1513,12 @@ which extends to infinity.
       Side view of the half-plane approximation~%
         (\ref{eq:moderate-half-plane-solution-near-wall-repeat})
       showing the heights and offset
-      corresponding to~$\gamma$ and~$\tr{\gamma}$.
+      corresponding to~$\gamma$ and~$\gamma_\tr$.
     }
   \end{minipage}
 \end{figure}
 
-In contrast to the $\tr{\gamma} = \gamma$ case,
+In contrast to the $\gamma_\tr = \gamma$ case,
 the candidate boundary asymptotes
 not to the original wedge~$y = \pm x \tan\alpha$,
 but to a wedge offset from the original
@@ -1542,21 +1542,21 @@ i.e.
   \label{eq:half-plane-height-repeat}
 \end{equation}
 corresponding to the original contact angle~$\gamma$.
-For the tracing contact angle~$\tr{\gamma}$,
+For the tracing contact angle~$\gamma_\tr$,
 we instead have the wall height
 \begin{equation}
-  \tr{h} = \sqrt{2 (1 - \sin\tr{\gamma})},
+  h_\tr = \sqrt{2 (1 - \sin\gamma_\tr)},
   \label{eq:half-plane-height-different-angle}
 \end{equation}
 and we see that the candidate boundary approaches the offset wedge
 \begin{equation}
-  \xi = d (\gamma, \tr{\gamma}),
+  \xi = d (\gamma, \gamma_\tr),
   \label{eq:moderate-offset-wedge}
 \end{equation}
 where
 \begin{equation}
-  d (\gamma, \tr{\gamma}) \ideq
-    \cosh^{-1} \roundbr*{\frac{2}{\tr{h}}} - \sqrt{4 - {\tr{h}}^2}
+  d (\gamma, \gamma_\tr) \ideq
+    \cosh^{-1} \roundbr*{\frac{2}{h_\tr}} - \sqrt{4 - {h_\tr}^2}
     - \cosh^{-1} \roundbr*{\frac{2}{h}} + \sqrt{4 - h^2}
   \label{eq:moderate-offset-distance}
 \end{equation}
@@ -1567,11 +1567,11 @@ is the offset distance
   \centredfigurecontent[width=0.4\textwidth]{%
     wedge_acute-candidates%
   }{%
-    One-parameter family of candidate boundaries for~$\tr{\gamma} \ge \gamma$,
+    One-parameter family of candidate boundaries for~$\gamma_\tr \ge \gamma$,
     all obtained from the wedge solution
     for~$\alpha = \SI{40}{\degree}$ and~$\gamma = \SI{60}{\degree}$.
     From left to right:
-    $\tr{\gamma} =
+    $\gamma_\tr =
       \SI{60}{\degree}, \SI{65}{\degree}, \dots, \SI{85}{\degree}$.
   }
 \end{figure}
@@ -1580,18 +1580,18 @@ Thus, given a single numerical wedge solution~$T (x, y; \alpha, \gamma)$,
 boundary tracing may be used to generate a one-parameter family
 of smooth candidate boundaries,
 for corner rounding
-with a tracing contact angle of~$\tr{\gamma} \ge \gamma$
+with a tracing contact angle of~$\gamma_\tr \ge \gamma$
 (Figure~\ref{fig:wedge_acute-candidates}).
 Admittedly, in a physical application
-it is the angle~$\tr{\gamma}$ which is prescribed
+it is the angle~$\gamma_\tr$ which is prescribed
 (e.g.~for a given choice of wall material and liquid)
 rather than~$\gamma$;
 therefore one would still need to compute wedge solutions
 for multiple~$\gamma$
 in order to obtain multiple candidate boundaries
-for the given~$\tr{\gamma}$.
+for the given~$\gamma_\tr$.
 However, since we are interested in
-all possible values of~$\tr{\gamma}$ simultaneously,
+all possible values of~$\gamma_\tr$ simultaneously,
 the numerical boundary tracing procedure
 still has merit in terms of overall efficiency.
 Whereas a conventional analysis of $N$~corner roundings
@@ -1606,16 +1606,16 @@ and $N$~ODEs (boundary tracing).
 While we have established that
 each numerical wedge solution~$T (x, y; \alpha, \gamma)$
 gives rise to a family of candidate boundaries
-for a tracing contact angle of~$\tr{\gamma} \ge \gamma$,
+for a tracing contact angle of~$\gamma_\tr \ge \gamma$,
 it remains to be seen whether they are of practical use.
 
 \begin{figure}
   \centredfigurecontent[width=0.4\textwidth]{%
     wedge_acute-candidates-by-tracing-angle%
   }{%
-    Candidate boundaries for~$\pi/2 - \alpha \le \gamma \le \tr{\gamma}$,
+    Candidate boundaries for~$\pi/2 - \alpha \le \gamma \le \gamma_\tr$,
     all corresponding to the physically prescribed angles~%
-    $\alpha = \SI{40}{\degree}$ and~$\tr{\gamma} = \SI{70}{\degree}$.
+    $\alpha = \SI{40}{\degree}$ and~$\gamma_\tr = \SI{70}{\degree}$.
     From right to left:
     $\gamma = \SI{50}{\degree}, \SI{55}{\degree}, \dots, \SI{70}{\degree}$.
   }
@@ -1660,17 +1660,17 @@ it remains to be seen whether they are of practical use.
     }
   \end{subfigure}
   \caption{
-    Candidate boundaries for~$\pi/2 - \alpha \le \gamma \le \tr{\gamma}$
+    Candidate boundaries for~$\pi/2 - \alpha \le \gamma \le \gamma_\tr$
     in $(\offset{x}, y)$~coordinates,
     all corresponding to the physically prescribed contact angle~%
-    $\tr{\gamma} = \SI{75}{\degree}$.
+    $\gamma_\tr = \SI{75}{\degree}$.
   }
   \label{fig:wedge_acute-candidates-offset}
 \end{figure}
 
-Since physical applications fix~$\tr{\gamma}$ rather than~$\gamma$,
+Since physical applications fix~$\gamma_\tr$ rather than~$\gamma$,
 we begin by grouping the generated candidate boundaries
-according to~$\tr{\gamma}$
+according to~$\gamma_\tr$
 (Figure~\ref{fig:wedge_acute-candidates-by-tracing-angle})
 rather than~$\gamma$
 (Figure~\ref{fig:wedge_acute-candidates}).
@@ -1679,7 +1679,7 @@ the candidate boundaries still approach wedges
 with distinct perpendicular offsets~(\ref{eq:moderate-offset-distance}).
 Applying the horizontal translation
 \begin{equation}
-  \offset{x} = x - \frac{d (\gamma, \tr{\gamma})}{\sin\alpha}
+  \offset{x} = x - \frac{d (\gamma, \gamma_\tr)}{\sin\alpha}
   \label{eq:moderate-horizontal-translation}
 \end{equation}
 to each candidate boundary
@@ -1693,9 +1693,9 @@ Immediately we notice the following:
   \item
     For $\alpha$~less than about~$\SI{45}{\degree}$
     (Figure~\ref{fig:wedge_acute-candidates-offset-alpha-30_degree}),
-    the candidate boundaries for~$\tr{\gamma} > \gamma$
+    the candidate boundaries for~$\gamma_\tr > \gamma$
     actually bulge outside of the wedge~$y = \pm \offset{x} \tan\alpha$.
-    Only for~$\tr{\gamma} = \gamma$ is there no bulge.
+    Only for~$\gamma_\tr = \gamma$ is there no bulge.
     In a situation where the wedge corner represents a container
     that can only be modified by padding the interior
     with additional wall material,
@@ -1721,9 +1721,9 @@ Immediately we notice the following:
     for the roundings to be considered different in a practical sense.
     We note that the lack of spread is not entirely unexpected.
     In the linear Helmholtz limit~$\gamma \approx \pi/2$,
-    the use of~$\tr{\gamma} \ne \gamma$ for boundary tracing
+    the use of~$\gamma_\tr \ne \gamma$ for boundary tracing
     amounts to scaling the known solution
-    by a factor of~$\cos\gamma / {\cos\tr{\gamma}}$.
+    by a factor of~$\cos\gamma / {\cos\gamma_\tr}$.
     As noted by Anderson~\cite[(7.8)]{
       anderson-2002-thesis-boundary-tracing-pdes
     },
@@ -1765,7 +1765,7 @@ with radius~$R$ is given by
   R = \frac{\offset{x}_0 \sin\alpha}{1 - \sin\alpha}.
   \label{eq:moderate-well-approximating-rounding-radius}
 \end{equation}
-Thus, given any pair of parameters~$(\alpha, \tr{\gamma})$
+Thus, given any pair of parameters~$(\alpha, \gamma_\tr)$
 (for which there is no bulging),
 the multiple corner roundings corresponding to different values of~$\gamma$
 may be used to construct a table of rounding radii
@@ -1816,7 +1816,7 @@ one cannot predetermine the shape of the resulting traced boundaries.
       (\ref{eq:moderate-well-approximating-rounding-radius})
     and the resulting height rise in the rounded corner,
     all corresponding to the physically prescribed angles~%
-    $\alpha = \SI{60}{\degree}$ and~$\tr{\gamma} = \SI{75}{\degree}$.
+    $\alpha = \SI{60}{\degree}$ and~$\gamma_\tr = \SI{75}{\degree}$.
     The original contact angle~$\gamma$ is shown for reference.
   }
   \label{tab:convex-wedge-well-approximating}
@@ -1827,7 +1827,7 @@ one cannot predetermine the shape of the resulting traced boundaries.
     wedge_acute-height-rise-profiles%
   }{
     Height-rise profiles (parametrised by arc length)
-    for~$\alpha = \SI{60}{\degree}$ and~$\tr{\gamma} = \SI{75}{\degree}$,
+    for~$\alpha = \SI{60}{\degree}$ and~$\gamma_\tr = \SI{75}{\degree}$,
     along the original wedge~\figurestyle{grey},
     and along the constructed roundings of the corner
     for~$\gamma = \SI{75}{\degree}, \SI{30}{\degree}$~%
@@ -1845,7 +1845,7 @@ one cannot predetermine the shape of the resulting traced boundaries.
   }{
     Comparison of results (for rounding radius versus height rise)
     between boundary tracing and conventional approaches,
-    for~$\alpha = \SI{60}{\degree}$ and~$\tr{\gamma} = \SI{75}{\degree}$.
+    for~$\alpha = \SI{60}{\degree}$ and~$\gamma_\tr = \SI{75}{\degree}$.
     Note the exaggerated vertical scale.
   }
 \end{figure}
@@ -1859,7 +1859,7 @@ i.e.~by numerically solving the capillary BVP~%
 in circularly rounded wedges of varying rounding radii.
 Figure~\ref{fig:wedge_acute-radius-height-rise-comparison}
 displays such a comparison
-for~$(\alpha, \tr{\gamma}) = (\SI{60}{\degree}, \SI{75}{\degree})$.
+for~$(\alpha, \gamma_\tr) = (\SI{60}{\degree}, \SI{75}{\degree})$.
 The two approaches do not give exactly the same height rises
 because the corner roundings produced by boundary tracing
 are not perfectly circular.

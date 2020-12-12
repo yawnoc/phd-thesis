@@ -502,7 +502,7 @@ and no new domains can be constructed.
 \label{sec:re-entrant.rounding.different}
 
 The bleak outlook persists
-even when a different tracing contact angle~$\tr{\gamma}$ is used
+even when a different tracing contact angle~$\gamma_\tr$ is used
 to the contact angle~$\gamma$ of the known solution.
 As in Section~\ref{sec:moderate.multiple.different},
 we replace the contact condition~(\ref{eq:re-entrant-flux-boundary-condition})
@@ -511,7 +511,7 @@ with the more general~%
 i.e.
 \begin{important}{equation}
   \normalvec \dotp \del T (x, y; \alpha, \gamma) =
-    \cos\tr{\gamma}
+    \cos\gamma_\tr
     \sqrt{1 + \squarebr[\bulkysize]{\del T (x, y; \alpha, \gamma)}^2},
   \label{eq:re-entrant-flux-boundary-condition-different-angle}
 \end{important}
@@ -531,7 +531,7 @@ and viable domain~(\ref{eq:moderate-viable-domain-different-angle}).
     \centredfigurecontent[width=!, height=\subfiguregraphicsheight]{%
       wedge_obtuse-traced-boundaries-different-angle-less%
     }{%
-      $\tr{\gamma} = \SI{58}{\degree} < \gamma$
+      $\gamma_\tr = \SI{58}{\degree} < \gamma$
     }
   \end{subfigure}
     \hfill
@@ -539,13 +539,13 @@ and viable domain~(\ref{eq:moderate-viable-domain-different-angle}).
     \centredfigurecontent[width=!, height=\subfiguregraphicsheight]{%
       wedge_obtuse-traced-boundaries-different-angle-more%
     }{%
-      $\tr{\gamma} = \SI{63}{\degree} > \gamma$
+      $\gamma_\tr = \SI{63}{\degree} > \gamma$
     }
   \end{subfigure}
   \hspace*{\fill}
   \caption{
     Traced boundaries for~$\alpha = \SI{135}{\degree}$,
-    $\gamma = \SI{60}{\degree}$, and~$\tr{\gamma} \ne \gamma$,
+    $\gamma = \SI{60}{\degree}$, and~$\gamma_\tr \ne \gamma$,
     obtained by integrating~%
       (\ref{eq:re-entrant-tracing-ode-arc-length-parametrisation-x})
     \&~%
@@ -554,14 +554,14 @@ and viable domain~(\ref{eq:moderate-viable-domain-different-angle}).
   \label{fig:wedge_obtuse-traced-boundaries-different-angle}
 \end{figure}
 
-For~$\tr{\gamma} < \gamma$
+For~$\gamma_\tr < \gamma$
 (Figure~\ref{fig:wedge_obtuse-traced-boundaries-different-angle-less}),
 we again have a viable domain
 that does not extend to infinity,
 and a rounding of the corner cannot be produced
 from the traced boundaries.
 
-For~$\tr{\gamma} > \gamma$
+For~$\gamma_\tr > \gamma$
 (Figure~\ref{fig:wedge_obtuse-traced-boundaries-different-angle-more}),
 the viable domain does extend to infinity,
 and as in Section~\ref{sec:moderate.multiple.different},
@@ -571,12 +571,12 @@ at the intersection between the terminal curve
 and the line of symmetry~$y = 0$,
 with $x = x_0$~being the unique solution to
 \begin{equation}
-  \eval*{-\pder{T}{x}}_{y=0} = \cot\tr{\gamma}.
+  \eval*{-\pder{T}{x}}_{y=0} = \cot\gamma_\tr.
   \label{eq:re-entrant-critical-terminal-point-different-angle}
 \end{equation}
 Unfortunately $(x_0, 0)$~is of elliptic type;
 the local $T$-contour lies toward the non-viable side of the terminal curve
-(qualitatively no different to the $\tr{\gamma} = \gamma$~case,
+(qualitatively no different to the $\gamma_\tr = \gamma$~case,
 Figure~\ref{fig:wedge_obtuse-terminal-points}),
 so we cannot construct a rounding of the corner.
 
@@ -602,7 +602,7 @@ so we cannot construct a rounding of the corner.
   \end{subfigure}
   \hspace*{\fill}
   \caption{
-    Traced boundaries~\figurestyle{grey} for~$\tr{\gamma} > \gamma$.
+    Traced boundaries~\figurestyle{grey} for~$\gamma_\tr > \gamma$.
     For each branch, the black trajectory extends to infinity
     but is unstable with respect to the direction of travel shown.
   }
@@ -613,18 +613,18 @@ While the situation appears hopeless,
 useful results may yet be gleaned
 by relaxing the absolute requirement of smoothness.
 In Section~\ref{sec:re-entrant.rounding.tracing},
-we saw for~$\tr{\gamma} = \gamma$ that the original wedge walls were
+we saw for~$\gamma_\tr = \gamma$ that the original wedge walls were
 the only traced boundaries extending to infinity,
 and that they were unstable with respect to the direction of travel
 in Figure~\ref{fig:wedge_obtuse-traced-boundaries-branches}.
-In the present situation~$\tr{\gamma} > \gamma$,
+In the present situation~$\gamma_\tr > \gamma$,
 each branch again has an unstable manifold extending to infinity
 (Figure~\ref{fig:wedge_obtuse-traced-boundaries-different-angle-branches}),
 but these manifolds are not the walls
 (nor do they approach them).
 By the same reasoning as in Section~\ref{sec:moderate.multiple.different},
 the two manifolds instead approach
-a new wedge~$\xi = d (\gamma, \tr{\gamma})$
+a new wedge~$\xi = d (\gamma, \gamma_\tr)$
 offset from the walls~$\xi = 0$;
 see~(\ref{eq:moderate-offset-wedge})
 and~(\ref{eq:moderate-offset-distance}).
@@ -655,7 +655,7 @@ the corner may be regarded as a rounded one.
       wedge_obtuse-pseudo-rounding-construction-direction%
     }{%
       Start far from the corner
-      at the offset distance~$\xi = d (\gamma, \tr{\gamma})$
+      at the offset distance~$\xi = d (\gamma, \gamma_\tr)$
       from the wall, and integrate towards the corner
     }
   \end{subfigure}
@@ -670,7 +670,7 @@ the corner may be regarded as a rounded one.
   \end{subfigure}
   \hspace*{\fill}
   \caption{
-    Construction of a pseudo-rounding for~$\tr{\gamma} > \gamma$.
+    Construction of a pseudo-rounding for~$\gamma_\tr > \gamma$.
   }
   \label{fig:wedge_obtuse-pseudo-rounding-construction}
 \end{figure}
@@ -679,9 +679,9 @@ Thus, given a single numerical wedge solution~$T (x, y; \alpha, \gamma)$
 in a re-entrant wedge,
 a one-parameter family of pseudo-roundings may be generated
 using boundary tracing,
-corresponding to different contact angles~$\tr{\gamma} > \gamma$
+corresponding to different contact angles~$\gamma_\tr > \gamma$
 (Figure~\ref{fig:wedge_obtuse-pseudo-roundings}).
-In cases where~$\tr{\gamma} > \gamma + \SI{10}{\degree}$,
+In cases where~$\gamma_\tr > \gamma + \SI{10}{\degree}$,
 the corner~$(x_\corn, 0)$ lies very near
 to the critical terminal point~$(x_0, 0)$,
 and the pseudo-rounding is practically indistinguishable
@@ -691,20 +691,20 @@ from a perfectly smooth rounding.
   \centredfigurecontent[width=0.4\textwidth]{%
     wedge_obtuse-pseudo-roundings%
   }{%
-    One-parameter family of pseudo-roundings for~$\tr{\gamma} > \gamma$,
+    One-parameter family of pseudo-roundings for~$\gamma_\tr > \gamma$,
     all obtained from the wedge solution
     for~$\alpha = \SI{135}{\degree}$ and~$\gamma = \SI{60}{\degree}$.
     From left to right:
-    $\tr{\gamma} =
+    $\gamma_\tr =
       \SI{65}{\degree}, \SI{70}{\degree}, \dots, \SI{85}{\degree}$.
   }
 \end{figure}
 
 As in Section~\ref{sec:moderate.multiple.effect},
 we observe that in physical problems,
-it is the contact angle~$\tr{\gamma}$ which is given,
+it is the contact angle~$\gamma_\tr$ which is given,
 as opposed to~$\gamma$;
-therefore we group the pseudo-roundings by~$\tr{\gamma}$
+therefore we group the pseudo-roundings by~$\gamma_\tr$
 rather than~$\gamma$.
 We then apply the horizontal offset~(\ref{eq:moderate-horizontal-translation})
 so that the curves can be compared as pseudo-roundings
@@ -725,10 +725,10 @@ as shown in Figure~X. % TODO
   \centredfigurecontent[width=0.4\textwidth]{%
     wedge_obtuse-pseudo-roundings-offset%
   }{%
-    Pseudo-roundings for~$\gamma < \tr{\gamma}$
+    Pseudo-roundings for~$\gamma < \gamma_\tr$
     in $(\offset{x}, y)$~coordinates,
     all corresponding to the physically prescribed contact angle~%
-    $\tr{\gamma} = \SI{60}{\degree}$.
+    $\gamma_\tr = \SI{60}{\degree}$.
     From left to right:
     $\gamma = \SI{10}{\degree}, \SI{20}{\degree}, \dots, \SI{50}{\degree}$.
   }
@@ -757,24 +757,24 @@ the corners that we have hitherto avoided.
 
 Consider Figure~X, % TODO
 which shows the two branches of traced boundaries
-for a tracing contact angle of~$\tr{\gamma}$
+for a tracing contact angle of~$\gamma_\tr$
 (greater than the contact angle~$\gamma$ of the known solution~$T$),
 along with the $T$-contour
 \begin{equation}
-  T = \tr{h},
+  T = h_\tr,
   \label{eq:re-entrant-tracing-contour}
 \end{equation}
-where $\tr{h}$~is the half-plane wall height~%
+where $h_\tr$~is the half-plane wall height~%
   (\ref{eq:half-plane-height-different-angle})
-for the contact angle~$\tr{\gamma}$.
-We assume that $\tr{\gamma}$~is large enough
+for the contact angle~$\gamma_\tr$.
+We assume that $\gamma_\tr$~is large enough
 that the $T$-contour steers completely clear of the wedge corner.
 Like the pseudo-roundings of Section~\ref{sec:re-entrant.rounding.different},
 the $T$-contour~(\ref{eq:re-entrant-tracing-contour})
-approaches the offset wedge~$\xi = d (\gamma, \tr{\gamma})$
+approaches the offset wedge~$\xi = d (\gamma, \gamma_\tr)$
 as one travels away from the line of symmetry~$y = 0$.
 It would be nice to have the $T$-contour be a rounding of the corner
-(achieving a completely uniform height rise of~$\tr{h}$),
+(achieving a completely uniform height rise of~$h_\tr$),
 but of course the $T$-contour is not a traced boundary.
 However, we observe that the $T$-contour may be approximated
 by a serrated path made from traced boundary portions
@@ -782,7 +782,7 @@ as shown in Figure~X. % TODO
 Taking the region to the right of the path as interior,
 we obtain a new domain
 for which the height-rise profile is approximately uniform
-with height~$\tr{h}$;
+with height~$h_\tr$;
 the finer the serrations,
 the closer the profile to being completely level.
 
@@ -837,10 +837,10 @@ that the $T$-contour and the serrations themselves
 may be regarded as straight
 (Figure~X). % TODO
 Since the serrated path is constructed from traced boundaries
-with a tracing contact angle of~$\tr{\gamma}$,
+with a tracing contact angle of~$\gamma_\tr$,
 we have
 \begin{equation}
-  \normalvec \dotp \frac{\del T}{\sqrt{1 + (\del T)^2}} = \cos\tr{\gamma}
+  \normalvec \dotp \frac{\del T}{\sqrt{1 + (\del T)^2}} = \cos\gamma_\tr
   \label{eq:re-entrant-contact-boundary-condition-serrated}
 \end{equation}
 along the serrated path.
@@ -861,7 +861,7 @@ With $\theta$~denoting the angle between~$\normalvec$ and~$\del T$,%
 }
 (\ref{eq:re-entrant-contact-boundary-condition-serrated}) becomes
 \begin{equation}
-  \frac{\norm{\del T} \cos\theta}{\sqrt{1 + (\del T)^2}} = \cos\tr{\gamma},
+  \frac{\norm{\del T} \cos\theta}{\sqrt{1 + (\del T)^2}} = \cos\gamma_\tr,
   \label{eq:re-entrant-contact-boundary-condition-serrated-simplified}
 \end{equation}
 and since $\normalvec_\eff$~is parallel to~$\del T$,
@@ -883,11 +883,11 @@ and using~(\ref{eq:re-entrant-contact-boundary-condition-serrated-simplified})
 and~(\ref{eq:re-entrant-contact-boundary-condition-contour-simplified}),
 we therefore have
 \begin{important}{equation}
-  \rho = \frac{1}{\cos\theta} = \frac{\cos\gamma_\eff}{\cos\tr{\gamma}}
+  \rho = \frac{1}{\cos\theta} = \frac{\cos\gamma_\eff}{\cos\gamma_\tr}
   \label{eq:roughness-cosine-ratio}
 \end{important}
 relating the roughness factor~$\rho$,
-the true contact angle~$\tr{\gamma}$ along the serrated boundary,
+the true contact angle~$\gamma_\tr$ along the serrated boundary,
 and the effective contact angle~$\gamma_\eff$
 along the $T$-contour~(\ref{eq:re-entrant-tracing-contour}).
 
@@ -895,10 +895,10 @@ Note that the roughness factor is always at least unity;
 a perfectly smooth boundary has~$\rho = 1$,
 a rough boundary has~$\rho > 1$,
 and a fractal boundary has~$\rho = \infty$.
-Thus, for a true contact angle of~$\tr{\gamma}$ which is acute,
+Thus, for a true contact angle of~$\gamma_\tr$ which is acute,
 roughness reduces the effective value of contact angle to
 \begin{equation}
-  \gamma_\eff = \cos^{-1} \roundbr*{\rho \cos\tr{\gamma}}.
+  \gamma_\eff = \cos^{-1} \roundbr*{\rho \cos\gamma_\tr}.
   \label{eq:effective-contact-angle}
 \end{equation}
 
@@ -923,7 +923,7 @@ as follows:
     and the first equality in~(\ref{eq:roughness-cosine-ratio}),
     we see that the required amount of roughness along the $T$-contour is
     \begin{equation}
-      \rho = \frac{\norm{\del T}}{\cos\tr{\gamma} \sqrt{1 + (\del T)^2}}.
+      \rho = \frac{\norm{\del T}}{\cos\gamma_\tr \sqrt{1 + (\del T)^2}}.
       \label{eq:roughness-required}
     \end{equation}
     This is a function of position
@@ -972,11 +972,11 @@ along the $T$-contour.
 At the lower end we require~$\varphi \ge \cos^{-1} (1 / \rho_0)$;
 we must (at the very least) be able to achieve the maximum required roughness
 if the grooves are packed at full density (i.e.~zero spacing, $\lambda = 0$).
-At the upper end we ought to have~$\varphi < \tr{\gamma}$;
+At the upper end we ought to have~$\varphi < \gamma_\tr$;
 each groove is a wedge with half-angle~$\pi/2 - \varphi$,
 and to avoid the infinite height rise of the small wedge regime
 and the infinite corner slope of the borderline case,
-we need~$\pi/2 - \varphi < \pi/2 - \tr{\gamma}$.
+we need~$\pi/2 - \varphi < \pi/2 - \gamma_\tr$.
 
 Figure~X % TODO
 shows an example of a groove distribution
@@ -995,7 +995,7 @@ to ensure that there is sufficient refinement near the grooves
 (which have width~$\sigma$).
 The capillary BVP~(\ref{eq:laplace-young-diffusion})
 \&~(\ref{eq:contact-boundary-condition-diffusion})
-(with contact angle~$\tr{\gamma}$ rather than~$\gamma$)
+(with contact angle~$\gamma_\tr$ rather than~$\gamma$)
 is then solved.
 The resulting height-rise profiles are shown
 in Figure~X. % TODO
