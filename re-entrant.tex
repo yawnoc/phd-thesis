@@ -719,7 +719,7 @@ on the effect of corner rounding on height rise.
 By evaluating the relevant known solution
 along each pseudo-rounding,
 we may obtain a family of height-rise profiles
-as shown in Figure~X. % TODO
+as shown in Figure~\ref{fig:wedge_obtuse-height-rise-profiles}.
 
 \begin{figure}
   \centredfigurecontent[width=0.4\textwidth]{%
@@ -734,11 +734,27 @@ as shown in Figure~X. % TODO
   }
 \end{figure}
 
+\begin{figure}
+  \centredfigurecontent[width=0.6\textwidth]{%
+    wedge_obtuse-height-rise-profiles%
+  }{
+    Height-rise profiles (parametrised by arc length)
+    for~$\alpha = \SI{135}{\degree}$ and~$\gamma_\tr = \SI{60}{\degree}$,
+    along the original wedge~\figurestyle{grey},
+    and along the constructed psuedo-roundings of the corner
+    for~$\gamma = \SI{10}{\degree}, \SI{40}{\degree}$~%
+      \figurestyle{solid black, top to bottom along~$s = 0$}.
+    The wall height~(\ref{eq:half-plane-height-different-angle})
+    is shown for reference~\figurestyle{dotted}.
+    Note the exaggerated vertical scale.
+  }
+\end{figure}
+
 \section{Dip-coating}
 \label{sec:re-entrant.dip-coating}
 
 While corner rounding reduces the amount of arching near a corner
-(as we have seen in Figure~X), % TODO
+(as we have just seen in Figure~\ref{fig:wedge_obtuse-height-rise-profiles}),
 it is not able to completely eliminate it.
 In the practical dip-coating problem of
 Figure~\ref{fig:dip_coating},
