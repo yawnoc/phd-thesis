@@ -771,7 +771,37 @@ the corners that we have hitherto avoided.
 \subsection{Roughness}
 \label{sec:re-entrant.dip-coating.roughness}
 
-Consider Figure~X, % TODO
+\begin{figure}
+  \newcommand*{\subfigurewidth}{0.45\textwidth}
+  \newcommand*{\subfiguregraphicswidth}{0.9\textwidth}
+  \centering
+  \hspace*{\fill}
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent[width=\subfiguregraphicswidth]{%
+      wedge_obtuse-traced-boundaries-approximation-contour%
+    }{%
+      $T$-contour~(\ref{eq:re-entrant-tracing-contour})~\figurestyle{dotted}
+    }
+  \end{subfigure}
+    \hfill
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent[width=\subfiguregraphicswidth]{%
+      wedge_obtuse-traced-boundaries-approximation-serrated%
+    }{%
+      Approximating serrated path~\figurestyle{thick black}
+    }
+  \end{subfigure}
+  \hspace*{\fill}
+  \caption{
+    Approximation of a $T$-contour
+    by patching together traced boundaries~\figurestyle{grey}
+    for~$\alpha = \SI{135}{\degree}$, $\gamma = \SI{20}{\degree}$,
+    and~$\gamma_\tr = \SI{55}{\degree}$.
+  }
+  \label{fig:wedge_obtuse-traced-boundaries-approximation}
+\end{figure}
+
+Consider Figure~\ref{fig:wedge_obtuse-traced-boundaries-approximation-contour},
 which shows the two branches of traced boundaries
 for a tracing contact angle of~$\gamma_\tr$
 (greater than the contact angle~$\gamma$ of the known solution~$T$),
@@ -794,7 +824,8 @@ It would be nice to have the $T$-contour be a rounding of the corner
 but of course the $T$-contour is not a traced boundary.
 However, we observe that the $T$-contour may be approximated
 by a serrated path made from traced boundary portions
-as shown in Figure~X. % TODO
+as shown in
+Figure~\ref{fig:wedge_obtuse-traced-boundaries-approximation-serrated}.
 Taking the region to the right of the path as interior,
 we obtain a new domain
 for which the height-rise profile is approximately uniform
