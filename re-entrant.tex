@@ -1058,15 +1058,49 @@ and to avoid the infinite height rise of the small wedge regime
 and the infinite corner slope of the borderline case,
 we need~$\pi/2 - \varphi < \pi/2 - \gamma_\tr$.
 
-Figure~X % TODO
+\begin{figure}
+  \newcommand*{\subfigurewidth}{0.45\textwidth}
+  \newcommand*{\subfiguregraphicswidth}{0.8\textwidth}
+  \centering
+  \hspace*{\fill}
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent[width=\subfiguregraphicswidth]{%
+      wedge_obtuse-with-grooves-domain%
+    }{%
+      Object~\figurestyle{grey}
+      and liquid region~\figurestyle{white}
+    }
+  \end{subfigure}
+    \hfill
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent[width=\subfiguregraphicswidth]{%
+      wedge_obtuse-with-grooves-mesh%
+    }{%
+      Finite element mesh
+    }
+  \end{subfigure}
+  \hspace*{\fill}
+  \caption{
+    Regular grooves of width~$\sigma = 0.1$
+    positioned to achieve the roughness profile
+    of Figure~\ref{fig:wedge_obtuse-roughness-profile-contour},
+    for an object rounded in the shape
+    of the $T$-contour~(\ref{eq:re-entrant-tracing-contour}).
+  }
+  \label{fig:wedge_obtuse-with-grooves}
+\end{figure}
+
+Figure~\ref{fig:wedge_obtuse-with-grooves-domain}
 shows an example of a groove distribution
-which achieves the roughness profile~(\ref{eq:roughness-required}).
+which approximately achieves the roughness profile
+of Figure~\ref{fig:wedge_obtuse-roughness-profile-contour}.
 The groove spacing is smaller (and the density higher) near the centre
 where more roughness is required.
 
-Our proposed method of grooves can be verified numerically.
+Our proposed method of etching regular grooves at variable spacing
+can be verified numerically.
 The region occupied by the liquid is discretised
-as in Figure~X % TODO
+as in Figure~\ref{fig:wedge_obtuse-with-grooves-mesh}
 using the minimalistic refinement strategy
 of Section~\ref{sec:moderate.nonlinear.numerical.half-plane},
 with fine length scale~$\ell = \sigma / 5$ % TODO
@@ -1079,7 +1113,7 @@ The capillary BVP~(\ref{eq:laplace-young-diffusion})
 is then solved.
 The resulting height-rise profiles are shown
 in Figure~\ref{fig:wedge_obtuse-height-rise-profiles-grooves}.
-Indeed the profiles are flat with height~(\ref{eq:re-entrant-tracing-contour})
+Indeed the profiles are level with height~(\ref{eq:re-entrant-tracing-contour})
 except at the grooves themselves;
 this is because each groove itself is a moderate wedge
 admitting a locally planar height rise.
