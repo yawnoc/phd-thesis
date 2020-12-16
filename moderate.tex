@@ -427,23 +427,30 @@ and nonlinear diffusion coefficient
   \label{eq:laplace-young-diffusion-coefficient}
 \end{equation}
 \software{Mathematica~12}'s \code{NDSolve\`{}FEM\`{}} package
-has built-in support for nonlinear BVPs,
-and in the case of~(\ref{eq:laplace-young-diffusion})
-\&~(\ref{eq:contact-boundary-condition-diffusion}),
-the nonlinearity can be handled
-by simply setting the \code{"DiffusionCoefficients"} property
-to~$-K (\del T) \idenmat[2]$,
-where $\idenmat[2]$~is the $2 \times 2$ identity matrix.%
+has built-in support for solving nonlinear BVPs.
+When supplied with a nonlinear problem,
+the built-in function \code{NDSolveValue}
+iteratively solves a linearised version
+according to Newton's method~%
+  \cite{wolfram-2020-documentation-finite-element-programming}.%
 \footnote{
   In~\cite{li-2017-thesis-rounding-capillary-wedge},
   an older version of \software{Mathematica} was used
   which could only solve linear BVPs.
   The nonlinearity was instead handled
-  by a simple (but very slow) fixed-point iteration,
-  which linearised~(\ref{eq:laplace-young-diffusion})
+  by a custom implementation of the slower fixed-point iteration,
+  which linearises~(\ref{eq:laplace-young-diffusion})
   \&~(\ref{eq:contact-boundary-condition-diffusion})
   by using $K (\del T)$~evaluated from the previous step.
 }
+In the case of~(\ref{eq:laplace-young-diffusion})
+\&~(\ref{eq:contact-boundary-condition-diffusion}),
+we need simply set the \code{"DiffusionCoefficients"} property
+to~$-K (\del T) \idenmat[2]$,
+where $\idenmat[2]$~is the $2 \times 2$ identity matrix.
+In all instances
+we find that the default initial guess of the zero function
+is sufficient for achieving convergence.
 
 \subsubsection{Half-plane benchmarking}
 \label{sec:moderate.nonlinear.numerical.half-plane}
