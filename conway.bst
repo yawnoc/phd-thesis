@@ -1235,7 +1235,7 @@ FUNCTION {misc}
     { #1 'suppress.current.period := }
   if$
   new.block
-  institution "institution" bibinfo.warn output
+  institution output
   new.block
   format.url output
   new.block
