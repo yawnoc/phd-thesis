@@ -33,3 +33,46 @@ to the scaled capillary BVP~(\ref{eq:scaled-laplace-young})
 \&~(\ref{eq:scaled-contact-boundary-condition})
 and apply boundary tracing to it,
 instead of to an asymptotic solution.
+
+\section{Numerical wedge solutions}
+\label{sec:small.numerical}
+
+While the numerical solver of Section~\ref{sec:moderate.nonlinear.numerical}
+was able to generate solutions in the small wedge case,
+their validity is questionable
+given the $1/r$~singularity in the corner.
+
+A better approach involves extracting the singularity
+before performing numerical work.
+Such an approach has been employed by
+Aoki \&~De~Sterck % TODO
+to determine accurate numerical representations
+of unbounded solutions to the capillary problem.
+Specifically, they study a general domain with two boundary walls,
+$y = f (x)$ and $y = g (x)$,
+forming either a corner (small wedge regime) or a cusp at the origin.
+In this scenario,
+the solution to the capillary problem~(\ref{eq:scaled-laplace-young})
+\&~(\ref{eq:scaled-contact-boundary-condition})
+is unbounded at the origin,
+the asymptotic height rise being~$T \asy 1 / (f - g)$.
+Their method consists of two parts.
+The first is the change of dependent variable
+\begin{equation}
+  T (x, y) \ideq \frac{H (x, y)}{f (x) - g(x)},
+  \label{eq:capillary-unbounded-change-of-variable}
+\end{equation}
+which ensures that the new dependent variable~$H$ is bounded.
+The second is the change of coordinates
+\begin{align}
+  x &\ideq X, \\
+  y &\ideq \frac{1 + Y}{2} f (X) + \frac{1 - Y}{2} g (X),
+\end{align}
+which maps the original domain $x > 0$, $g (x) < y < f (x)$
+to the rectangle $X > 0$, $-1 < Y < 1$.
+In particular, this maps the origin~$(x, y) = (0, 0)$
+to the line segment $X = 0$, $-1 < Y < 1$,
+so that any discontinuity in~$H$ at the origin
+(i.e.~a dependence on the direction of approach)
+in the original coordinates~$(x, y)$
+will not be exhibited in the new coordinates~$(X, Y)$.
