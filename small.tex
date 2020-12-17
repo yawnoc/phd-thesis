@@ -1,2 +1,35 @@
 \chapter{Small wedges}
 \label{ch:small}
+
+In this chapter
+we apply numerical boundary tracing to analyse corner rounding
+in small capillary wedges,
+for which the wedge half-angle~$\alpha$ and the contact angle~$\gamma$
+satisfy the inequality~$\alpha < \pi/2 - \gamma$
+and the height rise in the corner is infinite.
+
+The author's Honours thesis~%
+  \cite{li-2017-thesis-rounding-capillary-wedge}
+considered an asymptotic version of boundary tracing
+in which the leading term~(\ref{eq:small-wedge-asymptotic-solution})
+was used as the known solution.
+Although that analysis was able to produce
+a corresponding asymptotic corner rounding,
+one could not be certain that the rounding actually lay
+within the region of validity
+of the asymptotic known solution~(\ref{eq:small-wedge-asymptotic-solution}).
+The accuracy of the asymptotic corner rounding
+could only be assessed indirectly
+by computing a numerical solution in the corresponding rounded-corner domain
+(which no longer had a singularity)
+and then comparing it
+to the asymptotic solution~(\ref{eq:small-wedge-asymptotic-solution}).
+
+It is more preferable to avoid the use of an asymptotic approximation,
+so that the results of boundary tracing are applicable throughout the wedge,
+rather than only in a near-corner region of unknown size.
+Therefore, we determine here a numerical solution
+to the scaled capillary BVP~(\ref{eq:scaled-laplace-young})
+\&~(\ref{eq:scaled-contact-boundary-condition})
+and apply boundary tracing to it,
+instead of to an asymptotic solution.
