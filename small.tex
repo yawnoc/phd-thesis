@@ -65,8 +65,10 @@ The first is the change of dependent variable
 which ensures that the new dependent variable~$H$ is bounded.
 The second is the change of coordinates
 \begin{align}
-  x &\ideq X, \\
+  x &\ideq X,
+    \label{eq:capillary-unbounded-x-transformation} \\
   y &\ideq \frac{1 + Y}{2} f (X) + \frac{1 - Y}{2} g (X),
+    \label{eq:capillary-unbounded-y-transformation}
 \end{align}
 which maps the original domain $x > 0$, $g (x) < y < f (x)$
 to the rectangle $X > 0$, $-1 < Y < 1$.
@@ -76,3 +78,19 @@ so that any discontinuity in~$H$ at the origin
 (i.e.~a dependence on the direction of approach)
 in the original coordinates~$(x, y)$
 will not be exhibited in the new coordinates~$(X, Y)$.
+
+The transformation~(\ref{eq:capillary-unbounded-x-transformation})
+\&~(\ref{eq:capillary-unbounded-y-transformation})
+is most general,
+allowing the walls of the wedge or cusp to be curved.
+Note that the new coordinates~$(X, Y)$ are not orthogonal.
+In the present situation
+we seek numerical solutions in wedge domains with straight walls,
+namely domains of the form
+$0 < r < 10$, $-\alpha < \phi < \alpha$
+in polar coordinates.
+Requiring not the generality of~(\ref{eq:capillary-unbounded-x-transformation})
+\&~(\ref{eq:capillary-unbounded-y-transformation}),
+but nevertheless inspired by the overall idea,
+we implement here a similar transformation in polar coordinates
+(which are orthogonal).
