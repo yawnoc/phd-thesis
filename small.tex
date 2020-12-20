@@ -120,3 +120,67 @@ we apply the transformation
 so that the new dependent variable~$H$ is bounded and continuous
 (in the sense of single-valuedness for~$-\alpha < \phi < \alpha$)
 at~$r = 0$.
+
+Now the numerical BVP solver of \software{Mathematica}
+can only handle rectangular coordinates.
+Coefficient matrices are always interpreted
+as components of a rectangular coordinate system,
+and if the list of independent variables supplied is~$(u, v)$,
+the corresponding list of derivative operators
+will be~$(\pd / {\pd u}, \pd / {\pd v})$,
+which does not accord with
+the physical gradient and divergence operators
+unless the scale factors are unity.
+Indeed the polar coordinate system is not rectangular,
+so we must first rewrite the capillary problem~(\ref{eq:scaled-laplace-young})
+\&~(\ref{eq:scaled-contact-boundary-condition})
+in terms of~$(\pd / {\pd r}, \pd / {\pd\phi})$,
+so that that $r$ and~$\phi$ may be interpreted formally
+as rectangular coordinates.
+
+After effecting the transformation~(\ref{eq:small-wedge-change-of-variable}),
+% TODO: details in Appendix
+the BVP~(\ref{eq:scaled-laplace-young})
+\&~(\ref{eq:scaled-contact-boundary-condition})
+may be written
+\begin{align}
+  \matder \dotp \squarebr[\bulkysize]{\mat{K} \matder H - \mat{v} H}
+    &= H,
+    \label{eq:small-formally-rectangular-laplace-young} \\
+  \mat{n} \dotp \squarebr[\bulkysize]{\mat{K} \matder H - \mat{v} H}
+    &= \cos\gamma,
+    \label{eq:small-formally-rectangular-contact-boundary-condition}
+\end{align}
+where
+\begin{align}
+  \matder &\ideq
+    \begin{pmatrix}
+      \pd / {\pd r} \\
+      \pd / {\pd\phi}
+    \end{pmatrix},
+    \label{eq:small-formally-rectangular-derivative} \\
+  \mat{K} &\ideq
+    \begin{pmatrix}
+      r^2 C & 0 \\
+      0 & C
+    \end{pmatrix},
+    \label{eq:small-formally-rectangular-diffusion-coefficient} \\
+  \mat{v} &\ideq
+    \begin{pmatrix}
+      r C \\
+      0
+    \end{pmatrix},
+    \label{eq:small-formally-rectangular-convection-coefficient}
+\end{align}
+and $\mat{n}$~is to~$\matder$ as $\normalvec$~is to~$\del$,
+with
+\begin{equation}
+  C \ideq \frac{1}{\sqrt{r^4 + \tilde{P}^2 + \tilde{Q}^2}},
+  \label{eq:small-formally-rectangular-scalar-coefficient}
+\end{equation}
+where
+\begin{align}
+  \tilde{P} &\ideq r \pder{H}{r} - H,
+    \\[\tallspace]
+  \tilde{Q} &\ideq \pder{H}{\phi}.
+\end{align}
