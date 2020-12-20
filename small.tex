@@ -94,3 +94,29 @@ Requiring not the generality of~(\ref{eq:capillary-unbounded-x-transformation})
 but nevertheless inspired by the overall idea,
 we implement here a similar transformation in polar coordinates
 (which are orthogonal).
+
+\subsection{Singularity extraction}
+\label{sec:small.numerical.extraction}
+
+After scaling out the capillary length~(\ref{eq:capillary-length})
+as before,
+the asymptotic height rise~(\ref{eq:small-wedge-asymptotic-solution})
+in a small wedge reduces to
+\begin{equation}
+  T \asy \frac{\cos\phi - \sqrt{k^2 - \sin^2 \phi}}{k r},
+  \label{eq:small-wedge-scaled-asymptotic-solution}
+\end{equation}
+where $k$~is given by~(\ref{eq:wedge-constant-k}), i.e.
+\begin{equation}
+  k = \frac{\sin\alpha}{\cos\gamma}.
+  \label{eq:small-wedge-constant-k}
+\end{equation}
+In analogy to~(\ref{eq:capillary-unbounded-change-of-variable}),
+we apply the transformation
+\begin{equation}
+  T (r, \phi) \ideq \frac{H (r, \phi)}{r}
+  \label{eq:small-wedge-change-of-variable}
+\end{equation}
+so that the new dependent variable~$H$ is bounded and continuous
+(in the sense of single-valuedness for~$-\alpha < \phi < \alpha$)
+at~$r = 0$.
