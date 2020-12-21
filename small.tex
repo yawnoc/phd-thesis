@@ -220,3 +220,35 @@ such that no mesh element has more area than the equilateral triangle
 whose side length is the lesser of~$0.1$ and~$\alpha / 5$.
 An example mesh is shown in
 Figure~X\@. % TODO
+
+While the PDE~(\ref{eq:small-formally-rectangular-laplace-young})
+is applied throughout the rectangular region,
+the boundary condition~%
+  (\ref{eq:small-formally-rectangular-contact-boundary-condition})
+as written
+is only used along the boundaries~$\phi = \pm\alpha$
+representing the wedge walls.
+Along the boundary~$r = 10$ we instead use the non-wetting version
+\begin{equation}
+  \mat{n} \dotp \squarebr[\bulkysize]{\mat{K} \matder H - \mat{v} H} = 0
+  \label{eq:small-formally-rectangular-natural-boundary-condition}
+\end{equation}
+(equivalent to setting~$\gamma = \pi/2$)
+to model a vanishing height rise at infinity.
+It remains to specify the boundary condition along the boundary~$r = 0$,
+which represents the corner of the original wedge.
+Defining the angular function
+\begin{equation}
+  H_0 \ideq \frac{\cos\phi - \sqrt{k^2 - \sin^2 \phi}}{k},
+  \label{eq:small-asymptotic-angular-function}
+\end{equation}
+the asymptotic relation~(\ref{eq:small-wedge-scaled-asymptotic-solution})
+for small~$r$ becomes
+\begin{equation}
+  T \asy \frac{H_0}{r},
+  \label{eq:small-asymptotic-solution}
+\end{equation}
+and we see that a suitable boundary condition to apply along~$r = 0$ is
+\begin{equation}
+  H = H_0.
+\end{equation}
