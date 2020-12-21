@@ -200,3 +200,23 @@ as analogous entities for the rectangle in
 Figure~X\@, % TODO
 they are merely an algebraic means to the end of computing~$H$
 using a numerical solver that assumes a rectangular coordinate system.
+
+\subsection{Implementation}
+\label{sec:small.numerical.implementation}
+
+The rectangle of Figure~X % TODO
+is discretised into an unstructured triangular mesh,
+similar to that for the half-plane benchmarking test
+of Section~\ref{sec:moderate.nonlinear.numerical.half-plane}.
+The same minimalistic refinement strategy as before is applied
+along~$r = 0$ (which represents the wedge corner)
+and~$\phi = \pm\alpha$ (which represent the wedge walls)
+using a fine length scale of~$0.01$.
+To ensure that first derivatives
+can also be computed accurately elsewhere
+for the purposes of boundary tracing,
+a coarser uniform refinement is also applied throughout the mesh,
+such that no mesh element has more area than the equilateral triangle
+whose side length is the lesser of~$0.1$ and~$\alpha / 5$.
+An example mesh is shown in
+Figure~X\@. % TODO
