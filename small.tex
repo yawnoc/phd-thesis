@@ -252,3 +252,15 @@ and we see that a suitable boundary condition to apply along~$r = 0$ is
 \begin{equation}
   H = H_0.
 \end{equation}
+
+Although \software{Mathematica~12}'s built-in numerical solver
+can handle nonlinear problems using Newton's method,
+convergence issues arise for the BVP at hand.
+We therefore implement a custom fixed-point iteration instead,
+at each step supplying a linearised BVP
+by pre-evaluting the coefficients~$\mat{K}$ and~$\mat{v}$
+using the solution computed from the previous step.
+For the initial guess we use
+the asymptotic angular function~(\ref{eq:small-asymptotic-angular-function}).
+While fixed-point iteration is slower than Newton's method,
+it is very robust, and we do not encounter any problems with convergence.
