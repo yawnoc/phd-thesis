@@ -189,22 +189,52 @@ The transformed problem~(\ref{eq:small-formally-rectangular-laplace-young})
 is to be solved in the region
 $0 < r < 10$, $-\alpha < \phi < \alpha$,
 which algebraically has the form of a rectangle
-(Figure~X\@). % TODO
+(Figure~\ref{fig:wedge_small-domain-formal-rectangle}).
 Note that $\mat{n}$~is not a physical normal vector,
 and that $\matder$~is not a physical vector operator.
 Only $\normalvec$ and~$\del$ have a physically meaningful interpretation
 in association with the original wedge
-(Figure~X\@). % TODO
+(Figure~\ref{fig:wedge_small-domain-original-wedge}).
 While it is useful to think of~$\mat{n}$ and~$\matder$
-as analogous entities for the rectangle in
-Figure~X\@, % TODO
+as analogous entities for the rectangle of
+Figure~\ref{fig:wedge_small-domain-formal-rectangle},
 they are merely an algebraic means to the end of computing~$H$
 using a numerical solver that assumes a rectangular coordinate system.
+
+\begin{figure}
+  \newcommand*{\subfigurewidth}{0.3\textwidth}
+  \centering
+  \hspace*{\fill}
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent{wedge_small-domain-original-wedge}{%
+      Original wedge
+    }
+  \end{subfigure}
+    \hfill
+  \begin{minipage}[t]{0.25\textwidth}
+    \centering
+    \includegraphics[width=\textwidth, trim=0 {-0.35\textwidth} 0 0]{%
+      wedge_small-domain-double-arrow%
+    }
+  \end{minipage}
+    \hfill
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent{wedge_small-domain-formal-rectangle}{%
+      Formal rectangle
+    }
+  \end{subfigure}
+  \hspace*{\fill}
+  \caption{
+    Alternative interpretations of the domain
+    $0 < r < 10$, $-\alpha < \phi < \alpha$.
+  }
+  \label{fig:wedge_small-domain}
+\end{figure}
 
 \subsection{Implementation}
 \label{sec:small.numerical.implementation}
 
-The rectangle of Figure~X % TODO
+The rectangle of Figure~\ref{fig:wedge_small-domain-formal-rectangle}
 is discretised into an unstructured triangular mesh,
 similar to that for the half-plane benchmarking test
 of Section~\ref{sec:moderate.nonlinear.numerical.half-plane}.
