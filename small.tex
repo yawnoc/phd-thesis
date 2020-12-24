@@ -304,3 +304,33 @@ For the initial guess we use
 the asymptotic angular function~(\ref{eq:small-asymptotic-angular-function}).
 While fixed-point iteration is slower than Newton's method,
 it is very robust, and we do not encounter any problems with convergence.
+Selected results are shown in Figure~\ref{fig:wedge_small-solution}.
+
+\begin{figure}
+  \newcommand*{\subfigurewidth}{0.45\textwidth}
+  \centering
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent{%
+      wedge_small-solution-small%
+    }{%
+      $\gamma = \SI{45}{\degree}$ (small regime)
+    }
+  \end{subfigure}
+    \hfill
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent{%
+      wedge_small-solution-borderline%
+    }{%
+      $\gamma = \SI{60}{\degree}$ (borderline case)
+    }
+  \end{subfigure}
+  \caption{
+    Radial profiles (for both~$H$ and~$T$) of selected numerical solutions
+    in an $\alpha = \SI{30}{\degree}$~wedge.
+    Curves from bottom to top:
+    $\phi =
+      \SI{0}{\degree}, \SI{10}{\degree},
+      \SI{20}{\degree}, \SI{30}{\degree}$.
+  }
+  \label{fig:wedge_small-solution}
+\end{figure}
