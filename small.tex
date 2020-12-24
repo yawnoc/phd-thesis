@@ -354,3 +354,36 @@ by extrapolating the computed value of~$H / r$ to~$r = 0$,
 we should not expect a high level of accuracy
 due to (multiplicative) catastrophic cancellation
 between~$H$ (going to zero) and~$1 / r$ (going to infinity).
+We may compare $T \ideq H / r$~obtained here using
+the polar-coordinate transformation~(\ref{eq:small-wedge-change-of-variable})
+with the corresponding numerical solution
+obtained in Section~\ref{sec:moderate.nonlinear.numerical.wedge}
+by directly using the Cartesian-based BVP solver.
+Figure~\ref{fig:wedge_small-borderline-comparison}
+shows the relative discrepancy
+\begin{equation}
+  \abs*{\frac{\textq{polar~$T$}}{\textq{Cartesian~$T$}} - 1}
+  \label{eq:wedge_small-relative-discrepancy-with-cartesian}
+\end{equation}
+between the two approaches
+for the specific example of~$\alpha = \SI{30}{\degree}$.
+As expected,
+the discrepancy of~$\SI{10}{\percent}$ at~$r = 0$
+is not exceedingly small,
+but as we move away from the corner,
+the discrepancy decreases very quickly.
+The fact that two very different approaches
+produce numerical solutions in close agreement
+allows us to be confident in the results of both.
+
+\begin{figure}
+  \centredfigurecontent[width=!, height=0.35\textwidth]{%
+    wedge_small-borderline-comparison%
+  }{
+    Relative discrepancy~%
+      (\ref{eq:wedge_small-relative-discrepancy-with-cartesian})
+    between polar- and Cartesian-based numerical solutions,
+    for the borderline case~%
+    $(\alpha, \gamma) = (\SI{30}{\degree}, \SI{60}{\degree})$.
+  }
+\end{figure}
