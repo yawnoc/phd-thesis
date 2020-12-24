@@ -291,6 +291,7 @@ and we see that a suitable boundary condition to apply along~$r = 0$
 is the Dirichlet condition
 \begin{equation}
   H = H_0.
+  \label{eq:small-formally-rectangular-dirichlet-condition}
 \end{equation}
 
 Although \software{Mathematica~12}'s built-in numerical solver
@@ -334,3 +335,17 @@ Selected results are shown in Figure~\ref{fig:wedge_small-solution}.
   }
   \label{fig:wedge_small-solution}
 \end{figure}
+
+It is interesting to note that
+the numerical scheme is able to produce a sensible result
+for the borderline case~$\alpha = \pi/2 - \gamma$,
+where the height rise in the corner should be finite.
+While the transformation~(\ref{eq:small-wedge-change-of-variable})
+appears at first glance to preclude a bounded solution in~$T$,
+the borderline case has~$k = 1$,
+and hence an identically vanishing
+asymptotic angular function~(\ref{eq:small-asymptotic-angular-function}).
+The Dirichlet condition~%
+  (\ref{eq:small-formally-rectangular-dirichlet-condition})
+therefore reduces to~$H = 0$,
+and the singularity at~$r = 0$ is eliminated.
