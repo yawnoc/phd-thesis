@@ -217,3 +217,97 @@ we obtain the PDE
   \label{eq:small-formally-rectangular-laplace-young-appendix}
 \end{equation}
 in~$H (r, \phi)$.
+
+\section{Contact boundary condition}
+\label{sec:extraction.boundary}
+
+First write the normal vector~$\normalvec$ in components,
+\begin{equation}
+  \normalvec \ideq n_r \basisvec{r} + n_\phi \basisvec{\phi}.
+  \label{eq:normal-vector-polar}
+\end{equation}
+Taking the dot product with
+$K$~times the gradient vector~(\ref{eq:gradient-polar-change-of-variable}),
+we have
+\begin{align*}
+  \normalvec & \dotp \squarebr{K \del T} \\
+  &\ideq
+    n_r K \curlybr*{\frac{1}{r} \pder{H}{r} - \frac{H}{r^2}}
+      +
+    n_\phi K \curlybr*{\frac{1}{r^2} \pder{H}{\phi}}
+    \\[\tallspace]
+  &\ideq
+    \frac{n_r}{r} \roundbr*{K \pder{H}{r} - \frac{K}{r} \cdot H}
+      +
+    n_\phi \roundbr*{\frac{K}{r^2} \pder{H}{\phi}}
+    \\[\tallspace]
+  &\ideq
+    \frac{n_r}{r} \roundbr*{K \pder{H}{r}}
+      +
+    n_\phi \roundbr*{\frac{K}{r^2} \pder{H}{\phi}}
+      -
+    \frac{n_r}{r} \roundbr*{\frac{K}{r} \cdot H}
+    \\[\tallspace]
+  &\ideq
+    \begin{pmatrix}
+      n_r / r  &  n_\phi
+    \end{pmatrix}
+    \begin{pmatrix}
+      K  &  0 \\
+      0  &  K / r^2
+    \end{pmatrix}
+    \begin{pmatrix}
+      \pd H / {\pd r} \\
+      \pd H / {\pd\phi}
+    \end{pmatrix}
+      -
+    \begin{pmatrix}
+      n_r / r  &  n_\phi
+    \end{pmatrix}
+    \begin{pmatrix}
+      K / r \\
+      0
+    \end{pmatrix}
+    H
+    \\[\tallspace]
+  &\ideq
+    \begin{pmatrix}
+      n_r / r  &  n_\phi
+    \end{pmatrix}
+    \squarebr*{
+      \begin{pmatrix}
+        K  &  0 \\
+        0  &  K / r^2
+      \end{pmatrix}
+      \begin{pmatrix}
+        \pd / {\pd r} \\
+        \pd / {\pd\phi}
+      \end{pmatrix}
+      H
+        -
+      \begin{pmatrix}
+        K / r \\
+        0
+      \end{pmatrix}
+      H
+    }
+    \\[\tallspace]
+  &\ideq
+    \mat{n} \dotp \squarebr[\bulkysize]{\mat{K} \matder H - \mat{v} H},
+\end{align*}
+where
+\begin{equation}
+  \mat{n} \ideq
+    \begin{pmatrix}
+      n_r / r \\
+      n_\phi
+    \end{pmatrix}.
+  \label{eq:small-formally-rectangular-normal-matrix}
+\end{equation}
+The contact condition~(\ref{eq:contact-boundary-condition-diffusion-appendix})
+therefore becomes
+\begin{equation}
+  \mat{n} \dotp \squarebr[\bulkysize]{\mat{K} \matder H - \mat{v} H}
+    = \cos\gamma.
+  \label{eq:small-formally-rectangular-contact-boundary-condition-appendix}
+\end{equation}
