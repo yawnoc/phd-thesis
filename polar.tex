@@ -775,12 +775,12 @@ From the scale factors~%
   (\ref{eq:r-scale-factor-polar}) and~(\ref{eq:phi-scale-factor-polar}),
 it follows that the differential displacement is given by
 \begin{equation}
-  \td\vec{r} \ideq \td r \basisvec{r} + r \td\phi \basisvec{\phi}.
+  \td\positionvec \ideq \td r \basisvec{r} + r \td\phi \basisvec{\phi}.
   \label{eq:differential-displacement-polar}
 \end{equation}
 Division by~$\td r$ yields the velocity
 \begin{equation}
-  \vec{r}' \ideq \tder{\vec{r}}{r} \ideq
+  \positionvec' \ideq \tder{\positionvec}{r} \ideq
   \basisvec{r} + r \phi' \basisvec{\phi},
   \label{eq:velocity-vector-polar-by-r}
 \end{equation}
@@ -789,7 +789,7 @@ and taking another $r$-derivative
 and~(\ref{eq:phi-basis-vector-r-derivative}))
 we obtain the acceleration
 \begin{equation}
-  \vec{r}'' \ideq \tder[2]{\vec{r}}{r} \ideq
+  \positionvec'' \ideq \tder[2]{\positionvec}{r} \ideq
   -r {\phi'}^2 \basisvec{r}
     +
   \roundbr*{r \phi'' + 2 \phi'} \basisvec{\phi}.
@@ -802,7 +802,7 @@ and extracting the $z$-component,
 we obtain the quantity
 \begin{equation}
   \kappa \ideq
-  \basisvec{z} \dotp (\vec{r}' \crossp \vec{r}'') \ideq
+  \basisvec{z} \dotp (\positionvec' \crossp \positionvec'') \ideq
   r \phi'' + 2 \phi' + r^2 {\phi'}^3,
   \label{eq:kappa-polar-by-r}
 \end{equation}
