@@ -28,3 +28,60 @@ where
   \label{eq:laplace-young-diffusion-coefficient-appendix}
 \end{equation}
 is the (nonlinear) diffusion coefficient.
+
+Now in Cartesian coordinates,
+(\ref{eq:laplace-young-diffusion-appendix})
+and~(\ref{eq:contact-boundary-condition-diffusion-appendix})
+can simply be represented in matrix form
+by the equations
+\begin{align}
+  \begin{pmatrix}
+    \pd / {\pd x} & \pd / {\pd y}
+  \end{pmatrix}
+  \squarebr*{
+    \begin{pmatrix}
+      K & 0 \\
+      0 & K
+    \end{pmatrix}
+    \begin{pmatrix}
+      \pd / {\pd x} \\
+      \pd / {\pd y}
+    \end{pmatrix}
+    T
+  }
+    &= T,
+    \label{eq:laplace-young-diffusion-matrix-cartesian} \\
+  \begin{pmatrix}
+    n_x & n_y
+  \end{pmatrix}
+  \squarebr*{
+    \begin{pmatrix}
+      K & 0 \\
+      0 & K
+    \end{pmatrix}
+    \begin{pmatrix}
+      \pd / {\pd x} \\
+      \pd / {\pd y}
+    \end{pmatrix}
+    T
+  }
+    &= \cos\gamma.
+    \label{eq:contact-boundary-condition-diffusion-matrix-cartesian}
+\end{align}
+For the purpose of computing~$H$,
+we would like to treat~$r$ and~$\phi$ as rectangular coordinates,
+which requires rewriting the problem in terms of the formal operator
+\begin{equation}
+  \matder \ideq
+    \begin{pmatrix}
+      \pd / {\pd r} \\
+      \pd / {\pd\phi}
+    \end{pmatrix}.
+  \label{eq:small-formally-rectangular-derivative-appendix}
+\end{equation}
+Since the scale factors of polar coordinates are not both unity,
+we cannot simply replace $x$ and~$y$ with $r$ and~$\phi$
+in~(\ref{eq:laplace-young-diffusion-matrix-cartesian})
+and~(\ref{eq:contact-boundary-condition-diffusion-matrix-cartesian});
+the coefficients of the BVP must be adjusted appropriately
+to get the equations into an algebraically rectangular form.
