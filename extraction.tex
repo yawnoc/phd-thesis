@@ -1,2 +1,30 @@
 \chapter{Small wedge singularity extraction}
 \label{ch:extraction}
+
+Here we apply the change of variable~(\ref{eq:small-wedge-change-of-variable}),
+i.e.
+\begin{equation}
+  T (r, \phi) \ideq \frac{H (r, \phi)}{r},
+  \label{eq:small-wedge-change-of-variable-appendix}
+\end{equation}
+to transform the capillary problem~(\ref{eq:scaled-laplace-young})
+\&~(\ref{eq:scaled-contact-boundary-condition})
+in a small wedge ($\alpha < \pi/2 - \gamma$)
+from a singular BVP in~$T$
+to a regular BVP in~$H$.
+We recall from Section~\ref{sec:moderate.nonlinear.numerical}
+that the capillary problem may be viewed
+as the steady-state diffusion problem
+\begin{align}
+  \del \dotp \squarebr{K \del T} &= T,
+    \label{eq:laplace-young-diffusion-appendix}
+    \\[\tallspace]
+  \normalvec \dotp \squarebr{K \del T} &= \cos\gamma,
+  \label{eq:contact-boundary-condition-diffusion-appendix}
+\end{align}
+where
+\begin{equation}
+  K \ideq \frac{1}{\sqrt{1 + (\del T)^2}}
+  \label{eq:laplace-young-diffusion-coefficient-appendix}
+\end{equation}
+is the (nonlinear) diffusion coefficient.
