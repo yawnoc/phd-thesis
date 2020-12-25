@@ -85,3 +85,135 @@ in~(\ref{eq:laplace-young-diffusion-matrix-cartesian})
 and~(\ref{eq:contact-boundary-condition-diffusion-matrix-cartesian});
 the coefficients of the BVP must be adjusted appropriately
 to get the equations into an algebraically rectangular form.
+
+\section{Laplace--Young PDE}
+\label{ch:extraction.pde}
+
+We first observe that the gradient vector
+is given in polar coordinates by
+\begin{equation}
+  \del T \ideq
+    \pder{T}{r} \basisvec{r} + \frac{1}{r} \pder{T}{\phi} \basisvec{\phi}.
+  \label{eq:gradient-polar}
+\end{equation}
+Effecting the transformation~%
+  (\ref{eq:small-wedge-change-of-variable-appendix}),
+this becomes
+\begin{equation}
+  \del T \ideq
+    \curlybr*{\frac{1}{r} \pder{H}{r} - \frac{H}{r^2}} \basisvec{r}
+      +
+    \curlybr*{\frac{1}{r^2} \pder{H}{\phi}} \basisvec{\phi}.
+  \label{eq:gradient-polar-change-of-variable}
+\end{equation}
+Multiplying by~$K$ and taking the divergence,
+we obtain the left hand side
+of the Laplace--Young equation~(\ref{eq:laplace-young-diffusion-appendix}):
+\begin{align*}
+  \del & \dotp \squarebr{K \del T} \\
+  &\ideq
+    \frac{1}{r} \squarebr*{
+      \pder{}{r} \roundbr*{
+        r K \curlybr*{\frac{1}{r} \pder{H}{r} - \frac{H}{r^2}}
+      }
+        +
+      \pder{}{\phi} \roundbr*{
+        K \curlybr*{\frac{1}{r^2} \pder{H}{\phi}}
+      }
+    }
+    \\[\tallspace]
+  &\ideq
+    \frac{1}{r} \squarebr*{
+      \pder{}{r} \roundbr*{K \pder{H}{r} - \frac{K}{r} \cdot H}
+        +
+      \pder{}{\phi} \roundbr*{\frac{K}{r^2} \pder{H}{\phi}}
+    }
+    \\[\tallspace]
+  &\ideq
+    \frac{1}{r} \squarebr*{
+      \pder{}{r} \roundbr*{K \pder{H}{r}}
+        +
+      \pder{}{\phi} \roundbr*{\frac{K}{r^2} \pder{H}{\phi}}
+        -
+      \pder{}{r} \roundbr*{\frac{K}{r} \cdot H}
+    }
+    \\[\tallspace]
+  &\ideq
+    \frac{1}{r} \squarebr*{
+      \begin{pmatrix}
+        \pd / {\pd r} & \pd / {\pd\phi}
+      \end{pmatrix}
+      \begin{pmatrix}
+        K  &  0 \\
+        0  &  K / r^2
+      \end{pmatrix}
+      \begin{pmatrix}
+        \pd H / {\pd r} \\
+        \pd H / {\pd\phi}
+      \end{pmatrix}
+        -
+      \begin{pmatrix}
+        \pd / {\pd r} & \pd / {\pd\phi}
+      \end{pmatrix}
+      \begin{pmatrix}
+        K / r \\
+        0
+      \end{pmatrix}
+      H
+    }
+    \\[\tallspace]
+  &\ideq
+    \frac{1}{r}
+    \begin{pmatrix}
+      \pd / {\pd r} & \pd / {\pd\phi}
+    \end{pmatrix}
+    \squarebr*{
+      \begin{pmatrix}
+        K  &  0 \\
+        0  &  K / r^2
+      \end{pmatrix}
+      \begin{pmatrix}
+        \pd / {\pd r} \\
+        \pd / {\pd\phi}
+      \end{pmatrix}
+      H
+        -
+      \begin{pmatrix}
+        K / r \\
+        0
+      \end{pmatrix}
+      H
+    }
+    \\[\tallspace]
+  &\ideq
+    \frac{1}{r}
+    \matder \dotp \squarebr[\bulkysize]{\mat{K} \matder H - \mat{v} H},
+\end{align*}
+where
+\begin{equation}
+  \mat{K} \ideq
+    \begin{pmatrix}
+      K  &  0 \\
+      0  &  K / r^2
+    \end{pmatrix}
+  \label{eq:small-formally-rectangular-diffusion-coefficient-singular}
+\end{equation}
+and
+\begin{equation}
+  \mat{v} \ideq
+    \begin{pmatrix}
+      K / r \\
+      0
+    \end{pmatrix}.
+    \label{eq:small-formally-rectangular-convection-coefficient-singular}
+\end{equation}
+Since the right hand side
+of the Laplace--Young equation~(\ref{eq:laplace-young-diffusion-appendix})
+is~$T \ideq H / r$,
+we obtain the PDE
+\begin{equation}
+  \matder \dotp \squarebr[\bulkysize]{\mat{K} \matder H - \mat{v} H}
+    = H
+  \label{eq:small-formally-rectangular-laplace-young-appendix}
+\end{equation}
+in~$H (r, \phi)$.
