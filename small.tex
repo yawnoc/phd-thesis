@@ -138,8 +138,8 @@ in terms of~$(\pd / {\pd r}, \pd / {\pd\phi})$,
 so that that $r$ and~$\phi$ may be interpreted formally
 as rectangular coordinates.
 
-After effecting the transformation~(\ref{eq:small-wedge-change-of-variable}),
-% TODO: details in Appendix
+After effecting the transformation~(\ref{eq:small-wedge-change-of-variable})
+(see Appendix~\ref{ch:extraction}),
 the capillary problem~(\ref{eq:scaled-laplace-young})
 \&~(\ref{eq:scaled-contact-boundary-condition}) in~$T$
 becomes the BVP
@@ -175,14 +175,16 @@ in~$H$, where
 and $\mat{n}$~is to~$\matder$ as $\normalvec$~is to~$\del$,
 with
 \begin{equation}
-  C \ideq \frac{1}{\sqrt{r^4 + \tilde{P}^2 + \tilde{Q}^2}},
+  C \ideq \frac{1}{\sqrt{r^4 + \desing{P}^2 + \desing{Q}^2}},
   \label{eq:small-formally-rectangular-scalar-coefficient}
 \end{equation}
 where
 \begin{align}
-  \tilde{P} &\ideq r \pder{H}{r} - H,
+  \desing{P} &\ideq r \pder{H}{r} - H,
+    \label{eq:small-gradient-de-singularised-r-component}
     \\[\tallspace]
-  \tilde{Q} &\ideq \pder{H}{\phi}.
+  \desing{Q} &\ideq \pder{H}{\phi}.
+    \label{eq:small-gradient-de-singularised-phi-component}
 \end{align}
 The transformed problem~(\ref{eq:small-formally-rectangular-laplace-young})
 \&~(\ref{eq:small-formally-rectangular-contact-boundary-condition})

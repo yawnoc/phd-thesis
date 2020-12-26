@@ -337,6 +337,9 @@
 \newcommand*{\offset}[1]{#1'}
 \newcommand*{\offsetmarks}{primes}
 
+% De-singularised quantity
+\newcommand*{\desing}[1]{\tilde{#1}}
+
 % Text quantity
 \newcommand*{\textq}[1]{\curlybr*{\textnormal{#1}}}
 
@@ -518,8 +521,12 @@
 \include{small}
 \include{re-entrant}
 
-\backmatter
 \bookmarksetup{startatroot}
+
+\appendix
+\include{extraction}
+
+\backmatter
 
 \include{bibliography}
 
