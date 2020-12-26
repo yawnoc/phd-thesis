@@ -311,3 +311,109 @@ therefore becomes
     = \cos\gamma.
   \label{eq:small-formally-rectangular-contact-boundary-condition-appendix}
 \end{equation}
+
+\section{Coefficients}
+\label{sec:extraction.coefficients}
+
+We have shown that
+the transformation~(\ref{eq:small-wedge-change-of-variable-appendix})
+converts the capillary problem~(\ref{eq:laplace-young-diffusion-appendix})
+\&~(\ref{eq:contact-boundary-condition-diffusion-appendix})
+in~$T$
+to the BVP~%
+  (\ref{eq:small-formally-rectangular-laplace-young-appendix})
+\&~%
+  (\ref{eq:small-formally-rectangular-contact-boundary-condition-appendix})
+in~$H$,
+i.e.
+\begin{align}
+  \matder \dotp \squarebr[\bulkysize]{\mat{K} \matder H - \mat{v} H}
+    &= H,
+    \label{eq:small-formally-rectangular-laplace-young-repeat} \\
+  \mat{n} \dotp \squarebr[\bulkysize]{\mat{K} \matder H - \mat{v} H}
+    &= \cos\gamma.
+    \label{eq:small-formally-rectangular-contact-boundary-condition-repeat}
+\end{align}
+This is indeed of the same form
+as the BVP~(\ref{eq:small-formally-rectangular-laplace-young})
+\&~(\ref{eq:small-formally-rectangular-contact-boundary-condition});
+only it remains to show that the definitions~%
+  (\ref{eq:small-formally-rectangular-diffusion-coefficient-singular})
+and~%
+  (\ref{eq:small-formally-rectangular-convection-coefficient-singular})
+given here for the coefficients~$\mat{K}$ and~$\mat{v}$
+are indeed equivalent to~%
+  (\ref{eq:small-formally-rectangular-diffusion-coefficient})
+and~%
+  (\ref{eq:small-formally-rectangular-convection-coefficient})
+given in Chapter~\ref{ch:small}.
+
+Reading off~(\ref{eq:gradient-polar-change-of-variable}),
+the components of the gradient vector in polar coordinates are
+\begin{align}
+  P &\ideq \frac{1}{r} \pder{H}{r} - \frac{H}{r^2},
+    \label{eq:small-gradient-r-component-appendix} \\[\tallspace]
+  Q &\ideq \frac{1}{r^2} \pder{H}{\phi}.
+    \label{eq:small-gradient-phi-component-appendix}
+\end{align}
+Noting that these are of order~$1 / r^2$,
+we define the de-singularised versions
+\begin{align}
+  \desing{P} &\ideq r^2 P \ideq r \pder{H}{r} - H,
+    \label{eq:small-gradient-de-singularised-r-component-appendix}
+    \\[\tallspace]
+  \desing{Q} &\ideq r^2 Q \ideq \pder{H}{\phi},
+    \label{eq:small-gradient-de-singularised-phi-component-appendix}
+\end{align}
+as given in~(\ref{eq:small-gradient-de-singularised-r-component})
+and~(\ref{eq:small-gradient-de-singularised-phi-component}).
+We then have
+\begin{equation}
+  (\del T)^2
+    \ideq P^2 + Q^2
+    \ideq \frac{\desing{P}^2 + \desing{Q}^2}{r^4},
+  \label{eq:small-gradient-squared-appendix}
+\end{equation}
+and hence
+\begin{align*}
+  K
+  &\ideq
+    \frac{1}{\sqrt{1 + (\desing{P}^2 + \desing{Q}^2) / r^4}}
+    \\[\tallspace]
+  &\ideq
+    \frac{r^2}{\sqrt{r^4 + \desing{P}^2 + \desing{Q}^2}}
+    \\[\tallspace]
+  &\ideq
+    r^2 C,
+    \yesnumber
+    \label{eq:small-laplace-young-diffusion-coefficient-appendix}
+\end{align*}
+where
+\begin{equation}
+  C \ideq \frac{1}{\sqrt{r^4 + \desing{P}^2 + \desing{Q}^2}},
+  \label{eq:small-formally-rectangular-scalar-coefficient-appendix}
+\end{equation}
+as in~(\ref{eq:small-formally-rectangular-scalar-coefficient}).
+Therefore, 
+(\ref{eq:small-formally-rectangular-diffusion-coefficient-singular})
+and~(\ref{eq:small-formally-rectangular-convection-coefficient-singular})
+become
+\begin{equation}
+  \mat{K} \ideq
+    \begin{pmatrix}
+      r^2 C  &  0 \\
+      0  &  C
+    \end{pmatrix}
+  \label{eq:small-formally-rectangular-diffusion-coefficient-appendix}
+\end{equation}
+and
+\begin{equation}
+  \mat{v} \ideq
+    \begin{pmatrix}
+      r C \\
+      0
+    \end{pmatrix},
+  \label{eq:small-formally-rectangular-convection-coefficient-appendix}
+\end{equation}
+as stated in~(\ref{eq:small-formally-rectangular-diffusion-coefficient})
+and~(\ref{eq:small-formally-rectangular-convection-coefficient}).
