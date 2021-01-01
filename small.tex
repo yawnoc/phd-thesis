@@ -401,6 +401,27 @@ which still satisfy the contact condition~%
 \subsection{Wedge solution derivatives}
 \label{sec:small.rounding.derivatives}
 
+To perform boundary tracing,
+we need to compute first derivatives of the wedge solution~$T$.
+Since it is~$H$ that has actually been computed,
+we first express the relevant derivatives of~$T$ in terms of~$H$.
+
+First we observe that the components of~$\del T$ are of order~$1 / r^2$.
+Indeed we have
+\begin{align}
+  P &\ideq \pder{T}{r}
+    \ideq \frac{1}{r} \pder{H}{r} - \frac{H}{r^2}
+    \ideq \frac{\desing{P}}{r^2},
+      \label{eq:small-gradient-r-component} \\[\tallspace]
+  Q &\ideq \frac{\pd T}{r \pd\phi}
+    \ideq \frac{1}{r^2} \pder{H}{\phi}
+    \ideq \frac{\desing{Q}}{r^2},
+      \label{eq:small-gradient-phi-component}
+\end{align}
+where the de-singularised versions~$\desing{P}$ and~$\desing{Q}$
+are defined by~(\ref{eq:small-gradient-de-singularised-r-component})
+and~(\ref{eq:small-gradient-de-singularised-phi-component}).
+
 \subsection{Boundary tracing}
 \label{sec:small.rounding.tracing}
 
