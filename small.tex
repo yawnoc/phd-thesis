@@ -495,6 +495,43 @@ as one travels away from the line of symmetry~$y = 0$.
 \subsection{Boundary tracing}
 \label{sec:small.rounding.tracing}
 
+We now proceed to actually performing boundary tracing.
+Working in polar coordinates~$(r, \phi)$,
+the boundary tracing system of ODEs~%
+  (\ref{eq:tracing-ode-arc-length-parametrisation-u})
+\&~%
+  (\ref{eq:tracing-ode-arc-length-parametrisation-v})
+for arc-length parametrisation
+becomes
+\begin{align*}
+  \tder{r}{s} &= \frac{-Q F \pm P \sqrt{\Phi}}{P^2 + Q^2},
+    \\[\tallspace]
+  \tder{\phi}{s} &= \frac{+P F \pm Q \sqrt{\Phi}}{r \roundbr*{P^2 + Q^2}}.
+\end{align*}
+Now the numerators and denominators in both equations
+are all quadratic in~$P$, $Q$, $F$, and~$\sqrt{\Phi}$,
+which quantities are all equal to $1 / r^2$~multiplied by
+their de-singularised equivalents (with \desingmarks).
+We may therefore simply insert \desingmarks{} to obtain
+\begin{important}{align}
+  \tder{r}{s} &=
+    \frac{
+      -\desing{Q} \desing{F} \pm \desing{P} \sqrt{\desing{\Phi}}
+    }{
+      \desing{P}^2 + \desing{Q}^2
+    },
+    \\[\tallspace]
+  \tder{\phi}{s} &=
+    \frac{
+      +\desing{P} \desing{F} \pm \desing{Q} \sqrt{\desing{\Phi}}
+    }{
+      r \roundbr*{\desing{P}^2 + \desing{Q}^2}
+    },
+\end{important}
+whose right hand sides may be readily evaluated
+according to the de-singularised expressions determined in
+Section~\ref{sec:small.rounding.derivatives}.
+
 \subsection{Different contact angle}
 \label{sec:small.rounding.different}
 
