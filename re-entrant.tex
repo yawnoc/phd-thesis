@@ -170,8 +170,7 @@ to the the theoretical value of unity
 (Table~\ref{tab:re-entrant-wedge-slope-additional-refinement}),
 even an impractically large number of mesh elements
 achieves only an accuracy of~$\SI{6}{\percent}$.
-However,
-from Figure~\ref{fig:wedge_obtuse-moderate-slope-additional-refinement}
+However, from Figure~\ref{fig:wedge_obtuse-moderate-additional-refinement}
 we see that the solution slope only depends significantly on~$\ell_\ultra$
 in the immediate vicinity of the corner, $r < 0.003$;
 outside this tiny neighbourhood
@@ -226,19 +225,23 @@ both with and without the additional refinement.
   }
   \hspace*{\fill}
   \begin{subfigure}[t]{\subfigurewidth}
-    \centredfigurecontent{%
+    \includegraphics[width=\textwidth]{%
       wedge_obtuse-moderate-slope-additional-refinement-symmetry%
-    }{%
+    }
+    \caption{%
       Along line of symmetry~$\phi = 0$
     }
+    \label{fig:wedge_obtuse-moderate-additional-refinement-symmetry}
   \end{subfigure}
     \hfill
   \begin{subfigure}[t]{\subfigurewidth}
-    \centredfigurecontent{%
+    \includegraphics[width=\textwidth]{%
       wedge_obtuse-moderate-slope-additional-refinement-wall%
-    }{%
+    }
+    \caption{%
       Along wedge wall~$\phi = \alpha$
     }
+    \label{fig:wedge_obtuse-moderate-additional-refinement-wall}
   \end{subfigure}
   \hspace*{\fill}
   \caption{
@@ -248,7 +251,7 @@ both with and without the additional refinement.
     at various ultra-fine length scales~$\ell_\ultra$
     in the neighbourhood~$r < 0.01$.
   }
-  \label{fig:wedge_obtuse-moderate-slope-additional-refinement}
+  \label{fig:wedge_obtuse-moderate-additional-refinement}
 \end{figure}
 
 \section{Corner rounding}
