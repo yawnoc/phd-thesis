@@ -155,7 +155,8 @@ the relatively poor results for the corner slope
 are a cause for concern.
 Further investigation shows that the computed value of corner slope
 is rather sensitive to the level of mesh refinement.
-We consider~$(\alpha, \gamma) = (\SI{135}{\degree}, \SI{60}{\degree})$
+We consider the moderate wedge~%
+  $(\alpha, \gamma) = (\SI{135}{\degree}, \SI{60}{\degree})$
 and apply localised additional refinement,
 using an ultra-fine length scale of~$\ell_\ultra$
 in the neighbourhood~$r < 0.01$.
@@ -260,6 +261,66 @@ both with and without the additional refinement.
     The theoretical slope in the corner~($r = 0$) is unity.
   }
   \label{fig:wedge_obtuse-moderate-additional-refinement}
+\end{figure}
+
+Similar results are observed
+for large wedge angles~$\alpha \ge \pi/2 + \gamma$,
+where the theoretical corner slope is unbounded
+but the height remains bounded.
+In the specific case of~%
+  $(\alpha, \gamma) = (\SI{135}{\degree}, \SI{30}{\degree})$
+shown in Figure~\ref{fig:wedge_obtuse-large-additional-refinement},
+we observe that any dependence of the solution slope
+on the refinement scale~$\ell_\ultra$
+is confined to the minuscule neighbourhood~$r < 0.002$.
+Again we find the solution height to be
+completely insensitive to~$\ell_\ultra$,
+even at the corner~$r = 0$ itself.
+
+\begin{figure}
+  \newcommand*{\subfigurewidth}{0.45\textwidth}
+  \centering
+  $\ell_\ultra$
+  \includegraphics[width=\textwidth, trim=0 10 0 10]{%
+    wedge_obtuse-moderate-slope-additional-refinement-legend%
+  }
+  \hspace*{\fill}
+  \begin{subfigure}[t]{\subfigurewidth}
+    \includegraphics[width=\textwidth]{%
+      wedge_obtuse-large-slope-additional-refinement-symmetry%
+    }
+    \includegraphics[width=\textwidth]{%
+      wedge_obtuse-large-height-additional-refinement-symmetry%
+    }
+    \caption{%
+      Along line of symmetry~$\phi = 0$
+    }
+    \label{fig:wedge_obtuse-large-additional-refinement-symmetry}
+  \end{subfigure}
+    \hfill
+  \begin{subfigure}[t]{\subfigurewidth}
+    \includegraphics[width=\textwidth]{%
+      wedge_obtuse-large-slope-additional-refinement-wall%
+    }
+    \includegraphics[width=\textwidth]{%
+      wedge_obtuse-large-height-additional-refinement-wall%
+    }
+    \caption{%
+      Along wedge wall~$\phi = \alpha$
+    }
+    \label{fig:wedge_obtuse-large-additional-refinement-wall}
+  \end{subfigure}
+  \hspace*{\fill}
+  \caption{
+    Computed slope and height near the corner
+    for the large wedge~%
+      $(\alpha, \gamma) = (\SI{135}{\degree}, \SI{30}{\degree})$,
+    with additional refinement
+    at various ultra-fine length scales~$\ell_\ultra$
+    applied in the neighbourhood~$r < 0.01$.
+    The theoretical slope in the corner~($r = 0$) is infinite.
+  }
+  \label{fig:wedge_obtuse-large-additional-refinement}
 \end{figure}
 
 \section{Corner rounding}
