@@ -482,7 +482,7 @@ the viable domain is the region
 As in the moderate wedge case,
 the viable domain lies to the left
 and the non-viable domain lies to the right
-(Figure~X). % TODO
+(Figure~\ref{fig:wedge_small-viable}).
 The terminal curve
 \begin{equation}
   \desing{\Phi} = 0
@@ -491,6 +491,21 @@ The terminal curve
 demarcates the two regions,
 and approaches the walls of the wedge
 as one travels away from the line of symmetry~$y = 0$.
+
+\begin{figure}
+  \newcommand*{\legendoffsetheight}{0.283\textwidth}
+  \centering
+  \includegraphics[width=0.5\textwidth]{wedge_small-viable}
+  \includegraphics[
+    width=0.3\textwidth,
+    trim=0 {-\legendoffsetheight} 0 0,
+  ]{wedge_small-viable-legend}
+  \caption{
+    Non-viable domain~$\desing{\Phi} < 0$
+    for~$\alpha = \SI{30}{\degree}$ and~$\gamma = \SI{45}{\degree}$.
+  }
+  \label{fig:wedge_small-viable}
+\end{figure}
 
 \subsection{Boundary tracing}
 \label{sec:small.rounding.tracing}
