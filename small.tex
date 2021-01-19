@@ -549,10 +549,33 @@ We may therefore simply insert \desingmarks{} to obtain
 whose right hand sides may be readily evaluated
 according to the de-singularised expressions determined in
 Section~\ref{sec:small.rounding.derivatives}.
+
 By performing numerical integration
 from various starting points in the viable domain,
 we obtain the traced boundaries shown
 in Figure~\ref{fig:wedge_small-traced-boundaries}.
+As before, these traced boundaries may be patched together
+to form an unlimited number of new domain boundaries
+like those in Figure~\ref{fig:wedge_acute-traced-boundaries-patched},
+but sharp corners will be formed
+\emph{strictly} within the viable domain.
+Thus, we again look to the terminal curve
+in our search for a rounding of the wedge.
+The manner in which the $T$-contours cross the terminal curve
+is qualitatively identical to Figure~\ref{fig:wedge_acute-terminal-points}
+(for the moderate wedge case).
+Almost all terminal points are ordinary (and hence not useful),
+with the sole exception being the critical terminal point~$(x, y) = (x_0, 0)$
+which lies at the intersection between
+the terminal curve~(\ref{eq:small-terminal-curve})
+and the line of symmetry~$y = 0$.
+Preferring polar coordinates,
+the critical terminal point is~$(r, \phi) = (r_0, 0)$,
+where $r = r_0$~is the unique solution to
+\begin{equation}
+  \eval*{-\frac{\desing{P}}{r^2}}_{\phi=0} = \cot\gamma.
+  \label{eq:small-critical-terminal-point}
+\end{equation}
 
 \begin{figure}
   \newcommand*{\legendoffsetheight}{0.275\textwidth}
