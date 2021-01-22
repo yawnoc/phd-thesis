@@ -676,6 +676,59 @@ the boundary tracing system of ODEs~%
 \&~%
   (\ref{eq:small-tracing-ode-arc-length-parametrisation-phi})
 remains unchanged in form.
+Integrating to obtain traced boundaries,
+we again find that the viable domain does not extend to infinity
+in the case of~$\gamma_\tr < \gamma$,
+and a rounding of the corner cannot be produced.
+
+For~$\gamma_\tr > \gamma$ the viable domain does extend to infinity,
+and a candidate boundary can be constructed as before
+by patching together traced boundaries through
+the sole critical terminal point~$(x_0, 0)$,
+where now $r = x_0$ is the unique solution to
+\begin{equation}
+  \eval*{
+    -\frac{\desing{P}(r, \phi; \alpha, \gamma)}{r^2}
+  }_{\phi=0}
+    = \cot\gamma_\tr.
+  \label{eq:small-critical-terminal-point-different-angle}
+\end{equation}
+instead of~(\ref{eq:small-critical-terminal-point}).
+The candidate boundary approches a wedge offset from the original
+by the perpendicular distance~$d (\gamma, \gamma_\tr)$
+(Figure~X\@), % TODO
+as it did in the moderate wedge case
+(see equation~(\ref{eq:moderate-offset-distance})
+and Figure~\ref{fig:wedge_acute-different-angle-offset-side}).
+
+Thus, given a single numerical wedge solution~%
+  $T (r, \phi; \alpha, \gamma) \ideq H (r, \phi; \alpha, \gamma) / r$,
+boundary tracing can be used to construct
+a one-parameter family~$\gamma_\tr \ge \gamma$
+of candidate boundaries for corner rounding.
+Although the procedure up to this point
+has been no different to the moderate wedge case
+(Section~\ref{sec:moderate.multiple.different}),
+there is an interesting point of difference
+in the present small wedge scenario.
+Although the angular parameters~$\alpha$ and~$\gamma$
+of the known wedge solution
+belong to the small wedge regime ($\alpha + \gamma < \pi/2$),
+the same is not necessarily true
+for the parameters~$\alpha$ and~$\gamma_\tr$
+of each candidate boundary.
+Indeed the parameter interval~$\gamma_\tr \ge \gamma$ spans three cases:
+the small wedge for~$\gamma \le \gamma_\tr < \pi/2 - \alpha$,
+the borderline case for~$\gamma_\tr = \pi/2 - \alpha$,
+and the moderate wedge for~$\gamma_\tr > \pi/2 - \alpha$.
+While it is somewhat surprising that a singular wedge solution
+can be used to generate traced boundaries corresponding to
+non-singular wedge parameters,
+it is not too unexpected given that
+the contact condition~(\ref{eq:small-flux-boundary-condition-different-angle})
+is local,
+and therefore agnostic
+with respect to the singularity at the wedge corner.
 
 \section{Summary}
 \label{sec:small.summary}
