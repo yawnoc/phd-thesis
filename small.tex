@@ -676,10 +676,45 @@ the boundary tracing system of ODEs~%
 \&~%
   (\ref{eq:small-tracing-ode-arc-length-parametrisation-phi})
 remains unchanged in form.
-Integrating to obtain traced boundaries,
+Integrating to obtain traced boundaries
+(Figure~\ref{fig:wedge_small-traced-boundaries-different-angle}),
 we again find that the viable domain does not extend to infinity
 in the case of~$\gamma_\tr < \gamma$,
 so that a rounding of the corner cannot be produced.
+
+\begin{figure}
+  \newcommand*{\subfigurewidth}{0.4\textwidth}
+  \centering
+  \includegraphics[width=\textwidth, trim=0 -7 0 0]{%
+    wedge_acute-traced-boundaries-different-angle-legend%
+  }
+  \hspace*{\fill}
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent{%
+      wedge_small-traced-boundaries-different-angle-less%
+    }{%
+      $\gamma_\tr = \SI{40}{\degree} < \gamma$
+    }
+  \end{subfigure}
+    \hfill
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent{%
+      wedge_small-traced-boundaries-different-angle-more%
+    }{%
+      $\gamma_\tr = \SI{55}{\degree} > \gamma$
+    }
+  \end{subfigure}
+  \hspace*{\fill}
+  \caption{
+    Traced boundaries for~$\alpha = \SI{30}{\degree}$,
+    $\gamma = \SI{45}{\degree}$, and~$\gamma_\tr \ne \gamma$,
+    obtained by integrating~%
+      (\ref{eq:small-tracing-ode-arc-length-parametrisation-r})
+    \&~%
+      (\ref{eq:small-tracing-ode-arc-length-parametrisation-phi}).
+  }
+  \label{fig:wedge_small-traced-boundaries-different-angle}
+\end{figure}
 
 For~$\gamma_\tr > \gamma$ the viable domain does extend to infinity,
 and a candidate boundary can be constructed as before
