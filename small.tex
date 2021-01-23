@@ -795,9 +795,49 @@ so that they may be viewed as different roundings
 of the same wedge~$y = \pm \offset{x} \tan\alpha$
 having the angular parameters~$(\alpha, \gamma_\tr)$.
 
+\begin{figure}
+  \newcommand*{\subfigurewidth}{0.31\textwidth}
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent{%
+      wedge_small-small-candidates-offset-alpha-30_degree%
+    }{%
+      $\alpha = \SI{30}{\degree}$.
+      From left to right:
+      $\gamma = \SI{5}{\degree}, \SI{20}{\degree}, \SI{25}{\degree}$.
+    }
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent[trim=0 3 0 0]{%
+      wedge_small-small-candidates-offset-alpha-45_degree%
+    }{%
+      $\alpha = \SI{45}{\degree}$.
+      From left to right:
+      $\gamma = \SI{5}{\degree}, \SI{20}{\degree}, \SI{25}{\degree}$.
+    }
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent{%
+      wedge_small-small-candidates-offset-alpha-60_degree%
+    }{%
+      $\alpha = \SI{60}{\degree}$.
+      From left to right: $\gamma = \SI{5}{\degree}, \SI{25}{\degree}$.
+    }
+  \end{subfigure}
+  \caption{
+    Candidate boundaries for~$\gamma \le \gamma_\tr$
+    in $(\offset{x}, y)$~coordinates,
+    all corresponding to the physically prescribed contact angle~%
+    $\gamma_\tr = \SI{25}{\degree}$ (small wedge regime).
+    Insets show bulging.
+  }
+  \label{fig:wedge_small-small-candidates-offset}
+\end{figure}
+
 In cases where~$\alpha + \gamma_\tr < \pi/2$,
 these correspond to rounding of a small capillary wedge
-(Figure~X\@), % TODO
+(Figure~\ref{fig:wedge_small-small-candidates-offset}),
 and we find them no less susceptible to bulging and lack of spread
 than their counterparts in the moderate regime.
 Height-rise profiles along each rounding curve can be obtained
