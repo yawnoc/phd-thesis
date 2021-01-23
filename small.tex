@@ -829,7 +829,8 @@ having the angular parameters~$(\alpha, \gamma_\tr)$.
     Candidate boundaries for~$\gamma \le \gamma_\tr$
     in $(\offset{x}, y)$~coordinates,
     all corresponding to the physically prescribed contact angle~%
-    $\gamma_\tr = \SI{25}{\degree}$ (small wedge regime).
+    $\gamma_\tr = \SI{25}{\degree}$
+    (small wedge regime, $\alpha + \gamma_\tr < \pi/2$).
     Insets show bulging.
   }
   \label{fig:wedge_small-small-candidates-offset}
@@ -854,6 +855,67 @@ In cases where~$\alpha + \gamma_\tr \ge \pi/2$,
 the boundaries here
 extend the results of Section~\ref{sec:moderate.multiple.effect}.
 % TODO: text supplementing figure caption
+
+\begin{figure}
+  \newcommand*{\subfigurewidth}{0.31\textwidth}
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent{%
+      wedge_small-moderate-candidates-offset-alpha-30_degree%
+    }{%
+      $\alpha = \SI{30}{\degree}$.
+      From left to right:
+      $\gamma =
+        \SI{5}{\degree}, \SI{40}{\degree},
+        \SI{55}{\degree}, \SI{60}{\degree}$~\figurestyle{black}
+      and
+      $\gamma =
+        \SI{60}{\degree}, \SI{65}{\degree},
+        \SI{70}{\degree}, \SI{75}{\degree}$~\figurestyle{grey}.
+    }
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent{%
+      wedge_small-moderate-candidates-offset-alpha-45_degree%
+    }{%
+      $\alpha = \SI{45}{\degree}$.
+      From left to right:
+      $\gamma = \SI{5}{\degree}, \SI{45}{\degree}$~\figurestyle{black}
+      and
+      $\gamma = \SI{45}{\degree}, \SI{75}{\degree}$~\figurestyle{grey}.
+    }
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent{%
+      wedge_small-moderate-candidates-offset-alpha-60_degree%
+    }{%
+      $\alpha = \SI{60}{\degree}$.
+      From right to left:
+      $\gamma = \SI{30}{\degree}$~\figurestyle{black}
+      (smaller values of~$\gamma$ are indistinguishable)
+      and
+      $\gamma =
+        \SI{30}{\degree}, \SI{60}{\degree},
+        \SI{70}{\degree}, \SI{75}{\degree}$~\figurestyle{grey}.
+    }
+  \end{subfigure}
+  \caption{
+    Candidate boundaries for~$\gamma \le \gamma_\tr$
+    in $(\offset{x}, y)$~coordinates,
+    all corresponding to the physically prescribed contact angle~%
+    $\gamma_\tr = \SI{75}{\degree}$
+    (moderate wedge regime, $\alpha + \gamma_\tr > \pi/2$).
+    Black curves are obtained from small/borderline wedge solutions~%
+      ($\alpha + \gamma \le \pi/2$).
+    Grey curves are the candidate boundaries of
+    Figure~\ref{fig:wedge_acute-candidates-offset},
+    obtained from borderline/moderate wedge solutions~%
+      ($\alpha + \gamma \ge \pi/2$).
+    The borderline case~($\alpha + \gamma = \pi/2$) is dashed.
+  }
+  \label{fig:wedge_small-moderate-candidates-offset}
+\end{figure}
 
 \section{Summary}
 \label{sec:small.summary}
