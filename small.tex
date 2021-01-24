@@ -301,7 +301,7 @@ can handle nonlinear problems using Newton's method,
 convergence issues arise for the BVP at hand.
 We therefore implement a custom fixed-point iteration instead,
 at each step supplying a linearised BVP
-by pre-evaluting the coefficients~$\mat{K}$ and~$\mat{v}$
+by pre-evaluating the coefficients~$\mat{K}$ and~$\mat{v}$
 using the solution computed from the previous step.
 For the initial guess we use
 the asymptotic angular function~(\ref{eq:small-asymptotic-angular-function}).
@@ -729,7 +729,7 @@ where now $r = x_0$ is the unique solution to
   \label{eq:small-critical-terminal-point-different-angle}
 \end{equation}
 instead of~(\ref{eq:small-critical-terminal-point}).
-The candidate boundary approches a wedge offset from the original
+The candidate boundary approaches a wedge offset from the original
 by the perpendicular distance~$d (\gamma, \gamma_\tr)$
 (Figure~\ref{fig:wedge_small-different-angle-offset-top}),
 as it did in the moderate wedge case
