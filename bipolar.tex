@@ -52,25 +52,31 @@ This can be rewritten as
   T \ideq T_0 \tanh^{-1} \roundbr*{\frac{2 a x}{x^2 + y^2 + a^2}},
   \label{eq:bipolar-laplace-solution-inverse-tanh}
 \end{equation}
-and by rearranging and completing the square,
-we see that the $T$-contours are simply circles.
-The bipolar coordinate system~$(u, v)$ arises
-from simply using the dimensionless quantity~$T / T_0$
-as the second coordinate,
+and the bipolar coordinate system~$(u, v)$ arises
+from using the dimensionless quantity
 \begin{equation}
-  v \ideq \tanh^{-1} \roundbr*{\frac{2 a x}{x^2 + y^2 + a^2}}.
+  v
+    \ideq \frac{T}{T_0}
+    \ideq \tanh^{-1} \roundbr*{\frac{2 a x}{x^2 + y^2 + a^2}}
   \label{eq:v-transformation-bipolar}
 \end{equation}
-so that the $T$-contours coincide with the $v$-contours
+as the second coordinate,
+so that $T$-contours are also $v$-contours,
 and the known solution is simply given by
 \begin{important}{equation}
   T \ideq T_0 \cdot v.
   \label{eq:bipolar-laplace-solution}
 \end{important}
+By rearranging~(\ref{eq:v-transformation-bipolar}) and completing the square,
+we see that the $T$-contours (and hence $v$-contours) are circles of the form
+\begin{equation}
+  (x - a \coth v)^2 + y^2 \ideq a^2 \csch^2 v.
+  \label{eq:bipolar-circle-v}
+\end{equation}
 Desiring an orthogonal coordinate system,
-and knowing that a potential and its corresponding stream function
+and knowing that a potential and its associated stream function
 cross everywhere at right angles,
-the other coordinate~$u$ is determined by computing
+the other bipolar coordinate~$u$ is determined by computing
 the harmonic conjugate of~$v$,
 yielding the angular coordinate%
 \footnote{
