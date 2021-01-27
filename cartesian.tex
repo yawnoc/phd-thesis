@@ -313,6 +313,58 @@ We denote the displacement from~$\positionvec^\star$ to~$\positionvec$ by
 and respectively let $\theta$ and~$\theta^\star$ be the angles
 that the normals~$\normalvec$ and~$\normalvec^\star$
 make with this displacement.
+Writing~$T$ and~$T^\star$ for the temperatures of the two elements,
+the total power emitted by~$\td A^\star$
+is (in scaled terms) ${T^\star}^4 \td A^\star$.
+Almost none of this will strike the element~$\td A$.
+Indeed it is well known~\cite{howell-2010-thermal-radiation-heat-transfer}
+that the \term{view factor} from~$\td A^\star$ to~$\td A$,
+defined as the fraction of radiation which leaves~$\td A^\star$
+and strikes~$\td A$,
+is given by
+\begin{equation}
+  \textq{view factor} \ideq
+    \frac{\cos\theta^\star \cos\theta \td A}{\pi {d^\star}^2},
+  \label{eq:self-viewing-view-factor}
+\end{equation}
+where~$d^\star \ideq \norm{\vec{d}^\star}$.
+It follows that the amount of radiative power arriving at~$\td A$ is
+\begin{equation}
+  \textq{power} \ideq
+    \frac{
+      {T^\star}^4 \cos\theta^\star \cos\theta \td A \td A^\star
+    }{
+      \pi {d^\star}^2
+    }.
+  \label{eq:self-viewing-power}
+\end{equation}
+Assuming that all of this is absorbed by~$\td A$,
+we see that the radiation boundary condition~%
+  (\ref{eq:plane-scaled-radiation-boundary-condition})
+must be modified to
+\begin{equation}
+  \normalvec \dotp \del T =
+    -T^4 +
+    \int
+      \frac{
+        {T^\star}^4 \cos\theta^\star \cos\theta \td A^\star
+      }{
+        \pi {d^\star}^2
+      }
+  \label{eq:plane-scaled-radiation-boundary-condition-self-viewing}
+\end{equation}
+in order to account for self-viewing radiation.%
+\footnote{
+  Since the integral term
+  in~(\ref{eq:plane-scaled-radiation-boundary-condition-self-viewing})
+  is \emph{non-local},
+  self-viewing radiation cannot be analysed
+  using the method of boundary tracing,
+  which requires a local flux condition
+  of the form~(\ref{eq:flux-boundary-condition}).
+}
+The integral is to be taken over all elements~$\td A^\star$
+which can see the element~$\td A$ at the local position~$\positionvec$.
 
 \section{Cosinusoidal solution}
 \label{sec:cartesian.cosine}
