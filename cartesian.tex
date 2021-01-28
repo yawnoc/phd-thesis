@@ -382,6 +382,28 @@ and the existing quartic term (for outgoing radiation)
 provides a measure of whether self-viewing radiation is negligible
 for the domains we have produced using boundary tracing.
 
+In the case of a single concave fin
+shaped as~$y = y (x)$ on~$x_1 \le x \le x_2$
+(Figure~X\@), % TODO
+it may be shown that (\ref{eq:radiation-self-viewing-ratio})~becomes
+\begin{equation}
+  R =
+    \frac{1}{T^4}
+    \int_{x_1}^{x_2}
+      \frac{
+        {T^\star}^4
+        \squarebr[\big]{-(x - x^\star) {y'}^\star + (y - y^\star)}
+        \squarebr[\big]{(x - x^\star) y' - (y - y^\star)}
+        \td x^\star
+      }{
+        2
+        \squarebr[\big]{(x - x^\star)^2 + (y - y^\star)^2}^{3/2}
+        \sqrt{1 + {y'}^2}
+      };
+  \label{eq:plane-self-viewing-ratio}
+\end{equation}
+details are given in Appendix~X\@. % TODO
+
 \section{Cosinusoidal solution}
 \label{sec:cartesian.cosine}
 
