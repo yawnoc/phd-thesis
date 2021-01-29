@@ -1,0 +1,161 @@
+\chapter{Self-viewing radiation calculations}
+\label{ch:self-viewing}
+
+\section{Single concave fin}
+\label{sec:self-viewing.fin}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.5\textwidth]{%
+    self-viewing-radiation-elements%
+  }
+  \caption{
+    Geometry of the area element~$\td A$
+    receiving radiation from the element~$\td A^\star$.
+  }
+  \label{fig:self-viewing-radiation-elements-appendix}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.55\textwidth]{%
+    self-viewing-radiation-elements-fin%
+  }
+  \caption{
+    Geometry of the area elements~$\td A$ and~$\td A^\star$
+    in a self-viewing concave fin.
+  }
+  \label{fig:self-viewing-radiation-elements-fin-appendix}
+\end{figure}
+
+Here we obtain an explicit integral expression
+for the ratio~(\ref{eq:radiation-self-viewing-ratio}),
+i.e.
+\begin{equation}
+  R =
+    \frac{1}{T^4}
+    \int
+      \frac{
+        {T^\star}^4 \cos\theta^\star \cos\theta \td A^\star
+      }{
+        \pi {d^\star}^2
+      },
+  \label{eq:radiation-self-viewing-ratio-appendix}
+\end{equation}
+in the case of a single concave fin,
+shaped as~$y = y (x)$ on~$x_1 \le x \le x_2$.
+This ratio provides a dimensionless measure
+of the amount of self-viewing radiation
+that has been neglected during boundary tracing.
+For convenience, we have included here
+repeats of Figures~\ref{fig:self-viewing-radiation-elements}
+and~\ref{fig:self-viewing-radiation-elements-fin},
+in the form of Figure~\ref{fig:self-viewing-radiation-elements-appendix}
+and Figure~\ref{fig:self-viewing-radiation-elements-fin-appendix}.
+
+The displacement between the area elements~$\td A$ and~$\td A^\star$ is
+by definition
+\begin{equation}
+  \vec{d}^\star
+    \ideq
+      \positionvec - \positionvec^\star \\
+    \ideq
+      (x - x^\star) \basisvec{x}
+        +
+      (y - y^\star) \basisvec{y}
+        +
+      (z - z^\star) \basisvec{z},
+  \label{eq:radiation-self-viewing-displacement-appendix}
+\end{equation}
+while the normal to the fin surface~$y = y (x)$ is given by
+\begin{equation}
+  \normalvec \ideq
+    \frac{
+      -y' \basisvec{x} + \basisvec{y}
+    }{
+      \sqrt{1 + {y'}^2}
+    },
+  \label{eq:radiation-self-viewing-normal-vector}
+\end{equation}
+where primes denote $x$-differentiation.
+
+From the geometry of
+Figure~\ref{fig:self-viewing-radiation-elements-appendix},
+we have
+\begin{align*}
+  \frac{\cos\theta^\star \cos\theta}{{d^\star}^2}
+    &\ideq
+      \frac{
+        (\normalvec^\star \dotp \vec{d}^\star)
+        (-{\normalvec} \dotp \vec{d}^\star)
+      }{
+        {d^\star}^4
+      }
+        \\[\tallspace]
+    &\ideq
+      \frac{
+        \squarebr[\big]{-(x - x^\star) {y'}^\star + (y - y^\star)}
+        \squarebr[\big]{(x - x^\star) y' - (y - y^\star)}
+      }{
+        \squarebr[\big]{
+          (x - x^\star)^2 + (y - y^\star)^2 + (z - z^\star)
+        }^2
+        \sqrt{1 + {{y'}^\star}^2}
+        \sqrt{1 + {y'}^2}
+      },
+        \yesnumber
+        \label{eq:radiation-self-viewing-cosine-expression}
+\end{align*}
+and from Figure~\ref{fig:self-viewing-radiation-elements-fin-appendix},
+we see that
+\begin{equation}
+  \td A^\star
+    \ideq \td s^\star \td z^\star
+    \ideq \sqrt{1 + {{y'}^\star}^2} \td x^\star \td z^\star,
+  \label{eq:radiation-self-viewing-differential-area}
+\end{equation}
+with $x_1 < x^\star < x_2$ and~$-\infty < z^\star < \infty$
+being the appropriate bounds of integration.
+
+Using~(\ref{eq:radiation-self-viewing-cosine-expression})
+and~(\ref{eq:radiation-self-viewing-differential-area}),
+the ratio~(\ref{eq:radiation-self-viewing-ratio-appendix}) becomes
+\begin{equation}
+  R =
+    \frac{1}{T^4}
+    \int_{-\infty}^{\infty}
+    \int_{x_1}^{x_2}
+      \smallerfrac{
+        {T^\star}^4
+        \squarebr[\big]{-(x - x^\star) {y'}^\star + (y - y^\star)}
+        \squarebr[\big]{(x - x^\star) y' - (y - y^\star)}
+        \td x^\star
+        \td z^\star
+      }{
+        \pi
+        \squarebr[\big]{
+          (x - x^\star)^2 + (y - y^\star)^2 + (z - z^\star)
+        }^2
+        \sqrt{1 + {y'}^2}
+      },
+  \label{eq:radiation-self-viewing-ratio-double-integral}
+\end{equation}
+and after evaluating the outer integral with respect to~$z^\star$,
+we obtain
+\begin{equation}
+  R =
+    \frac{1}{T^4}
+    \int_{x_1}^{x_2}
+      \smallerfrac{
+        {T^\star}^4
+        \squarebr[\big]{-(x - x^\star) {y'}^\star + (y - y^\star)}
+        \squarebr[\big]{(x - x^\star) y' - (y - y^\star)}
+        \td x^\star
+      }{
+        2
+        \squarebr[\big]{(x - x^\star)^2 + (y - y^\star)^2}^{3/2}
+        \sqrt{1 + {y'}^2}
+      },
+  \label{eq:plane-self-viewing-ratio-appendix}
+\end{equation}
+which is~(\ref{eq:plane-self-viewing-ratio}).
