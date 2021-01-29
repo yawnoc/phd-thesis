@@ -22,7 +22,7 @@ First we consider the simplest non-constant solution
 to Laplace's equation~(\ref{eq:laplace-steady-conduction})
 in Cartesian coordinates,
 \begin{important}{equation}
-  T \ideq h_0 x,
+  T = h_0 x,
   \label{eq:plane-laplace-solution}
 \end{important}
 corresponding to one-dimensional steady conduction
@@ -53,13 +53,13 @@ and reduce the problem to its simplest form.
 
 Let
 \begin{align}
-  T &\ideq \Theta \scaled{T}, \label{eq:plane-temperature-scaling} \\
-  x &\ideq \lambda \scaled{x}, \label{eq:plane-x-scaling} \\
-  y &\ideq \lambda \scaled{y}. \label{eq:plane-y-scaling}
+  T &= \Theta \scaled{T}, \label{eq:plane-temperature-scaling} \\
+  x &= \lambda \scaled{x}, \label{eq:plane-x-scaling} \\
+  y &= \lambda \scaled{y}. \label{eq:plane-y-scaling}
 \end{align}
 Noting that
 \begin{equation}
-  \del \ideq \scaleddel / \lambda,
+  \del = \scaleddel / \lambda,
   \label{eq:plane-del-scaling}
 \end{equation}
 the radiation boundary condition~(\ref{eq:radiation-boundary-condition})
@@ -71,7 +71,7 @@ become
     \label{eq:plane-scaled-radiation-boundary-condition-with-groups}
     \\[\tallspace]
   \scaled{T}
-    &\ideq \group{\frac{h_0 \lambda}{\Theta}} \scaled{x}.
+    &= \group{\frac{h_0 \lambda}{\Theta}} \scaled{x}.
     \label{eq:plane-scaled-laplace-solution-with-groups}
 \end{align}
 Setting the two dimensionless groups to unity
@@ -112,17 +112,17 @@ become
 \begin{important}{align}
   \normalvec \dotp \del T &= -T^4,
     \label{eq:plane-scaled-radiation-boundary-condition} \\
-  T &\ideq x.
+  T &= x.
     \label{eq:plane-scaled-laplace-solution}
 \end{important}
 The scale factors for Cartesian coordinates are trivial
-($\scalefac[x] \ideq \scalefac[y] \ideq 1$),
+($\scalefac[x] = \scalefac[y] = 1$),
 leading to the following abbreviatory quantities
 from Section~\ref{sec:curvilinear.derivative.abbreviations}:
 \begin{align}
-  P &\ideq \pder{T}{x} \ideq 1,
+  P &= \pder{T}{x} = 1,
     \label{eq:plane-gradient-x-component} \\[\tallspace]
-  Q &\ideq \pder{T}{y} \ideq 0.
+  Q &= \pder{T}{y} = 0.
     \label{eq:plane-gradient-y-component}
 \end{align}
 Comparing the radiation boundary condition~%
@@ -131,16 +131,16 @@ to the generic one~(\ref{eq:flux-boundary-condition}),
 the flux function is
 \begin{align*}
   F
-  &\ideq - T^4 \\
-  &\ideq -x^4,
+  &= - T^4 \\
+  &= -x^4,
     \yesnumber
     \label{eq:plane-flux-function}
 \end{align*}
 and it follows that the viability function is
 \begin{align*}
   \Phi
-  &\ideq (\del T)^2 - F^2 \\
-  &\ideq 1 - x^8.
+  &= (\del T)^2 - F^2 \\
+  &= 1 - x^8.
     \yesnumber
     \label{eq:plane-viability-function}
 \end{align*}
@@ -308,7 +308,7 @@ $\positionvec^\star =
 as shown in Figure~\ref{fig:self-viewing-radiation-elements}.
 We denote the displacement from~$\positionvec^\star$ to~$\positionvec$ by
 \begin{equation}
-  \vec{d}^\star \ideq \positionvec - \positionvec^\star,
+  \vec{d}^\star = \positionvec - \positionvec^\star,
   \label{eq:radiation-self-viewing-displacement}
 \end{equation}
 and respectively let $\theta$ and~$\theta^\star$ be the angles
@@ -324,14 +324,14 @@ defined as the fraction of radiation which leaves~$\td A^\star$
 and strikes~$\td A$,
 is given by
 \begin{equation}
-  \textq{view factor} \ideq
+  \textq{view factor} =
     \frac{\cos\theta^\star \cos\theta \td A}{\pi {d^\star}^2},
   \label{eq:radiation-self-viewing-view-factor}
 \end{equation}
-where~$d^\star \ideq \norm{\vec{d}^\star}$.
+where~$d^\star = \norm{\vec{d}^\star}$.
 It follows that the amount of radiative power arriving at~$\td A$ is
 \begin{equation}
-  \textq{power} \ideq
+  \textq{power} =
     \frac{
       {T^\star}^4 \cos\theta^\star \cos\theta \td A \td A^\star
     }{
@@ -432,7 +432,7 @@ and from a practical point of view it is
 straight-line, constant-temperature boundaries which are of interest.
 Therefore in this section we consider known solutions of the form
 \begin{important}{equation}
-  T \ideq T_0 \roundbr*{1 - B \cos\frac{x}{L_0} \cosh\frac{y}{L_0}},
+  T = T_0 \roundbr*{1 - B \cos\frac{x}{L_0} \cosh\frac{y}{L_0}},
   \label{eq:cosine-laplace-solution}
 \end{important}
 where $T_0$~is a temperature, $L_0$~is a length scale,
@@ -465,7 +465,7 @@ become
     \label{eq:cosine-scaled-radiation-boundary-condition-with-groups}
     \\[\tallspace]
   \scaled{T}
-    &\ideq
+    &=
       \group{\frac{T_0}{\Theta}}
       \roundbr*{
         1 -
@@ -499,7 +499,7 @@ become
 \begin{important}{align}
   \normalvec \dotp \del T &= -\frac{T^4}{A},
     \label{eq:cosine-scaled-radiation-boundary-condition} \\[\tallspace]
-  T &\ideq 1 - B \cos x \cosh y.
+  T &= 1 - B \cos x \cosh y.
     \label{eq:cosine-scaled-laplace-solution}
 \end{important}
 
@@ -554,21 +554,21 @@ For the boundary condition~%
 and known solution~(\ref{eq:cosine-scaled-laplace-solution}) at hand,
 we obtain the derivatives
 \begin{align}
-  P &\ideq \pder{T}{x} \ideq +B \sin x \cosh y,
+  P &= \pder{T}{x} = +B \sin x \cosh y,
     \label{eq:cosine-gradient-x-component} \\[\tallspace]
-  Q &\ideq \pder{T}{y} \ideq -B \cos x \sinh y,
+  Q &= \pder{T}{y} = -B \cos x \sinh y,
     \label{eq:cosine-gradient-y-component}
 \end{align}
 the flux function
 \begin{equation}
-  F \ideq -\frac{(1 - B \cos x \cosh y) ^ 4}{A},
+  F = -\frac{(1 - B \cos x \cosh y) ^ 4}{A},
   \label{eq:cosine-flux-function}
 \end{equation}
 and the viability function
 \begin{align*}
   \Phi
-  &\ideq (\del T)^2 - F^2 \\
-  &\ideq
+  &= (\del T)^2 - F^2 \\
+  &=
     B^2 \roundbr*{\sin^2 x + \sinh^2 y}
       -
     \frac{(1 - B \cos x \cosh y) ^ 8}{A^2}.
@@ -596,12 +596,12 @@ we consider~$B = 1$ before examining the general case.
 In the $B = 1$~case,
 the known solution~(\ref{eq:cosine-scaled-laplace-solution}) simplifies to
 \begin{equation}
-  T \ideq 1 - \cos x \cosh y
+  T = 1 - \cos x \cosh y
   \label{eq:cosine-simple-laplace-solution}
 \end{equation}
 and the viability function~(\ref{eq:cosine-viability-function}) reduces to
 \begin{equation}
-  \Phi \ideq \sin^2 x + \sinh^2 y - \frac{(1 - \cos x \cosh y) ^ 8}{A^2}.
+  \Phi = \sin^2 x + \sinh^2 y - \frac{(1 - \cos x \cosh y) ^ 8}{A^2}.
   \label{eq:cosine-simple-viability-function}
 \end{equation}
 The dependence of the non-viable domain~$\Phi < 0$
@@ -788,7 +788,7 @@ Algebraically, $x_0$~is the positive%
 solution to
 \begin{equation}
   \eval[\textsize]{\Phi}_{y=0}
-  \ideq \roundbr*{1 - \cos^2 x} - \frac{(1 - \cos x)^8}{A^2}
+  = \roundbr*{1 - \cos^2 x} - \frac{(1 - \cos x)^8}{A^2}
   = 0,
   \label{eq:cosine-simple-critical-terminal-point-x}
 \end{equation}
@@ -886,7 +886,7 @@ Substituting~$x = x_\infl = \pi/2$, this becomes
     cosine-simple-traced-boundary-acceleration-cartesian-by-y-inflection%
   }
 \end{equation}
-where $C \ideq \cosh y$ and~$S \ideq \sinh y$.
+where $C = \cosh y$ and~$S = \sinh y$.
 Only the square-bracketed factor can change sign,
 and an analysis shows that for~$0 < A < 1$,
 this factor has a unique zero-crossing~$S = S_\infl (A)$.
@@ -951,7 +951,7 @@ and are therefore tangential.
 Algebraically these terminal points are given by the roots of
 \begin{equation}
   \eval[\textsize]{\Phi}_{y=0}
-  \ideq B^2 \sin^2 x - \frac{(1 - B \cos x)^8}{A^2}
+  = B^2 \sin^2 x - \frac{(1 - B \cos x)^8}{A^2}
   = 0,
   \label{eq:cosine-general-critical-terminal-point-x}
 \end{equation}

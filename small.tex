@@ -59,15 +59,15 @@ the asymptotic height rise being~$T \asy 1 / (f - g)$.
 Their method consists of two parts.
 The first is the change of dependent variable
 \begin{equation}
-  T (x, y) \ideq \frac{H (x, y)}{f (x) - g(x)},
+  T (x, y) = \frac{H (x, y)}{f (x) - g(x)},
   \label{eq:capillary-unbounded-change-of-variable}
 \end{equation}
 which ensures that the new dependent variable~$H$ is bounded.
 The second is the change of coordinates
 \begin{align}
-  x &\ideq X,
+  x &= X,
     \label{eq:capillary-unbounded-x-transformation} \\
-  y &\ideq \frac{1 + Y}{2} f (X) + \frac{1 - Y}{2} g (X),
+  y &= \frac{1 + Y}{2} f (X) + \frac{1 - Y}{2} g (X),
     \label{eq:capillary-unbounded-y-transformation}
 \end{align}
 which maps the original domain $x > 0$, $g (x) < y < f (x)$
@@ -114,7 +114,7 @@ where $k$~is given by~(\ref{eq:wedge-constant-k}), i.e.
 In analogy to~(\ref{eq:capillary-unbounded-change-of-variable}),
 we apply the transformation
 \begin{equation}
-  T (r, \phi) \ideq \frac{H (r, \phi)}{r}
+  T (r, \phi) = \frac{H (r, \phi)}{r}
   \label{eq:small-wedge-change-of-variable}
 \end{equation}
 so that the new dependent variable~$H$ is bounded and continuous
@@ -153,19 +153,19 @@ becomes the BVP
 \end{align}
 in~$H$, where
 \begin{align}
-  \matder &\ideq
+  \matder &=
     \begin{pmatrix}
       \pd / {\pd r} \\
       \pd / {\pd\phi}
     \end{pmatrix},
     \label{eq:small-formally-rectangular-derivative} \\
-  \mat{K} &\ideq
+  \mat{K} &=
     \begin{pmatrix}
       r^2 C & 0 \\
       0 & C
     \end{pmatrix},
     \label{eq:small-formally-rectangular-diffusion-coefficient} \\
-  \mat{v} &\ideq
+  \mat{v} &=
     \begin{pmatrix}
       r C \\
       0
@@ -175,15 +175,15 @@ in~$H$, where
 and $\mat{n}$~is to~$\matder$ as $\normalvec$~is to~$\del$,
 with
 \begin{equation}
-  C \ideq \frac{1}{\sqrt{r^4 + \desing{P}^2 + \desing{Q}^2}},
+  C = \frac{1}{\sqrt{r^4 + \desing{P}^2 + \desing{Q}^2}},
   \label{eq:small-formally-rectangular-scalar-coefficient}
 \end{equation}
 where
 \begin{align}
-  \desing{P} &\ideq r \pder{H}{r} - H,
+  \desing{P} &= r \pder{H}{r} - H,
     \label{eq:small-gradient-de-singularised-r-component}
     \\[\tallspace]
-  \desing{Q} &\ideq \pder{H}{\phi}.
+  \desing{Q} &= \pder{H}{\phi}.
     \label{eq:small-gradient-de-singularised-phi-component}
 \end{align}
 The transformed problem~(\ref{eq:small-formally-rectangular-laplace-young})
@@ -280,7 +280,7 @@ It remains to specify the boundary condition along the boundary~$r = 0$,
 which represents the corner of the original wedge.
 Defining the angular function
 \begin{equation}
-  H_0 \ideq \frac{\cos\phi - \sqrt{k^2 - \sin^2 \phi}}{k},
+  H_0 = \frac{\cos\phi - \sqrt{k^2 - \sin^2 \phi}}{k},
   \label{eq:small-asymptotic-angular-function}
 \end{equation}
 the asymptotic relation~(\ref{eq:small-wedge-scaled-asymptotic-solution})
@@ -356,7 +356,7 @@ by extrapolating the computed value of~$H / r$ to~$r = 0$,
 we should not expect a high level of accuracy
 due to (multiplicative) catastrophic cancellation
 between~$H$ (going to zero) and~$1 / r$ (going to infinity).
-We may compare $T \ideq H / r$~obtained here using
+We may compare $T = H / r$~obtained here using
 the polar-coordinate transformation~(\ref{eq:small-wedge-change-of-variable})
 with the corresponding numerical solution
 obtained in Section~\ref{sec:moderate.nonlinear.numerical.wedge}
@@ -393,7 +393,7 @@ allows us to be confident in the results of both.
 \section{Corner rounding}
 \label{sec:small.rounding}
 
-Having obtained numerical solutions~$T \ideq H / r$ for small wedges,
+Having obtained numerical solutions~$T = H / r$ for small wedges,
 we now use boundary tracing to seek roundings shapes
 which still satisfy the contact condition~%
   (\ref{eq:scaled-contact-boundary-condition}).
@@ -404,7 +404,7 @@ Again after writing this in the standard form
 \end{important}
 we see that the flux function is the right hand side, i.e.
 \begin{equation}
-  F \ideq \cos\gamma \sqrt{1 + (\del T)^2}.
+  F = \cos\gamma \sqrt{1 + (\del T)^2}.
   \label{eq:small-flux-function}
 \end{equation}
 
@@ -420,13 +420,13 @@ in terms of derivatives of~$H$.
 First we observe that the components of~$\del T$ are of order~$1 / r^2$.
 Indeed we have
 \begin{align}
-  P &\ideq \pder{T}{r}
-    \ideq \frac{1}{r} \pder{H}{r} - \frac{H}{r^2}
-    \ideq \frac{\desing{P}}{r^2},
+  P &= \pder{T}{r}
+    = \frac{1}{r} \pder{H}{r} - \frac{H}{r^2}
+    = \frac{\desing{P}}{r^2},
       \label{eq:small-gradient-r-component} \\[\tallspace]
-  Q &\ideq \frac{\pd T}{r \pd\phi}
-    \ideq \frac{1}{r^2} \pder{H}{\phi}
-    \ideq \frac{\desing{Q}}{r^2},
+  Q &= \frac{\pd T}{r \pd\phi}
+    = \frac{1}{r^2} \pder{H}{\phi}
+    = \frac{\desing{Q}}{r^2},
       \label{eq:small-gradient-phi-component}
 \end{align}
 where the de-singularised versions~$\desing{P}$ and~$\desing{Q}$
@@ -436,23 +436,23 @@ in terms of derivatives of~$H$.
 Therefore
 \begin{equation}
   (\del T)^2
-    \ideq P^2 + Q^2
-    \ideq \frac{\desing{P}^2 + \desing{Q}^2}{r^4},
+    = P^2 + Q^2
+    = \frac{\desing{P}^2 + \desing{Q}^2}{r^4},
   \label{eq:small-gradient-squared}
 \end{equation}
 and the flux function~(\ref{eq:small-flux-function}) becomes
 \begin{equation}
   F
-    \ideq
+    =
       \cos\gamma
       \sqrt{1 + \roundbr*{\desing{P}^2 + \desing{Q}^2} / r^4}
-    \ideq
+    =
       \frac{\desing{F}}{r^2},
     \label{eq:small-flux-function-singular}
 \end{equation}
 where
 \begin{equation}
-  \desing{F} \ideq \cos\gamma \sqrt{r^4 + \desing{P}^2 + \desing{Q}^2}.
+  \desing{F} = \cos\gamma \sqrt{r^4 + \desing{P}^2 + \desing{Q}^2}.
   \label{eq:small-flux-function-de-singularised}
 \end{equation}
 Likewise for the viability function~$\Phi$,
@@ -460,16 +460,16 @@ given again by~(\ref{eq:moderate-viability-function}),
 we have
 \begin{equation}
   \Phi
-    \ideq
+    =
       \sin^2\gamma \cdot \frac{\desing{P}^2 + \desing{Q}^2}{r^4}
       - \cos^2\gamma
-    \ideq
+    =
       \frac{\desing{\Phi}}{r^4},
     \label{eq:small-viability-function-singular}
 \end{equation}
 where
 \begin{equation}
-  \desing{\Phi} \ideq
+  \desing{\Phi} =
     \sin^2\gamma \, \roundbr*{\desing{P}^2 + \desing{Q}^2} - r^4 \cos^2\gamma
   \label{eq:small-viability-function-de-singularised}
 \end{equation}
@@ -650,7 +650,7 @@ corresponding to a different contact angle~$\gamma_\tr$.
 With the de-singularised flux and viability functions
 modified to become
 \begin{equation}
-  \desing{F} \ideq
+  \desing{F} =
     \cos\gamma_\tr
     \sqrt{
       r^4
@@ -661,7 +661,7 @@ modified to become
 \end{equation}
 and
 \begin{equation}
-  \desing{\Phi} \ideq
+  \desing{\Phi} =
     \sin^2\gamma_\tr \,
     \roundbr*{
       \desing{P}^2 (r, \phi; \alpha, \gamma)
@@ -759,7 +759,7 @@ and Figure~\ref{fig:wedge_acute-different-angle-offset-side}).
 \end{figure}
 
 Thus, given a single numerical wedge solution~%
-  $T (r, \phi; \alpha, \gamma) \ideq H (r, \phi; \alpha, \gamma) / r$,
+  $T (r, \phi; \alpha, \gamma) = H (r, \phi; \alpha, \gamma) / r$,
 boundary tracing can be used to construct
 a one-parameter family~$\gamma_\tr \ge \gamma$
 of candidate boundaries for corner rounding;
@@ -843,7 +843,7 @@ and we find them no less susceptible to bulging and lack of spread
 than their counterparts in the moderate regime.
 Height-rise profiles along each rounding curve can be obtained
 by evaluating the appropriate wedge solution~%
-  $T (r, \phi; \alpha, \gamma) \ideq H (r, \phi; \alpha, \gamma) / r$.
+  $T (r, \phi; \alpha, \gamma) = H (r, \phi; \alpha, \gamma) / r$.
 The resulting profiles will be similar to those
 of Figure~\ref{fig:wedge_acute-height-rise-profiles}.
 That the profiles have a bounded height rise

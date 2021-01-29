@@ -4,7 +4,7 @@
 Here we apply the change of variable~(\ref{eq:small-wedge-change-of-variable}),
 i.e.
 \begin{equation}
-  T (r, \phi) \ideq \frac{H (r, \phi)}{r},
+  T (r, \phi) = \frac{H (r, \phi)}{r},
   \label{eq:small-wedge-change-of-variable-appendix}
 \end{equation}
 to transform the capillary problem~(\ref{eq:scaled-laplace-young})
@@ -24,7 +24,7 @@ as the steady-state diffusion problem
 \end{align}
 where
 \begin{equation}
-  K \ideq \frac{1}{\sqrt{1 + (\del T)^2}}
+  K = \frac{1}{\sqrt{1 + (\del T)^2}}
   \label{eq:laplace-young-diffusion-coefficient-appendix}
 \end{equation}
 is the (nonlinear) diffusion coefficient.
@@ -72,7 +72,7 @@ For the purpose of computing~$H$,
 we would like to treat~$r$ and~$\phi$ as rectangular coordinates,
 which requires rewriting the problem in terms of the formal operator
 \begin{equation}
-  \matder \ideq
+  \matder =
     \begin{pmatrix}
       \pd / {\pd r} \\
       \pd / {\pd\phi}
@@ -92,7 +92,7 @@ to get the equations into an algebraically rectangular form.
 We first observe that the gradient vector
 is given in polar coordinates by
 \begin{equation}
-  \del T \ideq
+  \del T =
     \pder{T}{r} \basisvec{r} + \frac{1}{r} \pder{T}{\phi} \basisvec{\phi}.
   \label{eq:gradient-polar}
 \end{equation}
@@ -100,7 +100,7 @@ Effecting the transformation~%
   (\ref{eq:small-wedge-change-of-variable-appendix}),
 this becomes
 \begin{equation}
-  \del T \ideq
+  \del T =
     \curlybr*{\frac{1}{r} \pder{H}{r} - \frac{H}{r^2}} \basisvec{r}
       +
     \curlybr*{\frac{1}{r^2} \pder{H}{\phi}} \basisvec{\phi}.
@@ -111,7 +111,7 @@ we obtain the left hand side
 of the Laplace--Young equation~(\ref{eq:laplace-young-diffusion-appendix}):
 \begin{align*}
   \del & \dotp \squarebr{K \del T} \\
-  &\ideq
+  &=
     \frac{1}{r} \squarebr*{
       \pder{}{r} \roundbr*{
         r K \curlybr*{\frac{1}{r} \pder{H}{r} - \frac{H}{r^2}}
@@ -122,14 +122,14 @@ of the Laplace--Young equation~(\ref{eq:laplace-young-diffusion-appendix}):
       }
     }
     \\[\tallspace]
-  &\ideq
+  &=
     \frac{1}{r} \squarebr*{
       \pder{}{r} \roundbr*{K \pder{H}{r} - \frac{K}{r} \cdot H}
         +
       \pder{}{\phi} \roundbr*{\frac{K}{r^2} \pder{H}{\phi}}
     }
     \\[\tallspace]
-  &\ideq
+  &=
     \frac{1}{r} \squarebr*{
       \pder{}{r} \roundbr*{K \pder{H}{r}}
         +
@@ -138,7 +138,7 @@ of the Laplace--Young equation~(\ref{eq:laplace-young-diffusion-appendix}):
       \pder{}{r} \roundbr*{\frac{K}{r} \cdot H}
     }
     \\[\tallspace]
-  &\ideq
+  &=
     \frac{1}{r} \squarebr*{
       \begin{pmatrix}
         \pd / {\pd r} & \pd / {\pd\phi}
@@ -162,7 +162,7 @@ of the Laplace--Young equation~(\ref{eq:laplace-young-diffusion-appendix}):
       H
     }
     \\[\tallspace]
-  &\ideq
+  &=
     \frac{1}{r}
     \begin{pmatrix}
       \pd / {\pd r} & \pd / {\pd\phi}
@@ -185,13 +185,13 @@ of the Laplace--Young equation~(\ref{eq:laplace-young-diffusion-appendix}):
       H
     }
     \\[\tallspace]
-  &\ideq
+  &=
     \frac{1}{r}
     \matder \dotp \squarebr[\bulkysize]{\mat{K} \matder H - \mat{v} H},
 \end{align*}
 where
 \begin{equation}
-  \mat{K} \ideq
+  \mat{K} =
     \begin{pmatrix}
       K  &  0 \\
       0  &  K / r^2
@@ -200,7 +200,7 @@ where
 \end{equation}
 and
 \begin{equation}
-  \mat{v} \ideq
+  \mat{v} =
     \begin{pmatrix}
       K / r \\
       0
@@ -209,7 +209,7 @@ and
 \end{equation}
 Since the right hand side
 of the Laplace--Young equation~(\ref{eq:laplace-young-diffusion-appendix})
-is~$T \ideq H / r$,
+is~$T = H / r$,
 we obtain the PDE
 \begin{equation}
   \matder \dotp \squarebr[\bulkysize]{\mat{K} \matder H - \mat{v} H}
@@ -223,7 +223,7 @@ in~$H (r, \phi)$.
 
 First write the normal vector~$\normalvec$ in components,
 \begin{equation}
-  \normalvec \ideq n_r \basisvec{r} + n_\phi \basisvec{\phi}.
+  \normalvec = n_r \basisvec{r} + n_\phi \basisvec{\phi}.
   \label{eq:normal-vector-polar}
 \end{equation}
 Taking the dot product with
@@ -231,24 +231,24 @@ $K$~times the gradient vector~(\ref{eq:gradient-polar-change-of-variable}),
 we have
 \begin{align*}
   \normalvec & \dotp \squarebr{K \del T} \\
-  &\ideq
+  &=
     n_r K \curlybr*{\frac{1}{r} \pder{H}{r} - \frac{H}{r^2}}
       +
     n_\phi K \curlybr*{\frac{1}{r^2} \pder{H}{\phi}}
     \\[\tallspace]
-  &\ideq
+  &=
     \frac{n_r}{r} \roundbr*{K \pder{H}{r} - \frac{K}{r} \cdot H}
       +
     n_\phi \roundbr*{\frac{K}{r^2} \pder{H}{\phi}}
     \\[\tallspace]
-  &\ideq
+  &=
     \frac{n_r}{r} \roundbr*{K \pder{H}{r}}
       +
     n_\phi \roundbr*{\frac{K}{r^2} \pder{H}{\phi}}
       -
     \frac{n_r}{r} \roundbr*{\frac{K}{r} \cdot H}
     \\[\tallspace]
-  &\ideq
+  &=
     \begin{pmatrix}
       n_r / r  &  n_\phi
     \end{pmatrix}
@@ -270,7 +270,7 @@ we have
     \end{pmatrix}
     H
     \\[\tallspace]
-  &\ideq
+  &=
     \begin{pmatrix}
       n_r / r  &  n_\phi
     \end{pmatrix}
@@ -292,12 +292,12 @@ we have
       H
     }
     \\[\tallspace]
-  &\ideq
+  &=
     \mat{n} \dotp \squarebr[\bulkysize]{\mat{K} \matder H - \mat{v} H},
 \end{align*}
 where
 \begin{equation}
-  \mat{n} \ideq
+  \mat{n} =
     \begin{pmatrix}
       n_r / r \\
       n_\phi
@@ -351,18 +351,18 @@ given in Chapter~\ref{ch:small}.
 Reading off~(\ref{eq:gradient-polar-change-of-variable}),
 the components of the gradient vector in polar coordinates are
 \begin{align}
-  P &\ideq \frac{1}{r} \pder{H}{r} - \frac{H}{r^2},
+  P &= \frac{1}{r} \pder{H}{r} - \frac{H}{r^2},
     \label{eq:small-gradient-r-component-appendix} \\[\tallspace]
-  Q &\ideq \frac{1}{r^2} \pder{H}{\phi}.
+  Q &= \frac{1}{r^2} \pder{H}{\phi}.
     \label{eq:small-gradient-phi-component-appendix}
 \end{align}
 Noting that these are of order~$1 / r^2$,
 we define the de-singularised versions
 \begin{align}
-  \desing{P} &\ideq r^2 P \ideq r \pder{H}{r} - H,
+  \desing{P} &= r^2 P = r \pder{H}{r} - H,
     \label{eq:small-gradient-de-singularised-r-component-appendix}
     \\[\tallspace]
-  \desing{Q} &\ideq r^2 Q \ideq \pder{H}{\phi},
+  \desing{Q} &= r^2 Q = \pder{H}{\phi},
     \label{eq:small-gradient-de-singularised-phi-component-appendix}
 \end{align}
 as given in~(\ref{eq:small-gradient-de-singularised-r-component})
@@ -370,27 +370,27 @@ and~(\ref{eq:small-gradient-de-singularised-phi-component}).
 We then have
 \begin{equation}
   (\del T)^2
-    \ideq P^2 + Q^2
-    \ideq \frac{\desing{P}^2 + \desing{Q}^2}{r^4},
+    = P^2 + Q^2
+    = \frac{\desing{P}^2 + \desing{Q}^2}{r^4},
   \label{eq:small-gradient-squared-appendix}
 \end{equation}
 and hence
 \begin{align*}
   K
-  &\ideq
+  &=
     \frac{1}{\sqrt{1 + (\desing{P}^2 + \desing{Q}^2) / r^4}}
     \\[\tallspace]
-  &\ideq
+  &=
     \frac{r^2}{\sqrt{r^4 + \desing{P}^2 + \desing{Q}^2}}
     \\[\tallspace]
-  &\ideq
+  &=
     r^2 C,
     \yesnumber
     \label{eq:small-laplace-young-diffusion-coefficient-appendix}
 \end{align*}
 where
 \begin{equation}
-  C \ideq \frac{1}{\sqrt{r^4 + \desing{P}^2 + \desing{Q}^2}},
+  C = \frac{1}{\sqrt{r^4 + \desing{P}^2 + \desing{Q}^2}},
   \label{eq:small-formally-rectangular-scalar-coefficient-appendix}
 \end{equation}
 as in~(\ref{eq:small-formally-rectangular-scalar-coefficient}).
@@ -399,7 +399,7 @@ Therefore,
 and~(\ref{eq:small-formally-rectangular-convection-coefficient-singular})
 become
 \begin{equation}
-  \mat{K} \ideq
+  \mat{K} =
     \begin{pmatrix}
       r^2 C  &  0 \\
       0  &  C
@@ -408,7 +408,7 @@ become
 \end{equation}
 and
 \begin{equation}
-  \mat{v} \ideq
+  \mat{v} =
     \begin{pmatrix}
       r C \\
       0

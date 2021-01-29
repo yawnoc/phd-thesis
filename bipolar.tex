@@ -31,7 +31,7 @@ Since the distance to each source is
 \end{equation}
 the known solution is given by
 \begin{equation}
-  T \ideq
+  T =
     T_0 \log \roundbr*{\frac{r_0}{r_+}}
       -
     T_0 \log \roundbr*{\frac{r_0}{r_-}},
@@ -44,33 +44,33 @@ which reduces%
 }
 to
 \begin{important}{equation}
-  T \ideq T_0 \log \roundbr*{\frac{r_-}{r_+}}.
+  T = T_0 \log \roundbr*{\frac{r_-}{r_+}}.
   \label{eq:bipolar-laplace-solution-source-distances}
 \end{important}
 This can be rewritten as
 \begin{equation}
-  T \ideq T_0 \tanh^{-1} \roundbr*{\frac{2 a x}{x^2 + y^2 + a^2}},
+  T = T_0 \tanh^{-1} \roundbr*{\frac{2 a x}{x^2 + y^2 + a^2}},
   \label{eq:bipolar-laplace-solution-inverse-tanh}
 \end{equation}
 and the bipolar coordinate system~$(u, v)$ arises
 from using the dimensionless quantity
 \begin{equation}
   v
-    \ideq \frac{T}{T_0}
-    \ideq \tanh^{-1} \roundbr*{\frac{2 a x}{x^2 + y^2 + a^2}}
+    = \frac{T}{T_0}
+    = \tanh^{-1} \roundbr*{\frac{2 a x}{x^2 + y^2 + a^2}}
   \label{eq:v-transformation-bipolar}
 \end{equation}
 as the second coordinate,
 so that $T$-contours are also $v$-contours,
 and the known solution is simply given by
 \begin{important}{equation}
-  T \ideq T_0 \cdot v.
+  T = T_0 \cdot v.
   \label{eq:bipolar-laplace-solution}
 \end{important}
 By rearranging~(\ref{eq:v-transformation-bipolar}) and completing the square,
 we see that the $T$-contours (and hence $v$-contours) are circles of the form
 \begin{equation}
-  (x - a \coth v)^2 + y^2 \ideq a^2 \csch^2 v.
+  (x - a \coth v)^2 + y^2 = a^2 \csch^2 v.
   \label{eq:bipolar-circle-v}
 \end{equation}
 Desiring an orthogonal coordinate system,
@@ -80,7 +80,7 @@ the other bipolar coordinate~$u$ is determined by computing
 the harmonic conjugate of~$v$,
 yielding the angular coordinate
 \begin{equation}
-  u \ideq \tan^{-1} \roundbr*{\frac{2 a y}{x^2 + y^2 - a^2}}.
+  u = \tan^{-1} \roundbr*{\frac{2 a y}{x^2 + y^2 - a^2}}.
   \label{eq:u-transformation-bipolar}
 \end{equation}
 Here, the arctangent is to be returned in the quadrant corresponding to
@@ -95,17 +95,17 @@ and upon inverting~(\ref{eq:v-transformation-bipolar})
 \&~(\ref{eq:u-transformation-bipolar})
 we have
 \begin{align}
-  x &\ideq \frac{a \sinh v}{\cosh v - \cos u},
+  x &= \frac{a \sinh v}{\cosh v - \cos u},
     \label{eq:x-transformation-bipolar}
     \\[\tallspace]
-  y &\ideq \frac{a \sin u}{\cosh v - \cos u}.
+  y &= \frac{a \sin u}{\cosh v - \cos u}.
     \label{eq:y-transformation-bipolar}
 \end{align}
 The length scale~$a$ is intrinsic to the coordinate system,
 as it encodes the locations of the singularities~$(x, y) = (\pm a, 0)$.
 The scale factors for the two coordinates turn out to be the same:
 \begin{equation}
-  \scalefac \ideq \frac{a}{\cosh v - \cos u}.
+  \scalefac = \frac{a}{\cosh v - \cos u}.
   \label{eq:scale-factor-bipolar}
 \end{equation}
 
@@ -132,7 +132,7 @@ for the angular coordinate~$u$
 may likewise undergo rearrangement and completion of the square
 to become
 \begin{equation}
-  x^2 + (y - a \cot u)^2 \ideq a^2 \csc^2 u.
+  x^2 + (y - a \cot u)^2 = a^2 \csc^2 u.
   \label{eq:bipolar-circle-u}
 \end{equation}
 Despite this, the $u$-contours are \emph{not} full circles.
@@ -154,22 +154,22 @@ and clockwise around the negative singularity.
 Since the length scale has already been fixed at~$a$,
 we let
 \begin{align}
-  x &\ideq a \scaled{x}, \label{eq:bipolar-x-scaling} \\
-  y &\ideq a \scaled{y}, \label{eq:bipolar-y-scaling}
+  x &= a \scaled{x}, \label{eq:bipolar-x-scaling} \\
+  y &= a \scaled{y}, \label{eq:bipolar-y-scaling}
 \end{align}
 so that
 \begin{equation}
-  \del \ideq \scaleddel / a.
+  \del = \scaleddel / a.
   \label{eq:bipolar-del-scaling}
 \end{equation}
 For the bipolar scale factor~$\scalefac$ it is sensible to put
 \begin{equation}
-  \scalefac \ideq a \scaled{\scalefac}.
+  \scalefac = a \scaled{\scalefac}.
   \label{eq:bipolar-scale-factor-scaling}
 \end{equation}
 Also putting
 \begin{equation}
-  T \ideq \Theta \scaled{T},
+  T = \Theta \scaled{T},
   \label{eq:bipolar-temperature-scaling}
 \end{equation}
 the radiation boundary condition~(\ref{eq:radiation-boundary-condition})
@@ -180,7 +180,7 @@ become
     &= -\group{c a \Theta^3} \scaled{T}^4,
     \label{eq:bipolar-scaled-radiation-boundary-condition-with-groups}
     \\[\tallspace]
-  \scaled{T} &\ideq \group{\frac{T_0}{\Theta}} v.
+  \scaled{T} &= \group{\frac{T_0}{\Theta}} v.
     \label{eq:bipolar-scaled-laplace-solution-with-groups}
 \end{align}
 Given two dimensionless groups but only one free scale~$\Theta$,
@@ -201,12 +201,12 @@ we have boundary condition and known solution
 \begin{important}{align}
   \normalvec \dotp \del T &= -\frac{T^4}{A},
     \label{eq:bipolar-scaled-radiation-boundary-condition} \\
-  T &\ideq v,
+  T &= v,
     \label{eq:bipolar-scaled-laplace-solution}
 \end{important}
 along with the dimensionless scale factor
 \begin{equation}
-  \scalefac \ideq \frac{1}{\cosh v - \cos u}.
+  \scalefac = \frac{1}{\cosh v - \cos u}.
   \label{eq:dimensionless-scale-factor-bipolar}
 \end{equation}
 
@@ -224,9 +224,9 @@ which is unphysical in the context of thermal radiation.
 
 The bipolar components of the temperature gradient~$\del T$ are
 \begin{align}
-  P &\ideq \frac{1}{h} \pder{T}{u} \ideq 0,
+  P &= \frac{1}{h} \pder{T}{u} = 0,
     \label{eq:bipolar-gradient-u-component} \\[\tallspace]
-  Q &\ideq \frac{1}{h} \pder{T}{v} \ideq \frac{1}{h}.
+  Q &= \frac{1}{h} \pder{T}{v} = \frac{1}{h}.
     \label{eq:bipolar-gradient-v-component}
 \end{align}
 Comparing the radiation condition~%
@@ -235,17 +235,17 @@ to the generic~(\ref{eq:flux-boundary-condition}),
 it follows that the flux function is
 \begin{align*}
   F
-  &\ideq -\frac{T^4}{A} \\[\tallspace]
-  &\ideq -\frac{v^4}{A},
+  &= -\frac{T^4}{A} \\[\tallspace]
+  &= -\frac{v^4}{A},
     \yesnumber
     \label{eq:bipolar-flux-function}
 \end{align*}
 and therefore the viability function is given by
 \begin{align*}
   \Phi
-  &\ideq (\del T)^2 - F^2 \\[\tallspace]
-  &\ideq \frac{1}{h^2} - \frac{v^8}{A^2} \\[\tallspace]
-  &\ideq \roundbr[\bulkysize]{\cosh v - \cos u}^2 - \frac{v^8}{A^2}.
+  &= (\del T)^2 - F^2 \\[\tallspace]
+  &= \frac{1}{h^2} - \frac{v^8}{A^2} \\[\tallspace]
+  &= \roundbr[\bulkysize]{\cosh v - \cos u}^2 - \frac{v^8}{A^2}.
     \yesnumber
     \label{eq:bipolar-viability-function}
 \end{align*}

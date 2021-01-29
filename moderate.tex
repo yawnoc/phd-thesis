@@ -44,13 +44,13 @@ is the capillary length
 \end{equation}
 We therefore put
 \begin{align}
-  T &\ideq L_0 \scaled{T}, \label{eq:capillary-height-scaling} \\
-  x &\ideq L_0 \scaled{x}, \label{eq:capillary-x-scaling} \\
-  y &\ideq L_0 \scaled{y}, \label{eq:capillary-y-scaling}
+  T &= L_0 \scaled{T}, \label{eq:capillary-height-scaling} \\
+  x &= L_0 \scaled{x}, \label{eq:capillary-x-scaling} \\
+  y &= L_0 \scaled{y}, \label{eq:capillary-y-scaling}
 \end{align}
 noting that the derivative will transform according to
 \begin{equation}
-  \del \ideq \scaleddel / L_0.
+  \del = \scaleddel / L_0.
   \label{eq:capillary-del-scaling}
 \end{equation}
 Substituting and dropping \scalingmarks,
@@ -96,7 +96,7 @@ so that the capillary problem~(\ref{eq:scaled-laplace-young})
 may be linearised by discarding~$(\del T)^2 \ll 1$.
 The subsidiary height scaling
 \begin{equation}
-  T \ideq U \cos\gamma
+  T = U \cos\gamma
   \label{eq:helmholtz-height-scaling}
 \end{equation}
 removes the contact angle parameter,
@@ -140,7 +140,7 @@ as shown in Figure~\ref{fig:helmholtz-wedge-domain}.
 As observed by Fowkes \&~Hood~\cite{fowkes-1998-surface-tension-effects-wedge},
 the known solution to the Helmholtz BVP in this wedge is given by
 \begin{important}{equation}
-  U \ideq \exp \frac{-x+y}{\sqrt{2}} + \exp \frac{-x-y}{\sqrt{2}},
+  U = \exp \frac{-x+y}{\sqrt{2}} + \exp \frac{-x-y}{\sqrt{2}},
   \label{eq:scaled-helmholtz-solution}
 \end{important}
 a superposition of capillary layers contributed by each wall
@@ -154,17 +154,17 @@ to the generic one~(\ref{eq:flux-boundary-condition})
 (and noting that here we have~$U$ in place of~$T$),
 we see that the flux function is simply
 \begin{equation}
-  F \ideq 1.
+  F = 1.
   \label{eq:helmholtz-flux-function}
 \end{equation}
 The derivatives of the known solution are
 \begin{align}
-  P &\ideq \pder{U}{x} \ideq
+  P &= \pder{U}{x} =
     \frac{1}{\sqrt{2}} \roundbr*{
       - \exp \frac{-x+y}{\sqrt{2}} - \exp \frac{-x-y}{\sqrt{2}}
     },
     \label{eq:helmholtz-gradient-x-component} \\[\tallspace]
-  Q &\ideq \pder{U}{y} \ideq
+  Q &= \pder{U}{y} =
     \frac{1}{\sqrt{2}} \roundbr*{
       + \exp \frac{-x+y}{\sqrt{2}} - \exp \frac{-x-y}{\sqrt{2}}
     },
@@ -173,8 +173,8 @@ The derivatives of the known solution are
 and so the viability function is
 \begin{align*}
   \Phi
-  &\ideq (\del U)^2 - F^2 \\
-  &\ideq \ee^{-\sqrt{2} (x - y)} + \ee^{-\sqrt{2} (x + y)} - 1.
+  &= (\del U)^2 - F^2 \\
+  &= \ee^{-\sqrt{2} (x - y)} + \ee^{-\sqrt{2} (x + y)} - 1.
     \yesnumber
     \label{eq:helmholtz-viability-function}
 \end{align*}
@@ -423,7 +423,7 @@ may be viewed as the steady-state diffusion problem
 with interior sink~$T$, boundary supply~$\cos\gamma$,
 and nonlinear diffusion coefficient
 \begin{equation}
-  K (\del T) \ideq \frac{1}{\sqrt{1 + (\del T)^2}}.
+  K (\del T) = \frac{1}{\sqrt{1 + (\del T)^2}}.
   \label{eq:laplace-young-diffusion-coefficient}
 \end{equation}
 \software{Mathematica~12}'s \code{NDSolve\`{}FEM\`{}} package
@@ -470,7 +470,7 @@ called the \term{half-plane solution}~%
   \cite{anderson-2006-exact-solutions-laplace-young},
 takes on the implicit form
 \begin{equation}
-  x (T) \ideq
+  x (T) =
     \cosh^{-1} \roundbr*{\frac{2}{T}} - \sqrt{4 - T^2}
     - \cosh^{-1} \roundbr*{\frac{2}{h}} + \sqrt{4 - h^2},
   \label{eq:half-plane-solution}
@@ -867,14 +867,14 @@ and comparing it to the generic boundary condition~%
   (\ref{eq:flux-boundary-condition}),
 it follows that the flux function is given by
 \begin{equation}
-  F \ideq \cos\gamma \sqrt{1 + (\del T)^2}.
+  F = \cos\gamma \sqrt{1 + (\del T)^2}.
   \label{eq:moderate-flux-function}
 \end{equation}
 The viability function is therefore
 \begin{align*}
   \Phi
-  &\ideq (\del T)^2 - F^2 \\
-  &\ideq \sin^2\gamma \, (\del T)^2 - \cos^2\gamma,
+  &= (\del T)^2 - F^2 \\
+  &= \sin^2\gamma \, (\del T)^2 - \cos^2\gamma,
     \yesnumber
     \label{eq:moderate-viability-function}
 \end{align*}
@@ -904,9 +904,9 @@ Staying in Cartesian coordinates,
 the components of the gradient vector
 are the first derivatives
 \begin{align}
-  P &\ideq \pder{T}{x},
+  P &= \pder{T}{x},
     \label{eq:moderate-gradient-x-component} \\[\tallspace]
-  Q &\ideq \pder{T}{y},
+  Q &= \pder{T}{y},
     \label{eq:moderate-gradient-y-component}
 \end{align}
 which may easily be evaluated from our finite element solutions.
@@ -1104,9 +1104,9 @@ becomes
 \end{important}
 where the components~$P$ and~$Q$ of the gradient vector are simply
 \begin{align}
-  P &\ideq \pder{T}{\xi},
+  P &= \pder{T}{\xi},
     \label{eq:moderate-gradient-xi-component} \\[\tallspace]
-  Q &\ideq \pder{T}{\eta}.
+  Q &= \pder{T}{\eta}.
     \label{eq:moderate-gradient-eta-component}
 \end{align}
 Since the top wall~$\xi = 0$ satisfies the contact condition~%
@@ -1338,14 +1338,14 @@ The procedure is the same
 as that of Section~\ref{sec:moderate.nonlinear.tracing},
 only now we have flux function
 \begin{equation}
-  F \ideq
+  F =
     \cos\gamma_\tr
     \sqrt{1 + \squarebr[\bulkysize]{\del T (x, y; \alpha, \gamma)}^2},
   \label{eq:moderate-flux-function-different-angle}
 \end{equation}
 and viability function
 \begin{equation}
-  \Phi \ideq
+  \Phi =
     \sin^2\gamma_\tr \squarebr[\bulkysize]{\del T (x, y; \alpha, \gamma)}^2
     - \cos^2\gamma_\tr.
     \label{eq:moderate-viability-function-different-angle}
@@ -1564,7 +1564,7 @@ and we see that the candidate boundary approaches the offset wedge
 \end{equation}
 where
 \begin{equation}
-  d (\gamma, \gamma_\tr) \ideq
+  d (\gamma, \gamma_\tr) =
     \cosh^{-1} \roundbr*{\frac{2}{h_\tr}} - \sqrt{4 - {h_\tr}^2}
     - \cosh^{-1} \roundbr*{\frac{2}{h}} + \sqrt{4 - h^2}
   \label{eq:moderate-offset-distance}

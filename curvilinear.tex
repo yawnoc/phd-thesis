@@ -63,30 +63,30 @@ where $\scalefac[u]$ and~$\scalefac[v]$~are the \term{scale factors}%
 \footnote{
   Also called \term{Lam\'e coefficients}.
   The position vector~%
-    $\positionvec \ideq x \basisvec{x} + y \basisvec{y}$
+    $\positionvec = x \basisvec{x} + y \basisvec{y}$
   gives rise to the local basis vectors~%
-    $\localvec{u} \ideq \pd\positionvec / {\pd u}$
+    $\localvec{u} = \pd\positionvec / {\pd u}$
   and~%
-    $\localvec{v} \ideq \pd\positionvec / {\pd v}$,
-  and hence the scale factors~$\scalefac[u] \ideq \norm{\localvec{u}}$
-  and~$\scalefac[v] \ideq \norm{\localvec{v}}$.
+    $\localvec{v} = \pd\positionvec / {\pd v}$,
+  and hence the scale factors~$\scalefac[u] = \norm{\localvec{u}}$
+  and~$\scalefac[v] = \norm{\localvec{v}}$.
 }
 and $(\basisvec{u}, \basisvec{v})$~is the \term{local orthonormal basis}%
 \footnote{
   Obtained by normalising the local basis vectors,
-  i.e.~$\basisvec{u} \ideq \localvec{u} / \scalefac[u]$
-  and~$\basisvec{v} \ideq \localvec{v} / \scalefac[v]$.
+  i.e.~$\basisvec{u} = \localvec{u} / \scalefac[u]$
+  and~$\basisvec{v} = \localvec{v} / \scalefac[v]$.
 }.
 It can be shown that the normal vector~$\normalvec$ (up to sign)
 and the gradient vector~$\del T$ are given by
 \begin{align}
-  \normalvec &\ideq
+  \normalvec &=
     \scalefac[v] \tder{v}{s} \basisvec{u}
       -
     \scalefac[u] \tder{u}{s} \basisvec{v},
     \label{eq:normal-vector}
     \\[\tallspace]
-  \del T &\ideq
+  \del T &=
     \frac{1}{\scalefac[u]} \pder{T}{u} \basisvec{u}
       +
     \frac{1}{\scalefac[v]} \pder{T}{v} \basisvec{v},
@@ -94,7 +94,7 @@ and the gradient vector~$\del T$ are given by
 \end{align}
 where $\td s$~is the differential arc length
 \begin{equation}
-  \td s \ideq
+  \td s =
   \sqrt{
     \roundbr[\bulkysize]{\scalefac[u] \td u}^2
       +
@@ -121,52 +121,52 @@ For the side lengths of the infinitesimal rectangle
 of Figure~\ref{fig:orthogonal-curvilinear-coordinates},
 we define the auxiliary differentials
 \begin{align}
-  \td \mu &\ideq \scalefac[u] \td u,
+  \td \mu &= \scalefac[u] \td u,
     \label{eq:differential-displacement-u-component} \\
-  \td \nu &\ideq \scalefac[v] \td v,
+  \td \nu &= \scalefac[v] \td v,
     \label{eq:differential-displacement-v-component}
 \end{align}
 so that
 \begin{equation}
-  \td s \ideq \sqrt{{\td \mu}^2 + {\td \nu}^2}.
+  \td s = \sqrt{{\td \mu}^2 + {\td \nu}^2}.
   \label{eq:differential-arc-length-abbreviated}
 \end{equation}
 For the components of the normal vector~(\ref{eq:normal-vector}),
 we define
 \begin{align}
-  \alpha &\ideq \tder{\mu}{s} \ideq \scalefac[u] \tder{u}{s},
+  \alpha &= \tder{\mu}{s} = \scalefac[u] \tder{u}{s},
     \label{eq:tangent-u-component} \\[\tallspace]
-  \beta &\ideq \tder{\nu}{s} \ideq \scalefac[v] \tder{v}{s},
+  \beta &= \tder{\nu}{s} = \scalefac[v] \tder{v}{s},
     \label{eq:tangent-v-component}
 \end{align}
 so that
 \begin{equation}
   \normalvec
-    \ideq \tder{\nu}{s} \basisvec{u} - \tder{\mu}{s} \basisvec{v}
-    \ideq \beta \basisvec{u} - \alpha \basisvec{v}.
+    = \tder{\nu}{s} \basisvec{u} - \tder{\mu}{s} \basisvec{v}
+    = \beta \basisvec{u} - \alpha \basisvec{v}.
   \label{eq:normal-vector-abbreviated}
 \end{equation}
 Finally, for the components of the gradient vector~(\ref{eq:gradient}),
 we define
 \begin{align}
-  P &\ideq \frac{1}{\scalefac[u]} \pder{T}{u},
+  P &= \frac{1}{\scalefac[u]} \pder{T}{u},
     \label{eq:gradient-u-component} \\[\tallspace]
-  Q &\ideq \frac{1}{\scalefac[v]} \pder{T}{v},
+  Q &= \frac{1}{\scalefac[v]} \pder{T}{v},
     \label{eq:gradient-v-component}
 \end{align}
 so that
 \begin{equation}
-  \del T \ideq P \basisvec{u} + Q \basisvec{v}.
+  \del T = P \basisvec{u} + Q \basisvec{v}.
   \label{eq:gradient-abbreviated}
 \end{equation}
 Note that
 \begin{equation}
-  \alpha^2 + \beta^2 \ideq 1
+  \alpha^2 + \beta^2 = 1
   \label{eq:tangent-pythagoras}
 \end{equation}
 and
 \begin{equation}
-  P^2 + Q^2 \ideq (\del T)^2.
+  P^2 + Q^2 = (\del T)^2.
   \label{eq:gradient-pythagoras}
 \end{equation}
 
@@ -182,7 +182,7 @@ and the corresponding system of ODEs for arc-length parametrisation.
 Following Anderson~\etal~\cite{anderson-2007-boundary-tracing-i-theory}
 we define the \term{viability function}
 \begin{important}{equation}
-  \Phi \ideq (\del T)^2 - F^2.
+  \Phi = (\del T)^2 - F^2.
   \label{eq:viability-function}
 \end{important}
 This is not only algebraically useful,
@@ -322,9 +322,9 @@ Solving~(\ref{eq:tracing-arc-length-parametrisation-flux-boundary-condition})
 for~$\alpha$ and~$\beta$, we obtain
 the boundary tracing system of ODEs under arc-length parametrisation,
 \begin{align}
-  \tder{\mu}{s} &\ideq \alpha = \frac{-Q F \pm P \sqrt{\Phi}}{(\del T)^2},
+  \tder{\mu}{s} &= \alpha = \frac{-Q F \pm P \sqrt{\Phi}}{(\del T)^2},
     \label{eq:tracing-ode-arc-length-parametrisation-mu} \\[\tallspace]
-  \tder{\nu}{s} &\ideq \beta = \frac{+P F \pm Q \sqrt{\Phi}}{(\del T)^2},
+  \tder{\nu}{s} &= \beta = \frac{+P F \pm Q \sqrt{\Phi}}{(\del T)^2},
     \label{eq:tracing-ode-arc-length-parametrisation-nu}
 \end{align}
 or
