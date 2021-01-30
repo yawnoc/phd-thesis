@@ -212,9 +212,11 @@ of the Laplace--Young equation~(\ref{eq:laplace-young-diffusion-appendix})
 is~$T = H / r$,
 we obtain the PDE
 \begin{equation}
-  \matder \dotp \squarebr[\bulkysize]{\mat{K} \matder H - \mat{v} H}
-    = H
-  \label{eq:small-formally-rectangular-laplace-young-appendix}
+  \saveequation{
+    \matder \dotp \squarebr[\bulkysize]{\mat{K} \matder H - \mat{v} H}
+  }{=}{
+    H
+  }{eq:small-formally-rectangular-laplace-young-appendix}
 \end{equation}
 in~$H (r, \phi)$.
 
@@ -327,8 +329,7 @@ to the BVP~%
 in~$H$,
 i.e.
 \begin{align}
-  \matder \dotp \squarebr[\bulkysize]{\mat{K} \matder H - \mat{v} H}
-    &= H,
+  \useequation{&=}{eq:small-formally-rectangular-laplace-young-appendix},
     \label{eq:small-formally-rectangular-laplace-young-repeat} \\
   \mat{n} \dotp \squarebr[\bulkysize]{\mat{K} \matder H - \mat{v} H}
     &= \cos\gamma.
