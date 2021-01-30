@@ -477,8 +477,9 @@ takes on the implicit form
 \end{equation}
 where
 \begin{equation}
-  h = \sqrt{2 (1 - \sin\gamma)}
-  \label{eq:half-plane-height}
+  \savecontent{
+    h = \sqrt{2 (1 - \sin\gamma)}
+  }{eq:half-plane-height}
 \end{equation}
 is the height rise at the wall~$x = 0$.
 
@@ -1546,7 +1547,7 @@ Here, $\xi$~is the perpendicular distance from the wall ($\xi = 0$),
 and $h$~is the height rise~(\ref{eq:half-plane-height}) at the wall,
 i.e.
 \begin{equation}
-  h = \sqrt{2 (1 - \sin\gamma)},
+  \usecontent{eq:half-plane-height},
   \label{eq:half-plane-height-repeat}
 \end{equation}
 corresponding to the original contact angle~$\gamma$.
