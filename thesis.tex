@@ -212,6 +212,35 @@
 \newcommand*{\doi}[1]{\url{\doidomain #1}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Save and reuse
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeatletter
+
+% Save content
+% --------
+%   #1  {content}
+%   #2  {label}
+\newcommand{\savecontent}[2]{%
+  #1%
+  \label{#2}%
+  \global\@namedef{savecontent@#2}{#1}%
+}
+
+% Use content
+% --------
+%   #1  {label}
+\newcommand{\usecontent}[1]{%
+  \@ifundefined{savecontent@#1}{%
+    ??%
+  }{%
+    \@nameuse{savecontent@#1}%
+  }%
+}
+
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Math macros
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
