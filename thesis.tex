@@ -238,6 +238,29 @@
   }%
 }
 
+% Save equation
+% --------
+%   #1  {left hand side}
+%   #2  {relation}
+%   #3  {right hand side}
+%   #4  {label}
+\newcommand{\saveequation}[4]{
+  #1 #2 #3
+  \label{#4}
+  \global\@namedef{savecontent@saveequation@left@#4}{#1}
+  \global\@namedef{savecontent@saveequation@right@#4}{#3}
+}
+
+% Use equation
+% --------
+%   #1  {relation}
+%   #2  {label}
+\newcommand{\useequation}[2]{
+  \usecontent{saveequation@left@#2}
+  #1
+  \usecontent{saveequation@right@#2}
+}
+
 \makeatother
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
