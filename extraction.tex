@@ -309,9 +309,11 @@ where
 The contact condition~(\ref{eq:contact-boundary-condition-diffusion-appendix})
 therefore becomes
 \begin{equation}
-  \mat{n} \dotp \squarebr[\bulkysize]{\mat{K} \matder H - \mat{v} H}
-    = \cos\gamma.
-  \label{eq:small-formally-rectangular-contact-boundary-condition-appendix}
+  \saveequation{
+    \mat{n} \dotp \squarebr[\bulkysize]{\mat{K} \matder H - \mat{v} H}
+  }{=}{
+    \cos\gamma
+  }{eq:small-formally-rectangular-contact-boundary-condition-appendix}.
 \end{equation}
 
 \section{Coefficients}
@@ -331,8 +333,9 @@ i.e.
 \begin{align}
   \useequation{&=}{eq:small-formally-rectangular-laplace-young-appendix},
     \label{eq:small-formally-rectangular-laplace-young-repeat} \\
-  \mat{n} \dotp \squarebr[\bulkysize]{\mat{K} \matder H - \mat{v} H}
-    &= \cos\gamma.
+  \useequation{&=}{%
+    eq:small-formally-rectangular-contact-boundary-condition-appendix%
+  }.
     \label{eq:small-formally-rectangular-contact-boundary-condition-repeat}
 \end{align}
 This is indeed of the same form
