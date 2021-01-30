@@ -1186,10 +1186,11 @@ like the half-plane solution~(\ref{eq:half-plane-solution})
 with $x$~replaced by~$\xi$,
 i.e.
 \begin{equation}
-  \xi (T) \asy
-    \cosh^{-1} \roundbr*{\frac{2}{T}} - \sqrt{4 - T^2}
-    - \cosh^{-1} \roundbr*{\frac{2}{h}} + \sqrt{4 - h^2},
-    \label{eq:moderate-half-plane-solution-near-wall}
+  \savecontent{
+    \xi (T) \asy
+      \cosh^{-1} \roundbr*{\frac{2}{T}} - \sqrt{4 - T^2}
+      - \cosh^{-1} \roundbr*{\frac{2}{h}} + \sqrt{4 - h^2}
+  }{eq:moderate-half-plane-solution-near-wall},
 \end{equation}
 where we recall that
 $h$~is the half-plane wall height~(\ref{eq:half-plane-height}).
@@ -1538,9 +1539,7 @@ we have the half-plane approximation~%
   (\ref{eq:moderate-half-plane-solution-near-wall}),
 which we repeat here:
 \begin{equation}
-  \xi (T) \asy
-    \cosh^{-1} \roundbr*{\frac{2}{T}} - \sqrt{4 - T^2}
-    - \cosh^{-1} \roundbr*{\frac{2}{h}} + \sqrt{4 - h^2}.
+  \usecontent{eq:moderate-half-plane-solution-near-wall}.
     \label{eq:moderate-half-plane-solution-near-wall-repeat}
 \end{equation}
 Here, $\xi$~is the perpendicular distance from the wall ($\xi = 0$),
