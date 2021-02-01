@@ -1299,7 +1299,12 @@ in that domain and comparing the result
 to the exact solution~(\ref{eq:cosine-scaled-laplace-solution}).
 To do this we use \software{Mathematica~12},
 whose finite elements package~\code{NDSolve\`{}FEM\`{}}
-has built-in capabilities for mesh generation and for solving nonlinear BVPs.
+has built-in capabilities for mesh generation
+and the solving of nonlinear BVPs.%
+\footnote{
+  Internally, the package uses a Newton iteration.
+  This is described briefly in Section~\ref{sec:moderate.nonlinear.numerical}.
+}
 
 \begin{figure}
   \newcommand*{\legendoffsetheight}{0.1\textwidth}
