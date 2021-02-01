@@ -1361,10 +1361,12 @@ the radiation condition~(\ref{eq:radiation-boundary-condition})
 holds exactly along these boundaries,
 and they may be patched together
 to form a broad variety of radiation boundaries.
-Unfortunately these boundaries are physically invalid
-because they are not convex,
-and the boundary condition~(\ref{eq:radiation-boundary-condition})
+Unfortunately these boundaries are not convex,
+which is problematic
+since the boundary condition~(\ref{eq:radiation-boundary-condition})
 does not account for self-viewing radiation.
+Nevertheless, we have shown how to identify near-convex fins
+for which the amount of self-viewing radiation is negligible.
 
 A more favourable outcome might be expected
 by starting from a solution to Laplace's equation
@@ -1375,9 +1377,12 @@ which are of physical interest,
 we have chosen the cosinusoidal solution~(\ref{eq:cosine-laplace-solution}),
 which has the straight-line contour~$x = \pi L_0/2$.
 In the simple case~($B = 1$)
-we have seen that a lens-shaped domain can be produced
-which is convex for certain values of the dimensionless group~$A$,
-while for the more complicated general case~($B$~arbitrary)
+we have seen that a convex, lens-shaped domain can be produced
+when the dimensionless group~$A$ belongs to a certain interval.
+We have then shown that this interval can be extended
+so as to obtain near-convex domains
+having a negligible amount of self-viewing radiation.
+For the more complicated general case~($B$~arbitrary)
 we have demonstrated the construction of an asymmetric domain
 from convex portions of the traced boundaries.
 Finally the validity of the domains produced has been confirmed,
