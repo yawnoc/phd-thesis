@@ -958,6 +958,99 @@ if and only if
   \label{eq:cosine-simple-traced-boundary-convex-a-interval}
 \end{equation}
 
+\subsubsection{Near-convex self-viewing radiation}
+\label{sec:cartesian.cosine.simple.self-viewing}
+
+While the candidate domains for~$A < A_\infl$ are not convex,
+one would expect the amount of self-viewing radiation to be small
+in cases where $A$~is not significantly less than~$A_\infl$.
+In the same vein as Section~\ref{sec:cartesian.plane.self-viewing},
+we may obtain an explicit integral expression
+for the ratio~(\ref{eq:radiation-self-viewing-ratio})
+which quantifies the amount of self-viewing radiation
+that has been neglected.
+By symmetry
+we need only consider the top half~$y > 0$ of each candidate domain,
+and after a similar analysis to Appendix~\ref{sec:self-viewing.fin},
+we obtain
+\begin{equation}
+  \savecontent{
+    R =
+      \frac{1}{T^4}
+      \int_{y_1}^{y_2}
+        \smallerfrac{
+          {T^\star}^4
+          \squarebr[\big]{-(x - x^\star) + (y - y^\star) {x'}^\star}
+          \squarebr[\big]{(x - x^\star) - (y - y^\star) x'}
+          \td y^\star
+        }{
+          2
+          \squarebr[\big]{(x - x^\star)^2 + (y - y^\star)^2}^{3/2}
+          \sqrt{{x'}^2 + 1}
+        }
+  }{eq:cosine-simple-self-viewing-ratio},
+\end{equation}
+where $y_1 \le y^\star \le y_2$~is the interval of
+all elements that can impart radiation
+onto the local element at~$\positionvec = x \basisvec{x} + y \basisvec{y}$.
+The geometry of the candidate domains is such that
+$y_1$ and~$y_2$ depend non-trivially upon~$\positionvec$.
+We write~$(x, y) = (\pi/2, y_\End)$ for the uppermost tip,
+and let $(x_\view, y_\view)$~be the lowest point on the radiation boundary
+that is visible from~$(\pi/2, y_\End)$.
+From Figure~X\@, % TODO
+we see that self-viewing radiation is received either
+(a)~not at all,
+(b)~from the concave portion, or
+(c)~from both the concave and convex portions,
+depending on the location of the receiving point~$\positionvec$
+in relation to both~$(x_\view, y_\view)$
+and the point of inflection~$(x_\infl, y_\infl)$.
+
+We would like to determine an interval~$A_\prac \le A < A_\infl$
+in which the amount of self-viewing radiation is negligible,
+despite the candidate domain being non-convex.
+In this regard,
+there are two difficulties
+with the integral expression~(\ref{eq:cosine-simple-self-viewing-ratio}).
+Firstly, as noted above,
+the bounds~$y_1$ and~$y_2$ depend on the local position~$(x, y)$;
+secondly, the result of the integration is a function of~$y$
+(on the interval~$y_\view \le y \le y_\End$
+where self-viewing radiation is possible).
+The simplest way forward is to determine
+an upper bound for~(\ref{eq:cosine-simple-self-viewing-ratio}),
+so that for each given value of~$A$
+we may obtain a single $R$-value rather than a function of~$y$.
+From the analysis of Appendix~X\@, % TODO
+we have
+\begin{equation}
+  \savecontent{
+    R \le R_+ =
+      \frac{
+        (T_{\max} / T_{\min})^4
+        \abs{x''}_{\max}^2
+        (y_\End - y_\view)^2
+      }{
+        8 (1 + \abs{x'}_{\min}^2) ^ 2
+      }
+  }{eq:cosine-simple-self-viewing-ratio-bound},
+\end{equation}
+with the upper bound~$R_+$ falling below~$\SI{1}{\percent}$ at
+\begin{equation}
+  A = A_\prac = 0.43124.
+  \label{eq:cosine-simple-traced-boundary-a-practical}
+\end{equation}
+Thus, the non-convex candidate domains are of practical use
+on the interval
+\begin{equation}
+  A_\prac \le A < A_\infl,
+  \label{eq:cosine-simple-traced-boundary-practical-a-interval}
+\end{equation}
+which is twice the length
+of the interval~(\ref{eq:cosine-simple-traced-boundary-convex-a-interval})
+for convexity.
+
 \subsection{General case (\texorpdfstring{$B$~arbitrary}{B arbitrary})}
 \label{sec:cartesian.cosine.general}
 
