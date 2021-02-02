@@ -126,3 +126,109 @@ we obtain
   \label{eq:plane-self-viewing-ratio-appendix}
 \end{equation}
 which is~(\ref{eq:plane-self-viewing-ratio}).
+
+\section{Lens-like domains}
+\label{sec:self-viewing.lens}
+
+Here we obtain an upper bound for the amount of self-viewing radiation
+in the non-convex candidate domains
+of Figure~\ref{fig:cosine_simple-candidate-domains},
+which have a radiation boundary shape as the traced boundary~$x = x (y)$.
+The integral to be estimated is~(\ref{eq:cosine-simple-self-viewing-ratio}),
+i.e.
+\begin{equation}
+  \usecontent{eq:cosine-simple-self-viewing-ratio}.
+  \label{eq:cosine-simple-self-viewing-ratio-appendix}
+\end{equation}
+The bounds~$y_1$ and~$y_2$ depend
+on where the local point~%
+$\positionvec = x \basisvec{x} + y \basisvec{y}$ is situated
+relative to the lowest self-viewing point~$(x_\view, y_\view)$
+and the point of inflection~$(x_\infl, y_\infl)$.
+We see from Figure~\ref{fig:cosine_simple-self-viewing-bounds}
+that either there is no self-viewing radiation to compute,
+or we have~$y_\view \le y_1 \le y_2 = y_\End$.
+Either way,
+we may bound~(\ref{eq:cosine-simple-self-viewing-ratio-appendix}) from above
+by extending the interval of integration to~$y_\view \le y^\star \le y_\End$
+and taking the absolute value of the integrand:
+\begin{equation}
+  R \le
+    \frac{1}{T^4}
+    \int_{y_\view}^{y_\End}
+      \smallerfrac{
+        {T^\star}^4
+        \abs[\big]{-(x - x^\star) + (y - y^\star) {x'}^\star}
+        \abs[\big]{(x - x^\star) - (y - y^\star) x'}
+        \td y^\star
+      }{
+        2
+        \squarebr[\big]{(x - x^\star)^2 + (y - y^\star)^2}^{3/2}
+        \sqrt{{x'}^2 + 1}
+      }.
+  \label{eq:cosine-simple-self-viewing-ratio-bound-limits}
+\end{equation}
+Now using Taylor's theorem, we have
+\begin{equation}
+  \abs*{-(x - x^\star) + (y - y^\star) {x'}^\star} \le
+    \frac{(y - y^\star)^2}{2} \abs{x''}_{\max}
+  \label{eq:taylor-second-order-remainder-upper-bound-starred}
+\end{equation}
+and
+\begin{equation}
+  \abs*{(x - x^\star) - (y - y^\star) x'} \le
+    \frac{(y - y^\star)^2}{2} \abs{x''}_{\max}
+  \label{eq:taylor-second-order-remainder-upper-bound}
+\end{equation}
+in the numerator.
+Similarly
+\begin{equation}
+  \abs{x - x^\star} \ge \abs{y - y^\star} \abs{x'}_{\min},
+  \label{eq:taylor-first-order-remainder-lower-bound}
+\end{equation}
+so that
+\begin{equation}
+  (x - x^\star)^2 + (y - y^\star)^2 \ge
+    (y - y^\star)^2 \roundbr*{\abs{x'}_{\min}^2 + 1}
+  \label{eq:displacement-squared-lower-bound}
+\end{equation}
+in the denominator.
+Thus (\ref{eq:cosine-simple-self-viewing-ratio-bound-limits})~becomes
+\begin{align*}
+  R
+  &\le
+    \frac{1}{(T_{\min})^4}
+    \int_{y_\view}^{y_\End}
+      \frac{
+        (T_{\max}^\star)^4
+        (y - y^\star)^4
+        \abs{x''}_{\max}^2
+        \td y^\star
+      }{
+        8
+        \abs{y - y^\star}^3
+        \roundbr*{\abs{x'}_{\min}^2 + 1}^2
+      } \\[\tallspace]
+  &\le
+    \frac{
+      (T_{\max} / T_{\min})^4 \abs{x''}_{\max}^2
+    }{
+      8 \roundbr*{\abs{x'}_{\min}^2 + 1}^2
+    }
+    \int_{y_\view}^{y_\End} \abs{y - y^\star} \td y^\star.
+  \yesnumber
+  \label{eq:cosine-simple-self-viewing-ratio-bound-taylor}
+\end{align*}
+Since we are only considering~$y_\view \le y \le y_\End$,
+there holds
+\[
+  \int_{y_\view}^{y_\End} \abs{y - y^\star} \td y^\star
+    \le \int_{y_\view}^{y_\End} (y_\End - y_\view) \td y^\star
+    \le (y_\End - y_\view)^2,
+\]
+and we therefore obtain the upper bound
+\begin{equation}
+  \usecontent{eq:cosine-simple-self-viewing-ratio-bound},
+  \label{eq:cosine-simple-self-viewing-ratio-bound-appendix}
+\end{equation}
+which is~(\ref{eq:cosine-simple-self-viewing-ratio-bound}).
