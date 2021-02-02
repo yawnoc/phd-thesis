@@ -975,6 +975,39 @@ we may obtain an explicit integral expression
 for the ratio~(\ref{eq:radiation-self-viewing-ratio})
 which quantifies the amount of self-viewing radiation
 that has been neglected.
+
+\begin{figure}
+  \newcommand*{\subfigurewidth}{0.325\textwidth}
+  \centering
+  \begin{subfigure}{\subfigurewidth}
+    \centredfigurecontent{cosine_simple-self-viewing-bounds-none}{
+      $y < y_\view$
+    }
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{\subfigurewidth}
+    \centredfigurecontent{cosine_simple-self-viewing-bounds-concave}{
+      $y_\view < y < y_\infl$
+    }
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{\subfigurewidth}
+    \centredfigurecontent{cosine_simple-self-viewing-bounds-both}{
+      $y_\infl < y < y_\End$
+    }
+  \end{subfigure}
+  \caption{
+    Portion~$y_1 \le y^\star \le y_2$~\figurestyle{grey}
+    of a candidate domain boundary
+    which imparts self-viewing radiation onto the point~%
+    $\positionvec = x \basisvec{x} + y \basisvec{y}$~\figurestyle{X-mark}.
+    No radiation is imparted
+    in~(\subref*{fig:cosine_simple-self-viewing-bounds-none}).
+    Note the heavy exaggeration of shape.
+  }
+  \label{fig:cosine_simple-self-viewing-bounds}
+\end{figure}
+
 By symmetry
 we need only consider the top half~$y > 0$ of each candidate domain,
 and after a similar analysis to Appendix~\ref{sec:self-viewing.fin},
@@ -1004,7 +1037,7 @@ $y_1$ and~$y_2$ depend non-trivially upon~$\positionvec$.
 We write~$(x, y) = (\pi/2, y_\End)$ for the uppermost tip,
 and let $(x_\view, y_\view)$~be the lowest point on the radiation boundary
 that is visible from~$(\pi/2, y_\End)$.
-From Figure~X\@, % TODO
+From Figure~\ref{fig:cosine_simple-self-viewing-bounds},
 we see that self-viewing radiation is received either
 (a)~not at all,
 (b)~from the concave portion, or
