@@ -140,13 +140,35 @@ Since the arctangent in~(\ref{eq:u-transformation-bipolar})
 is to be returned in the quadrant of~$(x^2 + y^2 - a^2, \, 2 a y)$,
 the $u$-contours are in fact
 only circular \emph{arcs} which terminate at the singularities
-(Figure~X), % TODO
+(Figure~\ref{fig:bipolar-u}),
 with $u < \SI{180}{\degree}$~for arcs above the $x$-axis (i.e.~$y > 0$)
 and $u > \SI{180}{\degree}$~for arcs below it (i.e.~$y < 0$).
 Geometrically, $u$~is the angle on the underside of the two chords
 from the two singularities.
 Note that $u$~increases anticlockwise around the positive singularity
 and clockwise around the negative singularity.
+
+\begin{figure}
+  \newcommand*{\subfigurewidth}{0.35\textwidth}
+  \centering
+  \hspace*{\fill}
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent{bipolar-u-less-than-pi}{%
+      $u = \const < \SI{180}{\degree}$
+    }
+  \end{subfigure}
+    \hfill
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent{bipolar-u-more-than-pi}{%
+      $u = \const > \SI{180}{\degree}$
+    }
+  \end{subfigure}
+  \hspace*{\fill}
+  \caption{
+    Circular arcs formed by curves of constant~$u$.
+  }
+  \label{fig:bipolar-u}
+\end{figure}
 
 \subsection{Scaling}
 \label{sec:bipolar.known.scaling}
