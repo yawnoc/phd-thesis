@@ -339,6 +339,29 @@ form a (useless) non-convex spike,
 so for the remainder of this analysis
 the origin is ignored as a critical terminal point.
 
+\begin{figure}
+  \centering
+  \begin{minipage}[b]{0.1\textwidth}
+    \includegraphics[height=13.6\textwidth]{bipolar-viable-arrow}
+  \end{minipage}
+  \begin{minipage}[b]{0.8\textwidth}
+    \newcommand*{\legendtrimwidth}{0.03\textwidth}
+    \newcommand*{\legendoffsetheight}{0.025\textwidth}
+    \includegraphics[
+      width={\textwidth-\legendtrimwidth},
+      trim={\legendtrimwidth} {-\legendoffsetheight} 0 0,
+    ]{bipolar-viable-legend}
+    \includegraphics[width=\textwidth]{bipolar-viable}
+  \end{minipage}
+  \caption{
+    Critical terminal points and non-viable domain~$\Phi < 0$
+    for the known solution~(\ref{eq:bipolar-scaled-laplace-solution})
+    and viability function~(\ref{eq:bipolar-viability-function}),
+    as $A$~increases.
+  }
+  \label{fig:bipolar-viable}
+\end{figure}
+
 Each of~(\ref{eq:bipolar-critical-terminal-point-0})
 and~(\ref{eq:bipolar-critical-terminal-point-pi})
 has between zero and two roots
@@ -346,7 +369,7 @@ has between zero and two roots
 depending on the size of the dimensionless group~$A$,
 leading to five cases for the number of critical terminal points
 and the geometry of the viable domain
-(Figure~X): % TODO
+(Figure~\ref{fig:bipolar-viable}):
 
 \subsection{Five regimes}
 \label{sec:bipolar.viable.regimes}
