@@ -481,7 +481,35 @@ becomes
 which cannot be integrated analytically.
 Traced boundaries determined by numerical integration
 from starting points in the viable domain
-are shown in Figure~X. % TODO
+are shown in Figure~\ref{fig:bipolar-traced-boundaries}.
+
+\begin{figure}
+  \newcommand*{\subfigurewidth}{0.45\textwidth}
+  \newcommand*{\subfigureoffsettop}{0.08\textwidth}
+  \newcommand*{\subfigureoffsetbottom}{0.04\textwidth}
+  \centering
+  \begin{subfigure}{\subfigurewidth}
+    \centredfigurecontent[
+      trim=0 {\subfigureoffsetbottom} 0 0,
+    ]{bipolar-traced-boundaries-hot}{Hot regime}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{\subfigurewidth}
+    \centredfigurecontent[
+      trim=0 {\subfigureoffsetbottom} 0 0,
+    ]{bipolar-traced-boundaries-warm}{Warm regime}
+  \end{subfigure}
+  \begin{subfigure}{\subfigurewidth}
+    \centredfigurecontent[
+      trim=0 {\subfigureoffsetbottom} 0 {-\subfigureoffsettop},
+    ]{bipolar-traced-boundaries-cold}{Cold regime}
+  \end{subfigure}
+  \caption{
+    Traced boundaries obtained by integrating~%
+      (\ref{eq:bipolar-tracing-ode-coordinate-parametrisation-v}).
+  }
+  \label{fig:bipolar-traced-boundaries}
+\end{figure}
 
 Like the line-source case of Section~\ref{sec:polar.tracing},
 the two branches of traced boundaries are segregated
