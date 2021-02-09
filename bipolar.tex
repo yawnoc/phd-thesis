@@ -465,24 +465,6 @@ and determine the class of convex domains which can be constructed.
 \subsection{Candidate boundaries}
 \label{sec:bipolar.tracing.candidates}
 
-Using~(\ref{eq:bipolar-gradient-u-component})
-through~(\ref{eq:bipolar-viability-function}),
-the boundary tracing ODE~(\ref{eq:tracing-ode-coordinate-parametrisation-v})
-becomes
-\begin{important}{equation}
-  \tder{v}{u} =
-    \pm
-    \frac{A}{v^4}
-    \sqrt{
-      \roundbr[\bulkysize]{\cosh v - \cos u}^2 - \frac{v^8}{A^2}
-    },
-  \label{eq:bipolar-tracing-ode-coordinate-parametrisation-v}
-\end{important}
-which cannot be integrated analytically.
-Traced boundaries determined by numerical integration
-from starting points in the viable domain
-are shown in Figure~\ref{fig:bipolar-traced-boundaries}.
-
 \begin{figure}
   \newcommand*{\subfigurewidth}{0.45\textwidth}
   \newcommand*{\subfigureoffsettop}{0.08\textwidth}
@@ -511,6 +493,24 @@ are shown in Figure~\ref{fig:bipolar-traced-boundaries}.
   \label{fig:bipolar-traced-boundaries}
 \end{figure}
 
+Using~(\ref{eq:bipolar-gradient-u-component})
+through~(\ref{eq:bipolar-viability-function}),
+the boundary tracing ODE~(\ref{eq:tracing-ode-coordinate-parametrisation-v})
+becomes
+\begin{important}{equation}
+  \tder{v}{u} =
+    \pm
+    \frac{A}{v^4}
+    \sqrt{
+      \roundbr[\bulkysize]{\cosh v - \cos u}^2 - \frac{v^8}{A^2}
+    },
+  \label{eq:bipolar-tracing-ode-coordinate-parametrisation-v}
+\end{important}
+which cannot be integrated analytically.
+Traced boundaries determined by numerical integration
+from starting points in the viable domain
+are shown in Figure~\ref{fig:bipolar-traced-boundaries}.
+
 Like the line-source case of Section~\ref{sec:polar.tracing},
 the two branches of traced boundaries are segregated
 by the sign of~$\td v / {\td u}$,
@@ -523,16 +523,62 @@ must completely surround the heat-supplying singularity without touching it,
 and therefore we seek closed curves surrounding the singularity,
 made from patching together the traced boundaries
 given by~(\ref{eq:bipolar-tracing-ode-coordinate-parametrisation-v}).
-
 Using similar arguments to those in Section~\ref{sec:polar.tracing},
 we conclude that a necessary (but not sufficient) condition
 for the convexity of the sought-after closed curve
 is for it to have an upper-to-lower branch switch
-at an hyperbolic critical terminal curve.
-Now, of the up to four critical terminal points which exist,
-the ones which lie along the segment~$u = \pi$
-are of elliptic type and may be discarded.
-\{TO BE CONTINUED\}
+at an hyperbolic critical terminal point.
+
+\begin{figure}
+  \newcommand*{\subfigurewidth}{0.35\textwidth}
+  \newcommand*{\subfigureoffsetbottom}{0.08\textwidth}
+  \centering
+  \hspace*{\fill}
+  \begin{subfigure}{\subfigurewidth}
+    \centredfigurecontent[
+    ]{bipolar-critical-terminal-points-hot}{Hot regime}
+  \end{subfigure}
+    \hfill
+  \begin{subfigure}{\subfigurewidth}
+    \centredfigurecontent[
+    ]{bipolar-critical-terminal-points-warm_hot}{Warm-to-hot transition}
+  \end{subfigure}
+  \hspace*{\fill}
+  
+  \hspace*{\fill}
+  \begin{subfigure}{\subfigurewidth}
+    \centredfigurecontent[
+      trim=0 {\subfigureoffsetbottom} 0 0,
+    ]{bipolar-critical-terminal-points-warm}{Warm regime}
+  \end{subfigure}
+    \hfill
+  \begin{subfigure}{\subfigurewidth}
+    \centredfigurecontent[
+      trim=0 {\subfigureoffsetbottom} 0 0,
+    ]{bipolar-critical-terminal-points-cold_warm}{Cold-to-warm transition}
+  \end{subfigure}
+  \hspace*{\fill}
+  
+  \includegraphics[
+    width=\textwidth,
+    trim=0 0 0 -5,
+  ]{bipolar-critical-terminal-points-legend}
+  \caption{
+    Local $T$-contour through each critical terminal point.
+  }
+  \label{fig:critical-terminal-points}
+\end{figure}
+
+The nature of the up to four critical terminal points that exist
+can be determined by inspecting Figure~\ref{fig:critical-terminal-points}.
+We see that those lying on the segment~$u = \pi$
+(to the left of the singularity)
+are of elliptic type,
+as the local $T$-contour lies on the non-viable side of the terminal curve.
+Only the critical terminal points lying on the segment~$u = 0$
+(to the right of the singularity)
+are of hyperbolic type,
+and it is from these points that we might construct convex domains.
 
 \subsection{Convexity of the candidate boundaries}
 \label{sec:bipolar.tracing.convex}
