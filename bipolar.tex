@@ -628,6 +628,80 @@ While this boundary appears to be convex for all~$A \le A_{\nat 0}$,
 we cannot be certain until a global curvature analysis is performed
 like that of Section~\ref{sec:polar.convex.beyond}.
 
+From the coordinate transformations
+we obtain the orthonormal basis vectors
+\begin{align}
+  \basisvec{u} &= -\scalefac S \basisvec{x} + \scalefac C \basisvec{y},
+    \label{eq:u-basis-vector-bipolar} \\
+  \basisvec{v} &= -\scalefac C \basisvec{x} - \scalefac S \basisvec{y},
+    \label{eq:v-basis-vector-bipolar}
+\end{align}
+where
+\begin{align}
+  S &= \sin u \sinh v,
+    \label{eq:bipolar-abbreviation-s} \\
+  C &= \cos u \cosh v - 1,
+    \label{eq:bipolar-abbreviation-c}
+\end{align}
+and $\scalefac$~is the dimensionless scale factor~%
+  (\ref{eq:dimensionless-scale-factor-bipolar}).
+We consider a curve parametrised in the form~$v = v (u)$,
+and let primes denote $u$-differentiation.
+After some algebra, we find that
+the basis vectors~(\ref{eq:u-basis-vector-bipolar})
+and~(\ref{eq:v-basis-vector-bipolar})
+change according to
+\begin{align}
+  (\basisvec{u})'
+  &= -\scalefac^2 C D \basisvec{x} - \scalefac^2 S D \basisvec{y}
+  = +\scalefac D \basisvec{v},
+    \label{eq:u-basis-vector-u-derivative-bipolar} \\
+  (\basisvec{v})'
+  &= +\scalefac^2 S D \basisvec{x} - \scalefac^2 C D \basisvec{y}
+  = -\scalefac D \basisvec{u},
+    \label{eq:v-basis-vector-u-derivative-bipolar}
+\end{align}
+where
+\begin{equation}
+  D = \sinh v - v' \sin u.
+  \label{eq:bipolar-abbreviation-d}
+\end{equation}
+Now, from the differential displacement
+\begin{equation}
+  \td\positionvec =
+    \scalefac \td u \basisvec{u} + \scalefac \td v \basisvec{v},
+  \label{eq:differential-displacement-bipolar}
+\end{equation}
+we have the velocity
+\begin{equation}
+  \positionvec' = \tder{\positionvec}{u} =
+    \scalefac \basisvec{u} + \scalefac v' \basisvec{v}.
+  \label{eq:velocity-vector-bipolar-by-u}
+\end{equation}
+Taking another $u$-derivative,
+and using~(\ref{eq:u-basis-vector-u-derivative-bipolar})
+and~(\ref{eq:v-basis-vector-u-derivative-bipolar})
+to simplify,
+we obtain the acceleration
+\begin{equation}
+  \positionvec'' = \tder[2]{\positionvec}{u} =
+    - \scalefac^2 (D v' + E) \basisvec{u}
+    + \scalefac (v'' - \scalefac E v' + \scalefac D) \basisvec{v},
+  \label{eq:acceleration-vector-bipolar-by-u}
+\end{equation}
+where
+\begin{equation}
+  E = v' \sinh v + \sin u.
+  \label{eq:bipolar-abbreviation-e}
+\end{equation}
+A quantity having the same sign changes as curvature is therefore
+\begin{equation}
+  \kappa = \basisvec{z} \dotp (\positionvec' \crossp \positionvec'') =
+    \scalefac^3
+    \squarebr*{D \roundbr*{1 + {v'}^2} + \frac{v''}{\scalefac}}.
+  \label{eq:kappa-bipolar-by-u}
+\end{equation}
+
 % TODO
 
 \subsection{Numerical verification}
