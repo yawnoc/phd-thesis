@@ -623,10 +623,21 @@ because the outer candidate boundary is always non-convex.
 \label{sec:bipolar.tracing.convex}
 
 We first consider the inner candidate boundary,
-which always forms a closed loop.
+which always forms a closed loop
+by way of a corner to the left
+(Figure~\ref{fig:bipolar-inner-candidate}).
 While this boundary appears to be convex for all~$A \le A_{\nat 0}$,
 we cannot be certain until a global curvature analysis is performed
 like that of Section~\ref{sec:polar.convex.beyond}.
+
+\begin{figure}
+  \centredfigurecontent[width=0.45\textwidth]{%
+    bipolar-inner-candidate%
+  }{
+    Bipolar coordinates of the left-hand and right-hand extremities
+    of an inner candidate boundary.
+  }
+\end{figure}
 
 From the coordinate transformations
 we obtain the orthonormal basis vectors
@@ -701,6 +712,25 @@ A quantity having the same sign changes as curvature is therefore
     \squarebr*{D \roundbr*{1 + {v'}^2} + \frac{v''}{\scalefac}}.
   \label{eq:kappa-bipolar-by-u}
 \end{equation}
+
+Inspecting
+Figures~\ref{fig:bipolar-candidates} and~\ref{fig:bipolar-inner-candidate}
+once more,
+we note again that
+the inner candidate boundary appears to be always convex.
+Certainly the rotund right-hand end is convex.
+However, while the tip at the left-hand end looks to be a convex corner,
+there remains the possibility
+that it could actually be a non-convex spike
+similar to Figure~\hyperref[fig:plane-domains]{\ref*{fig:plane-domains}c}
+(although much more subtle).
+To test this,
+we evaluate~(\ref{eq:kappa-bipolar-by-u}),
+first using the traced boundary derivative~%
+  (\ref{eq:bipolar-tracing-ode-coordinate-parametrisation-v})
+for~$v'$,
+and then substituting~$u = \mp\pi$
+(which is the location of the tip for each branch).
 
 % TODO
 
