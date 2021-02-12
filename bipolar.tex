@@ -752,7 +752,8 @@ if and only if its tip at the left-hand end~$(u, v) = (\mp\pi, v_\End)$
 either coincides with or lies to the right of~$(u, v) = (\mp\pi, v_\infl)$.
 Algebraically, we have convexity if and only if~$v_\End \ge v_\infl$.
 We see from Figure~\ref{fig:bipolar-candidates}
-that the tip is furthest to the left when~$A = A_{\nat 0}$,
+that the tip is furthest to the left when~$A = A_{\nat 0}$
+(when the inner and outer candidates merge),
 and in this worst-case scenario
 the tip coordinate computes to~$v_\End = 2.20618$,
 which is \emph{less than}
@@ -785,7 +786,18 @@ While this is most remarkable from a theoretical perspective,
 we note that there is little significance in practice,
 as the amount of self-viewing radiation is exceptionally tiny.
 
-% TODO
+For the outer candidate boundary,
+we return again to Figure~\ref{fig:bipolar-candidates}.
+First we rule out the candidates with $A$~too small,
+as these do not form a closed loop.
+Of the remaining outer candidate boundaries,
+we observe that the left-hand tip at best
+coincides with the tip of the $A = A_{\nat 0}$~boundary
+(when the inner and outer candidates merge).
+As we have just seen from the analysis of the inner candidate,
+this $A = A_{\nat 0}$~boundary is non-convex.
+Hence, the outer candidate boundary
+never forms a convex closed loop.
 
 \subsection{Numerical verification}
 \label{sec:bipolar.tracing.verification}
