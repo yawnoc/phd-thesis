@@ -843,7 +843,17 @@ so that the constant-temperature boundary
 of Figure~\ref{fig:bipolar-verification-domain-mesh}
 is a circle of radius~$0.028$.
 
-% TODO
+We again use \software{Mathematica}'s \code{NDSolve\`{}FEM\`{}},
+generating a mesh with approximately 500~triangular elements.
+The relevant conduction--radiation BVP is solved numerically,
+consisting of Laplace's equation in the interior,
+the radiation condition~(\ref{eq:bipolar-scaled-radiation-boundary-condition})
+on the external boundary,
+and the aforementioned Dirichlet condition on the interior boundary.
+Comparing the resulting numerical solution
+to the known exact solution~(\ref{eq:bipolar-scaled-laplace-solution}),
+we find that the maximum relative error throughout the mesh
+is of the order~$\SI{0.1}{\percent}$.
 
 \section{Physical range}
 \label{sec:bipolar.physical}
