@@ -918,12 +918,37 @@ centred on the singularity~$v = +\infty$,
 but for~$A > 0$,
 the presence of the negative singularity
 causes the inner candidate boundary to deviate
-from being perfectly circular.
-A measure of the amount of asymmetry is obtained
-by evaluating the ratio of distances from
-the ideal centre~$v = +\infty$ (i.e.~$(x, y) = (+a, 0)$)
+from perfectly circularity.
+The amount of asymmetry may be quantified
+through the ratio of distances from
+the ideal centre~$(x, y) = (+a, 0)$
+(which is the singularity~$v = +\infty$)
 to each of the left-hand and right-hand extremities
-(see Figure~\ref{fig:bipolar-inner-candidate}).
+(which have bipolar coordinates $(\mp\pi, v_\End)$ and~$(0, v_{\sharp 0})$
+respectively, see Figure~\ref{fig:bipolar-inner-candidate}).
+Thus
+\begin{align*}
+  \textq{asymmetry}
+  &=
+    \frac{a - x_\End}{x_{\sharp 0} - a}
+      \\[\tallspace]
+  &=
+    \frac{
+      1 - \sinh v_\End / (\cosh v_\End - \cos(\mp\pi))
+    }{
+      \sinh v_{\sharp 0} / (\cosh v_{\sharp 0} - \cos 0) - 1
+    }
+      \\[\tallspace]
+  &=
+    \frac{\exp v_{\sharp 0} - 1}{\exp v_\End + 1}.
+    \yesnumber
+    \label{eq:bipolar-inner-candidate-asymmetry}
+\end{align*}
+The asymmetry will only become significant
+if the negative line source has been brought
+sufficiently close to the positive one.
+From Figure~X % TODO
+we see that this only occurs towards the colder end of the warm regime.
 
 \subsection{Temperature}
 \label{sec:bipolar.physical.temperature}
