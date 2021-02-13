@@ -975,7 +975,137 @@ we see that this only occurs towards the colder end of the warm regime.
 \subsection{Temperature}
 \label{sec:bipolar.physical.temperature}
 
-% TODO
+Here we perform a similar analysis
+to Section~\ref{sec:polar.physical.temperature},
+to determine the physical temperatures that can be realised
+by inner candidate boundaries of a prescribed size.
+For simplicity,
+we take the radius of the circle~$v = v_{\sharp 0}$
+(Figure~\ref{fig:bipolar-inner-candidate-with-circle})
+as our fixed reference length.
+From~(\ref{eq:bipolar-circle-v})
+we see that this radius is given by
+\begin{equation}
+  r_{\sharp 0} = a \csch v_{\sharp 0},
+  \label{eq:bipolar-r-sharp-0}
+\end{equation}
+so that length scale (intrinsic to the bipolar coordinate system) is
+\begin{equation}
+  a = r_{\sharp 0} \sinh v_{\sharp 0}.
+  \label{eq:bipolar-length-scale-in-terms-of-r-sharp-0}
+\end{equation}
+By construction, the bipolar coordinate~$v_{\sharp 0}$
+is a root of the equation~(\ref{eq:bipolar-critical-terminal-point-0})
+for critical terminal points along~$u = 0$;
+therefore we have
+\begin{equation}
+  A = \frac{{v_{\sharp 0}}^4}{\cosh v_{\sharp 0} - 1}.
+  \label{eq:bipolar-dimensionless-group-in-terms-of-r-sharp-0}
+\end{equation}
+After rearranging~(\ref{eq:bipolar-dimensionless-group}) for~$T_0$,
+we may use~(\ref{eq:bipolar-length-scale-in-terms-of-r-sharp-0})
+and~(\ref{eq:bipolar-dimensionless-group-in-terms-of-r-sharp-0})
+to obtain
+\begin{equation}
+  T_0 =
+    \roundbr*{
+      \frac{
+        \cosh v_{\sharp 0} - 1
+      }{
+        c r_{\sharp 0} {v_{\sharp 0}}^4 \sinh v_{\sharp 0}
+      }
+    }^{1/3}
+  \label{eq:bipolar-temperature-scale-in-terms-of-r-sharp-0}
+\end{equation}
+for the temperature scale
+of the known solution~(\ref{eq:bipolar-laplace-solution}).
+It follows that the physical temperature
+along the reference circle~$v = v_{\sharp 0}$
+is
+\begin{align*}
+  T_{\sharp 0}
+  &= T_0 \cdot v_{\sharp 0} \\
+  &=
+    \roundbr*{
+      \frac{
+        \cosh v_{\sharp 0} - 1
+      }{
+        c r_{\sharp 0} v_{\sharp 0} \sinh v_{\sharp 0}
+      }
+    }^{1/3}
+    \\
+  &=
+    \roundbr*{
+      \frac{\omega (v_{\sharp 0})}{c r_{\sharp 0}}
+    }^{1/3},
+    \yesnumber
+    \label{eq:bipolar-t-sharp-0-in-terms-of-r-sharp-0}
+\end{align*}
+where $\omega$~is the dimensionless auxiliary function
+\begin{equation}
+  \omega (v) = \frac{\cosh v - 1}{v \sinh v}
+  \label{eq:bipolar-auxiliary-function}
+\end{equation}
+shown in Figure~X\@. % TODO
+
+Now, as the dimensionless group~$A$
+runs through the interval~%
+  (\ref{eq:bipolar-inner-candidate-existence-interval})
+of all inner candidate boundaries,
+i.e.~from the limiting extreme~$A = 0$ of the hot regime
+up to the warm-to-cold transition~$A = A_{\nat 0} = 9.76206$,
+the quantity~$v_{\sharp 0}$ decreases from infinity
+down to the transition value~$v_{\nat 0} = 3.83002$;
+this can be seen from the left-hand column
+of Figure~\ref{fig:bipolar-viable}.
+It can be shown that $\omega$ is a decreasing function,
+whence we have
+\begin{equation}
+  \omega (\infty) < \omega (v_{\sharp 0}) \le \omega (v_{\nat 0}).
+  \label{eq:bipolar-inner-candidate-omega-interval}
+\end{equation}
+The upper bound may in fact be simplified to~$1/4$,%
+\footnote{
+  This would not have happened
+  if we had chosen $A_\infl$ instead of the special value~$A_{\nat 0}$
+  for the upper bound of the continuum~%
+  (\ref{eq:bipolar-inner-candidate-existence-interval}).
+}
+so we have
+\begin{equation}
+  0 < \omega (v_{\sharp 0}) \le 1/4.
+  \label{eq:bipolar-inner-candidate-omega-interval-evaluated}
+\end{equation}
+Therefore,
+the temperature~(\ref{eq:bipolar-t-sharp-0-in-terms-of-r-sharp-0})
+spans the interval
+\[
+  0
+    <
+  T_{\sharp 0}
+    \le
+  \roundbr*{\frac{1}{4 c r_{\sharp 0}}}^{1/3},
+\]
+or
+\begin{equation}
+  0
+    <
+  T_{\sharp 0}
+    \le
+  \roundbr*{\frac{\conduc}{4 \emiss \stefan r_{\sharp 0}}}^{1/3}.
+  \label{eq:bipolar-inner-candidate-t-sharp-0-interval}
+\end{equation}
+It is interesting to note that this interval
+complements \emph{perfectly} the analogous line-source result~%
+  (\ref{eq:line-traced-boundary-hot-convex-t-sharp-interval}),
+whose lower bound is precisely the upper bound here
+(with~$r_\sharp$ in place of~$r_{\sharp 0}$).
+Physically, the introduction of a negative line-source
+has the effect of extending the temperature interval down to absolute zero.
+For the PVC parameter values
+of Section~\ref{sec:polar.physical.temperature},
+the interval~(\ref{eq:bipolar-inner-candidate-t-sharp-0-interval})
+evaluates to $\SI{0}{\kelvin} < T_{\sharp 0} \le \SI{277}{\kelvin}$.
 
 \subsection{Power per unit length}
 \label{sec:bipolar.physical.power}
