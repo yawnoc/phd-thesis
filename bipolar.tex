@@ -1155,7 +1155,90 @@ and the line-source inner circle~$r = r_\flat$.
 \subsection{Power per unit length}
 \label{sec:bipolar.physical.power}
 
-% TODO
+We return now to the bipolar inner candidate.
+The rate at which heat is generated internally
+(and thus expelled via radiation from the boundary)
+is fixed by the strength of the singularity~$v = +\infty$,
+corresponding to the positive term
+of~(\ref{eq:bipolar-laplace-solution-terms}).
+Physically this is identical
+to the fundamental line-source~(\ref{eq:line-laplace-solution}),
+so we again have~(\ref{eq:line-power-per-length-fundamental}), i.e.
+\begin{equation}
+  p = 2 \pi k T_0,
+  \label{eq:line-power-per-length-fundamental-repeat}
+\end{equation}
+for the power dissipated per unit length.
+Using~(\ref{eq:bipolar-temperature-scale-in-terms-of-r-sharp-0}),
+this becomes
+\begin{align*}
+  p
+  &=
+    2 \pi k
+    \roundbr*{
+      \frac{
+        \cosh v_{\sharp 0} - 1
+      }{
+        c r_{\sharp 0} {v_{\sharp 0}}^4 \sinh v_{\sharp 0}
+      }
+    }^{1/3}
+      \\[\tallspace]
+  &=
+    \frac{2 \pi k}{(c r_{\sharp 0})^{1/3}}
+    \roundbr*{
+      \frac{
+        \omega (v_{\sharp 0})
+      }{
+        {v_{\sharp 0}}^3
+      }
+    }^{1/3}.
+      \yesnumber
+      \label{eq:bipolar-power-per-length}
+\end{align*}
+As before, $\omega (v_{\sharp 0})$~runs through the interval~%
+  (\ref{eq:bipolar-inner-candidate-omega-interval-evaluated})
+as $v_{\sharp 0}$~decreases from infinity down to~$v_{\nat 0} = 3.83002$.
+Therefore we have the interval
+\[
+  0 < p \le
+    \frac{2 \pi k}{(c r_{\sharp 0})^{1/3}}
+    \roundbr*{
+      \frac{
+        1/4
+      }{
+        {v_{\nat 0}}^3
+      }
+    }^{1/3}
+\]
+in power per unit length, or
+\begin{equation}
+  0 < p \le
+    \frac{2^{1/3}}{v_{\nat 0}}
+    \frac{\pi k^{4/3}}{(\emiss \stefan r_{\sharp 0})^{1/3}},
+\end{equation}
+evaluating to $0 < p \le \SI{82}{\watt \per\metre}$
+for the parameters from the PVC example
+of Section~\ref{sec:polar.physical.temperature}.
+
+Unlike the temperature interval~%
+  (\ref{eq:bipolar-inner-candidate-t-sharp-0-interval}),
+the upper bound here does not coincide exactly
+with the lower bound of~%
+  (\ref{eq:line-traced-boundary-hot-convex-power-per-length-interval})
+for the line source solution.
+As noted in Section~\ref{sec:bipolar.physical.temperature},
+perfect agreement would be coincidental,
+but we should nevertheless expect a similar order of magnitude.
+A quick calculation shows that the prefactor here is
+\[
+  \frac{2^{1/3}}{v_{\nat 0}} = 0.32896,
+\]
+a mere $\SI{4}{\percent}$~more than the prefactor
+\[
+  \frac{1}{2^{5/3}} = 0.31498
+\]
+for the lower bound of~%
+  (\ref{eq:line-traced-boundary-hot-convex-power-per-length-interval}).
 
 \section{Summary}
 \label{sec:bipolar.summary}
