@@ -486,8 +486,8 @@ Here we restore the \scalingmarks{} which were dropped after scaling.
 
 Suppose we want a fin
 roughly $5$~times as long (in the $x$-direction)
-as it is wide (in the $y$-direction).
-Its half-width should therefore be roughly a tenth of its length.
+as it is thick (in the $y$-direction).
+Its half-thickness should therefore be roughly a tenth of its length.
 Since
 \[
   \eval*{\tder{y}{x}}_{\scaled{x}=0.55}
@@ -512,10 +512,10 @@ In unscaled terms, the fin has length
   L = (\scaled{x}_2 - \scaled{x}_1) \lambda = 0.1 \lambda
   \label{eq:plane-fin-length}
 \end{equation}
-and width
+and thickness
 \begin{equation}
-  W = (2 \scaled{y}_2) \lambda = 0.0187 \lambda.
-  \label{eq:plane-fin-width}
+  H = (2 \scaled{y}_2) \lambda = 0.0187 \lambda.
+  \label{eq:plane-fin-thickness}
 \end{equation}
 From the boundary condition~%
   (\ref{eq:plane-scaled-radiation-boundary-condition-with-groups})
@@ -549,7 +549,7 @@ with emissivity~$\emiss = 0.9$
 and conductivity~$\conduc = \SI{236}{\watt \per\metre \per\kelvin}$.
 % TODO: references
 For a fin of length~$L = \SI{1}{\metre}$
-(and hence width~$W = \SI{0.19}{\metre}$),
+(and hence thickness~$H = \SI{0.19}{\metre}$),
 these evaluate to $\SI{191}{\degreeCelsius}$~at the base
 and $\SI{114}{\degreeCelsius}$~at the tip,
 which are quite reasonable as temperatures for an engineering context.
@@ -567,7 +567,7 @@ The heat flux of the one-dimensional known solution is
 a constant vector,
 representing the power dissipated in the negative $x$-direction
 per unit area in the $yz$-plane.
-Multiplying its magnitude by the fin width~$W = 2 \scaled{y}_2 \lambda$,
+Multiplying its magnitude by the fin thickness~$H = 2 \scaled{y}_2 \lambda$,
 we obtain
 \begin{equation}
   p = 2 \scaled{y}_2 \conduc \Theta
