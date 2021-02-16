@@ -499,29 +499,35 @@ we see that the desired aspect ratio can be approximately achieved
 by choosing a small $x$-interval centred on~$\scaled{x}=0.55$,
 e.g.
 \begin{equation}
-  (\scaled{x}_1, \scaled{x}_2) = (0.5, 0.6)
+  (\scaled{x}_1, \scaled{x}_2) = (0.5, 0.6).
   \label{eq:plane-fin-interval}
 \end{equation}
-as shown in Figure~X\@.%% TODO
-\footnote{
-  Here we ignore the issues of poor structural integrity and lethality
-  associated with the pointed tip at~$\scaled{x} = \scaled{x}_1$.
-}
 In unscaled terms, the fin has length
 \begin{equation}
-  L = (\scaled{x}_2 - \scaled{x}_1) \lambda = 0.1 \lambda
+  L = x_2 - x_1 = (\scaled{x}_2 - \scaled{x}_1) \lambda = 0.1 \lambda
   \label{eq:plane-fin-length}
 \end{equation}
 and thickness
 \begin{equation}
-  H = (2 \scaled{y}_2) \lambda = 0.0187 \lambda.
+  H = 2 y_2 = 2 \scaled{y}_2 \lambda = 0.0187 \lambda
   \label{eq:plane-fin-thickness}
 \end{equation}
-For our choice of~$\scaled{x}_1$ and~$\scaled{x}_2$,
+as shown in Figure~\ref{fig:plane-fin-dimensions}.%
+\footnote{
+  Here we ignore the issues of poor structural integrity and lethality
+  associated with the pointed tip at~$x = x_1$.
+}
+For our choice of endpoints,
 the self-viewing ratio~(\ref{eq:plane-self-viewing-ratio})
 evaluates to less than~$5 \times 10^{-4}$.
 Thus we may safely disregard self-viewing radiation
 in the results to follow.
+
+\begin{figure}
+  \centredfigurecontent[width=0.6\textwidth]{plane-fin-dimensions}{
+    Physical fin dimensions.
+  }
+\end{figure}
 
 From the boundary condition~%
   (\ref{eq:plane-scaled-radiation-boundary-condition-with-groups})
