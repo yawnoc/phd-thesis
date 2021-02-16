@@ -557,14 +557,16 @@ A longer fin with a lower temperature might find application
 as a heat sink on a spacecraft.
 
 The physical rate of heat transfer may be estimated similarly.
-The unscaled heat flux (i.e.~power per unit area) is
+The heat flux of the one-dimensional known solution is
 \begin{equation}
   {-\conduc} \del T
     = -\frac{\conduc \Theta}{\lambda} \scaleddel\scaled{T}
     = -\frac{\conduc \Theta}{\lambda} \basisvec{x},
   \label{eq:plane-heat-flux}
 \end{equation}
-a constant vector.
+a constant vector,
+representing the power dissipated in the negative $x$-direction
+per unit area in the $yz$-plane.
 Multiplying its magnitude by the fin width~$W = 2 \scaled{y}_2 \lambda$,
 we obtain
 \begin{equation}
@@ -574,9 +576,9 @@ we obtain
       \roundbr*{\frac{\scaled{x}_2 - \scaled{x}_1}{c L}}^{1/3}
   \label{eq:plane-fin-power-per-length}
 \end{equation}
-for the power dissipated in the negative $x$-direction
-per unit length in the $z$-direction
-(ignoring self-viewing radiation).
+for the power dissipated per unit $z$-length,
+ignoring the negligible amount of self-viewing radiation
+that occurs for the chosen~$\scaled{x}_1$ and~$\scaled{x}_2$.
 
 \section{Cosinusoidal solution}
 \label{sec:cartesian.cosine}
