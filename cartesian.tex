@@ -467,8 +467,8 @@ the temperature variation in the fin will likewise be reduced).
 Our analysis up to this point
 has been conducted in dimensionless variables.
 It is not immediately clear if our results are useful in practice,
-as the temperature and length scales~%
-  (\ref{eq:plane-temperature-scale}) and~(\ref{eq:plane-length-scale})
+as the temperature and length scales $\Theta$ and~$\lambda$
+(i.e.~(\ref{eq:plane-temperature-scale}) and~(\ref{eq:plane-length-scale}))
 depend parametrically
 on the radiation constant~$c$
 and the slope~$h_0$
@@ -477,6 +477,42 @@ For a given choice of material
 (having emissivity~$\emiss$ and conductivity~$\conduc$),
 the value of~$c$ is fixed by~(\ref{eq:radiation-constant});
 only~$h_0$ can be varied freely.
+To assess whether this single degree of freedom allows us to achieve
+reasonable temperatures and lengths in practical applications,
+we construct here an explicit physical example (in unscaled variables)
+of the self-viewing fin
+of Figure~\ref{fig:self-viewing-radiation-elements-fin}.
+Here we restore the \scalingmarks{} which were dropped after scaling.
+
+Suppose we want a fin
+roughly $5$~times as long (in the $x$-direction)
+as it is wide (in the $y$-direction).
+Its half-width should therefore be roughly a tenth of its length.
+Since
+\[
+  \eval*{\tder{y}{x}}_{\scaled{x}=0.55}
+    = \eval*{\tder{\scaled{y}}{\scaled{x}}}_{\scaled{x}=0.55}
+    = \mp 0.092
+    \approx \mp 0.1,
+\]
+we see that the desired aspect ratio can be approximately achieved
+by choosing a small $x$-interval centred on~$\scaled{x}=0.55$,
+e.g.
+\begin{equation}
+  (\scaled{x}_1, \scaled{x}_2) = (0.5, 0.6)
+  \label{eq:plane-fin-interval}
+\end{equation}
+as shown in Figure~X\@. % TODO
+In unscaled terms, the fin has length
+\begin{equation}
+  L = (\scaled{x}_2 - \scaled{x}_1) \lambda = 0.1 \lambda
+  \label{eq:plane-fin-length}
+\end{equation}
+and width
+\begin{equation}
+  W = (2 \scaled{y}_2) \lambda = 0.0187 \lambda.
+  \label{eq:plane-fin-width}
+\end{equation}
 
 \section{Cosinusoidal solution}
 \label{sec:cartesian.cosine}
