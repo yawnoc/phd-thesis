@@ -553,6 +553,28 @@ quite reasonable for an engineering context.
 A longer fin with a lower temperature might find application
 as a heat sink on a spacecraft.
 
+The physical rate of heat transfer may be estimated similarly.
+The unscaled heat flux (i.e.~power per unit area) is
+\begin{equation}
+  {-\conduc} \del T
+    = -\frac{\conduc \Theta}{\lambda} \scaleddel\scaled{T}
+    = -\frac{\conduc \Theta}{\lambda} \basisvec{x},
+  \label{eq:plane-heat-flux}
+\end{equation}
+a constant vector.
+Multiplying its magnitude by the fin width~$W = 2 \scaled{y}_2 \lambda$,
+we obtain
+\begin{equation}
+  p = 2 \scaled{y}_2 \conduc \Theta
+    =
+      2 \scaled{y}_2 \conduc
+      \roundbr*{\frac{\scaled{x}_2 - \scaled{x}_1}{c L}}^{1/3}
+  \label{eq:plane-fin-power-per-length}
+\end{equation}
+for the power dissipated in the negative $x$-direction
+per unit length in the $z$-direction
+(ignoring self-viewing radiation).
+
 \section{Cosinusoidal solution}
 \label{sec:cartesian.cosine}
 
