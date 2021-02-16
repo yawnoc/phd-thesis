@@ -502,7 +502,11 @@ e.g.
   (\scaled{x}_1, \scaled{x}_2) = (0.5, 0.6)
   \label{eq:plane-fin-interval}
 \end{equation}
-as shown in Figure~X\@. % TODO
+as shown in Figure~X\@.%% TODO
+\footnote{
+  Here we ignore the issues of poor structural integrity and lethality
+  associated with the pointed tip at~$\scaled{x} = \scaled{x}_1$.
+}
 In unscaled terms, the fin has length
 \begin{equation}
   L = (\scaled{x}_2 - \scaled{x}_1) \lambda = 0.1 \lambda
@@ -513,6 +517,41 @@ and width
   W = (2 \scaled{y}_2) \lambda = 0.0187 \lambda.
   \label{eq:plane-fin-width}
 \end{equation}
+From the boundary condition~%
+  (\ref{eq:plane-scaled-radiation-boundary-condition-with-groups})
+(whose dimensionless group was set to unity),
+we have
+\begin{equation}
+  \Theta
+    = \roundbr*{\frac{1}{c \lambda}}^{1/3}
+    = \roundbr*{\frac{\scaled{x}_2 - \scaled{x}_1}{c L}}^{1/3},
+  \label{eq:plane-fin-length-scale}
+\end{equation}
+and therefore
+\begin{equation}
+  T = \scaled{T} \Theta
+    = \scaled{x} \Theta
+    = \scaled{x} \roundbr*{\frac{\scaled{x}_2 - \scaled{x}_1}{c L}}^{1/3}
+  \label{eq:plane-fin-temperature}
+\end{equation}
+for the physical temperature along the fin.
+Evaluating at~$\scaled{x}_2$ and~$\scaled{x}_1$
+gives the temperature at the base and the tip respectively.
+The corresponding Celsius temperatures%
+\footnote{
+  Given an absolute temperature~$T$,
+  the corresponding Celsius temperature is~$t = T - \SI{273.15}{\kelvin}$,
+  so that~$t / \si{\degreeCelsius} = T / \si{\kelvin} - 273.15$.
+}
+are shown
+in Figure~X\@. % TODO
+For a fin of length~$L = \SI{1}{\metre}$
+(and hence width~$W = \SI{0.19}{\metre}$),
+these evaluate to $\SI{191}{\degreeCelsius}$~at the base
+and $\SI{114}{\degreeCelsius}$~at the tip,
+quite reasonable for an engineering context.
+A longer fin with a lower temperature might find application
+as a heat sink on a spacecraft.
 
 \section{Cosinusoidal solution}
 \label{sec:cartesian.cosine}
