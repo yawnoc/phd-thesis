@@ -1147,7 +1147,7 @@ power dissipated per unit length.
 The line-source solution~(\ref{eq:line-laplace-solution})
 has the radial heat flux
 \begin{equation}
-  {-k} \del T = \frac{k T_0}{r} \basisvec{r},
+  {-\conduc} \del T = \frac{\conduc T_0}{r} \basisvec{r},
   \label{eq:line-heat-flux}
 \end{equation}
 so that the power per unit length dissipated via conduction
@@ -1156,7 +1156,7 @@ is given by
 \begin{equation}
   p =
     \int_{0}^{2 \pi}
-      \normalvec \dotp \roundbr[\bulkysize]{-k \del T}
+      \normalvec \dotp \roundbr[\bulkysize]{-\conduc \del T}
       \, r (\phi)
     \td\phi,
   \label{eq:line-power-per-length-closed-curve}
@@ -1172,17 +1172,17 @@ we have
   p
   &=
     \int_{0}^{2 \pi}
-      \basisvec{r} \dotp \frac{k T_0}{r_\dir} \basisvec{r}
+      \basisvec{r} \dotp \frac{\conduc T_0}{r_\dir} \basisvec{r}
       \, r_\dir
     \td\phi
       \\[\tallspace]
   &=
-    2 \pi k T_0
+    2 \pi \conduc T_0
       \yesnumber
       \label{eq:line-power-per-length-fundamental}
       \\[\tallspace]
   &=
-    2 \pi k
+    2 \pi \conduc
     \roundbr*{\frac{1}{c r_\sharp \log^4 \scaled{r}_\sharp}}^{1/3}
       \yesnumber
       \label{eq:line-power-per-length}
@@ -1193,21 +1193,21 @@ Reusing the result~%
 we obtain the desired interval in power per unit length
 corresponding to convex domains of inradius~$r_\sharp$:
 \[
-  2 \pi k \roundbr*{\frac{1}{c r_\sharp} \cdot \frac{1}{4^4}}^{1/3}
+  2 \pi \conduc \roundbr*{\frac{1}{c r_\sharp} \cdot \frac{1}{4^4}}^{1/3}
     <
   p
     \le
-  2 \pi k \roundbr*{\frac{1}{c r_\sharp} \cdot \frac{1}{2^4}}^{1/3},
+  2 \pi \conduc \roundbr*{\frac{1}{c r_\sharp} \cdot \frac{1}{2^4}}^{1/3},
 \]
 or
 \begin{equation}
   \frac{1}{2^{5/3}}
-  \frac{\pi k^{4/3}}{(\emiss \stefan r_\sharp)^{1/3}}
+  \frac{\pi \conduc^{4/3}}{(\emiss \stefan r_\sharp)^{1/3}}
     <
   p
     \le
   \frac{1}{2^{1/3}}
-  \frac{\pi k^{4/3}}{(\emiss \stefan r_\sharp)^{1/3}}.
+  \frac{\pi \conduc^{4/3}}{(\emiss \stefan r_\sharp)^{1/3}}.
   \label{eq:line-traced-boundary-hot-convex-power-per-length-interval}
 \end{equation}
 The ratio between the two endpoints is~$2^{4/3} = 2.5198$.
