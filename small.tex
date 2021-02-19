@@ -958,6 +958,46 @@ One would expect a bounded height rise to result from
 provided that the new boundary contains no corner
 whose half-angle falls within the small regime.
 
+Anderson~\cite[Section~7.3.2]{anderson-2002-thesis-boundary-tracing-pdes}
+has made a stronger and much more specific observation,
+regarding whether the modification of a capillary wedge
+will lower the height rise \emph{globally}.
+This observation holds for any convex wedge (not just small),
+and proceeds as follows.
+Suppose the wedge parameters are~$(\alpha, \gamma)$,
+and let $T$~be the solution
+to the capillary BVP~(\ref{eq:scaled-laplace-young})
+\&~(\ref{eq:scaled-contact-boundary-condition})
+in the wedge.
+The solution slope~$\norm{\del T}$
+is sufficiently large near the wedge corner,
+that there exists a region in which we can construct a modified boundary
+whose normal~$\normalvec_\modi$ satisfies the inequality
+\begin{equation}
+  \normalvec_\modi \dotp \frac{\del T}{\sqrt{1 + (\del T)^2}} \ge \cos\gamma.
+  \label{eq:modification-contact-boundary-condition-inequality}
+\end{equation}
+Let $T_\modi$~denote the solution to the capillary BVP
+in the modified wedge,
+i.e.,
+\begin{align}
+  \del \dotp \frac{\del T_\modi}{\sqrt{1 + (\del T_\modi)^2}}
+    &= T_\modi,
+    \label{eq:modification-laplace-young}
+    \\[\tallspace]
+  \normalvec_\modi \dotp \frac{\del T_\modi}{\sqrt{1 + (\del T_\modi)^2}}
+    &= \cos\gamma.
+    \label{eq:modification-contact-boundary-condition}
+\end{align}
+By the comparison principle
+of Finn \&~Hwang~\cite{finn-1989-comparison-principle-capillary-surfaces},
+it follows that~$T_\modi \le T$ pointwise.
+The upshot is that near-corner modifications
+(such as small-scale corner rounding)
+will not only lower the height rise profile,
+but will lower it to less than (or equal to)
+the original wedge solution~$T$ evaluated along the modified boundary.
+
 \section{Summary}
 \label{sec:small.summary}
 
