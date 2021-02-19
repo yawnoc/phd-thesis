@@ -1043,7 +1043,7 @@ becomes
   \frac{\norm{\del T} \cos\theta_\modi}{\sqrt{1 + (\del T)^2}} \ge \cos\gamma,
   \label{eq:modification-contact-boundary-condition-inequality-simplified}
 \end{equation}
-and we are immediately reminded of the similar relation~%
+and we are immediately reminded of the very similar~%
   (\ref{eq:re-entrant-contact-boundary-condition-serrated-simplified})
 from the roughness work.
 That result, when translated to the current context,
@@ -1073,14 +1073,58 @@ Therefore, the inequality condition~%
   (\ref{eq:modification-contact-boundary-condition-inequality})
 will only hold
 if the angular deviation~$\theta_\modi$
-between the modification boundary and the local $T$-contour
+between the modified boundary and the local $T$-contour
 does not exceed the angular deviation~$\theta$
 between the traced boundaries and the local $T$-contour.
 From Figure~XXX\@, % TODO
-we see that a modification boundary satisfying this condition
+we see that a modified boundary satisfying this condition
 is precisely one that can be approximated
 by a serrated path of traced boundaries:
 herein lies the connection to roughness theory.
+
+As before, the modified boundary may be assigned
+an effective contact angle~$\gamma_\modi$
+which makes it equivalent to the serrated path,
+according to the relation
+\begin{equation}
+  \normalvec_\modi \dotp \frac{\del T}{\sqrt{1 + (\del T)^2}}
+    = \cos\gamma_\modi.
+  \label{eq:modification-contact-boundary-condition-effective}
+\end{equation}
+After dividing~(\ref{eq:modification-contact-boundary-condition-effective})
+by~(\ref{eq:contact-boundary-condition-simplified-modification-context}),
+and recognising that $\cos\theta_\modi / {\cos\theta}$~is geometrically
+the ratio between the serrated path length
+and the modified boundary path length,
+we obtain Wenzel's cosine result
+\begin{important}{equation}
+  \rho
+    = \frac{\cos\theta_\modi}{\cos\theta}
+    = \frac{\cos\gamma_\modi}{\cos\gamma}.
+  \label{eq:modification-roughness-cosine-ratio}
+\end{important}
+Thus the inequality~(\ref{eq:modification-cosine-ratio-inequality})
+is merely an assertion that the roughness~$\rho$ is at least unity.
+Equivalently we have~$\gamma_\modi \le \gamma$,
+i.e.~the effective contact angle is bounded above
+by the true contact angle along the serrated path.
+
+Now both the serrated path (with contact angle~$\gamma$)
+and the modified boundary with effective contact angle~$\gamma_\modi$
+correspond to the known wedge solution~$T$.
+In the comparison observation,
+the solution~$T_\modi$ results from instead using the contact angle~$\gamma$
+along the modified boundary,
+as per the boundary condition~%
+  (\ref{eq:modification-contact-boundary-condition}).
+This is equivalent to replacing the rough serrated path
+by a completely smooth curve.
+Therefore, as a physical statement,
+the comparison observation simply asserts that
+roughening of a boundary (or reduction of its effective contact angle)
+will result in a higher capillary rise.
+This fits perfectly with the roughness theory
+of Section~\ref{sec:re-entrant.dip-coating.roughness}.
 
 \section{Summary}
 \label{sec:small.summary}
