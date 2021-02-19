@@ -974,7 +974,7 @@ in the wedge.
 The solution slope~$\norm{\del T}$
 is sufficiently large near the wedge corner,
 that there exists a region in which we can construct a modified boundary
-whose normal~$\normalvec_\modi$ satisfies the inequality
+whose unit normal~$\normalvec_\modi$ satisfies the inequality
 \begin{equation}
   \normalvec_\modi \dotp \frac{\del T}{\sqrt{1 + (\del T)^2}} \ge \cos\gamma.
   \label{eq:modification-contact-boundary-condition-inequality}
@@ -1007,7 +1007,32 @@ the comparison observation was intended as a rare theoretical gem,
 which could be derived despite the lack of exact solutions
 to the capillary BVP in a wedge.
 Here we are armed with an abundance of numerical wedge solutions;
-using these we can put the comparison observation into practical use.
+using them, we may finally put the observation into practical use.
+
+\subsection{Insights from roughness}
+\label{sec:small.modification.insights}
+
+Before we proceed to actually apply the comparison observation,
+we first improve our understanding
+by providing a physical interpretation
+which ties in neatly with the roughness theory
+of Section~\ref{sec:re-entrant.dip-coating.roughness}.
+
+We first note that the region in which the inequality condition~%
+  (\ref{eq:modification-contact-boundary-condition-inequality})
+can be satisfied
+is precisely the viable domain for a tracing contact angle of~$\gamma$.
+The left hand side is maximised
+when $\normalvec_\modi$~is parallel to~$\del T$,
+in which case we may rearrange to give
+\[
+  \norm{\del T} \ge \cos\gamma \sqrt{1 + (\del T)^2} = \abs{F},
+\]
+which is indeed the viable domain.
+This is not a coincidence;
+it tells us that there must be
+a physical interpretation of the comparison observation
+which relates to boundary tracing.
 
 \section{Summary}
 \label{sec:small.summary}
