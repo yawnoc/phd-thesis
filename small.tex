@@ -1020,19 +1020,67 @@ of Section~\ref{sec:re-entrant.dip-coating.roughness}.
 
 We first note that the region in which the inequality condition~%
   (\ref{eq:modification-contact-boundary-condition-inequality})
-can be satisfied
+can be satisfied by a curve
 is precisely the viable domain for a tracing contact angle of~$\gamma$.
-The left hand side is maximised
+To see this, observe that the left hand side is maximised
 when $\normalvec_\modi$~is parallel to~$\del T$,
-in which case we may rearrange to give
+in which case we may rearrange to get
 \[
-  \norm{\del T} \ge \cos\gamma \sqrt{1 + (\del T)^2} = \abs{F},
+  \norm{\del T} \ge \cos\gamma \sqrt{1 + (\del T)^2} = \abs{F}.
 \]
-which is indeed the viable domain.
+Thus the modified boundary must lie in the viable domain.
 This is not a coincidence;
 it tells us that there must be
 a physical interpretation of the comparison observation
 which relates to boundary tracing.
+
+Next we let $\theta_\modi$~be the angle between~$\del T$
+and~$\normalvec_\modi$, the normal to the modified boundary.
+Then the inequality condition~%
+  (\ref{eq:modification-contact-boundary-condition-inequality})
+becomes
+\begin{equation}
+  \frac{\norm{\del T} \cos\theta_\modi}{\sqrt{1 + (\del T)^2}} \ge \cos\gamma,
+  \label{eq:modification-contact-boundary-condition-inequality-simplified}
+\end{equation}
+and we are immediately reminded of the similar relation~%
+  (\ref{eq:re-entrant-contact-boundary-condition-serrated-simplified})
+from the roughness work.
+That result, when translated to the current context,
+says that
+\begin{equation}
+  \frac{\norm{\del T} \cos\theta}{\sqrt{1 + (\del T)^2}} = \cos\gamma,
+  \label{eq:contact-boundary-condition-simplified-modification-context}
+\end{equation}
+where $\theta$~is the angle between~$\del T$ and~$\normalvec$,
+the normal to the two local traced boundaries
+(which surely exist since the modified boundary lies in the viable domain).
+Dividing~%
+  (\ref{eq:modification-contact-boundary-condition-inequality-simplified})
+by~%
+  (\ref{eq:contact-boundary-condition-simplified-modification-context}),
+we have
+\begin{equation}
+  \frac{\cos\theta_\modi}{\cos\theta} \ge 1,
+  \label{eq:modification-cosine-ratio-inequality}
+\end{equation}
+and hence
+\begin{equation}
+  \theta_\modi \le \theta.
+  \label{eq:modification-theta-bound}
+\end{equation}
+Therefore, the inequality condition~%
+  (\ref{eq:modification-contact-boundary-condition-inequality})
+will only hold
+if the angular deviation~$\theta_\modi$
+between the modification boundary and the local $T$-contour
+does not exceed the angular deviation~$\theta$
+between the traced boundaries and the local $T$-contour.
+From Figure~XXX\@, % TODO
+we see that a modification boundary satisfying this condition
+is precisely one that can be approximated
+by a serrated path of traced boundaries:
+herein lies the connection to roughness theory.
 
 \section{Summary}
 \label{sec:small.summary}
