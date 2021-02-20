@@ -103,8 +103,28 @@
 
 % Theorems etc.
 \usepackage{amsthm}
-\theoremstyle{definition}
+\newtheoremstyle{blockcontent}%
+  {0}{0}%
+  {\normalfont}%
+  {}%
+  {\bfseries}%
+  {.}{0.5em}%
+  {}%
+\theoremstyle{blockcontent}
 \newtheorem*{corollary*}{Corollary}
+
+% Block with left border
+\usepackage{mdframed}
+\mdfsetup{usetwoside=false}
+\mdfdefinestyle{blockstyle}{
+  linewidth=1.5pt,
+  skipabove=\topskip, skipbelow=\topskip,
+  topline=false, innertopmargin=0.4em,
+  rightline=false, innerrightmargin=0.7em,
+  bottomline=false, innerbottommargin=0.4em,
+  leftline=true, innerleftmargin=0.7em, leftmargin=0.7\parindent,
+}
+\surroundwithmdframed[style=blockstyle]{corollary*}
 
 % Blackboard bold (for matrices)
 \usepackage{bbm}
