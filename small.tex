@@ -1067,7 +1067,7 @@ we have
 and hence
 \begin{equation}
   \theta_\modi \le \theta.
-  \label{eq:modification-theta-bound}
+  \label{eq:modification-deviation-bound}
 \end{equation}
 Therefore, the inequality condition~%
   (\ref{eq:modification-contact-boundary-condition-inequality})
@@ -1125,6 +1125,32 @@ roughening of a boundary (or reduction of its effective contact angle)
 will result in a higher capillary rise.
 This fits perfectly with the roughness theory
 of Section~\ref{sec:re-entrant.dip-coating.roughness}.
+
+\subsection{Application}
+\label{sec:small.modification.application}
+
+Having bettered our understanding of the comparison observation,
+we are now in a position to apply it to our numerical wedge solutions.
+The most general way to construct a modified boundary
+satisfying~(\ref{eq:modification-contact-boundary-condition-inequality})
+is to perform boundary tracing
+on the flux boundary condition
+\begin{equation}
+  \normalvec_\modi \dotp \del T = \norm{\del T} \cos\theta_\modi,
+  \label{eq:modification-boundary-condition}
+\end{equation}
+where, at each step of the integration,
+we are free to choose any value of angular deviation~$\theta_\modi$
+less than or equal to~$\theta$,
+given by
+\begin{equation}
+  \theta =
+    \cos^{-1} \roundbr*{
+      \frac{\cos\gamma \sqrt{1 + (\del T)^2}}{\norm{\del T}}
+    }
+  \label{eq:contact-boundary-condition-deviation}
+\end{equation}
+from~(\ref{eq:contact-boundary-condition-simplified-modification-context}).
 
 \section{Summary}
 \label{sec:small.summary}
