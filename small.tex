@@ -958,6 +958,32 @@ One would expect a bounded height rise to result from
 provided that the new boundary contains no corner
 whose half-angle falls within the small regime.
 
+\begin{figure}
+  \newcommand*{\subfigurewidth}{0.4\textwidth}
+  \newcommand*{\subfiguregraphicswidth}{0.7\textwidth}
+  \hspace*{\fill}
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent[width=\subfiguregraphicswidth]{%
+      capillary-wedge-modification-original%
+    }{
+      Original wedge
+    }
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent[width=\subfiguregraphicswidth]{%
+      capillary-wedge-modification-modified%
+    }{
+      Modified wedge
+    }
+  \end{subfigure}
+  \hspace*{\fill}
+  \caption{
+    Modification of a capillary wedge.
+  }
+  \label{fig:capillary-wedge-modification}
+\end{figure}
+
 Anderson~\cite[Section~7.3.2]{anderson-2002-thesis-boundary-tracing-pdes}
 has made a stronger and more specific observation,
 regarding whether the modification of a capillary wedge
@@ -970,7 +996,7 @@ Suppose the wedge parameters are~$(\alpha, \gamma)$,
 and let $T$~be the solution
 to the capillary BVP~(\ref{eq:scaled-laplace-young})
 \&~(\ref{eq:scaled-contact-boundary-condition})
-in the wedge.
+in the wedge (Figure~\ref{fig:capillary-wedge-modification-original}).
 The solution slope~$\norm{\del T}$
 is sufficiently large near the wedge corner,
 that there exists a region in which we can construct a modified boundary
@@ -980,8 +1006,8 @@ whose unit normal~$\normalvec_\modi$ satisfies the inequality
   \label{eq:modification-contact-boundary-condition-inequality}
 \end{equation}
 Let $T_\modi$~denote the solution to the capillary BVP
-in the modified wedge,
-i.e.,
+in the modified wedge (Figure~\ref{fig:capillary-wedge-modification-modified}),
+i.e.
 \begin{align}
   \del \dotp \frac{\del T_\modi}{\sqrt{1 + (\del T_\modi)^2}}
     &= T_\modi,
