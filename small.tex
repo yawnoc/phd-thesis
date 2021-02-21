@@ -5,8 +5,16 @@ In this chapter
 we apply numerical boundary tracing to analyse corner rounding
 in small capillary wedges,
 for which the wedge half-angle~$\alpha$ and the contact angle~$\gamma$
-satisfy the inequality~$\alpha < \pi/2 - \gamma$
-and the height rise in the corner is infinite.
+satisfy the inequality~$\alpha < \pi/2 - \gamma$,
+and for which the height rise in the corner is infinite.
+After obtaining similar results to those in Chapter~\ref{ch:moderate}
+for the rounding of moderate convex wedges,
+we drop the insistence on smooth curves
+and consider more general forms of corner modification,
+by building on a comparison result
+obtained by Anderson~\cite{anderson-2002-thesis-boundary-tracing-pdes}.
+
+\thematicbreak
 
 The author's Honours thesis~%
   \cite{li-2017-thesis-rounding-capillary-wedge}
@@ -940,8 +948,413 @@ which are inherently disparate in nature.
   \label{fig:wedge_small-moderate-candidates-offset}
 \end{figure}
 
+\section{General modification of a corner}
+\label{sec:small.modification}
+
+The results we have just obtained
+are hardly different to those in Chapter~\ref{ch:moderate}
+for corner rounding in a moderate convex wedge.
+The only notable characteristic here for the small wedge
+is the corner singularity,
+in that rounding will reduce the capillary rise
+from infinity to a finite height.
+Of course this feature is not unique to the candidate boundaries
+produced using boundary tracing;
+it is our insistence on avoiding sharp corners
+which has drawn our attention to those boundaries in particular.
+In general one would expect a bounded height rise to result from
+\emph{any} modification of a small wedge corner
+(whether it be a rounding, straight-line truncation, or curved truncation),
+provided that the new boundary contains no corner
+whose half-angle falls within the small regime.
+Having seen in Chapter~\ref{ch:re-entrant}
+how the embracing of boundaries with corners
+can lead to a much broader array of results,
+we shall drop in this section the requirement of smoothness
+and look at corner modifications more generally.
+
+\begin{figure}
+  \newcommand*{\subfigurewidth}{0.4\textwidth}
+  \newcommand*{\subfiguregraphicswidth}{0.7\textwidth}
+  \hspace*{\fill}
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent[width=\subfiguregraphicswidth]{%
+      capillary-wedge-modification-original%
+    }{
+      Original wedge
+    }
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent[width=\subfiguregraphicswidth]{%
+      capillary-wedge-modification-modified%
+    }{
+      Modified wedge
+    }
+  \end{subfigure}
+  \hspace*{\fill}
+  \caption{
+    Modification of a capillary wedge.
+  }
+  \label{fig:capillary-wedge-modification}
+\end{figure}
+
+While this chapter has focused on the small wedge regime,
+the analysis to follow is a very general one,
+applying to all convex capillary wedges
+(whether small, borderline, or moderate).
+We recall that an infinite number of new domains
+can be constructed by patching together traced boundaries
+as in Figure~\ref{fig:wedge_acute-traced-boundaries-patched}.
+By its very nature, boundary tracing determines
+the class of modifications to a wedge
+that leave the solution to the capillary problem completely unchanged.
+(This is useful for reduction of height rise
+because we may construct a boundary path through the interior of the wedge,
+where the unchanged solution is lower than it is along the original walls.)
+
+Continuing with this theme,
+one might imagine a generalised version of boundary tracing
+where modifications that lower the solution are also allowed.
+Anderson~\cite[Section~7.3.2]{anderson-2002-thesis-boundary-tracing-pdes}
+has made a very strong observation
+regarding specific modifications of a capillary wedge
+that will globally lower (or preserve) the height rise.
+This observation,
+which we henceforth call the \term{comparison observation},
+proceeds as follows.
+Suppose the wedge parameters are~$(\alpha, \gamma)$,
+and let $T$~be the solution
+to the capillary BVP~(\ref{eq:scaled-laplace-young})
+\&~(\ref{eq:scaled-contact-boundary-condition})
+in the wedge (Figure~\ref{fig:capillary-wedge-modification-original}).
+The solution slope~$\norm{\del T}$
+is sufficiently large near the wedge corner,
+that there exists a region in which we can construct a modified boundary
+whose unit normal~$\normalvec_\modi$ satisfies the inequality
+\begin{equation}
+  \normalvec_\modi \dotp \frac{\del T}{\sqrt{1 + (\del T)^2}} \ge \cos\gamma.
+  \label{eq:modification-contact-boundary-condition-inequality}
+\end{equation}
+Let $T_\modi$~denote the solution to the capillary BVP
+in the modified wedge (Figure~\ref{fig:capillary-wedge-modification-modified}),
+i.e.
+\begin{align}
+  \del \dotp \frac{\del T_\modi}{\sqrt{1 + (\del T_\modi)^2}}
+    &= T_\modi,
+    \label{eq:modification-laplace-young}
+    \\[\tallspace]
+  \normalvec_\modi \dotp \frac{\del T_\modi}{\sqrt{1 + (\del T_\modi)^2}}
+    &= \cos\gamma.
+    \label{eq:modification-contact-boundary-condition}
+\end{align}
+By the comparison principle
+of Finn \&~Hwang~\cite{finn-1989-comparison-principle-capillary-surfaces},
+it follows that~$T_\modi \le T$ pointwise.
+The upshot for near-corner modifications
+(e.g.~small-scale corner rounding or truncation)
+is subtle:
+not only is the height rise profile lowered,
+but the new height rise profile is bounded above
+by the height of the original wedge solution~$T$
+evaluated specifically along the modified boundary.
+
+Now in~\cite{anderson-2002-thesis-boundary-tracing-pdes},
+the comparison observation was only intended as a rare theoretical gem,
+which could be derived despite the lack of exact solutions
+to the capillary BVP in a wedge.
+Here we are armed with an abundance of numerical wedge solutions;
+thus, we will finally be able to see the observation working in practice.
+
+\subsection{Insights from roughness}
+\label{sec:small.modification.insights}
+
+The comparison observation as currently written
+does not specify how to actually determine a modified boundary
+satisfying the inequality condition~%
+  (\ref{eq:modification-contact-boundary-condition-inequality}).
+Before applying the comparison observation to numerical solutions,
+we first address this issue
+by providing a new physical interpretation
+which ties in neatly with the roughness theory
+of Section~\ref{sec:re-entrant.dip-coating.roughness}.
+
+We first note that the region in which the inequality condition~%
+  (\ref{eq:modification-contact-boundary-condition-inequality})
+can be satisfied by a curve
+is precisely the viable domain for a tracing contact angle of~$\gamma$.
+To see this, observe that the left hand side is maximised
+when $\normalvec_\modi$~is parallel to~$\del T$,
+in which case we may rearrange to get
+\[
+  \norm{\del T} \ge \cos\gamma \sqrt{1 + (\del T)^2} = \abs{F}.
+\]
+Thus the modified boundary must lie in the viable domain.
+This is not a coincidence;
+it tells us that there must be
+a physical interpretation of the comparison observation
+which relates to boundary tracing.
+
+Next we let $\theta_\modi$~be the angle between~$\del T$
+and~$\normalvec_\modi$, the normal to the modified boundary.
+Then the inequality condition~%
+  (\ref{eq:modification-contact-boundary-condition-inequality})
+becomes
+\begin{equation}
+  \frac{\norm{\del T} \cos\theta_\modi}{\sqrt{1 + (\del T)^2}} \ge \cos\gamma,
+  \label{eq:modification-contact-boundary-condition-inequality-simplified}
+\end{equation}
+and we are immediately reminded of the very similar~%
+  (\ref{eq:re-entrant-contact-boundary-condition-serrated-simplified})
+from the roughness work.
+That result, when translated to the current context,
+says that
+\begin{equation}
+  \frac{\norm{\del T} \cos\theta}{\sqrt{1 + (\del T)^2}} = \cos\gamma,
+  \label{eq:contact-boundary-condition-simplified-modification-context}
+\end{equation}
+where $\theta$~is the angle between~$\del T$ and~$\normalvec$,
+the normal to the two local traced boundaries
+(which surely exist since the modified boundary lies in the viable domain).
+Dividing~%
+  (\ref{eq:modification-contact-boundary-condition-inequality-simplified})
+by~%
+  (\ref{eq:contact-boundary-condition-simplified-modification-context}),
+we have
+\begin{equation}
+  \frac{\cos\theta_\modi}{\cos\theta} \ge 1,
+  \label{eq:modification-cosine-ratio-inequality}
+\end{equation}
+and hence
+\begin{equation}
+  \theta_\modi \le \theta.
+  \label{eq:modification-deviation-bound}
+\end{equation}
+Therefore, the inequality condition~%
+  (\ref{eq:modification-contact-boundary-condition-inequality})
+will hold if and only if
+the angular deviation~$\theta_\modi$
+between the modified boundary and the local $T$-contour
+does not exceed the angular deviation~$\theta$
+between the traced boundaries and the local $T$-contour.
+From Figure~\ref{fig:capillary-serrated-approximation-geometry-modified},
+we see that a modified boundary satisfying this condition
+is precisely one that can be approximated
+by a serrated path of traced boundaries:
+herein lies the connection to roughness theory.
+
+\begin{figure}
+  \centredfigurecontent[width=0.9\textwidth]{%
+    capillary-serrated-approximation-geometry-modified%
+  }{
+    Local geometry of the approximation of a modified boundary
+    with a serrated traced boundary path,
+    which is possible if and only if~$\theta_\modi \le \theta$.
+  }
+\end{figure}
+
+As before, the modified boundary may be assigned
+an effective contact angle~$\gamma_\modi$
+which makes it equivalent to the serrated path,
+according to the relation
+\begin{equation}
+  \normalvec_\modi \dotp \frac{\del T}{\sqrt{1 + (\del T)^2}}
+    = \cos\gamma_\modi.
+  \label{eq:modification-contact-boundary-condition-effective}
+\end{equation}
+After dividing~(\ref{eq:modification-contact-boundary-condition-effective})
+by~(\ref{eq:contact-boundary-condition-simplified-modification-context}),
+and recognising that $\cos\theta_\modi / {\cos\theta}$~is geometrically
+the ratio between the serrated path length
+and the modified boundary path length,
+we obtain Wenzel's cosine result
+\begin{important}{equation}
+  \rho
+    = \frac{\cos\theta_\modi}{\cos\theta}
+    = \frac{\cos\gamma_\modi}{\cos\gamma}.
+  \label{eq:modification-roughness-cosine-ratio}
+\end{important}
+Thus the inequality~(\ref{eq:modification-cosine-ratio-inequality})
+is merely an assertion that the roughness~$\rho$ is at least unity.
+Equivalently we have~$\gamma_\modi \le \gamma$,
+i.e.~the effective contact angle is bounded above
+by the true contact angle along the serrated path.
+
+Now both the serrated path with contact angle~$\gamma$
+and the modified boundary with effective contact angle~$\gamma_\modi$
+are associated with the known wedge solution~$T$.
+In the comparison observation,
+the solution~$T_\modi$ results from instead using the contact angle~$\gamma$
+along the modified boundary,
+as per the boundary condition~%
+  (\ref{eq:modification-contact-boundary-condition}).
+This is equivalent to replacing the rough serrated path
+by a completely smooth curve.
+Therefore, as a physical statement,
+the comparison observation simply asserts that
+roughening of a boundary (or reduction of its effective contact angle)
+will produce a higher capillary rise.
+This fits perfectly with the roughness theory
+of Section~\ref{sec:re-entrant.dip-coating.roughness}.
+
+\subsection{Application}
+\label{sec:small.modification.application}
+
+Having bettered our understanding of the comparison observation,
+we are now able to describe an actual procedure
+for the construction of a modified boundary
+satisfying~(\ref{eq:modification-contact-boundary-condition-inequality}).
+The most general way
+is to perform boundary tracing
+for the new flux condition
+\begin{equation}
+  \normalvec_\modi \dotp \del T = \norm{\del T} \cos\theta_\modi,
+  \label{eq:modification-boundary-condition}
+\end{equation}
+where, at each step of the integration,
+we are free to choose any value of angular deviation~$\theta_\modi$
+less than or equal to~$\theta$,
+given by
+\begin{equation}
+  \theta =
+    \cos^{-1} \roundbr*{
+      \frac{\cos\gamma \sqrt{1 + (\del T)^2}}{\norm{\del T}}
+    }
+  \label{eq:contact-boundary-condition-deviation}
+\end{equation}
+from~(\ref{eq:contact-boundary-condition-simplified-modification-context}).
+This can be achieved by setting~$\theta_\modi = p \theta$
+for some explicit function~$p = p (x, y, T, \norm{\del T})$
+whose magnitude does not exceed~$1$.
+
+For capillary wedges, however,
+we are more interested in practically computable curves
+than in general cases.
+In this respect
+the simple choice~$\theta_\modi = 0$ is very appealing,
+as the resulting boundary is simply a $T$-contour.
+This $T$-contour can then be patched together
+with the original wedge walls,
+which are permitted since they are traced boundaries
+(corresponding to the special case~$\theta_\modi = \theta$).
+By the comparison observation we then have the following:
+\begin{corollary*}
+  Let $T$~be a wedge solution of the capillary problem
+  (with contact angle~$\gamma$).
+  Let $T_\modi$~be the solution in a modified version of the wedge,
+  obtained by effecting a truncation along a contour~$T = h_\modi$
+  which lies completely within the viable domain
+  (for the same contact angle~$\gamma$).
+  Then the height rise profile for~$T_\modi$ along the truncation contour
+  is bounded above by~$h_\modi$.
+\end{corollary*}
+This result can be confirmed numerically.
+Figure~\ref{fig:wedge_small-modification-contours}
+shows $T$-contours of the numerical wedge solution
+for~$(\alpha, \gamma) = (\SI{45}{\degree}, \SI{30}{\degree})$,
+as computed using the methodology of Section~\ref{sec:small.numerical}.
+The four black contours are completely viable
+(as required by the corollary),
+while the two grey contours pass through the non-viable domain.
+The six contours give rise to six modified versions of the wedge,
+and in each of these we may numerically solve
+the capillary problem~(\ref{eq:modification-laplace-young})
+\&~(\ref{eq:modification-contact-boundary-condition})
+for~$T_\modi$
+(using the solver of Section~\ref{sec:moderate.nonlinear.numerical}).
+Figure~\ref{fig:wedge_small-modification-height-rise-profiles}
+compares the original $T$-contour heights
+with the corresponding height rise profiles for~$T_\modi$.
+In the four viable cases~\figurestyle{black},
+we see that the original height~\figurestyle{dotted}
+is indeed greater than the corresponding profile height~\figurestyle{solid}.
+While the corollary says nothing of what should happen
+in the remaining non-viable cases~\figurestyle{grey},
+one would expect the profile height to exceed the original height
+if a large enough portion of the truncation contour
+lies within the non-viable domain;
+indeed this is what we observe
+for the two grey cases
+of Figure~\ref{fig:wedge_small-modification-height-rise-profiles}.
+
+\begin{figure}
+  \centering
+  \begin{subfigure}[t]{0.45\textwidth}
+    \centredfigurecontent[width=0.7\textwidth]{%
+      wedge_small-modification-contours%
+    }{
+      Truncations of the wedge
+      in the shape of $T$-contours~\figurestyle{solid curves}.
+      The non-viable domain~\figurestyle{grey region}
+      is shown for reference.
+    }
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{0.5\textwidth}
+    \centredfigurecontent[
+      width=0.9\textwidth,
+      trim=0 {-0.114\textwidth} 0 0,
+    ]{%
+      wedge_small-modification-height-rise-profiles%
+    }{
+      Comparison between the original $T$-contour height~\figurestyle{dotted}
+      and the corresponding height rise profile
+      for~$T_\modi$~\figurestyle{solid}
+      in each modified wedge.
+    }
+  \end{subfigure}
+  \caption{
+    Numerical verification of the comparison corollary
+    for the small wedge~%
+    $(\alpha, \gamma) = (\SI{45}{\degree}, \SI{30}{\degree})$.
+  }
+  \label{fig:wedge_small-modification}
+\end{figure}
+
+Similar numerical verification of the comparison corollary
+is obtained in moderate convex wedges,
+by starting from the numerical wedge solutions computed
+in Section~\ref{sec:moderate.nonlinear.numerical}.
+
 \section{Summary}
 \label{sec:small.summary}
 
-% TODO
-\{TO BE WRITTEN\}
+In this chapter, we have perfomed numerical boundary tracing
+to analyse capillary wedges in the small regime.
+The unbounded height rise in the corner has been handled
+via a change in variable and coordinates
+that results in a de-singularised version of the capillary BVP\@.
+After computing wedge solutions using the finite element method,
+we have obtained similar results for corner rounding
+to those in Chapter~\ref{ch:moderate}.
+Again, a single numerical wedge solution
+for the angular parameters~$(\alpha, \gamma)$
+can be used to generate
+a one-parameter family of corner rounding candidates
+for contact angles~$\gamma_\tr \ge \gamma$.
+These results extend the earlier ones for the moderate case,
+since it is possible here
+for the parameters~$(\alpha, \gamma_\tr)$ of the candidate boundary
+to belong to the moderate regime~$\alpha + \gamma_\tr \ge \pi/2$.
+
+As before,
+our stubborn insistence on avoiding sharp corners
+has been a major restriction.
+Remebering the good results that emerged in Chapter~\ref{ch:re-entrant}
+from the acceptance of sharp corners,
+we have turned our attention away from rounding in particular
+to corner modifications more generally.
+Previous work
+by Anderson~\cite[Section~7.3.2]{anderson-2002-thesis-boundary-tracing-pdes}
+gave a powerful comparison result
+which guarantees a lower (or unchanged) height rise
+for boundary modifications satisfying the inequality condition~%
+  (\ref{eq:modification-contact-boundary-condition-inequality}).
+Here, we have built on this observation
+by providing a new physical interpretation
+using the roughness theory
+of Section~\ref{sec:re-entrant.dip-coating.roughness}.
+This has culminated in a practical corollary for convex wedges:
+if a corner is truncated along a $T$-contour in the viable domain,
+the resulting height rise profile is bounded above
+by the height of that contour.

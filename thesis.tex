@@ -101,6 +101,31 @@
 % General symbols ("\;" etc.)
 \usepackage{amsmath}
 
+% Theorems etc.
+\usepackage{amsthm}
+\newtheoremstyle{blockcontent}%
+  {0}{0}%
+  {\normalfont}%
+  {}%
+  {\bfseries}%
+  {.}{0.5em}%
+  {}%
+\theoremstyle{blockcontent}
+\newtheorem*{corollary*}{Corollary}
+
+% Block with left border
+\usepackage{mdframed}
+\mdfsetup{usetwoside=false}
+\mdfdefinestyle{blockstyle}{
+  linewidth=1.5pt,
+  skipabove=\topskip, skipbelow=\topskip,
+  topline=false, innertopmargin=0.4em,
+  rightline=false, innerrightmargin=0.6em, rightmargin=0.3em,
+  bottomline=false, innerbottommargin=0.4em,
+  leftline=true, innerleftmargin=0.6em, leftmargin=0.6em,
+}
+\surroundwithmdframed[style=blockstyle]{corollary*}
+
 % Blackboard bold (for matrices)
 \usepackage{bbm}
 
@@ -482,6 +507,9 @@
 
 % Inflection subscript
 \newcommand*{\infl}{\mathrm{i}}
+
+% Modification subscript
+\newcommand*{\modi}{\mathrm{m}}
 
 % Practical subscript
 \newcommand*{\prac}{\mathrm{p}}
