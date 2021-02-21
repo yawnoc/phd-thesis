@@ -951,12 +951,19 @@ is the corner singularity,
 in that rounding will reduce the capillary rise
 from infinity to a finite height.
 Of course this feature is not unique to the candidate boundaries
-produced using boundary tracing.
-One would expect a bounded height rise to result from
+produced using boundary tracing;
+it is our insistence on avoiding sharp corners
+which has drawn our attention to those boundaries in particular.
+In general one would expect a bounded height rise to result from
 \emph{any} modification of a small wedge corner
-(whether it be a rounding, a straight-line truncation, or a curved truncation),
+(whether it be a rounding, straight-line truncation, or curved truncation),
 provided that the new boundary contains no corner
 whose half-angle falls within the small regime.
+Having seen in Chapter~\ref{ch:re-entrant}
+how the embracing of boundaries with corners
+can lead to a much broader array of results,
+we shall drop in this section the requirement of smoothness
+and look at corner modifications more generally.
 
 \begin{figure}
   \newcommand*{\subfigurewidth}{0.4\textwidth}
@@ -984,14 +991,30 @@ whose half-angle falls within the small regime.
   \label{fig:capillary-wedge-modification}
 \end{figure}
 
+While this chapter has focused on the small wedge regime,
+the analysis to follow is a very general one,
+applying to all convex capillary wedges
+(whether small, borderline, or moderate).
+We recall that an infinite number of new domains
+can be constructed by patching together traced boundaries
+as in Figure~\ref{fig:wedge_acute-traced-boundaries-patched}.
+By its very nature, boundary tracing determines
+the class of modifications to a wedge
+that leave the solution to the capillary problem completely unchanged.
+(This is useful for reduction of height rise
+because we may construct a boundary path through the interior of the wedge,
+where the unchanged solution is lower than it is along the original walls.)
+
+Continuing with this theme,
+one might imagine a generalised version of boundary tracing
+where modifications that lower the solution are also allowed.
 Anderson~\cite[Section~7.3.2]{anderson-2002-thesis-boundary-tracing-pdes}
-has made a stronger and more specific observation,
-regarding whether the modification of a capillary wedge
-will lower the height rise \emph{globally}.
+has made a very strong observation
+regarding specific modifications of a capillary wedge
+that will globally lower (or preserve) the height rise.
 This observation,
 which we henceforth call the \term{comparison observation},
-holds for any convex wedge (not just small),
-and proceeds as follows.
+proceeds as follows.
 Suppose the wedge parameters are~$(\alpha, \gamma)$,
 and let $T$~be the solution
 to the capillary BVP~(\ref{eq:scaled-laplace-young})
