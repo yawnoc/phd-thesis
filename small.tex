@@ -1165,6 +1165,34 @@ The comparison observation implies the following:
   Then the height rise profile for~$T_\modi$ along the truncation contour
   is bounded above by~$h_\modi$.
 \end{corollary*}
+This result can be confirmed numerically.
+Figure~\ref{fig:wedge_small-modification-contours}
+shows $T$-contours of the numerical wedge solution
+for~$(\alpha, \gamma) = (\SI{45}{\degree}, \SI{30}{\degree})$,
+as computed using the methodology of Section~\ref{sec:small.numerical}.
+The four black contours are completely viable
+(as required by the corollary),
+while the two grey contours pass through the non-viable domain.
+The six contours give rise to six modified versions of the wedge,
+in which we may numerically solve
+the capillary problem~(\ref{eq:modification-laplace-young})
+\&~(\ref{eq:modification-contact-boundary-condition})
+for~$T_\modi$,
+using the solver of Section~\ref{sec:moderate.nonlinear.numerical}.
+Figure~\ref{fig:wedge_small-modification-height-rise-profiles}
+compares the original $T$-contour heights
+with the corresponding height rise profiles for~$T_\modi$.
+In the four viable cases~\figurestyle{black},
+we see that the original height~\figurestyle{dotted}
+is indeed greater than the corresponding profile height~\figurestyle{solid}.
+While the corollary says nothing of what should happen
+in the remaining non-viable cases~\figurestyle{grey},
+one would expect the profile height to exceed the original height
+if a large enough portion of the truncation contour
+lies within the non-viable domain;
+indeed this is what we observe
+for the two grey cases
+of Figure~\ref{fig:wedge_small-modification-height-rise-profiles}.
 
 \begin{figure}
   \centering
@@ -1187,7 +1215,8 @@ The comparison observation implies the following:
       wedge_small-modification-height-rise-profiles%
     }{
       Comparison between the original $T$-contour height~\figurestyle{dotted}
-      and the corresponding height rise profile~\figurestyle{solid}
+      and the corresponding height rise profile
+      for~$T_\modi$~\figurestyle{solid}
       in each modified wedge.
     }
   \end{subfigure}
