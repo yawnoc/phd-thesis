@@ -1165,9 +1165,42 @@ The comparison observation implies the following:
   Then the height rise profile of~$T_\modi$ is bounded above by~$h_\modi$.
 \end{corollary*}
 In other words,
-by truncating a wedge in the shape of a viable $T$-contour,
+by truncating a wedge in the shape of a completely viable $T$-contour,
 we will guarantee that the resulting height rise profile
 is bounded above by that height of that $T$-contour.
+
+\begin{figure}
+  \centering
+  \begin{subfigure}[t]{0.45\textwidth}
+    \centredfigurecontent[width=0.7\textwidth]{%
+      wedge_small-modification-contours%
+    }{
+      Truncations of the wedge
+      in the shape of $T$-contours~\figurestyle{solid curves}.
+      The non-viable domain~\figurestyle{grey region}
+      is shown for reference.
+    }
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{0.5\textwidth}
+    \centredfigurecontent[
+      width=0.9\textwidth,
+      trim=0 {-0.114\textwidth} 0 0,
+    ]{%
+      wedge_small-modification-height-rise-profiles%
+    }{
+      Comparison between the original $T$-contour height~\figurestyle{dotted}
+      and the corresponding height rise profile~\figurestyle{solid}
+      in each modified wedge.
+    }
+  \end{subfigure}
+  \caption{
+    Numerical verification of the comparison corollary
+    for the small wedge~%
+    $(\alpha, \gamma) = (\SI{45}{\degree}, \SI{30}{\degree})$.
+  }
+  \label{fig:wedge_small-modification}
+\end{figure}
 
 \section{Summary}
 \label{sec:small.summary}
