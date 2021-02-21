@@ -1052,17 +1052,21 @@ by the height of the original wedge solution~$T$
 evaluated specifically along the modified boundary.
 
 Now in~\cite{anderson-2002-thesis-boundary-tracing-pdes},
-the comparison observation was intended as a rare theoretical gem,
+the comparison observation was only intended as a rare theoretical gem,
 which could be derived despite the lack of exact solutions
 to the capillary BVP in a wedge.
 Here we are armed with an abundance of numerical wedge solutions;
-using them, we may finally put the observation into practical use.
+thus, we will finally be able to see the observation working in practice.
 
 \subsection{Insights from roughness}
 \label{sec:small.modification.insights}
 
-Before we proceed to actually apply the comparison observation,
-we first improve our understanding
+The comparison observation as currently written
+does not specify how to actually determine a modified boundary
+satisfying the inequality condition~%
+  (\ref{eq:modification-contact-boundary-condition-inequality}).
+Before applying the comparison observation to numerical solutions,
+we first address this issue
 by providing a new physical interpretation
 which ties in neatly with the roughness theory
 of Section~\ref{sec:re-entrant.dip-coating.roughness}.
@@ -1179,11 +1183,12 @@ of Section~\ref{sec:re-entrant.dip-coating.roughness}.
 \label{sec:small.modification.application}
 
 Having bettered our understanding of the comparison observation,
-we are now in a position to apply it to our numerical wedge solutions.
-The most general way to construct a modified boundary
-satisfying~(\ref{eq:modification-contact-boundary-condition-inequality})
+we are now able to describe an actual procedure
+for the construction of a modified boundary
+satisfying~(\ref{eq:modification-contact-boundary-condition-inequality}).
+The most general way
 is to perform boundary tracing
-on the flux boundary condition
+for the new flux condition
 \begin{equation}
   \normalvec_\modi \dotp \del T = \norm{\del T} \cos\theta_\modi,
   \label{eq:modification-boundary-condition}
@@ -1200,13 +1205,20 @@ given by
   \label{eq:contact-boundary-condition-deviation}
 \end{equation}
 from~(\ref{eq:contact-boundary-condition-simplified-modification-context}).
+This can be achieved by setting~$\theta_\modi = p \theta$
+for some explicit function~$p = p (x, y, T, \norm{\del T})$
+whose magnitude does not exceed~$1$.
 
-The simplest choice~$\theta_\modi = 0$
-results in a boundary that is simply a $T$-contour.
+For capillary wedges, however,
+we are more interested in practically computable curves
+than in general cases.
+In this respect
+the simple choice~$\theta_\modi = 0$ is very appealing,
+as the resulting boundary is simply a $T$-contour.
 This $T$-contour can then be patched together
 with the original wedge walls,
-which, being traced boundaries,
-can be obtained by setting~$\theta_\modi = \theta$.
+which are permitted since they are traced boundaries
+(corresponding to the special case~$\theta_\modi = \theta$).
 By the comparison observation we then have the following:
 \begin{corollary*}
   Let $T$~be a wedge solution of the capillary problem
