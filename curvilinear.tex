@@ -17,7 +17,7 @@ for each new coordinate system encountered;
 no generalised version was given.
 The same is true also of
 the author's Honours thesis~\cite{li-2017-thesis-rounding-capillary-wedge}.
-As for numerical boundary tracing using arc-length parametrisation
+As for boundary tracing using arc-length parametrisation
 (a technique never used in~\cite{li-2017-thesis-rounding-capillary-wedge}),
 Anderson~\cite{anderson-2002-thesis-boundary-tracing-pdes}
 only considered Cartesian coordinates.
@@ -271,7 +271,7 @@ while the lower branch corresponds to choosing the plus sign).
 \subsection{Arc-length parametrisation}
 \label{sec:curvilinear.tracing.arc-length}
 
-In numerical boundary tracing,
+If the boundary tracing ODE can only be solved numerically,
 the coordinate parametrisations~$v = v (u)$ and~$u = u (v)$
 will be problematic
 if~$\td v / {\td u}$ or~$\td u / {\td v}$ ever become infinite,
@@ -370,5 +370,5 @@ we have derived in this chapter
 the boundary tracing ODE for coordinate parametrisation
 and the corresponding system of ODEs for arc-length parametrisation.
 Both are applicable in any two-dimensional orthogonal coordinate system,
-with the former appropriate for analytical work
-and the latter useful in numerical boundary tracing.
+with the former appropriate for analytical investigations
+and the latter useful in numerical work.
