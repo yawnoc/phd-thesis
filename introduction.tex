@@ -667,40 +667,37 @@ for the notion of an ``effective contact angle'' for rough surfaces.
 
 In the author's Honours thesis~\cite{li-2017-thesis-rounding-capillary-wedge},
 corner rounding of capillary wedges was analysed
-through \term{asymptotic boundary tracing}
-(where an asymptotic known solution is used instead of an exact one
-in the boundary tracing equations).
+through \term{asymptotic boundary tracing},
+where an asymptotic known solution is used instead of an exact one.
 Re-entrant wedges were not considered.
 In the case of a small wedge,
-an asymptotic corner rounding could be produced
-by using the leading term~(\ref{eq:small-wedge-asymptotic-solution})
-as the known solution in boundary tracing,
-but the accuracy of the asymptotic corner rounding
-could only be assessed indirectly
+an asymptotic rounding of the corner could be produced
+using the leading term~(\ref{eq:small-wedge-asymptotic-solution}),
+but its accuracy could only be assessed indirectly
 because the numerical methods used were unable to handle
-the singularity in the wedge corner.
+the singularity at the wedge vertex.
 In the case of a moderate convex wedge,
 a truncation of the series of
 Norbury~\etal~\cite{norbury-2005-corner-solutions-laplace-young}
 was used as the known solution to the Laplace--Young equation.
 This approach did not work well,
 as the series did not represent the true solution accurately enough
-away from the wedge corner;
-the asymptotic corner rounding (if it could be produced)
-did not compare well with a numerical corner rounding
-produced by \term{numerical boundary tracing},
-i.e.~applying boundary tracing to a numerical wedge solution.
+away from the wedge vertex;
+the resulting asymptotic rounding of the corner (if it could be produced)
+did not compare well with a numerically computed version
+produced via \term{numerical boundary tracing},
+where a numerical solution is used in place of an exact known solution.
 
 Now in~\cite{li-2017-thesis-rounding-capillary-wedge},
 numerical boundary tracing was merely used
-to assess the accuracy of the asymptotic corner roundings.
+to assess the accuracy of the asymptotically computed rounding curves.
 Indeed numerical boundary tracing for its own sake
 seems a pointless exercise;
-instead of generating a corner rounding
+instead of generating a rounding curve
 by applying boundary tracing to a numerical wedge solution
 (obtained with some numerical solver),
 one could simply seek a numerical solution in a chosen rounded wedge
-(using the aforesaid numerical solver).
+(using said numerical solver).
 However, in the current thesis,
 a novel observation is made which challenges this view;
 numerical boundary tracing is presented as a viable method
