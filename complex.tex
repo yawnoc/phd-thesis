@@ -4,6 +4,7 @@
 When the known solution~$T$ satisfies Laplace's equation,
 it is possible to recast the traced boundaries
 as solutions to an ODE in the complex variable~$z = x + \ii y$.
+
 From the boundary tracing system~%
   (\ref{eq:tracing-ode-arc-length-parametrisation-u})
 \&~%
@@ -17,12 +18,13 @@ we have
   \label{eq:complex-tracing-ode-arc-length-parametrisation-z-raw}
 \end{equation}
 Complex function theory tells us that
-$T$~is the real part of some analytic function
+$T$~is the real part of some analytic function,
+i.e.
 \begin{equation}
   W (z) = T (x, y) + \ii V (x, y),
   \label{eq:complex-analytic-function-components}
 \end{equation}
-from which we have
+whence
 \begin{align}
   -Q + \ii P
     &= -\pder{T}{y} + \ii \pder{T}{x}
@@ -49,3 +51,27 @@ we obtain the highly terse
   \label{eq:complex-tracing-ode-arc-length-parametrisation-z}
 \end{important}
 for traced boundaries in the complex plane.
+
+It is interesting to note that
+if~$z = z (\zeta)$ according to some conformal mapping,
+then we have
+\begin{equation}
+  \tder{\zeta}{s} = \frac{\ii F \pm \sqrt{\Phi}}{\td W / {\td\zeta}}
+  \label{eq:complex-tracing-ode-arc-length-parametrisation-zeta}
+\end{equation}
+by the chain rule.
+Since conformal mappings preserve harmonicity,
+we may therefore determine traced boundaries as follows:
+\begin{enumerate}
+  \item
+    Choose a conformal mapping~$z = z (\zeta)$.
+  \item
+    Choose an analytic function~$W = W (\zeta)$.
+  \item
+    Write~$F$ and~$\Phi = (\del T)^2 - F^2$ in terms of~$\zeta$.
+  \item
+    Compute traced boundaries in $\zeta$-space
+    using~(\ref{eq:complex-tracing-ode-arc-length-parametrisation-zeta}).
+  \item
+    Map the resulting curves back to $z$-space.
+\end{enumerate}
