@@ -7,7 +7,7 @@ beginning from the [first draft][v0.1.0].
 ## [Unreleased]
 
 
-## v0.1.0 (2021-02-25)
+## [v0.1.0] (2021-02-25)
 
 - First draft
 
