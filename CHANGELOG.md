@@ -6,6 +6,7 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
+- Fixed Abstract typo (missing 'are')
 - Italicised capital Greek variables
 
 
