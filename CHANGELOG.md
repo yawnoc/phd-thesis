@@ -6,6 +6,7 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
+- Added discussion of directional distribution of radiative output in a fin
 - Fixed Abstract typo (missing 'are')
 - Italicised capital Greek variables
 

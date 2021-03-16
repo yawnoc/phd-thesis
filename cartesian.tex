@@ -617,6 +617,48 @@ is displayed in Figure~\ref{fig:plane-fin-power-per-length},
 and for a fin of length~$L = \SI{1}{\metre}$,
 we obtain~$p = \SI{3.41}{\kilo\watt \per\metre}$.
 
+Finally, we note that
+the directional distribution of radiation emitted from a fin
+will be significantly different
+to that from a simple rectangular strip.
+We consider the amount of radiation
+arriving at a cylindrical shell (aligned with the $z$-axis)
+of radius~$\rho$ (assumed large).
+Following a similar analysis to the earlier self-viewing calculations,
+we find that in the case of a fin
+(Figure~\ref{fig:plane-directional-dependence-geometry-fin}),
+the radiative power per unit area received by the cylindrical shell
+is given by
+\begin{equation}
+  I =
+    \frac{1}{2 \rho}
+    \int_{x_1}^{x_2}
+      {T^\star}^4
+      ({y'}^\star \cos\varphi + \sin\varphi)
+    \td x^\star,
+  \label{eq:plane-directional-dependence-fin}
+\end{equation}
+where $\varphi$~is the angle from the negative $x$-axis.
+Only a small amount of the radiative output
+is sent in the $\varphi = 0$~direction,
+with the majority of the radiation instead emitted laterally
+(perpendicular to the two faces of the fin).
+In contrast,
+for a rectangular strip in the $yz$-plane
+(Figure~\ref{fig:plane-directional-dependence-geometry-strip}),
+we have the cosinusoidal distribution
+\begin{equation}
+  I = \frac{1}{2 \rho} T^4 H \cos\varphi,
+  \label{eq:plane-directional-dependence-strip}
+\end{equation}
+where $T$~is the temperature of the strip
+and $H$~is its thickness in the $y$-direction.
+As expected,
+the strip emits most of its radiative output in the direction that it faces.
+This may not be desirable,
+and the fins we have produced in this section will be useful
+in applications where laterally emitted radiation is preferred.
+
 \begin{figure}
   \newcommand*{\subfigurewidth}{0.33\textwidth}
   \centering
