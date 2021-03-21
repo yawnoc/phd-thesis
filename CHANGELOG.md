@@ -6,8 +6,8 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
+- Improved mathematical formatting in various places
 - Clarified moderate wedge figures similar but not identical to Helmholtz
-- Added brackets around display-fraction arguments to exp
 - Improved wording in various places
 - Improved 'Five domains' caption
 - Added discussion of directional distribution of radiative output in a fin
