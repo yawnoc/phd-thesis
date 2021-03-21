@@ -140,7 +140,10 @@ as shown in Figure~\ref{fig:helmholtz-wedge-domain}.
 As observed by Fowkes \&~Hood~\cite{fowkes-1998-surface-tension-effects-wedge},
 the known solution to the Helmholtz BVP in this wedge is given by
 \begin{important}{equation}
-  U = \exp \frac{-x+y}{\sqrt{2}} + \exp \frac{-x-y}{\sqrt{2}},
+  U =
+    \exp \roundbr*{\frac{-x+y}{\sqrt{2}}}
+      +
+    \exp \roundbr*{\frac{-x-y}{\sqrt{2}}},
   \label{eq:scaled-helmholtz-solution}
 \end{important}
 a superposition of capillary layers contributed by each wall
@@ -161,12 +164,14 @@ The derivatives of the known solution are
 \begin{align}
   P &= \pder{U}{x} =
     \frac{1}{\sqrt{2}} \roundbr*{
-      - \exp \frac{-x+y}{\sqrt{2}} - \exp \frac{-x-y}{\sqrt{2}}
+      - \exp \roundbr*{\frac{-x+y}{\sqrt{2}}}
+      - \exp \roundbr*{\frac{-x-y}{\sqrt{2}}}
     },
     \label{eq:helmholtz-gradient-x-component} \\[\tallspace]
   Q &= \pder{U}{y} =
     \frac{1}{\sqrt{2}} \roundbr*{
-      + \exp \frac{-x+y}{\sqrt{2}} - \exp \frac{-x-y}{\sqrt{2}}
+      + \exp \roundbr*{\frac{-x+y}{\sqrt{2}}}
+      - \exp \roundbr*{\frac{-x-y}{\sqrt{2}}}
     },
     \label{eq:helmholtz-gradient-y-component}
 \end{align}
