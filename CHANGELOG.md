@@ -6,6 +6,7 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
+- Improved wording in various places
 - Improved 'Five domains' caption
 - Added discussion of directional distribution of radiative output in a fin
 - Fixed Abstract typo (missing 'are')
