@@ -6,6 +6,7 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
+- Thickened edges in PNG figures (solutions in 3D)
 - Added capillary wedge geometry figure (three regimes)
 - Improved mathematical formatting in various places
 - Clarified moderate wedge figures similar but not identical to Helmholtz
