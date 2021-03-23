@@ -6,6 +6,7 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
+- Added re-entrant wedge jump-discontinuity figure
 - Lightened walls in PNG figures
 - Thickened edges in PNG figures (solutions in 3D)
 - Added capillary wedge geometry figure (three regimes)
