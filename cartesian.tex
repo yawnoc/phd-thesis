@@ -1617,6 +1617,30 @@ in Figure~\ref{fig:cosine_general-asymmetric_domain}.
 Each domain is discretised into an unstructured triangular mesh
 with around 500~elements.
 
+\begin{figure}
+  \newcommand*{\subfigurewidth}{0.45\textwidth}
+  \centering
+  \hspace*{\fill}
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent[
+      trim=0 -0.75 0 0
+    ]{cosine-verification-lens-relative-error}{%
+      Lens-shaped
+    }
+  \end{subfigure}
+    \hfill
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent{cosine-verification-asymmetric-relative-error}{%
+      Asymmetric
+    }
+  \end{subfigure}
+  \hspace*{\fill}
+  \caption{
+    Relative error of numerical solutions computed in the selected domains.
+  }
+  \label{fig:cosine-verification-relative-error}
+\end{figure}
+
 Laplace's equation~(\ref{eq:laplace-steady-conduction}) is then solved,
 with the radiation condition~%
   (\ref{eq:cosine-scaled-radiation-boundary-condition})
