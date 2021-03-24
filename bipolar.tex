@@ -870,7 +870,22 @@ and the aforementioned Dirichlet condition on the interior boundary.
 Comparing the resulting numerical solution
 to the known exact solution~(\ref{eq:bipolar-scaled-laplace-solution}),
 we find that the maximum relative error throughout the mesh
-is of the order~$\SI{0.1}{\percent}$.
+is of the order~$10^{-3}$
+(Figure~\ref{fig:bipolar-verification}).
+
+\begin{figure}
+  \newcommand*{\subfigurewidth}{0.42\textwidth}
+  \centering
+  \hspace*{\fill}
+  \includegraphics[width=\subfigurewidth]{bipolar-verification-solution}
+    \hfill
+  \includegraphics[width=\subfigurewidth]{bipolar-verification-relative-error}
+  \hspace*{\fill}
+  \caption{
+    Numerical verification.
+  }
+  \label{fig:bipolar-verification}
+\end{figure}
 
 \section{Physical range}
 \label{sec:bipolar.physical}
