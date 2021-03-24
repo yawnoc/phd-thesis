@@ -982,7 +982,8 @@ which consists of some 400~triangular elements.
 We find that the relative discrepancy
 between the resulting numerical solution
 and the exact solution~(\ref{eq:line-scaled-laplace-solution})
-is less than~$\SI{0.3}{\percent}$ throughout the mesh.
+is less than~$\SI{0.3}{\percent}$ throughout the mesh
+(Figure~\ref{fig:line-verification}).
 
 \begin{figure}
   \centering
@@ -992,6 +993,20 @@ is less than~$\SI{0.3}{\percent}$ throughout the mesh.
     Selected domain and finite element mesh for numerical verification.
   }
   \label{fig:line-verification-domain-mesh}
+\end{figure}
+
+\begin{figure}
+  \newcommand*{\subfigurewidth}{0.42\textwidth}
+  \centering
+  \hspace*{\fill}
+  \includegraphics[width=\subfigurewidth]{line-verification-solution}
+    \hfill
+  \includegraphics[width=\subfigurewidth]{line-verification-relative-error}
+  \hspace*{\fill}
+  \caption{
+    Numerical verification.
+  }
+  \label{fig:line-verification}
 \end{figure}
 
 \section{Physical range}
