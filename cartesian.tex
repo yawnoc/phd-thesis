@@ -1618,19 +1618,21 @@ Each domain is discretised into an unstructured triangular mesh
 with around 500~elements.
 
 \begin{figure}
-  \newcommand*{\subfigurewidth}{0.45\textwidth}
+  \newcommand*{\subfigurewidth}{0.42\textwidth}
   \centering
   \hspace*{\fill}
   \begin{subfigure}[t]{\subfigurewidth}
-    \centredfigurecontent[
-      trim=0 -0.75 0 0
-    ]{cosine-verification-lens-relative-error}{%
+    \centredfigurecontent[trim=0 -1 0 0]{%
+      cosine-verification-lens-relative-error%
+    }{%
       Lens-shaped
     }
   \end{subfigure}
     \hfill
   \begin{subfigure}[t]{\subfigurewidth}
-    \centredfigurecontent{cosine-verification-asymmetric-relative-error}{%
+    \centredfigurecontent{%
+      cosine-verification-asymmetric-relative-error%
+    }{%
       Asymmetric
     }
   \end{subfigure}
@@ -1646,7 +1648,7 @@ with around 500~elements.
   \centering
   \hspace*{\fill}
   \begin{subfigure}[t]{\subfigurewidth}
-    \centredfigurecontent{%
+    \centredfigurecontent[trim=0 -1 0 0]{%
       cosine-verification-lens-relative-error-histogram%
     }{%
       Lens-shaped
