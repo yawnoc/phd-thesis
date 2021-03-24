@@ -1641,6 +1641,32 @@ with around 500~elements.
   \label{fig:cosine-verification-relative-error}
 \end{figure}
 
+\begin{figure}
+  \newcommand*{\subfigurewidth}{0.36\textwidth}
+  \centering
+  \hspace*{\fill}
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent{%
+      cosine-verification-lens-relative-error-histogram%
+    }{%
+      Lens-shaped
+    }
+  \end{subfigure}
+    \hfill
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent{%
+      cosine-verification-asymmetric-relative-error-histogram%
+    }{%
+      Asymmetric
+    }
+  \end{subfigure}
+  \hspace*{\fill}
+  \caption{
+    Histogram of relative error in the selected domains.
+  }
+  \label{fig:cosine-verification-relative-error-histogram}
+\end{figure}
+
 Laplace's equation~(\ref{eq:laplace-steady-conduction}) is then solved,
 with the radiation condition~%
   (\ref{eq:cosine-scaled-radiation-boundary-condition})
