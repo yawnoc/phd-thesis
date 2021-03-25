@@ -6,6 +6,7 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
+- Improved re-entrant wedge asymmetry remark
 - Added radiation numerical verification figures
 - Added re-entrant wedge jump-discontinuity figure
 - Lightened walls in PNG figures
