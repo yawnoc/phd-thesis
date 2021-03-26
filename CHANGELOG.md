@@ -6,6 +6,7 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
+- Added table of corner angles for pseudo-roundings
 - Improved contact angle side view figure (curvier)
 - Improved re-entrant wedge asymmetry remark
 - Added radiation numerical verification figures

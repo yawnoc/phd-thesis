@@ -713,13 +713,12 @@ The two trajectories eventually intersect,
 and by symmetry this occurs at a point~$(x_\corn, 0)$.
 By trimming the excess and patching the two boundaries together
 (Figure~\ref{fig:wedge_obtuse-pseudo-rounding-construction-corner}),
-we obtain a curve which we shall call a \term{pseudo-rounding} of the corner;
-while it is not a perfect rounding
+we obtain a curve which we shall call a \term{pseudo-rounding} of the corner.
+While this curve is not a perfect rounding
 due to the corner formed at~$(x_\corn, 0)$,
 the corner angle deviates in most cases
-by only a few degrees from a straight angle,
-and for practical purposes
-the corner may be regarded as a rounded one.
+by only a small amount from a straight angle
+(Table~\ref{tab:wedge_obtuse-pseudo-rounding-corner-angle}).
 
 \begin{figure}
   \newcommand*{\subfigurewidth}{0.45\textwidth}
@@ -750,6 +749,35 @@ the corner may be regarded as a rounded one.
   }
   \label{fig:wedge_obtuse-pseudo-rounding-construction}
 \end{figure}
+
+\begin{table}
+  \centering
+  \begin{tabular}{
+    S[table-format=2, table-space-text-post=\si{\degree}]
+    S[table-format=3.1, table-space-text-post=\si{\degree}, round-precision=1]
+    S[table-format=2.1, table-space-text-post=\si{\degree}, round-precision=1]
+  }
+    \toprule
+      {$\gamma_\tr$}  &  {Corner angle}  &  {Deviation} \\
+    \midrule
+      65 \si{\degree}  &  157.5 \si{\degree}  &  22.5 \si{\degree}  \\
+      70 \si{\degree}  &  173.1 \si{\degree}  &   6.9 \si{\degree}  \\
+      75 \si{\degree}  &  180.0 \si{\degree}  &   0.0 \si{\degree}  \\
+      80 \si{\degree}  &  180.0 \si{\degree}  &   0.0 \si{\degree}  \\
+      85 \si{\degree}  &  180.0 \si{\degree}  &   0.0 \si{\degree}  \\
+    \bottomrule
+  \end{tabular}
+  \caption{
+    Corner angle at~$(x_\corn, 0)$
+    for the pseudo-roundings shown
+    in Figure~\ref{fig:wedge_obtuse-pseudo-roundings},
+    which are for~$\gamma_\tr > \gamma$,
+    all obtained from the wedge solution
+    for~$\alpha = \SI{135}{\degree}$ and~$\gamma = \SI{60}{\degree}$.
+    The deviation from a straight angle is also shown.
+  }
+  \label{tab:wedge_obtuse-pseudo-rounding-corner-angle}
+\end{table}
 
 Thus, given a single numerical wedge solution~$T (x, y; \alpha, \gamma)$
 in a re-entrant wedge,
