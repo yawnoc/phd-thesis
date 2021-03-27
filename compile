@@ -2,7 +2,7 @@
 
 # Recompile from scratch
 
-git clean -Xf
+git clean -Xdf
 
 pdflatex thesis
 bibtex thesis
