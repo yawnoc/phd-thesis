@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 
 # Recompile from scratch
-
-git clean -Xdf
-
+./clean
 pdflatex thesis
 bibtex thesis
 pdflatex thesis
