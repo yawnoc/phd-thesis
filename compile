@@ -2,6 +2,7 @@
 
 # Recompile from scratch
 ./clean
+./version
 pdflatex thesis
 bibtex thesis
 pdflatex thesis

@@ -1,0 +1,63 @@
+#!/usr/bin/env bash
+
+# Assign default values for fallback
+
+recent_tag=""
+number_commits_since=""
+current_hash=""
+current_dirtiness=""
+
+# Obtain Git description information
+git_describe=$(git describe --tags --long --dirty --abbrev=1024)
+git_describe_regex="^(v[^-]+)?(-([0-9]+))?(-g([0-9a-f]+))?(-(dirty))?"
+if [[ $git_describe =~ $git_describe_regex ]]
+then
+  recent_tag="${BASH_REMATCH[1]}"
+  number_commits_since="${BASH_REMATCH[3]}"
+  current_hash="${BASH_REMATCH[5]}"
+  current_dirtiness="${BASH_REMATCH[7]}"
+fi
+
+# Obtain Git branch information
+git_branch=$(git branch)
+git_branch_regex=$'[*] ([^\n]+)'
+if [[ $git_branch =~ $git_branch_regex ]]
+then
+  current_branch="${BASH_REMATCH[1]}"
+fi
+
+# Make current hash string
+current_hash_string="\\code{$current_hash}"
+
+# Make current description string
+current_description_string=""
+if [ "$recent_tag" != "" ]
+then
+  if [ "$number_commits_since" = "0" ]
+  then
+    commits_since_string=""
+  else
+    commits_since_string="-${number_commits_since}"
+  fi
+  current_description_string="(\\code{${recent_tag}${commits_since_string}})"
+fi
+
+# Make current branch string
+current_branch_string="branch~\\code{$current_branch}"
+
+# Make current dirtiness string
+if [ "$current_dirtiness" = "" ]
+then
+  current_dirtiness_string=""
+else
+  current_dirtiness_string="\\\\ \\textbf{WARNING: working tree is unclean.}"
+fi
+
+# Make full version string
+full_version_string="
+  Compiled from~${current_hash_string} ${current_description_string} \\\\
+  on ${current_branch_string}.
+  ${current_dirtiness_string}
+"
+
+echo $full_version_string > version.txt
