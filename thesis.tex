@@ -18,6 +18,12 @@
 \newcommand*{\titlesecondline}{in thermal radiation and capillarity}
 \newcommand*{\thetitle}{\titlefirstline{} \titlesecondline}
 
+\newenvironment{information}{
+  \begin{minipage}{0.9\textwidth}
+}{
+  \end{minipage}
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Customisation
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -661,6 +667,7 @@
 \frontmatter
 
 \include{frontmatter/title}
+\include{frontmatter/information}
 \include{frontmatter/abstract}
 
 \tableofcontents
