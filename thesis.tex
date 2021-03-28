@@ -77,10 +77,17 @@
 
 % Table of contents
 % --------
-% Include Bibliography etc. but exclude Table of contents
-% Include subsubsections
-\usepackage[nottoc]{tocbibind}
-\setcounter{tocdepth}{3}
+% Include Bibliography etc.
+% Exclude Table of contents (but include it in bookmarks)
+% Number down to subsubsections
+% See <https://tex.stackexchange.com/a/348974>.
+\usepackage{tocbibind}
+\let\baretableofcontents\tableofcontents
+\renewcommand{\tableofcontents}{
+  \addtocontents{toc}{\protect\setcounter{tocdepth}{-2}}
+  \baretableofcontents
+  \addtocontents{toc}{\protect\setcounter{tocdepth}{3}}
+}
 
 % Citations ordered by number with whitespace stripped for keys
 \usepackage{cite}
