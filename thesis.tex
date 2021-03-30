@@ -45,6 +45,14 @@
   bottom=2.7cm,
 ]{geometry}
 
+% Chapter opening page toggle
+% --------
+% See <https://tex.stackexchange.com/a/203721>.
+\makeatletter
+  \let\openpageodd\@openrighttrue
+  \let\openpageany\@openrightfalse
+\makeatother
+
 % Slightly-more-than-one spacing
 % --------
 % NOTE: for 11pt font, \onehalfspacing is defined as \setstretch{1.213}.
@@ -671,9 +679,11 @@
 \include{frontmatter/information}
 \include{frontmatter/abstract}
 
+\openpageany
 \tableofcontents
 \listoffigures
 \listoftables
+\openpageodd
 
 \mainmatter
 
@@ -700,9 +710,11 @@
 
 \appendix
 
+\openpageany
 \include{appendices/self-viewing}
 \include{appendices/extraction}
 \include{appendices/complex}
+\openpageodd
 
 \backmatter
 

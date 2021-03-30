@@ -6,6 +6,7 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
+- Suppressed chapters opening on odd page in frontmatter and appendices
 - Added information page with version information (after title page)
 - Added Table of contents to bookmarks (but not Table of contents itself)
 - Added frontmatter to Table of contents
