@@ -85,7 +85,7 @@ where heat is lost to the environment
 by convection along some external boundary
 and supplied along an internal triangular boundary
 held at constant temperature.
-Suppose after scaling that these are represented respectively
+Suppose after scaling that these are represented
 by the flux condition
 \begin{equation}
   \normalvec \dotp \del T = -T / A
@@ -93,9 +93,64 @@ by the flux condition
 \end{equation}
 and the Dirichlet condition
 \begin{equation}
-  T = B,
+  T = B
   \label{eq:example-dirichlet-condition}
 \end{equation}
+respectively,
 where~$A = 1.5$, $B = 1.6$,
 and the vertices of the triangular boundary
 are the three cubic roots of unity.
+
+We choose the Schwarz--Christoffel transformation~$z = z (\zeta)$
+given by
+\begin{equation}
+  \tder{z}{\zeta} = \frac{C}{\zeta^2} \roundbr*{1 - \zeta^3}^{2/3},
+  \label{eq:conformal_triangle-mapping-derivative}
+\end{equation}
+which maps the interior of the unit disk in~$\zeta$-space
+to the exterior of an equilateral triangle in~$z$-space
+(Figure~X\@). % TODO
+Integration yields
+\begin{equation}
+  z (\zeta) =
+    -\frac{C}{\zeta}
+    \hypergeo \roundbr*{-\tfrac{2}{3}, -\tfrac{1}{3}; \tfrac{2}{3}, \zeta^3},
+  \label{eq:conformal_triangle-mapping}
+\end{equation}
+and we choose
+\begin{equation}
+  C =
+    \frac{
+      -1
+    }{
+      \hypergeo \roundbr*{-\tfrac{2}{3}, -\tfrac{1}{3}; \tfrac{2}{3}, 1}
+    }
+    = -0.730499
+  \label{eq:conformal_triangle-mapping-constant}
+\end{equation}
+to ensure that $\zeta = 1$~is mapped to~$z = 1$.
+Writing~$(\rho, \varphi)$ for polar coordinates in~$\zeta$-space
+(so that~$\zeta = \rho \ee^{\ii \varphi}$),
+we see that the unit circle~$\abs{\zeta} = \rho = 1$
+is mapped to the desired triangular boundary in~$z$-space.
+Selecting the analytic function
+\begin{equation}
+  W (\zeta) = \log \roundbr*{\frac{\zeta}{\rho_0}}
+  \label{eq:conformal_triangle-analytic-function}
+\end{equation}
+where
+\begin{equation}
+  \rho_0 = \exp (-B) = 0.201897,
+  \label{eq:conformal_triangle-minimum-zeta-radius}
+\end{equation}
+we obtain
+\begin{equation}
+  T = \re [W] = \log \roundbr*{\frac{\rho}{\rho_0}},
+  \label{eq:conformal_triangle-known-solution}
+\end{equation}
+an harmonic function that satisfies
+the Dirichlet condition~(\ref{eq:example-dirichlet-condition})
+along the triangular boundary in~$z$-space
+(Figure~X\@). % TODO
+Note that the $T$-contours coincide
+with the curves of constant~$\rho$.
