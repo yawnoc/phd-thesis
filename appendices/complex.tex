@@ -76,3 +76,24 @@ we may therefore determine traced boundaries as follows:
   \item
     Map the resulting curves back to $z$-space.
 \end{enumerate}
+
+\section{Example}
+\label{sec:complex.example}
+
+Consider a simple conduction problem,
+where heat is lost to the environment
+by convection along some external boundary
+and supplied along an internal triangular boundary
+held at constant temperature.
+Suppose after scaling that these are represented respectively
+by the flux condition
+\begin{equation}
+  \normalvec \dotp \del T = -T / A
+  \label{eq:example-flux-boundary-condition}
+\end{equation}
+and the Dirichlet condition
+\begin{equation}
+  T = B,
+  \label{eq:example-dirichlet-condition}
+\end{equation}
+where~$A = 1.5$ and~$B = 1.6$.
