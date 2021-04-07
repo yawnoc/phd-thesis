@@ -216,6 +216,7 @@ An interesting example is shown in Figure~X\@. % TODO
 
 \begin{figure}
   \newcommand*{\subfigurewidth}{0.47\textwidth}
+  \includegraphics[trim=0 -5 0 0]{conformal_triangle-traced-boundaries-legend}
   \begin{subfigure}[t]{\subfigurewidth}
     \centredfigurecontent{conformal_triangle-traced-boundaries-zeta-space}{
       $\zeta$-space
@@ -232,6 +233,8 @@ An interesting example is shown in Figure~X\@. % TODO
       (\ref{eq:complex-tracing-ode-arc-length-parametrisation-zeta})
     in~$\zeta$-space,
     then mapping to~$z$-space.
+    The region~$\abs{\zeta} < \rho_0$ is unphysical,
+    since $T$~is negative within it.
   }
   \label{fig:conformal_triangle-traced-boundaries}
 \end{figure}
