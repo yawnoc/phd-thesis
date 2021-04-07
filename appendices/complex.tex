@@ -101,6 +101,25 @@ where~$A = 1.5$, $B = 1.6$,
 and the vertices of the triangular boundary
 are the three cubic roots of unity.
 
+\begin{figure}
+  \newcommand*{\subfigurewidth}{0.47\textwidth}
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent{conformal_triangle-grid-zeta-space}{$\zeta$-space}
+  \end{subfigure}
+    \hfill
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent{conformal_triangle-grid-z-space}{$z$-space}
+  \end{subfigure}
+  \caption{
+    Schwarz--Christoffel transformation~%
+      (\ref{eq:conformal_triangle-mapping-derivative})
+    applied to a polar grid in~$\zeta$-space
+    (curves of constant~$\rho$ and constant~$\varphi$).
+    Note the different scales.
+  }
+  \label{fig:conformal_triangle-grid}
+\end{figure}
+
 We choose the Schwarz--Christoffel transformation~$z = z (\zeta)$
 given by
 \begin{equation}
@@ -109,7 +128,7 @@ given by
 \end{equation}
 which maps the interior of the unit disk in~$\zeta$-space
 to the exterior of an equilateral triangle in~$z$-space
-(Figure~X\@). % TODO
+(Figure~\ref{fig:conformal_triangle-grid}).
 Integration yields
 \begin{equation}
   z (\zeta) =
