@@ -88,7 +88,7 @@ held at constant temperature.
 Suppose after scaling that these are represented
 by the flux condition
 \begin{equation}
-  \normalvec \dotp \del T = -T / A
+  \normalvec \dotp \del T = -\frac{T}{A}
   \label{eq:example-flux-boundary-condition}
 \end{equation}
 and the Dirichlet condition
@@ -145,7 +145,9 @@ where
 \end{equation}
 we obtain
 \begin{equation}
-  T = \re [W] = \log \roundbr*{\frac{\rho}{\rho_0}},
+  T = \re [W]
+    = \log \roundbr*{\frac{\abs{\zeta}}{\rho_0}}
+    = \log \roundbr*{\frac{\rho}{\rho_0}},
   \label{eq:conformal_triangle-known-solution}
 \end{equation}
 an harmonic function that satisfies
@@ -154,3 +156,32 @@ along the triangular boundary in~$z$-space
 (Figure~X\@). % TODO
 Note that the $T$-contours coincide
 with the curves of constant~$\rho$.
+
+The right hand side
+of the boundary condition~(\ref{eq:example-flux-boundary-condition})
+is our flux function,
+\begin{equation}
+  F = -\frac{T}{A} = -\frac{1}{A} \log \roundbr*{\frac{\abs{\zeta}}{\rho_0}},
+  \label{eq:conformal_triangle-flux-function}
+\end{equation}
+and from~(\ref{eq:complex-tracing-gradient-squared})
+we see that
+\begin{equation}
+  (\del T)^2
+    = \abs*{\tder{W}{\zeta} \tder{\zeta}{z}}^2
+    = \abs*{\frac{\zeta}{C \roundbr*{1 - \zeta^3}^{2/3}}}^2.
+  \label{eq:conformal_triangle-gradient-squared}
+\end{equation}
+Having written $F$ and~$(\del T)^2$
+(and hence~$\Phi = (\del T)^2 - F^2$)
+as functions of~$\zeta$,
+we may then integrate~%
+  (\ref{eq:complex-tracing-ode-arc-length-parametrisation-zeta})
+to obtain traced boundaries in~$\zeta$-space
+(Figure~X\@). % TODO
+Applying the transformation~(\ref{eq:conformal_triangle-mapping})
+maps them to physical $z$-space
+(Figure~X\@), % TODO
+where domains can be constructed
+by patching boundaries together in the usual manner.
+An interesting example is shown in Figure~X\@. % TODO
