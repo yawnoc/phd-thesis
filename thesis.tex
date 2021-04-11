@@ -252,6 +252,20 @@
   \label{fig:#2}
 }
 
+% Signature (with fallback to nothing)
+% --------
+%   #1  [\includegraphics options] default ""
+%   #2  {\raisebox proportion}
+%   #3  {\includegraphics file name including extension}
+\newcommand*{\signaturespath}{../phd-thesis-signatures}
+\newcommand*{\includesignature}[3][]{%
+  \IfFileExists{\signaturespath/#3}{%
+    \raisebox{-#2\height}{%
+      \includegraphics[#1]{\signaturespath/#3}%
+    }%
+  }{}
+}
+
 % Suppress multiple PDFs with page group warning
 % --------
 % See <https://tex.stackexchange.com/a/183157>.

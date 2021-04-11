@@ -9,6 +9,12 @@ For the code used to produce the figures, see [phd-code].
 
 ## Compile
 
+**WARNING.**
+Images of wet signatures are loaded
+from the external directory `../phd-thesis-signatures`.
+Always check that these image files are not malicious etc. before compiling.
+If a signature image file does not exist, it will be omitted.
+
 Run `./compile` to compile from scratch.
 This calls `./clean` (which removes ignored files)
 and `./version` (which generates the Git version information)
