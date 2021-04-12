@@ -6,6 +6,7 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
+- Added Acknowledgements
 - Added Thesis declaration
 - Added proof of concept for complex boundary tracing (conformal maps)
 - Added numbering to PDF bookmarks
