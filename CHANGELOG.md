@@ -6,6 +6,9 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
+
+## [v0.2.0] (2021-04-12)
+
 - Added Acknowledgements
 - Added Thesis declaration
 - Added proof of concept for complex boundary tracing (conformal maps)
@@ -37,5 +40,6 @@ beginning from the [first draft][v0.1.0].
 - First draft
 
 
-[Unreleased]: https://github.com/yawnoc/phd-thesis/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/yawnoc/phd-thesis/compare/v0.2.0...HEAD
+[v0.2.0]: https://github.com/yawnoc/phd-thesis/compare/v0.1.0...v0.2.0
 [v0.1.0]: https://github.com/yawnoc/phd-thesis/releases/tag/v0.1.0
