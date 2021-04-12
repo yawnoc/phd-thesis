@@ -18,11 +18,12 @@
 \newcommand*{\titlesecondline}{in thermal radiation and capillarity}
 \newcommand*{\thetitle}{\titlefirstline{} \titlesecondline}
 
-\newenvironment{information}{
-  \begin{minipage}{0.95\textwidth}
+\newenvironment{loosecontent}{
+  \begingroup
+  \setlength{\parindent}{0em}
   \setlength{\parskip}{1em}
 }{
-  \end{minipage}
+  \endgroup
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
