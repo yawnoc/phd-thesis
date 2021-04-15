@@ -6,6 +6,7 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
+- Made Introduction lead paragraph grammatical person consistent
 - Improved spacing after footnote marks
 - Improved scholarship acknowledgement sentence
 
