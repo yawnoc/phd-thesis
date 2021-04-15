@@ -123,7 +123,14 @@
 \usepackage{noindentafter}
 
 % Bracketed symbols for footnotes
-\renewcommand*{\thefootnote}{(\fnsymbol{footnote})}
+% --------
+% Reduce spacing after footnote mark in main text
+% Increase spacing after footnote mark in footnote text
+\renewcommand*{\thefootnote}{(\fnsymbol{footnote})\hspace{-0.15em}}
+\let\originalfootnote\footnote
+\renewcommand{\footnote}[1]{%
+  \originalfootnote{\hspace{0.25em}\ignorespaces #1}%
+}
 
 % Thematic break
 % --------

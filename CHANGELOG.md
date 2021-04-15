@@ -6,6 +6,7 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
+- Improved spacing after footnote marks
 - Improved scholarship acknowledgement sentence
 
 
