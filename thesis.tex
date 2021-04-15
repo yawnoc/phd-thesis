@@ -91,15 +91,15 @@
 %   Frontmatter: suppress numbering
 %   Mainmatter: number down to subsubsections
 % See <https://tex.stackexchange.com/a/43122>.
-\let\barefrontmatter\frontmatter
+\let\originalfrontmatter\frontmatter
 \renewcommand*{\frontmatter}{
-  \barefrontmatter
+  \originalfrontmatter
   \setcounter{secnumdepth}{-2}
 }
-\let\baremainmatter\mainmatter
+\let\originalmainmatter\mainmatter
 \renewcommand*{\mainmatter}{
   \setcounter{secnumdepth}{3}
-  \baremainmatter
+  \originalmainmatter
 }
 
 % Table of contents
@@ -109,10 +109,10 @@
 % Number down to subsubsections
 % See <https://tex.stackexchange.com/a/348974>.
 \usepackage{tocbibind}
-\let\baretableofcontents\tableofcontents
+\let\originaltableofcontents\tableofcontents
 \renewcommand{\tableofcontents}{
   \addtocontents{toc}{\protect\setcounter{tocdepth}{-2}}
-  \baretableofcontents
+  \originaltableofcontents
   \addtocontents{toc}{\protect\setcounter{tocdepth}{3}}
 }
 
