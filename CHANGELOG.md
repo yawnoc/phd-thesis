@@ -6,6 +6,8 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
+- Improved scholarship acknowledgement sentence
+
 
 ## [v0.2.0] (2021-04-12)
 
