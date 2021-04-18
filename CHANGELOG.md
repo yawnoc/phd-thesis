@@ -8,11 +8,7 @@ beginning from the [first draft][v0.1.0].
 
 - Fixed some punctuation errors
 - Fixed some overfull hboxes
-- Improved Introduction wording for avoidance of ordinary terminal points
-- Improved Introduction wording for strictly viable case
-- Made Introduction lead paragraph grammatical person consistent
-- Improved spacing after footnote marks
-- Improved scholarship acknowledgement sentence
+- Improved wording in various places
 
 
 ## [v0.2.0] (2021-04-12)
