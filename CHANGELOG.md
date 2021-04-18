@@ -6,6 +6,7 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
+- Improved mathematical formatting in various places
 - Improved punctuation in various places
 - Fixed some punctuation errors
 - Fixed some overfull hboxes
