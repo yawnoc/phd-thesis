@@ -6,6 +6,7 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
+- Fixed some punctuation errors
 - Fixed some overfull hboxes
 - Improved Introduction wording for avoidance of ordinary terminal points
 - Improved Introduction wording for strictly viable case
