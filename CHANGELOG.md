@@ -7,7 +7,7 @@ beginning from the [first draft][v0.1.0].
 ## [Unreleased]
 
 - Improved sizing of various figures
-- Fixed incorrect cross-references to cosinusoidal simple-case sections
+- Fixed incorrect cross-references in various places
 - Improved subscript kerning in various figures
 - Improved mathematical formatting in various places
 - Improved punctuation in various places
