@@ -6,7 +6,7 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
-- Fixed incorrect cross-reference (cosinusoidal simple case Section)
+- Fixed incorrect cross-references to cosinusoidal simple-case sections
 - Improved subscript kerning in various figures
 - Improved mathematical formatting in various places
 - Improved punctuation in various places
