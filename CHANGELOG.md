@@ -6,6 +6,7 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
+- Fixed incorrect interpretation of bipolar coordinates (0, 0)
 - Improved sizing of various figures
 - Fixed incorrect cross-references in various places
 - Improved subscript kerning in various figures
