@@ -12,6 +12,7 @@ beginning from the [first draft][v0.1.0].
 - Improved subscript kerning in various figures
 - Improved mathematical formatting in various places
 - Improved punctuation in various places
+- Fixed some grammatical errors
 - Fixed some punctuation errors
 - Fixed some overfull hboxes
 - Improved wording in various places
