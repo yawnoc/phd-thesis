@@ -8,6 +8,7 @@ beginning from the [first draft][v0.1.0].
 
 - Fixed incorrect interpretation of bipolar coordinates (0, 0)
 - Fixed reversed inequality for grooves
+- Fixed missing square for z-term in concave fin Appendix
 - Improved sizing of various figures
 - Fixed incorrect cross-references in various places
 - Improved subscript kerning in various figures
