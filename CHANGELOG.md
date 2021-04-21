@@ -6,6 +6,9 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
+
+## [v0.2.1] (2021-04-22)
+
 - Fixed incorrect interpretation of bipolar coordinates (0, 0)
 - Fixed reversed inequality for grooves
 - Fixed missing square for z-term in concave fin Appendix
@@ -53,6 +56,7 @@ beginning from the [first draft][v0.1.0].
 - First draft
 
 
-[Unreleased]: https://github.com/yawnoc/phd-thesis/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/yawnoc/phd-thesis/compare/v0.2.1...HEAD
+[v0.2.1]: https://github.com/yawnoc/phd-thesis/compare/v0.2.0...v0.2.1
 [v0.2.0]: https://github.com/yawnoc/phd-thesis/compare/v0.1.0...v0.2.0
 [v0.1.0]: https://github.com/yawnoc/phd-thesis/releases/tag/v0.1.0
