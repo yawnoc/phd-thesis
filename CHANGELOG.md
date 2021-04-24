@@ -9,7 +9,7 @@ beginning from the [first draft][v0.1.0].
 - Fixed space after "I,"
 - Fixed an overfull `\hbox` in the main text
 - Improved styling for List of Figures/Tables
-- Improved mathematical formatting in various places
+- Improved mathematical formatting/punctuation in various places
 - Improved wording in various places
 
 
