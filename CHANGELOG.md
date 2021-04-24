@@ -6,9 +6,9 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
-- Reduced spacing below corollary block
-- Reduced spacing below chapter headings
-- Reduced spacing around figures and captions
+- Reduced vertical space below corollary block
+- Reduced vertical space below chapter headings
+- Reduced vertical space around figures and captions
 - Fixed space after "I,"
 - Fixed an overfull `\hbox` in the main text
 - Improved styling for List of Figures/Tables
