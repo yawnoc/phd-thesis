@@ -278,6 +278,13 @@
 % Subfigures with captions
 \usepackage{subcaption}
 
+% Reduce space around figures and captions
+% --------
+% See <https://tex.stackexchange.com/a/23316>.
+\setlength{\floatsep}{11pt plus 2pt minus 2pt}
+\setlength{\textfloatsep}{15pt plus 2pt minus 4pt}
+\setlength{\abovecaptionskip}{8pt}
+
 % Centred figure content (with same label as file name)
 % --------
 %   #1  [\includegraphics options] default effectively "width=\textwidth"
@@ -703,7 +710,6 @@
 
 % TODO list
 % ---
-% + Reduce spacing between figure content and caption
 % + Coerce figures to be after all material from the previous section
 %   e.g. by using [b]
 % + Coerce figures to be on the same page turn if possible
