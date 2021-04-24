@@ -116,6 +116,25 @@
   \addtocontents{toc}{\protect\setcounter{tocdepth}{3}}
 }
 
+% Listings styles
+% --------
+% Reduce line spacing
+\newcommand*{\setstretchlistings}{\setstretch{1}}
+\let\originallistoffigures\listoffigures
+\renewcommand{\listoffigures}{
+  \begingroup
+    \setstretchlistings
+    \originallistoffigures
+  \endgroup
+}
+\let\originallistoftables\listoftables
+\renewcommand{\listoftables}{
+  \begingroup
+    \setstretchlistings
+    \originallistoftables
+  \endgroup
+}
+
 % Citations ordered by number with whitespace stripped for keys
 \usepackage{cite}
 
