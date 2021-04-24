@@ -118,11 +118,15 @@
 
 % Listings styles
 % --------
+% Reduce item indent
 % Increase item spacing
 % Reduce line spacing
 \usepackage[titles]{tocloft}
+\newcommand*{\listingsindent}{0em}
 \newcommand*{\listingsskip}{0.3em}
 \newcommand*{\setstretchlistings}{\setstretch{1}}
+\setlength{\cftfigindent}{\listingsindent}
+\setlength{\cfttabindent}{\listingsindent}
 \setlength{\cftbeforefigskip}{\listingsskip}
 \setlength{\cftbeforetabskip}{\listingsskip}
 \let\originallistoffigures\listoffigures
