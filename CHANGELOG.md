@@ -9,6 +9,7 @@ beginning from the [first draft][v0.1.0].
 - Fixed space after "I,"
 - Fixed an overfull `\hbox` in the main text
 - Improved styling for List of Figures/Tables
+- Improved formatting for line-source flux equation
 
 
 ## [v0.2.2] (2021-04-24)
