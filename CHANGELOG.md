@@ -6,6 +6,7 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
+- Reduced spacing below corollary block
 - Reduced spacing below chapter headings
 - Reduced spacing around figures and captions
 - Fixed space after "I,"
