@@ -6,6 +6,7 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
+- Added release headings to changelog
 - Reduced line spacing
 - Reduced vertical space below corollary block
 - Reduced vertical space below chapter headings
@@ -17,12 +18,12 @@ beginning from the [first draft][v0.1.0].
 - Improved wording in various places
 
 
-## [v0.2.2] (2021-04-24)
+## [v0.2.2] Improved re-entrant mesh ticks (2021-04-24)
 
 - Improved ticks in re-entrant mesh figures
 
 
-## [v0.2.1] (2021-04-22)
+## [v0.2.1] First proofread (2021-04-22)
 
 - Fixed incorrect interpretation of bipolar coordinates (0, 0)
 - Fixed reversed inequality for grooves
@@ -38,7 +39,7 @@ beginning from the [first draft][v0.1.0].
 - Improved wording in various places
 
 
-## [v0.2.0] (2021-04-12)
+## [v0.2.0] Second draft (2021-04-12)
 
 - Added Acknowledgements
 - Added Thesis declaration
@@ -66,7 +67,7 @@ beginning from the [first draft][v0.1.0].
 - Italicised capital Greek variables
 
 
-## [v0.1.0] (2021-02-25)
+## [v0.1.0] First draft (2021-02-25)
 
 - First draft
 
