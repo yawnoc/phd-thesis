@@ -6,6 +6,7 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
+- Reduced line spacing
 - Reduced vertical space below corollary block
 - Reduced vertical space below chapter headings
 - Reduced vertical space around figures and captions
