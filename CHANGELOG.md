@@ -6,8 +6,10 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
+- Fixed v0.2.4 date in changelog
 
-## [v0.2.4] Checked references (2021-04-25)
+
+## [v0.2.4] Checked references (2021-04-26)
 
 - Changed journal names to full in Bibliography entries
 - Fixed incorrect fields in various Bibliography entries
