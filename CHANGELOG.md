@@ -6,6 +6,9 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
+
+## [v0.2.4] Checked references (2021-04-25)
+
 - Changed journal names to full in Bibliography entries
 - Fixed incorrect fields in various Bibliography entries
 
@@ -78,7 +81,8 @@ beginning from the [first draft][v0.1.0].
 - First draft
 
 
-[Unreleased]: https://github.com/yawnoc/phd-thesis/compare/v0.2.3...HEAD
+[Unreleased]: https://github.com/yawnoc/phd-thesis/compare/v0.2.4...HEAD
+[v0.2.4]: https://github.com/yawnoc/phd-thesis/compare/v0.2.3...v0.2.4
 [v0.2.3]: https://github.com/yawnoc/phd-thesis/compare/v0.2.2...v0.2.3
 [v0.2.2]: https://github.com/yawnoc/phd-thesis/compare/v0.2.1...v0.2.2
 [v0.2.1]: https://github.com/yawnoc/phd-thesis/compare/v0.2.0...v0.2.1
