@@ -6,6 +6,9 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
+
+## [v0.2.5] Minor changes (2021-04-27)
+
 - Improved garden hatchet wording
 - Fixed v0.2.4 date in changelog
 
@@ -84,7 +87,8 @@ beginning from the [first draft][v0.1.0].
 - First draft
 
 
-[Unreleased]: https://github.com/yawnoc/phd-thesis/compare/v0.2.4...HEAD
+[Unreleased]: https://github.com/yawnoc/phd-thesis/compare/v0.2.5...HEAD
+[v0.2.5]: https://github.com/yawnoc/phd-thesis/compare/v0.2.4...v0.2.5
 [v0.2.4]: https://github.com/yawnoc/phd-thesis/compare/v0.2.3...v0.2.4
 [v0.2.3]: https://github.com/yawnoc/phd-thesis/compare/v0.2.2...v0.2.3
 [v0.2.2]: https://github.com/yawnoc/phd-thesis/compare/v0.2.1...v0.2.2
