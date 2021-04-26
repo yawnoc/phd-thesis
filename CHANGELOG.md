@@ -6,6 +6,7 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
+- Improved garden hatchet wording
 - Fixed v0.2.4 date in changelog
 
 
