@@ -6,6 +6,9 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
+- Changed journal names to full in Bibliography entries
+- Fixed incorrect fields in various Bibliography entries
+
 
 ## [v0.2.3] Style tweaks (2021-04-25)
 
