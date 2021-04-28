@@ -60,4 +60,4 @@ full_version_string="
   ${current_dirtiness_string}
 "
 
-echo $full_version_string > version.txt
+echo $full_version_string > version.tex

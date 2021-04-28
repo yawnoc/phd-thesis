@@ -6,6 +6,8 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
+- Improved file-name semantics
+
 
 ## [v0.2.5] Minor changes (2021-04-27)
 
