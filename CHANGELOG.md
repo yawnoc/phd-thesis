@@ -6,6 +6,8 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
+- Reduced file size of various figures
+
 
 ## [v0.2.6] Darker shades of grey (2021-04-29)
 
