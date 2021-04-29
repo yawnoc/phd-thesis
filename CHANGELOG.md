@@ -6,6 +6,9 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
+
+## [v0.2.6] Darker shades of grey (2021-04-29)
+
 - Improved contrast in figures (darker shades of grey)
 - Improved file-name semantics
 
@@ -90,7 +93,8 @@ beginning from the [first draft][v0.1.0].
 - First draft
 
 
-[Unreleased]: https://github.com/yawnoc/phd-thesis/compare/v0.2.5...HEAD
+[Unreleased]: https://github.com/yawnoc/phd-thesis/compare/v0.2.6...HEAD
+[v0.2.6]: https://github.com/yawnoc/phd-thesis/compare/v0.2.5...v0.2.6
 [v0.2.5]: https://github.com/yawnoc/phd-thesis/compare/v0.2.4...v0.2.5
 [v0.2.4]: https://github.com/yawnoc/phd-thesis/compare/v0.2.3...v0.2.4
 [v0.2.3]: https://github.com/yawnoc/phd-thesis/compare/v0.2.2...v0.2.3
