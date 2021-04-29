@@ -6,6 +6,7 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
+- Improved aesthetics of various figures
 - Reduced file size of various figures
 
 
