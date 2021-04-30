@@ -179,6 +179,11 @@
   \NoIndentAfterThis
 }
 
+% List customisation
+\usepackage{enumitem}
+\SetEnumitemKey{tightitems}{itemsep=0em, parsep=0.17em}
+\SetEnumitemKey{slightlytightitems}{itemsep=0em, parsep=0.4em}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Mathematical notation
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -251,14 +256,6 @@
   }{
     \resizemath{#1}{#3}
   }
-}
-
-% Tight lists
-% --------
-%   #1  [proportion] default "0.15"
-\newcommand*{\tightlist}[1][0.15]{
-  \setlength{\itemsep}{#1\itemsep}
-  \setlength{\parskip}{#1\parskip}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
