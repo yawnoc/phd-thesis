@@ -7,6 +7,7 @@ beginning from the [first draft][v0.1.0].
 ## [Unreleased]
 
 - Fixed widows and orphans in various places
+- Improved vertical spacing around lists
 - Improved placement of figures
 - Improved aesthetics of various figures
 - Reduced file size of various figures
