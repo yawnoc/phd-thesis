@@ -11,6 +11,7 @@ beginning from the [first draft][v0.1.0].
 - Improved placement of figures
 - Improved aesthetics of various figures
 - Reduced file size of various figures
+- Improved caption for self-viewing portions figure
 
 
 ## [v0.2.6] Darker shades of grey (2021-04-29)
