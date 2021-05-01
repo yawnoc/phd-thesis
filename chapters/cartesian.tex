@@ -1637,6 +1637,27 @@ in Figure~\ref{fig:cosine_general-asymmetric_domain}.
 Each domain is discretised into an unstructured triangular mesh
 with around 500~elements.
 
+Laplace's equation~(\ref{eq:laplace-steady-conduction}) is then solved,
+with the radiation condition~%
+  (\ref{eq:cosine-scaled-radiation-boundary-condition})
+applied along the radiation boundary
+and the Dirichlet condition~$T = 1$ applied
+along the constant-temperature boundary~$x = \pi/2$.
+The agreement between the resulting numerical solutions
+and the exact solution~(\ref{eq:cosine-scaled-laplace-solution})
+is excellent.
+In both cases the relative error is strictly less than~$7 \times 10^{-4}$
+throughout all nodes of the mesh,
+with the largest error realised at the two corners
+where the radiation boundary meets the constant-temperature boundary
+(Figure~\ref{fig:cosine-verification-relative-error}).
+Moreover,
+the bulk of the relative error is in fact much smaller than this,
+as can be seen from the histograms
+in Figure~\ref{fig:cosine-verification-relative-error-histogram}.
+We can therefore be completely confident
+in the validity of the boundary tracing procedure.
+
 \begin{figure}
   \newcommand*{\subfigurewidth}{0.42\textwidth}
   \centering
@@ -1690,27 +1711,6 @@ with around 500~elements.
   }
   \label{fig:cosine-verification-relative-error-histogram}
 \end{figure}
-
-Laplace's equation~(\ref{eq:laplace-steady-conduction}) is then solved,
-with the radiation condition~%
-  (\ref{eq:cosine-scaled-radiation-boundary-condition})
-applied along the radiation boundary
-and the Dirichlet condition~$T = 1$ applied
-along the constant-temperature boundary~$x = \pi/2$.
-The agreement between the resulting numerical solutions
-and the exact solution~(\ref{eq:cosine-scaled-laplace-solution})
-is excellent.
-In both cases the relative error is strictly less than~$7 \times 10^{-4}$
-throughout all nodes of the mesh,
-with the largest error realised at the two corners
-where the radiation boundary meets the constant-temperature boundary
-(Figure~\ref{fig:cosine-verification-relative-error}).
-Moreover,
-the bulk of the relative error is in fact much smaller than this,
-as can be seen from the histograms
-in Figure~\ref{fig:cosine-verification-relative-error-histogram}.
-We can therefore be completely confident
-in the validity of the boundary tracing procedure.
 
 \section{Summary}
 \label{sec:cartesian.summary}
