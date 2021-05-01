@@ -1213,21 +1213,28 @@ that has been neglected.
 
 \begin{figure}
   \newcommand*{\subfigurewidth}{0.32\textwidth}
+  \newcommand*{\subfiguretrim}{4}
   \centering
   \begin{subfigure}{\subfigurewidth}
-    \centredfigurecontent{cosine_simple-self-viewing-bounds-none}{
+    \centredfigurecontent[trim=0 {\subfiguretrim} 0 0]{%
+      cosine_simple-self-viewing-bounds-none%
+    }{
       $y < y_\view$
     }
   \end{subfigure}
   \hfill
   \begin{subfigure}{\subfigurewidth}
-    \centredfigurecontent{cosine_simple-self-viewing-bounds-concave}{
+    \centredfigurecontent[trim=0 {\subfiguretrim} 0 0]{%
+      cosine_simple-self-viewing-bounds-concave%
+    }{
       $y_\view < y < y_\infl$
     }
   \end{subfigure}
   \hfill
   \begin{subfigure}{\subfigurewidth}
-    \centredfigurecontent{cosine_simple-self-viewing-bounds-both}{
+    \centredfigurecontent[trim=0 {\subfiguretrim} 0 0]{%
+      cosine_simple-self-viewing-bounds-both%
+    }{
       $y_\infl < y < y_\End$
     }
   \end{subfigure}
@@ -1325,7 +1332,7 @@ on the interval
   A_\prac \le A < A_\infl.
   \label{eq:cosine-simple-traced-boundary-practical-a-interval}
 \end{equation}
-Thus we extend the range of practically useful results
+Thus we extend the range of results
 beyond the interval~(\ref{eq:cosine-simple-traced-boundary-convex-a-interval})
 of convexity.
 
