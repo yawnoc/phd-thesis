@@ -289,17 +289,24 @@ we obtain the traced boundaries in Figure~\ref{fig:line-traced-boundaries}.
 
 \begin{figure}[b]
   \newcommand*{\subfigurewidth}{0.325\textwidth}
+  \newcommand*{\subfiguretrim}{5}
   \centering
   \begin{subfigure}{\subfigurewidth}
-    \centredfigurecontent{line-traced-boundaries-hot}{Hot regime}
+    \centredfigurecontent[
+      trim=0 {\subfiguretrim} 0 0,
+    ]{line-traced-boundaries-hot}{Hot regime}
   \end{subfigure}
   \hfill
   \begin{subfigure}{\subfigurewidth}
-    \centredfigurecontent{line-traced-boundaries-cold_hot}{Transition}
+    \centredfigurecontent[
+      trim=0 {\subfiguretrim} 0 0,
+    ]{line-traced-boundaries-cold_hot}{Transition}
   \end{subfigure}
   \hfill
   \begin{subfigure}{\subfigurewidth}
-    \centredfigurecontent{line-traced-boundaries-cold}{Cold regime}
+    \centredfigurecontent[
+      trim=0 {\subfiguretrim} 0 0,
+    ]{line-traced-boundaries-cold}{Cold regime}
   \end{subfigure}
   \caption{
     Traced boundaries
