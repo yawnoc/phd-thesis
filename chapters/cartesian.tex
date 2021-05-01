@@ -1357,35 +1357,6 @@ Two degrees of freedom is too many to manage,
 and the behaviour of the viable domain is best understood
 by fixing~$A$ and varying~$B$.
 
-\begin{figure}[b]
-  \newcommand*{\legendoffsetheight}{0.1\textwidth}
-  \centering
-  \includegraphics[width=0.45\textwidth, trim=0 6 0 8]{cosine_general-critical}
-  \includegraphics[
-    width=0.2\textwidth,
-    trim=0 {-\legendoffsetheight} 0 0,
-  ]{cosine_general-critical-legend}
-  \caption{
-    Terminal points along the $x$-axis, as $B$~increases with $A$~fixed.
-  }
-  \label{fig:cosine_general-critical}
-\end{figure}
-
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{cosine_general-physical-viable}
-  \includegraphics[width=\textwidth]{cosine_general-physical-viable-arrow}
-  \includegraphics[width=\textwidth]{cosine_general-physical-viable-legend}
-  \caption{
-    Non-viable domain~$\Phi < 0$ and critical terminal points
-    for the known solution~(\ref{eq:cosine-scaled-laplace-solution})
-    and viability function~(\ref{eq:cosine-viability-function}),
-    as $B$~increases with $A$~fixed.
-    In each plot, the left edge is~$x = 0$ and the right edge is~$x = 2$.
-  }
-  \label{fig:cosine_general-physical-viable}
-\end{figure}
-
 Of particular interest are the terminal points along the $x$-axis;
 these are necessarily critical terminal points
 because the local $T$-contour and the terminal curve~$\Phi = 0$
@@ -1460,6 +1431,35 @@ In terms of the viable domain, this translates into five cases
     and are therefore irrelevant,
     leaving a single hyperbolic critical terminal point~$(x_\sharp, 0)$.
 \end{enumerate}
+
+\begin{figure}
+  \newcommand*{\legendoffsetheight}{0.1\textwidth}
+  \centering
+  \includegraphics[width=0.45\textwidth, trim=0 6 0 8]{cosine_general-critical}
+  \includegraphics[
+    width=0.2\textwidth,
+    trim=0 {-\legendoffsetheight} 0 0,
+  ]{cosine_general-critical-legend}
+  \caption{
+    Terminal points along the $x$-axis, as $B$~increases with $A$~fixed.
+  }
+  \label{fig:cosine_general-critical}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{cosine_general-physical-viable}
+  \includegraphics[width=\textwidth]{cosine_general-physical-viable-arrow}
+  \includegraphics[width=\textwidth]{cosine_general-physical-viable-legend}
+  \caption{
+    Non-viable domain~$\Phi < 0$ and critical terminal points
+    for the known solution~(\ref{eq:cosine-scaled-laplace-solution})
+    and viability function~(\ref{eq:cosine-viability-function}),
+    as $B$~increases with $A$~fixed.
+    In each plot, the left edge is~$x = 0$ and the right edge is~$x = 2$.
+  }
+  \label{fig:cosine_general-physical-viable}
+\end{figure}
 
 \subsubsection{Boundary tracing}
 \label{sec:cartesian.cosine.general.tracing}
