@@ -803,10 +803,15 @@ The unphysical region~$T < 0$ is omitted from the remainder of the analysis,
 as physically meaningful radiation boundaries cannot be found there.
 
 \begin{figure}
+  \newcommand*{\legendoffsetheight}{12}
+  \newcommand*{\legendoffsetwidth}{15}
   \centering
   \includegraphics[width=\textwidth]{cosine-physical}
   \includegraphics[width=\textwidth]{cosine-physical-arrow}
-  \includegraphics[width=\textwidth]{cosine-physical-legend}
+  \includegraphics[
+    width=\textwidth,
+    trim={\legendoffsetwidth} 0 {-\legendoffsetwidth} {\legendoffsetheight},
+  ]{cosine-physical-legend}
   \caption{
     Unphysical region~$T < 0$
     for the known solution~(\ref{eq:cosine-scaled-laplace-solution}),
