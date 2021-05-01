@@ -873,10 +873,14 @@ we consider~$B = 1$ before examining the general case.
 \label{sec:cartesian.cosine.simple.viable}
 
 \begin{figure}
+  \newcommand*{\legendoffsetheight}{7}
   \centering
   \includegraphics[width=\textwidth]{cosine_simple-physical-viable}
   \includegraphics[width=\textwidth]{cosine_simple-physical-viable-arrow}
-  \includegraphics[width=\textwidth]{cosine_simple-physical-viable-legend}
+  \includegraphics[
+    width=\textwidth,
+    trim=0 0 0 {\legendoffsetheight},
+  ]{cosine_simple-physical-viable-legend}
   \caption{
     Non-viable domain~$\Phi < 0$
     for the known solution~(\ref{eq:cosine-simple-laplace-solution})
