@@ -895,10 +895,14 @@ the corners that we have hitherto avoided.
 \begin{figure}[b]
   \newcommand*{\subfigurewidth}{0.45\textwidth}
   \newcommand*{\subfiguregraphicswidth}{0.9\textwidth}
+  \newcommand*{\subfiguretrim}{4}
   \centering
   \hspace*{\fill}
   \begin{subfigure}[t]{\subfigurewidth}
-    \centredfigurecontent[width=\subfiguregraphicswidth]{%
+    \centredfigurecontent[
+      width=\subfiguregraphicswidth,
+      trim=0 {\subfiguretrim} 0 0,
+    ]{%
       wedge_obtuse-traced-boundaries-approximation-contour%
     }{%
       $T$-contour~(\ref{eq:re-entrant-tracing-contour})~\figurestyle{dotted}
@@ -906,7 +910,10 @@ the corners that we have hitherto avoided.
   \end{subfigure}
     \hfill
   \begin{subfigure}[t]{\subfigurewidth}
-    \centredfigurecontent[width=\subfiguregraphicswidth]{%
+    \centredfigurecontent[
+      width=\subfiguregraphicswidth,
+      trim=0 {\subfiguretrim} 0 0,
+    ]{%
       wedge_obtuse-traced-boundaries-approximation-serrated%
     }{%
       Approximating serrated path~\figurestyle{thick black}
