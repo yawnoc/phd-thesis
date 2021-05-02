@@ -205,14 +205,19 @@ Note how the terminal curve approaches the wedge walls~$y = \pm x$
 as one moves away from the line of symmetry~$y = 0$.
 
 \begin{figure}
-  \includegraphics[width=\textwidth, trim=0 -10 0 0]{helmholtz-legend}
+  \newcommand*{\figuretrim}{8}
+  \includegraphics[width=\textwidth, trim=0 -6 0 0]{helmholtz-legend}
   \begin{minipage}[t]{0.5\textwidth}
-    \centredfigurecontent[width=0.7\textwidth]{helmholtz-viable}{
+    \centredfigurecontent[width=0.7\textwidth, trim=0 {\figuretrim} 0 0]{%
+      helmholtz-viable%
+    }{
       Non-viable domain~$\Phi < 0$.
     }
   \end{minipage}
   \begin{minipage}[t]{0.5\textwidth}
-    \centredfigurecontent[width=0.7\textwidth]{helmholtz-traced-boundaries}{
+    \centredfigurecontent[width=0.7\textwidth, trim=0 {\figuretrim} 0 0]{%
+      helmholtz-traced-boundaries%
+    }{
       Traced boundaries obtained by integrating~%
         (\ref{eq:helmholtz-tracing-ode-arc-length-parametrisation-x})
       \&~%
