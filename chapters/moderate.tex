@@ -1652,8 +1652,9 @@ it remains to be seen whether they are of practical use.
 
 \begin{figure}
   \newcommand*{\subfigurewidth}{0.31\textwidth}
+  \newcommand*{\subfiguretrim}{6}
   \begin{subfigure}[t]{\subfigurewidth}
-    \centredfigurecontent{%
+    \centredfigurecontent[trim=0 {\subfiguretrim} 0 0]{%
       wedge_acute-candidates-offset-alpha-30_degree%
     }{%
       $\alpha = \SI{30}{\degree}$.
@@ -1666,7 +1667,7 @@ it remains to be seen whether they are of practical use.
   \end{subfigure}
   \hfill
   \begin{subfigure}[t]{\subfigurewidth}
-    \centredfigurecontent{%
+    \centredfigurecontent[trim=0 {\subfiguretrim} 0 0]{%
       wedge_acute-candidates-offset-alpha-45_degree%
     }{%
       $\alpha = \SI{45}{\degree}$.
@@ -1677,7 +1678,7 @@ it remains to be seen whether they are of practical use.
   \end{subfigure}
   \hfill
   \begin{subfigure}[t]{\subfigurewidth}
-    \centredfigurecontent{%
+    \centredfigurecontent[trim=0 {\subfiguretrim} 0 0]{%
       wedge_acute-candidates-offset-alpha-60_degree%
     }{%
       $\alpha = \SI{60}{\degree}$.
