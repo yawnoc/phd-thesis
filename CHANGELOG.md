@@ -6,6 +6,8 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
+Reduced thesis file size by 8% since [v0.2.6] (`3.9 MB` down to `3.6 MB`).
+
 - Fixed wrong section in header of float-only page
 - Fixed widows and orphans in various places
 - Fixed bad vertical spacing below corollary block
@@ -13,7 +15,7 @@ beginning from the [first draft][v0.1.0].
 - Improved placement of figures
 - Improved aesthetics of various figures
 - Improved subscript kerning in various figures
-- Reduced file size of various figures
+- Reduced file size of various figures (and hence `thesis.pdf`)
 - Improved caption for self-viewing portions figure
 
 
