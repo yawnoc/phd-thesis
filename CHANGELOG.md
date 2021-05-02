@@ -8,6 +8,7 @@ beginning from the [first draft][v0.1.0].
 
 - Fixed wrong section in header of float-only page
 - Fixed widows and orphans in various places
+- Fixed bad vertical spacing below corollary block
 - Improved vertical spacing around lists
 - Improved placement of figures
 - Improved aesthetics of various figures
