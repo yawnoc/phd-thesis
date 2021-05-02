@@ -283,6 +283,41 @@ to the Helmholtz BVP~(\ref{eq:scaled-helmholtz})
 \subsection{Corner rounding}
 \label{sec:moderate.linearised.rounding}
 
+\begin{figure}
+  \centredfigurecontent[width=0.63\textwidth]{%
+    helmholtz-terminal-points%
+  }{
+    $T$-contours which intersect the terminal curve~$\Phi = 0$.
+  }
+\end{figure}
+
+\begin{figure}
+  \newcommand*{\subfigurewidth}{0.45\textwidth}
+  \newcommand*{\subfiguregraphicswidth}{0.55\textwidth}
+  \centering
+  \hspace*{\fill}
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent[width=\subfiguregraphicswidth]{%
+      helmholtz-traced-boundaries-hyperbolic-both%
+    }{%
+      Two smooth boundaries
+    }
+  \end{subfigure}
+    \hfill
+  \begin{subfigure}[t]{\subfigurewidth}
+    \centredfigurecontent[width=\subfiguregraphicswidth]{%
+      helmholtz-traced-boundaries-hyperbolic-rounding%
+    }{%
+      Unique rounding of the corner
+    }
+  \end{subfigure}
+  \hspace*{\fill}
+  \caption{
+    Traced boundaries through the critical terminal point~$(x_0, 0)$.
+  }
+  \label{fig:helmholtz-traced-boundaries-hyperbolic}
+\end{figure}
+
 While the domains produced in
 Figure~\ref{fig:helmholtz-traced-boundaries-patched}
 are most interesting,
@@ -328,41 +363,6 @@ along the walls of the original sharp-cornered wedge
 and along the rounded corner;
 the resulting height-rise profiles are shown in
 Figure~\ref{fig:helmholtz-height-rise-profiles}.
-
-\begin{figure}
-  \centredfigurecontent[width=0.63\textwidth]{%
-    helmholtz-terminal-points%
-  }{
-    $T$-contours which intersect the terminal curve~$\Phi = 0$.
-  }
-\end{figure}
-
-\begin{figure}
-  \newcommand*{\subfigurewidth}{0.45\textwidth}
-  \newcommand*{\subfiguregraphicswidth}{0.55\textwidth}
-  \centering
-  \hspace*{\fill}
-  \begin{subfigure}[t]{\subfigurewidth}
-    \centredfigurecontent[width=\subfiguregraphicswidth]{%
-      helmholtz-traced-boundaries-hyperbolic-both%
-    }{%
-      Two smooth boundaries
-    }
-  \end{subfigure}
-    \hfill
-  \begin{subfigure}[t]{\subfigurewidth}
-    \centredfigurecontent[width=\subfiguregraphicswidth]{%
-      helmholtz-traced-boundaries-hyperbolic-rounding%
-    }{%
-      Unique rounding of the corner
-    }
-  \end{subfigure}
-  \hspace*{\fill}
-  \caption{
-    Traced boundaries through the critical terminal point~$(x_0, 0)$.
-  }
-  \label{fig:helmholtz-traced-boundaries-hyperbolic}
-\end{figure}
 
 \begin{figure}
   \centredfigurecontent[width=0.65\textwidth]{%
