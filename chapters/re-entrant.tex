@@ -1181,11 +1181,15 @@ we need~$\pi/2 - \varphi > \pi/2 - \gamma_\tr$.
 
 \begin{figure}
   \newcommand*{\subfigurewidth}{0.45\textwidth}
-  \newcommand*{\subfiguregraphicswidth}{0.8\textwidth}
+  \newcommand*{\subfiguregraphicswidth}{0.85\textwidth}
+  \newcommand*{\subfiguretrim}{4}
   \centering
   \hspace*{\fill}
   \begin{subfigure}[t]{\subfigurewidth}
-    \centredfigurecontent[width=\subfiguregraphicswidth]{%
+    \centredfigurecontent[
+      width=\subfiguregraphicswidth,
+      trim=0 {\subfiguretrim} 0 0,
+    ]{%
       wedge_obtuse-with-grooves-domain%
     }{%
       Object~\figurestyle{grey}
@@ -1194,7 +1198,10 @@ we need~$\pi/2 - \varphi > \pi/2 - \gamma_\tr$.
   \end{subfigure}
     \hfill
   \begin{subfigure}[t]{\subfigurewidth}
-    \centredfigurecontent[width=\subfiguregraphicswidth]{%
+    \centredfigurecontent[
+      width=\subfiguregraphicswidth,
+      trim=0 {\subfiguretrim} 0 0,
+    ]{%
       wedge_obtuse-with-grooves-mesh%
     }{%
       Finite element mesh
