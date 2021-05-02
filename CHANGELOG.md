@@ -11,6 +11,7 @@ beginning from the [first draft][v0.1.0].
 - Improved vertical spacing around lists
 - Improved placement of figures
 - Improved aesthetics of various figures
+- Improved subscript kerning in various figures
 - Reduced file size of various figures
 - Improved caption for self-viewing portions figure
 
