@@ -702,14 +702,15 @@ in the case of~$\gamma_\tr < \gamma$,
 so that a rounding of the corner cannot be produced.
 
 \begin{figure}
-  \newcommand*{\subfigurewidth}{0.4\textwidth}
+  \newcommand*{\subfigurewidth}{0.43\textwidth}
+  \newcommand*{\subfiguretrim}{4}
   \centering
   \includegraphics[width=\textwidth, trim=0 -7 0 0]{%
     wedge_acute-traced-boundaries-different-angle-legend%
   }
   \hspace*{\fill}
   \begin{subfigure}[t]{\subfigurewidth}
-    \centredfigurecontent{%
+    \centredfigurecontent[trim=0 {\subfiguretrim} 0 0]{%
       wedge_small-traced-boundaries-different-angle-less%
     }{%
       $\gamma_\tr = \SI{40}{\degree} < \gamma$
@@ -717,7 +718,7 @@ so that a rounding of the corner cannot be produced.
   \end{subfigure}
     \hfill
   \begin{subfigure}[t]{\subfigurewidth}
-    \centredfigurecontent{%
+    \centredfigurecontent[trim=0 {\subfiguretrim} 0 0]{%
       wedge_small-traced-boundaries-different-angle-more%
     }{%
       $\gamma_\tr = \SI{55}{\degree} > \gamma$
