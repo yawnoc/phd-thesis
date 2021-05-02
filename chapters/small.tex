@@ -895,8 +895,9 @@ which are inherently disparate in nature.
 
 \begin{figure}
   \newcommand*{\subfigurewidth}{0.31\textwidth}
+  \newcommand*{\subfiguretrim}{6}
   \begin{subfigure}[t]{\subfigurewidth}
-    \centredfigurecontent{%
+    \centredfigurecontent[trim=0 {\subfiguretrim} 0 0]{%
       wedge_small-moderate-candidates-offset-alpha-30_degree%
     }{%
       $\alpha = \SI{30}{\degree}$.
@@ -912,7 +913,7 @@ which are inherently disparate in nature.
   \end{subfigure}
   \hfill
   \begin{subfigure}[t]{\subfigurewidth}
-    \centredfigurecontent{%
+    \centredfigurecontent[trim=0 {\subfiguretrim} 0 0]{%
       wedge_small-moderate-candidates-offset-alpha-45_degree%
     }{%
       $\alpha = \SI{45}{\degree}$.
@@ -924,7 +925,7 @@ which are inherently disparate in nature.
   \end{subfigure}
   \hfill
   \begin{subfigure}[t]{\subfigurewidth}
-    \centredfigurecontent{%
+    \centredfigurecontent[trim=0 {\subfiguretrim} 0 0]{%
       wedge_small-moderate-candidates-offset-alpha-60_degree%
     }{%
       $\alpha = \SI{60}{\degree}$.
