@@ -6,7 +6,10 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
-Reduced thesis file size by 8% since [v0.2.6] (`3.9 MB` down to `3.6 MB`).
+
+## [v0.2.7] Figure positioning & file size (2021-05-03)
+
+Reduced thesis file size by 8% since v0.2.6 (`3.9 MB` down to `3.6 MB`).
 
 - Fixed wrong section in header of float-only page
 - Fixed widows and orphans in various places
@@ -17,6 +20,7 @@ Reduced thesis file size by 8% since [v0.2.6] (`3.9 MB` down to `3.6 MB`).
 - Improved subscript kerning in various figures
 - Reduced file size of various figures (and hence `thesis.pdf`)
 - Improved caption for self-viewing portions figure
+- Removed line numbers
 
 
 ## [v0.2.6] Darker shades of grey (2021-04-29)
@@ -105,7 +109,8 @@ Reduced thesis file size by 8% since [v0.2.6] (`3.9 MB` down to `3.6 MB`).
 - First draft
 
 
-[Unreleased]: https://github.com/yawnoc/phd-thesis/compare/v0.2.6...HEAD
+[Unreleased]: https://github.com/yawnoc/phd-thesis/compare/v0.2.7...HEAD
+[v0.2.7]: https://github.com/yawnoc/phd-thesis/compare/v0.2.6...v0.2.7
 [v0.2.6]: https://github.com/yawnoc/phd-thesis/compare/v0.2.5...v0.2.6
 [v0.2.5]: https://github.com/yawnoc/phd-thesis/compare/v0.2.4...v0.2.5
 [v0.2.4]: https://github.com/yawnoc/phd-thesis/compare/v0.2.3...v0.2.4
