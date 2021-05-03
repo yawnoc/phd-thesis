@@ -18,14 +18,6 @@
 \newcommand*{\titlesecondline}{in thermal radiation and capillarity}
 \newcommand*{\thetitle}{\titlefirstline{} \titlesecondline}
 
-\newenvironment{loosecontent}{
-  \begingroup
-  \setlength{\parindent}{0em}
-  \setlength{\parskip}{1em}
-}{
-  \endgroup
-}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Customisation
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -177,6 +169,15 @@
     \vspace{\baselineskip}
   }
   \NoIndentAfterThis
+}
+
+% Loose paragraphs without indentation
+\newenvironment{loosecontent}{
+  \begingroup
+  \setlength{\parindent}{0em}
+  \setlength{\parskip}{1em}
+}{
+  \endgroup
 }
 
 % List customisation

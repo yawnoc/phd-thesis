@@ -6,6 +6,8 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
+- Re-organised preamble
+
 
 ## [v0.2.7] Figure positioning & file size (2021-05-03)
 
