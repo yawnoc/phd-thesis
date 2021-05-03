@@ -6,6 +6,9 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
+
+## [v0.2.8] Subtle improvements (2021-05-03)
+
 - Cleaned up preamble
 - Added custom end-of-line hyphenations
 - Fixed two typos, "the the", on Page 113 and Page 118
@@ -115,7 +118,8 @@ Reduced thesis file size by 8% since v0.2.6 (`3.9 MB` down to `3.6 MB`).
 - First draft
 
 
-[Unreleased]: https://github.com/yawnoc/phd-thesis/compare/v0.2.7...HEAD
+[Unreleased]: https://github.com/yawnoc/phd-thesis/compare/v0.2.8...HEAD
+[v0.2.8]: https://github.com/yawnoc/phd-thesis/compare/v0.2.7...v0.2.8
 [v0.2.7]: https://github.com/yawnoc/phd-thesis/compare/v0.2.6...v0.2.7
 [v0.2.6]: https://github.com/yawnoc/phd-thesis/compare/v0.2.5...v0.2.6
 [v0.2.5]: https://github.com/yawnoc/phd-thesis/compare/v0.2.4...v0.2.5
