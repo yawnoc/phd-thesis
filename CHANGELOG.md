@@ -6,7 +6,7 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
-- Re-organised preamble
+- Cleaned up preamble
 - Added custom end-of-line hyphenations
 - Fixed two typos, "the the", on Page 113 and Page 118
 - Improved caption for half-plane wall height table
