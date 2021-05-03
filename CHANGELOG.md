@@ -10,6 +10,7 @@ beginning from the [first draft][v0.1.0].
 - Added custom end-of-line hyphenations
 - Fixed two typos, "the the", on Page 113 and Page 118
 - Improved caption for half-plane wall height table
+- Reversed order of rows in various tables
 
 
 ## [v0.2.7] Figure positioning & file size (2021-05-03)
