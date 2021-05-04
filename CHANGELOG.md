@@ -6,6 +6,8 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
+- Added source-code link to information page
+
 
 ## [v0.2.8] Subtle improvements (2021-05-03)
 
