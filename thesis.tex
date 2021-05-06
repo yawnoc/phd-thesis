@@ -108,6 +108,21 @@
   \addtocontents{toc}{\protect\setcounter{tocdepth}{3}}
 }
 
+% Table of contents prefix for part entries
+% --------
+% Prepend prefix to #2 of \contentsline if #1 equals "part"
+\AtBeginDocument{
+  \let\originalcontentsline\contentsline
+  \renewcommand{\contentsline}[4]{%
+    \originalcontentsline{#1}{%
+      \ifnum \pdfstrcmp{#1}{part} = 0%
+        \partname~%
+      \fi
+      #2%
+    }{#3}{#4}%
+  }
+}
+
 % Listings styles
 % --------
 % Reduce leader dot separation
