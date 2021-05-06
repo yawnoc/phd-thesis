@@ -6,6 +6,7 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
+- Fixed inconsistent letter case in headings
 - Added prefix to part entries in Table of contents
 - Added source-code link to information page
 
