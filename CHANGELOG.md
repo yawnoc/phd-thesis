@@ -6,6 +6,8 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
+- Fixed crappy copyright symbol
+
 
 ## [v0.3.0] Second proofread (2021-05-16)
 
