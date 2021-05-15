@@ -15,6 +15,7 @@ beginning from the [first draft][v0.1.0].
   * [Page 9] wrong alpha for dip-coating
 - Fixed Helmholtz figure labelled "T-contour" instead of "U-contour"
 - Fixed inconsistent hyphenation for wedge cases
+- Fixed inconsistent caption for offset pseudo-roundings figure
 - Improved wording in various places
 - Improved self-viewing bounds figure (reduced line thickness)
 
