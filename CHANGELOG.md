@@ -14,6 +14,7 @@ beginning from the [first draft][v0.1.0].
   * [Page 3] missing serial comma in item 2 (a) hyperbolic case
   * [Page 9] wrong alpha for dip-coating
 - Improved wording in various places
+- Improved self-viewing bounds figure (reduced line thickness)
 
 
 ## [v0.2.8] Subtle improvements (2021-05-03)
