@@ -93,6 +93,9 @@
   \setcounter{secnumdepth}{3}
   \originalmainmatter
 }
+\newcommand*{\concludingmatter}{
+  \bookmarksetup{startatroot}
+}
 
 % Table of contents
 % --------
@@ -381,7 +384,7 @@
   bookmarksopenlevel=0,
 ]{hyperref}
 
-% Top-level backmatter bookmarks
+% Top-level bookmarks ("\bookmarksetup")
 \usepackage{bookmark}
 
 % URLs
@@ -777,7 +780,7 @@
 \include{chapters/re-entrant}
 \include{chapters/small}
 
-\bookmarksetup{startatroot}
+\concludingmatter
 
 \include{chapters/concluding}
 
