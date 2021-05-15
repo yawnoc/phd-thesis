@@ -79,10 +79,19 @@
 
 % Document structure
 % --------
+% Breaks in Table of contents
 % Section numbering
 %   Frontmatter: suppress numbering (but use unstarred \chapter for contents)
 %   Mainmatter: number down to subsubsections
 % See <https://tex.stackexchange.com/a/43122>.
+\newcommand{\contentsbreak}{
+  \begingroup
+    \let\originalwrite\write
+    \renewcommand\write{\immediate\originalwrite}
+    \addtocontents{toc}{\protect\vspace{1em}}
+    \addtocontents{toc}{{\protect\thematicbreak}}
+  \endgroup
+}
 \let\originalfrontmatter\frontmatter
 \renewcommand*{\frontmatter}{
   \originalfrontmatter
@@ -92,9 +101,21 @@
 \renewcommand*{\mainmatter}{
   \setcounter{secnumdepth}{3}
   \originalmainmatter
+  \contentsbreak
 }
 \newcommand*{\concludingmatter}{
   \bookmarksetup{startatroot}
+  \contentsbreak
+}
+\let\originalappendix\appendix
+\renewcommand*{\appendix}{
+  \originalappendix
+  \contentsbreak
+}
+\let\originalbackmatter\backmatter
+\renewcommand*{\backmatter}{
+  \originalbackmatter
+  \contentsbreak
 }
 
 % Table of contents

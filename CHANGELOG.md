@@ -9,6 +9,7 @@ beginning from the [first draft][v0.1.0].
 - Fixed inconsistent letter case in headings
 - Added prefix to part entries in Table of contents
 - Added source-code link to information page
+- Added breaks to Table of contents (to indicate structure)
 - Reduced space between thematic break asterisks
 - Fixed typos
   * [Page 3] missing serial comma in item 2 (a) hyperbolic case
