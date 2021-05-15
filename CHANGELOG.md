@@ -10,6 +10,8 @@ beginning from the [first draft][v0.1.0].
 - Added prefix to part entries in Table of contents
 - Added source-code link to information page
 - Reduced space between thematic break asterisks
+- Fixed typos
+  * [Page 3] missing serial comma in item 2 (a) hyperbolic case
 
 
 ## [v0.2.8] Subtle improvements (2021-05-03)
