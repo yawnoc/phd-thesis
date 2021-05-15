@@ -12,6 +12,7 @@ beginning from the [first draft][v0.1.0].
 - Reduced space between thematic break asterisks
 - Fixed typos
   * [Page 3] missing serial comma in item 2 (a) hyperbolic case
+- Improved wording in various places
 
 
 ## [v0.2.8] Subtle improvements (2021-05-03)
