@@ -6,6 +6,9 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
+
+## [v0.3.0] Second proofread (2021-05-16)
+
 - Fixed inconsistent letter case in headings
 - Added prefix to part entries in Table of contents
 - Added source-code link to information page
@@ -134,7 +137,8 @@ Reduced thesis file size by 8% since v0.2.6 (`3.9 MB` down to `3.6 MB`).
 - First draft
 
 
-[Unreleased]: https://github.com/yawnoc/phd-thesis/compare/v0.2.8...HEAD
+[Unreleased]: https://github.com/yawnoc/phd-thesis/compare/v0.3.0...HEAD
+[v0.3.0]: https://github.com/yawnoc/phd-thesis/compare/v0.2.8...v0.3.0
 [v0.2.8]: https://github.com/yawnoc/phd-thesis/compare/v0.2.7...v0.2.8
 [v0.2.7]: https://github.com/yawnoc/phd-thesis/compare/v0.2.6...v0.2.7
 [v0.2.6]: https://github.com/yawnoc/phd-thesis/compare/v0.2.5...v0.2.6
