@@ -13,6 +13,7 @@ beginning from the [first draft][v0.1.0].
 - Fixed typos
   * [Page 3] missing serial comma in item 2 (a) hyperbolic case
   * [Page 9] wrong alpha for dip-coating
+  * [Page 126] bad grammar "should separated by"
 - Fixed Helmholtz figure labelled "T-contour" instead of "U-contour"
 - Fixed inconsistent hyphenation for wedge cases
 - Fixed inconsistent caption for offset pseudo-roundings figure
