@@ -6,7 +6,7 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
-- Fixed crappy copyright symbol
+- Fixed crappy copyright and degree symbols
 
 
 ## [v0.3.0] Second proofread (2021-05-16)
