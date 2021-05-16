@@ -305,8 +305,10 @@
 
 % Physical units (also decimal alignment in tables)
 % --------
+% Set explicit degree Celsius (for [Debian 10] to use proper degree symbol)
 % Remove thin space before percent
 \usepackage{siunitx}
+\DeclareSIUnit{\degreeCelsius}{\degree C}
 \DeclareSIUnit[number-unit-product=]{\percent}{\%}
 
 % Upright Greek
