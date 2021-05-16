@@ -165,12 +165,19 @@
 
 % Listings styles
 % --------
+% Explicitly set \cftparskip to \parskip
+%   If this is not set, then [Windows 10] and [Termux 0.112]
+%   will use different vertical spacing in Table of contents
+%   and List of figures compared to [Debian 10],
+%   due to the change <https://github.com/wspr/herries-press/commit/6a9d617>
+%   as a result of <https://github.com/wspr/herries-press/issues/28>.
 % Reduce leader dot separation
 % Reduce item indent
 % Increase item spacing
 % Reduce line spacing
 % Sentence case headings
 \usepackage[titles]{tocloft}
+\setlength{\cftparskip}{\parskip}
 \renewcommand*{\cftdotsep}{1.3}
 \newcommand*{\listingsindent}{0em}
 \newcommand*{\listingsskip}{0.3em}
