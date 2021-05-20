@@ -10,6 +10,7 @@ beginning from the [first draft][v0.1.0].
 - Fixed tocloft `\parskip` discrepancy between Debian and others
 - Fixed typo:
   * [Page 102] "Why bother will boundary tracing"
+- Improved wording [Page 59] before (4.56)
 
 
 ## [v0.3.0] Second proofread (2021-05-16)
