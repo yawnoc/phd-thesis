@@ -8,7 +8,8 @@ beginning from the [first draft][v0.1.0].
 
 - Fixed crappy copyright and degree symbols
 - Fixed tocloft `\parskip` discrepancy between Debian and others
-- Fixed typo:
+- Fixed typos
+  * [Page 76] "perfectly circularity"
   * [Page 102] "Why bother will boundary tracing"
 - Improved wording [Page 59] before (4.56)
 
