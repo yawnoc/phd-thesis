@@ -11,7 +11,7 @@ beginning from the [first draft][v0.1.0].
 - Fixed typos
   * [Page 76] "perfectly circularity"
   * [Page 102] "Why bother will boundary tracing"
-- Improved wording [Page 59] before (4.56)
+- Improved wording in various places
 
 
 ## [v0.3.0] Second proofread (2021-05-16)
