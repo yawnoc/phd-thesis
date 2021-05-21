@@ -14,6 +14,7 @@ beginning from the [first draft][v0.1.0].
   * [Page 115] "wedges walls"
 - Improved wording in various places
 - Improved Figure 4.3 equals-sign spacing in legend
+- Made output PDF reproducible on a given TeX installation
 
 
 ## [v0.3.0] Second proofread (2021-05-16)
