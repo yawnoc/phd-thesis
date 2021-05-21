@@ -6,6 +6,9 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
+
+## [v0.3.1] Third proofread (2021-05-22)
+
 - Fixed crappy copyright and degree symbols
 - Fixed tocloft `\parskip` discrepancy between Debian and others
 - Fixed typos
@@ -147,7 +150,8 @@ Reduced thesis file size by 8% since v0.2.6 (`3.9 MB` down to `3.6 MB`).
 - First draft
 
 
-[Unreleased]: https://github.com/yawnoc/phd-thesis/compare/v0.3.0...HEAD
+[Unreleased]: https://github.com/yawnoc/phd-thesis/compare/v0.3.1...HEAD
+[v0.3.1]: https://github.com/yawnoc/phd-thesis/compare/v0.3.0...v0.3.1
 [v0.3.0]: https://github.com/yawnoc/phd-thesis/compare/v0.2.8...v0.3.0
 [v0.2.8]: https://github.com/yawnoc/phd-thesis/compare/v0.2.7...v0.2.8
 [v0.2.7]: https://github.com/yawnoc/phd-thesis/compare/v0.2.6...v0.2.7
