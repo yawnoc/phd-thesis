@@ -30,9 +30,9 @@ on a *given* TeX installation.
 
 Unfortunately, different installations will produce different PDF output,
 as demonstrated by the experiment at [yawnoc/reproducible-latex].
-Nevertheless, identical output *should* be observed
-between installations belonging to the same group,
-for the following groups of TeX Live installations:
+Nevertheless, for the following groups of TeX Live installations,
+identical output *should* be observed
+between listed installations belonging to the same group:
 
 - <b>Group 1: TeX Live 2019 Debian</b>
   * Debian 10 (aarch64) texlive-full 2018.20190227-2
