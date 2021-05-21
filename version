@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 # Assign default values for fallback
-
 recent_tag=""
 number_commits_since=""
 current_hash=""
