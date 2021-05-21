@@ -11,6 +11,7 @@ beginning from the [first draft][v0.1.0].
 - Fixed typos
   * [Page 76] "perfectly circularity"
   * [Page 102] "Why bother will boundary tracing"
+  * [Page 115] "wedges walls"
 - Improved wording in various places
 
 
