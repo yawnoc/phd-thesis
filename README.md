@@ -38,10 +38,7 @@ between listed installations belonging to the same group:
   * Debian 10 (aarch64) texlive-full 2018.20190227-2
   * Debian 10 (x86_64) texlive-full 2018.20190227-2
 
-- <b>Group 2: TeX Live 2020 Debian</b>
-  * Debian 11 (x86_64) texlive-full 2020.20210202-3
-
-- <b>Group 3: TeX Live 2020 Not Debian</b>
+- <b>Group 2: TeX Live 2020 Not Debian</b>
   * macOS 10.15 (x86_64) TeX Live 2020
   * Termux 0.112 (armv7l) texlive-full 20200406-4
   * Windows 10 (x86_64) TeX Live 2020/W32TeX
