@@ -30,8 +30,9 @@ on a *given* TeX installation.
 
 Unfortunately, different installations will produce different PDF output,
 as demonstrated by the experiment at [yawnoc/reproducible-latex].
+
 Nevertheless, for the following groups of TeX Live installations,
-identical output *should* be observed
+identical output is observed
 between listed installations belonging to the same group:
 
 - <b>Group 1: TeX Live 2019 Debian</b>
@@ -43,7 +44,11 @@ between listed installations belonging to the same group:
   * Termux 0.112 (armv7l) texlive-full 20200406-4
   * Windows 10 (x86_64) TeX Live 2020/W32TeX
 
+Moreover, [DiffPDF 2.1.3-1.2] confirms that
+the output of Group 1 is *visually* identical to the output of Group 2.
+
 [yawnoc/reproducible-latex]: https://github.com/yawnoc/reproducible-latex
+[DiffPDF 2.1.3-1.2]: https://packages.debian.org/buster/diffpdf
 
 
 <!--
