@@ -8,6 +8,7 @@ beginning from the [first draft][v0.1.0].
 
 - Fixed [Page 5] orphaned line at the bottom
 - Fixed [Page 70] orphaned line at the bottom
+- Fixed [Page 90] orphaned line at the bottom
 - Fixed typo [Page 84] missing fullstop at the bottom
 
 
