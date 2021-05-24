@@ -6,6 +6,8 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
+- Fixed [Page 5] orphaned line at the bottom
+
 
 ## [v0.3.1] Third proofread (2021-05-22)
 
