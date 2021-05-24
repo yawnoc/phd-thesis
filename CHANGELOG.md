@@ -6,8 +6,10 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
+- Amended release v0.3.2 heading
 
-## [v0.3.2] Submitted for examination (2021-05-24)
+
+## [v0.3.2] Ready for examination (2021-05-24)
 
 - Fixed orphaned lines (bottom of the page)
   * [Page 5]
