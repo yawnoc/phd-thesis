@@ -7,6 +7,7 @@ beginning from the [first draft][v0.1.0].
 ## [Unreleased]
 
 - Amended release v0.3.2 heading
+- Increased signature height
 
 
 ## [v0.3.2] Ready for examination (2021-05-24)
