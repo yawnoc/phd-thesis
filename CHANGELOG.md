@@ -11,6 +11,7 @@ beginning from the [first draft][v0.1.0].
   * [Page 70]
   * [Page 90]
 - Fixed typo [Page 84] missing fullstop at the bottom
+- Improved wording at the start of B.2.
 
 
 ## [v0.3.1] Third proofread (2021-05-22)
