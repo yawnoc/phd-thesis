@@ -6,6 +6,9 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
+
+## [v0.3.2] Submitted for examination (2021-05-24)
+
 - Fixed orphaned lines (bottom of the page)
   * [Page 5]
   * [Page 70]
@@ -158,7 +161,8 @@ Reduced thesis file size by 8% since v0.2.6 (`3.9 MB` down to `3.6 MB`).
 - First draft
 
 
-[Unreleased]: https://github.com/yawnoc/phd-thesis/compare/v0.3.1...HEAD
+[Unreleased]: https://github.com/yawnoc/phd-thesis/compare/v0.3.2...HEAD
+[v0.3.2]: https://github.com/yawnoc/phd-thesis/compare/v0.3.1...v0.3.2
 [v0.3.1]: https://github.com/yawnoc/phd-thesis/compare/v0.3.0...v0.3.1
 [v0.3.0]: https://github.com/yawnoc/phd-thesis/compare/v0.2.8...v0.3.0
 [v0.2.8]: https://github.com/yawnoc/phd-thesis/compare/v0.2.7...v0.2.8
