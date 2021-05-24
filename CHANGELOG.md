@@ -6,9 +6,10 @@ beginning from the [first draft][v0.1.0].
 
 ## [Unreleased]
 
-- Fixed [Page 5] orphaned line at the bottom
-- Fixed [Page 70] orphaned line at the bottom
-- Fixed [Page 90] orphaned line at the bottom
+- Fixed orphaned lines (bottom of the page)
+  * [Page 5]
+  * [Page 70]
+  * [Page 90]
 - Fixed typo [Page 84] missing fullstop at the bottom
 
 
