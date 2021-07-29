@@ -2,12 +2,27 @@
 
 Conway's Ph.D. Thesis, in LaTeX.
 
+
+## Copyright 2021 Conway
+
+Permission is granted to distribute unmodified copies of this repository.
+
+Permission is NOT granted to make modifications or create derivative works.
+
+The file [`conway.bst`] alone
+is licensed under the [LaTeX Project Public License v1.3c].
+
 For the code used to produce the figures, see [yawnoc/phd-code].
 
+[`conway.bst`]: conway.bst
+[LaTeX Project Public License v1.3c]: https://spdx.org/licenses/LPPL-1.3c.html
 [yawnoc/phd-code]: https://github.com/yawnoc/phd-code
 
 
 ## Compile
+
+Permission is granted to compile the thesis from source,
+provided that the resulting output is not distributed or published.
 
 This software comes with ABSOLUTELY NO WARRANTY etc. etc.
 
