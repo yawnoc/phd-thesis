@@ -9,6 +9,8 @@ For the code used to produce the figures, see [yawnoc/phd-code].
 
 ## Compile
 
+This software comes with ABSOLUTELY NO WARRANTY etc. etc.
+
 Run `./compile` to compile from scratch.
 This calls `./clean` (which removes ignored files)
 and `./version` (which generates the Git version information)
