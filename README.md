@@ -40,7 +40,8 @@ If an image file does not exist, it will be omitted.
 
 ## Reproducibility
 
-The output `thesis.pdf` can be reproduced exactly, run after run,
+Assuming that no images are loaded from `../phd-thesis-signatures`,
+the output `thesis.pdf` can be reproduced exactly, run after run,
 on a *given* TeX installation.
 
 Unfortunately, different installations will produce different PDF output,
