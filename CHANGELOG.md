@@ -7,6 +7,7 @@ beginning from the [first draft][v0.1.0].
 ## [Unreleased]
 
 - Fixed Figure C.2 vertical axis range (start at T = 0 exactly)
+- Improved Figure 3.22a (asymmetric construction) explanation
 
 
 ## [v0.3.3] Submitted for examination (2021-05-25)
