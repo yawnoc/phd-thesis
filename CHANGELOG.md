@@ -10,6 +10,7 @@ beginning from the [first draft][v0.1.0].
 - Improved Figure 3.22a (asymmetric construction) explanation
 - Took absolute value of Figure 4.12 (polar relative error)
 - Took absolute value of Figure 5.10 (bipolar relative error)
+- Improved elimination of singularity sentence wording
 
 
 ## [v0.3.3] Submitted for examination (2021-05-25)
