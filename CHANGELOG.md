@@ -12,6 +12,7 @@ beginning from the [first draft][v0.1.0].
 - Took absolute value of Figure 5.10 (bipolar relative error)
 - Improved elimination of singularity sentence wording
 - Added Figure 7.17 non-smoothness remark
+- Demoted "completely confident" to "extremely confident"
 
 
 ## [v0.3.3] Submitted for examination (2021-05-25)
