@@ -8,6 +8,7 @@ beginning from the [first draft][v0.1.0].
 
 - Fixed Figure C.2 vertical axis range (start at T = 0 exactly)
 - Improved Figure 3.22a (asymmetric construction) explanation
+- Took absolute value of Figure 4.12 (polar relative error)
 
 
 ## [v0.3.3] Submitted for examination (2021-05-25)
