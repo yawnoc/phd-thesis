@@ -13,6 +13,7 @@ beginning from the [first draft][v0.1.0].
 - Improved elimination of singularity sentence wording
 - Added Figure 7.17 non-smoothness remark
 - Demoted "completely confident" to "extremely confident"
+- Split Chapter 7 asymmetric sentence with semicolon
 
 
 ## [v0.3.3] Submitted for examination (2021-05-25)
