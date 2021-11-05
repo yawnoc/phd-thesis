@@ -7,6 +7,13 @@ beginning from the [first draft][v0.1.0].
 ## [Unreleased]
 
 - Fixed Figure C.2 vertical axis range (start at T = 0 exactly)
+- Improved Figure 3.22a (asymmetric construction) explanation
+- Took absolute value of Figure 4.12 (polar relative error)
+- Took absolute value of Figure 5.10 (bipolar relative error)
+- Improved elimination of singularity sentence wording
+- Added Figure 7.17 non-smoothness remark
+- Demoted "completely confident" to "extremely confident"
+- Split Chapter 7 asymmetric sentence with semicolon
 
 
 ## [v0.3.3] Submitted for examination (2021-05-25)
