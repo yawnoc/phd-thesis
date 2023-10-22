@@ -43,9 +43,6 @@
 % See <https://github.com/yawnoc/phd-code#figure-fonts>.
 \usepackage{lmodern}
 
-% Proper copyright and degree symbols
-\usepackage{textcomp}
-
 % Margins
 % --------
 % NOTE: a 4cm inner margin is required for binding.
@@ -308,10 +305,11 @@
 
 % Physical units (also decimal alignment in tables)
 % --------
-% Set explicit degree Celsius (for [Debian 10] to use proper degree symbol)
+% Set explicit degree Celsius (see <https://tex.stackexchange.com/a/630042>)
 % Remove thin space before percent
 \usepackage{siunitx}
-\DeclareSIUnit{\degreeCelsius}{\degree C}
+\DeclareSIUnit[quantity-product={}]\degree{\text{\textdegree}}
+\DeclareSIUnit{\degreeCelsius}{\text{\textdegree}C}
 \DeclareSIUnit[number-unit-product=]{\percent}{\%}
 
 % Upright Greek
