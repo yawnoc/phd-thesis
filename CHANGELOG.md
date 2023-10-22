@@ -4,6 +4,13 @@ This be the changelog for Conway's Ph.D. Thesis,
 beginning from the [first draft][v0.1.0].
 
 
+## [v1.0.1] Postdoctoral revision 1 (2023-10-22)
+
+- Fixed undefined control sequence `\degree ->\ERROR`
+  when compiling with texlive-full 2022.20230122-3
+- Fixed typo "Minumum" in Wilkins (1960) reference
+
+
 ## [v1.0.0] Final version (2021-11-05)
 
 - Fixed Figure C.2 vertical axis range (start at T = 0 exactly)
@@ -176,6 +183,7 @@ Reduced thesis file size by 8% since v0.2.6 (`3.9 MB` down to `3.6 MB`).
 - First draft
 
 
+[v1.0.1]: https://github.com/yawnoc/phd-thesis/compare/v1.0.0...v1.0.1
 [v1.0.0]: https://github.com/yawnoc/phd-thesis/compare/v0.3.3...v1.0.0
 [v0.3.3]: https://github.com/yawnoc/phd-thesis/compare/v0.3.2...v0.3.3
 [v0.3.2]: https://github.com/yawnoc/phd-thesis/compare/v0.3.1...v0.3.2
